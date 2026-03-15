@@ -638,49 +638,81 @@ def _ensure_mobile_deps(app_dir, fresh=False):
 
 
 def _patch_settings_gradle_expo_modules(android_dir):
-    """Add expo-modules-core/android to pluginManagement.includeBuild in settings.gradle.
-    Without this, 'expo-module-gradle-plugin' used by expo sub-modules (expo-constants,
-    etc.) cannot be resolved. The autolinking_settings.gradle mechanism relies on a
-    Groovy 'node --print' subprocess that can fail silently on Windows, leaving
-    expo-modules-core absent from Gradle's included-build plugin registry."""
+    """Add expo-modules-core/android includeBuild to settings.gradle.
+    Expo SDK 51 / RN 0.74 generates settings.gradle with a dynamic includeBuild(new File(...))
+    for @react-native/gradle-plugin — NOT the simple includeBuild "..." shorthand.
+    On Windows the autolinking node subprocess can fail silently, leaving
+    expo-module-gradle-plugin absent from Gradle's included-build plugin registry.
+    Gradle 8.7 pin alone is not sufficient; this explicit includeBuild is also required."""
     settings = android_dir / "settings.gradle"
     if not settings.exists():
         return
     content = settings.read_text(encoding="utf-8")
     if "expo-modules-core/android" in content:
         return  # already patched
-    for rn_line in [
-        'includeBuild "../node_modules/@react-native/gradle-plugin"',
-        "includeBuild '../node_modules/@react-native/gradle-plugin'",
-    ]:
-        if rn_line in content:
+    # Expo SDK 51 generates: includeBuild(new File(["node","--print",
+    #   "require.resolve('@react-native/gradle-plugin/package.json')"].execute(...)))
+    # Match any includeBuild line that references @react-native/gradle-plugin regardless
+    # of quote style, parentheses, or path resolution method.
+    anchor_pattern = re.compile(
+        r"([ \t]*includeBuild\b[^\n]*@react-native/gradle-plugin[^\n]*)", re.MULTILINE
+    )
+    m = anchor_pattern.search(content)
+    if m:
+        insert_after = m.group(1)
+        replacement = insert_after + '\n    includeBuild("../node_modules/expo-modules-core/android")'
+        patched = content.replace(insert_after, replacement, 1)
+        settings.write_text(patched, encoding="utf-8")
+        info("Patched settings.gradle: added expo-modules-core/android includeBuild after RN gradle-plugin")
+        return
+    # Fallback: insert before the closing } of the pluginManagement block
+    pm_close = re.search(r"(pluginManagement\s*\{[^}]*?)(\n\})", content, re.DOTALL)
+    if pm_close:
+        insert_pos = pm_close.start(2)
+        patched = (
+            content[:insert_pos]
+            + '\n    includeBuild("../node_modules/expo-modules-core/android")'
+            + content[insert_pos:]
+        )
+        settings.write_text(patched, encoding="utf-8")
+        info("Patched settings.gradle: appended expo-modules-core/android includeBuild to pluginManagement block (fallback)")
+        return
+    # Last resort: prepend before 'include :app'
+    for app_line in ["include ':app'", 'include ":app"']:
+        if app_line in content:
             patched = content.replace(
-                rn_line,
-                rn_line + '\n    includeBuild "../node_modules/expo-modules-core/android"',
+                app_line,
+                'includeBuild("../node_modules/expo-modules-core/android")\n' + app_line,
                 1,
             )
             settings.write_text(patched, encoding="utf-8")
-            info("Patched settings.gradle: added expo-modules-core/android to pluginManagement.includeBuild")
+            info("Patched settings.gradle: prepended expo-modules-core/android includeBuild before include :app (last-resort)")
             return
+    info("WARNING: could not patch settings.gradle — no anchor found to insert expo-modules-core includeBuild")
 
 
 def _patch_expo_modules_core_gradle(app_dir):
     """Fix MissingPropertyException for 'components.release' in ExpoModulesCorePlugin.gradle.
     AGP 8.3 (used by React Native 0.74) registers the release SoftwareComponent later
     in the lifecycle than AGP 8.1, so the direct 'from components.release' inside
-    afterEvaluate throws. Replace with a null-safe findByName guard."""
-    plugin_file = (app_dir / "node_modules" / "expo-modules-core"
-                   / "android" / "ExpoModulesCorePlugin.gradle")
-    if not plugin_file.exists():
-        return
-    content = plugin_file.read_text(encoding="utf-8")
+    afterEvaluate throws. Replace with a null-safe findByName guard.
+    Checks both app-local and workspace-root node_modules (npm workspaces hoisting)."""
+    candidate_paths = [
+        app_dir / "node_modules" / "expo-modules-core" / "android" / "ExpoModulesCorePlugin.gradle",
+        # npm workspaces may hoist expo-modules-core to the monorepo root node_modules
+        app_dir.parent.parent / "node_modules" / "expo-modules-core" / "android" / "ExpoModulesCorePlugin.gradle",
+    ]
     old = "from components.release"
-    if old not in content:
-        return  # already patched or different version
-    new = "def _comp = components.findByName('release'); if (_comp != null) { from _comp }"
-    patched = content.replace(old, new)
-    plugin_file.write_text(patched, encoding="utf-8")
-    info("Patched ExpoModulesCorePlugin.gradle: null-safe components.findByName for AGP 8.3+")
+    new = 'def _comp = components.findByName("release"); if (_comp != null) { from _comp }'
+    for plugin_file in candidate_paths:
+        if not plugin_file.exists():
+            continue
+        content = plugin_file.read_text(encoding="utf-8")
+        if old not in content:
+            continue  # already patched or different version
+        patched = content.replace(old, new)
+        plugin_file.write_text(patched, encoding="utf-8")
+        info(f"Patched ExpoModulesCorePlugin.gradle: replaced components.release with guarded lookup ({plugin_file})")
 
 
 def _patch_gradle_wrapper(android_dir):
@@ -688,8 +720,11 @@ def _patch_gradle_wrapper(android_dir):
     - Gradle ≤8.6 ships with ASM 9.5 which crashes on kotlin-compiler-embeddable
       1.9.24 class files (ArrayIndexOutOfBoundsException in ClassReader).
     - Gradle 8.7 ships with ASM 9.6 which handles Kotlin 1.9.24 correctly.
-    - Gradle ≥8.8 breaks expo-modules-core: plugin resolution timing changed
-      (expo-module-gradle-plugin not found) and components.release was removed."""
+    - Gradle ≥8.8 has additional compatibility issues with expo-modules-core.
+    NOTE: Gradle 8.7 alone is not sufficient for Expo SDK 51 / RN 0.74.
+    Two additional patches are also required (applied separately):
+      - settings.gradle: explicit includeBuild for expo-modules-core/android
+      - ExpoModulesCorePlugin.gradle: null-safe components.findByName for AGP 8.3+"""
     props = android_dir / "gradle" / "wrapper" / "gradle-wrapper.properties"
     if not props.exists():
         return
