@@ -10,6 +10,7 @@
   "mosques": [
     {
       "name": "Islamic Society of St. Catharines",
+      "type": "mosque",
       "address": "339 Queenston St, St. Catharines, ON L2P 2X4",
       "city": "St. Catharines",
       "province": "Ontario",
@@ -18,6 +19,8 @@
       "longitude": -79.2264,
       "phone": "+1-905-684-9291",
       "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 40,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -32,6 +35,7 @@
     },
     {
       "name": "Niagara Peninsula Islamic Society",
+      "type": "mosque",
       "address": "4560 Queen St, Niagara Falls, ON L2E 2L4",
       "city": "Niagara Falls",
       "province": "Ontario",
@@ -40,6 +44,8 @@
       "longitude": -79.0849,
       "phone": "+1-905-358-5574",
       "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 25,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {

@@ -9,8 +9,9 @@
   "researchedBy": "admin",
   "mosques": [
     {
-      "name": "Islamic Society of Markham",
-      "address": "2901 Markham Rd, Scarborough, ON M1X 1N3",
+      "name": "Islamic Society of Markham (Jam'e Masjid Markham)",
+      "type": "mosque",
+      "address": "2900 Denison St, Markham, ON L3S 4J8",
       "city": "Markham",
       "province": "Ontario",
       "country": "Canada",
@@ -18,6 +19,8 @@
       "longitude": -79.2345,
       "phone": "+1-416-298-7444",
       "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 120,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -32,6 +35,7 @@
     },
     {
       "name": "Masjid Al-Huda (York Region)",
+      "type": "mosque",
       "address": "180 Riviera Dr, Markham, ON L3R 5M1",
       "city": "Markham",
       "province": "Ontario",
@@ -40,6 +44,8 @@
       "longitude": -79.3670,
       "phone": "+1-905-305-3832",
       "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 65,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -54,6 +60,7 @@
     },
     {
       "name": "Richmond Hill Islamic Centre",
+      "type": "mosque",
       "address": "1 Fieldstone Dr, Richmond Hill, ON L4S 2A4",
       "city": "Richmond Hill",
       "province": "Ontario",
@@ -62,6 +69,8 @@
       "longitude": -79.4420,
       "phone": "+1-905-883-0408",
       "website": null,
+      "googleRating": 4.6,
+      "googleReviewCount": 180,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -73,6 +82,68 @@
         "jummah": "13:15"
       },
       "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Islamic Society of York Region (ISYR)",
+      "type": "mosque",
+      "address": "1380 Stouffville Rd, Richmond Hill, ON L4E 3S3",
+      "city": "Richmond Hill",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.9120,
+      "longitude": -79.4100,
+      "phone": "+1-905-773-3334",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 95,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["google-maps"]
+    },
+    {
+      "name": "Markham Muslim Association",
+      "type": "musalla",
+      "address": "1330 Castlemore Ave, Markham, ON L6E 1A4",
+      "city": "Markham",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.8790,
+      "longitude": -79.2680,
+      "phone": null,
+      "website": "https://www.themma.ca",
+      "googleRating": 4.7,
+      "googleReviewCount": 35,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": null,
+      "sources": ["themma.ca", "google-maps"],
+      "notes": "Dedicated to establishing a strong Islamic presence in Markham and Ontario."
+    },
+    {
+      "name": "Ihsan Muslim Heritage Society",
+      "type": "musalla",
+      "address": "138 Yorkland St, Unit 173, Richmond Hill, ON L4S 1J1",
+      "city": "Richmond Hill",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.8680,
+      "longitude": -79.4310,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 12,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": ["google-maps"]
     }
   ]
 }

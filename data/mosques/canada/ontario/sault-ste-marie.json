@@ -10,6 +10,7 @@
   "mosques": [
     {
       "name": "Sault Ste. Marie Islamic Association",
+      "type": "mosque",
       "address": "233 Old Garden River Rd, Sault Ste. Marie, ON P6B 5A6",
       "city": "Sault Ste. Marie",
       "province": "Ontario",
@@ -18,6 +19,8 @@
       "longitude": -84.3190,
       "phone": "+1-705-759-7777",
       "website": null,
+      "googleRating": 4.2,
+      "googleReviewCount": 8,
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": {

@@ -10,6 +10,7 @@
   "mosques": [
     {
       "name": "Islamic Centre of Oshawa",
+      "type": "mosque",
       "address": "101 Simcoe St S, Oshawa, ON L1H 4G5",
       "city": "Oshawa",
       "province": "Ontario",
@@ -18,6 +19,8 @@
       "longitude": -78.8630,
       "phone": "+1-905-438-1817",
       "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 55,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -32,6 +35,7 @@
     },
     {
       "name": "Durham Islamic Centre",
+      "type": "mosque",
       "address": "905 Farewell St, Oshawa, ON L1H 6N5",
       "city": "Oshawa",
       "province": "Ontario",
@@ -40,6 +44,8 @@
       "longitude": -78.8465,
       "phone": "+1-905-576-9119",
       "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 35,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -54,6 +60,7 @@
     },
     {
       "name": "Masjid Al-Salaam Oshawa",
+      "type": "mosque",
       "address": "70 Bond St W, Oshawa, ON L1H 1B1",
       "city": "Oshawa",
       "province": "Ontario",
@@ -62,6 +69,8 @@
       "longitude": -78.8710,
       "phone": "+1-905-721-3636",
       "website": null,
+      "googleRating": 4.2,
+      "googleReviewCount": 20,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {

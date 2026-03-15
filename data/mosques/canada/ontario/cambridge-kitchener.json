@@ -10,6 +10,7 @@
   "mosques": [
     {
       "name": "K-W Musalla",
+      "type": "musalla",
       "address": "73 King St W, Kitchener, ON N2G 1A7",
       "city": "Kitchener",
       "province": "Ontario",
@@ -18,6 +19,8 @@
       "longitude": -80.4925,
       "phone": "+1-519-744-2401",
       "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 12,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -32,6 +35,7 @@
     },
     {
       "name": "Cambridge Islamic Centre",
+      "type": "mosque",
       "address": "1850 Bishop St N, Cambridge, ON N1T 1V5",
       "city": "Cambridge",
       "province": "Ontario",
@@ -40,6 +44,8 @@
       "longitude": -80.3386,
       "phone": "+1-519-624-9890",
       "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 30,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -54,6 +60,7 @@
     },
     {
       "name": "Kitchener Masjid (Islamic Association of Kitchener)",
+      "type": "mosque",
       "address": "55 Ottawa St S, Kitchener, ON N2G 3S5",
       "city": "Kitchener",
       "province": "Ontario",
@@ -62,6 +69,8 @@
       "longitude": -80.4830,
       "phone": "+1-519-578-5786",
       "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 55,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {

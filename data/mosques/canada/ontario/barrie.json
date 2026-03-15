@@ -10,6 +10,7 @@
   "mosques": [
     {
       "name": "Islamic Society of Barrie",
+      "type": "mosque",
       "address": "380 Bayfield St, Barrie, ON L4M 3C2",
       "city": "Barrie",
       "province": "Ontario",
@@ -18,6 +19,8 @@
       "longitude": -79.6843,
       "phone": "+1-705-737-0960",
       "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 65,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -32,6 +35,7 @@
     },
     {
       "name": "Masjid Bilal Barrie",
+      "type": "mosque",
       "address": "231 Bayfield St, Barrie, ON L4M 3B7",
       "city": "Barrie",
       "province": "Ontario",
@@ -40,6 +44,8 @@
       "longitude": -79.6870,
       "phone": "+1-705-726-1116",
       "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 30,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {

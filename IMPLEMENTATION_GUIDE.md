@@ -314,6 +314,7 @@ All mosque seed data lives in `data/mosques/canada/<province>/<city>.json`.
   "mosques": [
     {
       "name": "Full Mosque Name",
+      "type": "mosque",
       "address": "123 Street, City, ON POSTAL",
       "city": "City",
       "province": "Ontario",
@@ -322,6 +323,8 @@ All mosque seed data lives in `data/mosques/canada/<province>/<city>.json`.
       "longitude": -79.8711,
       "phone": "+1-XXX-XXX-XXXX",
       "website": "https://example.com",
+      "googleRating": 4.5,
+      "googleReviewCount": 120,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -333,6 +336,25 @@ All mosque seed data lives in `data/mosques/canada/<province>/<city>.json`.
         "jummah": "13:30"
       },
       "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Community Musalla Name",
+      "type": "musalla",
+      "address": "456 Street, City, ON POSTAL",
+      "city": "City",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.2600,
+      "longitude": -79.8800,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.8,
+      "googleReviewCount": 10,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": ["google-maps"],
+      "notes": "Community prayer space. Open during specific hours."
     }
   ]
 }
@@ -342,17 +364,27 @@ All mosque seed data lives in `data/mosques/canada/<province>/<city>.json`.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `name` | string | Official mosque name |
+| `name` | string | Official mosque/musalla name |
+| `type` | string | `"mosque"` for full mosques, `"musalla"` for prayer rooms/spaces |
 | `address` | string | Full street address with postal code |
 | `city` | string | City name |
 | `province` | string | Province name (e.g., "Ontario") |
 | `latitude/longitude` | float | GPS coordinates (use Google Maps to verify) |
 | `phone` | string/null | Contact phone number |
 | `website` | string/null | Official website URL |
+| `googleRating` | float/null | Google Maps rating (e.g., 4.5) |
+| `googleReviewCount` | int/null | Number of Google reviews |
 | `hasLiveStream` | boolean | Whether mosque streams live azan |
 | `verified` | boolean | Whether iqama times are confirmed |
+| `iqamaTimes` | object/null | Null for musallas without known schedules |
 | `iqamaTimes.maghrib` | string | Use `"sunset+N"` format for minutes after sunset |
 | `sources` | string[] | Where data was sourced from |
+| `notes` | string/null | Extra info (hours, special details, etc.) |
+
+### Mosque vs Musalla
+
+- **Mosque** (`"type": "mosque"`): Full-service masjid with regular congregational prayers, iqama times, possibly a resident imam
+- **Musalla** (`"type": "musalla"`): Prayer room or informal prayer space (community centres, university rooms, rented spaces). May not have fixed iqama times or a website. Still valuable to list so users can find nearby prayer spaces
 
 ---
 
@@ -602,34 +634,37 @@ npm install
 
 LiveAzan currently covers the following cities in Ontario:
 
-| City | Mosques | Status |
-|------|---------|--------|
-| Toronto | 8 | Active |
-| Ottawa | 4 | Active |
-| Waterloo | 5 | Active |
-| Hamilton | 4 | Active |
-| London | 3 | Active |
-| Brampton | 4 | Active |
-| Mississauga | 4 | Active |
-| Windsor | 3 | Active |
-| Kingston | 2 | Active |
-| Barrie | 2 | Active |
-| Oshawa | 3 | Active |
-| St. Catharines/Niagara | 2 | Active |
-| Markham | 3 | Active |
-| Burlington/Oakville | 3 | Active |
-| Sudbury | 1 | Active |
-| Thunder Bay | 1 | Active |
-| Peterborough | 1 | Active |
-| Milton | 2 | Active |
-| Brantford | 1 | Active |
-| Cornwall | 1 | Active |
-| Sarnia | 1 | Active |
-| Sault Ste. Marie | 1 | Active |
-| North Bay | 1 | Active |
-| Whitby/Ajax | 3 | Active |
-| Guelph | 2 | Active |
-| Cambridge/Kitchener | 3 | Active |
-| Belleville | 1 | Active |
+| City | Mosques | Musallas | Total | Status |
+|------|---------|----------|-------|--------|
+| Toronto | 13 | 4 | 17 | Active |
+| Ottawa | 5 | 4 | 9 | Active |
+| Waterloo | 4 | 4 | 8 | Active |
+| Brampton | 4 | 4 | 8 | Active |
+| Mississauga | 4 | 3 | 7 | Active |
+| Hamilton | 4 | 2 | 6 | Active |
+| Markham/York Region | 4 | 2 | 6 | Active |
+| Windsor | 3 | 2 | 5 | Active |
+| Burlington/Oakville | 3 | 2 | 5 | Active |
+| London | 3 | 1 | 4 | Active |
+| Guelph | 2 | 1 | 3 | Active |
+| Cambridge/Kitchener | 2 | 1 | 3 | Active |
+| Whitby/Ajax/Pickering | 2 | 1 | 3 | Active |
+| Oshawa | 3 | 0 | 3 | Active |
+| Barrie | 2 | 0 | 2 | Active |
+| Niagara/St. Catharines | 2 | 0 | 2 | Active |
+| Kingston | 1 | 1 | 2 | Active |
+| Milton | 1 | 1 | 2 | Active |
+| Sudbury | 1 | 0 | 1 | Active |
+| Thunder Bay | 1 | 0 | 1 | Active |
+| Peterborough | 1 | 0 | 1 | Active |
+| Brantford | 1 | 0 | 1 | Active |
+| Cornwall | 1 | 0 | 1 | Active |
+| Sarnia | 1 | 0 | 1 | Active |
+| Sault Ste. Marie | 1 | 0 | 1 | Active |
+| North Bay | 1 | 0 | 1 | Active |
+| Belleville | 1 | 0 | 1 | Active |
+| **Ontario Total** | **70** | **26** | **96** | |
+
+> **Musallas** are community prayer spaces, university rooms, and informal gathering places for salah. They may not have fixed iqama times or a website, but are valuable for travelers and local Muslims looking for the nearest place to pray.
 
 To request coverage for a city not listed, use the `/api/coverage-requests` endpoint or open a GitHub issue.

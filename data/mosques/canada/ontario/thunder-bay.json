@@ -10,6 +10,7 @@
   "mosques": [
     {
       "name": "Thunder Bay Islamic Centre",
+      "type": "mosque",
       "address": "501 Cumberland St N, Thunder Bay, ON P7A 4R4",
       "city": "Thunder Bay",
       "province": "Ontario",
@@ -18,6 +19,8 @@
       "longitude": -89.2340,
       "phone": "+1-807-345-4554",
       "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 15,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {

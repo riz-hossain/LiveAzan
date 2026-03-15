@@ -10,6 +10,7 @@
   "mosques": [
     {
       "name": "Windsor Islamic Association (Masjid Al-Hijrah)",
+      "type": "mosque",
       "address": "1320 Northwood St, Windsor, ON N9E 1A4",
       "city": "Windsor",
       "province": "Ontario",
@@ -18,6 +19,8 @@
       "longitude": -83.0581,
       "phone": "+1-519-966-2355",
       "website": "https://www.windsorislam.com",
+      "googleRating": 4.5,
+      "googleReviewCount": 120,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -32,6 +35,7 @@
     },
     {
       "name": "Windsor Mosque",
+      "type": "mosque",
       "address": "1575 Ouellette Ave, Windsor, ON N8X 1K5",
       "city": "Windsor",
       "province": "Ontario",
@@ -40,6 +44,8 @@
       "longitude": -83.0391,
       "phone": "+1-519-254-1919",
       "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 85,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -53,26 +59,67 @@
       "sources": ["masjidbox.com", "google-maps"]
     },
     {
-      "name": "Muslim Community of Windsor (Al-Furqan Mosque)",
-      "address": "975 Ottawa St, Windsor, ON N8X 2E5",
+      "name": "Dominion Mosque",
+      "type": "mosque",
+      "address": "1320 Northwood St, Windsor, ON N9E 1A4",
       "city": "Windsor",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 42.3195,
-      "longitude": -83.0160,
-      "phone": "+1-519-256-0000",
-      "website": null,
+      "latitude": 42.2980,
+      "longitude": -83.0585,
+      "phone": "+1-519-966-2355",
+      "website": "https://www.windsormosque.com",
+      "googleRating": 4.3,
+      "googleReviewCount": 55,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
-        "fajr": "06:45",
+        "fajr": "06:30",
         "dhuhr": "13:30",
         "asr": "17:30",
         "maghrib": "sunset+5",
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["google-maps"]
+      "sources": ["muslimlink.ca", "google-maps"],
+      "notes": "Serves Downtown Windsor, LaSalle, and Tecumseh areas. Sunni, multicultural, run by elected board."
+    },
+    {
+      "name": "West Musallah Windsor",
+      "type": "musalla",
+      "address": "2550 Dougall Ave, Windsor, ON N8X 1T2",
+      "city": "Windsor",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.2870,
+      "longitude": -83.0450,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 18,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": ["prayersconnect.com", "google-maps"],
+      "notes": "One of the most crowded musallas in Windsor. Attracts many students."
+    },
+    {
+      "name": "East Musallah Windsor",
+      "type": "musalla",
+      "address": "4800 Tecumseh Rd E, Windsor, ON N8T 1B8",
+      "city": "Windsor",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.3220,
+      "longitude": -82.9780,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.2,
+      "googleReviewCount": 10,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": ["prayersconnect.com", "google-maps"]
     }
   ]
 }

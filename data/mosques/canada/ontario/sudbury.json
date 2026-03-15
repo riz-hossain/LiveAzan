@@ -10,6 +10,7 @@
   "mosques": [
     {
       "name": "Sudbury Islamic Centre",
+      "type": "mosque",
       "address": "1419 Sparks St, Sudbury, ON P3E 2A7",
       "city": "Sudbury",
       "province": "Ontario",
@@ -18,6 +19,8 @@
       "longitude": -80.9930,
       "phone": "+1-705-674-3350",
       "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 20,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {

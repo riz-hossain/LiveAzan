@@ -10,6 +10,7 @@
   "mosques": [
     {
       "name": "Islamic Society of Belleville",
+      "type": "mosque",
       "address": "163 Victoria Ave, Belleville, ON K8N 2B7",
       "city": "Belleville",
       "province": "Ontario",
@@ -18,6 +19,8 @@
       "longitude": -77.3840,
       "phone": "+1-613-962-2700",
       "website": null,
+      "googleRating": 4.1,
+      "googleReviewCount": 8,
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": {

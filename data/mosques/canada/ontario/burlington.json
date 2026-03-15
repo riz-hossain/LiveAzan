@@ -9,7 +9,8 @@
   "researchedBy": "admin",
   "mosques": [
     {
-      "name": "Halton Islamic Association",
+      "name": "Halton Islamic Association (Masjid Halton)",
+      "type": "mosque",
       "address": "695 Brant St, Burlington, ON L7R 2H3",
       "city": "Burlington",
       "province": "Ontario",
@@ -17,7 +18,9 @@
       "latitude": 43.3320,
       "longitude": -79.8060,
       "phone": "+1-905-333-0786",
-      "website": null,
+      "website": "https://www.hia.live",
+      "googleRating": 4.6,
+      "googleReviewCount": 140,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -28,10 +31,12 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": ["hia.live", "masjidbox.com", "google-maps"],
+      "notes": "Largest Islamic organization in the Burlington area. Community of over 5,000 Muslims. Currently building a new purpose-built centre."
     },
     {
-      "name": "Islamic Centre of Oakville",
+      "name": "Dar Foundation Oakville",
+      "type": "mosque",
       "address": "310 Speers Rd, Oakville, ON L6K 3W6",
       "city": "Oakville",
       "province": "Ontario",
@@ -40,6 +45,8 @@
       "longitude": -79.6870,
       "phone": "+1-905-849-5558",
       "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 75,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -50,18 +57,21 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": ["prayersconnect.com", "google-maps"]
     },
     {
-      "name": "Noor Al-Islam Centre Oakville",
-      "address": "281 Speers Rd, Oakville, ON L6K 3W5",
+      "name": "Al Falah Islamic Center",
+      "type": "mosque",
+      "address": "391 Dundas St, Oakville, ON L6H 6Z9",
       "city": "Oakville",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.4445,
-      "longitude": -79.6862,
-      "phone": "+1-905-337-5555",
+      "latitude": 43.4480,
+      "longitude": -79.7010,
+      "phone": null,
       "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 50,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -72,7 +82,46 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["google-maps"]
+      "sources": ["prayersconnect.com", "google-maps"],
+      "notes": "Established 1997. Serving Oakville, Milton, and Mississauga communities for over two decades."
+    },
+    {
+      "name": "Halton Islamic Association Musalla",
+      "type": "musalla",
+      "address": "700 Brant St, Burlington, ON L7R 2H3",
+      "city": "Burlington",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.3325,
+      "longitude": -79.8065,
+      "phone": null,
+      "website": "https://www.hia.live",
+      "googleRating": 4.3,
+      "googleReviewCount": 10,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": ["hia.live", "google-maps"],
+      "notes": "Separate musalla space operated by Halton Islamic Association alongside main masjid."
+    },
+    {
+      "name": "Islamic Community of Oakville",
+      "type": "musalla",
+      "address": "1240 Speers Rd, Oakville, ON L6L 2X4",
+      "city": "Oakville",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.4420,
+      "longitude": -79.6950,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 22,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": ["facebook.com", "google-maps"],
+      "notes": "Community-run musalla. Faith-in-action platform for local Muslims."
     }
   ]
 }

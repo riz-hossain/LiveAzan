@@ -62,9 +62,15 @@ export interface NextPrayer {
 
 // ─── Mosque ──────────────────────────────────────────────────────────────────
 
+export enum PlaceType {
+  MOSQUE = "mosque",
+  MUSALLA = "musalla",
+}
+
 export interface Mosque {
   id: string;
   name: string;
+  type: PlaceType;
   address: string;
   city: string;
   province: string;
@@ -76,6 +82,8 @@ export interface Mosque {
   hasLiveStream: boolean;
   streamUrl?: string;
   verified: boolean;
+  googleRating?: number; // e.g. 4.5
+  googleReviewCount?: number; // e.g. 123
   distanceKm?: number; // computed at query time
 }
 
@@ -172,6 +180,7 @@ export interface MosqueSeedFile {
 
 export interface MosqueSeedEntry {
   name: string;
+  type: "mosque" | "musalla";
   address: string;
   city: string;
   province: string;
@@ -179,8 +188,12 @@ export interface MosqueSeedEntry {
   longitude: number;
   phone?: string;
   website?: string;
+  googleRating?: number;
+  googleReviewCount?: number;
+  hasLiveStream: boolean;
+  verified: boolean;
   sources: string[];
-  iqama?: {
+  iqamaTimes?: {
     fajr?: string;
     dhuhr?: string;
     asr?: string;
@@ -188,6 +201,7 @@ export interface MosqueSeedEntry {
     isha?: string;
     jummah?: string;
   };
+  notes?: string; // e.g. "University prayer room, open 7am-11pm"
 }
 
 // ─── API Responses ───────────────────────────────────────────────────────────

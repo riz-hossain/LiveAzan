@@ -10,6 +10,7 @@
   "mosques": [
     {
       "name": "Guelph Islamic Centre",
+      "type": "mosque",
       "address": "226 Cardigan St, Guelph, ON N1H 3C5",
       "city": "Guelph",
       "province": "Ontario",
@@ -18,6 +19,8 @@
       "longitude": -80.2510,
       "phone": "+1-519-836-3815",
       "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 45,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -32,6 +35,7 @@
     },
     {
       "name": "Muslim Society of Guelph",
+      "type": "mosque",
       "address": "50 Westmount Rd, Guelph, ON N1H 5H8",
       "city": "Guelph",
       "province": "Ontario",
@@ -40,6 +44,8 @@
       "longitude": -80.2600,
       "phone": "+1-519-763-1919",
       "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 30,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -51,6 +57,25 @@
         "jummah": "13:30"
       },
       "sources": ["google-maps"]
+    },
+    {
+      "name": "University of Guelph Musalla",
+      "type": "musalla",
+      "address": "50 Stone Rd E, UC Room 442, Guelph, ON N1G 2W1",
+      "city": "Guelph",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.5305,
+      "longitude": -80.2280,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": ["google-maps"],
+      "notes": "University of Guelph MSA prayer space. Open during university hours."
     }
   ]
 }

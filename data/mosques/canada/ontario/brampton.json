@@ -10,6 +10,7 @@
   "mosques": [
     {
       "name": "Brampton Makki Masjid",
+      "type": "mosque",
       "address": "7 Knightsbridge Rd, Brampton, ON L6T 3X3",
       "city": "Brampton",
       "province": "Ontario",
@@ -18,6 +19,8 @@
       "longitude": -79.7260,
       "phone": "+1-905-458-0000",
       "website": "https://www.makkimasjid.com",
+      "googleRating": 4.6,
+      "googleReviewCount": 200,
       "hasLiveStream": true,
       "verified": true,
       "iqamaTimes": {
@@ -32,6 +35,7 @@
     },
     {
       "name": "Islamic Foundation of Brampton",
+      "type": "mosque",
       "address": "30 Charolais Blvd, Brampton, ON L6Y 2B8",
       "city": "Brampton",
       "province": "Ontario",
@@ -40,6 +44,8 @@
       "longitude": -79.7980,
       "phone": "+1-905-454-5700",
       "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 90,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -54,6 +60,7 @@
     },
     {
       "name": "Abu Bakr Siddique Islamic Centre",
+      "type": "mosque",
       "address": "1 Sunny Meadow Blvd, Brampton, ON L6R 0Y7",
       "city": "Brampton",
       "province": "Ontario",
@@ -62,6 +69,8 @@
       "longitude": -79.7850,
       "phone": "+1-905-792-5222",
       "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 65,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -76,6 +85,7 @@
     },
     {
       "name": "Masjid Umar",
+      "type": "mosque",
       "address": "84 Bramsteele Rd, Brampton, ON L6W 3M6",
       "city": "Brampton",
       "province": "Ontario",
@@ -84,6 +94,8 @@
       "longitude": -79.7542,
       "phone": "+1-905-450-7575",
       "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 45,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -95,6 +107,79 @@
         "jummah": "13:15"
       },
       "sources": ["google-maps"]
+    },
+    {
+      "name": "Taha Musalla",
+      "type": "musalla",
+      "address": "499 Ray Lawson Blvd, Brampton, ON L6Y 4E6",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.7280,
+      "longitude": -79.7920,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 20,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": ["prayersconnect.com", "namuslims.org", "google-maps"]
+    },
+    {
+      "name": "Taaseen Musalla",
+      "type": "musalla",
+      "address": "255 Steeles Ave W, Brampton, ON L6Y 0L2",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.7650,
+      "longitude": -79.7510,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 12,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": ["prayersconnect.com", "google-maps"]
+    },
+    {
+      "name": "Yaseen Musallah (Peel Islamic Cultural Center)",
+      "type": "musalla",
+      "address": "45 Kensington Rd, Brampton, ON L6T 3W3",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.7190,
+      "longitude": -79.7300,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 18,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": ["prayersconnect.com", "google-maps"],
+      "notes": "Branch of Peel Islamic Cultural Center (PICC). Operates independently."
+    },
+    {
+      "name": "Ha-Meem Musallah (Peace and Harmony Center)",
+      "type": "musalla",
+      "address": "195 County Court Blvd, Brampton, ON L6W 4P7",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.7050,
+      "longitude": -79.7620,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.6,
+      "googleReviewCount": 25,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": ["prayersconnect.com", "google-maps"]
     }
   ]
 }

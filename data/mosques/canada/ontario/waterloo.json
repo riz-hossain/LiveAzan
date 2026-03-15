@@ -10,6 +10,7 @@
   "mosques": [
     {
       "name": "Muslim Association of Canada (MAC) Waterloo",
+      "type": "mosque",
       "address": "256 Erb St W, Waterloo, ON N2L 1W3",
       "city": "Waterloo",
       "province": "Ontario",
@@ -18,6 +19,8 @@
       "longitude": -80.5340,
       "phone": "+1-519-886-3441",
       "website": "https://www.macnet.ca/local/waterloo",
+      "googleRating": 4.5,
+      "googleReviewCount": 85,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -32,6 +35,7 @@
     },
     {
       "name": "Waterloo Masjid (Islamic Centre of Waterloo)",
+      "type": "mosque",
       "address": "135 Erb St W, Waterloo, ON N2L 1T7",
       "city": "Waterloo",
       "province": "Ontario",
@@ -40,6 +44,8 @@
       "longitude": -80.5280,
       "phone": "+1-519-886-4786",
       "website": "https://www.waterloomasjid.com",
+      "googleRating": 4.6,
+      "googleReviewCount": 150,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -50,10 +56,11 @@
         "isha": "21:15",
         "jummah": "13:30"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": ["masjidbox.com", "google-maps", "waterloomasjid.com"]
     },
     {
       "name": "K-W Musalla",
+      "type": "musalla",
       "address": "73 King St W, Kitchener, ON N2G 1A7",
       "city": "Kitchener",
       "province": "Ontario",
@@ -62,6 +69,8 @@
       "longitude": -80.4925,
       "phone": "+1-519-744-2401",
       "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 12,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -75,7 +84,27 @@
       "sources": ["google-maps", "prayersconnect.com"]
     },
     {
+      "name": "Laurelwood Spiritual Centre & Musalla",
+      "type": "musalla",
+      "address": "619 Wild Ginger Ave, Unit F35, Waterloo, ON N2V 2X1",
+      "city": "Waterloo",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.4390,
+      "longitude": -80.5620,
+      "phone": null,
+      "website": null,
+      "googleRating": 5.0,
+      "googleReviewCount": 5,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": null,
+      "sources": ["google-maps", "masjidway.com", "muslimlink.ca"],
+      "notes": "Established 2009. Prayer schedule is 15 minutes post Waterloo Masjid iqama time. Offers Quran recitation and tahfeez classes for children and youth."
+    },
+    {
       "name": "Cambridge Islamic Centre",
+      "type": "mosque",
       "address": "1850 Bishop St N, Cambridge, ON N1T 1V5",
       "city": "Cambridge",
       "province": "Ontario",
@@ -84,6 +113,8 @@
       "longitude": -80.3386,
       "phone": "+1-519-624-9890",
       "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 30,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -98,6 +129,7 @@
     },
     {
       "name": "Guelph Islamic Centre",
+      "type": "mosque",
       "address": "226 Cardigan St, Guelph, ON N1H 3C5",
       "city": "Guelph",
       "province": "Ontario",
@@ -106,6 +138,8 @@
       "longitude": -80.2510,
       "phone": "+1-519-836-3815",
       "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 45,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -117,6 +151,44 @@
         "jummah": "13:45"
       },
       "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "University of Waterloo Musalla (Multi-Faith Space)",
+      "type": "musalla",
+      "address": "200 University Ave W, SLC Room 3102, Waterloo, ON N2L 3G1",
+      "city": "Waterloo",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.4723,
+      "longitude": -80.5449,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.2,
+      "googleReviewCount": 8,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": ["google-maps"],
+      "notes": "University multi-faith space used for daily prayers. Managed by UW Muslim Students Association. Open during university hours."
+    },
+    {
+      "name": "Wilfrid Laurier University Musalla",
+      "type": "musalla",
+      "address": "75 University Ave W, Waterloo, ON N2L 3C5",
+      "city": "Waterloo",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.4738,
+      "longitude": -80.5275,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": ["google-maps"],
+      "notes": "Multi-faith space at Wilfrid Laurier University. Managed by WLU Muslim Students Association."
     }
   ]
 }

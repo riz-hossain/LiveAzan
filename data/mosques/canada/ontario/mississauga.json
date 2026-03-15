@@ -10,6 +10,7 @@
   "mosques": [
     {
       "name": "Islamic Society of Peel (Masjid-ul-Huda)",
+      "type": "mosque",
       "address": "7150 Bramalea Rd, Mississauga, ON L5S 1T9",
       "city": "Mississauga",
       "province": "Ontario",
@@ -18,6 +19,8 @@
       "longitude": -79.7015,
       "phone": "+1-905-672-0222",
       "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 110,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -32,6 +35,7 @@
     },
     {
       "name": "Masjid Dar Al-Tawheed",
+      "type": "mosque",
       "address": "5600 Rose Cherry Pl, Mississauga, ON L4Z 4B6",
       "city": "Mississauga",
       "province": "Ontario",
@@ -40,6 +44,8 @@
       "longitude": -79.6367,
       "phone": "+1-905-890-5858",
       "website": "https://www.daraltawheed.com",
+      "googleRating": 4.5,
+      "googleReviewCount": 250,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -54,6 +60,7 @@
     },
     {
       "name": "Islamic Centre of Mississauga",
+      "type": "mosque",
       "address": "2200 South Millway, Mississauga, ON L5L 3R4",
       "city": "Mississauga",
       "province": "Ontario",
@@ -62,6 +69,8 @@
       "longitude": -79.6573,
       "phone": "+1-905-820-0001",
       "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 80,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -76,6 +85,7 @@
     },
     {
       "name": "Sayeda Khadija Centre",
+      "type": "mosque",
       "address": "6120 Montevideo Rd, Mississauga, ON L5N 3P6",
       "city": "Mississauga",
       "province": "Ontario",
@@ -84,6 +94,8 @@
       "longitude": -79.7115,
       "phone": "+1-905-542-4500",
       "website": "https://www.sayedakhadija.com",
+      "googleRating": 4.6,
+      "googleReviewCount": 320,
       "hasLiveStream": true,
       "verified": true,
       "iqamaTimes": {
@@ -95,6 +107,62 @@
         "jummah": "13:15"
       },
       "sources": ["sayedakhadija.com", "masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Darul Arqam Musalla (Churchill Meadows)",
+      "type": "musalla",
+      "address": "3040 Artesian Dr, Mississauga, ON L5M 7J4",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.5330,
+      "longitude": -79.7290,
+      "phone": null,
+      "website": "https://darularqammusalla.ca",
+      "googleRating": 4.7,
+      "googleReviewCount": 28,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": null,
+      "sources": ["darularqammusalla.ca", "google-maps"],
+      "notes": "Established for the Churchill Meadows Muslim community. Hosts 5 daily prayers and weekly Dawah programs."
+    },
+    {
+      "name": "Brandon Gate Musalla",
+      "type": "musalla",
+      "address": "45 Brandon Gate Dr, Mississauga, ON L4T 3N1",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.6830,
+      "longitude": -79.6540,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 15,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": ["prayersconnect.com", "google-maps"],
+      "notes": "Known as one of the most crowded musallas in the Mississauga area."
+    },
+    {
+      "name": "Abbas Musallah (Muslim Welfare Centre)",
+      "type": "musalla",
+      "address": "100 McLevin Ave, Scarborough, ON M1B 2V5",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.5890,
+      "longitude": -79.6150,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.2,
+      "googleReviewCount": 10,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": ["prayersconnect.com", "muslimlink.ca", "google-maps"]
     }
   ]
 }

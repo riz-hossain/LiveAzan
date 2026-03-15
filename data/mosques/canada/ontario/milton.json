@@ -9,7 +9,8 @@
   "researchedBy": "admin",
   "mosques": [
     {
-      "name": "Islamic Centre of Milton",
+      "name": "Muslim Association of Milton (Halton Islamic Community Centre)",
+      "type": "mosque",
       "address": "470 Bronte St S, Milton, ON L9T 1Y2",
       "city": "Milton",
       "province": "Ontario",
@@ -17,7 +18,9 @@
       "latitude": 43.5072,
       "longitude": -79.8850,
       "phone": "+1-905-878-0786",
-      "website": null,
+      "website": "https://miltonmasjid.com",
+      "googleRating": 4.7,
+      "googleReviewCount": 150,
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": {
@@ -28,29 +31,26 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": ["miltonmasjid.com", "masjidbox.com", "google-maps"]
     },
     {
-      "name": "Milton Muslim Community Centre",
+      "name": "Halton Learning Centre (HLC) Musalla",
+      "type": "musalla",
       "address": "600 Laurier Ave, Milton, ON L9T 4R7",
       "city": "Milton",
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.5250,
       "longitude": -79.8680,
-      "phone": "+1-905-864-0006",
-      "website": null,
+      "phone": null,
+      "website": "https://miltonmasjid.com",
+      "googleRating": 4.5,
+      "googleReviewCount": 25,
       "hasLiveStream": false,
       "verified": true,
-      "iqamaTimes": {
-        "fajr": "06:30",
-        "dhuhr": "13:30",
-        "asr": "17:45",
-        "maghrib": "sunset+5",
-        "isha": "21:00",
-        "jummah": "13:30"
-      },
-      "sources": ["google-maps"]
+      "iqamaTimes": null,
+      "sources": ["miltonmasjid.com", "google-maps"],
+      "notes": "Musalla operated by Muslim Association of Milton. Serves Milton, Oakville, and Burlington communities."
     }
   ]
 }
