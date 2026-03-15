@@ -637,6 +637,52 @@ def _ensure_mobile_deps(app_dir, fresh=False):
     run_visible(cmd, cwd=str(app_dir))
 
 
+def _patch_settings_gradle_expo_modules(android_dir):
+    """Add expo-modules-core/android to pluginManagement.includeBuild in settings.gradle.
+    Without this, 'expo-module-gradle-plugin' used by expo sub-modules (expo-constants,
+    etc.) cannot be resolved. The autolinking_settings.gradle mechanism relies on a
+    Groovy 'node --print' subprocess that can fail silently on Windows, leaving
+    expo-modules-core absent from Gradle's included-build plugin registry."""
+    settings = android_dir / "settings.gradle"
+    if not settings.exists():
+        return
+    content = settings.read_text(encoding="utf-8")
+    if "expo-modules-core/android" in content:
+        return  # already patched
+    for rn_line in [
+        'includeBuild "../node_modules/@react-native/gradle-plugin"',
+        "includeBuild '../node_modules/@react-native/gradle-plugin'",
+    ]:
+        if rn_line in content:
+            patched = content.replace(
+                rn_line,
+                rn_line + '\n    includeBuild "../node_modules/expo-modules-core/android"',
+                1,
+            )
+            settings.write_text(patched, encoding="utf-8")
+            info("Patched settings.gradle: added expo-modules-core/android to pluginManagement.includeBuild")
+            return
+
+
+def _patch_expo_modules_core_gradle(app_dir):
+    """Fix MissingPropertyException for 'components.release' in ExpoModulesCorePlugin.gradle.
+    AGP 8.3 (used by React Native 0.74) registers the release SoftwareComponent later
+    in the lifecycle than AGP 8.1, so the direct 'from components.release' inside
+    afterEvaluate throws. Replace with a null-safe findByName guard."""
+    plugin_file = (app_dir / "node_modules" / "expo-modules-core"
+                   / "android" / "ExpoModulesCorePlugin.gradle")
+    if not plugin_file.exists():
+        return
+    content = plugin_file.read_text(encoding="utf-8")
+    old = "from components.release"
+    if old not in content:
+        return  # already patched or different version
+    new = "def _comp = components.findByName('release'); if (_comp != null) { from _comp }"
+    patched = content.replace(old, new)
+    plugin_file.write_text(patched, encoding="utf-8")
+    info("Patched ExpoModulesCorePlugin.gradle: null-safe components.findByName for AGP 8.3+")
+
+
 def _patch_gradle_wrapper(android_dir):
     """Pin Gradle wrapper to exactly 8.7.
     - Gradle ≤8.6 ships with ASM 9.5 which crashes on kotlin-compiler-embeddable
@@ -672,6 +718,8 @@ def _ensure_expo_prebuild(app_dir, clean=False):
     if (app_dir / "android" / gradlew).exists() and not clean:
         _ensure_cleartext_traffic(app_dir)
         _patch_gradle_wrapper(app_dir / "android")
+        _patch_settings_gradle_expo_modules(app_dir / "android")
+        _patch_expo_modules_core_gradle(app_dir)
         return
     cmd_args = ["npx", "expo", "prebuild", "--platform", "android"]
     if clean:
@@ -684,6 +732,8 @@ def _ensure_expo_prebuild(app_dir, clean=False):
     run_visible(cmd_args, cwd=str(app_dir))
     _patch_gradle_wrapper(app_dir / "android")
     _ensure_cleartext_traffic(app_dir)
+    _patch_settings_gradle_expo_modules(app_dir / "android")
+    _patch_expo_modules_core_gradle(app_dir)
 
 
 def _ensure_cleartext_traffic(app_dir):
