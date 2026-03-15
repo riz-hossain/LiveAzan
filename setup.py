@@ -50,6 +50,14 @@ def fail(text: str) -> None:
 
 # ─── Checks ──────────────────────────────────────────────────────────────────
 
+def detect_os():
+    heading("Detecting Operating System")
+    system = platform.system()
+    machine = platform.machine()
+    release = platform.release()
+    success(f"System: {system} {machine} ({release})")
+    return system
+
 def check_python():
     heading("Checking Python")
     v = sys.version_info
@@ -200,7 +208,8 @@ def main():
 
     is_production = "--production" in sys.argv
 
-    # 1. Check prerequisites
+    # 1. Detect OS and check prerequisites
+    detect_os()
     check_python()
     check_node()
     check_postgres()
@@ -238,7 +247,7 @@ def main():
   URLs:
     Backend API:    http://localhost:3001/api
     Mobile (Expo):  exp://localhost:8081
-    Admin Portal:   http://localhost:5173
+    Admin Portal:   http://localhost:5174
 
   Useful commands:
     npm run dev          — Start all services (Turborepo)
