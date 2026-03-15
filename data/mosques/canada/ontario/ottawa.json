@@ -461,7 +461,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "contact@assalammosque.com",
+      "description": "Duplicate listing of Assalam Mosque / Ottawa Islamic Centre at 2335 St-Laurent Blvd, a major non-profit religious institution serving the Ottawa-Carleton Islamic community.",
+      "denomination": "sunni",
+      "hours": "Sun-Thu 11:30 AM - 8:00 PM, Fri 11:00 AM - 9:00 PM, Sat 11:30 AM - 8:00 PM",
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "arabic_classes", "taraweeh", "eid_prayers"],
+      "facilities": ["wudu_area", "women_section", "parking", "multipurpose_hall"],
+      "accessInfo": null
     },
     {
       "name": "Masjid Bilal, Islamic Society of Cumberland",
@@ -482,7 +489,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@masjidbilal.org",
+      "description": "Established in 1993, a registered charitable community-oriented Sunni organization serving the Muslim community of Orleans/Cumberland with religious and social services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "eid_prayers", "taraweeh", "youth_programs"],
+      "facilities": ["wudu_area", "women_section", "parking", "wheelchair_accessible"],
+      "accessInfo": null
     },
     {
       "name": "Albatool Fatima Association",
@@ -503,7 +517,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "A Shia mosque (Al-Batool Fatima Association) in Ottawa West serving the Ithna Asheri community with prayers and religious programs.",
+      "denomination": "shia",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah"],
+      "facilities": ["wudu_area", "women_section", "parking"],
+      "accessInfo": null
     },
     {
       "name": "Rhoda Masjid and Institute",
@@ -524,7 +545,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "A project of the Rhoda Foundation in the heart of Orleans, centered around a supportive community to inspire spiritual growth. The only English and French speaking Muslim organisation in Ottawa.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "eid_prayers", "quran_classes"],
+      "facilities": ["wudu_area", "women_section", "parking", "wheelchair_accessible", "outdoor_space"],
+      "accessInfo": null
     },
     {
       "name": "Ottawa South Mosque",
@@ -545,7 +573,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@ottawasouthmosque.ca",
+      "description": "Also known as Al-Farooq Al-Azam Mosque, a converted former church in Old Ottawa South serving as a mosque and multi-faith community centre, symbolizing inclusivity and interfaith harmony.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "eid_prayers"],
+      "facilities": ["wudu_area", "women_section", "parking", "multipurpose_hall"],
+      "accessInfo": null
     },
     {
       "name": "Ismaili Jamat Khana",
@@ -566,7 +601,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "The Ismaili Jamatkhana and Centre in Ottawa, opened in 2013, is a beautiful facility serving the Shia Ismaili Muslim community with religious education, a prayer hall, library, and community spaces.",
+      "denomination": "ismaili",
+      "hours": null,
+      "services": ["five_daily_prayers", "quran_classes", "islamic_studies", "youth_programs"],
+      "facilities": ["wudu_area", "women_section", "parking", "wheelchair_accessible", "library", "childcare_room", "multipurpose_hall"],
+      "accessInfo": null
     },
     {
       "name": "Jami Omar",

@@ -24,6 +24,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": "info@muslimassociationtillsonburg.ca",
+      "description": "A Sunni mosque established in 2021, serving the diverse Muslim community in Tillsonburg and surrounding areas. Welcomes men, women, and visitors of all faiths.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "parking"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
