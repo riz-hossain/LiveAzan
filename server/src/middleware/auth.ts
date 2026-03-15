@@ -51,6 +51,35 @@ export function authenticate(
   }
 }
 
+export function optionalAuth(
+  req: Request,
+  _res: Response,
+  next: NextFunction
+): void {
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+    next();
+    return;
+  }
+
+  const token = authHeader.slice(7);
+  try {
+    const decoded = jwt.verify(token, getJwtSecret()) as {
+      userId: string;
+      email: string;
+      role: string;
+    };
+    req.user = {
+      userId: decoded.userId,
+      email: decoded.email,
+      role: decoded.role,
+    };
+  } catch {
+    // Token invalid — continue without auth (anonymous submission)
+  }
+  next();
+}
+
 export function requireRole(...roles: string[]) {
   return (req: Request, res: Response, next: NextFunction): void => {
     if (!req.user) {

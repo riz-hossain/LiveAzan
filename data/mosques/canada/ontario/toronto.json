@@ -1,12 +1,12 @@
 {
-  "region": "toronto",
+  "region": "toronto-gta",
   "province": "Ontario",
   "country": "canada",
   "centerLat": 43.6532,
   "centerLon": -79.3832,
-  "radiusKm": 300,
+  "radiusKm": 50,
   "lastResearched": "2026-03-15",
-  "researchedBy": "admin",
+  "researchedBy": "overpass-api-scraper+muslimlink-scraper",
   "mosques": [
     {
       "name": "Islamic Foundation of Toronto",
@@ -31,7 +31,11 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["islamicfoundation.ca", "masjidbox.com", "google-maps"]
+      "sources": [
+        "islamicfoundation.ca",
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Masjid Toronto",
@@ -41,7 +45,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.6547,
-      "longitude": -79.3860,
+      "longitude": -79.386,
       "phone": "+1-416-964-8904",
       "website": "https://www.masjidtoronto.com",
       "googleRating": 4.7,
@@ -56,7 +60,11 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["masjidtoronto.com", "masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidtoronto.com",
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Jami Mosque",
@@ -65,7 +73,7 @@
       "city": "Toronto",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.6480,
+      "latitude": 43.648,
       "longitude": -79.4511,
       "phone": "+1-416-769-1192",
       "website": null,
@@ -81,7 +89,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Imdadul Islamic Centre",
@@ -91,7 +102,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.7404,
-      "longitude": -79.5370,
+      "longitude": -79.537,
       "phone": "+1-416-740-8666",
       "website": null,
       "googleRating": 4.4,
@@ -106,7 +117,10 @@
         "isha": "21:00",
         "jummah": "14:00"
       },
-      "sources": ["google-maps", "prayersconnect.com"]
+      "sources": [
+        "google-maps",
+        "prayersconnect.com"
+      ]
     },
     {
       "name": "Abu Huraira Centre",
@@ -131,7 +145,11 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["abuhurairacenter.com", "masjidbox.com", "google-maps"]
+      "sources": [
+        "abuhurairacenter.com",
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Khalid Bin Al-Walid Mosque",
@@ -141,7 +159,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.7529,
-      "longitude": -79.2660,
+      "longitude": -79.266,
       "phone": "+1-416-750-2253",
       "website": null,
       "googleRating": 4.5,
@@ -156,7 +174,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Islamic Institute of Toronto",
@@ -181,7 +202,11 @@
         "isha": "21:15",
         "jummah": "13:30"
       },
-      "sources": ["iit.org", "masjidbox.com", "google-maps"]
+      "sources": [
+        "iit.org",
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Masjid Dar Al-Tawheed",
@@ -206,7 +231,11 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["daraltawheed.com", "masjidbox.com", "google-maps"]
+      "sources": [
+        "daraltawheed.com",
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "65 Musalla (Thorncliffe)",
@@ -231,7 +260,11 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["65musalla.com", "prayersconnect.com", "google-maps"],
+      "sources": [
+        "65musalla.com",
+        "prayersconnect.com",
+        "google-maps"
+      ],
       "notes": "Located on 1st floor of Building 65 (Centennial Towers). One of the largest musallas in the Thorncliffe area."
     },
     {
@@ -241,8 +274,8 @@
       "city": "Toronto",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.7210,
-      "longitude": -79.3410,
+      "latitude": 43.721,
+      "longitude": -79.341,
       "phone": null,
       "website": null,
       "googleRating": 4.4,
@@ -250,7 +283,10 @@
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": null,
-      "sources": ["prayersconnect.com", "google-maps"],
+      "sources": [
+        "prayersconnect.com",
+        "google-maps"
+      ],
       "notes": "Established 2019. Serves the Flemingdon Park community."
     },
     {
@@ -261,7 +297,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.7055,
-      "longitude": -79.3390,
+      "longitude": -79.339,
       "phone": "+1-416-467-0786",
       "website": null,
       "googleRating": 4.8,
@@ -276,7 +312,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["praysalat.com", "google-maps"]
+      "sources": [
+        "praysalat.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Toronto Islamic Centre & Community Services",
@@ -286,7 +325,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.6745,
-      "longitude": -79.3880,
+      "longitude": -79.388,
       "phone": "+1-647-350-4262",
       "website": null,
       "googleRating": 4.9,
@@ -301,7 +340,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["praysalat.com", "google-maps"]
+      "sources": [
+        "praysalat.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Salaheddin Islamic Centre",
@@ -310,8 +352,8 @@
       "city": "Toronto",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.7240,
-      "longitude": -79.2640,
+      "latitude": 43.724,
+      "longitude": -79.264,
       "phone": "+1-416-265-4477",
       "website": "https://www.salaheddin.org",
       "googleRating": 4.5,
@@ -326,7 +368,10 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["salaheddin.org", "google-maps"]
+      "sources": [
+        "salaheddin.org",
+        "google-maps"
+      ]
     },
     {
       "name": "Agincourt Muslim Association",
@@ -335,8 +380,8 @@
       "city": "Toronto",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.7860,
-      "longitude": -79.2830,
+      "latitude": 43.786,
+      "longitude": -79.283,
       "phone": null,
       "website": "https://agincourtma.org",
       "googleRating": 4.3,
@@ -344,7 +389,10 @@
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": null,
-      "sources": ["agincourtma.org", "google-maps"],
+      "sources": [
+        "agincourtma.org",
+        "google-maps"
+      ],
       "notes": "Located in basement below Rexall Pharmacy with entrance at rear of building."
     },
     {
@@ -354,8 +402,8 @@
       "city": "Toronto",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.7280,
-      "longitude": -79.2400,
+      "latitude": 43.728,
+      "longitude": -79.24,
       "phone": null,
       "website": "https://subhanislamicassociation.org",
       "googleRating": 4.4,
@@ -363,17 +411,20 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["subhanislamicassociation.org", "google-maps"]
+      "sources": [
+        "subhanislamicassociation.org",
+        "google-maps"
+      ]
     },
     {
-      "name": "SLIFO – Masjid Al Jannah",
+      "name": "SLIFO \u2013 Masjid Al Jannah",
       "type": "mosque",
       "address": "2201 Ellesmere Rd, Scarborough, ON M1G 3M6",
       "city": "Toronto",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.7680,
-      "longitude": -79.2350,
+      "latitude": 43.768,
+      "longitude": -79.235,
       "phone": null,
       "website": null,
       "googleRating": 4.6,
@@ -388,7 +439,9 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["google-maps"],
+      "sources": [
+        "google-maps"
+      ],
       "notes": "Sri Lankan Islamic Foundation of Ontario."
     },
     {
@@ -407,8 +460,2233 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["google-maps", "torontopearson.com"],
+      "sources": [
+        "google-maps",
+        "torontopearson.com"
+      ],
       "notes": "Multi-faith prayer room inside Toronto Pearson International Airport. Available 24/7 airside."
+    },
+    {
+      "name": "Pape Avenue Masjid",
+      "type": "mosque",
+      "address": "336 Pape Ave, Toronto, ON M4M 2W3",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.6671,
+      "longitude": -79.347,
+      "phone": "+1-647-371-6488",
+      "website": "https://papemosque.ca",
+      "googleRating": 4.6,
+      "googleReviewCount": 85,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Al-Noor (Islamic Information & Dawah Centre)",
+      "type": "mosque",
+      "address": "1168 Bloor St W, Toronto, ON M6H 1N1",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.6607,
+      "longitude": -79.4397,
+      "phone": "+1-416-536-8433",
+      "website": "https://www.islaminfo.com",
+      "googleRating": 4.5,
+      "googleReviewCount": 220,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid El Noor",
+      "type": "mosque",
+      "address": "277 Scott Rd, Toronto, ON M6A 1P8",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.7224,
+      "longitude": -79.4539,
+      "phone": "+1-416-785-2223",
+      "website": null,
+      "googleRating": 4.7,
+      "googleReviewCount": 150,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Albanian Muslim Society of Toronto",
+      "type": "mosque",
+      "address": "564 Annette St, Toronto, ON M6S 2C2",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.661,
+      "longitude": -79.4654,
+      "phone": "+1-416-762-1764",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 60,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Hamza Mosque",
+      "type": "mosque",
+      "address": "1287 Queen St W, Toronto, ON M6K 1L6",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.6397,
+      "longitude": -79.4325,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 40,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Toronto and Region Islamic Congregation (TARIC)",
+      "type": "mosque",
+      "address": "99 Beverly Hills Dr, Toronto, ON M3L 1A2",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.7401,
+      "longitude": -79.5198,
+      "phone": "+1-416-741-8270",
+      "website": "https://www.taric.ca",
+      "googleRating": 4.6,
+      "googleReviewCount": 350,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Regent Park Islamic Resource Center",
+      "type": "mosque",
+      "address": "1 Paisley Ave, Toronto, ON M5A 0E1",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.66,
+      "longitude": -79.3619,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 30,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Islamic Research Center of Canada",
+      "type": "mosque",
+      "address": "1 Stamford Square North, Toronto, ON M1W 2S7",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.792,
+      "longitude": -79.317,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 25,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Baitul Mukarram Islamic Society",
+      "type": "mosque",
+      "address": "3340 Danforth Ave, Scarborough, ON M1L 1C1",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.687,
+      "longitude": -79.2806,
+      "phone": "+1-416-693-2636",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 110,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Jaame Masjid Scarborough",
+      "type": "mosque",
+      "address": "3665 Lawrence Ave E, Toronto, ON M1G 1P4",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.758,
+      "longitude": -79.231,
+      "phone": "+1-416-281-2811",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 95,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Huzaifah",
+      "type": "mosque",
+      "address": "18 Progress Ave, Scarborough, ON M1P 2Y3",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.754,
+      "longitude": -79.259,
+      "phone": "+1-416-298-3632",
+      "website": null,
+      "googleRating": 4.6,
+      "googleReviewCount": 70,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Usman Gousi Mosque",
+      "type": "mosque",
+      "address": "75 Kirkdene Dr, Toronto, ON M1K 4N9",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.73,
+      "longitude": -79.262,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 35,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Dar Us Salaam",
+      "type": "mosque",
+      "address": "4 Thorncliffe Park Dr, Toronto, ON M4H 1G6",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.708,
+      "longitude": -79.344,
+      "phone": "+1-416-421-1377",
+      "website": null,
+      "googleRating": 4.7,
+      "googleReviewCount": 180,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Al-Hikmah Centre Inc",
+      "type": "mosque",
+      "address": "36 Colville Rd, North York, ON M6M 2Y5",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.6903,
+      "longitude": -79.477,
+      "phone": "+1-416-645-4803",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 45,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Afghan-Canadian Islamic Community",
+      "type": "mosque",
+      "address": "22 Hobson Ave, North York, ON M3B 1G9",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.7423,
+      "longitude": -79.358,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 20,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Imam Mahdi Islamic Centre",
+      "type": "mosque",
+      "address": "7340 Bayview Ave, Thornhill, ON L3T 2R7",
+      "city": "Thornhill",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.81,
+      "longitude": -79.386,
+      "phone": "+1-905-889-1717",
+      "website": "https://www.imic.ca",
+      "googleRating": 4.5,
+      "googleReviewCount": 80,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Ismaili Centre Toronto",
+      "type": "mosque",
+      "address": "49 Wynford Dr, North York, ON M3C 1K1",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.7232,
+      "longitude": -79.3344,
+      "phone": "+1-416-646-6965",
+      "website": "https://www.theismaili.org",
+      "googleRating": 4.6,
+      "googleReviewCount": 120,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Don Mills Jamatkhana",
+      "type": "musalla",
+      "address": "80 Overlea Blvd, East York, ON M4H 1C6",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.7063,
+      "longitude": -79.3377,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.2,
+      "googleReviewCount": 15,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Baitul Aman Masjid",
+      "type": "mosque",
+      "address": "3114 Danforth Ave, Toronto, ON M1L 1A9",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.6888,
+      "longitude": -79.29,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 50,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Dar Al-Hijrah Islamic Center",
+      "type": "mosque",
+      "address": "2050 Kipling Ave, Etobicoke, ON M9W 4K2",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.679,
+      "longitude": -79.535,
+      "phone": "+1-416-746-0303",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 80,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Rexdale Jame Masjid",
+      "type": "mosque",
+      "address": "127 Westmore Dr, Etobicoke, ON M9V 3Y6",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.743,
+      "longitude": -79.588,
+      "phone": "+1-416-748-2429",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 90,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Jannatul Ferdous Mosque",
+      "type": "mosque",
+      "address": "1701 Martin Grove Rd, Etobicoke, ON M9V 3S3",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.729,
+      "longitude": -79.566,
+      "phone": "+1-416-744-6996",
+      "website": null,
+      "googleRating": 4.6,
+      "googleReviewCount": 60,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Ummah Nabawiah Masjid",
+      "type": "mosque",
+      "address": "2074 Kipling Ave, Toronto, ON M9W 4J8",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.681,
+      "longitude": -79.536,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 25,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Bosnian Islamic Association Gazi Husrev-Beg",
+      "type": "mosque",
+      "address": "122 North Queen St, Etobicoke, ON M9C 1A9",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.644,
+      "longitude": -79.557,
+      "phone": "+1-416-622-1169",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 30,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Bosnian Islamic Centre",
+      "type": "mosque",
+      "address": "75 Birmingham St, Toronto, ON M8V 2B5",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.602,
+      "longitude": -79.503,
+      "phone": "+1-416-251-7494",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 40,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "ISNA Canada",
+      "type": "mosque",
+      "address": "2200 South Sheridan Way, Mississauga, ON L5J 2M4",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.505,
+      "longitude": -79.653,
+      "phone": "+1-905-403-8406",
+      "website": "https://www.isnacanada.com",
+      "googleRating": 4.6,
+      "googleReviewCount": 800,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Anatolia Islamic Centre",
+      "type": "mosque",
+      "address": "5280 Maingate Dr, Mississauga, ON L4W 1G5",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.634,
+      "longitude": -79.607,
+      "phone": "+1-905-238-0001",
+      "website": "https://www.anatoliaislamiccentre.com",
+      "googleRating": 4.7,
+      "googleReviewCount": 250,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Sayeda Khadija Centre",
+      "type": "mosque",
+      "address": "7150 Edwards Blvd, Mississauga, ON L5S 1Z1",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.643,
+      "longitude": -79.648,
+      "phone": "+1-905-670-6662",
+      "website": "https://www.sayedakhadijacentre.com",
+      "googleRating": 4.6,
+      "googleReviewCount": 200,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Al Farooq",
+      "type": "mosque",
+      "address": "935 Eglinton Ave W, Mississauga, ON L5V 2W6",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.585,
+      "longitude": -79.621,
+      "phone": "+1-905-567-1488",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 130,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Jame Masjid Mississauga",
+      "type": "mosque",
+      "address": "5761 Coopers Ave, Mississauga, ON L4Z 1R9",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.637,
+      "longitude": -79.62,
+      "phone": "+1-905-890-3539",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 110,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Riyad Ul Jannah",
+      "type": "mosque",
+      "address": "6680 Campobello Rd, Mississauga, ON L5N 2L8",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.592,
+      "longitude": -79.706,
+      "phone": "+1-905-821-2300",
+      "website": null,
+      "googleRating": 4.6,
+      "googleReviewCount": 90,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Malton Islamic Centre",
+      "type": "mosque",
+      "address": "6836 Professional Ct, Mississauga, ON L4V 1X5",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.681,
+      "longitude": -79.647,
+      "phone": "+1-905-612-9000",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 65,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Malton Masjid",
+      "type": "mosque",
+      "address": "7097 Airport Rd, Mississauga, ON L4T 2G9",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.69,
+      "longitude": -79.636,
+      "phone": "+1-905-677-1148",
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 40,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Rahmatul-lil-Alameen",
+      "type": "mosque",
+      "address": "205 North Service Rd, Mississauga, ON L5A 1A2",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.577,
+      "longitude": -79.596,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 35,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Muslim World League",
+      "type": "mosque",
+      "address": "2630 Royal Windsor Dr, Mississauga, ON L5J 1K9",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.509,
+      "longitude": -79.643,
+      "phone": "+1-905-822-1080",
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 30,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Al Huda Institute Canada",
+      "type": "mosque",
+      "address": "5671 McAdam Rd, Mississauga, ON L4Z 1N9",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.632,
+      "longitude": -79.631,
+      "phone": "+1-905-624-2030",
+      "website": "https://www.alhudainstitute.ca",
+      "googleRating": 4.5,
+      "googleReviewCount": 75,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Shalimar Masjid",
+      "type": "mosque",
+      "address": "79 Cedarglen Gate, Mississauga, ON L5C 2G3",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.565,
+      "longitude": -79.628,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.2,
+      "googleReviewCount": 20,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Meadowvale Ismaili Centre",
+      "type": "mosque",
+      "address": "7037 Financial Dr, Mississauga, ON L5N 6R7",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.583,
+      "longitude": -79.715,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 55,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "966 ICNA Masjid",
+      "type": "mosque",
+      "address": "966 Dundas St E, Mississauga, ON L4Y 2B9",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.589,
+      "longitude": -79.589,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 28,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Anjuman-e-Fakhri Dawoodi Bohra Jamaat",
+      "type": "mosque",
+      "address": "1605 Argentia Rd, Mississauga, ON L5N 3A1",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.584,
+      "longitude": -79.722,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 15,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Baitul Hamd Mosque",
+      "type": "mosque",
+      "address": "1194 Matheson Blvd E, Mississauga, ON L4W 1R2",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.636,
+      "longitude": -79.597,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 22,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Islamic Society of Vaughan",
+      "type": "mosque",
+      "address": "9100 Jane St, Vaughan, ON L4K 0A4",
+      "city": "Vaughan",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.804,
+      "longitude": -79.509,
+      "phone": "+1-905-303-8200",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 100,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Vaughan",
+      "type": "mosque",
+      "address": "9954 Keele St, Maple, ON L6A 3Y5",
+      "city": "Vaughan",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.85,
+      "longitude": -79.499,
+      "phone": "+1-905-832-6585",
+      "website": null,
+      "googleRating": 4.6,
+      "googleReviewCount": 130,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Baitul Islam Mosque",
+      "type": "mosque",
+      "address": "10610 Jane St, Vaughan, ON L6A 3A2",
+      "city": "Vaughan",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.867,
+      "longitude": -79.51,
+      "phone": "+1-905-832-2669",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 90,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Baitul Mahdi Mosque",
+      "type": "mosque",
+      "address": "3505 Salem Rd, Locust Hill, ON L0H 1J0",
+      "city": "Pickering",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.902,
+      "longitude": -79.147,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 20,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Islamic Society of York Region",
+      "type": "mosque",
+      "address": "15 Mercury Rd, Richmond Hill, ON L4B 3K3",
+      "city": "Richmond Hill",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.854,
+      "longitude": -79.369,
+      "phone": "+1-905-780-3297",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 60,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masumeen Islamic Centre",
+      "type": "mosque",
+      "address": "7580 Kennedy Rd S, Brampton, ON L6W 0A3",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.672,
+      "longitude": -79.686,
+      "phone": "+1-905-799-0003",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 55,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "al-Hussain Foundation Centre",
+      "type": "mosque",
+      "address": "10992 Kennedy Rd, Markham, ON L6C 1P2",
+      "city": "Markham",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.879,
+      "longitude": -79.253,
+      "phone": "+1-905-471-0786",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 45,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Madina Masjid",
+      "type": "mosque",
+      "address": "1015 Danforth Ave, Toronto, ON M4J 1M1",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.6816,
+      "longitude": -79.3352,
+      "phone": "+1-416-465-7833",
+      "website": null,
+      "googleRating": 4.6,
+      "googleReviewCount": 85,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Omar",
+      "type": "mosque",
+      "address": "1250 Eglinton Ave W, Toronto, ON M6C 3T1",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.697,
+      "longitude": -79.432,
+      "phone": "+1-416-792-6253",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 55,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Noor Al-Huda Islamic Centre",
+      "type": "mosque",
+      "address": "2130 Islington Ave, Etobicoke, ON M9P 3P4",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.684,
+      "longitude": -79.526,
+      "phone": "+1-416-248-5338",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 60,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Islamic Forum of Canada",
+      "type": "mosque",
+      "address": "2 Thorncliffe Park Dr, Toronto, ON M4H 1G4",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.7078,
+      "longitude": -79.343,
+      "phone": "+1-416-262-2200",
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 30,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Al-Siddiq",
+      "type": "mosque",
+      "address": "1 Yemen Rd, Toronto, ON M6N 5C3",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.677,
+      "longitude": -79.461,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.2,
+      "googleReviewCount": 15,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Adam Islamic Center",
+      "type": "mosque",
+      "address": "1759 Bloor St W, Toronto, ON M6P 0A2",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.654,
+      "longitude": -79.452,
+      "phone": "+1-647-382-2326",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 40,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Darul Khair Islamic Centre",
+      "type": "mosque",
+      "address": "51 Hallcrown Pl, North York, ON M2J 1A7",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.78,
+      "longitude": -79.353,
+      "phone": "+1-416-491-3775",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 30,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Faith Mosque (Diyanet)",
+      "type": "mosque",
+      "address": "182 Rhodes Ave, Toronto, ON M4L 2Z8",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.661,
+      "longitude": -79.322,
+      "phone": "+1-416-461-9596",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 25,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Tawfiq Islamic Centre",
+      "type": "mosque",
+      "address": "18 Fieldway Rd, Etobicoke, ON M8Z 3L2",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.622,
+      "longitude": -79.518,
+      "phone": "+1-416-252-1779",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 45,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Muslim Welfare Center",
+      "type": "mosque",
+      "address": "420 Commissioners St, Toronto, ON M4M 1A6",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.657,
+      "longitude": -79.344,
+      "phone": null,
+      "website": "https://www.muslimwelfare.com",
+      "googleRating": 4.7,
+      "googleReviewCount": 150,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid-e-Quba",
+      "type": "mosque",
+      "address": "3037 Dundas St W, Toronto, ON M6P 1Z5",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.656,
+      "longitude": -79.466,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 20,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Islamic Centre of Woodbridge",
+      "type": "mosque",
+      "address": "211 McNaughton Rd, Woodbridge, ON L4L 1E2",
+      "city": "Vaughan",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.787,
+      "longitude": -79.554,
+      "phone": "+1-905-264-2878",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 40,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Bilal",
+      "type": "mosque",
+      "address": "2 Shermount Ave, Toronto, ON M4A 1Y3",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.712,
+      "longitude": -79.321,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 20,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Naqshbandi Sufi Toronto",
+      "type": "mosque",
+      "address": "129 East Dr, Brampton, ON L6T 1B5",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.71,
+      "longitude": -79.705,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 15,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "University of Toronto Musalla (Multi-Faith Centre)",
+      "type": "musalla",
+      "address": "569 Spadina Cres, Toronto, ON M5S 2J7",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.664,
+      "longitude": -79.399,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.2,
+      "googleReviewCount": 15,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": "University of Toronto multi-faith prayer space. Open to students and public."
+    },
+    {
+      "name": "York University Muslim Prayer Space",
+      "type": "musalla",
+      "address": "4700 Keele St, North York, ON M3J 1P3",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.7735,
+      "longitude": -79.5019,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.0,
+      "googleReviewCount": 10,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": "Located in Scott Religious Centre, York University campus."
+    },
+    {
+      "name": "Ryerson (TMU) Muslim Students' Prayer Room",
+      "type": "musalla",
+      "address": "350 Victoria St, Toronto, ON M5B 2K3",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.657,
+      "longitude": -79.3785,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.1,
+      "googleReviewCount": 8,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": "Toronto Metropolitan University campus prayer room."
+    },
+    {
+      "name": "Scarborough Civic Centre Prayer Room",
+      "type": "musalla",
+      "address": "150 Borough Dr, Scarborough, ON M1P 4N7",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.773,
+      "longitude": -79.258,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.0,
+      "googleReviewCount": 12,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": "Prayer room available in the Scarborough Civic Centre."
+    },
+    {
+      "name": "Ismaili Jamatkhana Scarborough",
+      "type": "musalla",
+      "address": "3500 McNicoll Ave, Scarborough, ON M1V 4C7",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.803,
+      "longitude": -79.302,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 20,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "STC Musalla (Scarborough Town Centre)",
+      "type": "musalla",
+      "address": "300 Borough Dr, Scarborough, ON M1P 4P5",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.775,
+      "longitude": -79.257,
+      "phone": null,
+      "website": null,
+      "googleRating": 3.9,
+      "googleReviewCount": 8,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": "Informal prayer space used by Muslim shoppers and workers near Scarborough Town Centre."
+    },
+    {
+      "name": "Bab ul Ilm - Bani Hashim Society",
+      "type": "mosque",
+      "address": "2225 Markham Rd, Scarborough, ON M1B 2W3",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.807,
+      "longitude": -79.21,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 30,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Dawoodi Bohra Al Masjid Al Saifee",
+      "type": "mosque",
+      "address": "383 Birchmount Rd, Scarborough, ON M1K 1M7",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.724,
+      "longitude": -79.271,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 25,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Sayyidah Zainab Centre",
+      "type": "mosque",
+      "address": "233 Progress Ave, Scarborough, ON M1P 2Z4",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.755,
+      "longitude": -79.253,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 35,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Baitul Jannah Islamic Center",
+      "type": "mosque",
+      "address": "35 Hallcrown Pl, North York, ON M2J 1A7",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.781,
+      "longitude": -79.354,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 18,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Noor-ul-Haram",
+      "type": "mosque",
+      "address": "2478 9th Line, Oakville, ON L6H 7G9",
+      "city": "Oakville",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.447,
+      "longitude": -79.708,
+      "phone": "+1-905-257-3697",
+      "website": null,
+      "googleRating": 4.6,
+      "googleReviewCount": 45,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Newmarket Islamic Centre",
+      "type": "mosque",
+      "address": "700 Mulock Dr, Newmarket, ON L3Y 9B1",
+      "city": "Newmarket",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.056,
+      "longitude": -79.46,
+      "phone": "+1-905-898-9999",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 55,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Winston Churchill Mosque",
+      "type": "mosque",
+      "address": "Winston Churchill Blvd, Mississauga, ON",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.563,
+      "longitude": -79.671,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 15,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Pickering Islamic Centre",
+      "type": "mosque",
+      "address": "1455 Pickering Pkwy, Pickering, ON L1V 7G7",
+      "city": "Pickering",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.837,
+      "longitude": -79.082,
+      "phone": "+1-905-831-6800",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 50,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Mount Pleasant Islamic Center",
+      "type": "mosque",
+      "address": "160 Salvation Rd, Brampton, ON L6S 4P2",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.754,
+      "longitude": -79.726,
+      "phone": "+1-905-799-7868",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 60,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Mubarak Mosque",
+      "type": "mosque",
+      "address": "10545 Hurontario St, Brampton, ON L6Z 0E4",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.723,
+      "longitude": -79.713,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 40,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Jam'e Masjid Markham",
+      "type": "mosque",
+      "address": "2900 Denison St, Markham, ON L3S 4K2",
+      "city": "Markham",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.843,
+      "longitude": -79.275,
+      "phone": "+1-905-472-3424",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 85,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Darul Iman",
+      "type": "mosque",
+      "address": "1330 Castlemore Ave, Markham, ON L6E 1H2",
+      "city": "Markham",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.883,
+      "longitude": -79.265,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 30,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Imam Bukhari Centre",
+      "type": "mosque",
+      "address": "50 Steeles Ave E, Milton, ON L9T 8P1",
+      "city": "Milton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.518,
+      "longitude": -79.863,
+      "phone": "+1-289-878-6737",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 40,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Islamic Community Centre of Milton",
+      "type": "mosque",
+      "address": "8069 Esquesing Line, Milton, ON L9T 9E5",
+      "city": "Milton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.509,
+      "longitude": -79.854,
+      "phone": "+1-905-878-6612",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 35,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Muslim Association of Milton",
+      "type": "mosque",
+      "address": "4269 Regional Rd 25, Oakville, ON L7L 5M5",
+      "city": "Milton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.498,
+      "longitude": -79.81,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 25,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Spiritual Society Canada",
+      "type": "mosque",
+      "address": "200 Wingarden Ct, Toronto, ON M1B 2N5",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.81,
+      "longitude": -79.2,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.1,
+      "googleReviewCount": 10,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "The Reign of Islamic Da'Wah (TROID)",
+      "type": "mosque",
+      "address": "874 Weston Rd, Toronto, ON M6N 3R6",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.693,
+      "longitude": -79.471,
+      "phone": "+1-416-243-5320",
+      "website": "https://www.tfreed.org",
+      "googleRating": 4.3,
+      "googleReviewCount": 35,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Quba (Ajax)",
+      "type": "mosque",
+      "address": "55 Harwood Ave S, Ajax, ON L1S 2H8",
+      "city": "Ajax",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.853,
+      "longitude": -79.024,
+      "phone": "+1-905-619-0064",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 50,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Imdadul Islamic Jamat",
+      "type": "mosque",
+      "address": "26 Le Page Ct, Toronto, ON M3J 1Z9",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.77,
+      "longitude": -79.48,
+      "phone": "+1-416-740-8666",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 35,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Omar Bin Khatab",
+      "type": "mosque",
+      "address": "2345 Dundas St W, Toronto, ON M6R 1X2",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.6535,
+      "longitude": -79.454,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.2,
+      "googleReviewCount": 15,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Khalid Bin Al-Waleed Mosque",
+      "type": "mosque",
+      "address": "2 Thorncliffe Park Dr Unit 32, Toronto, ON M4H 1G4",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.7075,
+      "longitude": -79.3435,
+      "phone": "+1-647-795-0786",
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 20,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Islamic Information Centre",
+      "type": "mosque",
+      "address": "40 College St, Toronto, ON M5G 2J3",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.6595,
+      "longitude": -79.3885,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.1,
+      "googleReviewCount": 10,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": "Islamic information and prayer space downtown."
+    },
+    {
+      "name": "Masjid Sunnah Al-Nabawiah",
+      "type": "mosque",
+      "address": "2435 Finch Ave W, North York, ON M9M 2E7",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.764,
+      "longitude": -79.541,
+      "phone": "+1-416-742-8011",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 55,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Ja'ffari Islamic Centre",
+      "type": "mosque",
+      "address": "9000 Bathurst St, Thornhill, ON L4J 8A7",
+      "city": "Thornhill",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.815,
+      "longitude": -79.449,
+      "phone": "+1-905-695-9786",
+      "website": "https://www.jfrcc.org",
+      "googleRating": 4.5,
+      "googleReviewCount": 120,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Al-Mahdi Islamic Centre",
+      "type": "mosque",
+      "address": "8580 Islington Ave, Vaughan, ON L4L 1W6",
+      "city": "Vaughan",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.795,
+      "longitude": -79.536,
+      "phone": "+1-905-856-7786",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 40,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid As-Siddique",
+      "type": "mosque",
+      "address": "7150 Airport Rd, Mississauga, ON L4T 2G4",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.691,
+      "longitude": -79.635,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 20,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Brampton Islamic Center",
+      "type": "mosque",
+      "address": "6 Lowry Dr, Brampton, ON L6T 4N3",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.71,
+      "longitude": -79.71,
+      "phone": "+1-905-792-5100",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 50,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Jamiat-Ul-Ansar of Brampton",
+      "type": "mosque",
+      "address": "291 Great Lakes Dr, Brampton, ON L6R 2S1",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.728,
+      "longitude": -79.737,
+      "phone": "+1-905-460-6260",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 55,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Jame Makki Masjid Brampton",
+      "type": "mosque",
+      "address": "8450 Torbram Rd, Brampton, ON L6T 5C6",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.702,
+      "longitude": -79.689,
+      "phone": "+1-905-793-1212",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 70,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Al Qalam",
+      "type": "mosque",
+      "address": "89 Advance Rd, Toronto, ON M8Z 2T4",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.627,
+      "longitude": -79.508,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.2,
+      "googleReviewCount": 15,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Muslim Neighbour Nexus",
+      "type": "mosque",
+      "address": "3553 Lake Shore Blvd W, Etobicoke, ON M8W 1P4",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.593,
+      "longitude": -79.523,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.1,
+      "googleReviewCount": 10,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Oshawa Mosque (Masjid Hamza)",
+      "type": "mosque",
+      "address": "67 Bond St W, Oshawa, ON L1G 1A3",
+      "city": "Oshawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.898,
+      "longitude": -78.868,
+      "phone": "+1-905-404-9786",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 40,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjidur Rahmah",
+      "type": "mosque",
+      "address": "1320 Ellesmere Rd, Scarborough, ON M1P 2X6",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.77,
+      "longitude": -79.267,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 20,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimlink.ca",
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

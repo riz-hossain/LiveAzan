@@ -3,10 +3,10 @@
   "regions": [
     {
       "file": "canada/ontario/toronto.json",
-      "city": "Toronto",
+      "city": "Toronto GTA",
       "province": "Ontario",
-      "mosquesCount": 13,
-      "musallasCount": 4
+      "mosquesCount": 106,
+      "musallasCount": 12
     },
     {
       "file": "canada/ontario/ottawa.json",

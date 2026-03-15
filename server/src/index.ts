@@ -7,6 +7,7 @@ import iqamaRoutes from "./routes/iqama";
 import prayerTimesRoutes from "./routes/prayerTimes";
 import userRoutes from "./routes/users";
 import coverageRequestRoutes from "./routes/coverageRequests";
+import submissionRoutes from "./routes/submissions";
 
 const app = express();
 const PORT = parseInt(process.env.PORT || "3001", 10);
@@ -27,6 +28,7 @@ app.use("/api/iqama", iqamaRoutes);
 app.use("/api/prayer-times", prayerTimesRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/coverage-requests", coverageRequestRoutes);
+app.use("/api/submissions", submissionRoutes);
 
 // Error handler middleware
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
