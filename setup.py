@@ -350,8 +350,11 @@ def ensure_env_local(repo):
     env_file.write_text(
         f"DB_PASSWORD={db_password}\n"
         f"JWT_SECRET={jwt_secret}\n"
+        f"ADMIN_EMAIL=admin@liveaszan.local\n"
+        f"ADMIN_PASSWORD=admin1234\n"
     )
-    info(f".env.local created with generated secrets.")
+    info(".env.local created with generated secrets.")
+    info("  Default admin: admin@liveaszan.local / admin1234")
 
 
 def ensure_env_prod(repo):
@@ -779,12 +782,17 @@ def _gradle_build_with_retry(android_dir, base_cmd, env):
     rc, tail = _run_streaming(base_cmd, cwd=str(android_dir), env=env)
     if rc == 0:
         return
-    if "daemon disappeared" in tail.lower():
-        warn("Gradle daemon crashed. Retrying with --no-daemon...")
+    tail_lower = tail.lower()
+    if "daemon disappeared" in tail_lower or "jvm crash" in tail_lower or "hs_err" in tail_lower:
+        warn("Gradle daemon crashed. Stopping daemons and retrying with --no-daemon...")
+        _stop_gradle_daemons(android_dir)
     else:
         warn("Gradle build failed. Retrying with conservative settings...")
+    retry_env = dict(env)
+    retry_env["GRADLE_OPTS"] = "-Dorg.gradle.jvmargs=-Xmx2g -Dfile.encoding=UTF-8"
+    retry_env.pop("JAVA_TOOL_OPTIONS", None)
     retry_cmd = base_cmd + ["--no-daemon", "--no-parallel", "--max-workers=1"]
-    rc2, _ = _run_streaming(retry_cmd, cwd=str(android_dir), env=env)
+    rc2, _ = _run_streaming(retry_cmd, cwd=str(android_dir), env=retry_env)
     if rc2 != 0:
         raise RuntimeError("Android build failed after retry.")
 
@@ -838,8 +846,8 @@ def cmd_android(repo, fresh=False, nuke_gradle=False):
 
     build_env = dict(os.environ)
     build_env.setdefault("GRADLE_OPTS",
-                         "-Dorg.gradle.jvmargs=-Xmx6g -XX:MaxMetaspaceSize=2g -Dfile.encoding=UTF-8")
-    build_env.setdefault("JAVA_TOOL_OPTIONS", "-Xmx6g")
+                         "-Dorg.gradle.jvmargs=-Xmx3g -Dfile.encoding=UTF-8")
+    build_env.pop("JAVA_TOOL_OPTIONS", None)
     build_env.setdefault("NODE_ENV", "production")
 
     selected_jdk = _select_jdk_for_android(android_dir)
@@ -863,6 +871,36 @@ def cmd_android(repo, fresh=False, nuke_gradle=False):
 
     header("Build Complete")
     info(f"APK: {dest}")
+
+
+# ── Admin credentials helper ──────────────────────────────────────────────────
+
+def _read_env_value(env_file, key):
+    """Read a single key from a .env file."""
+    try:
+        for line in Path(env_file).read_text().splitlines():
+            line = line.strip()
+            if line.startswith(f"{key}="):
+                return line[len(key) + 1:]
+    except Exception:
+        pass
+    return None
+
+
+def print_admin_credentials(repo, mode):
+    env_file = repo / (".env.local" if mode == "local" else ".env.prod")
+    email    = _read_env_value(env_file, "ADMIN_EMAIL")
+    password = _read_env_value(env_file, "ADMIN_PASSWORD")
+    if not email:
+        email    = "admin@liveaszan.local" if mode == "local" else "admin@liveaszan.com"
+        password = "(see ADMIN_PASSWORD in env file)"
+    info("")
+    info("  ┌─ Default Admin Account ──────────────────────┐")
+    info(f"  │  Email:    {email:<35}│")
+    info(f"  │  Password: {(password or '(see env file)'):<35}│")
+    info("  │  Login at the Admin Portal URL above.        │")
+    info("  └──────────────────────────────────────────────┘")
+    info("")
 
 
 # ── Commands ──────────────────────────────────────────────────────────────────
@@ -894,6 +932,7 @@ def cmd_up(repo, mode):
         info(f"    Start Expo:  cd apps/mobile && npx expo start")
         info("")
         info("  Database:      localhost:5432  (liveaszan / see .env.local)")
+        print_admin_credentials(repo, mode)
     else:
         ensure_env_prod(repo)
         compose_up(repo, mode)
@@ -905,6 +944,7 @@ def cmd_up(repo, mode):
         info("LiveAzan production stack is running.")
         info("  Admin Portal:  http://localhost:80")
         info("  Backend API:   http://localhost:3001/api/health")
+        print_admin_credentials(repo, mode)
 
 
 def cmd_restart(repo, mode):

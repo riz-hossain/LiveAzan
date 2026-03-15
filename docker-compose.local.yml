@@ -31,6 +31,8 @@ services:
     environment:
       DATABASE_URL: postgresql://liveaszan:${DB_PASSWORD:-liveaszan_dev}@postgres:5432/liveaszan
       JWT_SECRET: ${JWT_SECRET:-local_dev_secret_not_for_production}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@liveaszan.local}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-admin1234}
       ALADHAN_API_BASE: https://api.aladhan.com/v1
       PORT: 3001
       NODE_ENV: development
