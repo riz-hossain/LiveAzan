@@ -1,0 +1,34 @@
+{
+  "region": "brantford",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.1394,
+  "centerLon": -80.2644,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Brantford Masjid (Islamic Society of Brant)",
+      "address": "300 King George Rd, Brantford, ON N3R 5L7",
+      "city": "Brantford",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.1401,
+      "longitude": -80.2490,
+      "phone": "+1-519-759-1919",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["google-maps"]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "region": "guelph",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.5448,
+  "centerLon": -80.2482,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Guelph Islamic Centre",
+      "address": "226 Cardigan St, Guelph, ON N1H 3C5",
+      "city": "Guelph",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.5482,
+      "longitude": -80.2510,
+      "phone": "+1-519-836-3815",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:35",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:15",
+        "jummah": "13:45"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Muslim Society of Guelph",
+      "address": "50 Westmount Rd, Guelph, ON N1H 5H8",
+      "city": "Guelph",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.5310,
+      "longitude": -80.2600,
+      "phone": "+1-519-763-1919",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["google-maps"]
+    }
+  ]
+}

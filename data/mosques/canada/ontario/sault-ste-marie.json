@@ -1,0 +1,34 @@
+{
+  "region": "sault-ste-marie",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 46.5219,
+  "centerLon": -84.3461,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Sault Ste. Marie Islamic Association",
+      "address": "233 Old Garden River Rd, Sault Ste. Marie, ON P6B 5A6",
+      "city": "Sault Ste. Marie",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 46.5280,
+      "longitude": -84.3190,
+      "phone": "+1-705-759-7777",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["google-maps"]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "region": "windsor",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 42.3149,
+  "centerLon": -83.0364,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Windsor Islamic Association (Masjid Al-Hijrah)",
+      "address": "1320 Northwood St, Windsor, ON N9E 1A4",
+      "city": "Windsor",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.2977,
+      "longitude": -83.0581,
+      "phone": "+1-519-966-2355",
+      "website": "https://www.windsorislam.com",
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["windsorislam.com", "masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Windsor Mosque",
+      "address": "1575 Ouellette Ave, Windsor, ON N8X 1K5",
+      "city": "Windsor",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.3045,
+      "longitude": -83.0391,
+      "phone": "+1-519-254-1919",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Muslim Community of Windsor (Al-Furqan Mosque)",
+      "address": "975 Ottawa St, Windsor, ON N8X 2E5",
+      "city": "Windsor",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.3195,
+      "longitude": -83.0160,
+      "phone": "+1-519-256-0000",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:45",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["google-maps"]
+    }
+  ]
+}

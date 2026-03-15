@@ -1,0 +1,34 @@
+{
+  "region": "north-bay",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 46.3091,
+  "centerLon": -79.4608,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "North Bay Islamic Centre",
+      "address": "620 Cassells St, North Bay, ON P1B 4A2",
+      "city": "North Bay",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 46.3130,
+      "longitude": -79.4610,
+      "phone": "+1-705-474-3344",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["google-maps"]
+    }
+  ]
+}

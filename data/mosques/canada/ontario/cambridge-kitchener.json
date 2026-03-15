@@ -1,0 +1,78 @@
+{
+  "region": "cambridge-kitchener",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.4253,
+  "centerLon": -80.3114,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "K-W Musalla",
+      "address": "73 King St W, Kitchener, ON N2G 1A7",
+      "city": "Kitchener",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.4516,
+      "longitude": -80.4925,
+      "phone": "+1-519-744-2401",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+4",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["google-maps", "prayersconnect.com"]
+    },
+    {
+      "name": "Cambridge Islamic Centre",
+      "address": "1850 Bishop St N, Cambridge, ON N1T 1V5",
+      "city": "Cambridge",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.3976,
+      "longitude": -80.3386,
+      "phone": "+1-519-624-9890",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:35",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["google-maps"]
+    },
+    {
+      "name": "Kitchener Masjid (Islamic Association of Kitchener)",
+      "address": "55 Ottawa St S, Kitchener, ON N2G 3S5",
+      "city": "Kitchener",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.4480,
+      "longitude": -80.4830,
+      "phone": "+1-519-578-5786",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "region": "cornwall",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 45.0218,
+  "centerLon": -74.7280,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Cornwall Islamic Centre",
+      "address": "531 Fourth St W, Cornwall, ON K6J 2T6",
+      "city": "Cornwall",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.0230,
+      "longitude": -74.7390,
+      "phone": "+1-613-938-4442",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["google-maps"]
+    }
+  ]
+}

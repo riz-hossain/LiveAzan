@@ -1,0 +1,34 @@
+{
+  "region": "peterborough",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 44.3091,
+  "centerLon": -78.3197,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Masjid Al-Salaam Peterborough",
+      "address": "945 Barnardo Ave, Peterborough, ON K9J 5V2",
+      "city": "Peterborough",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.3050,
+      "longitude": -78.3220,
+      "phone": "+1-705-748-1311",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["google-maps"]
+    }
+  ]
+}

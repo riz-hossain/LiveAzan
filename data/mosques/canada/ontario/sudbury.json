@@ -1,0 +1,34 @@
+{
+  "region": "sudbury",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 46.4917,
+  "centerLon": -80.9930,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Sudbury Islamic Centre",
+      "address": "1419 Sparks St, Sudbury, ON P3E 2A7",
+      "city": "Sudbury",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 46.4882,
+      "longitude": -80.9930,
+      "phone": "+1-705-674-3350",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["google-maps"]
+    }
+  ]
+}

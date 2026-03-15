@@ -1,0 +1,100 @@
+{
+  "region": "hamilton",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.2551,
+  "centerLon": -79.8711,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Hamilton Mountain Mosque (Ibrahim Jame Masjid)",
+      "address": "1545 Stone Church Rd E, Hamilton, ON L8W 3P8",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.2144,
+      "longitude": -79.8210,
+      "phone": "+1-905-574-0777",
+      "website": "https://www.hamiltonmosque.ca",
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Hamilton Downtown Mosque",
+      "address": "80 Queenston Rd, Hamilton, ON L8K 1G5",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.2460,
+      "longitude": -79.8365,
+      "phone": "+1-905-545-3535",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["google-maps"]
+    },
+    {
+      "name": "Muslim Association of Hamilton",
+      "address": "1165 Upper James St, Hamilton, ON L9C 3B3",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.2272,
+      "longitude": -79.8786,
+      "phone": "+1-905-388-0772",
+      "website": "https://www.mahamilton.ca",
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Masjid Al-Quba",
+      "address": "307 Main St E, Hamilton, ON L8N 1H9",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.2530,
+      "longitude": -79.8572,
+      "phone": "+1-905-526-2282",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:45",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["google-maps", "prayersconnect.com"]
+    }
+  ]
+}

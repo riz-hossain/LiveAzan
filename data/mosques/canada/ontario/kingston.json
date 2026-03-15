@@ -1,0 +1,56 @@
+{
+  "region": "kingston",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 44.2312,
+  "centerLon": -76.4860,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Kingston Islamic Centre",
+      "address": "1477 Sydenham Rd, Kingston, ON K7L 4V4",
+      "city": "Kingston",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.2537,
+      "longitude": -76.5247,
+      "phone": "+1-613-546-5572",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Queen's University Muslim Students' Association Musalla",
+      "address": "172 Stuart St, Kingston, ON K7L 2V7",
+      "city": "Kingston",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.2261,
+      "longitude": -76.4957,
+      "phone": null,
+      "website": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["google-maps"]
+    }
+  ]
+}

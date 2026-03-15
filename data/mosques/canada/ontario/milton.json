@@ -1,0 +1,56 @@
+{
+  "region": "milton",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.5183,
+  "centerLon": -79.8774,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Islamic Centre of Milton",
+      "address": "470 Bronte St S, Milton, ON L9T 1Y2",
+      "city": "Milton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.5072,
+      "longitude": -79.8850,
+      "phone": "+1-905-878-0786",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Milton Muslim Community Centre",
+      "address": "600 Laurier Ave, Milton, ON L9T 4R7",
+      "city": "Milton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.5250,
+      "longitude": -79.8680,
+      "phone": "+1-905-864-0006",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["google-maps"]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "region": "niagara",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.1594,
+  "centerLon": -79.2469,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Islamic Society of St. Catharines",
+      "address": "339 Queenston St, St. Catharines, ON L2P 2X4",
+      "city": "St. Catharines",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.1672,
+      "longitude": -79.2264,
+      "phone": "+1-905-684-9291",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Niagara Peninsula Islamic Society",
+      "address": "4560 Queen St, Niagara Falls, ON L2E 2L4",
+      "city": "Niagara Falls",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.0896,
+      "longitude": -79.0849,
+      "phone": "+1-905-358-5574",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["google-maps"]
+    }
+  ]
+}

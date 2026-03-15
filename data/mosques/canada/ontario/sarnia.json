@@ -1,0 +1,34 @@
+{
+  "region": "sarnia",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 42.9745,
+  "centerLon": -82.4066,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Sarnia Islamic Association",
+      "address": "1391 Blackwell Rd, Sarnia, ON N7S 5R5",
+      "city": "Sarnia",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.9540,
+      "longitude": -82.3920,
+      "phone": "+1-519-344-1022",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["google-maps"]
+    }
+  ]
+}

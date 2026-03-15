@@ -1,0 +1,100 @@
+{
+  "region": "mississauga",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.5890,
+  "centerLon": -79.6441,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Islamic Society of Peel (Masjid-ul-Huda)",
+      "address": "7150 Bramalea Rd, Mississauga, ON L5S 1T9",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.6520,
+      "longitude": -79.7015,
+      "phone": "+1-905-672-0222",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Masjid Dar Al-Tawheed",
+      "address": "5600 Rose Cherry Pl, Mississauga, ON L4Z 4B6",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.6345,
+      "longitude": -79.6367,
+      "phone": "+1-905-890-5858",
+      "website": "https://www.daraltawheed.com",
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["daraltawheed.com", "masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Islamic Centre of Mississauga",
+      "address": "2200 South Millway, Mississauga, ON L5L 3R4",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.5232,
+      "longitude": -79.6573,
+      "phone": "+1-905-820-0001",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["google-maps"]
+    },
+    {
+      "name": "Sayeda Khadija Centre",
+      "address": "6120 Montevideo Rd, Mississauga, ON L5N 3P6",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.5680,
+      "longitude": -79.7115,
+      "phone": "+1-905-542-4500",
+      "website": "https://www.sayedakhadija.com",
+      "hasLiveStream": true,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["sayedakhadija.com", "masjidbox.com", "google-maps"]
+    }
+  ]
+}

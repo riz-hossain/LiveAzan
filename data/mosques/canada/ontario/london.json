@@ -1,0 +1,78 @@
+{
+  "region": "london",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 42.9849,
+  "centerLon": -81.2453,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "London Muslim Mosque",
+      "address": "151 Oxford St W, London, ON N6H 1S3",
+      "city": "London",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.9886,
+      "longitude": -81.2600,
+      "phone": "+1-519-439-9451",
+      "website": "https://www.londonmosque.ca",
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["londonmosque.ca", "masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Islamic Centre of Southwest Ontario",
+      "address": "953 Leathorne St, London, ON N5Z 3M5",
+      "city": "London",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.9618,
+      "longitude": -81.2310,
+      "phone": "+1-519-668-0206",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "MAC London Islamic Centre",
+      "address": "649 Wilkins St, London, ON N6C 5C7",
+      "city": "London",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.9690,
+      "longitude": -81.2175,
+      "phone": "+1-519-645-4888",
+      "website": "https://www.macnet.ca/local/london",
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["macnet.ca", "google-maps"]
+    }
+  ]
+}
