@@ -1,0 +1,223 @@
+{
+  "region": "whitby-ajax",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.871,
+  "centerLon": -79.0204,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Pickering Islamic Centre",
+      "type": "mosque",
+      "address": "1815 Brock Rd, Pickering, ON L1V 1L8",
+      "city": "Pickering",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.838,
+      "longitude": -79.089,
+      "phone": "+1-905-839-2280",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 65,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ],
+      "email": "info@masjid.ca",
+      "description": "Also known as Masjid Usman, Pickering Islamic Centre was officially opened in 2008 and serves the Pickering community with daily prayers, an elementary school, and Quran education programs.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "nikah",
+        "funeral_services",
+        "quran_classes",
+        "madrasah",
+        "youth_programs",
+        "islamic_studies",
+        "sisters_halaqah",
+        "counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Ajax Islamic Centre",
+      "type": "mosque",
+      "address": "75 Bayly St W, Ajax, ON L1S 7K7",
+      "city": "Ajax",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.8505,
+      "longitude": -79.026,
+      "phone": "+1-905-683-1919",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 40,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": [
+        "google-maps"
+      ],
+      "email": null,
+      "description": "A mosque in Ajax providing daily prayers and serving the Muslim community of the Ajax area in the Durham Region.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Whitby Muslim Community Centre",
+      "type": "musalla",
+      "address": "200 Dundas St W, Whitby, ON L1N 2L7",
+      "city": "Whitby",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.869,
+      "longitude": -78.9465,
+      "phone": "+1-905-665-2299",
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 15,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": [
+        "google-maps"
+      ],
+      "notes": "Community centre with dedicated prayer space serving Whitby area Muslims.",
+      "email": null,
+      "description": "A community centre with dedicated prayer space serving Muslims in the Whitby area of the Durham Region.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Al Rayan Islamic Centre",
+      "type": "mosque",
+      "address": "1660, Regional Highway 2, Courtice, ON",
+      "city": "Clarington",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.911339,
+      "longitude": -78.786567,
+      "phone": "+1-905-433-9255",
+      "website": "https://www.alrayanislamiccentre.org/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": "info@alrayanislamiccentre.org",
+      "description": "A grassroots Islamic centre in Courtice serving the Muslim community of Clarington and surrounding regions with daily prayers, Quran classes, and youth programs.",
+      "denomination": "sunni",
+      "hours": "5:00 AM – 11:00 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "madrasah",
+        "youth_programs",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Baitul Mahdi Mosque",
+      "type": "mosque",
+      "address": "3505, Salem Road, Locust Hill, Ontario",
+      "city": "Clarington",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.926259,
+      "longitude": -79.042032,
+      "phone": "+1 905-427-7479",
+      "website": "https://www.ahmadiyya.ca/mosques/baitul-mahdi",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": null,
+      "description": "An Ahmadiyya mosque converted from a Dutch-style castle on a 25-acre property, donated to the community in 2005 and officially opened in 2006 during the visit of Khalifatul Masih V.",
+      "denomination": "ahmadiyya",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "free_parking",
+        "outdoor_space",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
+    }
+  ]
+}

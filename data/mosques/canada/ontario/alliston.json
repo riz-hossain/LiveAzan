@@ -1,0 +1,46 @@
+{
+  "region": "alliston",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 44.1531,
+  "centerLon": -79.8674,
+  "radiusKm": 20,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "web-research",
+  "mosques": [
+    {
+      "name": "Alliston Masjid (Muslims of Alliston Centre)",
+      "type": "mosque",
+      "address": "131 Wellington St E, Alliston, ON L9R 1M8",
+      "city": "Alliston",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.1531,
+      "longitude": -79.8674,
+      "phone": null,
+      "email": null,
+      "website": "https://www.allistonmasjid.com/",
+      "description": "Mosque in Alliston serving the New Tecumseth area. Open 24/7 with Friday prayer at 12 PM.",
+      "denomination": null,
+      "hours": "Open 24/7",
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": {
+        "jummah": "12:00"
+      },
+      "sources": [
+        "allistonmasjid.com",
+        "allistonmosque.ca"
+      ],
+      "notes": "Open 24/7. Friday prayer at 12 PM. May have relocated — multiple addresses found online. Confirm current location before visiting."
+    }
+  ]
+}

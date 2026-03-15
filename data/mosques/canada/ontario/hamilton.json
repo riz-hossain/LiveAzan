@@ -1,0 +1,461 @@
+{
+  "region": "hamilton",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.2551,
+  "centerLon": -79.8711,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Hamilton Mountain Mosque (Ibrahim Jame Masjid)",
+      "type": "mosque",
+      "address": "1545 Stone Church Rd E, Hamilton, ON L8W 3P8",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.2144,
+      "longitude": -79.821,
+      "phone": "+1-905-574-0777",
+      "website": "https://www.hamiltonmosque.ca",
+      "googleRating": 4.5,
+      "googleReviewCount": 150,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ],
+      "email": "contactus@hamiltonmosque.com",
+      "description": "A Sunni mosque operated by the Muslim Association of Hamilton, offering daily prayers, madrasah programs, full-time Hifz classes, and marriage ceremonies since the 1960s.",
+      "denomination": "sunni",
+      "hours": "6 AM – 10 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "nikah",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "eid_prayers",
+        "taraweeh",
+        "counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Hamilton Downtown Mosque",
+      "type": "mosque",
+      "address": "80 Queenston Rd, Hamilton, ON L8K 1G5",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.246,
+      "longitude": -79.8365,
+      "phone": "+1-905-545-3535",
+      "website": "https://downtownmosque.com",
+      "googleRating": 4.6,
+      "googleReviewCount": 100,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": [
+        "downtownmosque.com",
+        "google-maps"
+      ],
+      "email": "contact@downtownmosque.com",
+      "description": "A vibrant Sunni mosque established in 1992, serving over 10,000 Muslims in central Hamilton with daily prayers, Ramadan programs, and community services.",
+      "denomination": "sunni",
+      "hours": "5 AM – 11 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "itikaf",
+        "counseling",
+        "zakat_collection"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Muslim Association of Hamilton",
+      "type": "mosque",
+      "address": "1165 Upper James St, Hamilton, ON L9C 3B3",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.2272,
+      "longitude": -79.8786,
+      "phone": "+1-905-388-0772",
+      "website": "https://www.mahamilton.ca",
+      "googleRating": 4.4,
+      "googleReviewCount": 75,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ],
+      "email": null,
+      "description": "A registered charitable organization dedicated to providing religious, educational, and social services for the diverse Muslim community in Hamilton since the 1960s.",
+      "denomination": "sunni",
+      "hours": "6 AM – 10 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "madrasah",
+        "eid_prayers",
+        "taraweeh",
+        "counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Masjid Al-Quba",
+      "type": "mosque",
+      "address": "307 Main St E, Hamilton, ON L8N 1H9",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.253,
+      "longitude": -79.8572,
+      "phone": "+1-905-526-2282",
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 40,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:45",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": [
+        "google-maps",
+        "prayersconnect.com"
+      ],
+      "email": null,
+      "description": "A local mosque in downtown Hamilton providing daily prayer services and Friday congregational prayers to the Muslim community.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Hamilton Downtown Musalla",
+      "type": "musalla",
+      "address": "96 Wilson St, Hamilton, ON L8R 1C9",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.2555,
+      "longitude": -79.8695,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.2,
+      "googleReviewCount": 8,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "masjidway.com",
+        "google-maps"
+      ],
+      "notes": "Prayer space serving downtown Hamilton core.",
+      "email": null,
+      "description": "A prayer space serving the downtown Hamilton core, offering daily prayers and Jummah services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "McMaster University Musalla",
+      "type": "musalla",
+      "address": "1280 Main St W, MUSC Room 220, Hamilton, ON L8S 4L8",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.261,
+      "longitude": -79.92,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.0,
+      "googleReviewCount": 6,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "google-maps"
+      ],
+      "notes": "McMaster University Muslim Students Association prayer space. Open during university hours.",
+      "email": "info@macmsa.com",
+      "description": "McMaster University Muslim Students Association prayer space, one of the largest religious clubs on campus with a history dating back to the 1960s.",
+      "denomination": "non_denominational",
+      "hours": "10 AM – 4 PM (September–April)",
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section"
+      ],
+      "accessInfo": "Located in T-13 building, Rooms 109 and 112. Additional prayer spaces available in Hamilton Hall and MDCL."
+    },
+    {
+      "name": "Hamilton Downtown Mosque",
+      "type": "mosque",
+      "address": "221, York Boulevard",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.261029,
+      "longitude": -79.875595,
+      "phone": "+1-905-527-7371",
+      "website": "http://downtownmosque.com",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": "admin@downtownmosque.com",
+      "description": "A Canadian religious non-profit institution established in 1997, serving over 10,000 Muslims in central Hamilton with essential religious and social services.",
+      "denomination": "sunni",
+      "hours": "5 AM – 11 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "itikaf",
+        "counseling",
+        "zakat_collection"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Hamilton Mountain Masjid",
+      "type": "mosque",
+      "address": "1545, Stone Church Road East",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.195572,
+      "longitude": -79.820537,
+      "phone": "+1-905-929-1526",
+      "website": "https://hamiltonmosque.com/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": "contactus@hamiltonmosque.com",
+      "description": "Part of the Muslim Association of Hamilton, this Sunni mosque offers daily prayers, educational programs, Hifz classes, and community services on Hamilton Mountain.",
+      "denomination": "sunni",
+      "hours": "6 AM – 10 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "nikah",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "eid_prayers",
+        "taraweeh",
+        "counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Ibrahim Jame Mosque",
+      "type": "mosque",
+      "address": "778, King Street East",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.251204,
+      "longitude": -79.8442,
+      "phone": "(905) 527-2392",
+      "website": "https://www.ibrahimjamemosque.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": "info@ibrahimjamemosque.com",
+      "description": "A well-established mosque offering daily prayers, evening madrasah, full-time Hifz classes, marriage ceremonies, and interfaith dialogue programs in Hamilton.",
+      "denomination": "sunni",
+      "hours": "6 AM – 10 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "nikah",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "eid_prayers",
+        "taraweeh",
+        "counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Umar Mosque",
+      "type": "mosque",
+      "address": "734, Rennie Street",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.246505,
+      "longitude": -79.774158,
+      "phone": "+1-905-544-9016",
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": null,
+      "description": "A Sunni mosque operated by the Muslim Association of Hamilton, serving the local Muslim community with daily prayers and Jummah services.",
+      "denomination": "sunni",
+      "hours": "6 AM – 10 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Baitun Nur Mosque",
+      "type": "mosque",
+      "address": "2301, King Street East, Hamilton, Ontario",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.229629,
+      "longitude": -79.795722,
+      "phone": "+1 905-544-3110",
+      "website": "https://www.ahmadiyya.ca/mosques/baitun-nur-mosque",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": null,
+      "description": "An Ahmadiyya Muslim Community mosque in Hamilton, providing a place of worship and community gathering for the local Ahmadiyya congregation.",
+      "denomination": "ahmadiyya",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
+    }
+  ]
+}

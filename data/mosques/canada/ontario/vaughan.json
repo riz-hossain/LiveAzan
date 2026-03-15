@@ -1,0 +1,135 @@
+{
+  "region": "vaughan",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.8361,
+  "centerLon": -79.4983,
+  "radiusKm": 25,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "overpass-api-scraper",
+  "mosques": [
+    {
+      "name": "Islamic Society of Vaughan",
+      "type": "mosque",
+      "address": "9100, Jane Street, Vaughan, Ontario",
+      "city": "Vaughan",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.829684,
+      "longitude": -79.532881,
+      "phone": "+1-905-597-3233",
+      "website": "http://www.islamicsocietyvaughan.com",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": "info@islamicsocietyvaughan.com",
+      "description": "A federally incorporated non-profit established in 2017, offering daily prayers and educational programs including weekly Quran classes, with plans for a grand mosque on a 15.2-acre plot.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "nikah",
+        "quran_classes",
+        "islamic_studies",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Baitul Islam Mosque",
+      "type": "mosque",
+      "address": "10610, Jane Street, Vaughan, Ontario",
+      "city": "Vaughan",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.864853,
+      "longitude": -79.542988,
+      "phone": "+1 905-303-4000",
+      "website": "https://www.ahmadiyya.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": "info@ahmadiyya.ca",
+      "description": "Inaugurated in 1992, Baitul Islam is the headquarters of the Ahmadiyya Muslim Jama'at in Canada, serving as both a worship space and community hub for interfaith events and conferences.",
+      "denomination": "ahmadiyya",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "islamic_studies",
+        "eid_prayers",
+        "taraweeh",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section",
+        "wheelchair_accessible",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Masjid Vaughan",
+      "type": "mosque",
+      "address": "9954, Keele Street, Maple, Ontario",
+      "city": "Vaughan",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.853548,
+      "longitude": -79.512683,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": "info@masjidvaughan.ca",
+      "description": "Opened in 2018, Masjid Vaughan occupies a beautifully restored 140-year-old heritage building in the heart of Maple with mid-century gothic architecture adapted to a North American Islamic aesthetic.",
+      "denomination": "sunni",
+      "hours": "4:30 AM - 11:00 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "nikah",
+        "quran_classes",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section",
+        "wheelchair_accessible",
+        "separate_entrance_women"
+      ],
+      "accessInfo": null
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "region": "muskoka",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 45.0383,
+  "centerLon": -79.6525,
+  "radiusKm": 50,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "web-research",
+  "mosques": [
+    {
+      "name": "Masjid Al-Salam of Muskoka",
+      "type": "mosque",
+      "address": "1202 Milford Bay Rd, Muskoka, ON",
+      "city": "Muskoka",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.0383,
+      "longitude": -79.6525,
+      "phone": null,
+      "email": null,
+      "website": null,
+      "description": "Small Muslim community mosque serving the Muskoka cottage country region, located between Bracebridge and Port Carling. Essential stop for Muslim travellers visiting Muskoka lakes.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "facebook.com/MasjidAlsalm"
+      ],
+      "notes": "Located between Bracebridge and Port Carling — closest mosque for anyone camping or cottaging in Muskoka. Small community, confirm hours before visiting."
+    }
+  ]
+}

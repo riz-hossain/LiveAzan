@@ -1,0 +1,259 @@
+{
+  "region": "niagara",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.1594,
+  "centerLon": -79.2469,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Islamic Society of St. Catharines",
+      "type": "mosque",
+      "address": "339 Queenston St, St. Catharines, ON L2P 2X4",
+      "city": "St. Catharines",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.1672,
+      "longitude": -79.2264,
+      "phone": "+1-905-684-9291",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 40,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ],
+      "email": null,
+      "description": "Established in 1994, Masjid Al Noor serves as a significant religious and cultural center in St. Catharines, meeting the spiritual, social, and educational needs of the diverse Muslim community.",
+      "denomination": "sunni",
+      "hours": "6 AM – 10 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "quran_classes",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Niagara Peninsula Islamic Society",
+      "type": "mosque",
+      "address": "4560 Queen St, Niagara Falls, ON L2E 2L4",
+      "city": "Niagara Falls",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.0896,
+      "longitude": -79.0849,
+      "phone": "+1-905-358-5574",
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 25,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": [
+        "google-maps"
+      ],
+      "email": "info@isnp.ca",
+      "description": "A mosque serving the Niagara Falls Muslim community with daily prayers, Friday congregation, and community programs.",
+      "denomination": "sunni",
+      "hours": "7 AM – 10 PM Monday–Saturday",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "madrasah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Masjid an-Noor",
+      "type": "mosque",
+      "address": "Address unknown — needs verification",
+      "city": "Niagara",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.166326,
+      "longitude": -79.240647,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": null,
+      "description": "A mosque in the Niagara region. This may be an alternate reference to Masjid Al Noor (Islamic Society of St. Catharines) at 117 Geneva St.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Islamic Society of Niagara Peninsula",
+      "type": "mosque",
+      "address": "6768, Lyons Creek Road",
+      "city": "Niagara",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.032629,
+      "longitude": -79.106083,
+      "phone": "+1-905-295-4845",
+      "website": "https://isnp.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": "info@isnp.ca",
+      "description": "Serving the Niagara community for over 40 years, ISNP features a spacious prayer hall, weekend Islamic school, full-time Ontario-curriculum school, and gymnasium facilities.",
+      "denomination": "sunni",
+      "hours": "7 AM – 10 PM Monday–Saturday",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "madrasah",
+        "quran_classes",
+        "youth_programs",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "kitchen",
+        "gym",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "The Peace Mosque",
+      "type": "mosque",
+      "address": "6735, Caledonia Street, Niagara Falls",
+      "city": "Niagara",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.073742,
+      "longitude": -79.10692,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": null,
+      "description": "Also known as Masjid Al Salam, this Sunni mosque in Niagara Falls offers prayer facilities, youth activities, and community programs in a quiet residential neighborhood.",
+      "denomination": "sunni",
+      "hours": "6 AM – 11 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "As-Salaam Alaykum Masjid Aisha",
+      "type": "mosque",
+      "address": "Stanley Avenue, Niagara Falls, ON",
+      "city": "Niagara",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.094013,
+      "longitude": -79.08484,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": null,
+      "description": "Mosque Aisha is a welcoming Sunni mosque in Niagara Falls offering daily prayers, Quran classes with Tajweed, youth halaqas, counseling, and Nikah services at two locations.",
+      "denomination": "sunni",
+      "hours": "12 AM – 11:59 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "nikah",
+        "quran_classes",
+        "eid_prayers",
+        "counseling",
+        "youth_programs",
+        "mens_halaqah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
+    }
+  ]
+}

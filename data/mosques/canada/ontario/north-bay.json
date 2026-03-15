@@ -1,0 +1,56 @@
+{
+  "region": "north-bay",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 46.3091,
+  "centerLon": -79.4608,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "North Bay Islamic Centre",
+      "type": "mosque",
+      "address": "620 Cassells St, North Bay, ON P1B 4A2",
+      "city": "North Bay",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 46.3130,
+      "longitude": -79.4610,
+      "phone": "+1-705-474-3344",
+      "email": null,
+      "website": null,
+      "description": "Islamic centre serving the North Bay Muslim community, established in 2008 by the Muslim Society of North Bay. Converted from a former welding shop after a year of renovations.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking"
+      ],
+      "accessInfo": null,
+      "googleRating": 4.1,
+      "googleReviewCount": 5,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": [
+        "google-maps",
+        "211north.ca",
+        "30masjids.ca"
+      ],
+      "notes": "Also known as North Bay Mosque / Muslim Society of North Bay. Incorporated December 2006. May also be listed at 423 McPhail St, North Bay, ON P1B 5Z1."
+    }
+  ]
+}

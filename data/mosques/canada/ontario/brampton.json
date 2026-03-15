@@ -1,0 +1,628 @@
+{
+  "region": "brampton",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.7315,
+  "centerLon": -79.7624,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Brampton Makki Masjid",
+      "type": "mosque",
+      "address": "7 Knightsbridge Rd, Brampton, ON L6T 3X3",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.715,
+      "longitude": -79.726,
+      "phone": "+1-905-458-0000",
+      "website": "https://www.makkimasjid.com",
+      "googleRating": 4.6,
+      "googleReviewCount": 200,
+      "hasLiveStream": true,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": [
+        "makkimasjid.com",
+        "masjidbox.com",
+        "google-maps"
+      ],
+      "email": "makkimasjid@gmail.com",
+      "description": "Part of the Islamic Society of Peel, Jame Makki Masjid was officially opened in 2000 and is among the first mosques built in Brampton, offering extensive religious, educational, and social services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "islamic_studies",
+        "youth_programs",
+        "counseling",
+        "eid_prayers",
+        "taraweeh",
+        "funeral_services",
+        "sisters_halaqah",
+        "mens_halaqah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Islamic Foundation of Brampton",
+      "type": "mosque",
+      "address": "30 Charolais Blvd, Brampton, ON L6Y 2B8",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.712,
+      "longitude": -79.798,
+      "phone": "+1-905-454-5700",
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 90,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ],
+      "email": null,
+      "description": "An Islamic centre in Brampton offering daily prayers and community services to the local Muslim population.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Abu Bakr Siddique Islamic Centre",
+      "type": "mosque",
+      "address": "1 Sunny Meadow Blvd, Brampton, ON L6R 0Y7",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.745,
+      "longitude": -79.785,
+      "phone": "+1-905-792-5222",
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 65,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": [
+        "google-maps",
+        "prayersconnect.com"
+      ],
+      "email": null,
+      "description": "An Islamic centre in Brampton providing daily prayers, educational programs, Quranic studies, and community gatherings for all ages.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Masjid Umar",
+      "type": "mosque",
+      "address": "84 Bramsteele Rd, Brampton, ON L6W 3M6",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.6932,
+      "longitude": -79.7542,
+      "phone": "+1-905-450-7575",
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 45,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:45",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": [
+        "google-maps"
+      ],
+      "email": null,
+      "description": "A Sunni mosque in Brampton offering five daily prayers, Jummah, Madrassah (Anwarul Uloom), nikah services, and classes specifically for women.",
+      "denomination": "sunni",
+      "hours": "15 minutes before and after congregational prayer times",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "nikah",
+        "madrasah",
+        "sisters_halaqah",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Taha Musalla",
+      "type": "musalla",
+      "address": "499 Ray Lawson Blvd, Brampton, ON L6Y 4E6",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.728,
+      "longitude": -79.792,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.5,
+      "googleReviewCount": 20,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "prayersconnect.com",
+        "namuslims.org",
+        "google-maps"
+      ],
+      "email": "info@masjidibrahim.ca",
+      "description": "A musalla established in 2008 under the Peel Islamic Cultural Centre (PICC), offering daily prayers, evening Quran Nazrah and Hifz classes for children, and serving the Brampton and Mississauga community.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "tahfeez",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section",
+        "wheelchair_accessible"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Taaseen Musalla",
+      "type": "musalla",
+      "address": "255 Steeles Ave W, Brampton, ON L6Y 0L2",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.765,
+      "longitude": -79.751,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 12,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "prayersconnect.com",
+        "google-maps"
+      ],
+      "email": "info@masjidibrahim.ca",
+      "description": "Established in 2014 under the Peel Islamic Cultural Centre (PICC), Taaseen Musalla provides daily prayers and community services in Brampton.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Yaseen Musallah (Peel Islamic Cultural Center)",
+      "type": "musalla",
+      "address": "45 Kensington Rd, Brampton, ON L6T 3W3",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.719,
+      "longitude": -79.73,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.4,
+      "googleReviewCount": 18,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "prayersconnect.com",
+        "google-maps"
+      ],
+      "notes": "Branch of Peel Islamic Cultural Center (PICC). Operates independently.",
+      "email": null,
+      "description": "A branch of the Peel Islamic Cultural Centre (PICC), operating independently to serve Muslims in the Spring Valley area and across Brampton.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Ha-Meem Musallah (Peace and Harmony Center)",
+      "type": "musalla",
+      "address": "195 County Court Blvd, Brampton, ON L6W 4P7",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.705,
+      "longitude": -79.762,
+      "phone": null,
+      "website": null,
+      "googleRating": 4.6,
+      "googleReviewCount": 25,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "prayersconnect.com",
+        "google-maps"
+      ],
+      "email": null,
+      "description": "A non-profit Sunni musalla offering regular and Juma prayers, scripture study for children, nikah services, and matchmaking and marriage guidance for young adults.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "nikah",
+        "quran_classes",
+        "islamic_studies",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "marriage_counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Jame Makki Masjid Brampton",
+      "type": "mosque",
+      "address": "8450, Torbram Road, Brampton",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.721654,
+      "longitude": -79.690525,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": "makkimasjid@gmail.com",
+      "description": "Part of the Islamic Society of Peel, this mosque at 8450 Torbram Road was among the first mosques built in Brampton in the 1980s, offering comprehensive religious and educational services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "youth_programs",
+        "counseling",
+        "eid_prayers",
+        "taraweeh",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Jamiat-Ul-Ansar of Brampton",
+      "type": "mosque",
+      "address": "291, Great Lakes Drive, Brampton",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.737477,
+      "longitude": -79.769509,
+      "phone": "+1-905-792-7576",
+      "website": "http://www.jamiatulansar.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": "jamiatulansar@protonmail.com",
+      "description": "Also known as Great Lakes Masjid, this Sunni mosque offers religious counseling, nikah services by a registered marriage officer, funeral prayers, and interfaith community engagement.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "counseling",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "funeral_services",
+        "marriage_counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Masumeen Islamic Centre",
+      "type": "mosque",
+      "address": "7580, Kennedy Road South, Brampton",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.667414,
+      "longitude": -79.711601,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": "info@masumeen.org",
+      "description": "A Shia Ithna-Asheri mosque affiliated with the Islamic Shia Ithna-Asheri Jamaat (ISIJ) of Toronto, completed in 2003, offering Juma prayers, educational programs, and community events.",
+      "denomination": "shia",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section",
+        "gym",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Mount Pleasant Islamic Center",
+      "type": "mosque",
+      "address": "160, Salvation Road, Brampton",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.676673,
+      "longitude": -79.81957,
+      "phone": "+1-905-840-5454",
+      "website": "https://www.mpicbrampton.com/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": "info@mpicbrampton.com",
+      "description": "Originally a church purchased in 2015, Masjid Al-Salam now holds three Jummah prayers weekly due to growing congregation, with a weekend school, sisters' halaqa, and community outreach programs.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "arabic_classes",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "funeral_services",
+        "sisters_halaqah",
+        "madrasah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section",
+        "separate_entrance_women",
+        "childcare_room",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Brampton Islamic Center",
+      "type": "mosque",
+      "address": "6, Lowry Drive, Brampton",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.701851,
+      "longitude": -79.804683,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": "info@bsia.ca",
+      "description": "Previously a church called The Harvest Worship Center, purchased in 2005 and transformed into a vibrant Islamic centre embracing Brampton's multiculturalism, with Hifz program, Madrasah, and halaqas.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "youth_programs",
+        "counseling",
+        "eid_prayers",
+        "taraweeh",
+        "funeral_services",
+        "sisters_halaqah",
+        "mens_halaqah",
+        "zakat_collection"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Mubarak Mosque",
+      "type": "mosque",
+      "address": "10545, Hurontario Street, Brampton, ON",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.716906,
+      "longitude": -79.800938,
+      "phone": null,
+      "website": "https://www.ahmadiyya.ca/mosques/masjid-mubarak",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": "shahrukh.abid@ahmadiyya.ca",
+      "description": "The official Mubarak Mosque of the Ahmadiyya Muslim Jama'at Canada, known for its stunning architecture and welcoming atmosphere promoting interfaith dialogue.",
+      "denomination": "ahmadiyya",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "wheelchair_accessible",
+        "women_section"
+      ],
+      "accessInfo": null
+    }
+  ]
+}

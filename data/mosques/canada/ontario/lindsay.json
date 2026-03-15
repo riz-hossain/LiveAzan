@@ -1,0 +1,49 @@
+{
+  "region": "lindsay",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 44.3521,
+  "centerLon": -78.7382,
+  "radiusKm": 30,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "web-research",
+  "mosques": [
+    {
+      "name": "Masjid Lindsay (Lindsay Islamic Centre)",
+      "type": "mosque",
+      "address": "280 Kent Street West, Lindsay, ON K9V 2Z6",
+      "city": "Lindsay",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.3521,
+      "longitude": -78.7382,
+      "phone": null,
+      "email": "atman900@hotmail.com",
+      "website": null,
+      "description": "Islamic centre serving the Kawartha Lakes region including Lindsay, Bobcaygeon, and Fenelon Falls. Friday prayer at 1:30 PM year-round.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wheelchair_accessible",
+        "parking"
+      ],
+      "accessInfo": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": {
+        "jummah": "13:30"
+      },
+      "sources": [
+        "masjidway.com",
+        "facebook.com/Islamic-Center-Lindsay"
+      ],
+      "notes": "Serves the broader Kawartha Lakes region. Friday prayer at 1:30 PM all year. Nearest mosque for Bobcaygeon, Fenelon Falls, and Haliburton travellers."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "region": "orangeville",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.9198,
+  "centerLon": -80.0943,
+  "radiusKm": 30,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "web-research",
+  "mosques": [
+    {
+      "name": "Muslims of Dufferin Musallah",
+      "type": "musalla",
+      "address": "294 Broadway, Orangeville, ON L9W 1L3",
+      "city": "Orangeville",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.9198,
+      "longitude": -80.0943,
+      "phone": "+1-647-988-4410",
+      "email": null,
+      "website": "https://muslim-dufferin.com/",
+      "description": "Prayer space serving the Dufferin County Muslim community in Orangeville. Open 24/7 for daily prayers including Friday, Taraweh and Eid.",
+      "denomination": null,
+      "hours": "Open 24/7",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "taraweeh",
+        "eid_prayers"
+      ],
+      "facilities": [],
+      "accessInfo": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslim-dufferin.com"
+      ],
+      "notes": "Open 24/7 for all daily prayers. Serves Orangeville and Dufferin County."
+    },
+    {
+      "name": "Muslims of Shelburne Centre",
+      "type": "musalla",
+      "address": "120 Centennial Rd, Shelburne, ON L9V 2Z4",
+      "city": "Shelburne",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.0789,
+      "longitude": -80.2040,
+      "phone": "+1-647-988-4410",
+      "email": null,
+      "website": "https://moscc-shelburne.com/",
+      "description": "Prayer centre in Shelburne serving the northern Dufferin County Muslim community. Member of Canadian Council of Imams. Open 24/7.",
+      "denomination": null,
+      "hours": "Open 24/7",
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "moscc-shelburne.com"
+      ],
+      "notes": "Open 24/7. Member of Canadian Council of Imams. Same phone number as Muslims of Dufferin in Orangeville."
+    },
+    {
+      "name": "Dufferin Muslim Centre",
+      "type": "community_centre",
+      "address": "506195 ON-89, Shelburne, ON L9V 0N7, Unit #1",
+      "city": "Shelburne",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.0758,
+      "longitude": -80.1883,
+      "phone": "+1-647-518-3000",
+      "email": "dufferinmuslimcentre@gmail.com",
+      "website": "https://dufferinmuslimcentre.ca/",
+      "description": "Muslim community centre on Highway 89 in Shelburne. Founded April 2022. Separate organization from Muslims of Shelburne Centre.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "dufferinmuslimcentre.ca"
+      ],
+      "notes": "Founded April 2022. Separate organization from Muslims of Shelburne Centre. Located on Highway 89."
+    }
+  ]
+}

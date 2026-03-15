@@ -1,0 +1,94 @@
+{
+  "region": "thunder-bay",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 48.3809,
+  "centerLon": -89.2477,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Thunder Bay Islamic Centre",
+      "type": "mosque",
+      "address": "501 Cumberland St N, Thunder Bay, ON P7A 4R4",
+      "city": "Thunder Bay",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 48.3905,
+      "longitude": -89.234,
+      "phone": "+1-807-345-4554",
+      "email": null,
+      "website": null,
+      "description": "Islamic centre on Cumberland Street in Thunder Bay, serving the Muslim community of northwestern Ontario.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers"
+      ],
+      "facilities": [
+        "parking",
+        "wudu_area"
+      ],
+      "accessInfo": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 15,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": [
+        "google-maps"
+      ]
+    },
+    {
+      "name": "Thunder Bay Masjid",
+      "type": "mosque",
+      "address": "591 John Street, Thunder Bay, ON P7B 1Y8",
+      "city": "Thunder Bay",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 48.431952,
+      "longitude": -89.247895,
+      "phone": "+1-807-766-9644",
+      "email": "masjid@thunderbaymasjid.ca",
+      "website": "https://thunderbaymasjid.ca/",
+      "description": "The only masjid in northwestern Ontario, serving the local Muslim community since 2002. Operated by the Thunder Bay Muslim Association, established in 1984.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "islamic_studies",
+        "youth_programs",
+        "new_muslim_support"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap",
+        "thunderbaymasjid.ca",
+        "doorsopenontario.on.ca"
+      ],
+      "notes": "Operated by the Thunder Bay Muslim Association. Participated in Doors Open Ontario for community outreach."
+    }
+  ]
+}

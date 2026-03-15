@@ -1,0 +1,122 @@
+{
+  "region": "montreal",
+  "province": "Quebec",
+  "country": "canada",
+  "centerLat": 45.5017,
+  "centerLon": -73.5673,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Islamic Community Centre of South Shore",
+      "address": "90 Rue Argyle, Saint-Lambert, QC J4P 2H4",
+      "city": "Saint-Lambert",
+      "province": "Quebec",
+      "country": "Canada",
+      "latitude": 45.4992,
+      "longitude": -73.5110,
+      "phone": "+1-450-466-4009",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Al-Rawdah Mosque",
+      "address": "6855 Av de l'Épée, Montreal, QC H3N 2C7",
+      "city": "Montreal",
+      "province": "Quebec",
+      "country": "Canada",
+      "latitude": 45.5230,
+      "longitude": -73.6125,
+      "phone": "+1-514-274-0061",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:45",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Centre Islamique de Verdun",
+      "address": "501 Rue de l'Église, Verdun, QC H4G 2M6",
+      "city": "Montreal",
+      "province": "Quebec",
+      "country": "Canada",
+      "latitude": 45.4590,
+      "longitude": -73.5718,
+      "phone": "+1-514-762-1818",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:35",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:15",
+        "jummah": "13:30"
+      },
+      "sources": ["google-maps"]
+    },
+    {
+      "name": "Mosquée Al-Iman",
+      "address": "8540 Boul Henri-Bourassa E, Montreal, QC H1E 2S6",
+      "city": "Montreal",
+      "province": "Quebec",
+      "country": "Canada",
+      "latitude": 45.6208,
+      "longitude": -73.5800,
+      "phone": "+1-514-648-6252",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+4",
+        "isha": "21:00",
+        "jummah": "14:00"
+      },
+      "sources": ["google-maps", "prayersconnect.com"]
+    },
+    {
+      "name": "Islamic Centre of Quebec",
+      "address": "2071 Rue de Bleury, Montreal, QC H3A 2J3",
+      "city": "Montreal",
+      "province": "Quebec",
+      "country": "Canada",
+      "latitude": 45.5088,
+      "longitude": -73.5718,
+      "phone": "+1-514-849-1207",
+      "website": "https://www.icquebec.org",
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["icquebec.org", "masjidbox.com", "google-maps"]
+    }
+  ]
+}

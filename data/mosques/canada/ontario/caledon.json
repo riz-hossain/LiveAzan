@@ -1,0 +1,43 @@
+{
+  "region": "caledon",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.8731,
+  "centerLon": -79.7358,
+  "radiusKm": 20,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "web-research",
+  "mosques": [
+    {
+      "name": "Bolton Masjid (Islamic Society of Bolton and Caledon)",
+      "type": "mosque",
+      "address": "8 Nancy St, Bolton, ON",
+      "city": "Bolton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.8731,
+      "longitude": -79.7358,
+      "phone": "+1-647-400-8004",
+      "email": null,
+      "website": "https://boltonmasjid.ca/",
+      "description": "Community mosque and centre serving Bolton, Caledon, and the surrounding area north of Brampton.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "boltonmasjid.ca"
+      ],
+      "notes": "Serves Bolton and Caledon area, north of Brampton. Community center and mosque."
+    }
+  ]
+}

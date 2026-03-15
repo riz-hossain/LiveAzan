@@ -1,0 +1,43 @@
+{
+  "region": "collingwood",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 44.5001,
+  "centerLon": -80.2169,
+  "radiusKm": 30,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "web-research",
+  "mosques": [
+    {
+      "name": "Collingwood Islamic Center",
+      "type": "mosque",
+      "address": "35 Hurontario St, Collingwood, ON L9Y 2L7",
+      "city": "Collingwood",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.5001,
+      "longitude": -80.2169,
+      "phone": null,
+      "email": null,
+      "website": "https://www.collingwoodic.ca/",
+      "description": "Islamic center serving the Collingwood, Blue Mountain, and southern Georgian Bay area. Admin office located at 199 Campbell Street (Collingwood Common Roof/Rotary Community Hub).",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": "Admin office at 199 Campbell Street, Collingwood Common Roof/Rotary Community Hub",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "collingwoodic.ca"
+      ],
+      "notes": "Serves Blue Mountain ski area and Georgian Bay. Nearest mosque for Wasaga Beach and Meaford travellers."
+    }
+  ]
+}

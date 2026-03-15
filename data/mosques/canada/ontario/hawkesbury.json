@@ -1,0 +1,51 @@
+{
+  "region": "hawkesbury",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 45.6083,
+  "centerLon": -74.6119,
+  "radiusKm": 25,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "overpass-api-scraper",
+  "mosques": [
+    {
+      "name": "Hawkesbury Mosque",
+      "type": "mosque",
+      "address": "651, Main Street East, Hawkesbury",
+      "city": "Hawkesbury",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.610595,
+      "longitude": -74.600448,
+      "phone": "613-632-7767",
+      "email": "hicc.ccih24@gmail.com",
+      "website": "https://hicc-ccih.org/",
+      "description": "Mosque serving the Hawkesbury area in eastern Ontario. The Hawkesbury Islamic Cultural Center (HICC) was established in 2024, offering services for Muslims and non-Muslims alike.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "eid_prayers",
+        "food_bank",
+        "youth_programs",
+        "new_muslim_support"
+      ],
+      "facilities": [
+        "parking"
+      ],
+      "accessInfo": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap",
+        "hicc-ccih.org"
+      ],
+      "notes": "The original Hawkesbury Mosque building at 651 Main St E was slated for demolition in 2017. The community now operates through the Hawkesbury Islamic Cultural Center (HICC) at 388 Main Street East, established October 2024."
+    }
+  ]
+}

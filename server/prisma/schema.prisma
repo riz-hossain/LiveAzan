@@ -1,0 +1,204 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ScanStatus {
+  COMPLETED
+  NEEDS_REFRESH
+}
+
+enum Prayer {
+  FAJR
+  DHUHR
+  ASR
+  MAGHRIB
+  ISHA
+  JUMMAH
+}
+
+enum AuthProvider {
+  GOOGLE
+  APPLE
+  MICROSOFT
+  EMAIL
+}
+
+enum UserRole {
+  USER
+  MOSQUE_ADMIN
+  ADMIN
+}
+
+enum NotificationType {
+  AZAN
+  SILENT_ALERT
+  DEPARTURE_REMINDER
+}
+
+enum RequestStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  REJECTED
+}
+
+model RegionScan {
+  id            String     @id @default(uuid())
+  geohash       String     @unique
+  centerLat     Float
+  centerLon     Float
+  radiusKm      Float      @default(300)
+  scanStatus    ScanStatus @default(COMPLETED)
+  mosquesFound  Int        @default(0)
+  lastScannedAt DateTime?
+  nextScanDue   DateTime?
+  seedFile      String?
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  @@index([geohash])
+  @@index([nextScanDue])
+}
+
+enum PlaceType {
+  MOSQUE
+  MUSALLA
+}
+
+enum SubmissionStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model Mosque {
+  id              String    @id @default(uuid())
+  name            String
+  type            PlaceType @default(MOSQUE)
+  address         String
+  city            String
+  province        String
+  country         String    @default("Canada")
+  latitude        Float
+  longitude       Float
+  phone           String?
+  website         String?
+  googleRating    Float?
+  googleReviewCount Int?
+  hasLiveStream   Boolean   @default(false)
+  streamUrl       String?
+  adminEmail      String?
+  verified        Boolean   @default(false)
+  notes           String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  iqamaSchedules IqamaSchedule[]
+  followers      UserMosque[]
+}
+
+model MosqueSubmission {
+  id              String           @id @default(uuid())
+  submittedBy     String?
+  user            User?            @relation(fields: [submittedBy], references: [id], onDelete: SetNull)
+  name            String
+  type            PlaceType        @default(MOSQUE)
+  address         String
+  city            String
+  province        String
+  country         String           @default("Canada")
+  latitude        Float
+  longitude       Float
+  phone           String?
+  website         String?
+  googleRating    Float?
+  googleReviewCount Int?
+  notes           String?
+  photoUrl        String?          // Photo of the mosque/iqama board
+  status          SubmissionStatus @default(PENDING)
+  adminNotes      String?
+  reviewedBy      String?
+  createdAt       DateTime         @default(now())
+  reviewedAt      DateTime?
+
+  @@index([status])
+  @@index([city, province])
+}
+
+model IqamaSchedule {
+  id            String    @id @default(uuid())
+  mosqueId      String
+  mosque        Mosque    @relation(fields: [mosqueId], references: [id], onDelete: Cascade)
+  prayer        Prayer
+  iqamaTime     String    // "HH:mm" format
+  effectiveFrom DateTime
+  effectiveTo   DateTime?
+  createdAt     DateTime  @default(now())
+
+  @@index([mosqueId, prayer, effectiveFrom])
+}
+
+model User {
+  id                 String       @id @default(uuid())
+  email              String       @unique
+  displayName        String?
+  avatarUrl          String?
+  authProvider       AuthProvider
+  authProviderId     String?
+  passwordHash       String?
+  emailVerified      Boolean      @default(false)
+  defaultLeadMinutes Int          @default(15)
+  calcMethod         Int          @default(2)
+  azanSound          String       @default("default")
+  role               UserRole     @default(USER)
+  createdAt          DateTime     @default(now())
+
+  mosques             UserMosque[]
+  prayerPrefs         UserPrayerPreference[]
+  coverageRequests    CoverageRequest[]
+  mosqueSubmissions   MosqueSubmission[]
+
+  @@index([authProvider, authProviderId])
+}
+
+model UserPrayerPreference {
+  id               String           @id @default(uuid())
+  userId           String
+  user             User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  prayer           Prayer
+  leadMinutes      Int
+  notificationType NotificationType @default(AZAN)
+  enabled          Boolean          @default(true)
+
+  @@unique([userId, prayer])
+}
+
+model UserMosque {
+  userId    String
+  mosqueId  String
+  user      User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  mosque    Mosque @relation(fields: [mosqueId], references: [id], onDelete: Cascade)
+  isPrimary Boolean @default(false)
+
+  @@id([userId, mosqueId])
+}
+
+model CoverageRequest {
+  id         String        @id @default(uuid())
+  userId     String
+  user       User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  latitude   Float
+  longitude  Float
+  cityName   String?
+  province   String?
+  country    String?
+  status     RequestStatus @default(PENDING)
+  adminNotes String?
+  createdAt  DateTime      @default(now())
+  resolvedAt DateTime?
+}

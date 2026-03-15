@@ -1,0 +1,93 @@
+{
+  "region": "brantford",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.1394,
+  "centerLon": -80.2644,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Brantford Masjid (Islamic Society of Brant)",
+      "type": "mosque",
+      "address": "300 King George Rd, Brantford, ON N3R 5L7",
+      "city": "Brantford",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.1401,
+      "longitude": -80.249,
+      "phone": "+1-519-759-1919",
+      "website": null,
+      "googleRating": 4.3,
+      "googleReviewCount": 20,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": [
+        "google-maps"
+      ],
+      "email": "info@brantfordmosque.ca",
+      "description": "Operated by the Muslim Association of Brantford (est. 1982), this Sunni mosque offers daily prayers, community dawah programs, and is a registered facility with the Bereavement Authority of Ontario.",
+      "denomination": "sunni",
+      "hours": "Dawn – Midnight daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "funeral_services",
+        "new_muslim_support"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
+    },
+    {
+      "name": "Masjid Sayyidna Bilal",
+      "type": "mosque",
+      "address": "26, Spruce Street, Paris, Ontario",
+      "city": "Paris",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.202362,
+      "longitude": -80.395842,
+      "phone": null,
+      "website": "https://parismasjid.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null,
+      "email": "info@parismasjid.ca",
+      "description": "A community mosque and centre in Paris, Ontario, offering five daily prayers, Jummah, and operating a local food bank in partnership with community organizations.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "food_bank",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking"
+      ],
+      "accessInfo": null
+    }
+  ]
+}

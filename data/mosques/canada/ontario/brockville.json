@@ -1,0 +1,47 @@
+{
+  "region": "brockville",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 44.5895,
+  "centerLon": -75.6843,
+  "radiusKm": 30,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "web-research",
+  "mosques": [
+    {
+      "name": "Muslim Society of Brockville (Islamic Center of Brockville)",
+      "type": "mosque",
+      "address": "332 Park St, Brockville, ON K6V 2J2",
+      "city": "Brockville",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.5895,
+      "longitude": -75.6843,
+      "phone": null,
+      "email": null,
+      "website": "http://www.brockvillemuslims.ca/",
+      "description": "Islamic center serving Brockville and the eastern Ontario corridor along Highway 401 between Kingston and Cornwall. Founded in 2021 as a registered charity.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "parking"
+      ],
+      "accessInfo": "Also listed at 36 Cambridge Crescent, Brockville, ON K6V 6L8",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "brockvillemuslims.ca",
+        "cbc.ca"
+      ],
+      "notes": "Located on Hwy 401 corridor between Kingston and Cornwall. Essential stop for travellers on the Montreal-Toronto route."
+    }
+  ]
+}
