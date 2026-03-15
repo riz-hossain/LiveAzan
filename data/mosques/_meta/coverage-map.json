@@ -3,7 +3,7 @@
   "regions": [
     {
       "file": "canada/ontario/toronto.json",
-      "city": "Toronto GTA",
+      "city": "Toronto Gta",
       "province": "Ontario",
       "mosquesCount": 106,
       "musallasCount": 12
@@ -23,6 +23,13 @@
       "musallasCount": 3
     },
     {
+      "file": "canada/ontario/waterloo.json",
+      "city": "Waterloo",
+      "province": "Ontario",
+      "mosquesCount": 10,
+      "musallasCount": 7
+    },
+    {
       "file": "canada/ontario/brampton.json",
       "city": "Brampton",
       "province": "Ontario",
@@ -30,22 +37,15 @@
       "musallasCount": 4
     },
     {
-      "file": "canada/ontario/hamilton.json",
-      "city": "Hamilton",
-      "province": "Ontario",
-      "mosquesCount": 9,
-      "musallasCount": 2
-    },
-    {
-      "file": "canada/ontario/waterloo.json",
-      "city": "Waterloo",
-      "province": "Ontario",
-      "mosquesCount": 7,
-      "musallasCount": 4
-    },
-    {
       "file": "canada/ontario/windsor.json",
       "city": "Windsor",
+      "province": "Ontario",
+      "mosquesCount": 11,
+      "musallasCount": 3
+    },
+    {
+      "file": "canada/ontario/hamilton.json",
+      "city": "Hamilton",
       "province": "Ontario",
       "mosquesCount": 9,
       "musallasCount": 2
@@ -59,7 +59,7 @@
     },
     {
       "file": "canada/ontario/cambridge-kitchener.json",
-      "city": "Cambridge/Kitchener",
+      "city": "Cambridge Kitchener",
       "province": "Ontario",
       "mosquesCount": 8,
       "musallasCount": 1
@@ -94,10 +94,24 @@
     },
     {
       "file": "canada/ontario/whitby-ajax.json",
-      "city": "Whitby/Ajax/Pickering",
+      "city": "Whitby Ajax",
       "province": "Ontario",
       "mosquesCount": 4,
       "musallasCount": 1
+    },
+    {
+      "file": "canada/quebec/montreal.json",
+      "city": "Montreal",
+      "province": "Quebec",
+      "mosquesCount": 5,
+      "musallasCount": 0
+    },
+    {
+      "file": "canada/british-columbia/vancouver.json",
+      "city": "Vancouver",
+      "province": "British Columbia",
+      "mosquesCount": 5,
+      "musallasCount": 0
     },
     {
       "file": "canada/ontario/cornwall.json",
@@ -121,15 +135,15 @@
       "musallasCount": 1
     },
     {
-      "file": "canada/ontario/barrie.json",
-      "city": "Barrie",
-      "province": "Ontario",
-      "mosquesCount": 3,
+      "file": "canada/alberta/calgary.json",
+      "city": "Calgary",
+      "province": "Alberta",
+      "mosquesCount": 4,
       "musallasCount": 0
     },
     {
-      "file": "canada/ontario/belleville.json",
-      "city": "Belleville",
+      "file": "canada/ontario/barrie.json",
+      "city": "Barrie",
       "province": "Ontario",
       "mosquesCount": 3,
       "musallasCount": 0
@@ -142,10 +156,38 @@
       "musallasCount": 1
     },
     {
+      "file": "canada/ontario/orangeville.json",
+      "city": "Orangeville",
+      "province": "Ontario",
+      "mosquesCount": 1,
+      "musallasCount": 2
+    },
+    {
       "file": "canada/ontario/vaughan.json",
       "city": "Vaughan",
       "province": "Ontario",
       "mosquesCount": 3,
+      "musallasCount": 0
+    },
+    {
+      "file": "canada/alberta/edmonton.json",
+      "city": "Edmonton",
+      "province": "Alberta",
+      "mosquesCount": 3,
+      "musallasCount": 0
+    },
+    {
+      "file": "canada/manitoba/winnipeg.json",
+      "city": "Winnipeg",
+      "province": "Manitoba",
+      "mosquesCount": 3,
+      "musallasCount": 0
+    },
+    {
+      "file": "canada/ontario/belleville.json",
+      "city": "Belleville",
+      "province": "Ontario",
+      "mosquesCount": 2,
       "musallasCount": 0
     },
     {
@@ -165,6 +207,13 @@
     {
       "file": "canada/ontario/erin.json",
       "city": "Erin",
+      "province": "Ontario",
+      "mosquesCount": 2,
+      "musallasCount": 0
+    },
+    {
+      "file": "canada/ontario/owen-sound.json",
+      "city": "Owen Sound",
       "province": "Ontario",
       "mosquesCount": 2,
       "musallasCount": 0
@@ -198,8 +247,50 @@
       "musallasCount": 0
     },
     {
+      "file": "canada/nova-scotia/halifax.json",
+      "city": "Halifax",
+      "province": "Nova Scotia",
+      "mosquesCount": 2,
+      "musallasCount": 0
+    },
+    {
+      "file": "canada/saskatchewan/saskatoon.json",
+      "city": "Saskatoon",
+      "province": "Saskatchewan",
+      "mosquesCount": 2,
+      "musallasCount": 0
+    },
+    {
+      "file": "canada/ontario/alliston.json",
+      "city": "Alliston",
+      "province": "Ontario",
+      "mosquesCount": 1,
+      "musallasCount": 0
+    },
+    {
+      "file": "canada/ontario/brockville.json",
+      "city": "Brockville",
+      "province": "Ontario",
+      "mosquesCount": 1,
+      "musallasCount": 0
+    },
+    {
+      "file": "canada/ontario/caledon.json",
+      "city": "Caledon",
+      "province": "Ontario",
+      "mosquesCount": 1,
+      "musallasCount": 0
+    },
+    {
       "file": "canada/ontario/chatham-kent.json",
-      "city": "Chatham-Kent",
+      "city": "Chatham Kent",
+      "province": "Ontario",
+      "mosquesCount": 1,
+      "musallasCount": 0
+    },
+    {
+      "file": "canada/ontario/collingwood.json",
+      "city": "Collingwood",
       "province": "Ontario",
       "mosquesCount": 1,
       "musallasCount": 0
@@ -207,6 +298,20 @@
     {
       "file": "canada/ontario/hawkesbury.json",
       "city": "Hawkesbury",
+      "province": "Ontario",
+      "mosquesCount": 1,
+      "musallasCount": 0
+    },
+    {
+      "file": "canada/ontario/lindsay.json",
+      "city": "Lindsay",
+      "province": "Ontario",
+      "mosquesCount": 1,
+      "musallasCount": 0
+    },
+    {
+      "file": "canada/ontario/muskoka.json",
+      "city": "Muskoka",
       "province": "Ontario",
       "mosquesCount": 1,
       "musallasCount": 0
@@ -226,15 +331,15 @@
       "musallasCount": 0
     },
     {
-      "file": "canada/ontario/owen-sound.json",
-      "city": "Owen Sound",
+      "file": "canada/ontario/pembroke.json",
+      "city": "Pembroke",
       "province": "Ontario",
       "mosquesCount": 1,
       "musallasCount": 0
     },
     {
       "file": "canada/ontario/sault-ste-marie.json",
-      "city": "Sault Ste. Marie",
+      "city": "Sault Ste Marie",
       "province": "Ontario",
       "mosquesCount": 1,
       "musallasCount": 0
@@ -254,52 +359,17 @@
       "musallasCount": 0
     },
     {
-      "file": "canada/quebec/montreal.json",
-      "city": "Montreal",
-      "province": "Quebec",
-      "mosquesCount": 5,
+      "file": "canada/ontario/timmins.json",
+      "city": "Timmins",
+      "province": "Ontario",
+      "mosquesCount": 1,
       "musallasCount": 0
     },
     {
-      "file": "canada/alberta/calgary.json",
-      "city": "Calgary",
-      "province": "Alberta",
-      "mosquesCount": 4,
-      "musallasCount": 0
-    },
-    {
-      "file": "canada/alberta/edmonton.json",
-      "city": "Edmonton",
-      "province": "Alberta",
-      "mosquesCount": 3,
-      "musallasCount": 0
-    },
-    {
-      "file": "canada/british-columbia/vancouver.json",
-      "city": "Vancouver",
-      "province": "British Columbia",
-      "mosquesCount": 5,
-      "musallasCount": 0
-    },
-    {
-      "file": "canada/manitoba/winnipeg.json",
-      "city": "Winnipeg",
-      "province": "Manitoba",
-      "mosquesCount": 3,
-      "musallasCount": 0
-    },
-    {
-      "file": "canada/nova-scotia/halifax.json",
-      "city": "Halifax",
-      "province": "Nova Scotia",
-      "mosquesCount": 2,
-      "musallasCount": 0
-    },
-    {
-      "file": "canada/saskatchewan/saskatoon.json",
-      "city": "Saskatoon",
-      "province": "Saskatchewan",
-      "mosquesCount": 2,
+      "file": "canada/ontario/woodstock.json",
+      "city": "Woodstock",
+      "province": "Ontario",
+      "mosquesCount": 1,
       "musallasCount": 0
     }
   ]
