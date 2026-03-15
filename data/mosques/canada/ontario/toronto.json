@@ -35,7 +35,42 @@
         "islamicfoundation.ca",
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": "info@islamicfoundation.ca",
+      "description": "One of the oldest and largest Islamic centres in Canada, established in 1969 in Scarborough, serving as a mosque, school, and community hub.",
+      "denomination": "sunni",
+      "hours": "Mon-Fri 11 AM – 7 PM, Sat-Sun 12 PM – 6 PM",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "itikaf",
+        "islamic_studies",
+        "funeral_services",
+        "zakat_collection"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "free_parking",
+        "shoe_rack",
+        "air_conditioned",
+        "heated",
+        "separate_entrance_women",
+        "childcare_room",
+        "multipurpose_hall",
+        "library"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Toronto",
@@ -64,7 +99,34 @@
         "masjidtoronto.com",
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": "info@masjidtoronto.com",
+      "description": "A Muslim Association of Canada (MAC) mosque in the heart of downtown Toronto with two locations, serving a large and diverse Muslim community.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "new_muslim_support",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "air_conditioned",
+        "heated"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Jami Mosque",
@@ -92,7 +154,32 @@
       "sources": [
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": null,
+      "description": "Toronto's first permanent mosque, established in 1969 in a beautifully adapted Gothic Revival church building near High Park, known as 'the mother of all mosques in Toronto.'",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "counseling",
+        "funeral_services",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "shoe_rack",
+        "heated"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Imdadul Islamic Centre",
@@ -120,7 +207,29 @@
       "sources": [
         "google-maps",
         "prayersconnect.com"
-      ]
+      ],
+      "email": "imdaduljamat@gmail.com",
+      "description": "Established in 1995 in the heart of North York, serving a large and diverse Sunni Muslim community as a place of worship and community centre.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "shoe_rack",
+        "heated"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Abu Huraira Centre",
@@ -149,7 +258,35 @@
         "abuhurairacenter.com",
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": null,
+      "description": "A non-profit Islamic centre in Scarborough established in 2013, dedicated to community services, education, and youth development with an associated full-time academy.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "air_conditioned",
+        "heated",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Khalid Bin Al-Walid Mosque",
@@ -177,7 +314,31 @@
       "sources": [
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": null,
+      "description": "A well-known Scarborough mosque focused on worship, community building, and education, widely recognized across the wider Muslim community in the GTA.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "heated"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Islamic Institute of Toronto",
@@ -206,7 +367,37 @@
         "iit.org",
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": "iit@islam.ca",
+      "description": "Established in 1996, IIT serves as a mosque, school, Islamic studies institution and community centre, filling a vital role in the Scarborough Muslim community.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "air_conditioned",
+        "heated",
+        "multipurpose_hall",
+        "library"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Dar Al-Tawheed",
@@ -235,7 +426,34 @@
         "daraltawheed.com",
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": "info@daraltawheed.ca",
+      "description": "Established in 2004 to serve the GTA community, located in the same building as Safa & Marwa Islamic School, offering daily prayers, education, and community programs.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "funeral_services",
+        "marriage_counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "heated",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "65 Musalla (Thorncliffe)",
@@ -265,7 +483,26 @@
         "prayersconnect.com",
         "google-maps"
       ],
-      "notes": "Located on 1st floor of Building 65 (Centennial Towers). One of the largest musallas in the Thorncliffe area."
+      "notes": "Located on 1st floor of Building 65 (Centennial Towers). One of the largest musallas in the Thorncliffe area.",
+      "email": "Imam65musalla@gmail.com",
+      "description": "One of the largest musallas in the Thorncliffe Park area, located on the first floor of Building 65 (Centennial Towers), serving the diverse local Muslim community.",
+      "denomination": "sunni",
+      "hours": "5 AM – 10 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack"
+      ],
+      "accessInfo": "Located on 1st floor of Building 65 (Centennial Towers). Main entrance on the front side of the building at the lobby."
     },
     {
       "name": "Flemingdon Musallah",
@@ -287,7 +524,19 @@
         "prayersconnect.com",
         "google-maps"
       ],
-      "notes": "Established 2019. Serves the Flemingdon Park community."
+      "notes": "Established 2019. Serves the Flemingdon Park community.",
+      "email": null,
+      "description": "A small community musallah established in 2019 serving the Flemingdon Park neighbourhood's Muslim population.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Darussalam (Islamic Society of Toronto)",
@@ -315,7 +564,32 @@
       "sources": [
         "praysalat.com",
         "google-maps"
-      ]
+      ],
+      "email": "info@islamicsocietyoftoronto.com",
+      "description": "A cornerstone of Toronto's Muslim community since 1995, serving the East York area with religious services, educational programs, and community unity.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "heated"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Toronto Islamic Centre & Community Services",
@@ -343,7 +617,29 @@
       "sources": [
         "praysalat.com",
         "google-maps"
-      ]
+      ],
+      "email": "info@TorontoIslamicCentre.com",
+      "description": "An Islamic centre located on Yonge Street near Bloor, providing prayer services and community programs in the heart of midtown Toronto.",
+      "denomination": "sunni",
+      "hours": "Mon-Fri 1 PM – 8 PM",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "new_muslim_support"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "shoe_rack",
+        "heated"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Salaheddin Islamic Centre",
@@ -371,7 +667,38 @@
       "sources": [
         "salaheddin.org",
         "google-maps"
-      ]
+      ],
+      "email": null,
+      "description": "A comprehensive Islamic centre in Scarborough housing a mosque, school, gym, and offering youth programs, counselling, and community services all under one roof.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "madrasah",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "counseling",
+        "marriage_counseling",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "gym",
+        "multipurpose_hall",
+        "library",
+        "heated"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Agincourt Muslim Association",
@@ -393,7 +720,25 @@
         "agincourtma.org",
         "google-maps"
       ],
-      "notes": "Located in basement below Rexall Pharmacy with entrance at rear of building."
+      "notes": "Located in basement below Rexall Pharmacy with entrance at rear of building.",
+      "email": "info@agincourtma.org",
+      "description": "Serving the community for over two decades, conducting daily prayers and providing religious education for children through evening programs.",
+      "denomination": "sunni",
+      "hours": "Open daily for prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "madrasah",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "shoe_rack"
+      ],
+      "accessInfo": "Located in basement below Rexall Pharmacy with entrance at rear of building."
     },
     {
       "name": "Subhan Islamic Association",
@@ -414,7 +759,25 @@
       "sources": [
         "subhanislamicassociation.org",
         "google-maps"
-      ]
+      ],
+      "email": null,
+      "description": "A Sunni mosque in Scarborough dedicated to meeting the educational and social needs of the community through dependable services and accessible learning.",
+      "denomination": "sunni",
+      "hours": "6 AM – 11 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack"
+      ],
+      "accessInfo": null
     },
     {
       "name": "SLIFO – Masjid Al Jannah",
@@ -442,7 +805,31 @@
       "sources": [
         "google-maps"
       ],
-      "notes": "Sri Lankan Islamic Foundation of Ontario."
+      "notes": "Sri Lankan Islamic Foundation of Ontario.",
+      "email": "info@slifo.ca",
+      "description": "Sri Lankan Islamic Foundation of Ontario's mosque, the largest Sri Lankan masjid in the GTA, serving over 500 families of diverse backgrounds in a former Masonic Temple.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "madrasah",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "heated",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Toronto Pearson Airport Prayer Room",
@@ -464,7 +851,20 @@
         "google-maps",
         "torontopearson.com"
       ],
-      "notes": "Multi-faith prayer room inside Toronto Pearson International Airport. Available 24/7 airside."
+      "notes": "Multi-faith prayer room inside Toronto Pearson International Airport. Available 24/7 airside.",
+      "email": null,
+      "description": "A multi-faith prayer room inside Toronto Pearson International Airport, available 24/7 airside for travellers.",
+      "denomination": "non_denominational",
+      "hours": "Open 24/7",
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "wheelchair_accessible"
+      ],
+      "accessInfo": "Multi-faith prayer room available airside. Check airport information desks for exact terminal locations."
     },
     {
       "name": "Pape Avenue Masjid",
@@ -486,7 +886,32 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@papecami.com",
+      "description": "A Turkish mosque established in 1983, also known as Pape Cami, run by the Turkish Canadian Islamic Heritage Association and affiliated with Diyanet Canada.",
+      "denomination": "hanafi",
+      "hours": "Open 24 hours",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "eid_prayers",
+        "taraweeh",
+        "funeral_services",
+        "food_bank"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "heated",
+        "kitchen"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Al-Noor (Islamic Information & Dawah Centre)",
@@ -508,7 +933,28 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Incorporated in 1994, the primary hub for dawah activities in Toronto and working station of Dr. Shabir Ally, offering Islamic education and outreach.",
+      "denomination": "sunni",
+      "hours": "5 AM – 10:45 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "new_muslim_support"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "shoe_rack",
+        "heated"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid El Noor",
@@ -530,7 +976,31 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@masjidelnoor.ca",
+      "description": "Established in 1986, one of the oldest Muslim organizations in Toronto serving as a multidimensional centre for religious, educational, and social services.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "madrasah",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "shoe_rack",
+        "heated"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Albanian Muslim Society of Toronto",
@@ -552,7 +1022,30 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "xhamia@albmuslim.ca",
+      "description": "Founded in 1957 by Albanian immigrants, AMST played a pivotal role in establishing Toronto's first mosque and continues to serve over 2,300 members with religious and cultural programs.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "eid_prayers",
+        "taraweeh",
+        "funeral_services",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "shoe_rack",
+        "heated",
+        "childcare_room"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Hamza Mosque",
@@ -574,7 +1067,29 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Established in 1999 in Parkdale, a focal point for the local Muslim community of about 1,000 families, purchased for $1.2M through community donations in 2015.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "madrasah",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack"
+      ],
+      "accessInfo": "Women's prayer space is in the basement."
     },
     {
       "name": "Toronto and Region Islamic Congregation (TARIC)",
@@ -596,7 +1111,38 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "media@taric.org",
+      "description": "One of the largest Islamic centres in Toronto, established by TARIC and the World Islamic Call Society, located at one of Canada's busiest intersections.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "madrasah",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "funeral_services",
+        "zakat_collection"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "free_parking",
+        "shoe_rack",
+        "air_conditioned",
+        "heated",
+        "multipurpose_hall",
+        "library"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Regent Park Islamic Resource Center",
@@ -618,7 +1164,25 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Founded in 2011 to serve the Regent Park and surrounding Muslim communities, promoting cultural, social, economic, and religious activities guided by equity and unity.",
+      "denomination": "sunni",
+      "hours": "Open daily for prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "counseling",
+        "new_muslim_support"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "shoe_rack"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Islamic Research Center of Canada",
@@ -640,7 +1204,25 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@irccan.com",
+      "description": "Home of Masjid Al Abedeen, a charitable and social organization established in 2017 in Scarborough, offering daily prayers and adult Quran classes.",
+      "denomination": "sunni",
+      "hours": "Open daily for prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "shoe_rack"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Baitul Mukarram Islamic Society",
@@ -662,7 +1244,32 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "A Sunni mosque incorporated in 2001 that purchased a former church in 2013; also houses Baitul Mukarram Academy, a full-time Islamic school since 2014.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "madrasah",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "heated"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Jaame Masjid Scarborough",
@@ -684,7 +1291,25 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@centralmosque.ca",
+      "description": "Also known as Central Mosque Scarborough, a welcoming Islamic centre on Lawrence Ave East offering daily prayers and community programs in a converted former retail space.",
+      "denomination": "sunni",
+      "hours": "9 AM – 9 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Huzaifah",
@@ -706,7 +1331,30 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "huzaifahimam@gmail.com",
+      "description": "Established in 2003, a South Asian-community mosque in Scarborough dedicated to preserving and propagating Prophetic Teachings while nurturing future Islamic leaders.",
+      "denomination": "sunni",
+      "hours": "Office: Mon-Fri 1 PM – 7 PM; Open daily for prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Usman Gousi Mosque",
@@ -728,7 +1376,25 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "A Sunni mosque established in 1999 in Scarborough's Port Union neighbourhood, following the South Asian Sufi school of thought, offering a serene setting for worship.",
+      "denomination": "sunni",
+      "hours": "Open 24/7",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Dar Us Salaam",
@@ -750,7 +1416,31 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@islamicsocietyoftoronto.com",
+      "description": "Located in the heart of Thorncliffe Park, serving the thriving Muslim communities of Thorncliffe, Flemingdon Park, and St. Denis with religious and educational programs.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "heated"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Al-Hikmah Centre Inc",
@@ -772,7 +1462,27 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Established in 2007, a pioneer in Islamic science and education and one of the most important propagation centres in North America.",
+      "denomination": "sunni",
+      "hours": "Open daily for prayers; Jumu'ah khutba 1:50 PM",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "shoe_rack",
+        "separate_entrance_women"
+      ],
+      "accessInfo": "Access the Masjid from the back of 36 Colville Road. Ladies' entrance is the green door near the gym entrance. Men's entrance is in the rear."
     },
     {
       "name": "Afghan-Canadian Islamic Community",
@@ -794,7 +1504,32 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "A non-profit Shia charitable organization founded in 1989, serving approximately 1,400 Afghan-Canadian families with cultural, social, and religious programs.",
+      "denomination": "shia",
+      "hours": "Mon-Thu & Sat 9 AM – 5 PM, Fri 6 AM – 11:30 PM, Sun 9 AM – 11 AM",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "heated"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Imam Mahdi Islamic Centre",
@@ -816,7 +1551,35 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Founded by Iranian-Canadian Muslims, promoting Shia Ithna-Ashari teachings and community empowerment through daily prayers, education, and social programs since 2010.",
+      "denomination": "shia",
+      "hours": "Open daily for prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "marriage_counseling",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "heated",
+        "gym",
+        "library"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Ismaili Centre Toronto",
@@ -838,7 +1601,32 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "An 80,000 sq ft centre sharing a landscaped 17-acre site with the Aga Khan Museum, serving as a Jamatkhana and community hub for Canada's Ismaili community.",
+      "denomination": "ismaili",
+      "hours": "10 AM – 12 AM daily",
+      "services": [
+        "five_daily_prayers",
+        "nikah",
+        "quran_classes",
+        "youth_programs",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "free_parking",
+        "shoe_rack",
+        "air_conditioned",
+        "heated",
+        "multipurpose_hall",
+        "library",
+        "outdoor_space"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Don Mills Jamatkhana",
@@ -860,7 +1648,28 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "One of the oldest Jamatkhanas in the GTA, opened in 1978, marking the site of the first Ismaili prayer hall in Ontario, currently undergoing redevelopment plans.",
+      "denomination": "ismaili",
+      "hours": "Open daily for prayers",
+      "services": [
+        "five_daily_prayers",
+        "quran_classes",
+        "youth_programs",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "multipurpose_hall",
+        "gym",
+        "library"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Baitul Aman Masjid",
@@ -882,7 +1691,32 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Established in 2008 in 'Little Bengal' on Danforth Avenue, a full-service masjid offering prayers, weekend Islamic school, and community support near Victoria Park Station.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "madrasah",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "new_muslim_support"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "heated",
+        "separate_entrance_women"
+      ],
+      "accessInfo": "Sisters' prayer room accessible from the rear of the building."
     },
     {
       "name": "Dar Al-Hijrah Islamic Center",
@@ -904,7 +1738,32 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "A full-service Muslim community centre in Etobicoke established in 2007, owned by Canadian Muslim Heritage Association, providing education, social services, and recreation.",
+      "denomination": "sunni",
+      "hours": "9 AM – 9 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack",
+        "heated"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Rexdale Jame Masjid",
@@ -926,7 +1785,27 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "First established in 1987 as a small musalla, now a spacious community mosque in Etobicoke offering Quran memorization classes and various programs.",
+      "denomination": "sunni",
+      "hours": "6 AM – 12 AM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "tahfeez",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Jannatul Ferdous Mosque",
@@ -948,7 +1827,26 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@jannatulferdous.ca",
+      "description": "A volunteer-run Sunni mosque in Etobicoke providing a nurturing environment grounded in Islamic teachings, with a mobile app for prayer times and community events.",
+      "denomination": "sunni",
+      "hours": "Open 24/7",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "eid_prayers",
+        "taraweeh",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "shoe_rack"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Ummah Nabawiah Masjid",
@@ -970,7 +1868,30 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "A non-profit Sunni mosque established in 1994 in Etobicoke, offering prayers and khutbah in Dari, Arabic, and English, with a well-equipped mortuary for funeral services.",
+      "denomination": "sunni",
+      "hours": "Open daily for all five prayers",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "shoe_rack"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Bosnian Islamic Association Gazi Husrev-Beg",
