@@ -713,7 +713,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@kanatamuslims.ca",
+      "description": "A federally registered charity founded in 2004 serving over 6,000 Muslims in Kanata with a full-time imam, weekend schools, and community programs focused on spirituality, wellness, and outreach.",
+      "denomination": "sunni",
+      "hours": "6:00 AM - 9:00 PM daily",
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "arabic_classes", "islamic_studies", "youth_programs", "nikah", "eid_prayers", "taraweeh", "food_bank"],
+      "facilities": ["wudu_area", "women_section", "parking", "multipurpose_hall"],
+      "accessInfo": null
     },
     {
       "name": "Unknown Mosque",
@@ -734,7 +741,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "An unverified mosque listing at 4269 Limebank Road. May be related to Darul Arqum which is also listed at a Limebank Road address.",
+      "denomination": null,
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah"],
+      "facilities": [],
+      "accessInfo": null
     },
     {
       "name": "Baitun Naseer Mosque",
@@ -755,7 +769,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "An Ahmadiyya Muslim Community mosque in Cumberland, offering religious education including Quran, Salat, and Hadith studies through Nasir Academy Ottawa.",
+      "denomination": "ahmadiyya",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "islamic_studies", "eid_prayers"],
+      "facilities": ["wudu_area", "women_section", "parking"],
+      "accessInfo": null
     },
     {
       "name": "SNMC Center & Masjid",

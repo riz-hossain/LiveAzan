@@ -417,7 +417,7 @@
       ]
     },
     {
-      "name": "SLIFO \u2013 Masjid Al Jannah",
+      "name": "SLIFO – Masjid Al Jannah",
       "type": "mosque",
       "address": "2201 Ellesmere Rd, Scarborough, ON M1G 3M6",
       "city": "Toronto",
@@ -1872,7 +1872,21 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": "Located in Scott Religious Centre, York University campus."
+      "notes": "Located in Scott Religious Centre, York University campus.",
+      "email": null,
+      "description": "Muslim prayer space located in the Scott Religious Centre at York University, managed by the York University Muslim Students' Association with dedicated rooms for daily prayers and Jumu'ah.",
+      "denomination": "non_denominational",
+      "hours": "9 AM – 10 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "shoe_rack"
+      ],
+      "accessInfo": "Scott Religious Centre, 2nd floor. Additional prayer spaces in Student Centre Room 321 and Second Student Centre 4th floor."
     },
     {
       "name": "Ryerson (TMU) Muslim Students' Prayer Room",
@@ -1894,7 +1908,20 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": "Toronto Metropolitan University campus prayer room."
+      "notes": "Toronto Metropolitan University campus prayer room.",
+      "email": null,
+      "description": "Campus prayer room at Toronto Metropolitan University (formerly Ryerson) serving Muslim students with daily prayer facilities.",
+      "denomination": "non_denominational",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section"
+      ],
+      "accessInfo": "Located inside TMU campus. Check with TMU Muslim Students' Association for room location and access."
     },
     {
       "name": "Scarborough Civic Centre Prayer Room",
@@ -1916,7 +1943,16 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": "Prayer room available in the Scarborough Civic Centre."
+      "notes": "Prayer room available in the Scarborough Civic Centre.",
+      "email": null,
+      "description": "Prayer room available within the Scarborough Civic Centre for Muslim community members and visitors.",
+      "denomination": "non_denominational",
+      "hours": null,
+      "services": [
+        "five_daily_prayers"
+      ],
+      "facilities": [],
+      "accessInfo": "Located inside Scarborough Civic Centre. Check with building administration for room location."
     },
     {
       "name": "Ismaili Jamatkhana Scarborough",
@@ -1938,7 +1974,22 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Ismaili Jamatkhana serving the Ismaili Muslim community in Scarborough with worship services and community programs in a modern, serene facility.",
+      "denomination": "ismaili",
+      "hours": null,
+      "services": [
+        "five_daily_prayers"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "STC Musalla (Scarborough Town Centre)",
@@ -1960,7 +2011,16 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": "Informal prayer space used by Muslim shoppers and workers near Scarborough Town Centre."
+      "notes": "Informal prayer space used by Muslim shoppers and workers near Scarborough Town Centre.",
+      "email": null,
+      "description": "Informal prayer space used by Muslim shoppers and workers near Scarborough Town Centre mall.",
+      "denomination": "non_denominational",
+      "hours": null,
+      "services": [
+        "five_daily_prayers"
+      ],
+      "facilities": [],
+      "accessInfo": "Informal musalla near the Scarborough Town Centre shopping area."
     },
     {
       "name": "Bab ul Ilm - Bani Hashim Society",
@@ -1982,7 +2042,28 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@banihashim.org",
+      "description": "Shia Islamic centre established in 1982, serving the community with congregation, commemoration, and celebration of religious festivals, including free medical and dental services.",
+      "denomination": "shia",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "counseling",
+        "eid_prayers",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Dawoodi Bohra Al Masjid Al Saifee",
@@ -2004,7 +2085,24 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Dawoodi Bohra mosque and community centre, one of the oldest Dawoodi Bohra masjids in the Western world, featuring elegant architecture and serving the Bohra community in the GTA.",
+      "denomination": "shia",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "nikah",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Sayyidah Zainab Centre",
@@ -2026,7 +2124,26 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@szmcc.ca",
+      "description": "Sunni mosque following the Ahle Sunnat Wal Jama'at (Barelvi) tradition, established in 2018, serving as a centre of Muslim unity and interfaith relationships in the GTA.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "quran_classes",
+        "islamic_studies",
+        "new_muslim_support"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Baitul Jannah Islamic Center",
@@ -2048,7 +2165,23 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Masjid in the heart of Scarborough serving a large and diverse Muslim community with religious, social, educational, and recreational services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "youth_programs",
+        "sisters_halaqah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Noor-ul-Haram",
@@ -2070,7 +2203,27 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Sunni mosque in Oakville established by World Islamic Mission Canada in 1989, serving the Muslim communities of Oakville, Mississauga, and Milton on an 11-acre property.",
+      "denomination": "sunni",
+      "hours": "6 AM – 11:30 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "quran_classes",
+        "islamic_studies",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "free_parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Newmarket Islamic Centre",
@@ -2092,7 +2245,27 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "One of the oldest Islamic centres in York Region, established in 2005, representing over 62 nationalities and providing comprehensive Islamic education for youth.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "quran_classes",
+        "tahfeez",
+        "islamic_studies",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Winston Churchill Mosque",
@@ -2114,7 +2287,23 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Newly built mosque also known as Meadowvale Islamic Centre, located on Winston Churchill Blvd in Mississauga, serving the local Muslim community with multiple Jumu'ah services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Pickering Islamic Centre",
@@ -2136,7 +2325,26 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@masjid.ca",
+      "description": "Sunni mosque also known as Masjid Usman, serving the Pickering community for over 25 years with Islamic education for children and adults in accordance with the Quran and Sunnah.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Mount Pleasant Islamic Center",
@@ -2158,7 +2366,28 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Sunni mosque also known as Masjid Al Salam, a converted church in Mount Pleasant Village, Brampton, offering full-time Quran memorization programs and community services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "quran_classes",
+        "tahfeez",
+        "nikah",
+        "sisters_halaqah",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Mubarak Mosque",
@@ -2180,7 +2409,27 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Ahmadiyya Muslim mosque built in 2018, featuring a 96-foot minaret with blue dome, serving as a welcoming space for all faiths to pray, visit, and learn about Islam.",
+      "denomination": "ahmadiyya",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "quran_classes",
+        "counseling",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "wheelchair_accessible",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Jam'e Masjid Markham",
@@ -2202,7 +2451,25 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "First masjid built in the Town of Markham by the Islamic Society of Markham, serving as a focal point for the Muslim community with spacious prayer areas and educational programs.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "quran_classes",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "playground"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Darul Iman",
@@ -2224,7 +2491,28 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Second mosque project of the Islamic Society of Markham, a 25,000 sq ft facility at Swan Lake with a gymnasium, Islamic school, and full-time Hifz program.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "gym",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Imam Bukhari Centre",
@@ -2246,7 +2534,23 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Salafi mosque and dawah centre operated by the Ahle-Hadith Society of Canada, known for its clean, cozy environment and community Quran and Tajweed classes.",
+      "denomination": "salafi",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Islamic Community Centre of Milton",
@@ -2268,7 +2572,22 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "iccm@icna.ca",
+      "description": "Sunni mosque operated by ICNA (Islamic Circle of North America) serving Milton's Muslim community with various programs and community activities.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Muslim Association of Milton",
@@ -2290,7 +2609,27 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Non-profit organization serving Milton's Muslim community for over a decade, operating the Halton Islamic Community Centre Masjid and Halton Learning Centre Musala.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "quran_classes",
+        "food_bank",
+        "counseling",
+        "mens_halaqah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "separate_entrance_women"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Spiritual Society Canada",
@@ -2312,7 +2651,25 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@spiritualsocietycanada.com",
+      "description": "Sunni Islamic centre in Scarborough providing daily prayers, educational programs for children and adults, and community outreach initiatives.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "quran_classes",
+        "tahfeez"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": "Extra parking available at Epiphany Lutheran Church, 20 Old Kingston Rd."
     },
     {
       "name": "The Reign of Islamic Da'Wah (TROID)",
@@ -2334,7 +2691,24 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Non-profit dawah organization established in 1998, operating Masjidul-Furqaan and an Islamic centre focused on Salafi teachings with publications, conferences, and lectures.",
+      "denomination": "salafi",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "quran_classes",
+        "islamic_studies",
+        "arabic_classes"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Quba (Ajax)",
@@ -2356,7 +2730,26 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@ajaxmasjid.ca",
+      "description": "First masjid in Ajax, established by the Islamic Society of Ajax in 2013, completed construction in 2016, serving a Muslim population of approximately 10,000 with education and community programs.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Imdadul Islamic Jamat",
@@ -2378,7 +2771,21 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "imdaduljamat@gmail.com",
+      "description": "Sunni mosque established in 1995 in the heart of North York, serving a large and diverse Muslim community as a spiritual, educational, and social sanctuary.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Omar Bin Khatab",
@@ -2400,7 +2807,26 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Downtown Toronto mosque established in 1992, serving one of the largest youth populations in the area with daily programs, counselling, and community services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "quran_classes",
+        "youth_programs",
+        "counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Khalid Bin Al-Waleed Mosque",
@@ -2422,7 +2848,29 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "admin@khalidmosque.com",
+      "description": "Federally incorporated charitable organization established in the 1990s in Etobicoke, with a focus on serving Somali-speaking newcomers and providing comprehensive settlement support.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "quran_classes",
+        "youth_programs",
+        "new_muslim_support",
+        "nikah",
+        "funeral_services",
+        "counseling",
+        "marriage_counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Islamic Information Centre",
@@ -2444,7 +2892,17 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": "Islamic information and prayer space downtown."
+      "notes": "Islamic information and prayer space downtown.",
+      "email": null,
+      "description": "Islamic information and prayer space in downtown Toronto providing information about Islam and prayer facilities.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": null
     },
     {
       "name": "Masjid Sunnah Al-Nabawiah",
@@ -2466,7 +2924,20 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Sunni mosque in Toronto, also associated with Ummah Nabawiah Masjid, serving the local Muslim community since 1994 with daily prayers and community programs.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Ja'ffari Islamic Centre",
@@ -2488,7 +2959,37 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Largest Shia Islamic centre facility in North America at 165,000 sq ft, administered by the Islamic Shia Ithna-Asheri Jamaat of Toronto, serving over 7,000 members with extensive programs.",
+      "denomination": "shia",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "quran_classes",
+        "madrasah",
+        "youth_programs",
+        "islamic_studies",
+        "nikah",
+        "funeral_services",
+        "counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking",
+        "free_parking",
+        "library",
+        "gym",
+        "kitchen",
+        "multipurpose_hall",
+        "childcare_room"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Al-Mahdi Islamic Centre",
@@ -2510,7 +3011,26 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Shia Islamic community centre established in 1984, serving over 1,500 individuals from diverse cultural backgrounds with religious, spiritual, cultural, and social services.",
+      "denomination": "shia",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "quran_classes",
+        "islamic_studies",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid As-Siddique",
@@ -2532,7 +3052,24 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Sunni mosque in Mississauga offering daily prayers, Jumu'ah services, Arabic language courses, and community programs with doors locked at time of Iqaamah for safety.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "arabic_classes",
+        "quran_classes"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section"
+      ],
+      "accessInfo": "Masjid door is locked at the time of Iqaamah for safety and security."
     },
     {
       "name": "Brampton Islamic Center",
@@ -2554,7 +3091,22 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Sunni Islamic centre in Brampton, formerly a church purchased by the Muslim community in 2005, embracing the multiculturalism of the city.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Jamiat-Ul-Ansar of Brampton",
@@ -2576,7 +3128,27 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@jamiatulansar.ca",
+      "description": "Federally registered Sunni charity since 1984, also known as Great Lakes Masjid, providing worship, prayer, reflection, and learning space for Brampton's Muslim community.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "quran_classes",
+        "youth_programs",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "childcare_room"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Jame Makki Masjid Brampton",
@@ -2598,7 +3170,33 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "makkimasjid@gmail.com",
+      "description": "Mosque established in the early 1980s by the Islamic Society of Peel, featuring a 2000 sq metre facility with a full-time Islamic school (K-8) and comprehensive community services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "nikah",
+        "funeral_services",
+        "mens_halaqah",
+        "sisters_halaqah",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "kitchen",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Al Qalam",
@@ -2620,7 +3218,26 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Sunni mosque on Dufferin Street in York, Toronto, offering daily prayers, Arabic and Quran classes for youth and adults, and funeral services.",
+      "denomination": "sunni",
+      "hours": "5 AM – 10:30 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "quran_classes",
+        "arabic_classes",
+        "islamic_studies",
+        "funeral_services",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Muslim Neighbour Nexus",
@@ -2642,7 +3259,28 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@mnnexus.ca",
+      "description": "Registered non-profit in Mississauga serving approximately 10,000 Muslims in the Churchill Meadows and Lisgar communities with a dome-structure masjid opened in 2019.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "quran_classes",
+        "youth_programs",
+        "arabic_classes"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "free_parking",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Oshawa Mosque (Masjid Hamza)",
@@ -2664,7 +3302,24 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "First purpose-built masjid in Oshawa, opened in 2012, serving the local Muslim community with daily prayers, Jumu'ah, educational lectures, and licensed Nikah services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "nikah",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjidur Rahmah",
@@ -2686,7 +3341,26 @@
         "muslimlink.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Sunni mosque in downtown Toronto's Regent Park neighbourhood operated by the Central Toronto Islamic Foundation, hosting a madrassah with full-time Hifz and community programs.",
+      "denomination": "sunni",
+      "hours": "5 AM – 11 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section"
+      ],
+      "accessInfo": null
     }
   ]
 }
