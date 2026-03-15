@@ -34,7 +34,33 @@
       "sources": [
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": "info@markhammasjid.ca",
+      "description": "A Sunni mosque offering daily prayers, Madrassa, Arabic classes, weekly Quran tafseer sessions, funeral services with a 24/7 phone line, and a playground for children.",
+      "denomination": "sunni",
+      "hours": "5 AM - 11 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "arabic_classes",
+        "islamic_studies",
+        "madrasah",
+        "eid_prayers",
+        "taraweeh",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section",
+        "separate_entrance_women",
+        "wheelchair_accessible",
+        "playground"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Al-Huda (York Region)",
@@ -62,7 +88,23 @@
       "sources": [
         "google-maps",
         "prayersconnect.com"
-      ]
+      ],
+      "email": null,
+      "description": "A mosque in the Markham/York Region area providing daily prayers and community services to the local Muslim population.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Richmond Hill Islamic Centre",
@@ -90,7 +132,23 @@
       "sources": [
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": null,
+      "description": "An Islamic centre in Richmond Hill serving the local Muslim community with daily prayers and religious programs.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Islamic Society of York Region (ISYR)",
@@ -117,7 +175,30 @@
       },
       "sources": [
         "google-maps"
-      ]
+      ],
+      "email": "isyr.events@gmail.com",
+      "description": "Established in 1999 on 33 acres of land, ISYR provides prayer facilities, youth character building programs, and extensive recreational amenities including a soccer field, pool, tennis courts, and a TV studio.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section",
+        "library",
+        "gym",
+        "playground",
+        "outdoor_space",
+        "multipurpose_hall",
+        "kitchen"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Markham Muslim Association",
@@ -139,7 +220,26 @@
         "themma.ca",
         "google-maps"
       ],
-      "notes": "Dedicated to establishing a strong Islamic presence in Markham and Ontario."
+      "notes": "Dedicated to establishing a strong Islamic presence in Markham and Ontario.",
+      "email": "info@themma.ca",
+      "description": "Dedicated to establishing a strong and positive Islamic presence in Markham and Ontario through educational programs and spiritual guidance.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "islamic_studies",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Ihsan Muslim Heritage Society",
@@ -159,7 +259,19 @@
       "iqamaTimes": null,
       "sources": [
         "google-maps"
-      ]
+      ],
+      "email": null,
+      "description": "An Islamic centre in Richmond Hill serving the local Muslim community with daily prayers and religious education programs.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area"
+      ],
+      "accessInfo": null
     },
     {
       "name": "al-Hussain Foundation Centre",
@@ -180,7 +292,28 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "news@alhussainfoundation.ca",
+      "description": "A Shia Jafari mosque established in 1989, featuring a multi-level building on 5 acres of land with the Al-Hussain Mosque and Janatt Wadi Al-Salaam Cemetery.",
+      "denomination": "shia",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "quran_classes",
+        "islamic_studies",
+        "eid_prayers",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section",
+        "cemetery",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Darul Iman",
@@ -201,7 +334,31 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@daruliman.org",
+      "description": "The Islamic Centre of Markham, a vibrant centre for worship, learning, and community life with spacious prayer areas, a gymnasium, and an Islamic school all under one roof.",
+      "denomination": "sunni",
+      "hours": "Office: Mon-Fri 9 AM - 5 PM, Sun 11 AM - 2 PM",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "islamic_studies",
+        "youth_programs",
+        "eid_prayers",
+        "taraweeh",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section",
+        "gym",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Jam'e Masjid Markham",
@@ -222,7 +379,33 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@markhammasjid.ca",
+      "description": "Also known as the Islamic Society of Markham, this mosque offers daily prayers, Arabic classes, Quran tafseer sessions, and a 24/7 funeral phone line.",
+      "denomination": "sunni",
+      "hours": "5 AM - 11 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "janaza",
+        "nikah",
+        "quran_classes",
+        "arabic_classes",
+        "islamic_studies",
+        "madrasah",
+        "eid_prayers",
+        "taraweeh",
+        "funeral_services"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section",
+        "separate_entrance_women",
+        "wheelchair_accessible",
+        "playground"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Imam Mahdi Islamic Centre",
@@ -243,7 +426,25 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Founded by Iranian-Canadian Muslims, IMIC promotes the teachings of Islam according to Shia Ithna-Ashari faith, serving the Thornhill and Markham community since 2010 with programs in Dari, Farsi, and English.",
+      "denomination": "shia",
+      "hours": "Mon-Wed 11 AM - 1 PM, 4 - 6 PM; Thu 11 AM - 1 PM",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "islamic_studies",
+        "eid_prayers"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking",
+        "women_section",
+        "wheelchair_accessible"
+      ],
+      "accessInfo": null
     }
   ]
 }
