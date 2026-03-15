@@ -718,7 +718,11 @@ def _ensure_mobile_deps(app_dir, fresh=False):
     info("Installing mobile dependencies (npm install)...")
     if not has_cmd("npm"):
         die("npm is not installed. Install Node.js 20+ first: https://nodejs.org/")
-    cmd = ["cmd", "/c", "npm", "install"] if is_windows() else ["npm", "install"]
+    # --legacy-peer-deps: prevents npm from auto-installing peer deps like
+    # expo-linking@55.x / expo-font@55.x that get hoisted to root node_modules
+    # and break the Android build with missing 'expo-module-gradle-plugin'
+    cmd = (["cmd", "/c", "npm", "install", "--legacy-peer-deps"]
+           if is_windows() else ["npm", "install", "--legacy-peer-deps"])
     run_visible(cmd, cwd=str(app_dir))
 
 

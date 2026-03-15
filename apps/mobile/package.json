@@ -7,14 +7,19 @@
     "dev": "expo start",
     "build": "expo export",
     "lint": "tsc --noEmit",
-    "test": "jest"
+    "test": "jest",
+    "android": "expo run:android",
+    "ios": "expo run:ios"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.0",
-    "@react-native-async-storage/async-storage": "^3.0.1",
+    "@react-native-async-storage/async-storage": "~1.23.1",
     "expo": "~51.0.0",
     "expo-auth-session": "~5.5.0",
     "expo-av": "~14.0.0",
+    "expo-constants": "~16.0.2",
+    "expo-font": "~12.0.10",
+    "expo-linking": "~6.3.1",
     "expo-location": "~17.0.0",
     "expo-notifications": "~0.28.0",
     "expo-router": "~3.5.0",
