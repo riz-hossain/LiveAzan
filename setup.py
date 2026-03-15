@@ -637,10 +637,37 @@ def _ensure_mobile_deps(app_dir, fresh=False):
     run_visible(cmd, cwd=str(app_dir))
 
 
+def _patch_gradle_wrapper(android_dir):
+    """Pin Gradle wrapper to 8.6 — Expo SDK 51 is incompatible with Gradle 8.7+.
+    Gradle 8.8 removed components.release used by expo-modules-core."""
+    props = android_dir / "gradle" / "wrapper" / "gradle-wrapper.properties"
+    if not props.exists():
+        return
+    content = props.read_text(encoding="utf-8")
+    # Match gradle-X.Y or gradle-X.Y.Z in the distributionUrl
+    m = re.search(r"gradle-(\d+)\.(\d+)", content)
+    if not m:
+        return
+    major, minor = int(m.group(1)), int(m.group(2))
+    if (major, minor) <= (8, 6):
+        info(f"Gradle wrapper: {major}.{minor} (compatible, no patch needed)")
+        return
+    # Replace the version portion in the URL
+    patched = re.sub(
+        r"(gradle-)(\d+\.\d+(?:\.\d+)?)([-\w]*\.zip)",
+        r"\g<1>8.6\3",
+        content,
+    )
+    if patched != content:
+        props.write_text(patched, encoding="utf-8")
+        info(f"Patched gradle-wrapper.properties: {major}.{minor} → 8.6 (Expo 51 requires ≤8.6)")
+
+
 def _ensure_expo_prebuild(app_dir, clean=False):
     gradlew = "gradlew.bat" if is_windows() else "gradlew"
     if (app_dir / "android" / gradlew).exists() and not clean:
         _ensure_cleartext_traffic(app_dir)
+        _patch_gradle_wrapper(app_dir / "android")
         return
     cmd_args = ["npx", "expo", "prebuild", "--platform", "android"]
     if clean:
@@ -651,6 +678,7 @@ def _ensure_expo_prebuild(app_dir, clean=False):
     if is_windows():
         cmd_args = ["cmd", "/c"] + cmd_args
     run_visible(cmd_args, cwd=str(app_dir))
+    _patch_gradle_wrapper(app_dir / "android")
     _ensure_cleartext_traffic(app_dir)
 
 
