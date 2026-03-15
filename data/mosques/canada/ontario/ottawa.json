@@ -629,7 +629,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Duplicate listing of Jami Omar Mosque (Jamiatul Muslemeen of Ottawa-Carleton), a Sunni mosque established in 1992 serving Ottawa's West End.",
+      "denomination": "sunni",
+      "hours": "4:00 AM - 10:30 PM daily",
+      "services": ["five_daily_prayers", "jummah", "nikah", "counseling", "funeral_services", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "women_section", "parking", "free_parking"],
+      "accessInfo": null
     },
     {
       "name": "Islamic Shia Ithna Asheri Asociation of Ottawa",
@@ -650,7 +657,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@isia-ottawa.com",
+      "description": "Formed in 1994 to serve the religious needs of the growing Ottawa Ithna Asheri Muslim community, offering daily prayers, funeral services, and community programs.",
+      "denomination": "shia",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "funeral_services"],
+      "facilities": ["wudu_area", "women_section", "parking", "wheelchair_accessible"],
+      "accessInfo": null
     },
     {
       "name": "Abu Thar al-Gofary Mosque, Ottawa",
@@ -671,7 +685,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "A Shia mosque in the Overbrook neighborhood of Ottawa, incorporated in 1999, serving as a place for prayer, friendship, and cultural exchange.",
+      "denomination": "shia",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah"],
+      "facilities": ["wudu_area", "parking"],
+      "accessInfo": null
     },
     {
       "name": "Kanata Muslim Association",
