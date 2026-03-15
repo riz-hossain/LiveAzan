@@ -573,6 +573,90 @@ def ensure_mobile_env(repo):
 
 # ── Android build helpers ─────────────────────────────────────────────────────
 
+def _check_android_prerequisites():
+    """Upfront checks for Node, npm, Java, and Android SDK before any build work."""
+    # -- Node --
+    if not has_cmd("node"):
+        die("Node.js is not installed.\n"
+            "  Install Node.js 20+ from: https://nodejs.org/")
+    try:
+        ver = subprocess.check_output(["node", "--version"], text=True).strip()
+        major = int(ver.lstrip("v").split(".")[0])
+        if major < 18:
+            die(f"Node.js {ver} is too old. Need 18+.\n"
+                "  Install from: https://nodejs.org/")
+        info(f"Node.js {ver} ✓")
+    except Exception:
+        die("Could not determine Node.js version.")
+
+    # -- npm --
+    if not has_cmd("npm"):
+        die("npm is not installed. Install Node.js 20+: https://nodejs.org/")
+    try:
+        npm_ver = subprocess.check_output(["npm", "--version"], text=True).strip()
+        info(f"npm {npm_ver} ✓")
+    except Exception:
+        die("Could not determine npm version.")
+
+    # -- Java --
+    java_found = False
+    try:
+        out = subprocess.check_output(["java", "-version"],
+                                      stderr=subprocess.STDOUT, text=True)
+        m = re.search(r'version "(\d+)', out)
+        if m:
+            jmajor = int(m.group(1))
+            if jmajor < 17:
+                die(f"Java {jmajor} found but need Java 17+.\n"
+                    "  Install JDK 17+ from: https://adoptium.net/")
+            info(f"Java {jmajor} ✓")
+            java_found = True
+    except Exception:
+        pass
+    if not java_found:
+        # Also check common Windows install paths
+        if is_windows():
+            for base in [
+                Path("C:/Program Files/Java"),
+                Path("C:/Program Files/Eclipse Adoptium"),
+                Path("C:/Program Files/Microsoft"),
+                Path("C:/Program Files/Amazon Corretto"),
+            ]:
+                if base.exists() and any(base.iterdir()):
+                    java_found = True
+                    info("Java found in Program Files ✓")
+                    break
+        if not java_found:
+            die("Java (JDK 17+) not found.\n"
+                "  Install from: https://adoptium.net/")
+
+    # -- Android SDK --
+    sdk_root = (
+        os.environ.get("ANDROID_HOME")
+        or os.environ.get("ANDROID_SDK_ROOT")
+    )
+    if not sdk_root:
+        if is_windows():
+            default = Path(os.environ.get("LOCALAPPDATA", "")) / "Android" / "Sdk"
+        elif is_mac():
+            default = Path.home() / "Library" / "Android" / "sdk"
+        else:
+            default = Path.home() / "Android" / "Sdk"
+        if default.is_dir():
+            sdk_root = str(default)
+            info(f"Android SDK found at {sdk_root} ✓")
+        else:
+            die("Android SDK not found. Set ANDROID_HOME or install Android Studio.\n"
+                "  https://developer.android.com/studio")
+    else:
+        info(f"Android SDK: {sdk_root} ✓")
+    # Verify build-tools exist
+    build_tools = Path(sdk_root) / "build-tools"
+    if not build_tools.is_dir() or not any(build_tools.iterdir()):
+        die(f"Android build-tools not found under {sdk_root}.\n"
+            "  Open Android Studio → SDK Manager and install build-tools.")
+
+
 def _stop_gradle_daemons(android_dir):
     info("Stopping Gradle daemons...")
     gradlew = "gradlew.bat" if is_windows() else "gradlew"
@@ -924,6 +1008,9 @@ def cmd_android(repo, fresh=False, nuke_gradle=False):
 
     steps = 7 if fresh else 5
     header(f"Building Android APK — LiveAzan Mobile" + (" [FRESH]" if fresh else ""))
+
+    info("Checking prerequisites...")
+    _check_android_prerequisites()
 
     info("Generating mobile .env with local IP...")
     ensure_mobile_env(repo)
