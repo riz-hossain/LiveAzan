@@ -31,7 +31,11 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["windsorislam.com", "masjidbox.com", "google-maps"]
+      "sources": [
+        "windsorislam.com",
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Windsor Mosque",
@@ -56,7 +60,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Dominion Mosque",
@@ -65,7 +72,7 @@
       "city": "Windsor",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 42.2980,
+      "latitude": 42.298,
       "longitude": -83.0585,
       "phone": "+1-519-966-2355",
       "website": "https://www.windsormosque.com",
@@ -81,7 +88,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["muslimlink.ca", "google-maps"],
+      "sources": [
+        "muslimlink.ca",
+        "google-maps"
+      ],
       "notes": "Serves Downtown Windsor, LaSalle, and Tecumseh areas. Sunni, multicultural, run by elected board."
     },
     {
@@ -91,8 +101,8 @@
       "city": "Windsor",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 42.2870,
-      "longitude": -83.0450,
+      "latitude": 42.287,
+      "longitude": -83.045,
       "phone": null,
       "website": null,
       "googleRating": 4.4,
@@ -100,7 +110,10 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["prayersconnect.com", "google-maps"],
+      "sources": [
+        "prayersconnect.com",
+        "google-maps"
+      ],
       "notes": "One of the most crowded musallas in Windsor. Attracts many students."
     },
     {
@@ -110,8 +123,8 @@
       "city": "Windsor",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 42.3220,
-      "longitude": -82.9780,
+      "latitude": 42.322,
+      "longitude": -82.978,
       "phone": null,
       "website": null,
       "googleRating": 4.2,
@@ -119,7 +132,136 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["prayersconnect.com", "google-maps"]
+      "sources": [
+        "prayersconnect.com",
+        "google-maps"
+      ]
+    },
+    {
+      "name": "Unknown Mosque",
+      "type": "mosque",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Windsor",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.227546,
+      "longitude": -82.996578,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Windsor Mosque",
+      "type": "mosque",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Windsor",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.27742,
+      "longitude": -83.032047,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Noor-ul-Islam",
+      "type": "mosque",
+      "address": "Lincoln Road, Windsor, Ontario",
+      "city": "Windsor",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.321022,
+      "longitude": -83.015907,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Baitul Ehsaan Mosque",
+      "type": "mosque",
+      "address": "1957, Head Avenue, Windsor, ON",
+      "city": "Windsor",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.291094,
+      "longitude": -82.991926,
+      "phone": "+1 519-256-4166",
+      "website": "https://www.ahmadiyya.ca/mosques/baitul-ehsaan",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Windsor Islamic Association Centre",
+      "type": "mosque",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Windsor",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.27438,
+      "longitude": -83.031353,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Unknown Mosque",
+      "type": "mosque",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Windsor",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.273387,
+      "longitude": -82.905138,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

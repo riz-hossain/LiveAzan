@@ -31,7 +31,11 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["ottawamosque.ca", "masjidbox.com", "google-maps"]
+      "sources": [
+        "ottawamosque.ca",
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Assalam Mosque (Ottawa Islamic Centre)",
@@ -40,8 +44,8 @@
       "city": "Ottawa",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 45.3860,
-      "longitude": -75.6270,
+      "latitude": 45.386,
+      "longitude": -75.627,
       "phone": "+1-613-523-4848",
       "website": "https://assalammosque.com",
       "googleRating": 4.7,
@@ -56,7 +60,11 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["assalammosque.com", "masjidbox.com", "google-maps"]
+      "sources": [
+        "assalammosque.com",
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Jami Omar Masjid",
@@ -65,8 +73,8 @@
       "city": "Ottawa",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 45.3440,
-      "longitude": -75.6340,
+      "latitude": 45.344,
+      "longitude": -75.634,
       "phone": "+1-613-523-7773",
       "website": "https://www.jamiomar.org",
       "googleRating": 4.7,
@@ -81,7 +89,11 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["jamiomar.org", "masjidbox.com", "google-maps"]
+      "sources": [
+        "jamiomar.org",
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Masjid ar-Rahmah (Mosque of Mercy)",
@@ -90,8 +102,8 @@
       "city": "Ottawa",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 45.3540,
-      "longitude": -75.7280,
+      "latitude": 45.354,
+      "longitude": -75.728,
       "phone": "+1-613-224-3412",
       "website": "https://www.mymasjid.ca",
       "googleRating": 4.6,
@@ -106,7 +118,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["mymasjid.ca", "google-maps"]
+      "sources": [
+        "mymasjid.ca",
+        "google-maps"
+      ]
     },
     {
       "name": "Darul Arqum",
@@ -115,8 +130,8 @@
       "city": "Ottawa",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 45.3150,
-      "longitude": -75.6510,
+      "latitude": 45.315,
+      "longitude": -75.651,
       "phone": null,
       "website": "https://www.darularqum.org",
       "googleRating": 4.8,
@@ -131,7 +146,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["darularqum.org", "google-maps"],
+      "sources": [
+        "darularqum.org",
+        "google-maps"
+      ],
       "notes": "First masjid in Riverside South area."
     },
     {
@@ -141,8 +159,8 @@
       "city": "Ottawa",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 45.4370,
-      "longitude": -75.6560,
+      "latitude": 45.437,
+      "longitude": -75.656,
       "phone": null,
       "website": null,
       "googleRating": 4.5,
@@ -150,7 +168,10 @@
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": null,
-      "sources": ["prayersconnect.com", "google-maps"],
+      "sources": [
+        "prayersconnect.com",
+        "google-maps"
+      ],
       "notes": "Sunni musalla serving the Vanier/Overbrook community."
     },
     {
@@ -160,8 +181,8 @@
       "city": "Ottawa",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 45.4180,
-      "longitude": -75.7050,
+      "latitude": 45.418,
+      "longitude": -75.705,
       "phone": null,
       "website": null,
       "googleRating": 4.2,
@@ -169,7 +190,10 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["masjidway.com", "google-maps"]
+      "sources": [
+        "masjidway.com",
+        "google-maps"
+      ]
     },
     {
       "name": "University of Ottawa Multifaith Room",
@@ -178,8 +202,8 @@
       "city": "Ottawa",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 45.4230,
-      "longitude": -75.6830,
+      "latitude": 45.423,
+      "longitude": -75.683,
       "phone": null,
       "website": null,
       "googleRating": 4.0,
@@ -187,7 +211,10 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["muslimlink.ca", "google-maps"],
+      "sources": [
+        "muslimlink.ca",
+        "google-maps"
+      ],
       "notes": "Open 7am-11pm daily. Managed by UOMSA (University of Ottawa Muslim Students Association)."
     },
     {
@@ -197,8 +224,8 @@
       "city": "Ottawa",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 45.4240,
-      "longitude": -75.6810,
+      "latitude": 45.424,
+      "longitude": -75.681,
       "phone": null,
       "website": null,
       "googleRating": null,
@@ -206,8 +233,452 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["siteprayer.wordpress.com", "google-maps"],
+      "sources": [
+        "siteprayer.wordpress.com",
+        "google-maps"
+      ],
       "notes": "Located in SITE building 3rd floor. Uses ISNA method for prayer times."
+    },
+    {
+      "name": "Islam Care Centre",
+      "type": "mosque",
+      "address": "375, Somerset Street West",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.415272,
+      "longitude": -75.69688,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Darul-Uloom",
+      "type": "mosque",
+      "address": "2803, St. Joseph Boulevard",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.473506,
+      "longitude": -75.520589,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "East Ottawa Masjid",
+      "type": "mosque",
+      "address": "967, St-Laurent Boulevard",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.429802,
+      "longitude": -75.640182,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "MAC Qurtuba Islamic Centre",
+      "type": "mosque",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.326079,
+      "longitude": -75.719995,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Unknown Mosque",
+      "type": "mosque",
+      "address": "241, Northwestern Avenue",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.401979,
+      "longitude": -75.741601,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Ottawa Islamic Centre & Assalam Mosque",
+      "type": "mosque",
+      "address": "2335, St-Laurent Boulevard",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.383107,
+      "longitude": -75.620526,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Bilal, Islamic Society of Cumberland",
+      "type": "mosque",
+      "address": "4509, Innes Road",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.462164,
+      "longitude": -75.484688,
+      "phone": "+1-613-841-0786",
+      "website": "https://www.masjidbilal.org/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Albatool Fatima Association",
+      "type": "mosque",
+      "address": "2575, Bond Street",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.363841,
+      "longitude": -75.787847,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Rhoda Masjid and Institute",
+      "type": "mosque",
+      "address": "2871, St. Joseph Boulevard",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.474553,
+      "longitude": -75.519181,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Ottawa South Mosque",
+      "type": "mosque",
+      "address": "7, Fairbairn Street",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.394879,
+      "longitude": -75.681294,
+      "phone": null,
+      "website": "https://ottawasouthmosque.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Ismaili Jamat Khana",
+      "type": "mosque",
+      "address": "3225, Conroy Road",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.374489,
+      "longitude": -75.624107,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Jami Omar",
+      "type": "mosque",
+      "address": "3990, Old Richmond Road",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.31167,
+      "longitude": -75.828436,
+      "phone": "+1-613-864-6511",
+      "website": "https://www.jamiomar.org/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Islamic Shia Ithna Asheri Asociation of Ottawa",
+      "type": "mosque",
+      "address": "3856, Old Richmond Road",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.321467,
+      "longitude": -75.825733,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Abu Thar al-Gofary Mosque, Ottawa",
+      "type": "mosque",
+      "address": "273, Donald Street",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.428296,
+      "longitude": -75.656836,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Kanata Muslim Association",
+      "type": "mosque",
+      "address": "351, Sandhill Road",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.356068,
+      "longitude": -75.928376,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Unknown Mosque",
+      "type": "mosque",
+      "address": "4269, Limebank Road",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.290371,
+      "longitude": -75.671308,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Baitun Naseer Mosque",
+      "type": "mosque",
+      "address": "2620, Market Street, Cumberland, Ontario",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.516598,
+      "longitude": -75.403401,
+      "phone": "+1 613-833-0968",
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "SNMC Center & Masjid",
+      "type": "mosque",
+      "address": "3020, Woodroffe Avenue",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.289063,
+      "longitude": -75.726649,
+      "phone": "+1-613-440-6300",
+      "website": "https://www.snmc.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Ar-Rahman",
+      "type": "mosque",
+      "address": "1216, Hunt Club Road",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.351783,
+      "longitude": -75.647315,
+      "phone": null,
+      "website": "https://www.mymasjid.ca",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Iman Ali (As) Masjid",
+      "type": "mosque",
+      "address": "1606, Walkley Road",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.377103,
+      "longitude": -75.645908,
+      "phone": "+1 613-656-9888",
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Musalla As-Sahaba",
+      "type": "musalla",
+      "address": "2835, Dumaurier Avenue",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.350648,
+      "longitude": -75.793712,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

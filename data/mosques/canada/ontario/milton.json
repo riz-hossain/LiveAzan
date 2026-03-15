@@ -16,7 +16,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.5072,
-      "longitude": -79.8850,
+      "longitude": -79.885,
       "phone": "+1-905-878-0786",
       "website": "https://miltonmasjid.com",
       "googleRating": 4.7,
@@ -31,7 +31,11 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["miltonmasjid.com", "masjidbox.com", "google-maps"]
+      "sources": [
+        "miltonmasjid.com",
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Halton Learning Centre (HLC) Musalla",
@@ -40,8 +44,8 @@
       "city": "Milton",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.5250,
-      "longitude": -79.8680,
+      "latitude": 43.525,
+      "longitude": -79.868,
       "phone": null,
       "website": "https://miltonmasjid.com",
       "googleRating": 4.5,
@@ -49,8 +53,53 @@
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": null,
-      "sources": ["miltonmasjid.com", "google-maps"],
+      "sources": [
+        "miltonmasjid.com",
+        "google-maps"
+      ],
       "notes": "Musalla operated by Muslim Association of Milton. Serves Milton, Oakville, and Burlington communities."
+    },
+    {
+      "name": "Imam Bukhari Centre",
+      "type": "mosque",
+      "address": "50, Steeles Avenue East, Milton, ON",
+      "city": "Milton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.51779,
+      "longitude": -79.897228,
+      "phone": "+1-647-204-1261",
+      "website": "https://ahlehadithcanada.org/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Islamic Community Centre of Milton",
+      "type": "mosque",
+      "address": "8069, Esquesing Line, Milton, ON",
+      "city": "Milton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.54271,
+      "longitude": -79.876876,
+      "phone": "+1-905-878-3292",
+      "website": "https://www.icnamilton.com/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

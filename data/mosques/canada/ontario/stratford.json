@@ -1,0 +1,33 @@
+{
+  "region": "stratford",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.3701,
+  "centerLon": -80.9823,
+  "radiusKm": 25,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "overpass-api-scraper",
+  "mosques": [
+    {
+      "name": "Stratford Mosque",
+      "type": "mosque",
+      "address": "97, Woods Street, Stratford",
+      "city": "Stratford",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.365228,
+      "longitude": -80.995474,
+      "phone": "+1-519-305-1516",
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    }
+  ]
+}

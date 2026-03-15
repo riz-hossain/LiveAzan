@@ -1,0 +1,33 @@
+{
+  "region": "chatham-kent",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 42.4005,
+  "centerLon": -82.191,
+  "radiusKm": 25,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "overpass-api-scraper",
+  "mosques": [
+    {
+      "name": "Jami' Masjid Chatham",
+      "type": "mosque",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Chatham-Kent",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.390082,
+      "longitude": -82.179704,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    }
+  ]
+}

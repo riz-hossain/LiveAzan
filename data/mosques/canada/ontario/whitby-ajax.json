@@ -2,7 +2,7 @@
   "region": "whitby-ajax",
   "province": "Ontario",
   "country": "canada",
-  "centerLat": 43.8710,
+  "centerLat": 43.871,
   "centerLon": -79.0204,
   "radiusKm": 300,
   "lastResearched": "2026-03-15",
@@ -15,8 +15,8 @@
       "city": "Pickering",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.8380,
-      "longitude": -79.0890,
+      "latitude": 43.838,
+      "longitude": -79.089,
       "phone": "+1-905-839-2280",
       "website": null,
       "googleRating": 4.5,
@@ -31,7 +31,10 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Ajax Islamic Centre",
@@ -41,7 +44,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.8505,
-      "longitude": -79.0260,
+      "longitude": -79.026,
       "phone": "+1-905-683-1919",
       "website": null,
       "googleRating": 4.4,
@@ -56,7 +59,9 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
     },
     {
       "name": "Whitby Muslim Community Centre",
@@ -65,7 +70,7 @@
       "city": "Whitby",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.8690,
+      "latitude": 43.869,
       "longitude": -78.9465,
       "phone": "+1-905-665-2299",
       "website": null,
@@ -81,8 +86,52 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["google-maps"],
+      "sources": [
+        "google-maps"
+      ],
       "notes": "Community centre with dedicated prayer space serving Whitby area Muslims."
+    },
+    {
+      "name": "Al Rayan Islamic Centre",
+      "type": "mosque",
+      "address": "1660, Regional Highway 2, Courtice, ON",
+      "city": "Clarington",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.911339,
+      "longitude": -78.786567,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Baitul Mahdi Mosque",
+      "type": "mosque",
+      "address": "3505, Salem Road, Locust Hill, Ontario",
+      "city": "Clarington",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.926259,
+      "longitude": -79.042032,
+      "phone": "+1 905-427-7479",
+      "website": "https://www.ahmadiyya.ca/mosques/baitul-mahdi",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

@@ -1,0 +1,54 @@
+{
+  "region": "erin",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.7703,
+  "centerLon": -80.0636,
+  "radiusKm": 25,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "overpass-api-scraper",
+  "mosques": [
+    {
+      "name": "Istiqlal Mosque",
+      "type": "mosque",
+      "address": "14369, Trafalgar Road, Ballinafad, Ontario",
+      "city": "Erin",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.69548,
+      "longitude": -80.010826,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Erin Islamic Cultural Center",
+      "type": "mosque",
+      "address": "103, Main Street",
+      "city": "Erin",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.770302,
+      "longitude": -80.063552,
+      "phone": null,
+      "website": "http://erinislamiccenter.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    }
+  ]
+}

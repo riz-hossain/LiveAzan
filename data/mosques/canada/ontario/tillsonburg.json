@@ -1,0 +1,33 @@
+{
+  "region": "tillsonburg",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 42.8607,
+  "centerLon": -80.7276,
+  "radiusKm": 25,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "overpass-api-scraper",
+  "mosques": [
+    {
+      "name": "Muslim Association of Tillsonburg",
+      "type": "mosque",
+      "address": "169, Broadway Street, Tillsonburg, ON",
+      "city": "Tillsonburg",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.861325,
+      "longitude": -80.728875,
+      "phone": "+1-519 957 9009",
+      "website": "https://muslimassociationtillsonburg.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    }
+  ]
+}

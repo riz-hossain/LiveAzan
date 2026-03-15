@@ -15,8 +15,8 @@
       "city": "Brampton",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.7150,
-      "longitude": -79.7260,
+      "latitude": 43.715,
+      "longitude": -79.726,
       "phone": "+1-905-458-0000",
       "website": "https://www.makkimasjid.com",
       "googleRating": 4.6,
@@ -31,7 +31,11 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["makkimasjid.com", "masjidbox.com", "google-maps"]
+      "sources": [
+        "makkimasjid.com",
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Islamic Foundation of Brampton",
@@ -40,8 +44,8 @@
       "city": "Brampton",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.7120,
-      "longitude": -79.7980,
+      "latitude": 43.712,
+      "longitude": -79.798,
       "phone": "+1-905-454-5700",
       "website": null,
       "googleRating": 4.4,
@@ -56,7 +60,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Abu Bakr Siddique Islamic Centre",
@@ -65,8 +72,8 @@
       "city": "Brampton",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.7450,
-      "longitude": -79.7850,
+      "latitude": 43.745,
+      "longitude": -79.785,
       "phone": "+1-905-792-5222",
       "website": null,
       "googleRating": 4.5,
@@ -81,7 +88,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["google-maps", "prayersconnect.com"]
+      "sources": [
+        "google-maps",
+        "prayersconnect.com"
+      ]
     },
     {
       "name": "Masjid Umar",
@@ -106,7 +116,9 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
     },
     {
       "name": "Taha Musalla",
@@ -115,8 +127,8 @@
       "city": "Brampton",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.7280,
-      "longitude": -79.7920,
+      "latitude": 43.728,
+      "longitude": -79.792,
       "phone": null,
       "website": null,
       "googleRating": 4.5,
@@ -124,7 +136,11 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["prayersconnect.com", "namuslims.org", "google-maps"]
+      "sources": [
+        "prayersconnect.com",
+        "namuslims.org",
+        "google-maps"
+      ]
     },
     {
       "name": "Taaseen Musalla",
@@ -133,8 +149,8 @@
       "city": "Brampton",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.7650,
-      "longitude": -79.7510,
+      "latitude": 43.765,
+      "longitude": -79.751,
       "phone": null,
       "website": null,
       "googleRating": 4.3,
@@ -142,7 +158,10 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["prayersconnect.com", "google-maps"]
+      "sources": [
+        "prayersconnect.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Yaseen Musallah (Peel Islamic Cultural Center)",
@@ -151,8 +170,8 @@
       "city": "Brampton",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.7190,
-      "longitude": -79.7300,
+      "latitude": 43.719,
+      "longitude": -79.73,
       "phone": null,
       "website": null,
       "googleRating": 4.4,
@@ -160,7 +179,10 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["prayersconnect.com", "google-maps"],
+      "sources": [
+        "prayersconnect.com",
+        "google-maps"
+      ],
       "notes": "Branch of Peel Islamic Cultural Center (PICC). Operates independently."
     },
     {
@@ -170,8 +192,8 @@
       "city": "Brampton",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.7050,
-      "longitude": -79.7620,
+      "latitude": 43.705,
+      "longitude": -79.762,
       "phone": null,
       "website": null,
       "googleRating": 4.6,
@@ -179,7 +201,136 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["prayersconnect.com", "google-maps"]
+      "sources": [
+        "prayersconnect.com",
+        "google-maps"
+      ]
+    },
+    {
+      "name": "Jame Makki Masjid Brampton",
+      "type": "mosque",
+      "address": "8450, Torbram Road, Brampton",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.721654,
+      "longitude": -79.690525,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Jamiat-Ul-Ansar of Brampton",
+      "type": "mosque",
+      "address": "291, Great Lakes Drive, Brampton",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.737477,
+      "longitude": -79.769509,
+      "phone": "+1-905-792-7576",
+      "website": "http://www.jamiatulansar.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masumeen Islamic Centre",
+      "type": "mosque",
+      "address": "7580, Kennedy Road South, Brampton",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.667414,
+      "longitude": -79.711601,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Mount Pleasant Islamic Center",
+      "type": "mosque",
+      "address": "160, Salvation Road, Brampton",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.676673,
+      "longitude": -79.81957,
+      "phone": "+1-905-840-5454",
+      "website": "https://www.mpicbrampton.com/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Brampton Islamic Center",
+      "type": "mosque",
+      "address": "6, Lowry Drive, Brampton",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.701851,
+      "longitude": -79.804683,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Mubarak Mosque",
+      "type": "mosque",
+      "address": "10545, Hurontario Street, Brampton, ON",
+      "city": "Brampton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.716906,
+      "longitude": -79.800938,
+      "phone": null,
+      "website": "https://www.ahmadiyya.ca/mosques/masjid-mubarak",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

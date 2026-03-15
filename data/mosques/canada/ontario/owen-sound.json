@@ -1,0 +1,33 @@
+{
+  "region": "owen-sound",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 44.569,
+  "centerLon": -80.943,
+  "radiusKm": 25,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "overpass-api-scraper",
+  "mosques": [
+    {
+      "name": "Owen Sound Muslim Association",
+      "type": "mosque",
+      "address": "895, 7th Street East, Owen Sound, On",
+      "city": "Owen Sound",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.563395,
+      "longitude": -80.92729,
+      "phone": null,
+      "website": "https://osmuslim.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    }
+  ]
+}

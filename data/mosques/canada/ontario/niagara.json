@@ -31,7 +31,10 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Niagara Peninsula Islamic Society",
@@ -56,7 +59,93 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
+    },
+    {
+      "name": "Masjid an-Noor",
+      "type": "mosque",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Niagara",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.166326,
+      "longitude": -79.240647,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Islamic Society of Niagara Peninsula",
+      "type": "mosque",
+      "address": "6768, Lyons Creek Road",
+      "city": "Niagara",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.032629,
+      "longitude": -79.106083,
+      "phone": "+1-905-295-4845",
+      "website": "https://isnp.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "The Peace Mosque",
+      "type": "mosque",
+      "address": "6735, Caledonia Street, Niagara Falls",
+      "city": "Niagara",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.073742,
+      "longitude": -79.10692,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "As-Salaam Alaykum Masjid Aisha",
+      "type": "mosque",
+      "address": "Stanley Avenue, Niagara Falls, ON",
+      "city": "Niagara",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.094013,
+      "longitude": -79.08484,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

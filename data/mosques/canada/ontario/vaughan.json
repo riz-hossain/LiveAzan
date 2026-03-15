@@ -1,0 +1,75 @@
+{
+  "region": "vaughan",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.8361,
+  "centerLon": -79.4983,
+  "radiusKm": 25,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "overpass-api-scraper",
+  "mosques": [
+    {
+      "name": "Islamic Society of Vaughan",
+      "type": "mosque",
+      "address": "9100, Jane Street, Vaughan, Ontario",
+      "city": "Vaughan",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.829684,
+      "longitude": -79.532881,
+      "phone": "+1-905-597-3233",
+      "website": "http://www.islamicsocietyvaughan.com",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Baitul Islam Mosque",
+      "type": "mosque",
+      "address": "10610, Jane Street, Vaughan, Ontario",
+      "city": "Vaughan",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.864853,
+      "longitude": -79.542988,
+      "phone": "+1 905-303-4000",
+      "website": "https://www.ahmadiyya.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Vaughan",
+      "type": "mosque",
+      "address": "9954, Keele Street, Maple, Ontario",
+      "city": "Vaughan",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.853548,
+      "longitude": -79.512683,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "region": "hawkesbury",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 45.6083,
+  "centerLon": -74.6119,
+  "radiusKm": 25,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "overpass-api-scraper",
+  "mosques": [
+    {
+      "name": "Hawkesbury Mosque",
+      "type": "mosque",
+      "address": "651, Main Street East, Hawkesbury",
+      "city": "Hawkesbury",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.610595,
+      "longitude": -74.600448,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    }
+  ]
+}

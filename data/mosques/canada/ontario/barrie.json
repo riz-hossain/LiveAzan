@@ -31,7 +31,10 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Masjid Bilal Barrie",
@@ -41,7 +44,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 44.3895,
-      "longitude": -79.6870,
+      "longitude": -79.687,
       "phone": "+1-705-726-1116",
       "website": null,
       "googleRating": 4.3,
@@ -56,7 +59,30 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
+    },
+    {
+      "name": "Mary Mosque (Maryam Mosque)",
+      "type": "mosque",
+      "address": "110, Oro-Medonte Line 7, Barrie, ON",
+      "city": "Barrie",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.47478,
+      "longitude": -79.531846,
+      "phone": "+1 705-487-0004",
+      "website": "https://www.ahmadiyya.ca/mosques/maryam-mosque",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

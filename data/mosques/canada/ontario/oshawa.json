@@ -16,7 +16,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.8928,
-      "longitude": -78.8630,
+      "longitude": -78.863,
       "phone": "+1-905-438-1817",
       "website": null,
       "googleRating": 4.4,
@@ -31,7 +31,10 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Durham Islamic Centre",
@@ -40,7 +43,7 @@
       "city": "Oshawa",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.8820,
+      "latitude": 43.882,
       "longitude": -78.8465,
       "phone": "+1-905-576-9119",
       "website": null,
@@ -56,7 +59,9 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
     },
     {
       "name": "Masjid Al-Salaam Oshawa",
@@ -66,7 +71,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.8975,
-      "longitude": -78.8710,
+      "longitude": -78.871,
       "phone": "+1-905-721-3636",
       "website": null,
       "googleRating": 4.2,
@@ -81,7 +86,114 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
+    },
+    {
+      "name": "Ismaili Jamatkhana",
+      "type": "musalla",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Oshawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.92653,
+      "longitude": -78.879587,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Sayyidah Zainab",
+      "type": "mosque",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Oshawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.851539,
+      "longitude": -79.023225,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Alhakeem Bowmanville",
+      "type": "mosque",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Oshawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.910544,
+      "longitude": -78.683186,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Al-Arqam Islamic Centre",
+      "type": "mosque",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Oshawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.949224,
+      "longitude": -78.853355,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Unknown Mosque",
+      "type": "mosque",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Oshawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.928535,
+      "longitude": -78.908042,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

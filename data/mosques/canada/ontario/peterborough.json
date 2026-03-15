@@ -15,8 +15,8 @@
       "city": "Peterborough",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 44.3050,
-      "longitude": -78.3220,
+      "latitude": 44.305,
+      "longitude": -78.322,
       "phone": "+1-705-748-1311",
       "website": null,
       "googleRating": 4.3,
@@ -31,7 +31,30 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
+    },
+    {
+      "name": "Masjid Al-Salaam",
+      "type": "mosque",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Peterborough",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.309295,
+      "longitude": -78.348723,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

@@ -15,8 +15,8 @@
       "city": "Belleville",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 44.1640,
-      "longitude": -77.3840,
+      "latitude": 44.164,
+      "longitude": -77.384,
       "phone": "+1-613-962-2700",
       "website": null,
       "googleRating": 4.1,
@@ -31,7 +31,51 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
+    },
+    {
+      "name": "Islamic Society of Belleville",
+      "type": "mosque",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Belleville",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.168206,
+      "longitude": -77.388099,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "House of the Commandments",
+      "type": "mosque",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Belleville",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.101115,
+      "longitude": -77.580606,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

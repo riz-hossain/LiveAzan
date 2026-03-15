@@ -3,7 +3,7 @@
   "province": "Ontario",
   "country": "canada",
   "centerLat": 43.8561,
-  "centerLon": -79.3370,
+  "centerLon": -79.337,
   "radiusKm": 300,
   "lastResearched": "2026-03-15",
   "researchedBy": "admin",
@@ -31,7 +31,10 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Masjid Al-Huda (York Region)",
@@ -40,8 +43,8 @@
       "city": "Markham",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.8380,
-      "longitude": -79.3670,
+      "latitude": 43.838,
+      "longitude": -79.367,
       "phone": "+1-905-305-3832",
       "website": null,
       "googleRating": 4.4,
@@ -56,7 +59,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["google-maps", "prayersconnect.com"]
+      "sources": [
+        "google-maps",
+        "prayersconnect.com"
+      ]
     },
     {
       "name": "Richmond Hill Islamic Centre",
@@ -65,8 +71,8 @@
       "city": "Richmond Hill",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.8860,
-      "longitude": -79.4420,
+      "latitude": 43.886,
+      "longitude": -79.442,
       "phone": "+1-905-883-0408",
       "website": null,
       "googleRating": 4.6,
@@ -81,7 +87,10 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Islamic Society of York Region (ISYR)",
@@ -90,8 +99,8 @@
       "city": "Richmond Hill",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.9120,
-      "longitude": -79.4100,
+      "latitude": 43.912,
+      "longitude": -79.41,
       "phone": "+1-905-773-3334",
       "website": null,
       "googleRating": 4.5,
@@ -106,7 +115,9 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
     },
     {
       "name": "Markham Muslim Association",
@@ -115,8 +126,8 @@
       "city": "Markham",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.8790,
-      "longitude": -79.2680,
+      "latitude": 43.879,
+      "longitude": -79.268,
       "phone": null,
       "website": "https://www.themma.ca",
       "googleRating": 4.7,
@@ -124,7 +135,10 @@
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": null,
-      "sources": ["themma.ca", "google-maps"],
+      "sources": [
+        "themma.ca",
+        "google-maps"
+      ],
       "notes": "Dedicated to establishing a strong Islamic presence in Markham and Ontario."
     },
     {
@@ -134,8 +148,8 @@
       "city": "Richmond Hill",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.8680,
-      "longitude": -79.4310,
+      "latitude": 43.868,
+      "longitude": -79.431,
       "phone": null,
       "website": null,
       "googleRating": 4.3,
@@ -143,7 +157,93 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
+    },
+    {
+      "name": "al-Hussain Foundation Centre",
+      "type": "mosque",
+      "address": "10992, Kennedy Road, Markham, Ontario",
+      "city": "Markham",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.920695,
+      "longitude": -79.326027,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Masjid Darul Iman",
+      "type": "mosque",
+      "address": "1330, Castlemore Avenue, Markham, ON",
+      "city": "Markham",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.905215,
+      "longitude": -79.263991,
+      "phone": null,
+      "website": "https://daruliman.org/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Jam'e Masjid Markham",
+      "type": "mosque",
+      "address": "2900, Denison Street, Markham",
+      "city": "Markham",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.841864,
+      "longitude": -79.264524,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Imam Mahdi Islamic Centre",
+      "type": "mosque",
+      "address": "7340, Bayview Avenue, Thornhill",
+      "city": "Markham",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.811172,
+      "longitude": -79.400125,
+      "phone": "+1-416-762-8200",
+      "website": "https://imammahdi.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

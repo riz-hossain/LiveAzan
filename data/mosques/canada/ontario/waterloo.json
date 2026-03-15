@@ -16,7 +16,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.4668,
-      "longitude": -80.5340,
+      "longitude": -80.534,
       "phone": "+1-519-886-3441",
       "website": "https://www.macnet.ca/local/waterloo",
       "googleRating": 4.5,
@@ -31,7 +31,11 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["masjidbox.com", "google-maps", "macnet.ca"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps",
+        "macnet.ca"
+      ]
     },
     {
       "name": "Waterloo Masjid (Islamic Centre of Waterloo)",
@@ -41,7 +45,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.4665,
-      "longitude": -80.5280,
+      "longitude": -80.528,
       "phone": "+1-519-886-4786",
       "website": "https://www.waterloomasjid.com",
       "googleRating": 4.6,
@@ -56,7 +60,11 @@
         "isha": "21:15",
         "jummah": "13:30"
       },
-      "sources": ["masjidbox.com", "google-maps", "waterloomasjid.com"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps",
+        "waterloomasjid.com"
+      ]
     },
     {
       "name": "K-W Musalla",
@@ -81,7 +89,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["google-maps", "prayersconnect.com"]
+      "sources": [
+        "google-maps",
+        "prayersconnect.com"
+      ]
     },
     {
       "name": "Laurelwood Spiritual Centre & Musalla",
@@ -90,8 +101,8 @@
       "city": "Waterloo",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.4390,
-      "longitude": -80.5620,
+      "latitude": 43.439,
+      "longitude": -80.562,
       "phone": null,
       "website": null,
       "googleRating": 5.0,
@@ -99,7 +110,11 @@
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": null,
-      "sources": ["google-maps", "masjidway.com", "muslimlink.ca"],
+      "sources": [
+        "google-maps",
+        "masjidway.com",
+        "muslimlink.ca"
+      ],
       "notes": "Established 2009. Prayer schedule is 15 minutes post Waterloo Masjid iqama time. Offers Quran recitation and tahfeez classes for children and youth."
     },
     {
@@ -125,7 +140,9 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
     },
     {
       "name": "Guelph Islamic Centre",
@@ -135,7 +152,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.5482,
-      "longitude": -80.2510,
+      "longitude": -80.251,
       "phone": "+1-519-836-3815",
       "website": null,
       "googleRating": 4.5,
@@ -150,7 +167,10 @@
         "isha": "21:15",
         "jummah": "13:45"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "University of Waterloo Musalla (Multi-Faith Space)",
@@ -168,7 +188,9 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["google-maps"],
+      "sources": [
+        "google-maps"
+      ],
       "notes": "University multi-faith space used for daily prayers. Managed by UW Muslim Students Association. Open during university hours."
     },
     {
@@ -187,8 +209,73 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["google-maps"],
+      "sources": [
+        "google-maps"
+      ],
       "notes": "Multi-faith space at Wilfrid Laurier University. Managed by WLU Muslim Students Association."
+    },
+    {
+      "name": "Waterloo Masjid",
+      "type": "mosque",
+      "address": "213, Erb Street West, Waterloo",
+      "city": "Waterloo",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.45906,
+      "longitude": -80.535474,
+      "phone": null,
+      "website": "https://waterloomasjid.com/main/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Islamic Center of Waterloo",
+      "type": "mosque",
+      "address": "510, Erbsville Road, Waterloo",
+      "city": "Waterloo",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.468522,
+      "longitude": -80.589163,
+      "phone": null,
+      "website": "https://www.icwaterloo.com",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Al Zahra Shia Association of Waterloo Region",
+      "type": "mosque",
+      "address": "204, Madison Avenue South",
+      "city": "Waterloo",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.441332,
+      "longitude": -80.487351,
+      "phone": null,
+      "website": "https://www.alzahra.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

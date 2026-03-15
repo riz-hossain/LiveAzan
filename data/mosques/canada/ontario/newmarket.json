@@ -1,0 +1,33 @@
+{
+  "region": "newmarket",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 44.0592,
+  "centerLon": -79.4613,
+  "radiusKm": 25,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "overpass-api-scraper",
+  "mosques": [
+    {
+      "name": "Newmarket Islamic Centre",
+      "type": "mosque",
+      "address": "700, Mulock Drive, Newmarket, Ontario",
+      "city": "Newmarket",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.042667,
+      "longitude": -79.443425,
+      "phone": "+19058958886",
+      "website": "https://nmic.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    }
+  ]
+}

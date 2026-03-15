@@ -1,0 +1,54 @@
+{
+  "region": "bradford",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 44.1148,
+  "centerLon": -79.5653,
+  "radiusKm": 25,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "overpass-api-scraper",
+  "mosques": [
+    {
+      "name": "Hadiqa Ahmad",
+      "type": "mosque",
+      "address": "3999, 10th Sideroad, Bradford, Ontario",
+      "city": "Bradford",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.162086,
+      "longitude": -79.615089,
+      "phone": "+1 905-775-3299",
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Baitul Khabir",
+      "type": "mosque",
+      "address": "Elizabeth Street, Bradford, Ontario",
+      "city": "Bradford",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.112792,
+      "longitude": -79.564892,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    }
+  ]
+}

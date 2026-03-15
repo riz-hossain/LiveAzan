@@ -31,7 +31,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["google-maps", "prayersconnect.com"]
+      "sources": [
+        "google-maps",
+        "prayersconnect.com"
+      ]
     },
     {
       "name": "Cambridge Islamic Centre",
@@ -56,7 +59,9 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
     },
     {
       "name": "Kitchener Masjid (Islamic Association of Kitchener)",
@@ -65,8 +70,8 @@
       "city": "Kitchener",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.4480,
-      "longitude": -80.4830,
+      "latitude": 43.448,
+      "longitude": -80.483,
       "phone": "+1-519-578-5786",
       "website": null,
       "googleRating": 4.5,
@@ -81,7 +86,136 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
+    },
+    {
+      "name": "Al-Salaam Islamic Centre",
+      "type": "mosque",
+      "address": "300, Mill Street, Kitchener, Ontario",
+      "city": "Cambridge",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.436578,
+      "longitude": -80.484101,
+      "phone": "+1-519-498-7985",
+      "website": "https://www.alsalaam.ca",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Kitchener Masjid",
+      "type": "mosque",
+      "address": "1017, Victoria Street North, Kitchener",
+      "city": "Cambridge",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.46479,
+      "longitude": -80.460425,
+      "phone": "+1-519-743-9111",
+      "website": "http://kitchenermasjid.com",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "MAC Hespeler Masjid",
+      "type": "mosque",
+      "address": "64, Winston Boulevard, Cambridge, Ontario",
+      "city": "Cambridge",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.425433,
+      "longitude": -80.317792,
+      "phone": null,
+      "website": "https://hespelermasjid.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Cambridge Muslim Society",
+      "type": "mosque",
+      "address": "252, Elgin Street North, Cambridge",
+      "city": "Cambridge",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.374014,
+      "longitude": -80.303962,
+      "phone": "+1-519-623-0568",
+      "website": "https://www.cambridgemuslimsociety.org",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Baitul Karim Mosque",
+      "type": "mosque",
+      "address": "5, Elliott Street, Cambridge, Ontario",
+      "city": "Cambridge",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.352681,
+      "longitude": -80.312479,
+      "phone": "+1-519-267-4220",
+      "website": "https://www.ahmadiyya.ca/mosques/baitul-karim",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Townline Muslim Centre",
+      "type": "mosque",
+      "address": "1170, Townline Road, Cambridge",
+      "city": "Cambridge",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.402207,
+      "longitude": -80.276759,
+      "phone": "+1-519-651-0335",
+      "website": "https://www.townlinemuslimcentre.ca/contact",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

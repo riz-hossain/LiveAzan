@@ -3,7 +3,7 @@
   "province": "Ontario",
   "country": "canada",
   "centerLat": 45.0218,
-  "centerLon": -74.7280,
+  "centerLon": -74.728,
   "radiusKm": 300,
   "lastResearched": "2026-03-15",
   "researchedBy": "admin",
@@ -15,8 +15,8 @@
       "city": "Cornwall",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 45.0230,
-      "longitude": -74.7390,
+      "latitude": 45.023,
+      "longitude": -74.739,
       "phone": "+1-613-938-4442",
       "website": null,
       "googleRating": 4.2,
@@ -31,7 +31,72 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
+    },
+    {
+      "name": "Al-Aqsa Mosque",
+      "type": "mosque",
+      "address": "Address unknown \u2014 needs verification",
+      "city": "Cornwall",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.023331,
+      "longitude": -74.731201,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Baitun Nasir Mosque",
+      "type": "mosque",
+      "address": "341, Balmoral Avenue, Cornwall, Ontario",
+      "city": "Cornwall",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.040743,
+      "longitude": -74.736805,
+      "phone": "+1 613-361-9243",
+      "website": "https://www.ahmadiyya.ca/mosques/masjid-baitun-nasir",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Jami Masjid Zakariya",
+      "type": "mosque",
+      "address": "333, Second Street East, Cornwall, ON",
+      "city": "Cornwall",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.02081,
+      "longitude": -74.72087,
+      "phone": "+1-613-662-3402",
+      "website": "https://www.alrashid.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

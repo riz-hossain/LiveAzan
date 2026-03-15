@@ -16,7 +16,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 42.9886,
-      "longitude": -81.2600,
+      "longitude": -81.26,
       "phone": "+1-519-439-9451",
       "website": "https://www.londonmosque.ca",
       "googleRating": 4.6,
@@ -31,7 +31,11 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["londonmosque.ca", "masjidbox.com", "google-maps"]
+      "sources": [
+        "londonmosque.ca",
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Islamic Centre of Southwest Ontario",
@@ -41,7 +45,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 42.9618,
-      "longitude": -81.2310,
+      "longitude": -81.231,
       "phone": "+1-519-668-0206",
       "website": null,
       "googleRating": 4.4,
@@ -56,7 +60,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "MAC London Islamic Centre (Westmount Center)",
@@ -65,7 +72,7 @@
       "city": "London",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 42.9690,
+      "latitude": 42.969,
       "longitude": -81.2175,
       "phone": "+1-519-645-4888",
       "website": "https://www.macnet.ca/local/london",
@@ -81,7 +88,11 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["macnet.ca", "prayersconnect.com", "google-maps"]
+      "sources": [
+        "macnet.ca",
+        "prayersconnect.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Western University Musalla",
@@ -99,8 +110,73 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["google-maps"],
+      "sources": [
+        "google-maps"
+      ],
       "notes": "University prayer room managed by Western MSA. Open during university hours."
+    },
+    {
+      "name": "London Muslim Mosque",
+      "type": "mosque",
+      "address": "151, Oxford Street West, London",
+      "city": "London",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.990913,
+      "longitude": -81.27059,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Islamic Centre of Southwest Ontario",
+      "type": "mosque",
+      "address": "951, Pond Mills Road, London, ON",
+      "city": "London",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.931703,
+      "longitude": -81.191968,
+      "phone": null,
+      "website": "https://islamiccentre.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Baitul Ahad Mosque",
+      "type": "mosque",
+      "address": "546, Beaverbrook Avenue, London, Ontario",
+      "city": "London",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.980416,
+      "longitude": -81.278067,
+      "phone": null,
+      "website": "https://www.ahmadiyya.ca/mosques/baitul-ahad",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

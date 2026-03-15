@@ -16,7 +16,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.1401,
-      "longitude": -80.2490,
+      "longitude": -80.249,
       "phone": "+1-519-759-1919",
       "website": null,
       "googleRating": 4.3,
@@ -31,7 +31,30 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
+    },
+    {
+      "name": "Masjid Sayyidna Bilal",
+      "type": "mosque",
+      "address": "26, Spruce Street, Paris, Ontario",
+      "city": "Paris",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.202362,
+      "longitude": -80.395842,
+      "phone": null,
+      "website": "https://parismasjid.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

@@ -16,7 +16,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.5482,
-      "longitude": -80.2510,
+      "longitude": -80.251,
       "phone": "+1-519-836-3815",
       "website": null,
       "googleRating": 4.5,
@@ -31,7 +31,10 @@
         "isha": "21:15",
         "jummah": "13:45"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Muslim Society of Guelph",
@@ -40,8 +43,8 @@
       "city": "Guelph",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.5310,
-      "longitude": -80.2600,
+      "latitude": 43.531,
+      "longitude": -80.26,
       "phone": "+1-519-763-1919",
       "website": null,
       "googleRating": 4.4,
@@ -56,7 +59,9 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
     },
     {
       "name": "University of Guelph Musalla",
@@ -66,7 +71,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.5305,
-      "longitude": -80.2280,
+      "longitude": -80.228,
       "phone": null,
       "website": null,
       "googleRating": null,
@@ -74,8 +79,31 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["google-maps"],
+      "sources": [
+        "google-maps"
+      ],
       "notes": "University of Guelph MSA prayer space. Open during university hours."
+    },
+    {
+      "name": "Masjid Aisha",
+      "type": "mosque",
+      "address": "44, Marlborough Road, Guelph",
+      "city": "Guelph",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.560589,
+      "longitude": -80.264033,
+      "phone": "+1-226-486-1143",
+      "website": "http://masjidaisha.ca",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

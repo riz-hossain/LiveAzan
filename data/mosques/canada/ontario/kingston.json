@@ -3,7 +3,7 @@
   "province": "Ontario",
   "country": "canada",
   "centerLat": 44.2312,
-  "centerLon": -76.4860,
+  "centerLon": -76.486,
   "radiusKm": 300,
   "lastResearched": "2026-03-15",
   "researchedBy": "admin",
@@ -31,7 +31,10 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Queen's University Muslim Students' Association Musalla",
@@ -49,8 +52,31 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["google-maps"],
+      "sources": [
+        "google-maps"
+      ],
       "notes": "University prayer space. Open during university hours."
+    },
+    {
+      "name": "Islamic Centre of Kingston",
+      "type": "mosque",
+      "address": "Kingston",
+      "city": "Kingston",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.284521,
+      "longitude": -76.542057,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

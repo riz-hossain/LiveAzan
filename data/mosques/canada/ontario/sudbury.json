@@ -3,7 +3,7 @@
   "province": "Ontario",
   "country": "canada",
   "centerLat": 46.4917,
-  "centerLon": -80.9930,
+  "centerLon": -80.993,
   "radiusKm": 300,
   "lastResearched": "2026-03-15",
   "researchedBy": "admin",
@@ -16,7 +16,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 46.4882,
-      "longitude": -80.9930,
+      "longitude": -80.993,
       "phone": "+1-705-674-3350",
       "website": null,
       "googleRating": 4.4,
@@ -31,7 +31,30 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["google-maps"]
+      "sources": [
+        "google-maps"
+      ]
+    },
+    {
+      "name": "Sudbury Mosque",
+      "type": "mosque",
+      "address": "755, Churchill Avenue, Sudbury, ON",
+      "city": "Sudbury",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 46.51318,
+      "longitude": -80.934573,
+      "phone": null,
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }

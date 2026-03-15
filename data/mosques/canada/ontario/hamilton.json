@@ -16,7 +16,7 @@
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.2144,
-      "longitude": -79.8210,
+      "longitude": -79.821,
       "phone": "+1-905-574-0777",
       "website": "https://www.hamiltonmosque.ca",
       "googleRating": 4.5,
@@ -31,7 +31,10 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Hamilton Downtown Mosque",
@@ -40,7 +43,7 @@
       "city": "Hamilton",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.2460,
+      "latitude": 43.246,
       "longitude": -79.8365,
       "phone": "+1-905-545-3535",
       "website": "https://downtownmosque.com",
@@ -56,7 +59,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["downtownmosque.com", "google-maps"]
+      "sources": [
+        "downtownmosque.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Muslim Association of Hamilton",
@@ -81,7 +87,10 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
-      "sources": ["masjidbox.com", "google-maps"]
+      "sources": [
+        "masjidbox.com",
+        "google-maps"
+      ]
     },
     {
       "name": "Masjid Al-Quba",
@@ -90,7 +99,7 @@
       "city": "Hamilton",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.2530,
+      "latitude": 43.253,
       "longitude": -79.8572,
       "phone": "+1-905-526-2282",
       "website": null,
@@ -106,7 +115,10 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
-      "sources": ["google-maps", "prayersconnect.com"]
+      "sources": [
+        "google-maps",
+        "prayersconnect.com"
+      ]
     },
     {
       "name": "Hamilton Downtown Musalla",
@@ -124,7 +136,10 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["masjidway.com", "google-maps"],
+      "sources": [
+        "masjidway.com",
+        "google-maps"
+      ],
       "notes": "Prayer space serving downtown Hamilton core."
     },
     {
@@ -134,8 +149,8 @@
       "city": "Hamilton",
       "province": "Ontario",
       "country": "Canada",
-      "latitude": 43.2610,
-      "longitude": -79.9200,
+      "latitude": 43.261,
+      "longitude": -79.92,
       "phone": null,
       "website": null,
       "googleRating": 4.0,
@@ -143,8 +158,115 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
-      "sources": ["google-maps"],
+      "sources": [
+        "google-maps"
+      ],
       "notes": "McMaster University Muslim Students Association prayer space. Open during university hours."
+    },
+    {
+      "name": "Hamilton Downtown Mosque",
+      "type": "mosque",
+      "address": "221, York Boulevard",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.261029,
+      "longitude": -79.875595,
+      "phone": "+1-905-527-7371",
+      "website": "http://downtownmosque.com",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Hamilton Mountain Masjid",
+      "type": "mosque",
+      "address": "1545, Stone Church Road East",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.195572,
+      "longitude": -79.820537,
+      "phone": "+1-905-929-1526",
+      "website": "https://hamiltonmosque.com/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Ibrahim Jame Mosque",
+      "type": "mosque",
+      "address": "778, King Street East",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.251204,
+      "longitude": -79.8442,
+      "phone": "(905) 527-2392",
+      "website": "https://www.ibrahimjamemosque.ca/",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Umar Mosque",
+      "type": "mosque",
+      "address": "734, Rennie Street",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.246505,
+      "longitude": -79.774158,
+      "phone": "+1-905-544-9016",
+      "website": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
+    },
+    {
+      "name": "Baitun Nur Mosque",
+      "type": "mosque",
+      "address": "2301, King Street East, Hamilton, Ontario",
+      "city": "Hamilton",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.229629,
+      "longitude": -79.795722,
+      "phone": "+1 905-544-3110",
+      "website": "https://www.ahmadiyya.ca/mosques/baitun-nur-mosque",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "openstreetmap"
+      ],
+      "notes": null
     }
   ]
 }
