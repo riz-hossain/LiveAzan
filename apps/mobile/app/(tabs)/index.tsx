@@ -5,8 +5,12 @@ import {
   ScrollView,
   RefreshControl,
   StyleSheet,
+  TouchableOpacity,
+  ActivityIndicator,
 } from "react-native";
+import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { Ionicons } from "@expo/vector-icons";
 import { Prayer } from "../../packages/shared/src/types";
 import { PrayerTimeCard } from "../../components/PrayerTimeCard";
 import { IqamaCountdown } from "../../components/IqamaCountdown";
@@ -33,9 +37,26 @@ const PRAYER_LABELS: Record<Prayer, string> = {
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
+  const router = useRouter();
   const [refreshing, setRefreshing] = useState(false);
-  const { prayerTimes, nextPrayer, fetchPrayerTimes, updateNextPrayer, isLoading: prayerLoading } = usePrayerStore();
-  const { primaryMosque, iqamaSchedule, fetchIqamaSchedule } = useMosqueStore();
+  const {
+    prayerTimes,
+    nextPrayer,
+    fetchPrayerTimes,
+    updateNextPrayer,
+    isLoading: prayerLoading,
+  } = usePrayerStore();
+  const {
+    primaryMosque,
+    iqamaSchedule,
+    fetchIqamaSchedule,
+    discoverIqamaNearby,
+    isDiscovering,
+  } = useMosqueStore();
+
+  const [discoverDone, setDiscoverDone] = useState(false);
+  const [mosqueCount, setMosqueCount] = useState(0);
+  const [iqamaCount, setIqamaCount] = useState(0);
 
   const loadData = useCallback(async () => {
     try {
@@ -46,7 +67,7 @@ export default function HomeScreen() {
       }
       updateNextPrayer();
     } catch {
-      // Location or API error - will show empty state
+      // Location or API error
     }
   }, [primaryMosque]);
 
@@ -61,6 +82,26 @@ export default function HomeScreen() {
     await loadData();
     setRefreshing(false);
   }, [loadData]);
+
+  const handleFindIqama = async () => {
+    try {
+      const location = await getCurrentLocation();
+      const discovered = await discoverIqamaNearby(
+        location.latitude,
+        location.longitude
+      );
+      const withIqama = discovered.filter(
+        (m) => m.discoveredIqama && Object.keys(m.discoveredIqama).length > 0
+      );
+      setMosqueCount(discovered.length);
+      setIqamaCount(withIqama.length);
+      setDiscoverDone(true);
+      // Navigate to mosques tab to show results
+      router.push("/(tabs)/mosques");
+    } catch {
+      // ignore
+    }
+  };
 
   const getPrayerTime = (prayer: Prayer): string | undefined => {
     if (!prayerTimes) return undefined;
@@ -86,7 +127,11 @@ export default function HomeScreen() {
       style={styles.container}
       contentContainerStyle={{ paddingBottom: insets.bottom + 16 }}
       refreshControl={
-        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor="#1B5E20" />
+        <RefreshControl
+          refreshing={refreshing}
+          onRefresh={onRefresh}
+          tintColor="#1B5E20"
+        />
       }
     >
       <View style={styles.header}>
@@ -102,6 +147,40 @@ export default function HomeScreen() {
           iqamaTime={getIqamaTime(nextPrayer.prayer) || nextPrayer.time}
           mosqueName={primaryMosque.name}
         />
+      )}
+
+      {/* Find Iqama Near Me — shown when no primary mosque or as a discovery CTA */}
+      {!primaryMosque && (
+        <View style={styles.discoverCard}>
+          <Ionicons name="location" size={28} color="#1B5E20" />
+          <Text style={styles.discoverTitle}>Find Iqama Times Near You</Text>
+          <Text style={styles.discoverBody}>
+            LiveAzan searches MAWAQIT and mosque websites to find iqama
+            schedules for mosques near you — automatically, no sign-up needed.
+          </Text>
+          <TouchableOpacity
+            style={styles.discoverButton}
+            onPress={handleFindIqama}
+            disabled={isDiscovering}
+          >
+            {isDiscovering ? (
+              <View style={styles.discoverButtonInner}>
+                <ActivityIndicator size="small" color="#fff" />
+                <Text style={styles.discoverButtonText}>Searching…</Text>
+              </View>
+            ) : (
+              <View style={styles.discoverButtonInner}>
+                <Ionicons name="search" size={18} color="#fff" />
+                <Text style={styles.discoverButtonText}>Find Nearby Mosques</Text>
+              </View>
+            )}
+          </TouchableOpacity>
+          {discoverDone && (
+            <Text style={styles.discoverResult}>
+              Found {mosqueCount} mosques · {iqamaCount} with iqama times
+            </Text>
+          )}
+        </View>
       )}
 
       <View style={styles.prayerList}>
@@ -145,6 +224,54 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: "#1B5E20",
     marginTop: 2,
+    fontWeight: "500",
+  },
+  discoverCard: {
+    marginHorizontal: 16,
+    marginBottom: 16,
+    backgroundColor: "#fff",
+    borderRadius: 16,
+    padding: 20,
+    alignItems: "center",
+    gap: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.06,
+    shadowRadius: 8,
+    elevation: 3,
+  },
+  discoverTitle: {
+    fontSize: 17,
+    fontWeight: "700",
+    color: "#222",
+    textAlign: "center",
+  },
+  discoverBody: {
+    fontSize: 14,
+    color: "#666",
+    textAlign: "center",
+    lineHeight: 20,
+  },
+  discoverButton: {
+    backgroundColor: "#1B5E20",
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 12,
+    marginTop: 4,
+  },
+  discoverButtonInner: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+  },
+  discoverButtonText: {
+    color: "#fff",
+    fontSize: 15,
+    fontWeight: "600",
+  },
+  discoverResult: {
+    fontSize: 13,
+    color: "#1B5E20",
     fontWeight: "500",
   },
   prayerList: {

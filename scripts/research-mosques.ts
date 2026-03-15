@@ -1,5 +1,6 @@
 /**
- * Mosque research tool — scrapes free data sources to find mosques/musallas.
+ * Mosque research tool — scrapes free data sources to find mosques/musallas,
+ * then auto-fetches iqama times from MAWAQIT for any matched mosques.
  *
  * Usage:
  *   npx tsx scripts/research-mosques.ts --city "Toronto" --province "Ontario"
@@ -7,7 +8,7 @@
  *
  * Data Sources (all free, no API key required):
  * 1. OpenStreetMap Overpass API — all "amenity=place_of_worship" + "religion=muslim"
- * 2. MuslimLink.ca directory — scraped listing pages
+ * 2. MAWAQIT API — matches discovered mosques and pre-fills iqama times
  * 3. Existing seed data — merges with what we already have
  *
  * Output: data/mosques/canada/<province>/<city>.json
@@ -38,6 +39,25 @@ interface RawMosque {
   googleReviewCount?: number;
   source: string;
   notes?: string;
+}
+
+interface MawaqitMosque {
+  uuid: string;
+  name: string;
+  latitude: number;
+  longitude: number;
+  iqamaCalendar?: Record<string, (string | null)[]>;
+  times?: string[];
+  iqama?: (number | null)[];
+}
+
+interface IqamaTimes {
+  fajr?: string;
+  dhuhr?: string;
+  asr?: string;
+  maghrib?: string;
+  isha?: string;
+  jummah?: string;
 }
 
 // ─── Argument Parsing ────────────────────────────────────────────────────────
@@ -171,6 +191,97 @@ async function searchOverpassAPI(lat: number, lon: number, radiusKm: number): Pr
   }
 }
 
+// ─── Source 2: MAWAQIT API — iqama time enrichment ──────────────────────────
+
+const MAWAQIT_BASE = "https://mawaqit.net/en/api/2.0";
+
+async function searchMawaqitNearby(lat: number, lon: number, radiusM: number = 5000): Promise<MawaqitMosque[]> {
+  try {
+    const url = `${MAWAQIT_BASE}/mosque/search?lat=${lat}&lon=${lon}&radius=${radiusM}`;
+    const res = await fetch(url, { headers: { Accept: "application/json" } });
+    if (!res.ok) {
+      console.warn(`  [MAWAQIT] Search returned HTTP ${res.status}`);
+      return [];
+    }
+    const data = await res.json();
+    return Array.isArray(data) ? data : (data.mosques ?? []);
+  } catch {
+    return [];
+  }
+}
+
+async function fetchMawaqitById(uuid: string): Promise<MawaqitMosque | null> {
+  try {
+    const res = await fetch(`${MAWAQIT_BASE}/mosque/${uuid}`, {
+      headers: { Accept: "application/json" },
+    });
+    if (!res.ok) return null;
+    return res.json();
+  } catch {
+    return null;
+  }
+}
+
+function findMawaqitMatch(
+  candidates: MawaqitMosque[],
+  mosque: RawMosque
+): MawaqitMosque | null {
+  let best: MawaqitMosque | null = null;
+  let bestScore = -1;
+
+  for (const c of candidates) {
+    const dist = haversine(mosque.latitude, mosque.longitude, c.latitude, c.longitude);
+    if (dist > 0.3) continue; // >300m — unlikely same mosque
+
+    const sim = nameSimilarity(mosque.name.toLowerCase(), c.name.toLowerCase());
+    if (sim < 0.4) continue;
+
+    const proxScore = Math.max(0, 1 - dist / 0.3);
+    const score = 0.6 * sim + 0.4 * proxScore;
+
+    if (score > bestScore) {
+      bestScore = score;
+      best = c;
+    }
+  }
+  return best;
+}
+
+function extractIqamaFromMawaqit(mosque: MawaqitMosque): IqamaTimes {
+  const month = String(new Date().getMonth() + 1);
+
+  if (mosque.iqamaCalendar) {
+    const entry = mosque.iqamaCalendar[month] || mosque.iqamaCalendar["1"];
+    if (entry && entry.length >= 5) {
+      const prayers: (keyof IqamaTimes)[] = ["fajr", "dhuhr", "asr", "maghrib", "isha"];
+      const result: IqamaTimes = {};
+      for (let i = 0; i < prayers.length; i++) {
+        const t = entry[i];
+        if (t && /^\d{1,2}:\d{2}/.test(t)) {
+          result[prayers[i]] = normalizeTime(t);
+        }
+      }
+      if (Object.keys(result).length > 0) return result;
+    }
+  }
+
+  if (mosque.iqama && mosque.times) {
+    const adhanIdx = [0, 2, 3, 4, 5]; // times[]: fajr,shuruk,dhuhr,asr,maghrib,isha
+    const prayers: (keyof IqamaTimes)[] = ["fajr", "dhuhr", "asr", "maghrib", "isha"];
+    const result: IqamaTimes = {};
+    for (let i = 0; i < prayers.length; i++) {
+      const offset = mosque.iqama[i];
+      const adhan = mosque.times[adhanIdx[i]];
+      if (offset != null && adhan && /^\d{1,2}:\d{2}/.test(adhan)) {
+        result[prayers[i]] = addMinutes(adhan, offset);
+      }
+    }
+    if (Object.keys(result).length > 0) return result;
+  }
+
+  return {};
+}
+
 // ─── Deduplication ──────────────────────────────────────────────────────────
 
 function deduplicateMosques(mosques: RawMosque[]): RawMosque[] {
@@ -180,7 +291,7 @@ function deduplicateMosques(mosques: RawMosque[]): RawMosque[] {
     const isDuplicate = unique.some((existing) => {
       const nameSim = nameSimilarity(existing.name.toLowerCase(), mosque.name.toLowerCase());
       const dist = haversine(existing.latitude, existing.longitude, mosque.latitude, mosque.longitude);
-      return (nameSim > 0.7 && dist < 0.2) || dist < 0.05; // Similar name + 200m, or within 50m
+      return (nameSim > 0.7 && dist < 0.2) || dist < 0.05;
     });
 
     if (!isDuplicate) {
@@ -193,7 +304,6 @@ function deduplicateMosques(mosques: RawMosque[]): RawMosque[] {
 
 function nameSimilarity(a: string, b: string): number {
   if (a === b) return 1;
-  // Simple Jaccard similarity on words
   const wordsA = new Set(a.split(/\s+/).filter(w => w.length > 2));
   const wordsB = new Set(b.split(/\s+/).filter(w => w.length > 2));
   if (wordsA.size === 0 && wordsB.size === 0) return 1;
@@ -214,9 +324,44 @@ function haversine(lat1: number, lon1: number, lat2: number, lon2: number): numb
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
+function normalizeTime(t: string): string {
+  t = t.trim();
+  const match12 = t.match(/^(\d{1,2}):(\d{2})\s*(am|pm)$/i);
+  if (match12) {
+    let h = parseInt(match12[1], 10);
+    const m = match12[2];
+    const period = match12[3].toLowerCase();
+    if (period === "pm" && h < 12) h += 12;
+    if (period === "am" && h === 12) h = 0;
+    return `${String(h).padStart(2, "0")}:${m}`;
+  }
+  const match24 = t.match(/^(\d{1,2}):(\d{2})$/);
+  if (match24) {
+    return `${String(parseInt(match24[1], 10)).padStart(2, "0")}:${match24[2]}`;
+  }
+  return t;
+}
+
+function addMinutes(time: string, minutes: number): string {
+  const [h, m] = time.split(":").map(Number);
+  const total = h * 60 + m + minutes;
+  const nh = Math.floor(total / 60) % 24;
+  const nm = total % 60;
+  return `${String(nh).padStart(2, "0")}:${String(nm).padStart(2, "0")}`;
+}
+
 // ─── Output ─────────────────────────────────────────────────────────────────
 
-function generateSeedFile(args: Args, coords: { lat: number; lon: number }, mosques: RawMosque[]): string {
+interface EnrichedMosque extends RawMosque {
+  mawaqitId?: string;
+  iqamaTimes?: IqamaTimes;
+}
+
+function generateSeedFile(
+  args: Args,
+  coords: { lat: number; lon: number },
+  mosques: EnrichedMosque[]
+): string {
   const provinceSlug = args.province.toLowerCase().replace(/\s+/g, "-");
   const citySlug = args.city.toLowerCase().replace(/\s+/g, "-");
   const outDir = path.join(__dirname, "..", "data", "mosques", args.country, provinceSlug);
@@ -232,7 +377,7 @@ function generateSeedFile(args: Args, coords: { lat: number; lon: number }, mosq
     centerLon: coords.lon,
     radiusKm: args.radius,
     lastResearched: new Date().toISOString().split("T")[0],
-    researchedBy: "overpass-api-scraper",
+    researchedBy: "overpass-api-scraper+mawaqit",
     mosques: mosques.map((m) => ({
       name: m.name,
       type: m.type,
@@ -248,8 +393,13 @@ function generateSeedFile(args: Args, coords: { lat: number; lon: number }, mosq
       googleReviewCount: m.googleReviewCount || null,
       hasLiveStream: false,
       verified: false,
-      iqamaTimes: null,
-      sources: [m.source],
+      mawaqitId: m.mawaqitId || null,
+      iqamaTimes: m.iqamaTimes && Object.keys(m.iqamaTimes).length > 0
+        ? m.iqamaTimes
+        : null,
+      sources: m.mawaqitId
+        ? [...new Set([m.source, "mawaqit.net"])]
+        : [m.source],
       notes: m.notes || null,
     })),
   };
@@ -277,29 +427,62 @@ async function main() {
 
   // Source 1: Overpass API (OpenStreetMap)
   const osmResults = await searchOverpassAPI(coords.lat, coords.lon, args.radius);
+  const unique = deduplicateMosques(osmResults);
 
-  // Combine all sources
-  const allMosques = [...osmResults];
-
-  // Deduplicate
-  const unique = deduplicateMosques(allMosques);
-
-  console.log(`\n  Total raw results: ${allMosques.length}`);
+  console.log(`\n  Total raw results: ${osmResults.length}`);
   console.log(`  After deduplication: ${unique.length}`);
 
+  // Source 2: MAWAQIT — search once for the whole city area, then match per mosque
+  console.log(`\n  [MAWAQIT] Searching for mosques near city center...`);
+  const mawaqitResults = await searchMawaqitNearby(
+    coords.lat,
+    coords.lon,
+    args.radius * 1000
+  );
+  console.log(`  [MAWAQIT] Found ${mawaqitResults.length} entries`);
+
+  // Enrich each mosque with MAWAQIT data
+  let mawaqitMatched = 0;
+  const enriched: EnrichedMosque[] = await Promise.all(
+    unique.map(async (mosque) => {
+      const match = findMawaqitMatch(mawaqitResults, mosque);
+      if (!match) return mosque;
+
+      // Fetch full details for better iqamaCalendar data
+      const full = await fetchMawaqitById(match.uuid);
+      const iqamaTimes = extractIqamaFromMawaqit(full ?? match);
+
+      if (Object.keys(iqamaTimes).length > 0) {
+        mawaqitMatched++;
+        return {
+          ...mosque,
+          mawaqitId: match.uuid,
+          iqamaTimes,
+          // Prefer MAWAQIT's phone/website if we don't have them
+          phone: mosque.phone || undefined,
+          website: mosque.website || undefined,
+        };
+      }
+
+      return { ...mosque, mawaqitId: match.uuid };
+    })
+  );
+
   // Generate seed file
-  const outFile = generateSeedFile(args, coords, unique);
+  const outFile = generateSeedFile(args, coords, enriched);
 
   console.log(`\n  Output: ${outFile}`);
   console.log(`  Mosques/musallas found: ${unique.length}`);
+  console.log(`  Matched on MAWAQIT: ${mawaqitResults.length > 0 ? `${mawaqitMatched}/${unique.length}` : "skipped (MAWAQIT unreachable)"}`);
+  console.log(`  Iqama times pre-filled: ${mawaqitMatched}`);
   console.log(`\n  Next steps:`);
   console.log(`  1. Review the file and verify mosque data`);
   console.log(`  2. Add Google ratings from Google Maps`);
-  console.log(`  3. Fill in iqama times from masjidbox/prayersconnect`);
+  console.log(`  3. Manually fill iqama times for mosques not on MAWAQIT`);
   console.log(`  4. Commit the file to the repo`);
   console.log(`  5. Deploy → seed script will load it into the database\n`);
 
-  // Summary by type
+  // Summary
   const mosqueCount = unique.filter(m => m.type === "mosque").length;
   const musallaCount = unique.filter(m => m.type === "musalla").length;
   console.log(`  Breakdown: ${mosqueCount} mosques, ${musallaCount} musallas`);

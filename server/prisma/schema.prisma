@@ -90,13 +90,17 @@ model Mosque {
   website         String?
   googleRating    Float?
   googleReviewCount Int?
-  hasLiveStream   Boolean   @default(false)
-  streamUrl       String?
-  adminEmail      String?
-  verified        Boolean   @default(false)
-  notes           String?
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+  hasLiveStream    Boolean   @default(false)
+  streamUrl        String?
+  adminEmail       String?
+  verified         Boolean   @default(false)
+  notes            String?
+  // Automated iqama discovery
+  mawaqitId        String?   // MAWAQIT UUID if this mosque is listed there
+  iqamaSource      String?   // "mawaqit" | "website" | "manual"
+  iqamaLastFetched DateTime? // when iqama was last auto-fetched
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
 
   iqamaSchedules IqamaSchedule[]
   followers      UserMosque[]

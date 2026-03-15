@@ -85,6 +85,10 @@ export interface Mosque {
   googleRating?: number; // e.g. 4.5
   googleReviewCount?: number; // e.g. 123
   distanceKm?: number; // computed at query time
+  // Automated iqama discovery provenance
+  mawaqitId?: string;
+  iqamaSource?: "mawaqit" | "website" | "manual";
+  iqamaLastFetched?: string; // ISO date string
 }
 
 export interface IqamaSchedule {
@@ -193,6 +197,7 @@ export interface MosqueSeedEntry {
   hasLiveStream: boolean;
   verified: boolean;
   sources: string[];
+  mawaqitId?: string; // linked MAWAQIT UUID, filled by research script
   iqamaTimes?: {
     fajr?: string;
     dhuhr?: string;
