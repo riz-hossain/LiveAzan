@@ -11,6 +11,7 @@
 import { PrismaClient, Prayer } from "@prisma/client";
 import * as fs from "fs";
 import * as path from "path";
+import * as bcrypt from "bcryptjs";
 
 const prisma = new PrismaClient();
 
@@ -234,6 +235,42 @@ async function main() {
   console.log(
     `\nSeeded ${totalMosques} mosques from ${files.length} file(s).`
   );
+
+  // ── Default admin account ────────────────────────────────────────────────
+  const adminEmail    = process.env.ADMIN_EMAIL    || "admin@liveaszan.local";
+  const adminPassword = process.env.ADMIN_PASSWORD || "admin1234";
+
+  const existingAdmin = await prisma.user.findUnique({ where: { email: adminEmail } });
+
+  if (existingAdmin) {
+    if (existingAdmin.role !== "ADMIN") {
+      await prisma.user.update({
+        where: { id: existingAdmin.id },
+        data: { role: "ADMIN" },
+      });
+      console.log(`\n[admin] Promoted existing user to ADMIN: ${adminEmail}`);
+    } else {
+      console.log(`\n[admin] Admin account already exists: ${adminEmail}`);
+    }
+  } else {
+    const passwordHash = await bcrypt.hash(adminPassword, 12);
+    await prisma.user.create({
+      data: {
+        email: adminEmail,
+        passwordHash,
+        displayName: "Admin",
+        authProvider: "EMAIL",
+        emailVerified: true,
+        role: "ADMIN",
+      },
+    });
+    console.log(`\n${"=".repeat(50)}`);
+    console.log(`  DEFAULT ADMIN ACCOUNT CREATED`);
+    console.log(`  Email:    ${adminEmail}`);
+    console.log(`  Password: ${adminPassword}`);
+    console.log(`  Change these via ADMIN_EMAIL / ADMIN_PASSWORD env vars.`);
+    console.log(`${"=".repeat(50)}\n`);
+  }
 }
 
 main()

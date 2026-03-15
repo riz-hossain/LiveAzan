@@ -350,8 +350,11 @@ def ensure_env_local(repo):
     env_file.write_text(
         f"DB_PASSWORD={db_password}\n"
         f"JWT_SECRET={jwt_secret}\n"
+        f"ADMIN_EMAIL=admin@liveaszan.local\n"
+        f"ADMIN_PASSWORD=admin1234\n"
     )
-    info(f".env.local created with generated secrets.")
+    info(".env.local created with generated secrets.")
+    info("  Default admin: admin@liveaszan.local / admin1234")
 
 
 def ensure_env_prod(repo):
@@ -870,6 +873,36 @@ def cmd_android(repo, fresh=False, nuke_gradle=False):
     info(f"APK: {dest}")
 
 
+# ── Admin credentials helper ──────────────────────────────────────────────────
+
+def _read_env_value(env_file, key):
+    """Read a single key from a .env file."""
+    try:
+        for line in Path(env_file).read_text().splitlines():
+            line = line.strip()
+            if line.startswith(f"{key}="):
+                return line[len(key) + 1:]
+    except Exception:
+        pass
+    return None
+
+
+def print_admin_credentials(repo, mode):
+    env_file = repo / (".env.local" if mode == "local" else ".env.prod")
+    email    = _read_env_value(env_file, "ADMIN_EMAIL")
+    password = _read_env_value(env_file, "ADMIN_PASSWORD")
+    if not email:
+        email    = "admin@liveaszan.local" if mode == "local" else "admin@liveaszan.com"
+        password = "(see ADMIN_PASSWORD in env file)"
+    info("")
+    info("  ┌─ Default Admin Account ──────────────────────┐")
+    info(f"  │  Email:    {email:<35}│")
+    info(f"  │  Password: {(password or '(see env file)'):<35}│")
+    info("  │  Login at the Admin Portal URL above.        │")
+    info("  └──────────────────────────────────────────────┘")
+    info("")
+
+
 # ── Commands ──────────────────────────────────────────────────────────────────
 
 def cmd_up(repo, mode):
@@ -899,6 +932,7 @@ def cmd_up(repo, mode):
         info(f"    Start Expo:  cd apps/mobile && npx expo start")
         info("")
         info("  Database:      localhost:5432  (liveaszan / see .env.local)")
+        print_admin_credentials(repo, mode)
     else:
         ensure_env_prod(repo)
         compose_up(repo, mode)
@@ -910,6 +944,7 @@ def cmd_up(repo, mode):
         info("LiveAzan production stack is running.")
         info("  Admin Portal:  http://localhost:80")
         info("  Backend API:   http://localhost:3001/api/health")
+        print_admin_credentials(repo, mode)
 
 
 def cmd_restart(repo, mode):
