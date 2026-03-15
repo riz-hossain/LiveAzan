@@ -18,7 +18,7 @@
       "latitude": 44.2537,
       "longitude": -76.5247,
       "phone": "+1-613-546-5572",
-      "website": null,
+      "website": "https://kingstonmuslims.ca/",
       "googleRating": 4.5,
       "googleReviewCount": 55,
       "hasLiveStream": false,
@@ -34,7 +34,27 @@
       "sources": [
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": "iskadmin@kingstonmuslims.ca",
+      "description": "Built in 1995 by the Islamic Society of Kingston, this mosque is the primary Islamic centre for the Kingston area, conveniently located near Highway 401 between Toronto and Montreal.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "funeral_services",
+        "quran_classes",
+        "islamic_studies",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Queen's University Muslim Students' Association Musalla",
@@ -46,7 +66,7 @@
       "latitude": 44.2261,
       "longitude": -76.4957,
       "phone": null,
-      "website": null,
+      "website": "https://qumsa.ca/",
       "googleRating": 4.0,
       "googleReviewCount": 4,
       "hasLiveStream": false,
@@ -55,7 +75,22 @@
       "sources": [
         "google-maps"
       ],
-      "notes": "University prayer space. Open during university hours."
+      "notes": "University prayer space. Open during university hours.",
+      "email": null,
+      "description": "Queen's University Muslim Students' Association prayer space providing Jummah prayers, weekly halaqas, and Ramadan iftars for Muslim students on campus.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "jummah",
+        "sisters_halaqah",
+        "mens_halaqah",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section"
+      ],
+      "accessInfo": "University prayer space, open during university hours."
     },
     {
       "name": "Islamic Centre of Kingston",
@@ -67,7 +102,7 @@
       "latitude": 44.284521,
       "longitude": -76.542057,
       "phone": null,
-      "website": null,
+      "website": "https://kingstonmuslims.ca/",
       "googleRating": null,
       "googleReviewCount": null,
       "hasLiveStream": false,
@@ -76,7 +111,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "iskadmin@kingstonmuslims.ca",
+      "description": "OpenStreetMap listing that likely corresponds to the Kingston Islamic Centre / Islamic Society of Kingston at 1477 Sydenham Rd.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [],
+      "facilities": [],
+      "accessInfo": null
     }
   ]
 }

@@ -21,13 +21,16 @@
       "email": "atman900@hotmail.com",
       "website": null,
       "description": "Islamic centre serving the Kawartha Lakes region including Lindsay, Bobcaygeon, and Fenelon Falls. Friday prayer at 1:30 PM year-round.",
-      "denomination": null,
+      "denomination": "sunni",
       "hours": null,
       "services": [
         "five_daily_prayers",
         "jummah"
       ],
-      "facilities": [],
+      "facilities": [
+        "wheelchair_accessible",
+        "parking"
+      ],
       "accessInfo": null,
       "googleRating": null,
       "googleReviewCount": null,

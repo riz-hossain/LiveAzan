@@ -34,7 +34,29 @@
       "sources": [
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": "contactus@hamiltonmosque.com",
+      "description": "A Sunni mosque operated by the Muslim Association of Hamilton, offering daily prayers, madrasah programs, full-time Hifz classes, and marriage ceremonies since the 1960s.",
+      "denomination": "sunni",
+      "hours": "6 AM – 10 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "nikah",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "eid_prayers",
+        "taraweeh",
+        "counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Hamilton Downtown Mosque",
@@ -62,7 +84,27 @@
       "sources": [
         "downtownmosque.com",
         "google-maps"
-      ]
+      ],
+      "email": "contact@downtownmosque.com",
+      "description": "A vibrant Sunni mosque established in 1992, serving over 10,000 Muslims in central Hamilton with daily prayers, Ramadan programs, and community services.",
+      "denomination": "sunni",
+      "hours": "5 AM – 11 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "itikaf",
+        "counseling",
+        "zakat_collection"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Muslim Association of Hamilton",
@@ -90,7 +132,25 @@
       "sources": [
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": null,
+      "description": "A registered charitable organization dedicated to providing religious, educational, and social services for the diverse Muslim community in Hamilton since the 1960s.",
+      "denomination": "sunni",
+      "hours": "6 AM – 10 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "madrasah",
+        "eid_prayers",
+        "taraweeh",
+        "counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Al-Quba",
@@ -118,7 +178,19 @@
       "sources": [
         "google-maps",
         "prayersconnect.com"
-      ]
+      ],
+      "email": null,
+      "description": "A local mosque in downtown Hamilton providing daily prayer services and Friday congregational prayers to the Muslim community.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Hamilton Downtown Musalla",
@@ -140,7 +212,19 @@
         "masjidway.com",
         "google-maps"
       ],
-      "notes": "Prayer space serving downtown Hamilton core."
+      "notes": "Prayer space serving downtown Hamilton core.",
+      "email": null,
+      "description": "A prayer space serving the downtown Hamilton core, offering daily prayers and Jummah services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area"
+      ],
+      "accessInfo": null
     },
     {
       "name": "McMaster University Musalla",
@@ -161,7 +245,20 @@
       "sources": [
         "google-maps"
       ],
-      "notes": "McMaster University Muslim Students Association prayer space. Open during university hours."
+      "notes": "McMaster University Muslim Students Association prayer space. Open during university hours.",
+      "email": "info@macmsa.com",
+      "description": "McMaster University Muslim Students Association prayer space, one of the largest religious clubs on campus with a history dating back to the 1960s.",
+      "denomination": "non_denominational",
+      "hours": "10 AM – 4 PM (September–April)",
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section"
+      ],
+      "accessInfo": "Located in T-13 building, Rooms 109 and 112. Additional prayer spaces available in Hamilton Hall and MDCL."
     },
     {
       "name": "Hamilton Downtown Mosque",
@@ -182,7 +279,27 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "admin@downtownmosque.com",
+      "description": "A Canadian religious non-profit institution established in 1997, serving over 10,000 Muslims in central Hamilton with essential religious and social services.",
+      "denomination": "sunni",
+      "hours": "5 AM – 11 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "itikaf",
+        "counseling",
+        "zakat_collection"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Hamilton Mountain Masjid",
@@ -203,7 +320,29 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "contactus@hamiltonmosque.com",
+      "description": "Part of the Muslim Association of Hamilton, this Sunni mosque offers daily prayers, educational programs, Hifz classes, and community services on Hamilton Mountain.",
+      "denomination": "sunni",
+      "hours": "6 AM – 10 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "nikah",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "eid_prayers",
+        "taraweeh",
+        "counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Ibrahim Jame Mosque",
@@ -224,7 +363,29 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@ibrahimjamemosque.com",
+      "description": "A well-established mosque offering daily prayers, evening madrasah, full-time Hifz classes, marriage ceremonies, and interfaith dialogue programs in Hamilton.",
+      "denomination": "sunni",
+      "hours": "6 AM – 10 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "nikah",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "eid_prayers",
+        "taraweeh",
+        "counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Umar Mosque",
@@ -245,7 +406,20 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "A Sunni mosque operated by the Muslim Association of Hamilton, serving the local Muslim community with daily prayers and Jummah services.",
+      "denomination": "sunni",
+      "hours": "6 AM – 10 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Baitun Nur Mosque",
@@ -266,7 +440,22 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "An Ahmadiyya Muslim Community mosque in Hamilton, providing a place of worship and community gathering for the local Ahmadiyya congregation.",
+      "denomination": "ahmadiyya",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     }
   ]
 }

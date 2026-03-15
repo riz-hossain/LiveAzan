@@ -20,14 +20,18 @@
       "phone": null,
       "email": null,
       "website": "https://www.pembrokeislamiccentre.ca/",
-      "description": "Islamic centre serving the Ottawa Valley and Renfrew County region. Closest mosque for travellers heading to Algonquin Provincial Park.",
-      "denomination": null,
+      "description": "Islamic centre serving the Muslim community of the Ottawa Valley and Renfrew County region. Closest mosque for travellers heading to Algonquin Provincial Park.",
+      "denomination": "sunni",
       "hours": null,
       "services": [
         "five_daily_prayers",
-        "jummah"
+        "jummah",
+        "eid_prayers",
+        "quran_classes"
       ],
-      "facilities": [],
+      "facilities": [
+        "parking"
+      ],
       "accessInfo": null,
       "googleRating": null,
       "googleReviewCount": null,

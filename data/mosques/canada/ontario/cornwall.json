@@ -18,7 +18,7 @@
       "latitude": 45.023,
       "longitude": -74.739,
       "phone": "+1-613-938-4442",
-      "website": null,
+      "website": "https://cornwallislamiccentre.ca/",
       "googleRating": 4.2,
       "googleReviewCount": 10,
       "hasLiveStream": false,
@@ -33,19 +33,36 @@
       },
       "sources": [
         "google-maps"
-      ]
+      ],
+      "email": "info@cornwallislamiccentre.ca",
+      "description": "A mosque serving the Muslim community of Cornwall, Ontario, providing daily prayers, educational programs, and community services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "quran_classes",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Al-Aqsa Mosque",
       "type": "mosque",
-      "address": "Address unknown \u2014 needs verification",
+      "address": "507 Pitt Street, Cornwall, ON",
       "city": "Cornwall",
       "province": "Ontario",
       "country": "Canada",
       "latitude": 45.023331,
       "longitude": -74.731201,
-      "phone": null,
-      "website": null,
+      "phone": "+1-613-936-1616",
+      "website": "http://www.alaqsamasjid.ca/",
       "googleRating": null,
       "googleReviewCount": null,
       "hasLiveStream": false,
@@ -54,7 +71,23 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@alaqsamasjid.ca",
+      "description": "Located in the heart of downtown Cornwall, Masjid Al-Aqsa serves a large and diverse Muslim community and is easily accessible by public transit.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Baitun Nasir Mosque",
@@ -75,7 +108,20 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "An Ahmadiyya Muslim Community mosque in Cornwall, serving as a place of worship and community centre for the local Ahmadi Muslim population.",
+      "denomination": "ahmadiyya",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Jami Masjid Zakariya",
@@ -87,7 +133,7 @@
       "latitude": 45.02081,
       "longitude": -74.72087,
       "phone": "+1-613-662-3402",
-      "website": "https://www.alrashid.ca/",
+      "website": "https://cornwallmasjid.ca/",
       "googleRating": null,
       "googleReviewCount": null,
       "hasLiveStream": false,
@@ -96,7 +142,24 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@alrashid.ca",
+      "description": "Operated by the Al-Rashid Islamic Institute, this mosque was established in 1980 and serves the growing Muslim community of Cornwall with congregational prayers and Islamic education.",
+      "denomination": "deobandi",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "quran_classes",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     }
   ]
 }

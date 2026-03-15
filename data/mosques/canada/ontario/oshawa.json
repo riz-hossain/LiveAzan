@@ -18,7 +18,29 @@
       "latitude": 43.8928,
       "longitude": -78.863,
       "phone": "+1-905-438-1817",
-      "website": null,
+      "email": "info@oshawamosque.com",
+      "website": "https://oshawamosque.com/",
+      "description": "The first purpose-built mosque in Oshawa, opened in 2012, featuring Ottoman-inspired architecture with ornamental crescent moons in the main prayer hall dome.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "nikah",
+        "quran_classes",
+        "islamic_studies",
+        "youth_programs",
+        "counseling",
+        "new_muslim_support"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null,
       "googleRating": 4.4,
       "googleReviewCount": 55,
       "hasLiveStream": false,
@@ -46,7 +68,22 @@
       "latitude": 43.882,
       "longitude": -78.8465,
       "phone": "+1-905-576-9119",
-      "website": null,
+      "email": null,
+      "website": "https://durhamislamiccentre.ca/",
+      "description": "Also known as Iqra Masjid, the Durham Islamic Centre serves the Muslim community of Oshawa and surrounding Durham Region with daily prayers and Quran classes.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null,
       "googleRating": 4.3,
       "googleReviewCount": 35,
       "hasLiveStream": false,
@@ -73,7 +110,19 @@
       "latitude": 43.8975,
       "longitude": -78.871,
       "phone": "+1-905-721-3636",
+      "email": null,
       "website": null,
+      "description": "A mosque in downtown Oshawa serving the local Muslim community with daily prayers and Friday congregational services.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area"
+      ],
+      "accessInfo": null,
       "googleRating": 4.2,
       "googleReviewCount": 20,
       "hasLiveStream": false,
@@ -93,13 +142,13 @@
     {
       "name": "Ismaili Jamatkhana",
       "type": "musalla",
-      "address": "Address unknown \u2014 needs verification",
+      "address": "83 Byng Ave, Oshawa, ON L1G 3N2",
       "city": "Oshawa",
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.92653,
       "longitude": -78.879587,
-      "phone": null,
+      "phone": "+1-905-725-1626",
       "website": null,
       "googleRating": null,
       "googleReviewCount": null,
@@ -109,12 +158,26 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Ismaili Jamatkhana and Community Centre serving the Ismaili Muslim community in the Durham Region with prayer services and community programs.",
+      "denomination": "ismaili",
+      "hours": null,
+      "services": [
+        "five_daily_prayers"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Sayyidah Zainab",
       "type": "mosque",
-      "address": "Address unknown \u2014 needs verification",
+      "address": "Address unknown — needs verification",
       "city": "Oshawa",
       "province": "Ontario",
       "country": "Canada",
@@ -130,19 +193,26 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "A mosque listed on OpenStreetMap in the Oshawa area. Limited information available; may be associated with the Jamia Masjid Sayyidah Zainab community in nearby Ajax.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [],
+      "facilities": [],
+      "accessInfo": null
     },
     {
       "name": "Masjid Alhakeem Bowmanville",
       "type": "mosque",
-      "address": "Address unknown \u2014 needs verification",
+      "address": "Address unknown — needs verification",
       "city": "Oshawa",
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.910544,
       "longitude": -78.683186,
       "phone": null,
-      "website": null,
+      "website": "https://alhakeem.ca/",
       "googleRating": null,
       "googleReviewCount": null,
       "hasLiveStream": false,
@@ -151,19 +221,36 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@alhakeem.ca",
+      "description": "Established in 2016, Masjid Al-Hakeem is the only mosque between Kingston and Oshawa, serving the Bowmanville Muslim community with daily prayers and Quran education.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "islamic_studies",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Al-Arqam Islamic Centre",
       "type": "mosque",
-      "address": "Address unknown \u2014 needs verification",
+      "address": "Address unknown — needs verification",
       "city": "Oshawa",
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.949224,
       "longitude": -78.853355,
-      "phone": null,
-      "website": null,
+      "phone": "+1-289-356-3026",
+      "website": "https://alarqam.ad-din.site/",
       "googleRating": null,
       "googleReviewCount": null,
       "hasLiveStream": false,
@@ -172,12 +259,33 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@alarqam.ca",
+      "description": "A registered charitable organization providing free religious and educational services including a full-time Hifz program, after-school programs, and youth activities for the Oshawa Muslim community.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "quran_classes",
+        "tahfeez",
+        "madrasah",
+        "youth_programs",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Unknown Mosque",
       "type": "mosque",
-      "address": "Address unknown \u2014 needs verification",
+      "address": "Address unknown — needs verification",
       "city": "Oshawa",
       "province": "Ontario",
       "country": "Canada",
@@ -193,7 +301,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": null,
+      "denomination": null,
+      "hours": null,
+      "services": [],
+      "facilities": [],
+      "accessInfo": null
     }
   ]
 }

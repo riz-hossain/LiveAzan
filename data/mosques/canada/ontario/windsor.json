@@ -31,6 +31,13 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
+      "email": "info@windsormosque.ca",
+      "description": "One of Windsor's oldest mosques, established in 1964 by the Windsor Islamic Association. Serves over 25,000 Muslims from 60+ countries with Sunni programs and community services.",
+      "denomination": "sunni",
+      "hours": "Open 24/7",
+      "services": ["five_daily_prayers", "jummah", "janaza", "nikah", "quran_classes", "madrasah", "youth_programs", "new_muslim_support", "food_bank", "counseling", "eid_prayers", "taraweeh", "itikaf", "islamic_studies", "funeral_services", "zakat_collection"],
+      "facilities": ["wudu_area", "women_section", "wheelchair_accessible", "parking", "free_parking", "shoe_rack", "air_conditioned", "heated", "multipurpose_hall"],
+      "accessInfo": null,
       "sources": [
         "windsorislam.com",
         "masjidbox.com",
@@ -60,6 +67,13 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
+      "email": "info@windsormosque.ca",
+      "description": "Windsor Mosque on Ouellette Ave, operated by the Windsor Islamic Association. A Sunni mosque serving the downtown Windsor Muslim community since 1964.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "women_section", "parking"],
+      "accessInfo": null,
       "sources": [
         "masjidbox.com",
         "google-maps"
@@ -88,6 +102,13 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
+      "email": "info@windsormosque.ca",
+      "description": "Also known as Windsor Mosque, operated by the Windsor Islamic Association at the Northwood St location. A Sunni, multicultural mosque built in 1969, serving Downtown Windsor, LaSalle, and Tecumseh.",
+      "denomination": "sunni",
+      "hours": "Open 24/7",
+      "services": ["five_daily_prayers", "jummah", "janaza", "nikah", "eid_prayers", "taraweeh", "funeral_services", "zakat_collection"],
+      "facilities": ["wudu_area", "women_section", "wheelchair_accessible", "parking", "free_parking", "shoe_rack", "air_conditioned", "heated"],
+      "accessInfo": null,
       "sources": [
         "muslimlink.ca",
         "google-maps"
@@ -110,6 +131,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "A small but popular musalla in Windsor, located in the basement of a house. Known as one of the most crowded musallas in the area, attracting many students for daily prayers.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers"],
+      "facilities": ["wudu_area", "shoe_rack"],
+      "accessInfo": "Located in basement of a house; entry from side alley",
       "sources": [
         "prayersconnect.com",
         "google-maps"
@@ -132,6 +160,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "A Sunni musalla in east Windsor providing a convenient prayer space for daily prayers in the Tecumseh Road area.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers"],
+      "facilities": ["wudu_area"],
+      "accessInfo": null,
       "sources": [
         "prayersconnect.com",
         "google-maps"
@@ -153,6 +188,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": null,
+      "denomination": null,
+      "hours": null,
+      "services": [],
+      "facilities": [],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
@@ -174,6 +216,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": null,
+      "denomination": null,
+      "hours": null,
+      "services": [],
+      "facilities": [],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
@@ -198,6 +247,13 @@
       "sources": [
         "openstreetmap"
       ],
+      "email": null,
+      "description": "Masjid Noor-ul-Islam, established in 1983, is a Sunni mosque in the Walkerville neighbourhood of Windsor. Offers daily prayers, hadith readings, Maktab program for children, and Quran classes with Tajweed.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "madrasah", "islamic_studies", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "women_section", "parking", "shoe_rack"],
+      "accessInfo": null,
       "notes": null
     },
     {
@@ -216,6 +272,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "Baitul Ehsaan is an Ahmadiyya Muslim Community mosque in Windsor, described as a place of tranquility and reflection, fostering spiritual growth and community service.",
+      "denomination": "ahmadiyya",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "eid_prayers"],
+      "facilities": ["wudu_area", "parking"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
@@ -240,6 +303,13 @@
       "sources": [
         "openstreetmap"
       ],
+      "email": "info@windsormosque.ca",
+      "description": "A facility associated with the Windsor Islamic Association, possibly the WIA Centre at 2555 McKay Avenue which hosts a large prayer hall, kitchen, event halls, meeting rooms, and classrooms.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "eid_prayers", "islamic_studies", "youth_programs"],
+      "facilities": ["wudu_area", "women_section", "wheelchair_accessible", "parking", "kitchen", "multipurpose_hall"],
+      "accessInfo": null,
       "notes": null
     },
     {
@@ -258,6 +328,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": null,
+      "denomination": null,
+      "hours": null,
+      "services": [],
+      "facilities": [],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],

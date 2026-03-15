@@ -31,6 +31,13 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
+      "email": null,
+      "description": "A mosque operated by the Muslim Association of Canada (MAC) in Waterloo, offering daily prayers, educational programs, and community services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "youth_programs", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "parking"],
+      "accessInfo": null,
       "sources": [
         "masjidbox.com",
         "google-maps",
@@ -60,6 +67,13 @@
         "isha": "21:15",
         "jummah": "13:30"
       },
+      "email": null,
+      "description": "Established in the early 1980s, Waterloo Masjid is a fully-licensed religious centre attended by Muslims from diverse backgrounds. Offers daily prayers, Quran classes, weekly halaqas, and funeral services.",
+      "denomination": "sunni",
+      "hours": "5 AM – 11 PM daily",
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "islamic_studies", "sisters_halaqah", "mens_halaqah", "funeral_services", "nikah", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "parking", "women_section"],
+      "accessInfo": null,
       "sources": [
         "masjidbox.com",
         "google-maps",
@@ -89,6 +103,13 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
+      "email": null,
+      "description": "A small prayer space in downtown Kitchener serving the local Muslim community with daily prayers and Jummah.",
+      "denomination": null,
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah"],
+      "facilities": [],
+      "accessInfo": null,
       "sources": [
         "google-maps",
         "prayersconnect.com"
@@ -110,6 +131,13 @@
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": null,
+      "email": null,
+      "description": "Established in 2009 by the Muslim community of the Laurelwood area, this musalla offers congregation prayers and Quran recitation and tahfeez classes for children and youth.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "tahfeez"],
+      "facilities": [],
+      "accessInfo": null,
       "sources": [
         "google-maps",
         "masjidway.com",
@@ -140,6 +168,13 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
+      "email": null,
+      "description": "Islamic centre in Cambridge serving the local Muslim community with daily prayers and Jummah services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "eid_prayers"],
+      "facilities": ["parking"],
+      "accessInfo": null,
       "sources": [
         "google-maps"
       ]
@@ -167,6 +202,13 @@
         "isha": "21:15",
         "jummah": "13:45"
       },
+      "email": null,
+      "description": "A Sunni mosque in Guelph offering daily prayers, Quran classes, and community services to a diverse Muslim population.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "eid_prayers"],
+      "facilities": ["wudu_area", "parking", "women_section"],
+      "accessInfo": null,
       "sources": [
         "masjidbox.com",
         "google-maps"
@@ -188,6 +230,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "University multi-faith space in the Student Life Centre managed by the UW Muslim Students Association, used for daily prayers during university hours.",
+      "denomination": "non_denominational",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah"],
+      "facilities": [],
+      "accessInfo": "Student Life Centre (SLC), Room 3102",
       "sources": [
         "google-maps"
       ],
@@ -209,6 +258,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "Multi-faith prayer space at Wilfrid Laurier University managed by the WLU Muslim Students Association. Offers weekly lectures, Quran circles, and prayer facilities.",
+      "denomination": "non_denominational",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes"],
+      "facilities": ["wudu_area"],
+      "accessInfo": null,
       "sources": [
         "google-maps"
       ],
@@ -230,6 +286,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "Waterloo Masjid, also known as the Muslim Society of Waterloo, is a long-standing Islamic centre serving a diverse Muslim community since the early 1980s.",
+      "denomination": "sunni",
+      "hours": "5 AM – 11 PM daily",
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "islamic_studies", "funeral_services", "nikah", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "parking", "women_section"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
@@ -251,6 +314,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": "info@icwaterloo.com",
+      "description": "Established by the Waterloo chapter of the Muslim Association of Canada (MAC), the Islamic Centre of Waterloo offers religious services, educational programs, and community events.",
+      "denomination": "sunni",
+      "hours": "Open 24 hours",
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "youth_programs", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "parking", "wheelchair_accessible"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
@@ -272,6 +342,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": "admin@alzahra.ca",
+      "description": "A Shia Ithna Asheri Ja'ffari mosque incorporated in 2019, providing religious education, counseling, community support, and programs on major Islamic occasions.",
+      "denomination": "shia",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "islamic_studies", "counseling", "eid_prayers"],
+      "facilities": ["parking"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],

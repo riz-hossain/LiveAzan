@@ -33,7 +33,24 @@
       },
       "sources": [
         "google-maps"
-      ]
+      ],
+      "email": "info@brantfordmosque.ca",
+      "description": "Operated by the Muslim Association of Brantford (est. 1982), this Sunni mosque offers daily prayers, community dawah programs, and is a registered facility with the Bereavement Authority of Ontario.",
+      "denomination": "sunni",
+      "hours": "Dawn – Midnight daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "funeral_services",
+        "new_muslim_support"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Sayyidna Bilal",
@@ -54,7 +71,23 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@parismasjid.ca",
+      "description": "A community mosque and centre in Paris, Ontario, offering five daily prayers, Jummah, and operating a local food bank in partnership with community organizations.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "food_bank",
+        "youth_programs"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking"
+      ],
+      "accessInfo": null
     }
   ]
 }

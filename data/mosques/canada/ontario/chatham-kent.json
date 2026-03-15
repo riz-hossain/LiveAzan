@@ -24,6 +24,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "A Sunni mosque in Chatham, Ontario, located at 416 Lacroix Street. One of the first masjids in Chatham, serving the growing and ethnically diverse Muslim community of Chatham-Kent.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "eid_prayers", "taraweeh", "youth_programs"],
+      "facilities": ["wudu_area", "parking", "kitchen"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],

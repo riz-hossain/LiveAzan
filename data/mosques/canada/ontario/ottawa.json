@@ -35,7 +35,14 @@
         "ottawamosque.ca",
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": "oma@ottawamosque.ca",
+      "description": "Ottawa's oldest mosque, established in 1964 by the Ottawa Muslim Association. Features a distinctive raised minaret and central dome with a two-story prayer hall accommodating up to 900 people.",
+      "denomination": "sunni",
+      "hours": "Mon-Fri 8:00 AM - 4:00 PM, open for all daily prayers",
+      "services": ["five_daily_prayers", "jummah", "janaza", "nikah", "quran_classes", "arabic_classes", "islamic_studies", "counseling", "zakat_collection", "funeral_services", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "women_section", "parking", "library", "multipurpose_hall", "shoe_rack", "childcare_room"],
+      "accessInfo": null
     },
     {
       "name": "Assalam Mosque (Ottawa Islamic Centre)",
@@ -64,7 +71,14 @@
         "assalammosque.com",
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": "contact@assalammosque.com",
+      "description": "A non-profit religious institution committed to serving the Islamic community in the Ottawa-Carleton area, offering one of the largest prayer halls in Ottawa for men and women.",
+      "denomination": "sunni",
+      "hours": "Sun-Thu 11:30 AM - 8:00 PM, Fri 11:00 AM - 9:00 PM, Sat 11:30 AM - 8:00 PM",
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "arabic_classes", "taraweeh", "eid_prayers"],
+      "facilities": ["wudu_area", "women_section", "parking", "multipurpose_hall", "shoe_rack"],
+      "accessInfo": null
     },
     {
       "name": "Jami Omar Masjid",
@@ -93,7 +107,14 @@
         "jamiomar.org",
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": null,
+      "description": "Established in 1992 by Jamiatul Muslemeen of Ottawa-Carleton, this approximately 50,000 sq ft mosque serves Muslims in Ottawa's West End with religious and community services.",
+      "denomination": "sunni",
+      "hours": "4:00 AM - 10:30 PM daily",
+      "services": ["five_daily_prayers", "jummah", "nikah", "counseling", "funeral_services", "eid_prayers", "taraweeh", "marriage_counseling"],
+      "facilities": ["wudu_area", "women_section", "parking", "free_parking", "multipurpose_hall", "shoe_rack"],
+      "accessInfo": null
     },
     {
       "name": "Masjid ar-Rahmah (Mosque of Mercy)",
@@ -121,7 +142,14 @@
       "sources": [
         "mymasjid.ca",
         "google-maps"
-      ]
+      ],
+      "email": "info@mymasjid.ca",
+      "description": "Operated by the Assunnah Muslims Association (AMA), this mosque promotes spiritual development and community engagement through education, awareness, and diversity programs.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "nikah", "eid_prayers", "taraweeh", "food_bank", "youth_programs"],
+      "facilities": ["wudu_area", "women_section", "parking", "multipurpose_hall"],
+      "accessInfo": null
     },
     {
       "name": "Darul Arqum",
@@ -150,7 +178,14 @@
         "darularqum.org",
         "google-maps"
       ],
-      "notes": "First masjid in Riverside South area."
+      "notes": "First masjid in Riverside South area.",
+      "email": null,
+      "description": "A CRA-registered non-profit charitable organization serving the Muslim community in Gloucester South, near Riverside South and Findlay Creek, with Islamic education and community services.",
+      "denomination": "deobandi",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "arabic_classes", "islamic_studies"],
+      "facilities": ["wudu_area", "parking"],
+      "accessInfo": null
     },
     {
       "name": "Abu Bakr Musallah",
@@ -172,7 +207,14 @@
         "prayersconnect.com",
         "google-maps"
       ],
-      "notes": "Sunni musalla serving the Vanier/Overbrook community."
+      "notes": "Sunni musalla serving the Vanier/Overbrook community.",
+      "email": null,
+      "description": "A small, neat and clean Sunni musalla serving the Vanier/Overbrook community with daily prayers.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah"],
+      "facilities": ["wudu_area", "shoe_rack"],
+      "accessInfo": null
     },
     {
       "name": "467 Laurier Ave West Musalla",
@@ -193,7 +235,14 @@
       "sources": [
         "masjidway.com",
         "google-maps"
-      ]
+      ],
+      "email": null,
+      "description": "A small musalla on Laurier Avenue West in downtown Ottawa providing a prayer space for nearby workers and residents.",
+      "denomination": null,
+      "hours": null,
+      "services": ["five_daily_prayers"],
+      "facilities": [],
+      "accessInfo": null
     },
     {
       "name": "University of Ottawa Multifaith Room",
@@ -215,7 +264,14 @@
         "muslimlink.ca",
         "google-maps"
       ],
-      "notes": "Open 7am-11pm daily. Managed by UOMSA (University of Ottawa Muslim Students Association)."
+      "notes": "Open 7am-11pm daily. Managed by UOMSA (University of Ottawa Muslim Students Association).",
+      "email": null,
+      "description": "A multifaith prayer room at the University of Ottawa managed by the University of Ottawa Muslim Students Association (UOMSA), open to all students and staff.",
+      "denomination": null,
+      "hours": "7:00 AM - 11:00 PM daily",
+      "services": ["five_daily_prayers", "jummah"],
+      "facilities": ["wudu_area"],
+      "accessInfo": "UCU Room 125, University Centre building"
     },
     {
       "name": "SITE 3007 Prayer Room (University of Ottawa)",
@@ -237,7 +293,14 @@
         "siteprayer.wordpress.com",
         "google-maps"
       ],
-      "notes": "Located in SITE building 3rd floor. Uses ISNA method for prayer times."
+      "notes": "Located in SITE building 3rd floor. Uses ISNA method for prayer times.",
+      "email": null,
+      "description": "A dedicated prayer room on the 3rd floor of the SITE building at the University of Ottawa, using the ISNA method for prayer times.",
+      "denomination": null,
+      "hours": null,
+      "services": ["five_daily_prayers"],
+      "facilities": [],
+      "accessInfo": "Room 3007, SITE building 3rd floor, 800 King Edward Ave"
     },
     {
       "name": "Islam Care Centre",
@@ -258,7 +321,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@islamcare.ca",
+      "description": "A federally registered charity founded in 1993 specializing in dawah, new Muslim support, chaplaincy, counseling, and social services in downtown Ottawa.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "new_muslim_support", "counseling", "food_bank", "youth_programs", "islamic_studies"],
+      "facilities": ["wudu_area", "library"],
+      "accessInfo": null
     },
     {
       "name": "Darul-Uloom",
@@ -279,7 +349,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@darululoomottawa.org",
+      "description": "A registered charitable organization in Orleans offering prayers, dawah, Quran classes, Hadith lessons, Tafsir sessions, Darul-Ifta services, religious guidance, and family consultation.",
+      "denomination": "deobandi",
+      "hours": "5:30 AM - 8:30 PM daily",
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "islamic_studies", "nikah", "counseling", "funeral_services", "marriage_counseling", "youth_programs"],
+      "facilities": ["wudu_area", "women_section", "parking", "wheelchair_accessible"],
+      "accessInfo": null
     },
     {
       "name": "East Ottawa Masjid",
@@ -300,7 +377,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@eomcc.ca",
+      "description": "A diverse, inclusive, multi-ethnic grass-root community organization committed to leading and serving the community through Islam, offering daily prayers, educational programs, and community events.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "youth_programs", "eid_prayers"],
+      "facilities": ["wudu_area", "women_section", "parking", "wheelchair_accessible"],
+      "accessInfo": null
     },
     {
       "name": "MAC Qurtuba Islamic Centre",
@@ -321,7 +405,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "Part of the Muslim Association of Canada (MAC), this Islamic centre offers modern prayer facilities, educational programs, and community events with spacious prayer areas for families.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "youth_programs", "eid_prayers", "taraweeh", "madrasah"],
+      "facilities": ["wudu_area", "women_section", "parking", "free_parking", "childcare_room", "multipurpose_hall", "shoe_rack"],
+      "accessInfo": null
     },
     {
       "name": "Unknown Mosque",
@@ -342,7 +433,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "An unverified mosque listing at 241 Northwestern Avenue, near the main Ottawa Mosque. May be an annex or related facility.",
+      "denomination": null,
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah"],
+      "facilities": [],
+      "accessInfo": null
     },
     {
       "name": "Ottawa Islamic Centre & Assalam Mosque",

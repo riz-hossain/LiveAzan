@@ -31,6 +31,13 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
+      "email": null,
+      "description": "A small prayer space in downtown Kitchener serving the local Muslim community with daily prayers and Jummah.",
+      "denomination": null,
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah"],
+      "facilities": [],
+      "accessInfo": null,
       "sources": [
         "google-maps",
         "prayersconnect.com"
@@ -59,6 +66,13 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
+      "email": null,
+      "description": "Islamic centre in Cambridge serving the local Muslim community with daily prayers and Jummah services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "eid_prayers"],
+      "facilities": ["parking"],
+      "accessInfo": null,
       "sources": [
         "google-maps"
       ]
@@ -86,6 +100,13 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
+      "email": null,
+      "description": "A mosque serving the Kitchener Muslim community with five daily prayers, Friday prayers, and community programs.",
+      "denomination": "sunni",
+      "hours": "5 AM – 10:30 PM daily",
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "parking", "women_section"],
+      "accessInfo": null,
       "sources": [
         "masjidbox.com",
         "google-maps"
@@ -107,6 +128,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "A welcoming and inclusive Islamic centre promoting Islamic education and community services, with Quranic studies, Arabic language classes, and worship space.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "islamic_studies", "arabic_classes", "eid_prayers"],
+      "facilities": [],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
@@ -128,6 +156,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": "info@kitchenermasjid.com",
+      "description": "The largest mosque in Kitchener, run by the Muslim Association of Canada (MAC), serving a large and diverse Muslim community with daily prayers, Quran school, and community events.",
+      "denomination": "sunni",
+      "hours": "5 AM – 10:30 PM daily",
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "youth_programs", "eid_prayers", "taraweeh", "islamic_studies"],
+      "facilities": ["wudu_area", "parking", "women_section", "wheelchair_accessible"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
@@ -149,6 +184,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": "info@hespelermasjid.ca",
+      "description": "A MAC-operated Sunni mosque serving the growing Hespeler Muslim community since 2019, with Quran classes, youth events, and a dedicated women's prayer section.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "youth_programs", "eid_prayers"],
+      "facilities": ["wudu_area", "women_section", "parking"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
@@ -170,6 +212,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": "farooqmasjid@outlook.com",
+      "description": "Established in 1972, the Cambridge Muslim Society operates Jamia Umar Al-Farooq Masjid. Offers daily prayers, children's Madrassah, funeral services, and community programs.",
+      "denomination": "sunni",
+      "hours": "Open 7 days a week",
+      "services": ["five_daily_prayers", "jummah", "madrasah", "funeral_services", "eid_prayers", "janaza"],
+      "facilities": ["parking", "gym", "multipurpose_hall"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
@@ -191,6 +240,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "An Ahmadiyya mosque in Cambridge, originally a church converted into a mosque with a capacity of about 150 people.",
+      "denomination": "ahmadiyya",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "eid_prayers"],
+      "facilities": ["parking"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
@@ -212,6 +268,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": "info@townlinemuslimcentre.ca",
+      "description": "A family-friendly Islamic centre offering prayers, community events, youth and women's programs, and counseling services by the resident Imam.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "youth_programs", "counseling", "marriage_counseling", "eid_prayers", "taraweeh"],
+      "facilities": ["parking", "women_section", "multipurpose_hall"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],

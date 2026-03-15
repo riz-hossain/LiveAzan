@@ -31,6 +31,13 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
+      "email": "secretary@londonmosque.ca",
+      "description": "The first mosque in Ontario and second in Canada, established in 1964. The largest mosque in London and Middlesex county, serving as both a religious organization and community centre.",
+      "denomination": "sunni",
+      "hours": "5 AM – 11 PM daily",
+      "services": ["five_daily_prayers", "jummah", "funeral_services", "zakat_collection", "nikah", "youth_programs", "new_muslim_support", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "parking", "women_section", "gym", "multipurpose_hall"],
+      "accessInfo": null,
       "sources": [
         "londonmosque.ca",
         "masjidbox.com",
@@ -60,6 +67,13 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
+      "email": null,
+      "description": "A community non-profit institution offering social and educational programs, prayer services, and assistance for immigrants and newcomers in London.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "madrasah", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "parking", "women_section"],
+      "accessInfo": null,
       "sources": [
         "masjidbox.com",
         "google-maps"
@@ -88,6 +102,13 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
+      "email": null,
+      "description": "A MAC-operated Islamic centre offering Arabic classes, youth programs, family night events, day camps, and community programming for all ages.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "arabic_classes", "youth_programs", "quran_classes", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "parking", "women_section", "multipurpose_hall", "childcare_room"],
+      "accessInfo": null,
       "sources": [
         "macnet.ca",
         "prayersconnect.com",
@@ -110,6 +131,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "Muslim prayer room in the University Community Centre managed by the Western University MSA, the largest faith association on campus since 1969.",
+      "denomination": "non_denominational",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah"],
+      "facilities": [],
+      "accessInfo": "University Community Centre (UCC), Room 38A",
       "sources": [
         "google-maps"
       ],
@@ -131,6 +159,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": "secretary@londonmosque.ca",
+      "description": "The first mosque in Ontario and second in Canada, established in 1964. A landmark religious organization and community centre in London.",
+      "denomination": "sunni",
+      "hours": "5 AM – 11 PM daily",
+      "services": ["five_daily_prayers", "jummah", "funeral_services", "zakat_collection", "nikah", "youth_programs", "new_muslim_support", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "parking", "women_section", "gym", "multipurpose_hall"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
@@ -152,6 +187,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": "info@islamiccentre.ca",
+      "description": "A spacious and well-maintained community non-profit mosque focused on building a safe, strong, and welcoming Canadian-Muslim community with educational and social programs.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "madrasah", "islamic_studies", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "parking", "women_section"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
@@ -173,6 +215,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "An Ahmadiyya Muslim Community mosque in London, Ontario, serving as a focal point for local Ahmadiyya Muslims.",
+      "denomination": "ahmadiyya",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "eid_prayers"],
+      "facilities": ["parking"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],

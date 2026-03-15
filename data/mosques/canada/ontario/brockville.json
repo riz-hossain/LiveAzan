@@ -20,14 +20,17 @@
       "phone": null,
       "email": null,
       "website": "http://www.brockvillemuslims.ca/",
-      "description": "Islamic center serving Brockville and the eastern Ontario corridor along Highway 401 between Kingston and Cornwall.",
-      "denomination": null,
+      "description": "Islamic center serving Brockville and the eastern Ontario corridor along Highway 401 between Kingston and Cornwall. Founded in 2021 as a registered charity.",
+      "denomination": "sunni",
       "hours": null,
       "services": [
         "five_daily_prayers",
-        "jummah"
+        "jummah",
+        "islamic_studies"
       ],
-      "facilities": [],
+      "facilities": [
+        "parking"
+      ],
       "accessInfo": "Also listed at 36 Cambridge Crescent, Brockville, ON K6V 6L8",
       "googleRating": null,
       "googleReviewCount": null,

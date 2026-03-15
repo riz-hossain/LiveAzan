@@ -31,6 +31,13 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
+      "email": "info@miltonmasjid.com",
+      "description": "Main mosque of the Muslim Association of Milton, serving Muslim communities in Milton, Oakville, and Burlington for over a decade with daily prayers, Islamic school, food bank, and community programs.",
+      "denomination": "sunni",
+      "hours": "Fajr to Isha daily",
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "tahfeez", "madrasah", "youth_programs", "food_bank", "counseling", "eid_prayers", "taraweeh", "sisters_halaqah", "mens_halaqah"],
+      "facilities": ["wudu_area", "women_section", "wheelchair_accessible", "parking", "free_parking", "gym", "shoe_rack", "multipurpose_hall"],
+      "accessInfo": null,
       "sources": [
         "miltonmasjid.com",
         "masjidbox.com",
@@ -53,6 +60,13 @@
       "hasLiveStream": false,
       "verified": true,
       "iqamaTimes": null,
+      "email": "info@miltonmasjid.com",
+      "description": "Satellite prayer space operated by the Muslim Association of Milton, offering daily prayers, Quran classes, and a food bank serving halal options to the Milton, Oakville, and Burlington communities.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "food_bank"],
+      "facilities": ["wudu_area", "women_section", "parking"],
+      "accessInfo": null,
       "sources": [
         "miltonmasjid.com",
         "google-maps"
@@ -75,6 +89,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "Masjid and dawah centre operated by the Ahle-Hadith Society of Canada, offering Quran classes, Tajweed courses, and Sunnah sessions in a clean and cozy environment.",
+      "denomination": "salafi",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "islamic_studies"],
+      "facilities": ["wudu_area", "parking", "shoe_rack"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
@@ -96,6 +117,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": "iccm@icna.ca",
+      "description": "The first Islamic community centre in Milton, affiliated with ICNA Canada. Full-time masjid and community centre open from Fajr to Isha daily, with programs for youth, brothers, sisters, reverts, and seniors.",
+      "denomination": "sunni",
+      "hours": "Fajr to Isha daily",
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "youth_programs", "new_muslim_support", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "women_section", "wheelchair_accessible", "parking", "free_parking", "shoe_rack", "multipurpose_hall"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],

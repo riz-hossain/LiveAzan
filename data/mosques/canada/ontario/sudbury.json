@@ -18,7 +18,21 @@
       "latitude": 46.4882,
       "longitude": -80.993,
       "phone": "+1-705-674-3350",
+      "email": null,
       "website": null,
+      "description": "Islamic centre serving the Greater Sudbury Muslim community on Sparks Street. One of multiple mosques serving Northern Ontario's largest city.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers"
+      ],
+      "facilities": [
+        "parking",
+        "wudu_area"
+      ],
+      "accessInfo": null,
       "googleRating": 4.4,
       "googleReviewCount": 20,
       "hasLiveStream": false,
@@ -36,25 +50,45 @@
       ]
     },
     {
-      "name": "Sudbury Mosque",
+      "name": "Sudbury Mosque (Islamic Association of Sudbury)",
       "type": "mosque",
-      "address": "755, Churchill Avenue, Sudbury, ON",
+      "address": "755, Churchill Avenue, Sudbury, ON P3A 4A1",
       "city": "Sudbury",
       "province": "Ontario",
       "country": "Canada",
       "latitude": 46.51318,
       "longitude": -80.934573,
-      "phone": null,
-      "website": null,
+      "phone": "+1-705-525-7729",
+      "email": "board@iasudbury.com",
+      "website": "http://www.iasudbury.com/",
+      "description": "Established in the 1970s as the Sudbury Muslim Association, the Islamic Association of Sudbury purchased the Churchill Avenue property in 1984 and built a new Islamic Centre on the site in 1995.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "wheelchair_accessible",
+        "parking"
+      ],
+      "accessInfo": null,
       "googleRating": null,
       "googleReviewCount": null,
       "hasLiveStream": false,
       "verified": false,
-      "iqamaTimes": null,
+      "iqamaTimes": {
+        "jummah": "12:30"
+      },
       "sources": [
-        "openstreetmap"
+        "openstreetmap",
+        "iasudbury.com",
+        "211north.ca"
       ],
-      "notes": null
+      "notes": "Also known as Islamic Association of Sudbury (IAS). Khutba starts at 12:30 PM on Fridays."
     }
   ]
 }

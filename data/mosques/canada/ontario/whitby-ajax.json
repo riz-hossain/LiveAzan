@@ -34,7 +34,31 @@
       "sources": [
         "masjidbox.com",
         "google-maps"
-      ]
+      ],
+      "email": "info@masjid.ca",
+      "description": "Also known as Masjid Usman, Pickering Islamic Centre was officially opened in 2008 and serves the Pickering community with daily prayers, an elementary school, and Quran education programs.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "nikah",
+        "funeral_services",
+        "quran_classes",
+        "madrasah",
+        "youth_programs",
+        "islamic_studies",
+        "sisters_halaqah",
+        "counseling"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Ajax Islamic Centre",
@@ -61,7 +85,21 @@
       },
       "sources": [
         "google-maps"
-      ]
+      ],
+      "email": null,
+      "description": "A mosque in Ajax providing daily prayers and serving the Muslim community of the Ajax area in the Durham Region.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Whitby Muslim Community Centre",
@@ -89,7 +127,20 @@
       "sources": [
         "google-maps"
       ],
-      "notes": "Community centre with dedicated prayer space serving Whitby area Muslims."
+      "notes": "Community centre with dedicated prayer space serving Whitby area Muslims.",
+      "email": null,
+      "description": "A community centre with dedicated prayer space serving Muslims in the Whitby area of the Durham Region.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [
+        "wudu_area",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Al Rayan Islamic Centre",
@@ -100,8 +151,8 @@
       "country": "Canada",
       "latitude": 43.911339,
       "longitude": -78.786567,
-      "phone": null,
-      "website": null,
+      "phone": "+1-905-433-9255",
+      "website": "https://www.alrayanislamiccentre.org/",
       "googleRating": null,
       "googleReviewCount": null,
       "hasLiveStream": false,
@@ -110,7 +161,25 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@alrayanislamiccentre.org",
+      "description": "A grassroots Islamic centre in Courtice serving the Muslim community of Clarington and surrounding regions with daily prayers, Quran classes, and youth programs.",
+      "denomination": "sunni",
+      "hours": "5:00 AM – 11:00 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "madrasah",
+        "youth_programs",
+        "islamic_studies"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Baitul Mahdi Mosque",
@@ -131,7 +200,24 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "An Ahmadiyya mosque converted from a Dutch-style castle on a 25-acre property, donated to the community in 2005 and officially opened in 2006 during the visit of Khalifatul Masih V.",
+      "denomination": "ahmadiyya",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "free_parking",
+        "outdoor_space",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null
     }
   ]
 }

@@ -24,6 +24,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": "vicechair@nmic.ca",
+      "description": "One of the oldest Islamic centres in York Region, established in 2005, serving over 500 families from 62+ nationalities. Over 1,200 attend weekly Jummah prayers.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "tahfeez", "madrasah", "youth_programs", "eid_prayers", "taraweeh", "islamic_studies"],
+      "facilities": ["wudu_area", "women_section", "wheelchair_accessible", "parking", "free_parking", "playground", "shoe_rack"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],

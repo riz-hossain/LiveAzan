@@ -18,7 +18,7 @@
       "latitude": 44.305,
       "longitude": -78.322,
       "phone": "+1-705-748-1311",
-      "website": null,
+      "website": "https://www.kmrapeterborough.org/",
       "googleRating": 4.3,
       "googleReviewCount": 15,
       "hasLiveStream": false,
@@ -33,12 +33,31 @@
       },
       "sources": [
         "google-maps"
-      ]
+      ],
+      "email": "info@kmrapeterborough.org",
+      "description": "Operated by the Kawartha Muslim Religious Association since 2002, Masjid Al-Salaam is the only mosque in Peterborough and the surrounding area, offering daily prayers, funeral services, and community programs.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "funeral_services",
+        "counseling",
+        "zakat_collection"
+      ],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "parking",
+        "cemetery"
+      ],
+      "accessInfo": null
     },
     {
       "name": "Masjid Al-Salaam",
       "type": "mosque",
-      "address": "Address unknown \u2014 needs verification",
+      "address": "Address unknown — needs verification",
       "city": "Peterborough",
       "province": "Ontario",
       "country": "Canada",
@@ -54,7 +73,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "OpenStreetMap listing that likely corresponds to the same Masjid Al-Salaam operated by KMRA in Peterborough.",
+      "denomination": null,
+      "hours": null,
+      "services": [],
+      "facilities": [],
+      "accessInfo": null
     }
   ]
 }

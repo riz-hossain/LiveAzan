@@ -31,6 +31,13 @@
         "isha": "21:15",
         "jummah": "13:45"
       },
+      "email": null,
+      "description": "A Sunni mosque in Guelph housed in a historic 1856 stone church building purchased in 2008, offering daily prayers, Quran classes, and community programs.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "arabic_classes", "eid_prayers"],
+      "facilities": ["wudu_area", "parking", "women_section"],
+      "accessInfo": null,
       "sources": [
         "masjidbox.com",
         "google-maps"
@@ -59,6 +66,13 @@
         "isha": "21:00",
         "jummah": "13:30"
       },
+      "email": null,
+      "description": "An independent faith-based organization serving the Guelph Muslim community with academic support, Arabic classes, funeral services, matrimonial services, and community programs.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "arabic_classes", "funeral_services", "nikah", "eid_prayers"],
+      "facilities": ["gym", "multipurpose_hall", "kitchen", "parking"],
+      "accessInfo": null,
       "sources": [
         "google-maps"
       ]
@@ -79,6 +93,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": "msa@uoguelph.ca",
+      "description": "Muslim prayer space in the University Centre basement managed by the University of Guelph MSA. Jummah prayers held Fridays at 1:30 PM in UC Room 103.",
+      "denomination": "non_denominational",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah"],
+      "facilities": ["wudu_area"],
+      "accessInfo": "University Centre, Room UC 008B (basement). Wudu rooms next to bathrooms on same floor.",
       "sources": [
         "google-maps"
       ],
@@ -100,6 +121,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": "info@masjidaisha.ca",
+      "description": "A welcoming Sunni mosque in Guelph offering religious services, Quran lessons, educational programs, and community gatherings with wheelchair accessibility.",
+      "denomination": "sunni",
+      "hours": "5 AM – 10 PM daily",
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "eid_prayers"],
+      "facilities": ["wudu_area", "parking", "wheelchair_accessible", "separate_entrance_women"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],

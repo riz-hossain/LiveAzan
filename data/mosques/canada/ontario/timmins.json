@@ -20,14 +20,20 @@
       "phone": null,
       "email": null,
       "website": null,
-      "description": "Islamic centre serving the Timmins community in Northern Ontario. Located in a basement space.",
-      "denomination": null,
+      "description": "Islamic centre serving the Timmins community in Northern Ontario. Focused on instilling Islamic ideals and serving humanity while nurturing youth.",
+      "denomination": "sunni",
       "hours": null,
       "services": [
         "five_daily_prayers",
-        "jummah"
+        "jummah",
+        "eid_prayers",
+        "youth_programs"
       ],
-      "facilities": [],
+      "facilities": [
+        "wudu_area",
+        "women_section",
+        "separate_entrance_women"
+      ],
       "accessInfo": "Located in basement (BSMT) of building",
       "googleRating": null,
       "googleReviewCount": null,

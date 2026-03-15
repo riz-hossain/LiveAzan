@@ -31,6 +31,13 @@
         "isha": "21:00",
         "jummah": "13:15"
       },
+      "email": null,
+      "description": "Mosque serving the Sarnia-Lambton Muslim community at Blackwell Road, offering daily prayers and Jummah services.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "parking"],
+      "accessInfo": null,
       "sources": [
         "google-maps"
       ]
@@ -51,6 +58,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": "sarnia.muslim.association@gmail.com",
+      "description": "Established in the 1980s, the Sarnia Muslim Association is a Sunni mosque serving the Sarnia-Lambton community for over 30 years. The current masjid was completed in 2004 and hosts weekly Islamic school and Ramadan programs.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "eid_prayers", "taraweeh", "quran_classes", "arabic_classes", "madrasah", "food_bank", "zakat_collection"],
+      "facilities": ["wudu_area", "women_section", "wheelchair_accessible", "parking"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],

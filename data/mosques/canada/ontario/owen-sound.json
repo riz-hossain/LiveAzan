@@ -11,44 +11,33 @@
     {
       "name": "Owen Sound Muslim Association",
       "type": "mosque",
-      "address": "895, 7th Street East, Owen Sound, On",
+      "address": "895, 7th Street East, Owen Sound, ON N4K 1K2",
       "city": "Owen Sound",
       "province": "Ontario",
       "country": "Canada",
       "latitude": 44.563395,
       "longitude": -80.92729,
-      "phone": null,
+      "phone": "+1-514-573-2913",
+      "email": "admin@osmuslim.ca",
       "website": "https://osmuslim.ca/",
-      "googleRating": null,
-      "googleReviewCount": null,
-      "hasLiveStream": false,
-      "verified": false,
-      "iqamaTimes": null,
-      "sources": [
-        "openstreetmap"
-      ],
-      "notes": null
-    },
-    {
-      "name": "Port Elgin Islamic Center",
-      "type": "mosque",
-      "address": "Port Elgin, Saugeen Shores, ON",
-      "city": "Saugeen Shores",
-      "province": "Ontario",
-      "country": "Canada",
-      "latitude": 44.4419,
-      "longitude": -81.3930,
-      "phone": null,
-      "email": null,
-      "website": null,
-      "description": "Islamic center in Port Elgin / Saugeen Shores area.",
-      "denomination": null,
+      "description": "Non-profit Islamic association serving the Owen Sound and Grey-Bruce region. Offers daily and Friday prayers, Quran classes, marriage and funeral services, and family counselling.",
+      "denomination": "sunni",
       "hours": null,
       "services": [
         "five_daily_prayers",
-        "jummah"
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "nikah",
+        "funeral_services",
+        "quran_classes",
+        "marriage_counseling",
+        "new_muslim_support"
       ],
-      "facilities": [],
+      "facilities": [
+        "parking",
+        "wudu_area"
+      ],
       "accessInfo": null,
       "googleRating": null,
       "googleReviewCount": null,
@@ -56,9 +45,50 @@
       "verified": false,
       "iqamaTimes": null,
       "sources": [
-        "prayersconnect.com"
+        "openstreetmap",
+        "osmuslim.ca",
+        "doorsopenontario.on.ca",
+        "211ontario.ca"
       ],
-      "notes": "Address needs confirmation. Listed on Prayers Connect for Saugeen Shores area."
+      "notes": "Also assists refugees and newcomers. Imam Hafeez Motorwala available for Islamic inquiries and counselling."
+    },
+    {
+      "name": "Port Elgin Islamic Center",
+      "type": "mosque",
+      "address": "515 Goderich St, Maple Square Mall Unit 107 & 108, Port Elgin, ON N0H 2C1",
+      "city": "Saugeen Shores",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.4419,
+      "longitude": -81.3930,
+      "phone": null,
+      "email": "portelginmc786@gmail.com",
+      "website": "https://portelginic.com/",
+      "description": "Islamic center in Port Elgin operated by Jamia Imdadia, a Canadian registered charity. Serves the Saugeen Shores Muslim community.",
+      "denomination": "deobandi",
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "eid_prayers",
+        "taraweeh",
+        "quran_classes",
+        "youth_programs"
+      ],
+      "facilities": [
+        "parking"
+      ],
+      "accessInfo": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "prayersconnect.com",
+        "portelginic.com"
+      ],
+      "notes": "Also known as Jamia Imdadia. Located in Maple Square Mall. Has a full-time Imam. Organizes community iftars and kids summer camps."
     }
   ]
 }

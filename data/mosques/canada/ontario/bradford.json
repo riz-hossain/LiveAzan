@@ -24,6 +24,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "Large Ahmadiyya Muslim Community property in Bradford with a mosque, playgrounds, walking trails, orchard and fish ponds. Hosts annual conventions including Jalsa Salana and youth gatherings.",
+      "denomination": "ahmadiyya",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "eid_prayers", "youth_programs"],
+      "facilities": ["parking", "free_parking", "outdoor_space", "playground"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
@@ -45,6 +52,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "Ahmadiyya Muslim Community mosque on Elizabeth Street in Bradford, serving the Bradford East and West Jama'at communities.",
+      "denomination": "ahmadiyya",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah"],
+      "facilities": ["parking"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],

@@ -24,6 +24,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "Sunni mosque housed in a historic 1878 church building in Ballinafad, inspired by Jakarta's Istiqlal Mosque. Nurtured by Indonesian heritage, operational since Ramadan 2022.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "sisters_halaqah", "mens_halaqah"],
+      "facilities": ["wudu_area", "women_section", "wheelchair_accessible", "parking", "free_parking"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
@@ -45,6 +52,13 @@
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
+      "email": null,
+      "description": "Wellington County's first mosque, located in a historic Disciples Church building in Erin. Named Dar Ul Qamar, it serves Muslims in the area between Orangeville and Guelph.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah"],
+      "facilities": ["parking"],
+      "accessInfo": null,
       "sources": [
         "openstreetmap"
       ],
