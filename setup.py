@@ -779,12 +779,17 @@ def _gradle_build_with_retry(android_dir, base_cmd, env):
     rc, tail = _run_streaming(base_cmd, cwd=str(android_dir), env=env)
     if rc == 0:
         return
-    if "daemon disappeared" in tail.lower():
-        warn("Gradle daemon crashed. Retrying with --no-daemon...")
+    tail_lower = tail.lower()
+    if "daemon disappeared" in tail_lower or "jvm crash" in tail_lower or "hs_err" in tail_lower:
+        warn("Gradle daemon crashed. Stopping daemons and retrying with --no-daemon...")
+        _stop_gradle_daemons(android_dir)
     else:
         warn("Gradle build failed. Retrying with conservative settings...")
+    retry_env = dict(env)
+    retry_env["GRADLE_OPTS"] = "-Dorg.gradle.jvmargs=-Xmx2g -Dfile.encoding=UTF-8"
+    retry_env.pop("JAVA_TOOL_OPTIONS", None)
     retry_cmd = base_cmd + ["--no-daemon", "--no-parallel", "--max-workers=1"]
-    rc2, _ = _run_streaming(retry_cmd, cwd=str(android_dir), env=env)
+    rc2, _ = _run_streaming(retry_cmd, cwd=str(android_dir), env=retry_env)
     if rc2 != 0:
         raise RuntimeError("Android build failed after retry.")
 
@@ -838,8 +843,8 @@ def cmd_android(repo, fresh=False, nuke_gradle=False):
 
     build_env = dict(os.environ)
     build_env.setdefault("GRADLE_OPTS",
-                         "-Dorg.gradle.jvmargs=-Xmx6g -XX:MaxMetaspaceSize=2g -Dfile.encoding=UTF-8")
-    build_env.setdefault("JAVA_TOOL_OPTIONS", "-Xmx6g")
+                         "-Dorg.gradle.jvmargs=-Xmx3g -Dfile.encoding=UTF-8")
+    build_env.pop("JAVA_TOOL_OPTIONS", None)
     build_env.setdefault("NODE_ENV", "production")
 
     selected_jdk = _select_jdk_for_android(android_dir)
