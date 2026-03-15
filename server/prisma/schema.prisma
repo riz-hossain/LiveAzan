@@ -206,3 +206,15 @@ model CoverageRequest {
   createdAt  DateTime      @default(now())
   resolvedAt DateTime?
 }
+
+model IqamaRefreshLog {
+  id                  String   @id @default(uuid())
+  runAt               DateTime @default(now())
+  citiesProcessed     Int
+  mosquesRefreshed    Int
+  mosquesStillMissing Int
+  durationMs          Int
+  triggeredBy         String   @default("cron") // "cron" | "admin" | "manual"
+
+  @@index([runAt])
+}

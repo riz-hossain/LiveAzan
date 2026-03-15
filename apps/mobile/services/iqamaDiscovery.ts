@@ -2,10 +2,11 @@
  * Iqama discovery — runs entirely on the device.
  *
  * When a user taps "Find Iqama Times Near Me", this service:
- * 1. Queries MAWAQIT directly (mosques that self-publish iqama times)
- * 2. Merges with our backend DB (curated seed data)
- * 3. For mosques with a website but no MAWAQIT entry, scrapes the site
- * 4. Caches everything to AsyncStorage for offline use
+ * 1. Queries our backend DB first (curated, pre-enriched, authoritative)
+ * 2. For mosques still missing iqama, queries MAWAQIT directly
+ * 3. For remaining gaps, scrapes the mosque website
+ * 4. Also surfaces MAWAQIT-only mosques not yet in our backend
+ * 5. Caches everything to AsyncStorage for offline use
  *
  * No backend proxy is needed — native apps can call any API directly.
  */
@@ -42,106 +43,113 @@ export interface DiscoveredMosque extends Mosque {
 
 /**
  * Discover nearby mosques and their iqama times.
- * Returns merged results from MAWAQIT + our backend.
+ *
+ * Priority order:
+ *  1. Our backend (pre-enriched, curated) — use iqamaSchedules if present
+ *  2. MAWAQIT direct — for backend mosques missing iqama + new discoveries
+ *  3. Website scrape — for mosques not on MAWAQIT
+ *
  * Results are cached to AsyncStorage.
  */
 export async function discoverNearbyIqama(
   lat: number,
   lon: number
 ): Promise<DiscoveredMosque[]> {
-  // Fetch from MAWAQIT and our backend in parallel
-  const [mawaqitMosques, backendResponse] = await Promise.allSettled([
-    searchNearby(lat, lon, 5000),
+  // Fetch backend and MAWAQIT in parallel
+  const [backendResponse, mawaqitMosques] = await Promise.allSettled([
     fetchMosquesNearby(lat, lon, 25),
+    searchNearby(lat, lon, 5000),
   ]);
 
-  const mawaqit =
-    mawaqitMosques.status === "fulfilled" ? mawaqitMosques.value : [];
   const backendMosques =
     backendResponse.status === "fulfilled"
       ? backendResponse.value.mosques
       : [];
+  const mawaqit =
+    mawaqitMosques.status === "fulfilled" ? mawaqitMosques.value : [];
 
-  // Start with MAWAQIT results, enriched with iqama times
-  const discovered: DiscoveredMosque[] = mawaqit.map((m) => ({
-    id: m.uuid,
-    name: m.name,
-    type: "MOSQUE" as any,
-    address: "",
-    city: "",
-    province: "",
-    country: "Canada",
-    latitude: m.latitude,
-    longitude: m.longitude,
-    hasLiveStream: false,
-    verified: false,
-    mawaqitId: m.uuid,
-    iqamaSource: "mawaqit" as const,
-    iqamaLastFetched: new Date().toISOString(),
-    discoveredIqama: extractIqamaTimes(m),
-  }));
+  // Start with backend mosques — they are the authoritative source
+  const discovered: DiscoveredMosque[] = [];
 
-  // Merge backend mosques: update existing entries with richer data,
-  // append ones that aren't in MAWAQIT results.
   for (const bm of backendMosques) {
-    const matchIdx = discovered.findIndex(
-      (d) =>
-        haversineKm(d.latitude, d.longitude, bm.latitude, bm.longitude) < 0.2
-    );
+    // If backend already has iqama schedules, use them directly
+    const hasBackendIqama =
+      bm.iqamaSchedules && bm.iqamaSchedules.length > 0;
 
-    if (matchIdx >= 0) {
-      // Merge: keep MAWAQIT iqama times but use backend's richer metadata
-      discovered[matchIdx] = {
-        ...bm,
-        id: bm.id, // use our DB id for navigation
-        mawaqitId: discovered[matchIdx].mawaqitId,
-        discoveredIqama: discovered[matchIdx].discoveredIqama,
-        iqamaSource: "mawaqit",
-        iqamaLastFetched: discovered[matchIdx].iqamaLastFetched,
-      };
-    } else {
-      // Backend-only mosque: try to match on MAWAQIT
-      const mawaqitMatch = findBestMatch(
-        mawaqit,
-        bm.name,
-        bm.latitude,
-        bm.longitude
-      );
-
-      let discoveredIqama: IqamaTimes | undefined;
-      let source: "mawaqit" | "website" | "manual" | undefined;
-
-      if (mawaqitMatch) {
-        discoveredIqama = extractIqamaTimes(mawaqitMatch);
-        source = "mawaqit";
-      } else if (bm.website) {
-        // Fallback: scrape the mosque website
-        discoveredIqama = await scrapeWebsiteIqama(bm.website);
-        if (Object.keys(discoveredIqama).length > 0) {
-          source = "website";
-        }
-      }
-
+    if (hasBackendIqama) {
       discovered.push({
         ...bm,
-        discoveredIqama,
-        iqamaSource: source,
-        iqamaLastFetched:
-          source ? new Date().toISOString() : bm.iqamaLastFetched,
+        iqamaSource: (bm.iqamaSource as any) ?? "manual",
+        iqamaLastFetched: bm.iqamaLastFetched ?? undefined,
       });
+      continue;
     }
+
+    // Backend mosque has no iqama yet — try MAWAQIT
+    const mawaqitMatch = findBestMatch(mawaqit, bm.name, bm.latitude, bm.longitude);
+    let discoveredIqama: IqamaTimes | undefined;
+    let source: "mawaqit" | "website" | "manual" | undefined;
+
+    if (mawaqitMatch) {
+      const iqama = extractIqamaTimes(mawaqitMatch);
+      if (Object.keys(iqama).length > 0) {
+        discoveredIqama = iqama;
+        source = "mawaqit";
+      }
+    }
+
+    // Still nothing — try website scrape
+    if (!discoveredIqama && bm.website) {
+      const iqama = await scrapeWebsiteIqama(bm.website);
+      if (Object.keys(iqama).length > 0) {
+        discoveredIqama = iqama;
+        source = "website";
+      }
+    }
+
+    discovered.push({
+      ...bm,
+      discoveredIqama,
+      iqamaSource: source,
+      iqamaLastFetched: source ? new Date().toISOString() : bm.iqamaLastFetched,
+    });
+  }
+
+  // Append MAWAQIT-only mosques not already in our backend
+  // (new discoveries — will eventually be submitted/added to backend)
+  for (const m of mawaqit) {
+    const alreadyCovered = discovered.some(
+      (d) => haversineKm(d.latitude, d.longitude, m.latitude, m.longitude) < 0.2
+    );
+    if (alreadyCovered) continue;
+
+    discovered.push({
+      id: m.uuid,
+      name: m.name,
+      type: "MOSQUE" as any,
+      address: "",
+      city: "",
+      province: "",
+      country: "Canada",
+      latitude: m.latitude,
+      longitude: m.longitude,
+      hasLiveStream: false,
+      verified: false,
+      mawaqitId: m.uuid,
+      iqamaSource: "mawaqit" as const,
+      iqamaLastFetched: new Date().toISOString(),
+      discoveredIqama: extractIqamaTimes(m),
+    });
   }
 
   // Sort by distance to user
-  discovered.sort((a, b) => {
-    const da = haversineKm(lat, lon, a.latitude, a.longitude);
-    const db = haversineKm(lat, lon, b.latitude, b.longitude);
-    return da - db;
-  });
+  discovered.sort((a, b) =>
+    haversineKm(lat, lon, a.latitude, a.longitude) -
+    haversineKm(lat, lon, b.latitude, b.longitude)
+  );
 
   // Cache the merged results
-  const cacheKey = nearbyMosquesKey(lat, lon);
-  await setCached(cacheKey, discovered);
+  await setCached(nearbyMosquesKey(lat, lon), discovered);
 
   // Cache individual iqama schedules
   for (const mosque of discovered) {
