@@ -797,7 +797,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@snmc.ca",
+      "description": "A grassroots, non-partisan, non-profit community-oriented Sunni mosque in South Nepean with a capacity of 800+, guided by principles of honesty, openness, and fairness.",
+      "denomination": "sunni",
+      "hours": "Mon-Fri 8:00 AM - 9:00 PM, Sat-Sun 12:00 PM - 9:00 PM",
+      "services": ["five_daily_prayers", "jummah", "nikah", "funeral_services", "eid_prayers", "taraweeh"],
+      "facilities": ["wudu_area", "women_section", "parking", "wheelchair_accessible", "playground", "multipurpose_hall"],
+      "accessInfo": null
     },
     {
       "name": "Masjid Ar-Rahman",
@@ -818,7 +825,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "info@mymasjid.ca",
+      "description": "Operated by the Assunnah Muslims Association (AMA) at Hunt Club Road, this mosque offers daily prayers, community events, and rents its basement for weddings and gatherings.",
+      "denomination": "sunni",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "nikah", "eid_prayers", "taraweeh", "food_bank"],
+      "facilities": ["wudu_area", "women_section", "parking", "multipurpose_hall"],
+      "accessInfo": null
     },
     {
       "name": "Iman Ali (As) Masjid",
@@ -839,7 +853,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": null,
+      "description": "A Shia Jafari mosque serving as a religious and cultural center for Ottawa South's Muslim community, offering daily congregational prayers, educational programs, and youth activities.",
+      "denomination": "shia",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "quran_classes", "arabic_classes", "youth_programs", "islamic_studies"],
+      "facilities": ["wudu_area", "women_section", "parking"],
+      "accessInfo": null
     },
     {
       "name": "Musalla As-Sahaba",
@@ -860,7 +881,14 @@
       "sources": [
         "openstreetmap"
       ],
-      "notes": null
+      "notes": null,
+      "email": "dar.as.sahaba@gmail.com",
+      "description": "Officially opened in October 2005, this musalla serves the Bayshore/Ramsey community with five daily prayers, Jummah, and regular Islamic lectures.",
+      "denomination": "salafi",
+      "hours": null,
+      "services": ["five_daily_prayers", "jummah", "nikah", "funeral_services", "islamic_studies"],
+      "facilities": ["wudu_area", "women_section", "parking"],
+      "accessInfo": null
     }
   ]
 }
