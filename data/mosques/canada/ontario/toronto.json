@@ -1,0 +1,188 @@
+{
+  "region": "toronto",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.6532,
+  "centerLon": -79.3832,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Islamic Foundation of Toronto",
+      "address": "441 Nugget Ave, Scarborough, ON M1S 5E1",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.7865,
+      "longitude": -79.2622,
+      "phone": "+1-416-321-0909",
+      "website": "https://www.islamicfoundation.ca",
+      "hasLiveStream": true,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["islamicfoundation.ca", "masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Masjid Toronto",
+      "address": "168 Dundas St W, Toronto, ON M5G 1C2",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.6547,
+      "longitude": -79.3860,
+      "phone": "+1-416-964-8904",
+      "website": "https://www.masjidtoronto.com",
+      "hasLiveStream": true,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["masjidtoronto.com", "masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Jami Mosque",
+      "address": "56 Boustead Ave, Toronto, ON M6R 1Y9",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.6480,
+      "longitude": -79.4511,
+      "phone": "+1-416-769-1192",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:45",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Imdadul Islamic Centre",
+      "address": "56 Rivalda Rd, North York, ON M9M 2M8",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.7404,
+      "longitude": -79.5370,
+      "phone": "+1-416-740-8666",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+4",
+        "isha": "21:00",
+        "jummah": "14:00"
+      },
+      "sources": ["google-maps", "prayersconnect.com"]
+    },
+    {
+      "name": "Abu Huraira Centre",
+      "address": "100 McLevin Ave, Scarborough, ON M1B 2V5",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.8074,
+      "longitude": -79.2065,
+      "phone": "+1-416-335-9173",
+      "website": "https://www.abuhurairacenter.com",
+      "hasLiveStream": true,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["abuhurairacenter.com", "masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Khalid Bin Al-Walid Mosque",
+      "address": "2665 Lawrence Ave E, Scarborough, ON M1P 2S2",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.7529,
+      "longitude": -79.2660,
+      "phone": "+1-416-750-2253",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Islamic Institute of Toronto",
+      "address": "1630 Neilson Rd, Scarborough, ON M1X 1S3",
+      "city": "Toronto",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.8001,
+      "longitude": -79.2201,
+      "phone": "+1-416-332-3215",
+      "website": "https://www.iit.org",
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:15",
+        "jummah": "13:30"
+      },
+      "sources": ["iit.org", "masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Masjid Dar Al-Tawheed",
+      "address": "5600 Rose Cherry Pl, Mississauga, ON L4Z 4B6",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.6345,
+      "longitude": -79.6367,
+      "phone": "+1-905-890-5858",
+      "website": "https://www.daraltawheed.com",
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["daraltawheed.com", "masjidbox.com", "google-maps"]
+    }
+  ]
+}

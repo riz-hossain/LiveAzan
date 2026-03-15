@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "LiveAzan",
+    "slug": "live-azan",
+    "version": "1.0.0",
+    "scheme": "liveaszan",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1B5E20"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.liveaszan.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "LiveAzan needs your location to find nearby mosques and calculate prayer times.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "LiveAzan uses background location to notify you of prayer times when you travel."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1B5E20"
+      },
+      "package": "com.liveaszan.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "LiveAzan uses your location to find nearby mosques and calculate prayer times."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "sounds": ["./assets/sounds/azan-default.wav"]
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

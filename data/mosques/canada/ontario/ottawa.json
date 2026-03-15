@@ -1,0 +1,100 @@
+{
+  "region": "ottawa",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 45.4215,
+  "centerLon": -75.6972,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Ottawa Mosque",
+      "address": "251 Northwestern Ave, Ottawa, ON K1Y 0M1",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.4025,
+      "longitude": -75.7233,
+      "phone": "+1-613-722-8763",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Assalam Mosque",
+      "address": "2335 St Laurent Blvd, Ottawa, ON K1G 5G8",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.3820,
+      "longitude": -75.6242,
+      "phone": "+1-613-236-6931",
+      "website": "https://www.masjidassalam.ca",
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:45",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["masjidassalam.ca", "masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Jami Omar Mosque",
+      "address": "3990 Riverside Dr, Ottawa, ON K1V 1A3",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.3615,
+      "longitude": -75.6521,
+      "phone": "+1-613-523-6767",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:35",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Masjid Bilal",
+      "address": "55 Boul St-Raymond, Gatineau, QC J8Y 1R8",
+      "city": "Gatineau",
+      "province": "Quebec",
+      "country": "Canada",
+      "latitude": 45.4467,
+      "longitude": -75.7342,
+      "phone": "+1-819-778-4851",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+4",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["google-maps"]
+    }
+  ]
+}

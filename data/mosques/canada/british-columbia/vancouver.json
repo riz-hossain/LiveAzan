@@ -1,0 +1,122 @@
+{
+  "region": "vancouver",
+  "province": "British Columbia",
+  "country": "canada",
+  "centerLat": 49.2827,
+  "centerLon": -123.1207,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "BC Muslim Association (BCMA)",
+      "address": "12300 Blundell Rd, Richmond, BC V6W 1B3",
+      "city": "Richmond",
+      "province": "British Columbia",
+      "country": "Canada",
+      "latitude": 49.1490,
+      "longitude": -123.1485,
+      "phone": "+1-604-270-2522",
+      "website": "https://www.thebcma.com",
+      "hasLiveStream": true,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["thebcma.com", "masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Masjid Al-Salaam",
+      "address": "6550 Bonsor Ave, Burnaby, BC V5H 3G2",
+      "city": "Burnaby",
+      "province": "British Columbia",
+      "country": "Canada",
+      "latitude": 49.2256,
+      "longitude": -122.9998,
+      "phone": "+1-604-522-4104",
+      "website": "https://www.masjidalsalaam.ca",
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:45",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["masjidalsalaam.ca", "masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Surrey Jamia Masjid",
+      "address": "12407 72 Ave, Surrey, BC V3W 2M5",
+      "city": "Surrey",
+      "province": "British Columbia",
+      "country": "Canada",
+      "latitude": 49.1290,
+      "longitude": -122.8610,
+      "phone": "+1-604-591-7114",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Al-Hidayah Islamic Centre",
+      "address": "8580 132 St, Surrey, BC V3W 4N8",
+      "city": "Surrey",
+      "province": "British Columbia",
+      "country": "Canada",
+      "latitude": 49.1570,
+      "longitude": -122.8620,
+      "phone": "+1-604-597-3462",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:35",
+        "asr": "17:45",
+        "maghrib": "sunset+4",
+        "isha": "21:00",
+        "jummah": "14:00"
+      },
+      "sources": ["google-maps", "prayersconnect.com"]
+    },
+    {
+      "name": "Vancouver Islamic Centre",
+      "address": "655 W 8th Ave, Vancouver, BC V5Z 1C9",
+      "city": "Vancouver",
+      "province": "British Columbia",
+      "country": "Canada",
+      "latitude": 49.2640,
+      "longitude": -123.1150,
+      "phone": "+1-604-874-7262",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:45",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:15",
+        "jummah": "13:30"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    }
+  ]
+}

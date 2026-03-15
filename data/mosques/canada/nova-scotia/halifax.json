@@ -1,0 +1,56 @@
+{
+  "region": "halifax",
+  "province": "Nova Scotia",
+  "country": "canada",
+  "centerLat": 44.6488,
+  "centerLon": -63.5752,
+  "radiusKm": 300,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "admin",
+  "mosques": [
+    {
+      "name": "Ummah Masjid and Community Centre",
+      "address": "2 Akerley Blvd, Dartmouth, NS B3B 1J4",
+      "city": "Dartmouth",
+      "province": "Nova Scotia",
+      "country": "Canada",
+      "latitude": 44.6850,
+      "longitude": -63.5610,
+      "phone": "+1-902-469-9400",
+      "website": "https://www.ummahmasjid.ca",
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:30",
+        "dhuhr": "13:30",
+        "asr": "17:30",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:15"
+      },
+      "sources": ["ummahmasjid.ca", "masjidbox.com", "google-maps"]
+    },
+    {
+      "name": "Centre for Islamic Development",
+      "address": "6368 Quinpool Rd, Halifax, NS B3L 1A5",
+      "city": "Halifax",
+      "province": "Nova Scotia",
+      "country": "Canada",
+      "latitude": 44.6428,
+      "longitude": -63.5967,
+      "phone": "+1-902-422-4990",
+      "website": null,
+      "hasLiveStream": false,
+      "verified": true,
+      "iqamaTimes": {
+        "fajr": "06:45",
+        "dhuhr": "13:30",
+        "asr": "17:45",
+        "maghrib": "sunset+5",
+        "isha": "21:00",
+        "jummah": "13:30"
+      },
+      "sources": ["masjidbox.com", "google-maps"]
+    }
+  ]
+}

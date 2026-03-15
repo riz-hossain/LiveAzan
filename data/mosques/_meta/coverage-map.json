@@ -1,0 +1,65 @@
+{
+  "lastUpdated": "2026-03-15",
+  "regions": [
+    {
+      "file": "canada/ontario/waterloo.json",
+      "city": "Waterloo",
+      "province": "Ontario",
+      "mosquesCount": 5
+    },
+    {
+      "file": "canada/ontario/toronto.json",
+      "city": "Toronto",
+      "province": "Ontario",
+      "mosquesCount": 8
+    },
+    {
+      "file": "canada/ontario/ottawa.json",
+      "city": "Ottawa",
+      "province": "Ontario",
+      "mosquesCount": 4
+    },
+    {
+      "file": "canada/quebec/montreal.json",
+      "city": "Montreal",
+      "province": "Quebec",
+      "mosquesCount": 5
+    },
+    {
+      "file": "canada/alberta/calgary.json",
+      "city": "Calgary",
+      "province": "Alberta",
+      "mosquesCount": 4
+    },
+    {
+      "file": "canada/alberta/edmonton.json",
+      "city": "Edmonton",
+      "province": "Alberta",
+      "mosquesCount": 3
+    },
+    {
+      "file": "canada/british-columbia/vancouver.json",
+      "city": "Vancouver",
+      "province": "British Columbia",
+      "mosquesCount": 5
+    },
+    {
+      "file": "canada/manitoba/winnipeg.json",
+      "city": "Winnipeg",
+      "province": "Manitoba",
+      "mosquesCount": 3
+    },
+    {
+      "file": "canada/nova-scotia/halifax.json",
+      "city": "Halifax",
+      "province": "Nova Scotia",
+      "mosquesCount": 2
+    },
+    {
+      "file": "canada/saskatchewan/saskatoon.json",
+      "city": "Saskatoon",
+      "province": "Saskatchewan",
+      "mosquesCount": 2
+    }
+  ]
+}
