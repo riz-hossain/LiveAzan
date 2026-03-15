@@ -593,7 +593,8 @@ def _check_android_prerequisites():
     if not has_cmd("npm"):
         die("npm is not installed. Install Node.js 20+: https://nodejs.org/")
     try:
-        npm_ver = subprocess.check_output(["npm", "--version"], text=True).strip()
+        npm_cmd = ["cmd", "/c", "npm", "--version"] if is_windows() else ["npm", "--version"]
+        npm_ver = subprocess.check_output(npm_cmd, text=True).strip()
         info(f"npm {npm_ver} ✓")
     except Exception:
         die("Could not determine npm version.")
