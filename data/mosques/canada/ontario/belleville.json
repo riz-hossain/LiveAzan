@@ -11,14 +11,24 @@
     {
       "name": "Islamic Society of Belleville",
       "type": "mosque",
-      "address": "163 Victoria Ave, Belleville, ON K8N 2B7",
+      "address": "33 Moira Street West, Belleville, ON K8P 1S1",
       "city": "Belleville",
       "province": "Ontario",
       "country": "Canada",
       "latitude": 44.164,
       "longitude": -77.384,
-      "phone": "+1-613-962-2700",
-      "website": null,
+      "phone": "+1-613-707-3861",
+      "email": "masjidbelleville@gmail.com",
+      "website": "https://bellevillemasjid.ca/",
+      "description": "Mosque serving Belleville, Bay of Quinte, Prince Edward County, and Trenton. Also listed at 163 Victoria Ave.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": null,
       "googleRating": 4.1,
       "googleReviewCount": 8,
       "hasLiveStream": false,
@@ -32,29 +42,11 @@
         "jummah": "13:15"
       },
       "sources": [
-        "google-maps"
-      ]
-    },
-    {
-      "name": "Islamic Society of Belleville",
-      "type": "mosque",
-      "address": "Address unknown \u2014 needs verification",
-      "city": "Belleville",
-      "province": "Ontario",
-      "country": "Canada",
-      "latitude": 44.168206,
-      "longitude": -77.388099,
-      "phone": null,
-      "website": null,
-      "googleRating": null,
-      "googleReviewCount": null,
-      "hasLiveStream": false,
-      "verified": false,
-      "iqamaTimes": null,
-      "sources": [
+        "google-maps",
+        "bellevillemasjid.ca",
         "openstreetmap"
       ],
-      "notes": null
+      "notes": "Serves Belleville, Bay of Quinte, Prince Edward County, and Trenton. Address confirmed as 33 Moira St W via website. Previously listed at 163 Victoria Ave."
     },
     {
       "name": "House of the Commandments",
@@ -66,7 +58,14 @@
       "latitude": 44.101115,
       "longitude": -77.580606,
       "phone": null,
+      "email": null,
       "website": null,
+      "description": null,
+      "denomination": null,
+      "hours": null,
+      "services": [],
+      "facilities": [],
+      "accessInfo": null,
       "googleRating": null,
       "googleReviewCount": null,
       "hasLiveStream": false,

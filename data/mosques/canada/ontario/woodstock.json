@@ -1,0 +1,43 @@
+{
+  "region": "woodstock",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 43.1306,
+  "centerLon": -80.7565,
+  "radiusKm": 25,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "web-research",
+  "mosques": [
+    {
+      "name": "Muslim Association of Woodstock (MAOW)",
+      "type": "mosque",
+      "address": "560 Dundas St, Woodstock, ON N4S 1C7",
+      "city": "Woodstock",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.1306,
+      "longitude": -80.7565,
+      "phone": "+1-519-788-2282",
+      "email": null,
+      "website": "https://www.muslimassociationwoodstock.com/",
+      "description": "Mosque serving Oxford County including Woodstock, Ingersoll, and Tillsonburg. Community-focused with regular prayer services.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "muslimassociationwoodstock.com"
+      ],
+      "notes": "Serves Oxford County including Woodstock, Ingersoll, and Tillsonburg. On Hwy 401 corridor between London and Kitchener."
+    }
+  ]
+}

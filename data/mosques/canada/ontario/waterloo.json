@@ -276,6 +276,201 @@
         "openstreetmap"
       ],
       "notes": null
+    },
+    {
+      "name": "Umul Qura Learning Centre",
+      "type": "community_centre",
+      "address": "300 Victoria St N, Kitchener, ON N2H 6R9",
+      "city": "Kitchener",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.4580,
+      "longitude": -80.4870,
+      "phone": null,
+      "email": null,
+      "website": "https://umulquralc.com",
+      "description": "A community-focused centre offering a clean prayer space, Quran classes, and support for newcomer families.",
+      "denomination": null,
+      "hours": "5 AM – 11 PM daily",
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "quran_classes",
+        "new_muslim_support"
+      ],
+      "facilities": [],
+      "accessInfo": null,
+      "googleRating": 5.0,
+      "googleReviewCount": 96,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "google-maps",
+        "umulquralc.com"
+      ],
+      "notes": "Community-focused center with prayer space and Quran classes. Supports newcomer families."
+    },
+    {
+      "name": "Al Falah Islamic Centre (Kitchener)",
+      "type": "mosque",
+      "address": "565 Trillium Drive, Unit 6, Kitchener, ON",
+      "city": "Kitchener",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.3870,
+      "longitude": -80.4460,
+      "phone": null,
+      "email": null,
+      "website": "https://alfalahkitchener.org",
+      "description": "A newer mosque serving the Huron, Doon, and Williamsburg areas of Kitchener. Welcoming space for all backgrounds.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": null,
+      "googleRating": 4.8,
+      "googleReviewCount": 838,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "google-maps",
+        "alfalahkitchener.org"
+      ],
+      "notes": "Serves Huron, Doon, and Williamsburg areas of Kitchener."
+    },
+    {
+      "name": "WMC Wilmot Muslim Centre",
+      "type": "mosque",
+      "address": "1000 Knechtel Ct, Wilmot, ON N0B 1E0",
+      "city": "Wilmot",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.4090,
+      "longitude": -80.6430,
+      "phone": null,
+      "email": null,
+      "website": "https://wilmotmuslimcentre.ca",
+      "description": "Recently renovated facility with a masjid and cemetery. Known for its cozy atmosphere and community programs.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "funeral_services"
+      ],
+      "facilities": [
+        "cemetery",
+        "parking"
+      ],
+      "accessInfo": null,
+      "googleRating": 4.8,
+      "googleReviewCount": 68,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "google-maps",
+        "wilmotmuslimcentre.ca"
+      ],
+      "notes": "Recently renovated. Has cemetery on site. Cozy community atmosphere."
+    },
+    {
+      "name": "University of Waterloo - SLC Prayer Room (Rooms 3252/3254)",
+      "type": "prayer_room",
+      "address": "200 University Ave W, Student Life Centre, Rooms 3252/3254, Waterloo, ON N2L 3G1",
+      "city": "Waterloo",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.4718,
+      "longitude": -80.5450,
+      "phone": null,
+      "email": null,
+      "website": null,
+      "description": "Multi-faith prayer rooms in the Student Life Centre at University of Waterloo. Open 5:30 AM to 11:30 PM.",
+      "denomination": "non_denominational",
+      "hours": "5:30 AM – 11:30 PM",
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": "Student Life Centre (SLC), Rooms 3252 and 3254, 3rd floor",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "uwaterloo.ca"
+      ],
+      "notes": "University multi-faith space. Open 5:30 AM – 11:30 PM. Managed by UW Muslim Students Association."
+    },
+    {
+      "name": "University of Waterloo - Davis Centre Prayer Room (DC 3578)",
+      "type": "prayer_room",
+      "address": "200 University Ave W, Davis Centre, Room 3578, Waterloo, ON N2L 3G1",
+      "city": "Waterloo",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.4726,
+      "longitude": -80.5422,
+      "phone": null,
+      "email": null,
+      "website": null,
+      "description": "Prayer room in the Davis Centre at University of Waterloo. Access via door code.",
+      "denomination": "non_denominational",
+      "hours": null,
+      "services": [
+        "five_daily_prayers"
+      ],
+      "facilities": [],
+      "accessInfo": "Davis Centre (DC), Room 3578, Door code: 338822",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "uwaterloo.ca"
+      ],
+      "notes": "Door code: 338822. Located in Davis Centre, 3rd floor."
+    },
+    {
+      "name": "University of Waterloo - Village 1 Prayer Room (V1 191)",
+      "type": "prayer_room",
+      "address": "200 University Ave W, Village 1, Room 191, Waterloo, ON N2L 3G1",
+      "city": "Waterloo",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 43.4712,
+      "longitude": -80.5490,
+      "phone": null,
+      "email": null,
+      "website": null,
+      "description": "24-hour prayer room in Village 1 residence at University of Waterloo. Has wudu (ablution) facilities.",
+      "denomination": "non_denominational",
+      "hours": "Open 24 hours",
+      "services": [
+        "five_daily_prayers"
+      ],
+      "facilities": [
+        "wudu_area"
+      ],
+      "accessInfo": "Village 1 (V1), Room 191. Open 24 hours.",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "uwaterloo.ca"
+      ],
+      "notes": "Open 24 hours. Has ablution (wudu) facilities. Located in Village 1 residence."
     }
   ]
 }

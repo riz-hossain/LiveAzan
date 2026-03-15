@@ -1,0 +1,45 @@
+{
+  "region": "pembroke",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 45.8264,
+  "centerLon": -77.1117,
+  "radiusKm": 40,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "web-research",
+  "mosques": [
+    {
+      "name": "Pembroke Islamic Centre",
+      "type": "mosque",
+      "address": "360a Pembroke St. W, Pembroke, ON",
+      "city": "Pembroke",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 45.8264,
+      "longitude": -77.1117,
+      "phone": null,
+      "email": null,
+      "website": "https://www.pembrokeislamiccentre.ca/",
+      "description": "Islamic centre serving the Ottawa Valley and Renfrew County region. Closest mosque for travellers heading to Algonquin Provincial Park.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": {
+        "jummah": "14:45"
+      },
+      "sources": [
+        "pembrokeislamiccentre.ca"
+      ],
+      "notes": "Serves the Ottawa Valley / Renfrew County region. Jumaa Prayer at 2:45 PM. Closest mosque to Algonquin Park for campers."
+    }
+  ]
+}

@@ -262,6 +262,102 @@
         "openstreetmap"
       ],
       "notes": null
+    },
+    {
+      "name": "Leamington Musalla",
+      "type": "musalla",
+      "address": "555 Talbot Rd E, Leamington, ON N8H 3V6",
+      "city": "Leamington",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.0534,
+      "longitude": -82.5777,
+      "phone": null,
+      "email": null,
+      "website": "https://windsorislamicassociation.com/what-we-do/f/leamington-mosque",
+      "description": "Prayer space operating in the basement of St. John's Anglican Church. Administered by Windsor Islamic Association.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": "Located in basement of St. John's Anglican Church",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "windsorislamicassociation.com",
+        "cbc.ca"
+      ],
+      "notes": "Operates in basement of St. John's Anglican Church. Administered by Windsor Islamic Association. Unique interfaith arrangement."
+    },
+    {
+      "name": "Seminary of Sacred Knowledge",
+      "type": "mosque",
+      "address": "6101 Essex County Rd 20, Amherstburg, ON N0R 1G0",
+      "city": "Amherstburg",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.1156,
+      "longitude": -83.0480,
+      "phone": "+1-437-522-4646",
+      "email": null,
+      "website": "https://seminaryofsk.com/",
+      "description": "Mosque and Islamic education facility in Amherstburg, south of Windsor.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah",
+        "islamic_studies"
+      ],
+      "facilities": [],
+      "accessInfo": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "seminaryofsk.com"
+      ],
+      "notes": "Mosque + Islamic education facility in Amherstburg."
+    },
+    {
+      "name": "Windsor Islamic Association Educational & Community Centre (Amherstburg)",
+      "type": "community_centre",
+      "address": "5791 N Townline Rd, Amherstburg, ON N9H 0K4",
+      "city": "Amherstburg",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 42.1337,
+      "longitude": -83.0637,
+      "phone": null,
+      "email": null,
+      "website": "https://windsorislamicassociation.com/",
+      "description": "Large 95,000 sq ft facility on 66 acres. New acquisition by Windsor Islamic Association for community and educational purposes.",
+      "denomination": null,
+      "hours": null,
+      "services": [],
+      "facilities": [
+        "parking",
+        "outdoor_space",
+        "multipurpose_hall"
+      ],
+      "accessInfo": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "windsorislamicassociation.com"
+      ],
+      "notes": "95,000 sq ft facility on 66 acres. New acquisition by Windsor Islamic Association."
     }
   ]
 }

@@ -1,0 +1,44 @@
+{
+  "region": "timmins",
+  "province": "Ontario",
+  "country": "canada",
+  "centerLat": 48.4758,
+  "centerLon": -81.3305,
+  "radiusKm": 50,
+  "lastResearched": "2026-03-15",
+  "researchedBy": "web-research",
+  "mosques": [
+    {
+      "name": "Timmins Islamic Centre",
+      "type": "mosque",
+      "address": "BSMT - 36 Pine Street South, Timmins, ON P4N 2J8",
+      "city": "Timmins",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 48.4758,
+      "longitude": -81.3305,
+      "phone": null,
+      "email": null,
+      "website": null,
+      "description": "Islamic centre serving the Timmins community in Northern Ontario. Located in a basement space.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": "Located in basement (BSMT) of building",
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "facebook.com/TimminsIslamicCentre",
+        "prayersconnect.com"
+      ],
+      "notes": "One of the few mosques in far Northern Ontario. Serves Timmins, Kapuskasing, and Hearst travellers. Located in basement."
+    }
+  ]
+}

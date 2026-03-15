@@ -28,6 +28,37 @@
         "openstreetmap"
       ],
       "notes": null
+    },
+    {
+      "name": "Port Elgin Islamic Center",
+      "type": "mosque",
+      "address": "Port Elgin, Saugeen Shores, ON",
+      "city": "Saugeen Shores",
+      "province": "Ontario",
+      "country": "Canada",
+      "latitude": 44.4419,
+      "longitude": -81.3930,
+      "phone": null,
+      "email": null,
+      "website": null,
+      "description": "Islamic center in Port Elgin / Saugeen Shores area.",
+      "denomination": null,
+      "hours": null,
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": null,
+      "googleRating": null,
+      "googleReviewCount": null,
+      "hasLiveStream": false,
+      "verified": false,
+      "iqamaTimes": null,
+      "sources": [
+        "prayersconnect.com"
+      ],
+      "notes": "Address needs confirmation. Listed on Prayers Connect for Saugeen Shores area."
     }
   ]
 }

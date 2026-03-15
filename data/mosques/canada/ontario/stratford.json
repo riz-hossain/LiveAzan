@@ -11,23 +11,34 @@
     {
       "name": "Stratford Mosque",
       "type": "mosque",
-      "address": "97, Woods Street, Stratford",
+      "address": "97 Woods Street, Stratford, ON N5A 1M2",
       "city": "Stratford",
       "province": "Ontario",
       "country": "Canada",
       "latitude": 43.365228,
       "longitude": -80.995474,
       "phone": "+1-519-305-1516",
-      "website": null,
+      "email": null,
+      "website": "https://stratfordmosque.ca/",
+      "description": "Mosque serving Perth County travellers. Open 24/7 with all 5 daily prayers.",
+      "denomination": null,
+      "hours": "Open 24/7",
+      "services": [
+        "five_daily_prayers",
+        "jummah"
+      ],
+      "facilities": [],
+      "accessInfo": null,
       "googleRating": null,
       "googleReviewCount": null,
       "hasLiveStream": false,
       "verified": false,
       "iqamaTimes": null,
       "sources": [
-        "openstreetmap"
+        "openstreetmap",
+        "stratfordmosque.ca"
       ],
-      "notes": null
+      "notes": "Open 24/7 with all 5 daily prayers. Serves Perth County."
     }
   ]
 }
