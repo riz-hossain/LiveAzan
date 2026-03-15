@@ -833,7 +833,7 @@
     },
     {
       "name": "Toronto Pearson Airport Prayer Room",
-      "type": "musalla",
+      "type": "prayer_room",
       "address": "6301 Silver Dart Dr, Mississauga, ON L5P 1B2",
       "city": "Toronto",
       "province": "Ontario",
@@ -1583,7 +1583,7 @@
     },
     {
       "name": "Ismaili Centre Toronto",
-      "type": "mosque",
+      "type": "community_centre",
       "address": "49 Wynford Dr, North York, ON M3C 1K1",
       "city": "Toronto",
       "province": "Ontario",
