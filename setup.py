@@ -638,8 +638,10 @@ def _ensure_mobile_deps(app_dir, fresh=False):
 
 
 def _patch_gradle_wrapper(android_dir):
-    """Pin Gradle wrapper to 8.6 — Expo SDK 51 is incompatible with Gradle 8.7+.
-    Gradle 8.8 removed components.release used by expo-modules-core."""
+    """Pin Gradle wrapper to 8.8 — Gradle ≤8.6 ships with ASM 9.5 which crashes
+    on kotlin-compiler-embeddable 1.9.24 class files (Java 21 bytecode / class v65).
+    Gradle 8.8 includes ASM 9.7 which handles them correctly.
+    Expo SDK 51 + AGP 8.3.x is fully compatible with Gradle 8.8."""
     props = android_dir / "gradle" / "wrapper" / "gradle-wrapper.properties"
     if not props.exists():
         return
@@ -649,18 +651,18 @@ def _patch_gradle_wrapper(android_dir):
     if not m:
         return
     major, minor = int(m.group(1)), int(m.group(2))
-    if (major, minor) <= (8, 6):
+    if (major, minor) >= (8, 8):
         info(f"Gradle wrapper: {major}.{minor} (compatible, no patch needed)")
         return
     # Replace the version portion in the URL
     patched = re.sub(
         r"(gradle-)(\d+\.\d+(?:\.\d+)?)([-\w]*\.zip)",
-        r"\g<1>8.6\3",
+        r"\g<1>8.8\3",
         content,
     )
     if patched != content:
         props.write_text(patched, encoding="utf-8")
-        info(f"Patched gradle-wrapper.properties: {major}.{minor} → 8.6 (Expo 51 requires ≤8.6)")
+        info(f"Patched gradle-wrapper.properties: {major}.{minor} → 8.8 (ASM fix for Kotlin 1.9.24)")
 
 
 def _ensure_expo_prebuild(app_dir, clean=False):
