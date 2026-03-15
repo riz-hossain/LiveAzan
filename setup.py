@@ -728,13 +728,41 @@ def _patch_settings_gradle_expo_modules(android_dir):
     for @react-native/gradle-plugin — NOT the simple includeBuild "..." shorthand.
     On Windows the autolinking node subprocess can fail silently, leaving
     expo-module-gradle-plugin absent from Gradle's included-build plugin registry.
-    Gradle 8.7 pin alone is not sufficient; this explicit includeBuild is also required."""
+    Gradle 8.7 pin alone is not sufficient; this explicit includeBuild is also required.
+    Supports both local node_modules (apps/mobile/node_modules) and npm-workspace-hoisted
+    root node_modules, whichever actually contains expo-modules-core."""
     settings = android_dir / "settings.gradle"
     if not settings.exists():
         return
     content = settings.read_text(encoding="utf-8")
     if "expo-modules-core/android" in content:
         return  # already patched
+
+    # Determine the correct relative path to expo-modules-core/android.
+    # In a monorepo with npm workspaces, the package may be hoisted to the
+    # repo root node_modules rather than living under apps/mobile/node_modules.
+    # android_dir is apps/mobile/android; candidates relative to it:
+    #   local:  ../node_modules/expo-modules-core/android
+    #   hoisted: ../../../node_modules/expo-modules-core/android
+    local_abs = (android_dir / ".." / "node_modules" / "expo-modules-core" / "android").resolve()
+    hoisted_abs = (android_dir / ".." / ".." / ".." / "node_modules" / "expo-modules-core" / "android").resolve()
+    info(f"  expo-modules-core lookup:")
+    info(f"    local   ({local_abs}): {'FOUND' if local_abs.exists() else 'not found'}")
+    info(f"    hoisted ({hoisted_abs}): {'FOUND' if hoisted_abs.exists() else 'not found'}")
+    if local_abs.exists():
+        rel_include = "../node_modules/expo-modules-core/android"
+        info(f"  Using local node_modules path: {rel_include}")
+    elif hoisted_abs.exists():
+        rel_include = "../../../node_modules/expo-modules-core/android"
+        info(f"  Using hoisted root node_modules path: {rel_include}")
+    else:
+        info("  WARNING: expo-modules-core/android not found in local or hoisted node_modules!")
+        info("  Run: npm install  (from apps/mobile or repo root with workspaces)")
+        rel_include = "../node_modules/expo-modules-core/android"
+        info(f"  Falling back to local path (build will fail if dir is missing): {rel_include}")
+
+    include_stmt = f'includeBuild("{rel_include}")'
+
     # Expo SDK 51 generates: includeBuild(new File(["node","--print",
     #   "require.resolve('@react-native/gradle-plugin/package.json')"].execute(...)))
     # Match any includeBuild line that references @react-native/gradle-plugin regardless
@@ -745,10 +773,10 @@ def _patch_settings_gradle_expo_modules(android_dir):
     m = anchor_pattern.search(content)
     if m:
         insert_after = m.group(1)
-        replacement = insert_after + '\n    includeBuild("../node_modules/expo-modules-core/android")'
+        replacement = insert_after + f'\n    {include_stmt}'
         patched = content.replace(insert_after, replacement, 1)
         settings.write_text(patched, encoding="utf-8")
-        info("Patched settings.gradle: added expo-modules-core/android includeBuild after RN gradle-plugin")
+        info(f"Patched settings.gradle: added expo-modules-core/android includeBuild after RN gradle-plugin ({rel_include})")
         return
     # Fallback: insert before the closing } of the pluginManagement block
     pm_close = re.search(r"(pluginManagement\s*\{[^}]*?)(\n\})", content, re.DOTALL)
@@ -756,22 +784,22 @@ def _patch_settings_gradle_expo_modules(android_dir):
         insert_pos = pm_close.start(2)
         patched = (
             content[:insert_pos]
-            + '\n    includeBuild("../node_modules/expo-modules-core/android")'
+            + f'\n    {include_stmt}'
             + content[insert_pos:]
         )
         settings.write_text(patched, encoding="utf-8")
-        info("Patched settings.gradle: appended expo-modules-core/android includeBuild to pluginManagement block (fallback)")
+        info(f"Patched settings.gradle: appended expo-modules-core/android includeBuild to pluginManagement block (fallback, {rel_include})")
         return
     # Last resort: prepend before 'include :app'
     for app_line in ["include ':app'", 'include ":app"']:
         if app_line in content:
             patched = content.replace(
                 app_line,
-                'includeBuild("../node_modules/expo-modules-core/android")\n' + app_line,
+                f'{include_stmt}\n' + app_line,
                 1,
             )
             settings.write_text(patched, encoding="utf-8")
-            info("Patched settings.gradle: prepended expo-modules-core/android includeBuild before include :app (last-resort)")
+            info(f"Patched settings.gradle: prepended expo-modules-core/android includeBuild before include :app (last-resort, {rel_include})")
             return
     info("WARNING: could not patch settings.gradle — no anchor found to insert expo-modules-core includeBuild")
 
@@ -831,6 +859,29 @@ def _patch_gradle_wrapper(android_dir):
     if patched != content:
         props.write_text(patched, encoding="utf-8")
         info(f"Patched gradle-wrapper.properties: {major}.{minor} → 8.7 (ASM 9.6 for Kotlin 1.9.24, stable with expo-modules-core)")
+
+
+def _preflight_check_settings_gradle(android_dir):
+    """Scan settings.gradle for includeBuild entries and verify each path exists.
+    Emits clear diagnostics so the cause of 'Included build does not exist' errors
+    is visible before Gradle even starts."""
+    settings = android_dir / "settings.gradle"
+    if not settings.exists():
+        return
+    content = settings.read_text(encoding="utf-8")
+    info("  Pre-flight: verifying includeBuild paths in settings.gradle...")
+    # Match simple quoted includeBuild("...") entries
+    for m in re.finditer(r'includeBuild\s*\(\s*["\']([^"\']+)["\']\s*\)', content):
+        rel = m.group(1)
+        abs_path = (android_dir / rel).resolve()
+        if abs_path.exists():
+            info(f"    OK   {rel}  →  {abs_path}")
+        else:
+            info(f"    MISSING  {rel}  →  {abs_path}")
+            info(f"    FIX: run 'npm install' in the directory that owns expo-modules-core")
+    # Also flag any dynamic includeBuild(new File(...)) for @react-native/gradle-plugin
+    if re.search(r'includeBuild\s*\(\s*new\s+File\s*\(', content):
+        info("    NOTE: dynamic includeBuild(new File(...)) detected — path resolved at build time by Node")
 
 
 def _ensure_expo_prebuild(app_dir, clean=False):
@@ -1038,6 +1089,10 @@ def cmd_android(repo, fresh=False, nuke_gradle=False):
 
     step_build = 7 if fresh else 5
     info(f"Step {step_build}/{steps}: Running Gradle assembleRelease...")
+
+    # Pre-flight: verify that every includeBuild path in settings.gradle exists,
+    # so failures are diagnosed here rather than deep inside Gradle's stack trace.
+    _preflight_check_settings_gradle(android_dir)
 
     if is_windows():
         gradle_cmd = ["cmd", "/c", ".\\gradlew.bat", "clean", "assembleRelease",
