@@ -34,15 +34,20 @@ router.get("/nearby", async (req: Request, res: Response) => {
         streamUrl: string | null;
         adminEmail: string | null;
         verified: boolean;
+        mawaqitId: string | null;
+        iqamaSource: string | null;
+        iqamaLastFetched: Date | null;
         distance: number;
       }>
     >`
-      SELECT *,
-        (6371 * acos(
-          cos(radians(${lat})) * cos(radians(latitude)) *
-          cos(radians(longitude) - radians(${lon})) +
-          sin(radians(${lat})) * sin(radians(latitude))
-        )) AS distance
+      SELECT id, name, address, city, province, country, latitude, longitude,
+             phone, website, "hasLiveStream", "streamUrl", "adminEmail", verified,
+             "mawaqitId", "iqamaSource", "iqamaLastFetched",
+             (6371 * acos(
+               cos(radians(${lat})) * cos(radians(latitude)) *
+               cos(radians(longitude) - radians(${lon})) +
+               sin(radians(${lat})) * sin(radians(latitude))
+             )) AS distance
       FROM "Mosque"
       WHERE (6371 * acos(
           cos(radians(${lat})) * cos(radians(latitude)) *

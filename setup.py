@@ -1,259 +1,1119 @@
 #!/usr/bin/env python3
 """
-LiveAzan — One-command setup script.
+LiveAzan — Setup & Build Tool
+Cross-platform (Windows / macOS / Linux). Requires only Docker Desktop + Python 3.10+.
 
-Usage:
-    python3 setup.py              # Development setup
-    python3 setup.py --production # Production setup (uses Docker)
-
-Requirements: Python 3.10+ (stdlib only — no pip install needed)
+USAGE (run from repo root):
+  python setup.py local                   Start local dev stack
+  python setup.py production              Start full production stack
+  python setup.py restart local           Rebuild & restart (keeps data)
+  python setup.py restart production      Rebuild & restart full stack
+  python setup.py down                    Stop all LiveAzan containers
+  python setup.py clean                   Full wipe: containers + volumes + images
+  python setup.py status                  Show container + dev server status
+  python setup.py android local           Build Android APK (mobile app)
+  python setup.py android local --fresh   Fresh rebuild (cleans caches + prebuild)
+  python setup.py --help                  Show this help
 """
 
 import os
 import sys
+import re
 import json
+import time
 import shutil
+import socket
+import signal
 import secrets
 import platform
+import textwrap
 import subprocess
 from pathlib import Path
 
-ROOT_DIR = Path(__file__).parent.resolve()
-SERVER_DIR = ROOT_DIR / "server"
-ENV_FILE = SERVER_DIR / ".env"
+# ── Project identifiers ───────────────────────────────────────────────────────
+PROJECT_LOCAL = "liveaszan_local"
+PROJECT_PROD  = "liveaszan_prod"
 
-# ─── Helpers ──────────────────────────────────────────────────────────────────
+# ── Globals ───────────────────────────────────────────────────────────────────
+COMPOSE_CMD = None  # Set by detect_compose()
 
-def run(cmd: str, cwd: Path | None = None, check: bool = True) -> subprocess.CompletedProcess:
-    """Run a shell command and return the result."""
-    print(f"  $ {cmd}")
-    return subprocess.run(cmd, shell=True, cwd=cwd or ROOT_DIR, check=check,
-                          capture_output=True, text=True)
+# ── App configs ───────────────────────────────────────────────────────────────
+ADMIN_APP = {
+    "name": "admin",
+    "dir": "apps/admin",
+    "pkg_manager": "npm",
+    "port": 5174,
+    "dev_cmd": ["npm", "run", "dev"],
+}
 
-def cmd_exists(name: str) -> bool:
+MOBILE_APP = {
+    "name": "mobile",
+    "dir": "apps/mobile",
+    "pkg_manager": "npm",
+}
+
+PID_FILE = ".liveaszan_pids"
+
+# ── Helpers ───────────────────────────────────────────────────────────────────
+
+def is_windows():
+    return platform.system().lower() == "windows"
+
+
+def is_mac():
+    return platform.system().lower() == "darwin"
+
+
+def run(cmd, cwd=None, check=True, capture=True):
+    """Run command, return stdout. Raises RuntimeError on failure if check=True."""
+    try:
+        r = subprocess.run(
+            cmd, cwd=cwd, check=check, text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+        )
+        return r.stdout or ""
+    except subprocess.CalledProcessError as e:
+        out = e.stdout or ""
+        if check:
+            raise RuntimeError(f"Command failed: {' '.join(str(x) for x in cmd)}\n{out}") from e
+        return out
+
+
+def run_visible(cmd, cwd=None, check=True, env=None):
+    """Run command with output shown to user."""
+    try:
+        subprocess.run(cmd, cwd=cwd, check=check, env=env)
+    except subprocess.CalledProcessError as e:
+        if check:
+            raise RuntimeError(f"Command failed: {' '.join(str(x) for x in cmd)}") from e
+
+
+def has_cmd(name):
     return shutil.which(name) is not None
 
-def heading(text: str) -> None:
-    print(f"\n{'=' * 60}")
-    print(f"  {text}")
-    print(f"{'=' * 60}\n")
 
-def success(text: str) -> None:
-    print(f"  [OK] {text}")
+def die(msg, code=1):
+    print(f"\n  ERROR: {msg}\n", file=sys.stderr)
+    sys.exit(code)
 
-def warn(text: str) -> None:
-    print(f"  [!!] {text}")
 
-def fail(text: str) -> None:
-    print(f"  [FAIL] {text}")
-    sys.exit(1)
+def info(msg):
+    print(f"  {msg}")
 
-# ─── Checks ──────────────────────────────────────────────────────────────────
 
-def detect_os():
-    heading("Detecting Operating System")
-    system = platform.system()
-    machine = platform.machine()
-    release = platform.release()
-    success(f"System: {system} {machine} ({release})")
-    return system
+def warn(msg):
+    print(f"  [!!] {msg}")
 
-def check_python():
-    heading("Checking Python")
-    v = sys.version_info
-    if v.major < 3 or (v.major == 3 and v.minor < 10):
-        fail(f"Python 3.10+ required, found {v.major}.{v.minor}")
-    success(f"Python {v.major}.{v.minor}.{v.micro}")
 
-def check_node():
-    heading("Checking Node.js")
-    if not cmd_exists("node"):
-        warn("Node.js not found.")
-        system = platform.system()
-        if system == "Darwin":
-            print("  Install: brew install node  OR  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash")
-        elif system == "Linux":
-            print("  Install: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash")
-        else:
-            print("  Install: winget install OpenJS.NodeJS.LTS")
-        fail("Please install Node.js 18+ and re-run this script.")
+def header(msg):
+    width = 60
+    print(f"\n{'=' * width}")
+    print(f"  {msg}")
+    print(f"{'=' * width}\n")
 
-    result = run("node --version", check=False)
-    version = result.stdout.strip()
-    success(f"Node.js {version}")
 
-    if not cmd_exists("npm"):
-        fail("npm not found. It should come with Node.js.")
-    success("npm available")
+def ask_yes_no(prompt, default=False):
+    suffix = " [Y/n]: " if default else " [y/N]: "
+    try:
+        answer = input(f"  {prompt}{suffix}").strip().lower()
+    except (EOFError, KeyboardInterrupt):
+        print()
+        return default
+    if not answer:
+        return default
+    return answer in ("y", "yes")
 
-def check_postgres():
-    heading("Checking PostgreSQL")
-    if not cmd_exists("psql"):
-        warn("PostgreSQL not found.")
-        system = platform.system()
-        if system == "Darwin":
-            print("  Install: brew install postgresql@16 && brew services start postgresql@16")
-        elif system == "Linux":
-            print("  Install: sudo apt install postgresql postgresql-contrib && sudo systemctl start postgresql")
-        else:
-            print("  Install: winget install PostgreSQL.PostgreSQL  OR use Docker")
-        print("  Or use Docker: docker run -d --name liveaszan-pg -e POSTGRES_PASSWORD=liveaszan -p 5432:5432 postgres:16")
-        fail("Please install PostgreSQL and re-run this script.")
-    success("PostgreSQL available")
 
-def check_redis():
-    heading("Checking Redis")
-    if not cmd_exists("redis-cli"):
-        warn("Redis not found (optional — app works without it for dev).")
-        system = platform.system()
-        if system == "Darwin":
-            print("  Install: brew install redis && brew services start redis")
-        elif system == "Linux":
-            print("  Install: sudo apt install redis-server && sudo systemctl start redis")
-        else:
-            print("  Install via Docker: docker run -d --name liveaszan-redis -p 6379:6379 redis:7")
-    else:
-        success("Redis available")
+# ── Docker detection ──────────────────────────────────────────────────────────
 
-# ─── Setup ────────────────────────────────────────────────────────────────────
+def detect_compose():
+    """Detect docker compose v2 plugin or docker-compose v1 standalone."""
+    global COMPOSE_CMD
 
-def install_dependencies():
-    heading("Installing npm dependencies")
-    run("npm install", cwd=ROOT_DIR)
-    success("All dependencies installed")
+    try:
+        r = subprocess.run(
+            ["docker", "compose", "version"],
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+        )
+        if r.returncode == 0:
+            COMPOSE_CMD = ["docker", "compose"]
+            return
+    except FileNotFoundError:
+        pass
 
-def generate_env():
-    heading("Generating .env file")
-    if ENV_FILE.exists():
-        warn(f".env already exists at {ENV_FILE}, skipping.")
+    try:
+        r = subprocess.run(
+            ["docker-compose", "version"],
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+        )
+        if r.returncode == 0:
+            COMPOSE_CMD = ["docker-compose"]
+            return
+    except FileNotFoundError:
+        pass
+
+    die(
+        "Neither 'docker compose' (v2) nor 'docker-compose' (v1) found.\n"
+        "  Install Docker Desktop: https://www.docker.com/products/docker-desktop"
+    )
+
+
+def docker_running():
+    try:
+        r = subprocess.run(
+            ["docker", "info"],
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+        )
+        return r.returncode == 0
+    except FileNotFoundError:
+        return False
+
+
+def wait_docker(timeout_sec=120):
+    """Wait for Docker daemon; try to auto-start it."""
+    if docker_running():
+        info("Docker engine: running")
         return
 
-    jwt_secret = secrets.token_urlsafe(48)
+    info("Docker is not running. Attempting to start...")
+
+    if is_mac():
+        try:
+            subprocess.Popen(["open", "-a", "Docker"],
+                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        except Exception:
+            pass
+    elif is_windows():
+        for p in [
+            r"C:\Program Files\Docker\Docker\Docker Desktop.exe",
+            r"C:\Program Files (x86)\Docker\Docker\Docker Desktop.exe",
+        ]:
+            if os.path.isfile(p):
+                try:
+                    subprocess.Popen([p], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                except Exception:
+                    pass
+                break
+    else:
+        try:
+            subprocess.run(["sudo", "systemctl", "start", "docker"],
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=False)
+        except Exception:
+            pass
+
+    info(f"Waiting up to {timeout_sec}s for Docker engine...")
+    start = time.time()
+    while time.time() - start < timeout_sec:
+        if docker_running():
+            info("Docker engine: ready")
+            return
+        time.sleep(3)
+
+    die(
+        "Docker engine did not start within 2 minutes.\n"
+        "  Windows/macOS: Start Docker Desktop manually.\n"
+        "  Linux: Run 'sudo systemctl start docker'"
+    )
+
+
+# ── Windows-specific checks ───────────────────────────────────────────────────
+
+def windows_check_virtualization():
+    _check_hyperv_virtualization()
+    _ensure_wsl2_features()
+    _check_wsl_installed()
+
+
+def _check_hyperv_virtualization():
+    try:
+        out = run(["systeminfo"], capture=True, check=False)
+    except Exception:
+        warn("Could not run systeminfo. Skipping virtualization check.")
+        return
+
+    m = re.search(r"Hyper-V Requirements:(.*)", out, flags=re.S)
+    if not m:
+        warn("Hyper-V Requirements not found in systeminfo. Skipping check.")
+        return
+
+    block = m.group(1)
+    if "hypervisor has been detected" in block.lower():
+        info("Hardware virtualization: OK (hypervisor already active)")
+        return
+
+    req = {}
+    for line in block.splitlines():
+        line = line.strip()
+        if ":" in line:
+            k, v = line.split(":", 1)
+            req[k.strip()] = v.strip()
+
+    def yes(key):
+        return req.get(key, "").lower().startswith("yes")
+
+    virt_fw = yes("Virtualization Enabled In Firmware")
+    vm_mon  = yes("VM Monitor Mode Extensions")
+
+    if not req:
+        warn("Could not parse Hyper-V fields (non-English OS?). Skipping.")
+        return
+
+    if virt_fw and vm_mon:
+        info("Hardware virtualization: OK")
+        return
+
+    header("BLOCKER: Hardware Virtualization Not Enabled")
+    info("Enable virtualization in BIOS/UEFI:")
+    info("  Intel CPU: Enable VT-x (and VT-d)")
+    info("  AMD CPU:   Enable SVM Mode / AMD-V")
+    die("Virtualization must be enabled in firmware before Docker can work.", code=2)
+
+
+def _ensure_wsl2_features():
+    features = ["Microsoft-Windows-Subsystem-Linux", "VirtualMachinePlatform"]
+    needs_reboot = False
+    for feat in features:
+        try:
+            fi = run(["dism", "/online", "/get-featureinfo", f"/featurename:{feat}"],
+                     capture=True, check=False)
+            if "State : Enabled" in fi:
+                info(f"Windows feature OK: {feat}")
+                continue
+        except Exception:
+            pass
+        info(f"Enabling Windows feature: {feat} ...")
+        try:
+            run(["dism", "/online", "/enable-feature",
+                 f"/featurename:{feat}", "/all", "/norestart"], capture=True)
+            needs_reboot = True
+        except Exception as e:
+            warn(f"Failed to enable {feat} (run as Administrator): {e}")
+    if has_cmd("wsl"):
+        try:
+            run(["wsl", "--set-default-version", "2"], check=False, capture=True)
+        except Exception:
+            pass
+    if needs_reboot:
+        header("Reboot Required")
+        info("Windows features were enabled. Reboot and re-run this script.")
+        die("Please reboot your computer, then try again.", code=3)
+
+
+def _check_wsl_installed():
+    if not has_cmd("wsl"):
+        warn("WSL command not found. Docker Desktop requires WSL2.")
+        info("  Install WSL: wsl --install")
+        return
+    try:
+        out = run(["wsl", "--list", "--quiet"], capture=True, check=False)
+    except Exception:
+        return
+    distros = [line.strip() for line in out.splitlines() if line.strip()]
+    if distros:
+        info(f"WSL distribution installed: {distros[0]}")
+    else:
+        warn("WSL installed but no Linux distribution found.")
+        info("  Install one: wsl --install -d Ubuntu")
+
+
+def windows_check_docker_backend():
+    try:
+        out = run(["docker", "info"], capture=True, check=False)
+    except Exception:
+        return
+    if "wsl" in out.lower():
+        info("Docker backend: WSL2")
+    elif "hyper-v" in out.lower():
+        warn("Docker Desktop is using Hyper-V backend, not WSL2.")
+        info("  Recommended: Docker Desktop > Settings > General > 'Use the WSL 2 based engine'")
+
+
+# ── Env file management ───────────────────────────────────────────────────────
+
+def ensure_env_local(repo):
+    """Create .env.local from example if missing."""
+    env_file = repo / ".env.local"
+    if env_file.exists():
+        return
+
+    example = repo / ".env.local.example"
+    if example.exists():
+        shutil.copyfile(example, env_file)
+        warn("Created .env.local from .env.local.example")
+        info("  Edit .env.local to change passwords/secrets if needed.")
+        return
+
+    # Generate one from scratch
+    jwt_secret  = secrets.token_urlsafe(48)
     db_password = secrets.token_urlsafe(16)
+    env_file.write_text(
+        f"DB_PASSWORD={db_password}\n"
+        f"JWT_SECRET={jwt_secret}\n"
+    )
+    info(f".env.local created with generated secrets.")
 
-    env_content = f"""# LiveAzan Server Configuration
-# Auto-generated by setup.py
 
-DATABASE_URL=postgresql://liveaszan:{db_password}@localhost:5432/liveaszan
-JWT_SECRET={jwt_secret}
-REDIS_URL=redis://localhost:6379
-ALADHAN_API_BASE=https://api.aladhan.com/v1
-PORT=3001
+def ensure_env_prod(repo):
+    """Ensure .env.prod exists for production."""
+    env_file = repo / ".env.prod"
+    if env_file.exists():
+        return
 
-# OAuth credentials (fill in for production)
-# GOOGLE_CLIENT_ID=
-# GOOGLE_CLIENT_SECRET=
-# APPLE_CLIENT_ID=
-# APPLE_TEAM_ID=
-# APPLE_KEY_ID=
-# MICROSOFT_CLIENT_ID=
-# MICROSOFT_CLIENT_SECRET=
-"""
-    ENV_FILE.write_text(env_content)
-    success(f".env created at {ENV_FILE}")
-    return db_password
+    example = repo / ".env.prod.example"
+    if example.exists():
+        shutil.copyfile(example, env_file)
+        warn("Created .env.prod from .env.prod.example")
+        info("  IMPORTANT: Edit .env.prod and set strong DB_PASSWORD and JWT_SECRET before deploying!")
+        return
 
-def setup_database(db_password: str | None = None):
-    heading("Setting up PostgreSQL database")
+    die(
+        "Missing .env.prod. Create it from .env.prod.example:\n"
+        "  copy .env.prod.example .env.prod   (Windows)\n"
+        "  cp .env.prod.example .env.prod     (macOS/Linux)\n"
+        "  Then set strong values for DB_PASSWORD and JWT_SECRET."
+    )
 
-    # Try to create user and database
-    if db_password:
-        commands = [
-            f"CREATE USER liveaszan WITH PASSWORD '{db_password}';",
-            "CREATE DATABASE liveaszan OWNER liveaszan;",
-            "GRANT ALL PRIVILEGES ON DATABASE liveaszan TO liveaszan;",
-        ]
-        for cmd in commands:
-            result = run(f'psql -U postgres -c "{cmd}"', check=False)
-            if result.returncode != 0:
-                if "already exists" in (result.stderr or ""):
-                    warn(f"Already exists, skipping: {cmd[:40]}...")
+
+# ── Compose command builders ──────────────────────────────────────────────────
+
+def compose_local(repo):
+    return COMPOSE_CMD + [
+        "-p", PROJECT_LOCAL,
+        "-f", str(repo / "docker-compose.local.yml"),
+        "--env-file", str(repo / ".env.local"),
+    ]
+
+
+def compose_prod(repo):
+    return COMPOSE_CMD + [
+        "-p", PROJECT_PROD,
+        "-f", str(repo / "docker-compose.prod.yml"),
+        "--env-file", str(repo / ".env.prod"),
+    ]
+
+
+def get_compose_prefix(repo, mode):
+    return compose_local(repo) if mode == "local" else compose_prod(repo)
+
+
+# ── Compose operations ────────────────────────────────────────────────────────
+
+def compose_up(repo, mode):
+    prefix = get_compose_prefix(repo, mode)
+    run_visible(prefix + ["up", "--build", "-d"], cwd=str(repo))
+
+
+def compose_down(repo, mode, wipe_volumes=False):
+    down_args = ["down", "--remove-orphans"]
+    if wipe_volumes:
+        down_args.append("-v")
+    try:
+        prefix = get_compose_prefix(repo, mode)
+        run(prefix + down_args, cwd=str(repo), check=False)
+    except Exception:
+        project = PROJECT_LOCAL if mode == "local" else PROJECT_PROD
+        run(COMPOSE_CMD + ["-p", project] + down_args, cwd=str(repo), check=False)
+
+
+def compose_status(repo, mode):
+    try:
+        prefix = get_compose_prefix(repo, mode)
+        out = run(prefix + ["ps"], cwd=str(repo), check=False)
+        if out.strip():
+            print(out)
+        else:
+            info(f"No containers running for {mode} stack.")
+    except Exception:
+        info(f"({mode} stack: env files not configured)")
+
+
+# ── Admin dev server (background process) ────────────────────────────────────
+
+def _pid_file(repo):
+    return repo / PID_FILE
+
+
+def _is_process_running(pid):
+    try:
+        if is_windows():
+            out = subprocess.run(
+                ["tasklist", "/FI", f"PID eq {pid}", "/NH"],
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=False,
+            )
+            return str(pid) in out.stdout
+        else:
+            os.kill(pid, 0)
+            return True
+    except (ProcessLookupError, OSError):
+        return False
+
+
+def start_admin(repo):
+    """Start the Vite dev server as a background process."""
+    stop_admin(repo, quiet=True)
+
+    app_dir = repo / ADMIN_APP["dir"]
+    if not app_dir.is_dir():
+        warn(f"Admin dir not found: {ADMIN_APP['dir']}")
+        return
+
+    # Ensure deps are installed
+    if not (app_dir / "node_modules").is_dir():
+        info("Installing admin dependencies...")
+        install_cmd = ["npm", "install"]
+        if is_windows():
+            install_cmd = ["cmd", "/c"] + install_cmd
+        run_visible(install_cmd, cwd=str(app_dir))
+
+    dev_cmd = list(ADMIN_APP["dev_cmd"])
+    if is_windows():
+        dev_cmd = ["cmd", "/c"] + dev_cmd
+
+    log_file = repo / "apps" / "admin" / "dev.log"
+    log_file.parent.mkdir(parents=True, exist_ok=True)
+
+    kwargs = {}
+    if is_windows():
+        kwargs["creationflags"] = subprocess.CREATE_NEW_PROCESS_GROUP
+
+    lf = open(log_file, "w")
+    proc = subprocess.Popen(
+        dev_cmd,
+        cwd=str(app_dir),
+        stdout=lf,
+        stderr=subprocess.STDOUT,
+        **kwargs,
+    )
+
+    pid_file = _pid_file(repo)
+    with open(pid_file, "w") as f:
+        f.write(f"admin={proc.pid}\n")
+
+    info(f"Admin portal: http://localhost:{ADMIN_APP['port']}  (PID {proc.pid})")
+    info(f"Admin logs:   {log_file}")
+
+
+def stop_admin(repo, quiet=False):
+    pid_file = _pid_file(repo)
+    if not pid_file.exists():
+        return
+    with open(pid_file) as f:
+        for line in f:
+            line = line.strip()
+            if "=" not in line:
+                continue
+            name, pid_str = line.split("=", 1)
+            pid = int(pid_str)
+            try:
+                if is_windows():
+                    subprocess.run(
+                        ["taskkill", "/F", "/T", "/PID", str(pid)],
+                        stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False,
+                    )
                 else:
-                    warn(f"Could not run: {cmd[:40]}... (you may need to set up the DB manually)")
+                    os.kill(pid, signal.SIGTERM)
+                if not quiet:
+                    info(f"Stopped {name} dev server (PID {pid})")
+            except (ProcessLookupError, OSError):
+                pass
+    pid_file.unlink(missing_ok=True)
+
+
+def admin_status(repo):
+    pid_file = _pid_file(repo)
+    if not pid_file.exists():
+        info("Admin dev server: not running")
+        return
+    with open(pid_file) as f:
+        for line in f:
+            line = line.strip()
+            if "=" not in line:
+                continue
+            name, pid_str = line.split("=", 1)
+            pid = int(pid_str)
+            running = _is_process_running(pid)
+            status = "running" if running else "stopped"
+            info(f"Admin dev server: {status}  (PID {pid}, http://localhost:{ADMIN_APP['port']})")
+
+
+# ── Mobile: LAN IP + .env generation ─────────────────────────────────────────
+
+def _get_local_ip():
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.settimeout(2)
+        s.connect(("8.8.8.8", 80))
+        ip = s.getsockname()[0]
+        s.close()
+        return ip
+    except Exception:
+        return "127.0.0.1"
+
+
+def ensure_mobile_env(repo):
+    """Write apps/mobile/.env with the machine's LAN IP for Expo dev."""
+    ip = _get_local_ip()
+    app_dir = repo / MOBILE_APP["dir"]
+    if not app_dir.is_dir():
+        return
+
+    env_content = (
+        f"# Auto-generated by setup.py — LAN IP: {ip}\n"
+        f"EXPO_PUBLIC_API_URL=http://{ip}:3001\n"
+    )
+    env_file = app_dir / ".env"
+    env_file.write_text(env_content)
+    info(f"Mobile .env: EXPO_PUBLIC_API_URL=http://{ip}:3001")
+    return ip
+
+
+# ── Android build helpers ─────────────────────────────────────────────────────
+
+def _stop_gradle_daemons(android_dir):
+    info("Stopping Gradle daemons...")
+    gradlew = "gradlew.bat" if is_windows() else "gradlew"
+    gradlew_path = android_dir / gradlew
+    if gradlew_path.exists():
+        cmd = ["cmd", "/c", f".\\{gradlew}", "--stop"] if is_windows() else [str(gradlew_path), "--stop"]
+        try:
+            subprocess.run(cmd, cwd=str(android_dir), check=False,
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=12)
+        except subprocess.TimeoutExpired:
+            warn("gradlew --stop timed out; force-killing Gradle daemons...")
+        except Exception:
+            pass
+    if is_windows():
+        ps = (
+            r"Get-CimInstance Win32_Process | "
+            r"Where-Object { $_.Name -eq 'java.exe' -and $_.CommandLine -match 'GradleDaemon' } | "
+            r"ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }"
+        )
+        subprocess.run(["powershell", "-NoProfile", "-Command", ps],
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     else:
-        warn("Skipping DB creation (no password generated — .env already existed)")
+        subprocess.run(["pkill", "-f", "GradleDaemon"],
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=False)
+    time.sleep(1)
 
-def setup_prisma():
-    heading("Setting up Prisma")
-    run("npx prisma generate", cwd=SERVER_DIR)
-    success("Prisma client generated")
 
-    print("  Pushing schema to database...")
-    result = run("npx prisma db push", cwd=SERVER_DIR, check=False)
-    if result.returncode == 0:
-        success("Database schema pushed")
+def _clean_gradle_caches(android_dir, nuke_global=False):
+    info("Clearing Gradle caches...")
+    gradle_home = Path.home() / ".gradle"
+    daemon_dir = gradle_home / "daemon"
+    if daemon_dir.exists():
+        info(f"  Removing {daemon_dir}")
+        shutil.rmtree(daemon_dir, ignore_errors=True)
+    if nuke_global:
+        caches_dir = gradle_home / "caches"
+        if caches_dir.exists():
+            info(f"  Removing {caches_dir}")
+            shutil.rmtree(caches_dir, ignore_errors=True)
     else:
-        warn("Could not push schema (database may not be running)")
-        print(f"  Error: {result.stderr[:200] if result.stderr else 'unknown'}")
-        print("  You can run later: cd server && npx prisma db push")
+        info("  Keeping ~/.gradle/caches for stability (use --nuke-gradle to wipe)")
+    for sub in (".gradle", "build", "app/build", "app/.cxx"):
+        target = android_dir / sub
+        if target.exists():
+            info(f"  Removing {target}")
+            shutil.rmtree(target, ignore_errors=True)
 
-def seed_database():
-    heading("Seeding database with mosque data")
-    result = run("npx tsx prisma/seed.ts", cwd=SERVER_DIR, check=False)
-    if result.returncode == 0:
-        success("Database seeded with mosque data")
-        if result.stdout:
-            print(f"  {result.stdout.strip()}")
+
+def _ensure_mobile_deps(app_dir, fresh=False):
+    node_modules = app_dir / "node_modules"
+    pkg_json = app_dir / "package.json"
+    if fresh and node_modules.is_dir():
+        info("Removing node_modules for fresh install...")
+        shutil.rmtree(node_modules, ignore_errors=True)
+    elif node_modules.is_dir():
+        if not pkg_json.exists() or pkg_json.stat().st_mtime <= node_modules.stat().st_mtime:
+            return
+    info("Installing mobile dependencies (npm install)...")
+    if not has_cmd("npm"):
+        die("npm is not installed. Install Node.js 20+ first: https://nodejs.org/")
+    cmd = ["cmd", "/c", "npm", "install"] if is_windows() else ["npm", "install"]
+    run_visible(cmd, cwd=str(app_dir))
+
+
+def _ensure_expo_prebuild(app_dir, clean=False):
+    gradlew = "gradlew.bat" if is_windows() else "gradlew"
+    if (app_dir / "android" / gradlew).exists() and not clean:
+        _ensure_cleartext_traffic(app_dir)
+        return
+    cmd_args = ["npx", "expo", "prebuild", "--platform", "android"]
+    if clean:
+        cmd_args.append("--clean")
+        info("Running: npx expo prebuild --platform android --clean")
     else:
-        warn("Could not seed database (will work once DB is running)")
-        print("  You can run later: cd server && npx tsx prisma/seed.ts")
+        info("Running: npx expo prebuild --platform android")
+    if is_windows():
+        cmd_args = ["cmd", "/c"] + cmd_args
+    run_visible(cmd_args, cwd=str(app_dir))
+    _ensure_cleartext_traffic(app_dir)
 
-# ─── Main ─────────────────────────────────────────────────────────────────────
+
+def _ensure_cleartext_traffic(app_dir):
+    """Patch AndroidManifest.xml to allow plain HTTP for local dev."""
+    manifest = app_dir / "android" / "app" / "src" / "main" / "AndroidManifest.xml"
+    if not manifest.exists():
+        return
+    content = manifest.read_text()
+    if "usesCleartextTraffic" in content:
+        return
+    patched = content.replace(
+        "<application",
+        '<application android:usesCleartextTraffic="true"',
+        1,
+    )
+    if patched != content:
+        manifest.write_text(patched)
+        info("Patched AndroidManifest.xml: added usesCleartextTraffic=true")
+
+
+def _clean_stale_outputs(app_dir):
+    for d in [
+        app_dir / "android" / "app" / "build" / "outputs",
+        app_dir / "android" / "app" / ".cxx",
+        app_dir / "android" / ".gradle",
+    ]:
+        if d.exists():
+            shutil.rmtree(d, ignore_errors=True)
+
+
+def _find_apk(outputs_dir):
+    if not outputs_dir.exists():
+        return None
+    apks = list(outputs_dir.rglob("*.apk"))
+    return max(apks, key=lambda p: p.stat().st_mtime) if apks else None
+
+
+def _java_major_from(java_exe):
+    try:
+        out = subprocess.check_output([str(java_exe), "-version"],
+                                      stderr=subprocess.STDOUT, text=True)
+        m = re.search(r'version "(\d+)', out)
+        return int(m.group(1)) if m else None
+    except Exception:
+        return None
+
+
+def _detect_agp_version(android_dir):
+    for fname in ["build.gradle", "build.gradle.kts", "settings.gradle", "settings.gradle.kts"]:
+        f = android_dir / fname
+        if not f.exists():
+            continue
+        t = f.read_text(encoding="utf-8", errors="ignore")
+        m = re.search(r"com\.android\.tools\.build:gradle:([0-9.]+)", t)
+        if m:
+            return m.group(1)
+    return None
+
+
+def _select_jdk_for_android(android_dir):
+    agp = _detect_agp_version(android_dir)
+    agp_major = int(agp.split(".")[0]) if agp else 8
+    min_java = 17 if agp_major >= 8 else (11 if agp_major == 7 else 8)
+    preferred = (17, 21) if agp_major >= 8 else (11, 17)
+    info(f"Android toolchain: AGP={agp or 'unknown'}, requires Java {min_java}+")
+
+    jh = os.environ.get("JAVA_HOME")
+    candidates = []
+    homes = []
+    if jh:
+        homes.append(Path(jh))
+    if is_windows():
+        for base in [
+            Path("C:/Program Files/Java"),
+            Path("C:/Program Files/Eclipse Adoptium"),
+            Path("C:/Program Files/Microsoft"),
+            Path("C:/Program Files/Amazon Corretto"),
+        ]:
+            if base.exists():
+                for d in base.iterdir():
+                    if d.is_dir() and "jdk" in d.name.lower():
+                        homes.append(d)
+    for home in homes:
+        java_exe = home / "bin" / ("java.exe" if is_windows() else "java")
+        if not java_exe.exists():
+            continue
+        major = _java_major_from(java_exe)
+        if major is not None and major >= min_java:
+            candidates.append((major, home))
+
+    if not candidates:
+        try:
+            out = subprocess.check_output(["java", "-version"],
+                                          stderr=subprocess.STDOUT, text=True)
+            m = re.search(r'version "(\d+)', out)
+            if m and int(m.group(1)) >= min_java:
+                info("Using Java from PATH.")
+                return None
+        except Exception:
+            pass
+        die(f"No compatible JDK found. Need Java {min_java}+ for this Android project.\n"
+            f"  Install from: https://adoptium.net/")
+
+    candidates.sort(key=lambda x: (0 if x[0] in preferred else 1, -x[0]))
+    selected = candidates[0][1]
+    info(f"Selected JDK: {selected} (Java {candidates[0][0]})")
+    return selected
+
+
+def _run_streaming(cmd, cwd=None, env=None):
+    tail = []
+    p = subprocess.Popen(cmd, cwd=cwd, env=env, stdout=subprocess.PIPE,
+                         stderr=subprocess.STDOUT, text=True,
+                         encoding="utf-8", errors="replace")
+    while True:
+        line = p.stdout.readline()
+        if not line and p.poll() is not None:
+            break
+        if line:
+            print(line, end="")
+            tail.append(line)
+            if len(tail) > 250:
+                tail = tail[-250:]
+    return p.wait(), "".join(tail)
+
+
+def _gradle_build_with_retry(android_dir, base_cmd, env):
+    rc, tail = _run_streaming(base_cmd, cwd=str(android_dir), env=env)
+    if rc == 0:
+        return
+    if "daemon disappeared" in tail.lower():
+        warn("Gradle daemon crashed. Retrying with --no-daemon...")
+    else:
+        warn("Gradle build failed. Retrying with conservative settings...")
+    retry_cmd = base_cmd + ["--no-daemon", "--no-parallel", "--max-workers=1"]
+    rc2, _ = _run_streaming(retry_cmd, cwd=str(android_dir), env=env)
+    if rc2 != 0:
+        raise RuntimeError("Android build failed after retry.")
+
+
+def cmd_android(repo, fresh=False, nuke_gradle=False):
+    """Build Android APK for the mobile app."""
+    app_dir = repo / MOBILE_APP["dir"]
+    android_dir = app_dir / "android"
+
+    if not app_dir.is_dir():
+        die(f"Mobile app directory not found: {MOBILE_APP['dir']}")
+
+    steps = 7 if fresh else 5
+    header(f"Building Android APK — LiveAzan Mobile" + (" [FRESH]" if fresh else ""))
+
+    info("Generating mobile .env with local IP...")
+    ensure_mobile_env(repo)
+
+    info(f"Step 1/{steps}: Checking dependencies...")
+    _ensure_mobile_deps(app_dir, fresh=fresh)
+
+    if fresh:
+        info(f"Step 2/{steps}: Stopping Gradle daemons...")
+        _stop_gradle_daemons(android_dir)
+        info(f"Step 3/{steps}: Clearing Gradle caches...")
+        _clean_gradle_caches(android_dir, nuke_global=nuke_gradle)
+        info(f"Step 4/{steps}: Fresh prebuild...")
+    else:
+        info(f"Step 2/{steps}: Checking Android prebuild...")
+
+    step_prebuild = 5 if fresh else 3
+    info(f"Step {step_prebuild}/{steps}: Ensuring Android prebuild...")
+    _ensure_expo_prebuild(app_dir, clean=fresh)
+
+    step_clean = 6 if fresh else 4
+    info(f"Step {step_clean}/{steps}: Cleaning stale build outputs...")
+    _clean_stale_outputs(app_dir)
+
+    step_build = 7 if fresh else 5
+    info(f"Step {step_build}/{steps}: Running Gradle assembleRelease...")
+
+    if is_windows():
+        gradle_cmd = ["cmd", "/c", ".\\gradlew.bat", "clean", "assembleRelease",
+                      "--no-configuration-cache", "--stacktrace", "--warning-mode", "all"]
+    else:
+        gradlew = android_dir / "gradlew"
+        if gradlew.exists() and not os.access(gradlew, os.X_OK):
+            gradlew.chmod(gradlew.stat().st_mode | 0o755)
+        gradle_cmd = ["./gradlew", "clean", "assembleRelease",
+                      "--no-configuration-cache", "--stacktrace", "--warning-mode", "all"]
+
+    build_env = dict(os.environ)
+    build_env.setdefault("GRADLE_OPTS",
+                         "-Dorg.gradle.jvmargs=-Xmx6g -XX:MaxMetaspaceSize=2g -Dfile.encoding=UTF-8")
+    build_env.setdefault("JAVA_TOOL_OPTIONS", "-Xmx6g")
+    build_env.setdefault("NODE_ENV", "production")
+
+    selected_jdk = _select_jdk_for_android(android_dir)
+    if selected_jdk is not None:
+        build_env["JAVA_HOME"] = str(selected_jdk)
+        sep = ";" if is_windows() else ":"
+        build_env["PATH"] = str(Path(selected_jdk) / "bin") + sep + build_env.get("PATH", "")
+
+    _gradle_build_with_retry(android_dir, gradle_cmd, build_env)
+
+    outputs_dir = android_dir / "app" / "build" / "outputs"
+    apk = _find_apk(outputs_dir)
+    if not apk:
+        die(f"No APK found under: {outputs_dir}")
+
+    dist_dir = app_dir / "dist"
+    dist_dir.mkdir(parents=True, exist_ok=True)
+    timestamp = time.strftime("%Y%m%d_%H%M")
+    dest = dist_dir / f"LiveAzan_release_{timestamp}.apk"
+    shutil.copy2(apk, dest)
+
+    header("Build Complete")
+    info(f"APK: {dest}")
+
+
+# ── Commands ──────────────────────────────────────────────────────────────────
+
+def cmd_up(repo, mode):
+    header(f"Starting LiveAzan {mode.upper()} stack")
+
+    if mode == "local":
+        ensure_env_local(repo)
+        compose_up(repo, mode)
+
+        header("Starting Admin Dev Server")
+        start_admin(repo)
+
+        header("Mobile Setup")
+        ip = ensure_mobile_env(repo)
+
+        header("Container Status")
+        compose_status(repo, mode)
+
+        info("")
+        info("LiveAzan local stack is running.")
+        info("")
+        info("  Backend API:   http://localhost:3001/api/health")
+        info(f"  Admin Portal:  http://localhost:{ADMIN_APP['port']}")
+        info("")
+        info("  Mobile dev:")
+        info(f"    API URL:     http://{ip or 'localhost'}:3001")
+        info(f"    Start Expo:  cd apps/mobile && npx expo start")
+        info("")
+        info("  Database:      localhost:5432  (liveaszan / see .env.local)")
+    else:
+        ensure_env_prod(repo)
+        compose_up(repo, mode)
+
+        header("Container Status")
+        compose_status(repo, mode)
+
+        info("")
+        info("LiveAzan production stack is running.")
+        info("  Admin Portal:  http://localhost:80")
+        info("  Backend API:   http://localhost:3001/api/health")
+
+
+def cmd_restart(repo, mode):
+    header(f"Restarting LiveAzan {mode.upper()} stack (rebuilding, keeping data)")
+
+    if mode == "local":
+        stop_admin(repo)
+    compose_down(repo, mode, wipe_volumes=False)
+    compose_up(repo, mode)
+
+    if mode == "local":
+        start_admin(repo)
+        ensure_mobile_env(repo)
+
+    header("Container Status")
+    compose_status(repo, mode)
+    info("Restart complete. Images rebuilt, data volumes preserved.")
+
+
+def cmd_down(repo):
+    header("Stopping LiveAzan containers")
+    stop_admin(repo)
+    info("Stopping local stack...")
+    compose_down(repo, "local", wipe_volumes=False)
+    info("Stopping production stack...")
+    compose_down(repo, "production", wipe_volumes=False)
+    info("All containers stopped. Data is preserved.")
+    info("Run 'python setup.py local' or 'python setup.py production' to start again.")
+
+
+def cmd_clean(repo):
+    header("Full Clean")
+    info("This will DELETE all LiveAzan Docker data:")
+    info("  - Stop and remove all containers")
+    info("  - Delete database volumes (all PostgreSQL data)")
+    info("  - Remove built Docker images")
+    info("")
+    if not ask_yes_no("Are you sure you want to wipe everything?"):
+        info("Cancelled.")
+        return
+
+    stop_admin(repo)
+    compose_down(repo, "local", wipe_volumes=True)
+    compose_down(repo, "production", wipe_volumes=True)
+
+    for project in [PROJECT_LOCAL, PROJECT_PROD]:
+        try:
+            out = run(["docker", "images", "--filter", f"reference={project}*",
+                       "--format", "{{.ID}}"], check=False)
+            ids = [i.strip() for i in out.splitlines() if i.strip()]
+            if ids:
+                run(["docker", "rmi", "-f"] + ids, check=False)
+                info(f"Removed {len(ids)} image(s) for {project}")
+        except Exception:
+            pass
+
+    info("Clean complete. Next start will rebuild everything from scratch.")
+
+
+def cmd_status(repo):
+    header("LOCAL Stack — Containers")
+    compose_status(repo, "local")
+    header("LOCAL Stack — Admin Dev Server")
+    admin_status(repo)
+    header("PRODUCTION Stack — Containers")
+    compose_status(repo, "production")
+
+
+def show_help():
+    print(textwrap.dedent("""
+    LiveAzan — Setup & Build Tool
+
+    USAGE:
+      python setup.py <command> [options]
+
+    DOCKER COMMANDS:
+      local                 Start local dev stack
+                            (PostgreSQL + Server in Docker; Admin as background process)
+      production            Start full production stack
+                            (PostgreSQL + Server + Admin/nginx all in Docker)
+      restart <mode>        Rebuild images and restart after code changes
+                            Data volumes are preserved.
+                            mode: local or production
+      down                  Stop all LiveAzan containers (data is preserved)
+      clean                 Full wipe: containers + volumes + images
+
+    STATUS:
+      status                Show running containers + admin dev server
+
+    MOBILE BUILD:
+      android local         Build Android APK for the mobile app
+                            Sets EXPO_PUBLIC_API_URL to your LAN IP automatically
+      android local --fresh Fresh build: stops Gradle daemons, cleans caches,
+                            runs expo prebuild --clean, then builds
+      android local --fresh --nuke-gradle
+                            Also wipes ~/.gradle/caches (slow; use to fix corruption)
+
+    OTHER:
+      --help, -h            Show this help
+
+    EXAMPLES:
+      python setup.py local                  # First-time local dev
+      python setup.py restart local          # After pulling new code
+      python setup.py production             # Run full production stack
+      python setup.py down                   # Stop everything, keep data
+      python setup.py clean                  # Nuclear reset
+      python setup.py android local          # Build Android APK
+      python setup.py android local --fresh  # Fresh Android build
+
+    WHAT IT HANDLES AUTOMATICALLY:
+      - Detects your OS (Windows / macOS / Linux)
+      - Checks Docker is installed and running
+      - Windows: checks WSL2 / Hyper-V virtualization
+      - Creates .env.local / .env.prod from examples if missing
+      - Builds Docker images and starts containers
+      - Starts admin Vite dev server as a background process
+      - Detects your LAN IP for mobile Expo dev
+      - Android: detects JDK version, runs Gradle, copies APK to dist/
+
+    URLs (local mode):
+      Backend API:   http://localhost:3001/api/health
+      Admin Portal:  http://localhost:5174
+      Mobile Expo:   cd apps/mobile && npx expo start
+    """))
+
+
+# ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
+    args = sys.argv[1:]
+
     print("\n" + "=" * 60)
     print("  LiveAzan — Setup Script")
     print(f"  Platform: {platform.system()} {platform.machine()}")
     print("=" * 60)
 
-    is_production = "--production" in sys.argv
+    if not args or args[0] in ("--help", "-h", "help"):
+        show_help()
+        sys.exit(0)
 
-    # 1. Detect OS and check prerequisites
-    detect_os()
-    check_python()
-    check_node()
-    check_postgres()
-    check_redis()
+    command  = args[0].lower()
+    mode_arg = args[1].lower() if len(args) > 1 else None
+    extra    = [a.lower() for a in args[2:]]
 
-    # 2. Install dependencies
-    install_dependencies()
+    repo = Path(__file__).parent.resolve()
 
-    # 3. Generate .env
-    db_password = generate_env()
+    # ── Android build (no Docker required) ──────────────────────────────
+    if command == "android":
+        if mode_arg != "local":
+            die("Usage: python setup.py android local [--fresh] [--nuke-gradle]")
+        if not has_cmd("node") or not has_cmd("npx"):
+            die("Node.js is required for mobile builds.\n"
+                "  Install: https://nodejs.org/")
+        fresh       = "--fresh" in extra
+        nuke_gradle = "--nuke-gradle" in extra
+        cmd_android(repo, fresh=fresh, nuke_gradle=nuke_gradle)
+        return
 
-    # 4. Setup database
-    setup_database(db_password)
+    # ── All other commands need Docker ───────────────────────────────────
+    if not has_cmd("docker"):
+        die(
+            "Docker is not installed.\n"
+            "  Windows / macOS: Install Docker Desktop\n"
+            "    https://www.docker.com/products/docker-desktop\n"
+            "  Linux: Install Docker Engine\n"
+            "    https://docs.docker.com/engine/install/"
+        )
 
-    # 5. Prisma
-    setup_prisma()
+    if is_windows():
+        windows_check_virtualization()
 
-    # 6. Seed
-    seed_database()
+    wait_docker()
 
-    # 7. Summary
-    heading("Setup Complete!")
-    print("""
-  Next steps:
+    if is_windows():
+        windows_check_docker_backend()
 
-  1. Start the backend:
-     cd server && npm run dev
+    detect_compose()
 
-  2. Start the mobile app:
-     cd apps/mobile && npx expo start
+    compose_ver = run(COMPOSE_CMD + ["version", "--short"], check=False).strip()
+    info(f"Compose: {' '.join(COMPOSE_CMD)} ({compose_ver})")
 
-  3. Start the admin portal:
-     cd apps/admin && npm run dev
+    # ── Dispatch ─────────────────────────────────────────────────────────
+    if command in ("local", "production"):
+        cmd_up(repo, command)
 
-  URLs:
-    Backend API:    http://localhost:3001/api
-    Mobile (Expo):  exp://localhost:8081
-    Admin Portal:   http://localhost:5174
+    elif command == "restart":
+        if mode_arg not in ("local", "production"):
+            die("Usage: python setup.py restart local\n"
+                "       python setup.py restart production")
+        cmd_restart(repo, mode_arg)
 
-  Useful commands:
-    npm run dev          — Start all services (Turborepo)
-    npm run db:seed      — Re-seed mosque data
-    npm run db:migrate   — Run database migrations
-""")
+    elif command == "down":
+        cmd_down(repo)
+
+    elif command == "clean":
+        cmd_clean(repo)
+
+    elif command == "status":
+        cmd_status(repo)
+
+    else:
+        die(f"Unknown command: '{command}'\n  Run 'python setup.py --help' for usage.")
+
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("\n  Interrupted.")
+        sys.exit(130)
+    except RuntimeError as e:
+        die(str(e))

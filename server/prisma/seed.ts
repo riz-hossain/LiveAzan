@@ -166,6 +166,8 @@ async function main() {
             website: m.website,
             hasLiveStream: m.hasLiveStream,
             verified: m.verified,
+            ...(m.mawaqitId ? { mawaqitId: m.mawaqitId } : {}),
+            ...(m.iqamaTimes ? { iqamaSource: "manual", iqamaLastFetched: new Date(data.lastResearched) } : {}),
           },
         });
         mosqueId = existing.id;
@@ -183,12 +185,16 @@ async function main() {
             website: m.website,
             hasLiveStream: m.hasLiveStream,
             verified: m.verified,
+            mawaqitId: m.mawaqitId,
+            iqamaSource: m.iqamaTimes ? "manual" : undefined,
+            iqamaLastFetched: m.iqamaTimes ? new Date(data.lastResearched) : undefined,
           },
         });
         mosqueId = created.id;
       }
 
       // Upsert iqama schedules (one per prayer, effective from seed date)
+      if (!m.iqamaTimes) continue;
       const effectiveFrom = new Date(data.lastResearched);
       const prayers = Object.entries(m.iqamaTimes) as [string, string][];
 

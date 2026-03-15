@@ -8,6 +8,8 @@ import prayerTimesRoutes from "./routes/prayerTimes";
 import userRoutes from "./routes/users";
 import coverageRequestRoutes from "./routes/coverageRequests";
 import submissionRoutes from "./routes/submissions";
+import adminRoutes from "./routes/admin";
+import { startIqamaRefreshJob } from "./jobs/iqamaRefreshJob";
 
 const app = express();
 const PORT = parseInt(process.env.PORT || "3001", 10);
@@ -29,6 +31,7 @@ app.use("/api/prayer-times", prayerTimesRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/coverage-requests", coverageRequestRoutes);
 app.use("/api/submissions", submissionRoutes);
+app.use("/api/admin", adminRoutes);
 
 // Error handler middleware
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
@@ -38,6 +41,9 @@ app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
 
 app.listen(PORT, () => {
   console.log(`LiveAzan server running on port ${PORT}`);
+  if (process.env.NODE_ENV === "production") {
+    startIqamaRefreshJob();
+  }
 });
 
 export default app;

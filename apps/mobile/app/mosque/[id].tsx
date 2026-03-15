@@ -25,18 +25,43 @@ const PRAYER_LABELS: Record<string, string> = {
   JUMMAH: "Jummah",
 };
 
+const SOURCE_LABEL: Record<string, string> = {
+  mawaqit: "MAWAQIT",
+  website: "Website",
+  manual: "LiveAzan",
+};
+
+const SOURCE_COLOR: Record<string, string> = {
+  mawaqit: "#1565C0",
+  website: "#6A1B9A",
+  manual: "#1B5E20",
+};
+
+function staleness(lastFetched: string | null): string | null {
+  if (!lastFetched) return null;
+  const ms = Date.now() - new Date(lastFetched).getTime();
+  const days = Math.floor(ms / (1000 * 60 * 60 * 24));
+  if (days === 0) return "Updated today";
+  if (days === 1) return "Updated yesterday";
+  return `Updated ${days} days ago`;
+}
+
 export default function MosqueDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const {
     activeMosque,
     iqamaSchedule,
+    iqamaSource,
+    iqamaLastFetched,
     primaryMosque,
     fetchIqamaSchedule,
     setPrimaryMosque,
+    refreshIqama,
     isLoading,
   } = useMosqueStore();
 
   const [isFollowing, setIsFollowing] = useState(false);
+  const [isRefreshing, setIsRefreshing] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -51,6 +76,9 @@ export default function MosqueDetailScreen() {
     const entry = iqamaSchedule.find((s: IqamaSchedule) => s.prayer === prayer);
     return entry?.iqamaTime;
   };
+
+  const hasAnyIqama = PRAYER_ORDER.some((p) => getIqamaTime(p));
+  const stalenessLabel = staleness(iqamaLastFetched);
 
   const handleSetPrimary = async () => {
     if (!id) return;
@@ -75,6 +103,16 @@ export default function MosqueDetailScreen() {
   const handleWebsite = () => {
     if (mosque?.website) {
       Linking.openURL(mosque.website);
+    }
+  };
+
+  const handleRefreshIqama = async () => {
+    if (!mosque) return;
+    setIsRefreshing(true);
+    try {
+      await refreshIqama(mosque);
+    } finally {
+      setIsRefreshing(false);
     }
   };
 
@@ -140,7 +178,56 @@ export default function MosqueDetailScreen() {
 
       {/* Iqama Schedule */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Today's Iqama Schedule</Text>
+        <View style={styles.sectionHeader}>
+          <Text style={styles.sectionTitle}>Today's Iqama Schedule</Text>
+          <TouchableOpacity
+            style={styles.refreshButton}
+            onPress={handleRefreshIqama}
+            disabled={isRefreshing}
+          >
+            {isRefreshing ? (
+              <ActivityIndicator size="small" color="#1B5E20" />
+            ) : (
+              <Ionicons name="refresh-outline" size={18} color="#1B5E20" />
+            )}
+          </TouchableOpacity>
+        </View>
+
+        {/* Data source + staleness */}
+        {(iqamaSource || stalenessLabel) && (
+          <View style={styles.metaRow}>
+            {iqamaSource && (
+              <View
+                style={[
+                  styles.sourceBadge,
+                  { backgroundColor: `${SOURCE_COLOR[iqamaSource]}18` },
+                ]}
+              >
+                <Text
+                  style={[
+                    styles.sourceText,
+                    { color: SOURCE_COLOR[iqamaSource] },
+                  ]}
+                >
+                  {SOURCE_LABEL[iqamaSource] ?? iqamaSource}
+                </Text>
+              </View>
+            )}
+            {stalenessLabel && (
+              <Text style={styles.stalenessText}>{stalenessLabel}</Text>
+            )}
+          </View>
+        )}
+
+        {!hasAnyIqama && (
+          <View style={styles.noIqamaHint}>
+            <Ionicons name="information-circle-outline" size={16} color="#999" />
+            <Text style={styles.noIqamaText}>
+              Tap refresh to search for iqama times from MAWAQIT and this mosque's website.
+            </Text>
+          </View>
+        )}
+
         <View style={styles.scheduleCard}>
           {PRAYER_ORDER.map((prayer) => {
             const iqamaTime = getIqamaTime(prayer);
@@ -149,7 +236,12 @@ export default function MosqueDetailScreen() {
                 <Text style={styles.prayerName}>
                   {PRAYER_LABELS[prayer] || prayer}
                 </Text>
-                <Text style={styles.iqamaTime}>
+                <Text
+                  style={[
+                    styles.iqamaTime,
+                    !iqamaTime && styles.iqamaTimeMissing,
+                  ]}
+                >
                   {iqamaTime || "--:--"}
                 </Text>
               </View>
@@ -276,13 +368,56 @@ const styles = StyleSheet.create({
   section: {
     marginBottom: 20,
   },
+  sectionHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 6,
+  },
   sectionTitle: {
     fontSize: 14,
     fontWeight: "600",
     color: "#666",
     textTransform: "uppercase",
     letterSpacing: 0.5,
+  },
+  refreshButton: {
+    padding: 4,
+  },
+  metaRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
     marginBottom: 8,
+  },
+  sourceBadge: {
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 8,
+  },
+  sourceText: {
+    fontSize: 11,
+    fontWeight: "600",
+    letterSpacing: 0.3,
+  },
+  stalenessText: {
+    fontSize: 12,
+    color: "#999",
+  },
+  noIqamaHint: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: 6,
+    backgroundColor: "#FFF8E1",
+    padding: 10,
+    borderRadius: 8,
+    marginBottom: 8,
+  },
+  noIqamaText: {
+    flex: 1,
+    fontSize: 13,
+    color: "#795548",
+    lineHeight: 18,
   },
   scheduleCard: {
     backgroundColor: "#fff",
@@ -312,6 +447,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "600",
     color: "#1B5E20",
+  },
+  iqamaTimeMissing: {
+    color: "#ccc",
+    fontWeight: "400",
   },
   actions: {
     gap: 12,

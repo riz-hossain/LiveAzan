@@ -1,0 +1,15 @@
+node_modules
+**/node_modules
+dist
+**/dist
+.git
+.gitignore
+.env
+.env.local
+.env.prod
+*.log
+.expo
+**/android
+**/ios
+.turbo
+coverage

@@ -1,0 +1,36 @@
+# Stage 1: Build TypeScript
+FROM node:20-alpine AS builder
+WORKDIR /app
+
+COPY package.json package-lock.json turbo.json tsconfig.base.json ./
+COPY packages/shared/package.json ./packages/shared/
+COPY server/package.json ./server/
+RUN npm ci
+
+COPY packages/shared/src ./packages/shared/src
+COPY server/ ./server/
+
+WORKDIR /app/server
+RUN npx prisma generate && npx tsc
+
+# Stage 2: Runtime image
+FROM node:20-alpine
+WORKDIR /app
+
+COPY package.json package-lock.json turbo.json tsconfig.base.json ./
+COPY packages/shared/package.json ./packages/shared/
+COPY server/package.json ./server/
+RUN npm ci
+
+COPY data/ ./data/
+COPY --from=builder /app/packages/shared/src ./packages/shared/src
+COPY --from=builder /app/server/dist ./server/dist
+COPY --from=builder /app/server/prisma ./server/prisma
+COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
+
+WORKDIR /app/server
+EXPOSE 3001
+
+COPY docker/server/entrypoint.prod.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]

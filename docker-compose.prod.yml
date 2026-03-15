@@ -1,0 +1,47 @@
+name: liveaszan_prod
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: liveaszan
+      POSTGRES_USER: liveaszan
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U liveaszan"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  server:
+    build:
+      context: .
+      dockerfile: docker/server/Dockerfile.prod
+    ports:
+      - "3001:3001"
+    environment:
+      DATABASE_URL: postgresql://liveaszan:${DB_PASSWORD}@postgres:5432/liveaszan
+      JWT_SECRET: ${JWT_SECRET}
+      ALADHAN_API_BASE: https://api.aladhan.com/v1
+      PORT: 3001
+      NODE_ENV: production
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  admin:
+    build:
+      context: .
+      dockerfile: docker/admin/Dockerfile.prod
+    ports:
+      - "80:80"
+    depends_on:
+      - server
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
