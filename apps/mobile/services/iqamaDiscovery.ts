@@ -1,13 +1,17 @@
 /**
  * Iqama discovery — runs entirely on the device.
  *
- * When a user taps "Find Iqama Times Near Me", this service:
- * 1. Queries our backend DB first (curated, pre-enriched, authoritative)
- * 2. For mosques still missing iqama, queries MAWAQIT directly
- * 3. For remaining gaps, scrapes the mosque website
- * 4. Also surfaces MAWAQIT-only mosques not yet in our backend
- * 5. Caches everything to AsyncStorage for offline use
+ * Source priority for mosque list:
+ *  1. Backend DB (authoritative, pre-enriched) — used when running
+ *  2. Bundled local research data (offline, ships with the app)
+ *  3. OpenStreetMap Overpass API (public, no auth, last resort)
  *
+ * Iqama time enrichment (applied to whichever source is used):
+ *  1. Backend iqamaSchedules / local bundle iqamaTimes — used if present
+ *  2. MAWAQIT direct API — matched by name + location
+ *  3. Mosque website scrape — for mosques with a website but no MAWAQIT record
+ *
+ * All results are cached to AsyncStorage for offline use.
  * No backend proxy is needed — native apps can call any API directly.
  */
 
@@ -30,6 +34,11 @@ import {
   NEARBY_MOSQUE_TTL,
   IQAMA_TTL,
 } from "./cache";
+import { searchLocalMosques } from "./localMosqueSearch";
+import {
+  searchOverpassMosques,
+  type OverpassMosque,
+} from "./overpassService";
 
 // ─── Public types ─────────────────────────────────────────────────────────────
 
@@ -55,11 +64,18 @@ export async function discoverNearbyIqama(
   lat: number,
   lon: number
 ): Promise<DiscoveredMosque[]> {
-  // Fetch backend and MAWAQIT in parallel
-  const [backendResponse, mawaqitMosques] = await Promise.allSettled([
-    fetchMosquesNearby(lat, lon, 25),
-    searchNearby(lat, lon, 5000),
-  ]);
+  // Fetch backend, MAWAQIT, and Overpass in parallel.
+  // Overpass is a last-resort source; MAWAQIT is always used for enrichment.
+  const localMosques = searchLocalMosques(lat, lon, 25);
+  const [backendResponse, mawaqitMosques, overpassResponse] =
+    await Promise.allSettled([
+      fetchMosquesNearby(lat, lon, 25),
+      searchNearby(lat, lon, 5000),
+      // Only query Overpass if local bundle is empty for this area
+      localMosques.length === 0
+        ? searchOverpassMosques(lat, lon, 25)
+        : Promise.resolve([] as OverpassMosque[]),
+    ]);
 
   const backendMosques =
     backendResponse.status === "fulfilled"
@@ -67,16 +83,28 @@ export async function discoverNearbyIqama(
       : [];
   const mawaqit =
     mawaqitMosques.status === "fulfilled" ? mawaqitMosques.value : [];
+  const overpass =
+    overpassResponse.status === "fulfilled" ? overpassResponse.value : [];
 
-  // Start with backend mosques — they are the authoritative source
+  // Source priority: backend (authoritative) → local bundle → Overpass (OSM)
+  const sourceMosques: DiscoveredMosque[] =
+    backendMosques.length > 0
+      ? backendMosques.map((m) => ({ ...m } as DiscoveredMosque))
+      : localMosques.length > 0
+      ? localMosques
+      : overpass.map(mapOverpassToDiscovered);
+
+  // Start with source mosques — backend (authoritative) or local bundle (offline fallback)
   const discovered: DiscoveredMosque[] = [];
 
-  for (const bm of backendMosques) {
-    // If backend already has iqama schedules, use them directly
+  for (const bm of sourceMosques) {
+    // If the mosque already has iqama times (backend schedules or local bundle), use them directly
     const hasBackendIqama =
-      bm.iqamaSchedules && bm.iqamaSchedules.length > 0;
+      (bm as any).iqamaSchedules && (bm as any).iqamaSchedules.length > 0;
+    const hasLocalIqama =
+      bm.discoveredIqama && Object.keys(bm.discoveredIqama).length > 0;
 
-    if (hasBackendIqama) {
+    if (hasBackendIqama || hasLocalIqama) {
       discovered.push({
         ...bm,
         iqamaSource: (bm.iqamaSource as any) ?? "manual",
@@ -115,7 +143,7 @@ export async function discoverNearbyIqama(
     });
   }
 
-  // Append MAWAQIT-only mosques not already in our backend
+  // Append MAWAQIT-only mosques not already covered by backend/local data
   // (new discoveries — will eventually be submitted/added to backend)
   for (const m of mawaqit) {
     const alreadyCovered = discovered.some(
@@ -224,9 +252,12 @@ export async function refreshSingleMosqueIqama(mosque: Mosque): Promise<{
  * No HTML parser needed — raw text matching is sufficient.
  */
 export async function scrapeWebsiteIqama(url: string): Promise<IqamaTimes> {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 8_000);
   try {
     const res = await fetch(url, {
       headers: { "User-Agent": "LiveAzan/1.0 (mosque schedule lookup)" },
+      signal: controller.signal,
     });
     if (!res.ok) return {};
 
@@ -237,6 +268,8 @@ export async function scrapeWebsiteIqama(url: string): Promise<IqamaTimes> {
     return parseIqamaFromText(text);
   } catch {
     return {};
+  } finally {
+    clearTimeout(timeoutId);
   }
 }
 
@@ -277,6 +310,26 @@ export function parseIqamaFromText(text: string): IqamaTimes {
 }
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
+
+function mapOverpassToDiscovered(m: OverpassMosque): DiscoveredMosque {
+  return {
+    id: `osm_${m.latitude.toFixed(5)}_${m.longitude.toFixed(5)}`,
+    name: m.name,
+    type: "MOSQUE" as any,
+    address: m.address,
+    city: m.city,
+    province: "",
+    country: "",
+    latitude: m.latitude,
+    longitude: m.longitude,
+    phone: m.phone ?? undefined,
+    website: m.website ?? undefined,
+    hasLiveStream: false,
+    verified: false,
+    iqamaSource: undefined,
+    discoveredIqama: undefined,
+  };
+}
 
 function haversineKm(
   lat1: number,
