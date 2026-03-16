@@ -571,6 +571,26 @@ def ensure_mobile_env(repo):
     return ip
 
 
+# ── Mobile data bundle ────────────────────────────────────────────────────────
+
+def generate_mosque_bundle(repo):
+    """Merge /data/mosques/**/*.json into the mobile app's bundled asset."""
+    script = repo / "scripts" / "generate-mosque-bundle.py"
+    if not script.exists():
+        info("  WARNING: generate-mosque-bundle.py not found — skipping bundle generation.")
+        return
+    info("Generating mosque data bundle for mobile app...")
+    run_visible([sys.executable, str(script)], cwd=str(repo))
+
+
+def cmd_generate_data(repo):
+    header("Generating Data Assets")
+    generate_mosque_bundle(repo)
+    info("")
+    info("Bundle written to apps/mobile/assets/data/mosques-index.json")
+    info("Rebuild or reload the mobile app to pick up the new data.")
+
+
 # ── Android build helpers ─────────────────────────────────────────────────────
 
 def _check_android_prerequisites():
@@ -1123,6 +1143,9 @@ def cmd_up(repo, mode):
         ensure_env_local(repo)
         compose_up(repo, mode)
 
+        header("Mobile Data Bundle")
+        generate_mosque_bundle(repo)
+
         header("Starting Admin Dev Server")
         start_admin(repo)
 
@@ -1147,6 +1170,9 @@ def cmd_up(repo, mode):
     else:
         ensure_env_prod(repo)
         compose_up(repo, mode)
+
+        header("Mobile Data Bundle")
+        generate_mosque_bundle(repo)
 
         header("Container Status")
         compose_status(repo, mode)
@@ -1355,6 +1381,9 @@ def main():
 
     elif command == "status":
         cmd_status(repo)
+
+    elif command == "generate-data":
+        cmd_generate_data(repo)
 
     else:
         die(f"Unknown command: '{command}'\n  Run 'python setup.py --help' for usage.")
