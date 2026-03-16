@@ -24,6 +24,7 @@ import {
   IQAMA_TTL,
   MOSQUE_DETAIL_TTL,
 } from "../services/cache";
+import { searchLocalMosques } from "../services/localMosqueSearch";
 
 interface CachedIqama {
   schedules: IqamaSchedule[];
@@ -75,14 +76,24 @@ export const useMosqueStore = create<MosqueState>((set, get) => ({
     set({ isLoading: true });
     try {
       const response = await fetchMosquesNearby(lat, lon);
+      console.log(`[MosqueStore] fetchNearbyMosques: backend returned ${response.mosques.length} mosques`);
       await setCached(key, response.mosques);
       set({
         nearbyMosques: response.mosques,
         uncoveredArea: response.uncoveredArea,
         isLoading: false,
       });
-    } catch {
-      // Keep showing cached data if API fails
+    } catch (err) {
+      console.warn("[MosqueStore] fetchNearbyMosques: backend unavailable:", err);
+      // Fall back to bundled local data if nothing is loaded yet
+      if (get().nearbyMosques.length === 0) {
+        const local = searchLocalMosques(lat, lon, 25);
+        console.log(`[MosqueStore] fetchNearbyMosques: local bundle returned ${local.length} mosques`);
+        if (local.length > 0) {
+          await setCached(key, local);
+          set({ nearbyMosques: local });
+        }
+      }
       set({ isLoading: false });
     }
   },
@@ -90,20 +101,24 @@ export const useMosqueStore = create<MosqueState>((set, get) => ({
   // ─── Discover iqama times near user (MAWAQIT + website scraping) ─────────
 
   discoverIqamaNearby: async (lat: number, lon: number) => {
+    console.log(`[MosqueStore] discoverIqamaNearby starting at (${lat.toFixed(4)}, ${lon.toFixed(4)})`);
     set({ isDiscovering: true });
 
     // Show cached discovery results immediately
     const key = nearbyMosquesKey(lat, lon);
     const cached = await getCached<DiscoveredMosque[]>(key, NEARBY_MOSQUE_TTL);
     if (cached) {
+      console.log(`[MosqueStore] discoverIqamaNearby: showing ${cached.length} cached mosques`);
       set({ nearbyMosques: cached });
     }
 
     try {
       const discovered = await discoverNearbyIqama(lat, lon);
+      console.log(`[MosqueStore] discoverIqamaNearby complete: ${discovered.length} mosques`);
       set({ nearbyMosques: discovered, isDiscovering: false });
       return discovered;
-    } catch {
+    } catch (err) {
+      console.warn("[MosqueStore] discoverIqamaNearby failed:", err);
       set({ isDiscovering: false });
       return [];
     }
