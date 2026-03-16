@@ -13,7 +13,7 @@ import { MosqueCard } from "../../components/MosqueCard";
 import { MosqueMap } from "../../components/MosqueMap";
 import { useMosqueStore } from "../../stores/mosqueStore";
 import { getCurrentLocation } from "../../services/location";
-import type { Mosque } from "../../packages/shared/src/types";
+import type { Mosque } from "@live-azan/shared";
 
 type ViewMode = "list" | "map";
 

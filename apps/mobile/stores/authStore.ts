@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import * as SecureStore from "expo-secure-store";
-import type { User } from "../packages/shared/src/types";
+import type { User } from "@live-azan/shared";
 import { loginApi, registerApi, oauthLoginApi } from "../services/api";
 
 const TOKEN_KEY = "live_azan_token";

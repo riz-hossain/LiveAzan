@@ -12,7 +12,7 @@ import {
 import { useLocalSearchParams, Stack } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useMosqueStore } from "../../stores/mosqueStore";
-import type { Prayer, IqamaSchedule } from "../../packages/shared/src/types";
+import type { Prayer, IqamaSchedule } from "@live-azan/shared";
 
 const PRAYER_ORDER: Prayer[] = ["FAJR", "DHUHR", "ASR", "MAGHRIB", "ISHA"] as Prayer[];
 

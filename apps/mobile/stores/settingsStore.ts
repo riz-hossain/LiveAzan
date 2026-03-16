@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { UserPrayerPreference, Prayer } from "../packages/shared/src/types";
+import type { UserPrayerPreference, Prayer } from "@live-azan/shared";
 import {
   fetchPrayerPrefs,
   updatePrayerPrefs,

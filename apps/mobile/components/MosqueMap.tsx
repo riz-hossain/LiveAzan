@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import MapView, { Marker, PROVIDER_DEFAULT } from "react-native-maps";
-import type { Mosque } from "../packages/shared/src/types";
+import type { Mosque } from "@live-azan/shared";
 
 interface MosqueMapProps {
   mosques: Mosque[];

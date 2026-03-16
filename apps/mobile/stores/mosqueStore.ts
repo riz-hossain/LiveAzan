@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { Mosque, IqamaSchedule } from "../packages/shared/src/types";
+import type { Mosque, IqamaSchedule } from "@live-azan/shared";
 import {
   fetchMosquesNearby,
   fetchMosqueById,
