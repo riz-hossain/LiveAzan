@@ -186,6 +186,19 @@ export async function updatePrayerPrefs(
   });
 }
 
+// ─── Iqama Submissions ───────────────────────────────────────────────────────
+
+export async function submitIqamaFromUrl(
+  mosqueId: string,
+  sourceUrl: string,
+  prayerTimes: Record<string, string>
+): Promise<{ id: string; message: string; status: string }> {
+  return apiClient(`/iqama/mosque/${mosqueId}/submissions`, {
+    method: "POST",
+    body: JSON.stringify({ sourceUrl, prayerTimes }),
+  });
+}
+
 // ─── Coverage Requests ───────────────────────────────────────────────────────
 
 export async function requestCoverage(

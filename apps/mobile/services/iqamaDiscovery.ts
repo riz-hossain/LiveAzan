@@ -294,37 +294,171 @@ export interface ScrapedMosqueData {
 }
 
 /**
- * Fetch a mosque website and extract iqama times, services, and hours using regex.
- * Works for ~60% of mosque websites that post schedules as text.
- * No HTML parser needed — raw text matching is sufficient.
+ * Fetch a mosque website and extract iqama times, services, and hours.
+ * Strategy:
+ *  1. Fetch the main page.
+ *  2. If no iqama times found, search the page for "full year" / "prayer schedule"
+ *     links and follow the first match.
+ *  3. Parse HTML tables for structured prayer time data.
+ *  4. Fall back to plain-text regex if tables don't yield results.
  */
 export async function scrapeWebsiteIqama(url: string): Promise<ScrapedMosqueData> {
+  const html = await fetchPage(url);
+  if (!html) return { iqamaTimes: {} };
+
+  const text = htmlToText(html);
+  const services = parseServicesFromText(text);
+  const hours = parseHoursFromText(text);
+
+  // Try table parsing first (more structured, more accurate)
+  let iqamaTimes = parseIqamaFromHtmlTables(html);
+
+  // Fall back to text-based parsing
+  if (Object.keys(iqamaTimes).length === 0) {
+    iqamaTimes = parseIqamaFromText(text);
+  }
+
+  // If still nothing found, look for a "full year" or "prayer schedule" sub-page
+  if (Object.keys(iqamaTimes).length === 0) {
+    const scheduleUrl = findScheduleLink(html, url);
+    if (scheduleUrl) {
+      const subHtml = await fetchPage(scheduleUrl);
+      if (subHtml) {
+        const subText = htmlToText(subHtml);
+        iqamaTimes = parseIqamaFromHtmlTables(subHtml);
+        if (Object.keys(iqamaTimes).length === 0) {
+          iqamaTimes = parseIqamaFromText(subText);
+        }
+      }
+    }
+  }
+
+  return {
+    iqamaTimes,
+    services: services.length > 0 ? services : undefined,
+    hours: hours ?? undefined,
+  };
+}
+
+async function fetchPage(url: string): Promise<string | null> {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 8_000);
+  const timeoutId = setTimeout(() => controller.abort(), 10_000);
   try {
     const res = await fetch(url, {
-      headers: { "User-Agent": "LiveAzan/1.0 (mosque schedule lookup)" },
+      headers: {
+        "User-Agent":
+          "Mozilla/5.0 (Linux; Android 10; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+        Accept: "text/html,application/xhtml+xml",
+      },
       signal: controller.signal,
     });
-    if (!res.ok) return { iqamaTimes: {} };
-
-    const html = await res.text();
-    // Strip tags to get readable text
-    const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
-
-    const iqamaTimes = parseIqamaFromText(text);
-    const services = parseServicesFromText(text);
-    const hours = parseHoursFromText(text);
-    return {
-      iqamaTimes,
-      services: services.length > 0 ? services : undefined,
-      hours: hours ?? undefined,
-    };
+    if (!res.ok) return null;
+    return res.text();
   } catch {
-    return { iqamaTimes: {} };
+    return null;
   } finally {
     clearTimeout(timeoutId);
   }
+}
+
+function htmlToText(html: string): string {
+  return html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+}
+
+/**
+ * Find a link to a "full year prayer times" or "prayer schedule" page.
+ * Returns the absolute URL or null.
+ */
+function findScheduleLink(html: string, baseUrl: string): string | null {
+  // Matches href attributes in <a> tags
+  const linkRe = /<a\b[^>]*href=["']([^"']+)["'][^>]*>([^<]*)<\/a>/gi;
+  const scheduleKeywords =
+    /full.year|prayer.time|prayer.schedule|iqama.schedule|salah.time|namaz.time|annual.schedule|monthly.schedule/i;
+
+  let match: RegExpExecArray | null;
+  while ((match = linkRe.exec(html)) !== null) {
+    const href = match[1];
+    const label = match[2];
+    if (scheduleKeywords.test(label) || scheduleKeywords.test(href)) {
+      // Resolve to absolute URL
+      if (/^https?:\/\//i.test(href)) return href;
+      try {
+        return new URL(href, baseUrl).href;
+      } catch {
+        // Ignore malformed URLs
+      }
+    }
+  }
+  return null;
+}
+
+/**
+ * Parse iqama times from HTML tables.
+ * Looks for tables where one column contains prayer names and another
+ * contains time values (supports multi-column layouts).
+ */
+export function parseIqamaFromHtmlTables(html: string): IqamaTimes {
+  const result: IqamaTimes = {};
+
+  // Extract all table rows
+  const tableRe = /<table[\s\S]*?<\/table>/gi;
+  const rowRe = /<tr[\s\S]*?<\/tr>/gi;
+  const cellRe = /<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi;
+
+  const prayerNames: Record<string, keyof IqamaTimes> = {
+    fajr: "fajr", fajar: "fajr",
+    dhuhr: "dhuhr", zuhr: "dhuhr", zohr: "dhuhr",
+    asr: "asr",
+    maghrib: "maghrib", magrib: "maghrib",
+    isha: "isha", esha: "isha",
+  };
+
+  let tableMatch: RegExpExecArray | null;
+  while ((tableMatch = tableRe.exec(html)) !== null) {
+    const tableHtml = tableMatch[0];
+    let rowMatch: RegExpExecArray | null;
+
+    while ((rowMatch = rowRe.exec(tableHtml)) !== null) {
+      const rowHtml = rowMatch[0];
+      const cells: string[] = [];
+
+      let cellMatch: RegExpExecArray | null;
+      cellRe.lastIndex = 0;
+      while ((cellMatch = cellRe.exec(rowHtml)) !== null) {
+        // Strip inner tags and decode common HTML entities
+        const cellText = cellMatch[1]
+          .replace(/<[^>]+>/g, " ")
+          .replace(/&amp;/g, "&")
+          .replace(/&nbsp;/g, " ")
+          .trim();
+        cells.push(cellText);
+      }
+
+      if (cells.length < 2) continue;
+
+      // Check if first cell is a prayer name
+      const firstCell = cells[0].toLowerCase().trim();
+      const prayer = prayerNames[firstCell];
+      if (!prayer || result[prayer]) continue;
+
+      // Look for a valid time in the remaining cells (prefer iqama column if labeled)
+      // Common table layouts: [Prayer | Adhan | Iqama] or [Prayer | Iqama]
+      const timeRe = /\b(\d{1,2}:\d{2})\s*(am|pm)?/i;
+      // If there are 3+ cells, pick the last time value (most likely iqama)
+      for (let i = cells.length - 1; i >= 1; i--) {
+        const m = timeRe.exec(cells[i]);
+        if (m) {
+          const raw = m[1] + (m[2] ? ` ${m[2]}` : "");
+          result[prayer] = normalizeTime(raw);
+          break;
+        }
+      }
+    }
+
+    if (Object.keys(result).length >= 4) break; // enough data found
+  }
+
+  return result;
 }
 
 /**

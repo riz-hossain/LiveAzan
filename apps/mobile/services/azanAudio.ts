@@ -27,56 +27,69 @@ const soundAssets: Record<string, any> = {
 // ─── Player State ────────────────────────────────────────────────────────────
 
 let currentSound: Audio.Sound | null = null;
+let audioSessionConfigured = false;
 
 // ─── Audio Focus ─────────────────────────────────────────────────────────────
 
 async function configureAudioSession(): Promise<void> {
-  await Audio.setAudioModeAsync({
-    allowsRecordingIOS: false,
-    staysActiveInBackground: true,
-    playsInSilentModeIOS: true,
-    shouldDuckAndroid: true,
-    playThroughEarpieceAndroid: false,
-  });
+  if (audioSessionConfigured) return;
+  try {
+    await Audio.setAudioModeAsync({
+      allowsRecordingIOS: false,
+      staysActiveInBackground: true,
+      playsInSilentModeIOS: true,
+      shouldDuckAndroid: true,
+      playThroughEarpieceAndroid: false,
+    });
+    audioSessionConfigured = true;
+  } catch (err) {
+    // Non-fatal — log and continue; playback may still work
+    console.warn("[AzanAudio] setAudioModeAsync failed:", err);
+  }
 }
 
 // ─── Play Azan ───────────────────────────────────────────────────────────────
 
 /**
  * Play an azan sound.
- * @param soundId  - The sound asset ID (defaults to "azan-default").
+ * @param soundId    - The sound asset ID (defaults to "azan-default").
  * @param onFinished - Called when playback completes naturally (not on stop).
  */
 export async function playAzan(
   soundId?: string,
   onFinished?: () => void
 ): Promise<void> {
-  // Stop any currently playing azan
+  // Stop any currently playing azan first
   await stopAzan();
 
   await configureAudioSession();
 
-  const id = soundId || "azan-default";
-  const source = soundAssets[id] || soundAssets["azan-default"];
+  const id = soundId && soundAssets[soundId] ? soundId : "azan-default";
+  const source = soundAssets[id];
 
   try {
+    // Create sound WITHOUT shouldPlay: true so we can attach the status
+    // listener before playback begins — avoids a race condition on fast devices.
     const { sound } = await Audio.Sound.createAsync(source, {
-      shouldPlay: true,
+      shouldPlay: false,
       volume: 1.0,
     });
 
     currentSound = sound;
 
-    // Clean up when playback finishes and notify caller
+    // Attach listener before playing
     sound.setOnPlaybackStatusUpdate((status) => {
       if ("didJustFinish" in status && status.didJustFinish) {
-        sound.unloadAsync();
+        sound.unloadAsync().catch(() => {});
         if (currentSound === sound) {
           currentSound = null;
         }
         onFinished?.();
       }
     });
+
+    // Explicit playAsync() is more reliable than shouldPlay: true on Android
+    await sound.playAsync();
   } catch (error) {
     currentSound = null;
     throw error;
@@ -87,13 +100,18 @@ export async function playAzan(
 
 export async function stopAzan(): Promise<void> {
   if (currentSound) {
-    try {
-      await currentSound.stopAsync();
-      await currentSound.unloadAsync();
-    } catch {
-      // Sound may already be unloaded
-    }
+    const sound = currentSound;
     currentSound = null;
+    try {
+      await sound.stopAsync();
+    } catch {
+      // Already stopped
+    }
+    try {
+      await sound.unloadAsync();
+    } catch {
+      // Already unloaded
+    }
   }
 }
 

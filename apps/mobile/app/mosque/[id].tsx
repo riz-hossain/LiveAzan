@@ -1,19 +1,23 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import {
   View,
   Text,
   ScrollView,
   TouchableOpacity,
+  TextInput,
   StyleSheet,
   ActivityIndicator,
   Linking,
   Alert,
 } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
+import { formatTimeAMPM } from "../../utils/formatTime";
 import { Ionicons } from "@expo/vector-icons";
 import { useMosqueStore } from "../../stores/mosqueStore";
 import { usePrayerStore } from "../../stores/prayerStore";
 import { getCurrentLocation } from "../../services/location";
+import { scrapeWebsiteIqama } from "../../services/iqamaDiscovery";
+import { submitIqamaFromUrl } from "../../services/api";
 import type { Prayer, IqamaSchedule } from "@live-azan/shared";
 
 const PRAYER_ORDER: Prayer[] = ["FAJR", "DHUHR", "ASR", "MAGHRIB", "ISHA"] as Prayer[];
@@ -93,6 +97,13 @@ export default function MosqueDetailScreen() {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const autoSearchedRef = useRef(false);
 
+  // ── URL Submission state ────────────────────────────────────────────────
+  const [showUrlSubmit, setShowUrlSubmit] = useState(false);
+  const [submitUrl, setSubmitUrl] = useState("");
+  const [isScraping, setIsScraping] = useState(false);
+  const [scrapedPreview, setScrapedPreview] = useState<Record<string, string> | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   useEffect(() => {
     if (id) {
       fetchIqamaSchedule(id);
@@ -165,6 +176,65 @@ export default function MosqueDetailScreen() {
       Linking.openURL(`geo:${mosque.latitude},${mosque.longitude}?q=${query}`);
     });
   };
+
+  // ── URL Submission handlers ─────────────────────────────────────────────
+
+  const handleScrapeUrl = useCallback(async () => {
+    if (!submitUrl.trim()) return;
+
+    // Validate that the domain matches the mosque's website domain
+    if (mosque?.website) {
+      try {
+        const submittedDomain = new URL(submitUrl.trim()).hostname.replace(/^www\./, "");
+        const mosqueDomain = new URL(mosque.website).hostname.replace(/^www\./, "");
+        if (submittedDomain !== mosqueDomain) {
+          Alert.alert(
+            "Domain Mismatch",
+            `The URL must be from the mosque's website (${mosqueDomain}). You entered a link from ${submittedDomain}.`
+          );
+          return;
+        }
+      } catch {
+        Alert.alert("Invalid URL", "Please enter a valid URL starting with https://");
+        return;
+      }
+    }
+
+    setIsScraping(true);
+    setScrapedPreview(null);
+    try {
+      const scraped = await scrapeWebsiteIqama(submitUrl.trim());
+      if (Object.keys(scraped.iqamaTimes).length === 0) {
+        Alert.alert(
+          "No Times Found",
+          "We couldn't find prayer times at that URL. Try the page that lists the full prayer or iqama schedule."
+        );
+      } else {
+        setScrapedPreview(scraped.iqamaTimes as Record<string, string>);
+      }
+    } finally {
+      setIsScraping(false);
+    }
+  }, [submitUrl, mosque]);
+
+  const handleSubmitTimes = useCallback(async () => {
+    if (!id || !scrapedPreview) return;
+    setIsSubmitting(true);
+    try {
+      await submitIqamaFromUrl(id, submitUrl.trim(), scrapedPreview);
+      Alert.alert(
+        "Submitted!",
+        "Prayer times submitted for admin review. They'll appear once approved. JazakAllah Khair!"
+      );
+      setShowUrlSubmit(false);
+      setSubmitUrl("");
+      setScrapedPreview(null);
+    } catch {
+      Alert.alert("Error", "Failed to submit. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }, [id, submitUrl, scrapedPreview]);
 
   const handleRefreshIqama = async () => {
     if (!mosque) return;
@@ -399,7 +469,7 @@ export default function MosqueDetailScreen() {
                     !adhanTime && styles.timeMissing,
                   ]}
                 >
-                  {adhanTime || "--:--"}
+                  {formatTimeAMPM(adhanTime)}
                 </Text>
                 <Text
                   style={[
@@ -409,12 +479,96 @@ export default function MosqueDetailScreen() {
                     !iqamaTime && styles.timeMissing,
                   ]}
                 >
-                  {iqamaTime || "--:--"}
+                  {formatTimeAMPM(iqamaTime)}
                 </Text>
               </View>
             );
           })}
         </View>
+      </View>
+
+      {/* ── User Prayer Time Submission ─────────────────────────────────── */}
+      <View style={styles.section}>
+        <TouchableOpacity
+          style={styles.submitTimesToggle}
+          onPress={() => {
+            setShowUrlSubmit((v) => !v);
+            setScrapedPreview(null);
+            setSubmitUrl(mosque?.website ?? "");
+          }}
+        >
+          <Ionicons name="link-outline" size={18} color="#1565C0" />
+          <Text style={styles.submitTimesToggleText}>
+            {showUrlSubmit ? "Cancel" : "Submit Prayer Times from Website"}
+          </Text>
+        </TouchableOpacity>
+
+        {showUrlSubmit && (
+          <View style={styles.submitTimesCard}>
+            <Text style={styles.submitTimesHint}>
+              Paste the URL of this mosque's prayer time page. The domain must
+              match the mosque's website{mosque?.website ? (() => { try { return ` (${new URL(mosque.website!).hostname})`; } catch { return ""; } })() : ""}.
+            </Text>
+
+            <TextInput
+              style={styles.urlInput}
+              value={submitUrl}
+              onChangeText={setSubmitUrl}
+              placeholder="https://mosquewebsite.com/prayer-times"
+              placeholderTextColor="#aaa"
+              autoCapitalize="none"
+              autoCorrect={false}
+              keyboardType="url"
+            />
+
+            <TouchableOpacity
+              style={[styles.scrapeButton, isScraping && styles.buttonDisabled]}
+              onPress={handleScrapeUrl}
+              disabled={isScraping || !submitUrl.trim()}
+            >
+              {isScraping ? (
+                <ActivityIndicator size="small" color="#fff" />
+              ) : (
+                <Ionicons name="search-outline" size={16} color="#fff" />
+              )}
+              <Text style={styles.scrapeButtonText}>
+                {isScraping ? "Fetching…" : "Fetch Prayer Times"}
+              </Text>
+            </TouchableOpacity>
+
+            {scrapedPreview && (
+              <View style={styles.previewCard}>
+                <Text style={styles.previewTitle}>Found Prayer Times</Text>
+                {["fajr", "dhuhr", "asr", "maghrib", "isha"].map((prayer) =>
+                  scrapedPreview[prayer] ? (
+                    <View key={prayer} style={styles.previewRow}>
+                      <Text style={styles.previewPrayer}>
+                        {prayer.charAt(0).toUpperCase() + prayer.slice(1)}
+                      </Text>
+                      <Text style={styles.previewTime}>
+                        {formatTimeAMPM(scrapedPreview[prayer])}
+                      </Text>
+                    </View>
+                  ) : null
+                )}
+                <TouchableOpacity
+                  style={[styles.confirmButton, isSubmitting && styles.buttonDisabled]}
+                  onPress={handleSubmitTimes}
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <ActivityIndicator size="small" color="#fff" />
+                  ) : (
+                    <Ionicons name="checkmark-circle-outline" size={18} color="#fff" />
+                  )}
+                  <Text style={styles.confirmButtonText}>
+                    {isSubmitting ? "Submitting…" : "Submit for Admin Review"}
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            )}
+          </View>
+        )}
       </View>
 
       {/* Actions */}
@@ -745,5 +899,104 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "600",
     color: "#1B5E20",
+  },
+  // ── URL Submission ──────────────────────────────────────────────────────
+  submitTimesToggle: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+    paddingVertical: 10,
+  },
+  submitTimesToggleText: {
+    fontSize: 14,
+    color: "#1565C0",
+    fontWeight: "500",
+  },
+  submitTimesCard: {
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    padding: 16,
+    gap: 12,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.05,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  submitTimesHint: {
+    fontSize: 13,
+    color: "#666",
+    lineHeight: 19,
+  },
+  urlInput: {
+    borderWidth: 1,
+    borderColor: "#ddd",
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    fontSize: 14,
+    color: "#333",
+    backgroundColor: "#fafafa",
+  },
+  scrapeButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
+    backgroundColor: "#1565C0",
+    paddingVertical: 12,
+    borderRadius: 10,
+  },
+  scrapeButtonText: {
+    color: "#fff",
+    fontSize: 14,
+    fontWeight: "600",
+  },
+  buttonDisabled: {
+    opacity: 0.6,
+  },
+  previewCard: {
+    backgroundColor: "#F1F8E9",
+    borderRadius: 10,
+    padding: 14,
+    gap: 8,
+  },
+  previewTitle: {
+    fontSize: 13,
+    fontWeight: "700",
+    color: "#2E7D32",
+    marginBottom: 4,
+    textTransform: "uppercase",
+    letterSpacing: 0.5,
+  },
+  previewRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  previewPrayer: {
+    fontSize: 14,
+    color: "#333",
+    fontWeight: "500",
+  },
+  previewTime: {
+    fontSize: 14,
+    color: "#1B5E20",
+    fontWeight: "700",
+  },
+  confirmButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
+    backgroundColor: "#1B5E20",
+    paddingVertical: 12,
+    borderRadius: 10,
+    marginTop: 4,
+  },
+  confirmButtonText: {
+    color: "#fff",
+    fontSize: 14,
+    fontWeight: "600",
   },
 });

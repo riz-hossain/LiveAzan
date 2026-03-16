@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { formatTimeAMPM } from "../utils/formatTime";
 
 interface PrayerTimeCardProps {
   prayerName: string;
@@ -34,7 +35,7 @@ export function PrayerTimeCard({
         <View style={styles.timeColumn}>
           <Text style={styles.timeLabel}>Adhan</Text>
           <Text style={[styles.timeValue, isNext && styles.textHighlighted]}>
-            {adhanTime || "--:--"}
+            {formatTimeAMPM(adhanTime)}
           </Text>
         </View>
 
@@ -42,7 +43,7 @@ export function PrayerTimeCard({
           <View style={styles.timeColumn}>
             <Text style={styles.timeLabel}>Iqama</Text>
             <Text style={[styles.iqamaValue, isNext && styles.textHighlighted]}>
-              {iqamaTime || "--:--"}
+              {formatTimeAMPM(iqamaTime)}
             </Text>
           </View>
         )}

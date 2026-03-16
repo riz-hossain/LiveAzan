@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { View, Text, StyleSheet } from "react-native";
+import { formatTimeAMPM } from "../utils/formatTime";
 
 interface IqamaCountdownProps {
   prayerName: string;
@@ -65,7 +66,7 @@ export function IqamaCountdown({
         Next iqama: {prayerName} at {mosqueName}
       </Text>
       <Text style={styles.countdown}>{formatCountdown(remainingMs)}</Text>
-      <Text style={styles.iqamaTime}>Iqama at {iqamaTime}</Text>
+      <Text style={styles.iqamaTime}>Iqama at {formatTimeAMPM(iqamaTime)}</Text>
     </View>
   );
 }

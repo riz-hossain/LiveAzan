@@ -102,8 +102,9 @@ model Mosque {
   createdAt        DateTime  @default(now())
   updatedAt        DateTime  @updatedAt
 
-  iqamaSchedules IqamaSchedule[]
-  followers      UserMosque[]
+  iqamaSchedules    IqamaSchedule[]
+  followers         UserMosque[]
+  iqamaSubmissions  IqamaSubmission[]
 }
 
 model MosqueSubmission {
@@ -166,6 +167,7 @@ model User {
   prayerPrefs         UserPrayerPreference[]
   coverageRequests    CoverageRequest[]
   mosqueSubmissions   MosqueSubmission[]
+  iqamaSubmissions    IqamaSubmission[]
 
   @@index([authProvider, authProviderId])
 }
@@ -205,6 +207,26 @@ model CoverageRequest {
   adminNotes String?
   createdAt  DateTime      @default(now())
   resolvedAt DateTime?
+}
+
+// User-submitted prayer time data scraped from a mosque's own website.
+// Admin reviews and, if correct, copies the times into IqamaSchedule.
+model IqamaSubmission {
+  id           String           @id @default(uuid())
+  mosqueId     String
+  mosque       Mosque           @relation(fields: [mosqueId], references: [id], onDelete: Cascade)
+  submittedBy  String?
+  user         User?            @relation(fields: [submittedBy], references: [id], onDelete: SetNull)
+  sourceUrl    String           // URL the data was scraped from
+  prayerTimes  Json             // { fajr, dhuhr, asr, maghrib, isha } or monthly calendar
+  status       SubmissionStatus @default(PENDING)
+  adminNotes   String?
+  reviewedBy   String?
+  createdAt    DateTime         @default(now())
+  reviewedAt   DateTime?
+
+  @@index([mosqueId, status])
+  @@index([status])
 }
 
 model IqamaRefreshLog {
