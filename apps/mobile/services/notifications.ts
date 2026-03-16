@@ -81,7 +81,7 @@ export async function scheduleIqamaNotification(
     content: {
       title,
       body,
-      sound: effectiveType === ("AZAN" as NotificationType) ? "azan-default.wav" : true,
+      sound: effectiveType === ("AZAN" as NotificationType) ? "azan_default.wav" : true,
       data: { prayer, mosqueName, notificationType: effectiveType },
     },
     trigger: {
@@ -130,7 +130,7 @@ export async function scheduleMaghribNotification(
       content: {
         title: "Maghrib Azan",
         body: `Sunset at ${mosqueName}`,
-        sound: "azan-default.wav",
+        sound: "azan_default.wav",
         data: {
           prayer: "MAGHRIB",
           mosqueName,

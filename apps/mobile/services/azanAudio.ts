@@ -3,7 +3,7 @@ import { Audio } from "expo-av";
 // ─── Available Sounds ────────────────────────────────────────────────────────
 
 export const AZAN_SOUNDS = [
-  { id: "azan-default", label: "Default", file: "azan-default.wav" },
+  { id: "azan-default", label: "Default", file: "azan_default.wav" },
   { id: "azan-makkah", label: "Makkah", file: "azan-makkah.wav" },
   { id: "azan-madinah", label: "Madinah", file: "azan-madinah.wav" },
   { id: "azan-alaqsa", label: "Al-Aqsa", file: "azan-alaqsa.wav" },
@@ -17,9 +17,9 @@ export type AzanSoundId = (typeof AZAN_SOUNDS)[number]["id"];
 // For now, we use a placeholder approach that loads from a URI or bundled asset.
 const soundAssets: Record<string, number | { uri: string }> = {
   // These would normally be:
-  // "azan-default": require("../assets/sounds/azan-default.wav"),
+  // "azan-default": require("../assets/sounds/azan_default.wav"),
   // For the scaffold, we use placeholder URIs
-  "azan-default": { uri: "asset:///sounds/azan-default.wav" },
+  "azan-default": { uri: "asset:///sounds/azan_default.wav" },
   "azan-makkah": { uri: "asset:///sounds/azan-makkah.wav" },
   "azan-madinah": { uri: "asset:///sounds/azan-madinah.wav" },
   "azan-alaqsa": { uri: "asset:///sounds/azan-alaqsa.wav" },
