@@ -12,6 +12,7 @@ import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { Prayer } from "@live-azan/shared";
+import { deduplicateMosques } from "./mosques";
 import { PrayerTimeCard } from "../../components/PrayerTimeCard";
 import { IqamaCountdown } from "../../components/IqamaCountdown";
 import { MosqueCard } from "../../components/MosqueCard";
@@ -119,8 +120,9 @@ export default function HomeScreen() {
     day: "numeric",
   });
 
-  // Top 3 nearby mosques for quick access
-  const nearbyPreview = nearbyMosques.slice(0, 3);
+  // Top 3 nearby mosques for quick access — deduplicate first so same
+  // physical mosque with multiple data-source entries shows only once
+  const nearbyPreview = deduplicateMosques(nearbyMosques).slice(0, 3);
 
   return (
     <ScrollView

@@ -14,9 +14,15 @@ export function MosqueMap({
   userLocation,
   onMosquePress,
 }: MosqueMapProps) {
+  // Guard against zero/NaN coordinates which crash MapView
+  const safeLat = isFinite(userLocation.latitude) && userLocation.latitude !== 0
+    ? userLocation.latitude : 43.4643;  // fallback: Waterloo, ON
+  const safeLon = isFinite(userLocation.longitude) && userLocation.longitude !== 0
+    ? userLocation.longitude : -80.5204;
+
   const initialRegion = {
-    latitude: userLocation.latitude,
-    longitude: userLocation.longitude,
+    latitude: safeLat,
+    longitude: safeLon,
     latitudeDelta: 0.1,
     longitudeDelta: 0.1,
   };
@@ -37,8 +43,8 @@ export function MosqueMap({
         style={styles.map}
         provider={PROVIDER_DEFAULT}
         initialRegion={initialRegion}
-        showsUserLocation
-        showsMyLocationButton
+        showsUserLocation={userLocation.latitude !== 0}
+        showsMyLocationButton={userLocation.latitude !== 0}
       >
         {validMosques.map((mosque) => (
           <Marker

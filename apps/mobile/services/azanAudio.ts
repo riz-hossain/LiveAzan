@@ -42,7 +42,15 @@ async function configureAudioSession(): Promise<void> {
 
 // ─── Play Azan ───────────────────────────────────────────────────────────────
 
-export async function playAzan(soundId?: string): Promise<void> {
+/**
+ * Play an azan sound.
+ * @param soundId  - The sound asset ID (defaults to "azan-default").
+ * @param onFinished - Called when playback completes naturally (not on stop).
+ */
+export async function playAzan(
+  soundId?: string,
+  onFinished?: () => void
+): Promise<void> {
   // Stop any currently playing azan
   await stopAzan();
 
@@ -59,13 +67,14 @@ export async function playAzan(soundId?: string): Promise<void> {
 
     currentSound = sound;
 
-    // Clean up when playback finishes
+    // Clean up when playback finishes and notify caller
     sound.setOnPlaybackStatusUpdate((status) => {
       if ("didJustFinish" in status && status.didJustFinish) {
         sound.unloadAsync();
         if (currentSound === sound) {
           currentSound = null;
         }
+        onFinished?.();
       }
     });
   } catch (error) {

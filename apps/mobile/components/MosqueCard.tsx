@@ -9,11 +9,16 @@ interface MosqueCardProps {
 }
 
 function getSourceInfo(mosque: Mosque): { label: string; color: string } | null {
-  if (mosque.id?.startsWith("osm_")) return { label: "OpenStreetMap", color: "#78716c" };
+  // Priority: explicit data source > verified status > OSM fallback
   if (mosque.iqamaSource === "mawaqit") return { label: "MAWAQIT", color: "#1565C0" };
   if (mosque.iqamaSource === "website") return { label: "Website", color: "#6A1B9A" };
+  // Verified mosques from LiveAzan backend (includes local bundle entries that
+  // were confirmed and enriched — show consistently as "LiveAzan")
   if (mosque.verified) return { label: "LiveAzan", color: "#1B5E20" };
+  // Local bundle only: unverified, manually curated — shown clearly so users
+  // know the data may be less current
   if (mosque.iqamaSource === "manual") return { label: "Local Bundle", color: "#E65100" };
+  if (mosque.id?.startsWith("osm_")) return { label: "OpenStreetMap", color: "#78716c" };
   return null;
 }
 
