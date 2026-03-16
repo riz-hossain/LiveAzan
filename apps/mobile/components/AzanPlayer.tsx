@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { playAzan, stopAzan, isPlaying, AZAN_SOUNDS } from "../services/azanAudio";
@@ -20,6 +20,7 @@ export function AzanPlayer({
 }: AzanPlayerProps) {
   const [playing, setPlaying] = useState(false);
   const [selectedSound, setSelectedSound] = useState("azan-default");
+  const [audioError, setAudioError] = useState<string | null>(null);
 
   const handlePlayPause = useCallback(async () => {
     try {
@@ -30,8 +31,9 @@ export function AzanPlayer({
         await playAzan(selectedSound);
         setPlaying(true);
       }
-    } catch {
+    } catch (err) {
       setPlaying(false);
+      setAudioError(err instanceof Error ? err.message : "Failed to play audio");
     }
   }, [playing, selectedSound]);
 
@@ -79,6 +81,17 @@ export function AzanPlayer({
           </TouchableOpacity>
         )}
       </View>
+
+      {/* Audio error banner */}
+      {audioError && (
+        <TouchableOpacity
+          onPress={() => setAudioError(null)}
+          style={styles.errorBanner}
+        >
+          <Ionicons name="alert-circle-outline" size={14} color="#B71C1C" />
+          <Text style={styles.errorText}>{audioError}</Text>
+        </TouchableOpacity>
+      )}
 
       {/* Sound Selector (only for recorded azan) */}
       {!hasLiveStream && (
@@ -221,5 +234,20 @@ const styles = StyleSheet.create({
   soundOptionTextActive: {
     color: "#1B5E20",
     fontWeight: "600",
+  },
+  errorBanner: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    backgroundColor: "#FFEBEE",
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 8,
+    marginBottom: 8,
+  },
+  errorText: {
+    flex: 1,
+    fontSize: 13,
+    color: "#B71C1C",
   },
 });

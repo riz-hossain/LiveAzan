@@ -28,6 +28,12 @@ interface LocalMosqueRecord {
   hasLiveStream: boolean;
   verified: boolean;
   iqamaTimes: IqamaTimes;
+  description?: string | null;
+  denomination?: string | null;
+  hours?: string | null;
+  accessInfo?: string | null;
+  services?: string[];
+  facilities?: string[];
 }
 
 /**
@@ -60,6 +66,12 @@ export function searchLocalMosques(
       discoveredIqama: Object.keys(m.iqamaTimes).length > 0
         ? m.iqamaTimes
         : undefined,
+      description: m.description ?? undefined,
+      denomination: m.denomination ?? undefined,
+      hours: m.hours ?? undefined,
+      accessInfo: m.accessInfo ?? undefined,
+      services: m.services,
+      facilities: m.facilities,
     }))
     .sort(
       (a, b) =>

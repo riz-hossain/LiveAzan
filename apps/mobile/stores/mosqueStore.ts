@@ -137,7 +137,8 @@ export const useMosqueStore = create<MosqueState>((set, get) => ({
   refreshIqama: async (mosque: Mosque) => {
     set({ isLoading: true });
     try {
-      const { iqamaTimes, source } = await refreshSingleMosqueIqama(mosque);
+      const result = await refreshSingleMosqueIqama(mosque);
+      const { iqamaTimes, source, scrapedMeta } = result;
 
       if (Object.keys(iqamaTimes).length > 0) {
         // Build IqamaSchedule array from discovered times
@@ -167,6 +168,20 @@ export const useMosqueStore = create<MosqueState>((set, get) => ({
         });
       } else {
         set({ isLoading: false });
+      }
+
+      // Merge any scraped metadata (services, hours) into activeMosque
+      if (scrapedMeta) {
+        const current = get().activeMosque;
+        if (current) {
+          set({
+            activeMosque: {
+              ...current,
+              services: scrapedMeta.services ?? current.services,
+              hours: scrapedMeta.hours ?? current.hours,
+            },
+          });
+        }
       }
     } catch {
       set({ isLoading: false });

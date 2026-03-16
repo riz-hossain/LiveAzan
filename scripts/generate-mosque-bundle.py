@@ -73,6 +73,9 @@ def process_file(json_file: Path) -> list:
 
         iqama_times = build_iqama_times(m.get("iqamaTimes") or {})
 
+        services = m.get("services")
+        facilities = m.get("facilities")
+
         record = {
             "id": f"local_{province_slug}_{city_slug}_{i}",
             "name": name,
@@ -88,6 +91,12 @@ def process_file(json_file: Path) -> list:
             "hasLiveStream": bool(m.get("hasLiveStream", False)),
             "verified": bool(m.get("verified", True)),
             "iqamaTimes": iqama_times,
+            "description": m.get("description") or None,
+            "denomination": m.get("denomination") or None,
+            "hours": m.get("hours") or None,
+            "accessInfo": m.get("accessInfo") or None,
+            "services": services if isinstance(services, list) else [],
+            "facilities": facilities if isinstance(facilities, list) else [],
         }
         records.append(record)
 
