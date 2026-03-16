@@ -54,17 +54,61 @@ const mapErrorStyles = StyleSheet.create({
 
 type ViewMode = "list" | "map";
 
-function deduplicateMosques(mosques: Mosque[]): Mosque[] {
+/**
+ * Deduplicate mosques by ID, then by name+city, then by proximity.
+ * Mosques within 200 m of each other are considered the same physical location;
+ * we keep the most data-rich entry (verified > has iqama > most fields filled).
+ */
+export function deduplicateMosques(mosques: Mosque[]): Mosque[] {
   const seenIds = new Set<string>();
-  const seenKeys = new Set<string>();
-  return mosques.filter((m) => {
-    if (seenIds.has(m.id)) return false;
+  const deduped: Mosque[] = [];
+
+  for (const m of mosques) {
+    if (seenIds.has(m.id)) continue;
     seenIds.add(m.id);
-    const key = `${m.name.toLowerCase().trim()}_${(m.city || "").toLowerCase()}`;
-    if (seenKeys.has(key)) return false;
-    seenKeys.add(key);
-    return true;
-  });
+
+    // Check if a nearby mosque is already in the result list (within 200 m)
+    const nearbyIdx = deduped.findIndex(
+      (d) => haversineM(d.latitude, d.longitude, m.latitude, m.longitude) < 200
+    );
+
+    if (nearbyIdx === -1) {
+      deduped.push(m);
+    } else {
+      // Keep the richer entry
+      const existing = deduped[nearbyIdx];
+      const existingScore = richness(existing);
+      const newScore = richness(m);
+      if (newScore > existingScore) {
+        deduped[nearbyIdx] = m;
+      }
+    }
+  }
+
+  return deduped;
+}
+
+function richness(m: Mosque): number {
+  let score = 0;
+  if (m.verified) score += 10;
+  if (m.iqamaSource && m.iqamaSource !== "manual") score += 5;
+  if (m.iqamaSource === "manual") score += 2;
+  if (m.phone) score += 1;
+  if (m.website) score += 1;
+  if (m.description) score += 1;
+  return score;
+}
+
+function haversineM(lat1: number, lon1: number, lat2: number, lon2: number): number {
+  const R = 6371000;
+  const dLat = ((lat2 - lat1) * Math.PI) / 180;
+  const dLon = ((lon2 - lon1) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos((lat1 * Math.PI) / 180) *
+      Math.cos((lat2 * Math.PI) / 180) *
+      Math.sin(dLon / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
 export default function MosquesScreen() {

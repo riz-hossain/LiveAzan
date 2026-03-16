@@ -71,10 +71,9 @@ export async function discoverNearbyIqama(
     await Promise.allSettled([
       fetchMosquesNearby(lat, lon, 25),
       searchNearby(lat, lon, 15000),
-      // Only query Overpass if local bundle is empty for this area
-      localMosques.length === 0
-        ? searchOverpassMosques(lat, lon, 25)
-        : Promise.resolve([] as OverpassMosque[]),
+      // Always query Overpass — it supplements the local bundle with OSM data
+      // that may not be in the bundled index yet (newly opened mosques, etc.)
+      searchOverpassMosques(lat, lon, 25),
     ]);
 
   const backendMosques =
@@ -186,6 +185,16 @@ export async function discoverNearbyIqama(
     });
   }
 
+  // Append Overpass/OSM mosques not already covered (supplementary — fills
+  // gaps for newly opened mosques not in backend/local bundle yet)
+  for (const m of overpass) {
+    const alreadyCovered = discovered.some(
+      (d) => haversineKm(d.latitude, d.longitude, m.latitude, m.longitude) < 0.15
+    );
+    if (alreadyCovered) continue;
+    discovered.push(mapOverpassToDiscovered(m));
+  }
+
   // Sort by distance to user
   discovered.sort((a, b) =>
     haversineKm(lat, lon, a.latitude, a.longitude) -
@@ -234,8 +243,8 @@ export async function refreshSingleMosqueIqama(mosque: Mosque): Promise<{
       }
     }
   } else {
-    // Search MAWAQIT by location
-    const candidates = await searchNearby(mosque.latitude, mosque.longitude, 300);
+    // Search MAWAQIT by location — use 1 km radius so GPS drift doesn't miss the mosque
+    const candidates = await searchNearby(mosque.latitude, mosque.longitude, 1000);
     const match = findBestMatch(
       candidates,
       mosque.name,

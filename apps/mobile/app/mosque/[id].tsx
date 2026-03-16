@@ -152,6 +152,20 @@ export default function MosqueDetailScreen() {
     }
   };
 
+  const handleDirections = () => {
+    if (!mosque) return;
+    const label = encodeURIComponent(mosque.name);
+    const query = mosque.latitude && mosque.longitude
+      ? `${mosque.latitude},${mosque.longitude}`
+      : encodeURIComponent(mosque.address);
+    // Universal link: opens Google Maps on Android, Apple Maps / default map on iOS
+    const url = `https://maps.google.com/?q=${query}&label=${label}`;
+    Linking.openURL(url).catch(() => {
+      // Fallback to geo: URI which any maps app on Android handles
+      Linking.openURL(`geo:${mosque.latitude},${mosque.longitude}?q=${query}`);
+    });
+  };
+
   const handleRefreshIqama = async () => {
     if (!mosque) return;
     setIsRefreshing(true);
@@ -226,10 +240,11 @@ export default function MosqueDetailScreen() {
 
       {/* Contact Info */}
       <View style={styles.infoCard}>
-        <View style={styles.infoRow}>
+        <TouchableOpacity style={styles.infoRow} onPress={handleDirections}>
           <Ionicons name="location-outline" size={20} color="#666" />
-          <Text style={styles.infoText}>{mosque.address}</Text>
-        </View>
+          <Text style={[styles.infoText, styles.linkText]}>{mosque.address}</Text>
+          <Ionicons name="navigate-outline" size={18} color="#1565C0" />
+        </TouchableOpacity>
         {mosque.hours && (
           <View style={styles.infoRow}>
             <Ionicons name="time-outline" size={20} color="#666" />

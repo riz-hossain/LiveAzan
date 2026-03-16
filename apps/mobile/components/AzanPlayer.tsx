@@ -28,7 +28,10 @@ export function AzanPlayer({
         await stopAzan();
         setPlaying(false);
       } else {
-        await playAzan(selectedSound);
+        await playAzan(selectedSound, () => {
+          // Called when audio finishes naturally — sync button state
+          setPlaying(false);
+        });
         setPlaying(true);
       }
     } catch (err) {

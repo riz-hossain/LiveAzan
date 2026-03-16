@@ -125,13 +125,15 @@ export function findBestMatch(
 
   for (const c of candidates) {
     const dist = haversineKm(ourLat, ourLon, c.latitude, c.longitude);
-    if (dist > 0.5) continue; // >500m away — skip
+    if (dist > 1.0) continue; // >1 km away — skip (was 500 m, too tight for GPS drift)
 
     const sim = jaccardSimilarity(ourName.toLowerCase(), c.name.toLowerCase());
-    if (sim < 0.25) continue; // names too different
+    // 0.1 threshold: catches cases like "Waterloo Masjid" vs "Muslim Society of Waterloo"
+    // where only one word overlaps.  Distance weighting compensates for low name similarity.
+    if (sim < 0.1) continue; // names too different
 
     // Score: name similarity weighted 60%, proximity 40%
-    const proxScore = Math.max(0, 1 - dist / 0.5);
+    const proxScore = Math.max(0, 1 - dist / 1.0);
     const score = 0.6 * sim + 0.4 * proxScore;
 
     if (score > bestScore) {
