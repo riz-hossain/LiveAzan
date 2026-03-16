@@ -1,0 +1,10 @@
+rank,file_a,file_b,co_changes
+1,apps/mobile/services/iqamaDiscovery.ts,apps/mobile/stores/mosqueStore.ts,5
+2,apps/mobile/app/mosque/[id].tsx,apps/mobile/services/iqamaDiscovery.ts,4
+3,apps/mobile/app/mosque/[id].tsx,apps/mobile/stores/mosqueStore.ts,4
+4,apps/mobile/services/iqamaDiscovery.ts,apps/mobile/services/localMosqueSearch.ts,3
+5,apps/mobile/app/(tabs)/index.tsx,apps/mobile/app/mosque/[id].tsx,3
+6,apps/mobile/app/(tabs)/index.tsx,apps/mobile/services/iqamaDiscovery.ts,3
+7,apps/mobile/app/(tabs)/index.tsx,apps/mobile/stores/mosqueStore.ts,3
+8,apps/mobile/app/(tabs)/mosques.tsx,apps/mobile/services/iqamaDiscovery.ts,3
+9,apps/mobile/app/(tabs)/mosques.tsx,apps/mobile/stores/mosqueStore.ts,3

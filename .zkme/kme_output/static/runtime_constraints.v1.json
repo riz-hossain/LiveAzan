@@ -1,0 +1,58 @@
+{
+  "constraints": [
+    {
+      "constraint_type": "virtualization",
+      "description": "Virtualization detected: FlatList",
+      "file": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+      "line": 5,
+      "automation_impact": "requires_scroll_into_view",
+      "confidence": "HIGH",
+      "evidence_refs": [
+        {
+          "file": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+          "line": 5
+        }
+      ],
+      "surface_id": "global"
+    },
+    {
+      "constraint_type": "map_widget",
+      "description": "Map Widget detected: MapView",
+      "file": "apps\\mobile\\components\\MosqueMap.tsx",
+      "line": 3,
+      "automation_impact": "requires_coordinate_interaction",
+      "confidence": "HIGH",
+      "evidence_refs": [
+        {
+          "file": "apps\\mobile\\components\\MosqueMap.tsx",
+          "line": 3
+        }
+      ],
+      "surface_id": "global"
+    },
+    {
+      "constraint_type": "map_widget",
+      "description": "Map Widget detected: Google Maps",
+      "file": "scripts\\research-mosques.ts",
+      "line": 480,
+      "automation_impact": "requires_coordinate_interaction",
+      "confidence": "HIGH",
+      "evidence_refs": [
+        {
+          "file": "scripts\\research-mosques.ts",
+          "line": 480
+        }
+      ],
+      "surface_id": "global"
+    }
+  ],
+  "total": 3,
+  "by_type": {
+    "virtualization": 1,
+    "map_widget": 2
+  },
+  "by_impact": {
+    "requires_scroll_into_view": 1,
+    "requires_coordinate_interaction": 2
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "note": "Golden paths are call-chain approximations from resolved call edges. Failure signals are heuristic.",
+  "paths": [
+    {
+      "entry_point": {
+        "classification": "fact",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "confidence": "medium",
+            "path": "scripts\\generate-mosque-bundle.py"
+          }
+        ],
+        "handler_symbol": "False",
+        "kind": "http",
+        "name": "GET hasLiveStream"
+      },
+      "failure_signals": [],
+      "golden_path_symbols": [
+        "False"
+      ],
+      "primary_files": []
+    },
+    {
+      "entry_point": {
+        "classification": "fact",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "confidence": "medium",
+            "path": "scripts\\generate-mosque-bundle.py"
+          }
+        ],
+        "handler_symbol": "True",
+        "kind": "http",
+        "name": "GET verified"
+      },
+      "failure_signals": [],
+      "golden_path_symbols": [
+        "True"
+      ],
+      "primary_files": []
+    }
+  ],
+  "repo_root": "A:\\git\\LiveAzan",
+  "schema": "zkme.paths.v1",
+  "snapshot_digest": "f9655f2963f29f6c21b555cb0f95e0b3a66b63ea"
+}

@@ -1,0 +1,1951 @@
+{
+  "repo_root": "A:/git/LiveAzan",
+  "generated_utc": "2026-03-16T18:07:15.959737Z",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "size": 145,
+      "mtime": 1773597944
+    },
+    {
+      "path": ".env.local",
+      "size": 493,
+      "mtime": 1773598025
+    },
+    {
+      "path": ".env.local.example",
+      "size": 622,
+      "mtime": 1773600500
+    },
+    {
+      "path": ".env.prod.example",
+      "size": 638,
+      "mtime": 1773600500
+    },
+    {
+      "path": ".gitignore",
+      "size": 64,
+      "mtime": 1773587883
+    },
+    {
+      "path": ".liveaszan_pids",
+      "size": 13,
+      "mtime": 1773681888
+    },
+    {
+      "path": ".npmrc",
+      "size": 23,
+      "mtime": 1773621326
+    },
+    {
+      "path": "DESIGN_PLAN.md",
+      "size": 25394,
+      "mtime": 1773587883
+    },
+    {
+      "path": "distancecalculation-Labeeb.py",
+      "size": 98,
+      "mtime": 1771079278
+    },
+    {
+      "path": "docker-compose.local.yml",
+      "size": 1240,
+      "mtime": 1773600500
+    },
+    {
+      "path": "docker-compose.prod.yml",
+      "size": 1164,
+      "mtime": 1773600500
+    },
+    {
+      "path": "IMPLEMENTATION_GUIDE.md",
+      "size": 18238,
+      "mtime": 1773587883
+    },
+    {
+      "path": "package-lock.json",
+      "size": 613579,
+      "mtime": 1773676990
+    },
+    {
+      "path": "package.json",
+      "size": 650,
+      "mtime": 1773621326
+    },
+    {
+      "path": "README.md",
+      "size": 28,
+      "mtime": 1771079278
+    },
+    {
+      "path": "setup.py",
+      "size": 53075,
+      "mtime": 1773674374
+    },
+    {
+      "path": "tsconfig.base.json",
+      "size": 356,
+      "mtime": 1773587883
+    },
+    {
+      "path": "turbo.json",
+      "size": 288,
+      "mtime": 1773587883
+    },
+    {
+      "path": "scripts/enrich-iqama.ts",
+      "size": 14045,
+      "mtime": 1773597944
+    },
+    {
+      "path": "scripts/generate-mobile-assets.py",
+      "size": 5960,
+      "mtime": 1773622238
+    },
+    {
+      "path": "scripts/generate-mosque-bundle.py",
+      "size": 4552,
+      "mtime": 1773681106
+    },
+    {
+      "path": "scripts/research-mosques.ts",
+      "size": 17308,
+      "mtime": 1773597944
+    },
+    {
+      "path": "server/package.json",
+      "size": 953,
+      "mtime": 1773597944
+    },
+    {
+      "path": "server/tsconfig.json",
+      "size": 185,
+      "mtime": 1773587883
+    },
+    {
+      "path": "server/prisma/schema.prisma",
+      "size": 5756,
+      "mtime": 1773597944
+    },
+    {
+      "path": "server/prisma/seed.ts",
+      "size": 8460,
+      "mtime": 1773600500
+    },
+    {
+      "path": "server/src/index.ts",
+      "size": 1614,
+      "mtime": 1773597944
+    },
+    {
+      "path": "server/src/jobs/iqamaRefreshJob.ts",
+      "size": 3067,
+      "mtime": 1773597944
+    },
+    {
+      "path": "server/src/lib/prisma.ts",
+      "size": 301,
+      "mtime": 1773587883
+    },
+    {
+      "path": "server/src/middleware/auth.ts",
+      "size": 2179,
+      "mtime": 1773587883
+    },
+    {
+      "path": "server/src/routes/admin.ts",
+      "size": 4899,
+      "mtime": 1773597944
+    },
+    {
+      "path": "server/src/routes/auth.ts",
+      "size": 4668,
+      "mtime": 1773587883
+    },
+    {
+      "path": "server/src/routes/coverageRequests.ts",
+      "size": 3541,
+      "mtime": 1773587883
+    },
+    {
+      "path": "server/src/routes/iqama.ts",
+      "size": 3953,
+      "mtime": 1773587883
+    },
+    {
+      "path": "server/src/routes/mosques.ts",
+      "size": 7124,
+      "mtime": 1773597944
+    },
+    {
+      "path": "server/src/routes/prayerTimes.ts",
+      "size": 1062,
+      "mtime": 1773587883
+    },
+    {
+      "path": "server/src/routes/submissions.ts",
+      "size": 7618,
+      "mtime": 1773587883
+    },
+    {
+      "path": "server/src/routes/users.ts",
+      "size": 6886,
+      "mtime": 1773587883
+    },
+    {
+      "path": "server/src/services/aladhanService.ts",
+      "size": 1267,
+      "mtime": 1773587883
+    },
+    {
+      "path": "server/src/services/iqamaEnrichment.ts",
+      "size": 14410,
+      "mtime": 1773597944
+    },
+    {
+      "path": "server/src/services/notificationService.ts",
+      "size": 626,
+      "mtime": 1773587883
+    },
+    {
+      "path": "server/src/services/streamService.ts",
+      "size": 248,
+      "mtime": 1773587883
+    },
+    {
+      "path": "packages/shared/package.json",
+      "size": 247,
+      "mtime": 1773587883
+    },
+    {
+      "path": "packages/shared/tsconfig.json",
+      "size": 149,
+      "mtime": 1773587883
+    },
+    {
+      "path": "packages/shared/src/constants.ts",
+      "size": 1417,
+      "mtime": 1773587883
+    },
+    {
+      "path": "packages/shared/src/index.ts",
+      "size": 82,
+      "mtime": 1773587883
+    },
+    {
+      "path": "packages/shared/src/types.ts",
+      "size": 6289,
+      "mtime": 1773681106
+    },
+    {
+      "path": "packages/shared/src/utils.ts",
+      "size": 3304,
+      "mtime": 1773587883
+    },
+    {
+      "path": "docker/admin/Dockerfile.prod",
+      "size": 569,
+      "mtime": 1773597944
+    },
+    {
+      "path": "docker/admin/nginx.conf",
+      "size": 384,
+      "mtime": 1773597944
+    },
+    {
+      "path": "docker/server/Dockerfile.local",
+      "size": 596,
+      "mtime": 1773597944
+    },
+    {
+      "path": "docker/server/Dockerfile.prod",
+      "size": 1039,
+      "mtime": 1773597944
+    },
+    {
+      "path": "docker/server/entrypoint.local.sh",
+      "size": 370,
+      "mtime": 1773597944
+    },
+    {
+      "path": "docker/server/entrypoint.prod.sh",
+      "size": 228,
+      "mtime": 1773597944
+    },
+    {
+      "path": "data/mosques/_meta/coverage-map.json",
+      "size": 9229,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/alberta/calgary.json",
+      "size": 2730,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/alberta/edmonton.json",
+      "size": 2188,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/british-columbia/vancouver.json",
+      "size": 3471,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/manitoba/winnipeg.json",
+      "size": 2200,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/nova-scotia/halifax.json",
+      "size": 1547,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/alliston.json",
+      "size": 1373,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/barrie.json",
+      "size": 3698,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/belleville.json",
+      "size": 2321,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/bradford.json",
+      "size": 2185,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/brampton.json",
+      "size": 18228,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/brantford.json",
+      "size": 2702,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/brockville.json",
+      "size": 1508,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/burlington.json",
+      "size": 9473,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/caledon.json",
+      "size": 1247,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/cambridge-kitchener.json",
+      "size": 9939,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/chatham-kent.json",
+      "size": 1277,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/collingwood.json",
+      "size": 1426,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/cornwall.json",
+      "size": 4828,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/erin.json",
+      "size": 2238,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/guelph.json",
+      "size": 4781,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/hamilton.json",
+      "size": 13692,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/hawkesbury.json",
+      "size": 1663,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/kingston.json",
+      "size": 3743,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/lindsay.json",
+      "size": 1488,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/london.json",
+      "size": 8284,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/markham.json",
+      "size": 13069,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/milton.json",
+      "size": 5227,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/mississauga.json",
+      "size": 26931,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/muskoka.json",
+      "size": 1366,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/newmarket.json",
+      "size": 1425,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/niagara.json",
+      "size": 7493,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/north-bay.json",
+      "size": 1648,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/orangeville.json",
+      "size": 3521,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/oshawa.json",
+      "size": 9039,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/ottawa.json",
+      "size": 32935,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/owen-sound.json",
+      "size": 2993,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/pembroke.json",
+      "size": 1457,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/peterborough.json",
+      "size": 2492,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/sarnia.json",
+      "size": 2521,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/sault-ste-marie.json",
+      "size": 1709,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/stratford.json",
+      "size": 1236,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/sudbury.json",
+      "size": 2752,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/thunder-bay.json",
+      "size": 2736,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/tillsonburg.json",
+      "size": 1320,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/timmins.json",
+      "size": 1529,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/toronto.json",
+      "size": 149980,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/vaughan.json",
+      "size": 4034,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/waterloo.json",
+      "size": 19179,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/whitby-ajax.json",
+      "size": 6455,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/windsor.json",
+      "size": 15152,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/ontario/woodstock.json",
+      "size": 1354,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/quebec/montreal.json",
+      "size": 3395,
+      "mtime": 1773587883
+    },
+    {
+      "path": "data/mosques/canada/saskatchewan/saskatoon.json",
+      "size": 1507,
+      "mtime": 1773587883
+    },
+    {
+      "path": "apps/admin/dev.log",
+      "size": 739,
+      "mtime": 1773681891
+    },
+    {
+      "path": "apps/admin/index.html",
+      "size": 533,
+      "mtime": 1773587883
+    },
+    {
+      "path": "apps/admin/package.json",
+      "size": 541,
+      "mtime": 1773587883
+    },
+    {
+      "path": "apps/admin/tsconfig.json",
+      "size": 379,
+      "mtime": 1773587883
+    },
+    {
+      "path": "apps/admin/vite.config.ts",
+      "size": 343,
+      "mtime": 1773597944
+    },
+    {
+      "path": "apps/mobile/.env",
+      "size": 101,
+      "mtime": 1773681888
+    },
+    {
+      "path": "apps/mobile/app.json",
+      "size": 1570,
+      "mtime": 1773622238
+    },
+    {
+      "path": "apps/mobile/metro.config.js",
+      "size": 763,
+      "mtime": 1773621961
+    },
+    {
+      "path": "apps/mobile/package.json",
+      "size": 1114,
+      "mtime": 1773621326
+    },
+    {
+      "path": "apps/mobile/tsconfig.json",
+      "size": 340,
+      "mtime": 1773587883
+    },
+    {
+      "path": "apps/mobile/android/.gitignore",
+      "size": 129,
+      "mtime": 499162500
+    },
+    {
+      "path": "apps/mobile/android/build.gradle",
+      "size": 1634,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/gradle.properties",
+      "size": 2382,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/gradlew",
+      "size": 8692,
+      "mtime": 499162500
+    },
+    {
+      "path": "apps/mobile/android/gradlew.bat",
+      "size": 2918,
+      "mtime": 499162500
+    },
+    {
+      "path": "apps/mobile/android/settings.gradle",
+      "size": 2673,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/app/_layout.tsx",
+      "size": 1348,
+      "mtime": 1773671232
+    },
+    {
+      "path": "apps/mobile/assets/adaptive-icon.png",
+      "size": 11796,
+      "mtime": 1773599666
+    },
+    {
+      "path": "apps/mobile/assets/icon.png",
+      "size": 11796,
+      "mtime": 1773599666
+    },
+    {
+      "path": "apps/mobile/assets/splash.png",
+      "size": 27340,
+      "mtime": 1773599666
+    },
+    {
+      "path": "apps/mobile/components/AzanPlayer.tsx",
+      "size": 6383,
+      "mtime": 1773681106
+    },
+    {
+      "path": "apps/mobile/components/DebugPanel.tsx",
+      "size": 7759,
+      "mtime": 1773675883
+    },
+    {
+      "path": "apps/mobile/components/IqamaCountdown.tsx",
+      "size": 2618,
+      "mtime": 1773587883
+    },
+    {
+      "path": "apps/mobile/components/MosqueCard.tsx",
+      "size": 4002,
+      "mtime": 1773678787
+    },
+    {
+      "path": "apps/mobile/components/MosqueMap.tsx",
+      "size": 1707,
+      "mtime": 1773678787
+    },
+    {
+      "path": "apps/mobile/components/NotificationSettings.tsx",
+      "size": 8658,
+      "mtime": 1773621961
+    },
+    {
+      "path": "apps/mobile/components/PrayerTimeCard.tsx",
+      "size": 2863,
+      "mtime": 1773587883
+    },
+    {
+      "path": "apps/mobile/services/api.ts",
+      "size": 6141,
+      "mtime": 1773678787
+    },
+    {
+      "path": "apps/mobile/services/azanAudio.ts",
+      "size": 3928,
+      "mtime": 1773681106
+    },
+    {
+      "path": "apps/mobile/services/cache.ts",
+      "size": 2501,
+      "mtime": 1773597944
+    },
+    {
+      "path": "apps/mobile/services/iqamaDiscovery.ts",
+      "size": 16123,
+      "mtime": 1773681106
+    },
+    {
+      "path": "apps/mobile/services/localMosqueSearch.ts",
+      "size": 3053,
+      "mtime": 1773681106
+    },
+    {
+      "path": "apps/mobile/services/location.ts",
+      "size": 5644,
+      "mtime": 1773678787
+    },
+    {
+      "path": "apps/mobile/services/mawaqitService.ts",
+      "size": 8716,
+      "mtime": 1773674374
+    },
+    {
+      "path": "apps/mobile/services/notifications.ts",
+      "size": 6651,
+      "mtime": 1773622238
+    },
+    {
+      "path": "apps/mobile/services/overpassService.ts",
+      "size": 3925,
+      "mtime": 1773675883
+    },
+    {
+      "path": "apps/mobile/services/prayerTimes.ts",
+      "size": 3496,
+      "mtime": 1773621961
+    },
+    {
+      "path": "apps/mobile/stores/authStore.ts",
+      "size": 3526,
+      "mtime": 1773671232
+    },
+    {
+      "path": "apps/mobile/stores/mosqueStore.ts",
+      "size": 9448,
+      "mtime": 1773681106
+    },
+    {
+      "path": "apps/mobile/stores/prayerStore.ts",
+      "size": 1035,
+      "mtime": 1773621961
+    },
+    {
+      "path": "apps/mobile/stores/settingsStore.ts",
+      "size": 2047,
+      "mtime": 1773671232
+    },
+    {
+      "path": "apps/mobile/assets/data/mosques-index.json",
+      "size": 351314,
+      "mtime": 1773681106
+    },
+    {
+      "path": "apps/mobile/assets/sounds/azan_default.wav",
+      "size": 88244,
+      "mtime": 1773622238
+    },
+    {
+      "path": "apps/mobile/app/(auth)/login.tsx",
+      "size": 6069,
+      "mtime": 1773671232
+    },
+    {
+      "path": "apps/mobile/app/(auth)/register.tsx",
+      "size": 3688,
+      "mtime": 1773587883
+    },
+    {
+      "path": "apps/mobile/app/(auth)/_layout.tsx",
+      "size": 236,
+      "mtime": 1773587883
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/index.tsx",
+      "size": 8110,
+      "mtime": 1773678787
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/mosques.tsx",
+      "size": 7274,
+      "mtime": 1773678787
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/settings.tsx",
+      "size": 13581,
+      "mtime": 1773678787
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/_layout.tsx",
+      "size": 1271,
+      "mtime": 1773587883
+    },
+    {
+      "path": "apps/mobile/app/mosque/[id].tsx",
+      "size": 20250,
+      "mtime": 1773681106
+    },
+    {
+      "path": "apps/mobile/android/app/build.gradle",
+      "size": 8461,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/debug.keystore",
+      "size": 2257,
+      "mtime": 499162500
+    },
+    {
+      "path": "apps/mobile/android/app/proguard-rules.pro",
+      "size": 562,
+      "mtime": 499162500
+    },
+    {
+      "path": "apps/mobile/android/react-settings-plugin/build.gradle.kts",
+      "size": 373,
+      "mtime": 499162500
+    },
+    {
+      "path": "apps/mobile/android/react-settings-plugin/.gradle/file-system.probe",
+      "size": 8,
+      "mtime": 1773677002
+    },
+    {
+      "path": "apps/mobile/android/react-settings-plugin/src/main/kotlin/expo/plugins/ReactSettingsPlugin.kt",
+      "size": 239,
+      "mtime": 499162500
+    },
+    {
+      "path": "apps/mobile/android/react-settings-plugin/.gradle/buildOutputCleanup/buildOutputCleanup.lock",
+      "size": 17,
+      "mtime": 1773681293
+    },
+    {
+      "path": "apps/mobile/android/react-settings-plugin/.gradle/buildOutputCleanup/cache.properties",
+      "size": 51,
+      "mtime": 1773677003
+    },
+    {
+      "path": "apps/mobile/android/react-settings-plugin/.gradle/buildOutputCleanup/outputFiles.bin",
+      "size": 18857,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/react-settings-plugin/.gradle/8.7/executionHistory/executionHistory.bin",
+      "size": 41920,
+      "mtime": 1773677007
+    },
+    {
+      "path": "apps/mobile/android/react-settings-plugin/.gradle/8.7/executionHistory/executionHistory.lock",
+      "size": 17,
+      "mtime": 1773681293
+    },
+    {
+      "path": "apps/mobile/android/gradle/wrapper/gradle-wrapper.jar",
+      "size": 43453,
+      "mtime": 499162500
+    },
+    {
+      "path": "apps/mobile/android/gradle/wrapper/gradle-wrapper.properties",
+      "size": 257,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/debug/AndroidManifest.xml",
+      "size": 374,
+      "mtime": 499162500
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/AndroidManifest.xml",
+      "size": 2578,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/drawable/rn_edit_text_material.xml",
+      "size": 1917,
+      "mtime": 499162500
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/drawable/splashscreen.xml",
+      "size": 145,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/drawable-hdpi/splashscreen_image.png",
+      "size": 27043,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/drawable-mdpi/splashscreen_image.png",
+      "size": 27043,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/drawable-xhdpi/splashscreen_image.png",
+      "size": 27043,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/drawable-xxhdpi/splashscreen_image.png",
+      "size": 27043,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/drawable-xxxhdpi/splashscreen_image.png",
+      "size": 27043,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "size": 257,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+      "size": 257,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "size": 4403,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "size": 4403,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+      "size": 6171,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+      "size": 2905,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+      "size": 2905,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+      "size": 4036,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+      "size": 6077,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+      "size": 6077,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+      "size": 8438,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+      "size": 9324,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "size": 9324,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+      "size": 12932,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "size": 12786,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "size": 12786,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+      "size": 17666,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/raw/azan_default.wav",
+      "size": 88244,
+      "mtime": 1773622238
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/values/colors.xml",
+      "size": 221,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/values/strings.xml",
+      "size": 249,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/values/styles.xml",
+      "size": 860,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/res/values-night/colors.xml",
+      "size": 12,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/java/com/liveaszan/app/MainActivity.kt",
+      "size": 2187,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/app/src/main/java/com/liveaszan/app/MainApplication.kt",
+      "size": 2003,
+      "mtime": 1773676998
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/gc.properties",
+      "size": 0,
+      "mtime": 1773681293
+    },
+    {
+      "path": "apps/mobile/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock",
+      "size": 17,
+      "mtime": 1773681293
+    },
+    {
+      "path": "apps/mobile/android/.gradle/buildOutputCleanup/cache.properties",
+      "size": 51,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/buildOutputCleanup/outputFiles.bin",
+      "size": 172733,
+      "mtime": 1773681293
+    },
+    {
+      "path": "apps/mobile/android/.gradle/noVersion/buildLogic.lock",
+      "size": 17,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/vcs-1/gc.properties",
+      "size": 0,
+      "mtime": 1773681293
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/checksums/checksums.lock",
+      "size": 17,
+      "mtime": 1773681293
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/gc.properties",
+      "size": 0,
+      "mtime": 1773681293
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/executionHistory/executionHistory.bin",
+      "size": 317618462,
+      "mtime": 1773681293
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/executionHistory/executionHistory.lock",
+      "size": 17,
+      "mtime": 1773681293
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/fileChanges/last-build.bin",
+      "size": 1,
+      "mtime": 1773681293
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/fileHashes/fileHashes.bin",
+      "size": 2732298,
+      "mtime": 1773681293
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/fileHashes/fileHashes.lock",
+      "size": 17,
+      "mtime": 1773681293
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/fileHashes/resourceHashesCache.bin",
+      "size": 206253,
+      "mtime": 1773681290
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/metadata.bin",
+      "size": 98,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/metadata.bin",
+      "size": 98,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/sources/org/gradle/accessors/dm/LibrariesForReactAndroidLibs.java",
+      "size": 45680,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/sources/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock.java",
+      "size": 64090,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$AndroidPluginAccessors.class",
+      "size": 1043,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$AndroidxAppcompatLibraryAccessors.class",
+      "size": 1275,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$AndroidxLibraryAccessors.class",
+      "size": 2231,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$AndroidxTestLibraryAccessors.class",
+      "size": 1049,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$AndroidxVersionAccessors.class",
+      "size": 1399,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$BinaryCompatibilityPluginAccessors.class",
+      "size": 989,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$BinaryCompatibilityVersionAccessors.class",
+      "size": 969,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$BinaryPluginAccessors.class",
+      "size": 1268,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$BinaryVersionAccessors.class",
+      "size": 1277,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$BundleAccessors.class",
+      "size": 801,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$FrescoImagepipelineLibraryAccessors.class",
+      "size": 983,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$FrescoLibraryAccessors.class",
+      "size": 2211,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$FrescoUiLibraryAccessors.class",
+      "size": 948,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$InferLibraryAccessors.class",
+      "size": 946,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$InferVersionAccessors.class",
+      "size": 928,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$JavaxAnnotationLibraryAccessors.class",
+      "size": 963,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$JavaxAnnotationVersionAccessors.class",
+      "size": 945,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$JavaxLibraryAccessors.class",
+      "size": 1484,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$JavaxVersionAccessors.class",
+      "size": 1525,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$KotlinPluginAccessors.class",
+      "size": 945,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$NexusPluginAccessors.class",
+      "size": 942,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$NexusVersionAccessors.class",
+      "size": 922,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$Okhttp3LibraryAccessors.class",
+      "size": 1241,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$PluginAccessors.class",
+      "size": 2691,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$VersionAccessors.class",
+      "size": 5379,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$YogaLibraryAccessors.class",
+      "size": 1156,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$YogaProguardLibraryAccessors.class",
+      "size": 970,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$YogaProguardVersionAccessors.class",
+      "size": 952,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs$YogaVersionAccessors.class",
+      "size": 1233,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibs.class",
+      "size": 8612,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$AndroidPluginAccessors.class",
+      "size": 1085,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$AndroidxAppcompatLibraryAccessors.class",
+      "size": 2626,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$AndroidxLibraryAccessors.class",
+      "size": 3870,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$AndroidxTestLibraryAccessors.class",
+      "size": 2400,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$AndroidxVersionAccessors.class",
+      "size": 1441,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$BinaryCompatibilityPluginAccessors.class",
+      "size": 1031,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$BinaryCompatibilityVersionAccessors.class",
+      "size": 1011,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$BinaryPluginAccessors.class",
+      "size": 1352,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$BinaryVersionAccessors.class",
+      "size": 1361,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$BundleAccessors.class",
+      "size": 927,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$FrescoImagepipelineLibraryAccessors.class",
+      "size": 2283,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$FrescoLibraryAccessors.class",
+      "size": 3748,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$FrescoUiLibraryAccessors.class",
+      "size": 2248,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$InferLibraryAccessors.class",
+      "size": 2246,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$InferVersionAccessors.class",
+      "size": 970,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$JavaxAnnotationLibraryAccessors.class",
+      "size": 2263,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$JavaxAnnotationVersionAccessors.class",
+      "size": 987,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$JavaxLibraryAccessors.class",
+      "size": 2877,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$JavaxVersionAccessors.class",
+      "size": 1609,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$KotlinPluginAccessors.class",
+      "size": 987,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$NexusPluginAccessors.class",
+      "size": 984,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$NexusVersionAccessors.class",
+      "size": 964,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$Okhttp3LibraryAccessors.class",
+      "size": 2592,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$PluginAccessors.class",
+      "size": 2901,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$VersionAccessors.class",
+      "size": 5673,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$YogaLibraryAccessors.class",
+      "size": 2498,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$YogaProguardLibraryAccessors.class",
+      "size": 2270,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$YogaProguardVersionAccessors.class",
+      "size": 994,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock$YogaVersionAccessors.class",
+      "size": 1317,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/63bfea9ebd7ffa1cdafd0ae8ce62aa3c210042bd/classes/org/gradle/accessors/dm/LibrariesForReactAndroidLibsInPluginsBlock.class",
+      "size": 11275,
+      "mtime": 1773681207
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/sources/org/gradle/accessors/dm/LibrariesForLibs.java",
+      "size": 10507,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/sources/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock.java",
+      "size": 15671,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidGradleLibraryAccessors.class",
+      "size": 927,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidLibraryAccessors.class",
+      "size": 1093,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibs$BundleAccessors.class",
+      "size": 765,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibs$KotlinGradleLibraryAccessors.class",
+      "size": 924,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibs$KotlinLibraryAccessors.class",
+      "size": 1086,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibs$KotlinPluginAccessors.class",
+      "size": 901,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibs$PluginAccessors.class",
+      "size": 1112,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibs$VersionAccessors.class",
+      "size": 1243,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibs.class",
+      "size": 4279,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidGradleLibraryAccessors.class",
+      "size": 2227,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidLibraryAccessors.class",
+      "size": 2435,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$BundleAccessors.class",
+      "size": 891,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$KotlinGradleLibraryAccessors.class",
+      "size": 2224,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$KotlinLibraryAccessors.class",
+      "size": 2428,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$KotlinPluginAccessors.class",
+      "size": 943,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$PluginAccessors.class",
+      "size": 1196,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$VersionAccessors.class",
+      "size": 1285,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/android/.gradle/8.7/dependencies-accessors/423f0288fa7dffe069445ffa4b72952b4629a15a/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock.class",
+      "size": 6077,
+      "mtime": 1773681205
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/splash-android/splash-android-f3fdbc940bb4bb4df13227db3961e10043b2fb5dd8897e27690b95181d2d0be9-contain/icon_undefined.png",
+      "size": 27043,
+      "mtime": 1773600176
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/android-standard-square/android-standard-square-a6198f57b71c7371bc9fa2854a8aafa014be88bf3ecb82332bb1cc8550965b30-cover-#1B5E20/icon_108.png",
+      "size": 2905,
+      "mtime": 1773600174
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/android-standard-square/android-standard-square-a6198f57b71c7371bc9fa2854a8aafa014be88bf3ecb82332bb1cc8550965b30-cover-#1B5E20/icon_162.png",
+      "size": 4403,
+      "mtime": 1773600174
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/android-standard-square/android-standard-square-a6198f57b71c7371bc9fa2854a8aafa014be88bf3ecb82332bb1cc8550965b30-cover-#1B5E20/icon_216.png",
+      "size": 6077,
+      "mtime": 1773600174
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/android-standard-square/android-standard-square-a6198f57b71c7371bc9fa2854a8aafa014be88bf3ecb82332bb1cc8550965b30-cover-#1B5E20/icon_324.png",
+      "size": 9324,
+      "mtime": 1773600174
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/android-standard-square/android-standard-square-a6198f57b71c7371bc9fa2854a8aafa014be88bf3ecb82332bb1cc8550965b30-cover-#1B5E20/icon_432.png",
+      "size": 12786,
+      "mtime": 1773600174
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/android-standard-circle/android-standard-circle-a6198f57b71c7371bc9fa2854a8aafa014be88bf3ecb82332bb1cc8550965b30-cover-#1B5E20/icon_108.png",
+      "size": 4036,
+      "mtime": 1773600175
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/android-standard-circle/android-standard-circle-a6198f57b71c7371bc9fa2854a8aafa014be88bf3ecb82332bb1cc8550965b30-cover-#1B5E20/icon_162.png",
+      "size": 6171,
+      "mtime": 1773600175
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/android-standard-circle/android-standard-circle-a6198f57b71c7371bc9fa2854a8aafa014be88bf3ecb82332bb1cc8550965b30-cover-#1B5E20/icon_216.png",
+      "size": 8438,
+      "mtime": 1773600175
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/android-standard-circle/android-standard-circle-a6198f57b71c7371bc9fa2854a8aafa014be88bf3ecb82332bb1cc8550965b30-cover-#1B5E20/icon_324.png",
+      "size": 12932,
+      "mtime": 1773600175
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/android-standard-circle/android-standard-circle-a6198f57b71c7371bc9fa2854a8aafa014be88bf3ecb82332bb1cc8550965b30-cover-#1B5E20/icon_432.png",
+      "size": 17666,
+      "mtime": 1773600175
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/android-adaptive-foreground/android-adaptive-foreground-a6198f57b71c7371bc9fa2854a8aafa014be88bf3ecb82332bb1cc8550965b30-cover-transparent/icon_108.png",
+      "size": 2905,
+      "mtime": 1773600175
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/android-adaptive-foreground/android-adaptive-foreground-a6198f57b71c7371bc9fa2854a8aafa014be88bf3ecb82332bb1cc8550965b30-cover-transparent/icon_162.png",
+      "size": 4403,
+      "mtime": 1773600175
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/android-adaptive-foreground/android-adaptive-foreground-a6198f57b71c7371bc9fa2854a8aafa014be88bf3ecb82332bb1cc8550965b30-cover-transparent/icon_216.png",
+      "size": 6077,
+      "mtime": 1773600175
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/android-adaptive-foreground/android-adaptive-foreground-a6198f57b71c7371bc9fa2854a8aafa014be88bf3ecb82332bb1cc8550965b30-cover-transparent/icon_324.png",
+      "size": 9324,
+      "mtime": 1773600175
+    },
+    {
+      "path": "apps/mobile/.expo/web/cache/production/images/android-adaptive-foreground/android-adaptive-foreground-a6198f57b71c7371bc9fa2854a8aafa014be88bf3ecb82332bb1cc8550965b30-cover-transparent/icon_432.png",
+      "size": 12786,
+      "mtime": 1773600175
+    },
+    {
+      "path": "apps/admin/src/App.tsx",
+      "size": 7447,
+      "mtime": 1773587883
+    },
+    {
+      "path": "apps/admin/src/main.tsx",
+      "size": 223,
+      "mtime": 1773587883
+    },
+    {
+      "path": "apps/admin/src/pages/Dashboard.tsx",
+      "size": 3145,
+      "mtime": 1773587883
+    },
+    {
+      "path": "apps/admin/src/pages/IqamaEditor.tsx",
+      "size": 5828,
+      "mtime": 1773587883
+    },
+    {
+      "path": "apps/admin/src/pages/StreamSetup.tsx",
+      "size": 3383,
+      "mtime": 1773587883
+    },
+    {
+      "path": ".zkme/kme_output/00_START_HERE.md",
+      "size": 4190,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/claude_context_pack.md",
+      "size": 17405,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/claude_context_pack_index.json",
+      "size": 21422,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/DATA_TOUCH_MAP.json",
+      "size": 8563,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/FEATURE_CATALOG.md",
+      "size": 10801,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/feature_graph.json",
+      "size": 383960,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/INTERFACE_CATALOG.json",
+      "size": 35554,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/KME_AGGREGATION_CANDIDATES.json",
+      "size": 98,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/KME_CONFIDENCE_REPORT.json",
+      "size": 126,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/KME_RECOMMENDED_CONTRACTS.json",
+      "size": 97,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/KNOWN_HAZARDS.md",
+      "size": 3196,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/L1_SUMMARY.md",
+      "size": 707,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/L2_CONTEXT.md",
+      "size": 9917,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/L3_REFERENCE.json",
+      "size": 1484095,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/SYSTEM_OVERVIEW.md",
+      "size": 1395,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/WORKFLOW_BOOK.md",
+      "size": 1355,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/ZKME_CHANGE_IMPACT.json",
+      "size": 45359,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/ZKME_CONTRACTS_INVARIANTS.json",
+      "size": 91752,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/ZKME_FEATURE_REGISTRY.json",
+      "size": 44466,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/ZKME_PATCH_PLANNING_PACK.md",
+      "size": 3762,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/ZKME_PATHS.json",
+      "size": 1238,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/ZKME_REPO_PROFILE.json",
+      "size": 962,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/static/active_surface_index.json",
+      "size": 163,
+      "mtime": 1773684423
+    },
+    {
+      "path": ".zkme/kme_output/static/assertion_anchors.v1.json",
+      "size": 16578,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/static/ast_errors.json",
+      "size": 139,
+      "mtime": 1773684428
+    },
+    {
+      "path": ".zkme/kme_output/static/auth_contract.v1.json",
+      "size": 202,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/static/call_graph.json",
+      "size": 956737,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/config_keys.json",
+      "size": 8155,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/data_matrix.v1.json",
+      "size": 62293,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/static/data_touches.json",
+      "size": 7759,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/static/db_migrations_intelligence.v1.json",
+      "size": 311,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/static/decorators.json",
+      "size": 4,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/desktop_surface.v1.json",
+      "size": 54,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/static/evidence_index.json",
+      "size": 705063,
+      "mtime": 1773684428
+    },
+    {
+      "path": ".zkme/kme_output/static/features.json",
+      "size": 19132,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/files.json",
+      "size": 43516,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/flow_graph.v1.json",
+      "size": 753,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/static/frontend_calls.json",
+      "size": 2741,
+      "mtime": 1773684428
+    },
+    {
+      "path": ".zkme/kme_output/static/graphql_index.json",
+      "size": 336,
+      "mtime": 1773684428
+    },
+    {
+      "path": ".zkme/kme_output/static/hazards.json",
+      "size": 10077,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/hierarchy.json",
+      "size": 4,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/hot_files.json",
+      "size": 10961,
+      "mtime": 1773684423
+    },
+    {
+      "path": ".zkme/kme_output/static/imports.json",
+      "size": 57610,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/import_edges.json",
+      "size": 84,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/interfaces.json",
+      "size": 43247,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/layout_tokens.json",
+      "size": 41223,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/legacy_surface_index.json",
+      "size": 141,
+      "mtime": 1773684423
+    },
+    {
+      "path": ".zkme/kme_output/static/locator_policy.v1.json",
+      "size": 1279,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/static/negative_test_matrix.v1.json",
+      "size": 325854,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/static/openapi_surface.v1.json",
+      "size": 70,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/static/proxy_rules.json",
+      "size": 139,
+      "mtime": 1773684428
+    },
+    {
+      "path": ".zkme/kme_output/static/ranks.json",
+      "size": 21822,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/realtime_surface.v1.json",
+      "size": 88,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/static/repo_root_signature.json",
+      "size": 140,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/repo_signals.json",
+      "size": 1224,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/routes_detected.json",
+      "size": 229,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/rule_engine_detection.json",
+      "size": 522,
+      "mtime": 1773684423
+    },
+    {
+      "path": ".zkme/kme_output/static/runtime_constraints.v1.json",
+      "size": 1546,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/static/schemas.json",
+      "size": 57704,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/search_backend_detected.json",
+      "size": 316,
+      "mtime": 1773684428
+    },
+    {
+      "path": ".zkme/kme_output/static/symbols.json",
+      "size": 146261,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/test_data_contract.v1.json",
+      "size": 773,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/static/types.json",
+      "size": 14190,
+      "mtime": 1773684401
+    },
+    {
+      "path": ".zkme/kme_output/static/ui_event_bindings.v1.json",
+      "size": 176,
+      "mtime": 1773684434
+    },
+    {
+      "path": ".zkme/kme_output/static/ui/ui_model.v1.json",
+      "size": 713,
+      "mtime": 1773684434
+    }
+  ]
+}

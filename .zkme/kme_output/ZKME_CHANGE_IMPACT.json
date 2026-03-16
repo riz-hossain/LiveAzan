@@ -1,0 +1,1671 @@
+{
+  "impacts": [
+    {
+      "file": "setup.py",
+      "files_within_2_hops": [
+        "setup.py"
+      ],
+      "symbols_in_radius": [
+        "_check_android_prerequisites",
+        "_check_hyperv_virtualization",
+        "_check_wsl_installed",
+        "_clean_gradle_caches",
+        "_clean_stale_outputs",
+        "_detect_agp_version",
+        "_ensure_cleartext_traffic",
+        "_ensure_expo_prebuild",
+        "_ensure_mobile_deps",
+        "_ensure_wsl2_features",
+        "_find_apk",
+        "_get_local_ip",
+        "_gradle_build_with_retry",
+        "_is_process_running",
+        "_java_major_from",
+        "_patch_expo_modules_core_gradle",
+        "_patch_gradle_wrapper",
+        "_patch_ndk_version",
+        "_pid_file",
+        "_preflight_check_settings_gradle",
+        "_read_env_value",
+        "_run_streaming",
+        "_select_jdk_for_android",
+        "_stop_gradle_daemons",
+        "admin_status",
+        "ask_yes_no",
+        "cmd_android",
+        "cmd_clean",
+        "cmd_down",
+        "cmd_generate_data",
+        "cmd_restart",
+        "cmd_status",
+        "cmd_up",
+        "compose_down",
+        "compose_local",
+        "compose_prod",
+        "compose_status",
+        "compose_up",
+        "detect_compose",
+        "die",
+        "docker_running",
+        "ensure_env_local",
+        "ensure_env_prod",
+        "ensure_mobile_env",
+        "generate_mosque_bundle",
+        "get_compose_prefix",
+        "has_cmd",
+        "header",
+        "info",
+        "is_mac",
+        "is_windows",
+        "main",
+        "print_admin_credentials",
+        "run",
+        "run_visible",
+        "show_help",
+        "start_admin",
+        "stop_admin",
+        "wait_docker",
+        "warn",
+        "windows_check_docker_backend",
+        "windows_check_virtualization"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\services\\api.ts",
+      "files_within_2_hops": [
+        "apps\\mobile\\services\\api.ts"
+      ],
+      "symbols_in_radius": [
+        "BASE_URL",
+        "TOKEN_KEY",
+        "fetchCoverageRequests",
+        "fetchIqama",
+        "fetchMosqueById",
+        "fetchMosquesNearby",
+        "fetchPrayerPrefs",
+        "fetchPrayerTimesApi",
+        "followMosque",
+        "loginApi",
+        "oauthLoginApi",
+        "registerApi",
+        "requestCoverage",
+        "unfollowMosque",
+        "updatePrayerPrefs",
+        "updateProfile"
+      ]
+    },
+    {
+      "file": "scripts\\enrich-iqama.ts",
+      "files_within_2_hops": [
+        "scripts\\enrich-iqama.ts"
+      ],
+      "symbols_in_radius": [
+        "Args",
+        "DATA_ROOT",
+        "IqamaTimes",
+        "MawaqitMosque",
+        "SeedFile",
+        "SeedMosque",
+        "addMins",
+        "addSource",
+        "bestMatch",
+        "enrichSeedFile",
+        "extractIqama",
+        "findAllSeedFiles",
+        "findSeedFile",
+        "haversineKm",
+        "jaccard",
+        "main",
+        "mawaqitFetch",
+        "mawaqitSearch",
+        "normTime",
+        "parseArgs",
+        "parseIqama",
+        "scrapeWebsite",
+        "sleep"
+      ]
+    },
+    {
+      "file": "server\\src\\services\\iqamaEnrichment.ts",
+      "files_within_2_hops": [
+        "server\\src\\services\\iqamaEnrichment.ts"
+      ],
+      "symbols_in_radius": [
+        "EnrichmentReport",
+        "EnrichmentResult",
+        "IqamaTimes",
+        "MawaqitMosque",
+        "RATE_LIMIT_MS",
+        "STALE_DAYS",
+        "addMinutes",
+        "enrichCity",
+        "enrichMosque",
+        "extractIqamaTimes",
+        "getActiveCities",
+        "haversineKm",
+        "jaccardSimilarity",
+        "mawaqitFindBestMatch",
+        "mawaqitGetByUuid",
+        "mawaqitSearchNearby",
+        "normalizeTime",
+        "parseIqamaFromText",
+        "scrapeWebsiteIqama",
+        "sleep",
+        "tryMawaqit",
+        "upsertIqama"
+      ]
+    },
+    {
+      "file": "packages\\shared\\src\\types.ts",
+      "files_within_2_hops": [
+        "packages\\shared\\src\\types.ts"
+      ],
+      "symbols_in_radius": [
+        "ApiError",
+        "AuthTokenPayload",
+        "CoverageRequest",
+        "IqamaSchedule",
+        "LoginResponse",
+        "Mosque",
+        "MosqueSeedEntry",
+        "MosqueSeedFile",
+        "NearbyMosquesResponse",
+        "NextPrayer",
+        "PrayerTimes",
+        "RegisterRequest",
+        "User",
+        "UserMosque",
+        "UserPrayerPreference"
+      ]
+    },
+    {
+      "file": "scripts\\research-mosques.ts",
+      "files_within_2_hops": [
+        "scripts\\research-mosques.ts"
+      ],
+      "symbols_in_radius": [
+        "Args",
+        "EnrichedMosque",
+        "IqamaTimes",
+        "MawaqitMosque",
+        "RawMosque",
+        "addMinutes",
+        "deduplicateMosques",
+        "extractIqamaFromMawaqit",
+        "fetchMawaqitById",
+        "findMawaqitMatch",
+        "generateSeedFile",
+        "haversine",
+        "main",
+        "nameSimilarity",
+        "normalizeTime",
+        "parseArgs",
+        "searchMawaqitNearby",
+        "searchOverpassAPI"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\services\\location.ts",
+      "files_within_2_hops": [
+        "apps\\mobile\\services\\location.ts"
+      ],
+      "symbols_in_radius": [
+        "BACKGROUND_TASK_NAME",
+        "SAVED_LOCATION_KEY",
+        "TRAVEL_THRESHOLD_KM",
+        "getCurrentLocation",
+        "getSavedLocation",
+        "haversineDistance",
+        "requestBackgroundPermissions",
+        "requestPermissions",
+        "saveLocation",
+        "startBackgroundTracking",
+        "stopBackgroundTracking",
+        "toRadians"
+      ]
+    },
+    {
+      "file": "packages\\shared\\src\\constants.ts",
+      "files_within_2_hops": [
+        "packages\\shared\\src\\constants.ts"
+      ],
+      "symbols_in_radius": [
+        "ALADHAN_API_BASE",
+        "CALC_METHODS",
+        "DEFAULT_CALC_METHOD",
+        "DEFAULT_LEAD_MINUTES",
+        "DEFAULT_SEARCH_RADIUS_KM",
+        "MAX_LEAD_MINUTES",
+        "MIN_LEAD_MINUTES",
+        "MOSQUE_CACHE_HOURS",
+        "PRAYER_TIMES_CACHE_HOURS",
+        "TRAVEL_DETECTION_COOLDOWN_MS",
+        "TRAVEL_DETECTION_THRESHOLD_KM"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\services\\mawaqitService.ts",
+      "files_within_2_hops": [
+        "apps\\mobile\\services\\mawaqitService.ts"
+      ],
+      "symbols_in_radius": [
+        "IqamaTimes",
+        "MAWAQIT_BASE",
+        "MawaqitMosque",
+        "addMinutes",
+        "extractIqamaTimes",
+        "findBestMatch",
+        "getByUuid",
+        "haversineKm",
+        "isValidTime",
+        "jaccardSimilarity",
+        "normalizeTime",
+        "searchNearby"
+      ]
+    },
+    {
+      "file": "packages\\shared\\src\\utils.ts",
+      "files_within_2_hops": [
+        "packages\\shared\\src\\utils.ts"
+      ],
+      "symbols_in_radius": [
+        "formatCountdown",
+        "formatTime",
+        "formatTime12h",
+        "getNextPrayer",
+        "getTodayForAladhan",
+        "getTodayISO",
+        "haversineDistance",
+        "isMaghrib",
+        "parseTime",
+        "toRad"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\services\\azanAudio.ts",
+      "files_within_2_hops": [
+        "apps\\mobile\\services\\azanAudio.ts"
+      ],
+      "symbols_in_radius": [
+        "AZAN_SOUNDS",
+        "AzanSoundId",
+        "configureAudioSession",
+        "isPlaying",
+        "playAzan",
+        "stopAzan"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\services\\iqamaDiscovery.ts",
+      "files_within_2_hops": [
+        "apps\\mobile\\services\\iqamaDiscovery.ts"
+      ],
+      "symbols_in_radius": [
+        "DiscoveredMosque",
+        "ScrapedMosqueData",
+        "cacheIqama",
+        "discoverNearbyIqama",
+        "haversineKm",
+        "iqamaTimesToSchedules",
+        "mapOverpassToDiscovered",
+        "parseHoursFromText",
+        "parseIqamaFromText",
+        "parseServicesFromText",
+        "refreshSingleMosqueIqama",
+        "scrapeWebsiteIqama"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt"
+      ],
+      "symbols_in_radius": [
+        "MainApplication",
+        "PackageList",
+        "get",
+        "getJSMainModuleName",
+        "getPackages",
+        "getUseDeveloperSupport",
+        "load",
+        "onConfigurationChanged",
+        "onCreate"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\services\\notifications.ts",
+      "files_within_2_hops": [
+        "apps\\mobile\\services\\notifications.ts"
+      ],
+      "symbols_in_radius": [
+        "cancelAllNotifications",
+        "formatPrayerName",
+        "parseTimeToDate",
+        "requestPermissions",
+        "rescheduleAll",
+        "scheduleIqamaNotification",
+        "scheduleMaghribNotification"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\services\\overpassService.ts",
+      "files_within_2_hops": [
+        "apps\\mobile\\services\\overpassService.ts"
+      ],
+      "symbols_in_radius": [
+        "OVERPASS_URL",
+        "OverpassMosque",
+        "parseElement",
+        "searchOverpassMosques"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\services\\cache.ts",
+      "files_within_2_hops": [
+        "apps\\mobile\\services\\cache.ts"
+      ],
+      "symbols_in_radius": [
+        "CacheEntry",
+        "IQAMA_TTL",
+        "MOSQUE_DETAIL_TTL",
+        "NEARBY_MOSQUE_TTL",
+        "clearCached",
+        "getCachedTimestamp"
+      ]
+    },
+    {
+      "file": "apps\\admin\\src\\App.tsx",
+      "files_within_2_hops": [
+        "apps\\admin\\src\\App.tsx"
+      ],
+      "symbols_in_radius": [
+        "AdminLayout",
+        "App",
+        "CoverageRequests",
+        "Login",
+        "MosqueList"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\services\\prayerTimes.ts",
+      "files_within_2_hops": [
+        "apps\\mobile\\services\\prayerTimes.ts"
+      ],
+      "symbols_in_radius": [
+        "CACHE_DURATION_MS",
+        "CacheEntry",
+        "getCacheKey",
+        "getFromCache",
+        "getNextPrayer",
+        "getPrayerTimes",
+        "setCache"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt"
+      ],
+      "symbols_in_radius": [
+        "MainActivity",
+        "ReactActivityDelegateWrapper",
+        "createReactActivityDelegate",
+        "getMainComponentName",
+        "invokeDefaultOnBackPressed",
+        "onCreate",
+        "setTheme"
+      ]
+    },
+    {
+      "file": "scripts\\generate-mobile-assets.py",
+      "files_within_2_hops": [
+        "scripts\\generate-mobile-assets.py"
+      ],
+      "symbols_in_radius": [
+        "_chunk",
+        "_icon_pixel",
+        "_in_circle",
+        "_make_png",
+        "_make_silent_wav",
+        "_splash_pixel",
+        "main"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\android\\react-settings-plugin\\build.gradle.kts",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\react-settings-plugin\\build.gradle.kts"
+      ],
+      "symbols_in_radius": [
+        "create",
+        "id",
+        "kotlin",
+        "mavenCentral"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\stores\\authStore.ts",
+      "files_within_2_hops": [
+        "apps\\mobile\\stores\\authStore.ts"
+      ],
+      "symbols_in_radius": [
+        "AuthState",
+        "GUEST_KEY",
+        "USER_KEY",
+        "useAuthStore"
+      ]
+    },
+    {
+      "file": "server\\src\\services\\aladhanService.ts",
+      "files_within_2_hops": [
+        "server\\src\\services\\aladhanService.ts"
+      ],
+      "symbols_in_radius": [
+        "PrayerTimes",
+        "fetchPrayerTimes",
+        "formatDate"
+      ]
+    },
+    {
+      "file": "server\\prisma\\seed.ts",
+      "files_within_2_hops": [
+        "server\\prisma\\seed.ts"
+      ],
+      "symbols_in_radius": [
+        "MosqueSeedEntry",
+        "MosqueSeedFile",
+        "findJsonFiles",
+        "main",
+        "regionKey",
+        "toPrayerEnum"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\services\\localMosqueSearch.ts",
+      "files_within_2_hops": [
+        "apps\\mobile\\services\\localMosqueSearch.ts"
+      ],
+      "symbols_in_radius": [
+        "LocalMosqueRecord",
+        "haversineKm",
+        "searchLocalMosques"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\components\\DebugPanel.tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\components\\DebugPanel.tsx"
+      ],
+      "symbols_in_radius": [
+        "DebugPanel",
+        "Props",
+        "SourceResult"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\components\\NotificationSettings.tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\components\\NotificationSettings.tsx"
+      ],
+      "symbols_in_radius": [
+        "LEAD_TIME_OPTIONS",
+        "NotificationSettings",
+        "NotificationSettingsProps"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\stores\\mosqueStore.ts",
+      "files_within_2_hops": [
+        "apps\\mobile\\stores\\mosqueStore.ts"
+      ],
+      "symbols_in_radius": [
+        "CachedIqama",
+        "MosqueState",
+        "useMosqueStore"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\components\\IqamaCountdown.tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\components\\IqamaCountdown.tsx"
+      ],
+      "symbols_in_radius": [
+        "IqamaCountdown",
+        "IqamaCountdownProps",
+        "formatCountdown",
+        "getTimeUntilMs"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\components\\MosqueCard.tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\components\\MosqueCard.tsx"
+      ],
+      "symbols_in_radius": [
+        "MosqueCard",
+        "MosqueCardProps",
+        "getSourceInfo"
+      ]
+    },
+    {
+      "file": "server\\src\\middleware\\auth.ts",
+      "files_within_2_hops": [
+        "server\\src\\middleware\\auth.ts"
+      ],
+      "symbols_in_radius": [
+        "authenticate",
+        "getJwtSecret",
+        "optionalAuth",
+        "requireRole"
+      ]
+    },
+    {
+      "file": "scripts\\generate-mosque-bundle.py",
+      "files_within_2_hops": [
+        "scripts\\generate-mosque-bundle.py"
+      ],
+      "symbols_in_radius": [
+        "build_iqama_times",
+        "is_valid_time",
+        "main",
+        "process_file",
+        "slugify"
+      ]
+    },
+    {
+      "file": "apps\\admin\\src\\pages\\Dashboard.tsx",
+      "files_within_2_hops": [
+        "apps\\admin\\src\\pages\\Dashboard.tsx"
+      ],
+      "symbols_in_radius": [
+        "Dashboard",
+        "Stats"
+      ]
+    },
+    {
+      "file": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+      "files_within_2_hops": [
+        "apps\\admin\\src\\pages\\IqamaEditor.tsx"
+      ],
+      "symbols_in_radius": [
+        "IqamaEditor",
+        "IqamaFormData"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\app\\(tabs)\\settings.tsx"
+      ],
+      "symbols_in_radius": [
+        "AZAN_SOUND_FILE",
+        "SettingsScreen"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\components\\MosqueMap.tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\components\\MosqueMap.tsx"
+      ],
+      "symbols_in_radius": [
+        "MosqueMap",
+        "MosqueMapProps"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\components\\PrayerTimeCard.tsx"
+      ],
+      "symbols_in_radius": [
+        "PrayerTimeCard",
+        "PrayerTimeCardProps"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\stores\\prayerStore.ts",
+      "files_within_2_hops": [
+        "apps\\mobile\\stores\\prayerStore.ts"
+      ],
+      "symbols_in_radius": [
+        "PrayerState",
+        "usePrayerStore"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\stores\\settingsStore.ts",
+      "files_within_2_hops": [
+        "apps\\mobile\\stores\\settingsStore.ts"
+      ],
+      "symbols_in_radius": [
+        "SettingsState",
+        "useSettingsStore"
+      ]
+    },
+    {
+      "file": "server\\src\\services\\streamService.ts",
+      "files_within_2_hops": [
+        "server\\src\\services\\streamService.ts"
+      ],
+      "symbols_in_radius": [
+        "StreamStatus",
+        "getStreamStatus"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\android\\react-settings-plugin\\src\\main\\kotlin\\expo\\plugins\\ReactSettingsPlugin.kt",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\react-settings-plugin\\src\\main\\kotlin\\expo\\plugins\\ReactSettingsPlugin.kt"
+      ],
+      "symbols_in_radius": [
+        "ReactSettingsPlugin",
+        "apply"
+      ]
+    },
+    {
+      "file": "server\\src\\routes\\auth.ts",
+      "files_within_2_hops": [
+        "server\\src\\routes\\auth.ts"
+      ],
+      "symbols_in_radius": [
+        "generateToken",
+        "getJwtSecret"
+      ]
+    },
+    {
+      "file": "apps\\admin\\src\\pages\\StreamSetup.tsx",
+      "files_within_2_hops": [
+        "apps\\admin\\src\\pages\\StreamSetup.tsx"
+      ],
+      "symbols_in_radius": [
+        "StreamSetup"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\app\\_layout.tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\app\\_layout.tsx"
+      ],
+      "symbols_in_radius": [
+        "RootLayout"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\app\\(auth)\\login.tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\app\\(auth)\\login.tsx"
+      ],
+      "symbols_in_radius": [
+        "LoginScreen"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\app\\(auth)\\register.tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\app\\(auth)\\register.tsx"
+      ],
+      "symbols_in_radius": [
+        "RegisterScreen"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\app\\(auth)\\_layout.tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\app\\(auth)\\_layout.tsx"
+      ],
+      "symbols_in_radius": [
+        "AuthLayout"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\app\\(tabs)\\_layout.tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\app\\(tabs)\\_layout.tsx"
+      ],
+      "symbols_in_radius": [
+        "TabsLayout"
+      ]
+    },
+    {
+      "file": "server\\src\\index.ts",
+      "files_within_2_hops": [
+        "server\\src\\index.ts"
+      ],
+      "symbols_in_radius": [
+        "PORT"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\app\\mosque\\[id].tsx"
+      ],
+      "symbols_in_radius": [
+        "MosqueDetailScreen",
+        "staleness"
+      ]
+    },
+    {
+      "file": "server\\src\\services\\notificationService.ts",
+      "files_within_2_hops": [
+        "server\\src\\services\\notificationService.ts"
+      ],
+      "symbols_in_radius": [
+        "cancelUserNotifications",
+        "scheduleIqamaNotification"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+      ],
+      "symbols_in_radius": [
+        "MosquesScreen",
+        "ViewMode",
+        "deduplicateMosques"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\components\\AzanPlayer.tsx"
+      ],
+      "symbols_in_radius": [
+        "AzanPlayer",
+        "AzanPlayerProps"
+      ]
+    },
+    {
+      "file": "server\\src\\jobs\\iqamaRefreshJob.ts",
+      "files_within_2_hops": [
+        "server\\src\\jobs\\iqamaRefreshJob.ts"
+      ],
+      "symbols_in_radius": [
+        "runIqamaRefreshJob",
+        "startIqamaRefreshJob"
+      ]
+    },
+    {
+      "file": "apps\\mobile\\app\\(tabs)\\index.tsx",
+      "files_within_2_hops": [
+        "apps\\mobile\\app\\(tabs)\\index.tsx"
+      ],
+      "symbols_in_radius": [
+        "HomeScreen"
+      ]
+    },
+    {
+      "file": ".dockerignore",
+      "files_within_2_hops": [
+        ".dockerignore"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": ".env.local",
+      "files_within_2_hops": [
+        ".env.local"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": ".env.local.example",
+      "files_within_2_hops": [
+        ".env.local.example"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": ".env.prod.example",
+      "files_within_2_hops": [
+        ".env.prod.example"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": ".gitignore",
+      "files_within_2_hops": [
+        ".gitignore"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": ".liveaszan_pids",
+      "files_within_2_hops": [
+        ".liveaszan_pids"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": ".npmrc",
+      "files_within_2_hops": [
+        ".npmrc"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "DESIGN_PLAN.md",
+      "files_within_2_hops": [
+        "DESIGN_PLAN.md"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "distancecalculation-Labeeb.py",
+      "files_within_2_hops": [
+        "distancecalculation-Labeeb.py"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "docker-compose.local.yml",
+      "files_within_2_hops": [
+        "docker-compose.local.yml"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "docker-compose.prod.yml",
+      "files_within_2_hops": [
+        "docker-compose.prod.yml"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "IMPLEMENTATION_GUIDE.md",
+      "files_within_2_hops": [
+        "IMPLEMENTATION_GUIDE.md"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "package-lock.json",
+      "files_within_2_hops": [
+        "package-lock.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "package.json",
+      "files_within_2_hops": [
+        "package.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "README.md",
+      "files_within_2_hops": [
+        "README.md"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "tsconfig.base.json",
+      "files_within_2_hops": [
+        "tsconfig.base.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "turbo.json",
+      "files_within_2_hops": [
+        "turbo.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\admin\\dev.log",
+      "files_within_2_hops": [
+        "apps\\admin\\dev.log"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\admin\\index.html",
+      "files_within_2_hops": [
+        "apps\\admin\\index.html"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\admin\\package.json",
+      "files_within_2_hops": [
+        "apps\\admin\\package.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\admin\\tsconfig.json",
+      "files_within_2_hops": [
+        "apps\\admin\\tsconfig.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\admin\\vite.config.ts",
+      "files_within_2_hops": [
+        "apps\\admin\\vite.config.ts"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\admin\\src\\main.tsx",
+      "files_within_2_hops": [
+        "apps\\admin\\src\\main.tsx"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\.env",
+      "files_within_2_hops": [
+        "apps\\mobile\\.env"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\app.json",
+      "files_within_2_hops": [
+        "apps\\mobile\\app.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\metro.config.js",
+      "files_within_2_hops": [
+        "apps\\mobile\\metro.config.js"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\package.json",
+      "files_within_2_hops": [
+        "apps\\mobile\\package.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\tsconfig.json",
+      "files_within_2_hops": [
+        "apps\\mobile\\tsconfig.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\.gitignore",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\.gitignore"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\build.gradle",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\build.gradle"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\gradle.properties",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\gradle.properties"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\gradlew",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\gradlew"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\gradlew.bat",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\gradlew.bat"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\settings.gradle",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\settings.gradle"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\app\\build.gradle",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\app\\build.gradle"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\app\\debug.keystore",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\app\\debug.keystore"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\app\\proguard-rules.pro",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\app\\proguard-rules.pro"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\app\\src\\debug\\AndroidManifest.xml",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\app\\src\\debug\\AndroidManifest.xml"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\app\\src\\main\\AndroidManifest.xml",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\app\\src\\main\\AndroidManifest.xml"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\app\\src\\main\\res\\drawable\\rn_edit_text_material.xml",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\app\\src\\main\\res\\drawable\\rn_edit_text_material.xml"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\app\\src\\main\\res\\drawable\\splashscreen.xml",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\app\\src\\main\\res\\drawable\\splashscreen.xml"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\app\\src\\main\\res\\values\\colors.xml",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\app\\src\\main\\res\\values\\colors.xml"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\app\\src\\main\\res\\values\\strings.xml",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\app\\src\\main\\res\\values\\strings.xml"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\app\\src\\main\\res\\values\\styles.xml",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\app\\src\\main\\res\\values\\styles.xml"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\app\\src\\main\\res\\values-night\\colors.xml",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\app\\src\\main\\res\\values-night\\colors.xml"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\gradle\\wrapper\\gradle-wrapper.jar",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\gradle\\wrapper\\gradle-wrapper.jar"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\android\\gradle\\wrapper\\gradle-wrapper.properties",
+      "files_within_2_hops": [
+        "apps\\mobile\\android\\gradle\\wrapper\\gradle-wrapper.properties"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "apps\\mobile\\assets\\data\\mosques-index.json",
+      "files_within_2_hops": [
+        "apps\\mobile\\assets\\data\\mosques-index.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\alberta\\calgary.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\alberta\\calgary.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\alberta\\edmonton.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\alberta\\edmonton.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\british-columbia\\vancouver.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\british-columbia\\vancouver.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\manitoba\\winnipeg.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\manitoba\\winnipeg.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\nova-scotia\\halifax.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\nova-scotia\\halifax.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\alliston.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\alliston.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\barrie.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\barrie.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\belleville.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\belleville.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\bradford.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\bradford.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\brampton.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\brampton.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\brantford.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\brantford.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\brockville.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\brockville.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\burlington.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\burlington.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\caledon.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\caledon.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\cambridge-kitchener.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\cambridge-kitchener.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\chatham-kent.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\chatham-kent.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\collingwood.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\collingwood.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\cornwall.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\cornwall.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\erin.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\erin.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\guelph.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\guelph.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\hamilton.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\hamilton.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\hawkesbury.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\hawkesbury.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\kingston.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\kingston.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\lindsay.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\lindsay.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\london.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\london.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\markham.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\markham.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\milton.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\milton.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\mississauga.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\mississauga.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\muskoka.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\muskoka.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\newmarket.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\newmarket.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\niagara.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\niagara.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\north-bay.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\north-bay.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\orangeville.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\orangeville.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\oshawa.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\oshawa.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\ottawa.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\ottawa.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\owen-sound.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\owen-sound.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\pembroke.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\pembroke.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\peterborough.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\peterborough.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\sarnia.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\sarnia.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\sault-ste-marie.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\sault-ste-marie.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\stratford.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\stratford.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\sudbury.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\sudbury.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\thunder-bay.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\thunder-bay.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\tillsonburg.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\tillsonburg.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\timmins.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\timmins.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\toronto.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\toronto.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\vaughan.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\vaughan.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\waterloo.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\waterloo.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\whitby-ajax.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\whitby-ajax.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\windsor.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\windsor.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\ontario\\woodstock.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\ontario\\woodstock.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\quebec\\montreal.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\quebec\\montreal.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\canada\\saskatchewan\\saskatoon.json",
+      "files_within_2_hops": [
+        "data\\mosques\\canada\\saskatchewan\\saskatoon.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "data\\mosques\\_meta\\coverage-map.json",
+      "files_within_2_hops": [
+        "data\\mosques\\_meta\\coverage-map.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "docker\\admin\\Dockerfile.prod",
+      "files_within_2_hops": [
+        "docker\\admin\\Dockerfile.prod"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "docker\\admin\\nginx.conf",
+      "files_within_2_hops": [
+        "docker\\admin\\nginx.conf"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "docker\\server\\Dockerfile.local",
+      "files_within_2_hops": [
+        "docker\\server\\Dockerfile.local"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "docker\\server\\Dockerfile.prod",
+      "files_within_2_hops": [
+        "docker\\server\\Dockerfile.prod"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "docker\\server\\entrypoint.local.sh",
+      "files_within_2_hops": [
+        "docker\\server\\entrypoint.local.sh"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "docker\\server\\entrypoint.prod.sh",
+      "files_within_2_hops": [
+        "docker\\server\\entrypoint.prod.sh"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "packages\\shared\\package.json",
+      "files_within_2_hops": [
+        "packages\\shared\\package.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "packages\\shared\\tsconfig.json",
+      "files_within_2_hops": [
+        "packages\\shared\\tsconfig.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "packages\\shared\\src\\index.ts",
+      "files_within_2_hops": [
+        "packages\\shared\\src\\index.ts"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "server\\package.json",
+      "files_within_2_hops": [
+        "server\\package.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "server\\tsconfig.json",
+      "files_within_2_hops": [
+        "server\\tsconfig.json"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "server\\prisma\\schema.prisma",
+      "files_within_2_hops": [
+        "server\\prisma\\schema.prisma"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "server\\src\\lib\\prisma.ts",
+      "files_within_2_hops": [
+        "server\\src\\lib\\prisma.ts"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "server\\src\\routes\\admin.ts",
+      "files_within_2_hops": [
+        "server\\src\\routes\\admin.ts"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "server\\src\\routes\\coverageRequests.ts",
+      "files_within_2_hops": [
+        "server\\src\\routes\\coverageRequests.ts"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "server\\src\\routes\\iqama.ts",
+      "files_within_2_hops": [
+        "server\\src\\routes\\iqama.ts"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "server\\src\\routes\\mosques.ts",
+      "files_within_2_hops": [
+        "server\\src\\routes\\mosques.ts"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "server\\src\\routes\\prayerTimes.ts",
+      "files_within_2_hops": [
+        "server\\src\\routes\\prayerTimes.ts"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "server\\src\\routes\\submissions.ts",
+      "files_within_2_hops": [
+        "server\\src\\routes\\submissions.ts"
+      ],
+      "symbols_in_radius": []
+    },
+    {
+      "file": "server\\src\\routes\\users.ts",
+      "files_within_2_hops": [
+        "server\\src\\routes\\users.ts"
+      ],
+      "symbols_in_radius": []
+    }
+  ],
+  "note": "Blast radius computed from imports + symbol membership; call-graph detail is in L3_REFERENCE.json.",
+  "repo_root": "A:\\git\\LiveAzan",
+  "schema": "zkme.change_impact.v1",
+  "snapshot_digest": "f9655f2963f29f6c21b555cb0f95e0b3a66b63ea"
+}

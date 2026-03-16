@@ -1,0 +1,1267 @@
+{
+  "artifacts": [
+    {
+      "bytes": 43516,
+      "path": "files.json",
+      "sha256": "5f5ab392599fcbbb5e162facb9d5c4ac3f5a4d1c8fe6530ef5aca7684cb1ee07"
+    },
+    {
+      "bytes": 146261,
+      "path": "symbols.json",
+      "sha256": "53e2cb77f4966de470cd3b779ec14399015f115893119281b033206d5ae5ca79"
+    },
+    {
+      "bytes": 14190,
+      "path": "types.json",
+      "sha256": "ff02b7a456316a757c8602e09130766ecadd55bced3ab52504a4049da7c71dc4"
+    },
+    {
+      "bytes": 4,
+      "path": "decorators.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "bytes": 4,
+      "path": "hierarchy.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "bytes": 57610,
+      "path": "imports.json",
+      "sha256": "9282609361075f19f4642b9176bec14ed1ed43293c243a5ecc548661cd5e81fb"
+    },
+    {
+      "bytes": 956737,
+      "path": "call_graph.json",
+      "sha256": "1c4d804bf3c9d4a12693dc656e743c4b6b1ce32c8e8e427043d34671e1c553fc"
+    },
+    {
+      "bytes": 84,
+      "path": "import_edges.json",
+      "sha256": "4679ba36bf3c6cbb614e1784ed27c40fd1d7012e3281d1ad24d083879ec3315b"
+    },
+    {
+      "bytes": 41223,
+      "path": "layout_tokens.json",
+      "sha256": "fa8f712af6da3b09a200273eb68ba432da764e21da781461369cb5cf948d3141"
+    },
+    {
+      "bytes": 229,
+      "path": "routes_detected.json",
+      "sha256": "5050841b1f31161ef7923a2318235ddb6d8cb1174617fccc517ed9e5d233f477"
+    },
+    {
+      "bytes": 43247,
+      "path": "interfaces.json",
+      "sha256": "35a852a57bcbf942b9c4125d9ccff7a28d3888fc5a8e2b058b0526fc933724e1"
+    },
+    {
+      "bytes": 57704,
+      "path": "schemas.json",
+      "sha256": "3ed5798f460d07d52cca3bc31a865f8940c0f992ffa9772ea9a440ca3ec792da"
+    },
+    {
+      "bytes": 8155,
+      "path": "config_keys.json",
+      "sha256": "04f2cc01797162fbe5c799100d238d9186751354181cfb58c5c2d83c126df7a5"
+    },
+    {
+      "bytes": 10077,
+      "path": "hazards.json",
+      "sha256": "1cf7bc0c09e70d3be2a58dfd077f8cdf44c7b92fc30dfb5a55b4549b383f15ba"
+    },
+    {
+      "bytes": 19132,
+      "path": "features.json",
+      "sha256": "0ab112e0c6e58c4576f4cb6476f8794c1017871de74b69ca59d1e51a5c833536"
+    },
+    {
+      "bytes": 21822,
+      "path": "ranks.json",
+      "sha256": "498579e81f025d5208b83c92f0f697677afb960304409613ec2d14b9781d4299"
+    },
+    {
+      "bytes": 140,
+      "path": "repo_root_signature.json",
+      "sha256": "ff82d3ffd7bba8afe0fb73fff74453fd936bfc835d27be131c94e58d2ecbd1fb"
+    },
+    {
+      "bytes": 522,
+      "path": "rule_engine_detection.json",
+      "sha256": "f7da2d7324f38d6073943e586a3b9b21b8f1f23b43cf96014e928d0f181ece5e"
+    },
+    {
+      "bytes": 163,
+      "path": "active_surface_index.json",
+      "sha256": "686d3651fd384262fffbbdb24e16061f50fdf2553d3823ff2ebeda8c56d3b9e7"
+    },
+    {
+      "bytes": 141,
+      "path": "legacy_surface_index.json",
+      "sha256": "c1338aebb78b97d781f4f315a0fb1a5cfe52b15cacc39eff4b9da61e337fa3ef"
+    },
+    {
+      "bytes": 10961,
+      "path": "hot_files.json",
+      "sha256": "27cccedf371f8f299f313f8c1eb91aa9d35d9035c355d4bdd525c5955fdc187e"
+    },
+    {
+      "bytes": 1224,
+      "path": "repo_signals.json",
+      "sha256": "c97c0ac96ae0588af7d08225259c8797e56b16d9fc54e313500394f707e87cfb"
+    },
+    {
+      "bytes": 336,
+      "path": "graphql_index.json",
+      "sha256": "953431b970f3c7bbf5673db50772c9aa393481602eec0893650eea079637e9b3"
+    },
+    {
+      "bytes": 705063,
+      "path": "evidence_index.json",
+      "sha256": "76ed42336cc2323cdcccaf27aa2893c0138fcae74afb0f54ff2692438e9da473"
+    },
+    {
+      "bytes": 2741,
+      "path": "frontend_calls.json",
+      "sha256": "0923532499836e4cc042ef6d99b0fc0764bfe1d6b45ac05aa472237a726fa5e4"
+    },
+    {
+      "bytes": 139,
+      "path": "proxy_rules.json",
+      "sha256": "b7cd5a86f312ab21986f46427486148dbf3fd681ef58452f860f391574af13c3"
+    },
+    {
+      "bytes": 139,
+      "path": "ast_errors.json",
+      "sha256": "b4a1fb332749d939afa3dcaba4bbe8410efddfd7adfd611fe1310e8ccd035934"
+    },
+    {
+      "bytes": 316,
+      "path": "search_backend_detected.json",
+      "sha256": "d21ad2c753dfc960e4e2d69562e21f5d77578b5caeccd473226a16525be7c92e"
+    },
+    {
+      "bytes": 713,
+      "path": "ui_model.v1.json",
+      "sha256": "7cf458762ad3c01c646840a0448e2c154c7f6f2231bea205821744be29abdcb6"
+    },
+    {
+      "bytes": 7759,
+      "path": "data_touches.json",
+      "sha256": "4e0ab457e1f69cd51955f543447d29da9b0242830992ca797af13c5f1559244e"
+    },
+    {
+      "bytes": 16578,
+      "path": "assertion_anchors.v1.json",
+      "sha256": "a2a19e82e1588083bd8ec880cc9cc6d4c11552618b44263b139be5586caff412"
+    },
+    {
+      "bytes": 176,
+      "path": "ui_event_bindings.v1.json",
+      "sha256": "411e29a08234121bdd56434f02d8a76126e7d6b9cd765afe4eac787d62d91cb0"
+    },
+    {
+      "bytes": 202,
+      "path": "auth_contract.v1.json",
+      "sha256": "76a8de133eb9ff860c297211556a76a11cbc799b7b1f5825de8cd513b5a18191"
+    },
+    {
+      "bytes": 1546,
+      "path": "runtime_constraints.v1.json",
+      "sha256": "1e49ccad386b9f11582c13b6c303f573db92a78ee44c860b51e73de5ea93b337"
+    },
+    {
+      "bytes": 1279,
+      "path": "locator_policy.v1.json",
+      "sha256": "278f131a510bbb7c733df3c46d7fd5ac154f5c4b9bb8786b6f41a0d53bd6f410"
+    },
+    {
+      "bytes": 773,
+      "path": "test_data_contract.v1.json",
+      "sha256": "539b528c188e76b76c38dcfdbbb6c1b61ae7abf26d941ef15c1049eb8d4c7684"
+    },
+    {
+      "bytes": 311,
+      "path": "db_migrations_intelligence.v1.json",
+      "sha256": "0b8fadc2b3ba4c376249db5fc48a86336b84ab8fdbc057fc8e409e92e49340c5"
+    },
+    {
+      "bytes": 753,
+      "path": "flow_graph.v1.json",
+      "sha256": "2792192ebdff2139bc46d98ac8eb1f2bb0aeabb381ea80748c74d9651eac1f52"
+    },
+    {
+      "bytes": 325854,
+      "path": "negative_test_matrix.v1.json",
+      "sha256": "6c788b87a489e4a56de94565f836b74f2e71e2c9b79883c93d4077ddc27cc60a"
+    },
+    {
+      "bytes": 62293,
+      "path": "data_matrix.v1.json",
+      "sha256": "2856985a912e85ffc53b7ddf0056aa61e153a63e4324dbec9da91b8dd07e0724"
+    },
+    {
+      "bytes": 70,
+      "path": "openapi_surface.v1.json",
+      "sha256": "87778f74b4cb1bc6b2a423f057ee1f71fbadb03217eab1030761466e8d90f733"
+    },
+    {
+      "bytes": 54,
+      "path": "desktop_surface.v1.json",
+      "sha256": "78f30c9e0e1c378a058615efc620f41e5aa1aace56d1837c5e8277de19ab4642"
+    },
+    {
+      "bytes": 88,
+      "path": "realtime_surface.v1.json",
+      "sha256": "e5ab7301677acd41521c4d4b23320b0c68c3c030470212bf0d2f776a9e6cf667"
+    },
+    {
+      "bytes": 4190,
+      "path": "00_START_HERE.md",
+      "sha256": "a0c2197bfc6d5e71a3a4c7326c993408043a9656ffb2fd8390510b033873aa5b"
+    },
+    {
+      "bytes": 1395,
+      "path": "SYSTEM_OVERVIEW.md",
+      "sha256": "0aa7aa662e1c724423116bd340d2096d38efcf2c28985840b6519ca6b64c45d4"
+    },
+    {
+      "bytes": 962,
+      "path": "ZKME_REPO_PROFILE.json",
+      "sha256": "4cb10755020fee7c5fc7b1f9ee9d8f5552e889eef5a4f2f1d0c9669c61c3541d"
+    },
+    {
+      "bytes": 10801,
+      "path": "FEATURE_CATALOG.md",
+      "sha256": "07504ff9efb96476152bf486c9d47d1a66f584b4bc83ea31aa315b56d55e9034"
+    },
+    {
+      "bytes": 44466,
+      "path": "ZKME_FEATURE_REGISTRY.json",
+      "sha256": "53b4a744314b9b73dea2b45507e47af92f0ff05cf5d5746ea4dd0523aab6d971"
+    },
+    {
+      "bytes": 45359,
+      "path": "ZKME_CHANGE_IMPACT.json",
+      "sha256": "4163931cc8b654386178547f25469324ec0533310cb6c77a3fe1666044eaec27"
+    },
+    {
+      "bytes": 91752,
+      "path": "ZKME_CONTRACTS_INVARIANTS.json",
+      "sha256": "20d629ad002371fcbda8a23f009d09d8ddb84f4ecc626fc2165551ee77eca339"
+    },
+    {
+      "bytes": 1238,
+      "path": "ZKME_PATHS.json",
+      "sha256": "18c8d6a5bcde232f9615a19f8f32e2602112579681b38c1d4ce50c3c7f303c15"
+    },
+    {
+      "bytes": 3762,
+      "path": "ZKME_PATCH_PLANNING_PACK.md",
+      "sha256": "fd42e7137c61ea03ccdeabf21d41ac9efdd91c59ce29291abcb78816b9069d98"
+    },
+    {
+      "bytes": 98,
+      "path": "KME_AGGREGATION_CANDIDATES.json",
+      "sha256": "320639d66f3b32befa165c6bbd2103da92d10fd533fdac02b2e6df21233a38f9"
+    },
+    {
+      "bytes": 97,
+      "path": "KME_RECOMMENDED_CONTRACTS.json",
+      "sha256": "d66c79d3e1bfdaeb4b8fd4c733a8327a3f35974f011bc2638ee049e249e8bc0e"
+    },
+    {
+      "bytes": 126,
+      "path": "KME_CONFIDENCE_REPORT.json",
+      "sha256": "390da043b8670322889cd35040ad9adcdd15b591ddc9b8e3fe003fe01be75cfd"
+    },
+    {
+      "bytes": 35554,
+      "path": "INTERFACE_CATALOG.json",
+      "sha256": "a9a5ca60635945585ae09e88cd686054076db317378826ec10b3064c43d59b15"
+    },
+    {
+      "bytes": 8563,
+      "path": "DATA_TOUCH_MAP.json",
+      "sha256": "83f59e08423e77257f76928fc9aa8aeae85f316e6977bdb5fb5d9798d61fbd2f"
+    },
+    {
+      "bytes": 1355,
+      "path": "WORKFLOW_BOOK.md",
+      "sha256": "9a2271f191ef12cecdc4aa05e069f6fee23276917917dbbabd999736b72889cd"
+    },
+    {
+      "bytes": 3196,
+      "path": "KNOWN_HAZARDS.md",
+      "sha256": "2e7b054f6cac0cbe97d67325c83958166c362160cbba1471b0f01bc14b758650"
+    },
+    {
+      "bytes": 383960,
+      "path": "feature_graph.json",
+      "sha256": "9ad6f5397ebedecdfdb767fd7ea73901fa4edb59f765feeda77a0a2b43cff967"
+    },
+    {
+      "bytes": 17405,
+      "path": "claude_context_pack.md",
+      "sha256": "a07d728e8e6243c6992a4370746cee67a4b5740693362ab1484e59e2d2891728"
+    },
+    {
+      "bytes": 21422,
+      "path": "claude_context_pack_index.json",
+      "sha256": "cd0ce005ee5764d923b98cf361529abfda58c39176724d05615d28e8c14e0ab4"
+    },
+    {
+      "bytes": 707,
+      "path": "L1_SUMMARY.md",
+      "sha256": "3804fdab0b86cfcab9fd908c40d7aa8a31bb65f6a8aea87b79dbf3e248605055"
+    },
+    {
+      "bytes": 9917,
+      "path": "L2_CONTEXT.md",
+      "sha256": "e71baa6c462f47f05e433850020a7069046ae3ff06375d90c35d8c6130fe1dcb"
+    },
+    {
+      "bytes": 1484095,
+      "path": "L3_REFERENCE.json",
+      "sha256": "e61d44d867eb20dbc5d801abfc891fca60875f3ba8cf44b0c0ae61cf389d55e1"
+    },
+    {
+      "bytes": 62609,
+      "path": "FS_MANIFEST.json",
+      "sha256": "95ab8d6be7ad480816cd5e3926d549b3a669e8729cff2d80dff12bc1e9eb9e47"
+    },
+    {
+      "bytes": 568467,
+      "path": "SCAN_SNAPSHOT.pkl",
+      "sha256": "d92c1dbd95354301e3a788af634298460ff9bda8785dbe37748cdedc64eae13c"
+    },
+    {
+      "bytes": 303,
+      "path": ".dockerignore__2f754321.chunks.jsonl",
+      "sha256": "3f6f2c4cbb3c7aafc411beef51980691228ff34a32de2070132f8be485766f08"
+    },
+    {
+      "bytes": 651,
+      "path": ".env.local__74dd9d08.chunks.jsonl",
+      "sha256": "247840e6e42cbd7ad6b1932b1b26d0b14051b71cb0999fd10818831fba233107"
+    },
+    {
+      "bytes": 788,
+      "path": ".env.local.example__51db1e92.chunks.jsonl",
+      "sha256": "42f317414707745b08735777e7acad479e618cb011563db6103e180a53d30d83"
+    },
+    {
+      "bytes": 809,
+      "path": ".env.prod.example__0d1b04fd.chunks.jsonl",
+      "sha256": "2f290a2ac922948ab742ac8fe2f49da5f39d38080569a0f2b7c8c33ae8e88f02"
+    },
+    {
+      "bytes": 218,
+      "path": ".gitignore__bc37d034.chunks.jsonl",
+      "sha256": "e121a0f00f13d2db63febbd3417c4af0822e3ab5c12a33132b2a0ce51526e73c"
+    },
+    {
+      "bytes": 172,
+      "path": ".liveaszan_pids__0d069fc9.chunks.jsonl",
+      "sha256": "067bba3b087fabe3b30360bcee2c947af435e9ec90b519f357cc4692ffb107ad"
+    },
+    {
+      "bytes": 173,
+      "path": ".npmrc__e813096d.chunks.jsonl",
+      "sha256": "231993f297c51c292c345434dd0ac234311b9192e5a2bc5a691c6581f8fa6db1"
+    },
+    {
+      "bytes": 28657,
+      "path": "DESIGN_PLAN.md__650e8cec.chunks.jsonl",
+      "sha256": "3c5adeaff7722652f152dbcf0a507936b4a72baa0a9eab8db6c18cf948ec7e29"
+    },
+    {
+      "bytes": 19321,
+      "path": "IMPLEMENTATION_GUIDE.md__8d742688.chunks.jsonl",
+      "sha256": "3009f827b4386e1f4792269f42d632bb915d7989df3ba3ab3487188ad5584e41"
+    },
+    {
+      "bytes": 181,
+      "path": "README.md__b3356305.chunks.jsonl",
+      "sha256": "d6ce42d3eefc2473b63e57101bf4d685c547eb7ed52e448f02a30d7567abbe12"
+    },
+    {
+      "bytes": 1283,
+      "path": "apps_admin_dev.log__f0bc3c00.chunks.jsonl",
+      "sha256": "4d2d8311157624c3cf6dacaf2cb5985e29eb990ed836316cb7f271e833d19b4d"
+    },
+    {
+      "bytes": 713,
+      "path": "apps_admin_index.html__d19659c6.chunks.jsonl",
+      "sha256": "b8f42125fb7082b5d3a0bf4ec10d4653729c7259fcf34839a1a92a9d141f3162"
+    },
+    {
+      "bytes": 777,
+      "path": "apps_admin_package.json__09446fbc.chunks.jsonl",
+      "sha256": "49cd8a43aff3e2b432a2fbd64ae59c8b5d02006e1a99705f6f3ea35747b09a20"
+    },
+    {
+      "bytes": 7778,
+      "path": "apps_admin_src_App.tsx__49c53401.chunks.jsonl",
+      "sha256": "3ae58e1c99147ff281fd65db4049a0516db4b3978380b79bc0c3f3f02c99797b"
+    },
+    {
+      "bytes": 399,
+      "path": "apps_admin_src_main.tsx__927ffc40.chunks.jsonl",
+      "sha256": "20e0154ada290b9ae2a91eb476fd3b67aebecaeed23e275e0ba9f108be6c78ad"
+    },
+    {
+      "bytes": 3379,
+      "path": "apps_admin_src_pages_Dashboard.tsx__78e2a512.chunks.jsonl",
+      "sha256": "1ad58feedb81be4490b925be1f69482fa5b16aa29e7796fdf83dbb31af7016bd"
+    },
+    {
+      "bytes": 6142,
+      "path": "apps_admin_src_pages_IqamaEditor.tsx__66693276.chunks.jsonl",
+      "sha256": "a7853e56918f079eef0070b2b72130c4bbb725a24e4291f40c477505b11bacb2"
+    },
+    {
+      "bytes": 3652,
+      "path": "apps_admin_src_pages_StreamSetup.tsx__b77dedee.chunks.jsonl",
+      "sha256": "9b794e3f789e374328c7941e38a36b7584b87313138e74d649c8fecdf9b3ff7f"
+    },
+    {
+      "bytes": 594,
+      "path": "apps_admin_tsconfig.json__55135bae.chunks.jsonl",
+      "sha256": "4814905ddfad851b5ad8064cc4c05392ee2e979ad31ce3c1c6991ccffd4dfa25"
+    },
+    {
+      "bytes": 523,
+      "path": "apps_admin_vite.config.ts__28d2ae16.chunks.jsonl",
+      "sha256": "15673a1a0df397d834efffc0bd14d72394bcdda4e5b545af3315f1491b56ac54"
+    },
+    {
+      "bytes": 260,
+      "path": "apps_mobile_.env__139cbc75.chunks.jsonl",
+      "sha256": "c56d6b4eb98957bac688f280d60c40717e7692895dd38bcd7cc3ec62f3adaa45"
+    },
+    {
+      "bytes": 320,
+      "path": "apps_mobile_android_.gitignore__3209a113.chunks.jsonl",
+      "sha256": "e749cb6e3628aa37bde6e799dd4140ff334fb6341bb6c49947dbd2e88beff9d4"
+    },
+    {
+      "bytes": 8982,
+      "path": "apps_mobile_android_app_build.gradle__cf3edce8.chunks.jsonl",
+      "sha256": "16d1d44c16c20352171b08526397a560b876a0d9ae7fd2c692a58e0a7dfc4a56"
+    },
+    {
+      "bytes": 3813,
+      "path": "apps_mobile_android_app_debug.keystore__bbbb7f7a.chunks.jsonl",
+      "sha256": "d7a39056452d7ad5b46bef729e9d36bae2d928a71393bb427ad41cf78f82ee8b"
+    },
+    {
+      "bytes": 763,
+      "path": "apps_mobile_android_app_proguard-rules.pro__b112f5ec.chunks.jsonl",
+      "sha256": "88693e470df6b6ace31f57de9eb57082194cecd263d72b00a2d1f1de6fe6e740"
+    },
+    {
+      "bytes": 592,
+      "path": "apps_mobile_android_app_src_debug_AndroidManifest.xml__03b34719.chunks.jsonl",
+      "sha256": "0b06f4ef6585118801d12797eb8a03befa9f37b9495e5fc2710088572c30c1cb"
+    },
+    {
+      "bytes": 2861,
+      "path": "apps_mobile_android_app_src_main_AndroidManifest.xml__f8a4a7f8.chunks.jsonl",
+      "sha256": "ade89624919c0b5ba18af18fe8cfd53b2b614d3404a1b0c8ee7449f4a7efb012"
+    },
+    {
+      "bytes": 2468,
+      "path": "apps_mobile_android_app_src_main_java_com_liveaszan_app_MainActivity.kt__20d2d25c.chunks.jsonl",
+      "sha256": "49a5069e008d008eb618538d560f5c08054c3924aeb40318bea29996206dd3a0"
+    },
+    {
+      "bytes": 2279,
+      "path": "apps_mobile_android_app_src_main_java_com_liveaszan_app_MainApplication.kt__76e9d9ab.chunks.jsonl",
+      "sha256": "63a712b25d0d516fabc5d55285ba4c7d806f79858fe2de71bde929233263d19b"
+    },
+    {
+      "bytes": 2204,
+      "path": "apps_mobile_android_app_src_main_res_drawable_rn_edit_text_material.xml__de35ff21.chunks.jsonl",
+      "sha256": "b806cabfdbd84fc74582733f046d6cbc05890cd2e5b85378edce42d3e253e8b7"
+    },
+    {
+      "bytes": 357,
+      "path": "apps_mobile_android_app_src_main_res_drawable_splashscreen.xml__5b3c99f1.chunks.jsonl",
+      "sha256": "0f092a6005835950e98c4f47f9304b1a6618070e49d23cd0895a501b0c4f52dc"
+    },
+    {
+      "bytes": 485,
+      "path": "apps_mobile_android_app_src_main_res_mipmap-anydpi-v26_ic_launcher.xml__e3d69aa0.chunks.jsonl",
+      "sha256": "4348aee2a7b7bc0a9f702f647d18cd441225e3cbb205d0305cecba2916bffde7"
+    },
+    {
+      "bytes": 491,
+      "path": "apps_mobile_android_app_src_main_res_mipmap-anydpi-v26_ic_launcher_round.xml__8c15b143.chunks.jsonl",
+      "sha256": "4401fca2cd293319bb2cd032ec9def044b4f867a950e2628a64d696b6468af71"
+    },
+    {
+      "bytes": 216,
+      "path": "apps_mobile_android_app_src_main_res_values-night_colors.xml__b15f44f1.chunks.jsonl",
+      "sha256": "326f345d5e682787ff3e6eddc1f2ae072da81348e1c671322f55f4a6a8ec4169"
+    },
+    {
+      "bytes": 432,
+      "path": "apps_mobile_android_app_src_main_res_values_colors.xml__24ebfec5.chunks.jsonl",
+      "sha256": "8ee3049871266566e08182a21bbdd98383c0228402ec589017ba0588bf49cfe2"
+    },
+    {
+      "bytes": 462,
+      "path": "apps_mobile_android_app_src_main_res_values_strings.xml__f6797ca6.chunks.jsonl",
+      "sha256": "9b96839d53bab68b2f9971725b798fdbfafe27e3ecf2ad211be00a6fe3c30db5"
+    },
+    {
+      "bytes": 1107,
+      "path": "apps_mobile_android_app_src_main_res_values_styles.xml__85d23781.chunks.jsonl",
+      "sha256": "3f10176844e501c48a11eba1592098e602aaf4bf0939baddf5149174357b97ae"
+    },
+    {
+      "bytes": 1819,
+      "path": "apps_mobile_android_build.gradle__6885b1f9.chunks.jsonl",
+      "sha256": "92f2a015909fafba4b646c33a23740cf9554eedb2030875c4fd1407e4d35178f"
+    },
+    {
+      "bytes": 2623,
+      "path": "apps_mobile_android_gradle.properties__9ee5e7b1.chunks.jsonl",
+      "sha256": "15b579daadaaf16075b3287fe52b7cf4e3a88c35cb641a4e431aee481148b177"
+    },
+    {
+      "bytes": 462,
+      "path": "apps_mobile_android_gradle_wrapper_gradle-wrapper.properties__fc7588ef.chunks.jsonl",
+      "sha256": "e2b34172abce0a0237f0bc6cdc0b0337b30112964269eeba2f9dac2183542de7"
+    },
+    {
+      "bytes": 9310,
+      "path": "apps_mobile_android_gradlew__8fef4628.chunks.jsonl",
+      "sha256": "5820c2c1a7b7f21728be4529727b6904d486bc42cbdd7cd8eb45ecba627d873d"
+    },
+    {
+      "bytes": 3140,
+      "path": "apps_mobile_android_gradlew.bat__b82ec235.chunks.jsonl",
+      "sha256": "d24e5eeb44f025edf9a7c31c30b9dcfc688704a363ee900ee0ca4d758aaddfea"
+    },
+    {
+      "bytes": 607,
+      "path": "apps_mobile_android_react-settings-plugin_build.gradle.kts__a16617f1.chunks.jsonl",
+      "sha256": "5752320f57e1be1bdd718c9e14545eadca7e157eeb0888196534789ce9ab5767"
+    },
+    {
+      "bytes": 487,
+      "path": "apps_mobile_android_react-settings-plugin_src_main_kotlin_expo_plugins_ReactSettingsPlugin.kt__83441290.chunks.jsonl",
+      "sha256": "d757031c91d8a1b0e61faf15874b818766d8620ba5a30cd1a56a517a9fa6257e"
+    },
+    {
+      "bytes": 2981,
+      "path": "apps_mobile_android_settings.gradle__92a15e94.chunks.jsonl",
+      "sha256": "a3db8a29cbeb59ff639777800749bf12bd45946738b6595d06958f0fad872ab1"
+    },
+    {
+      "bytes": 1845,
+      "path": "apps_mobile_app.json__45321158.chunks.jsonl",
+      "sha256": "b0f2e474cae8fba816ac84baa522a776d8bac0838b3280525acf2591c73abc28"
+    },
+    {
+      "bytes": 419,
+      "path": "apps_mobile_app_auth_layout.tsx__7b05260c.chunks.jsonl",
+      "sha256": "5c7b636036c79c2c83319ee4c1e2cad8151cf8d349f5b638844f2813ff8fde64"
+    },
+    {
+      "bytes": 6389,
+      "path": "apps_mobile_app_auth_login.tsx__8970d5b1.chunks.jsonl",
+      "sha256": "9187a3fd7212e8781804a88de2d3763556d5b84fa13c5d76a20d3d1faa1aa2c9"
+    },
+    {
+      "bytes": 3953,
+      "path": "apps_mobile_app_auth_register.tsx__d4bed930.chunks.jsonl",
+      "sha256": "ca6e850d24a1677045a22c24c43830beecbbe5e3777af6a6bf0ea21b7e022dbd"
+    },
+    {
+      "bytes": 1484,
+      "path": "apps_mobile_app_tabs_layout.tsx__61da372c.chunks.jsonl",
+      "sha256": "cdf18c397a7d1b8d0e70c71b20f99186d842fedce7baf0032808c9d3dd5f6205"
+    },
+    {
+      "bytes": 8612,
+      "path": "apps_mobile_app_tabs_index.tsx__a111a2bb.chunks.jsonl",
+      "sha256": "49c64d7c0fdfc0b94bbaf43dbf63c65d8c6ed01f9856cdbab5b7527d7b098457"
+    },
+    {
+      "bytes": 7593,
+      "path": "apps_mobile_app_tabs_mosques.tsx__7ee13093.chunks.jsonl",
+      "sha256": "f2c9c41cecf175e6f0386bc0acbf77907622206e0e050c9b61d0b806fbcdb102"
+    },
+    {
+      "bytes": 14196,
+      "path": "apps_mobile_app_tabs_settings.tsx__70f89a8a.chunks.jsonl",
+      "sha256": "4fbf96ce32b8e0487d7979132654c40f4be4236a52b03c90473dd4f422a2a404"
+    },
+    {
+      "bytes": 1550,
+      "path": "apps_mobile_app_layout.tsx__57b26458.chunks.jsonl",
+      "sha256": "e2f6642399c6ae9874ffa04d4b925e7800a32b47002b6133f82c5d038ea890ed"
+    },
+    {
+      "bytes": 21209,
+      "path": "apps_mobile_app_mosque_id_.tsx__93e4710e.chunks.jsonl",
+      "sha256": "b360584275e145518b2fa2b3f4c846ef5a13ec9b54c8e9c592a2a4400529d977"
+    },
+    {
+      "bytes": 392085,
+      "path": "apps_mobile_assets_data_mosques-index.json__57af11f5.chunks.jsonl",
+      "sha256": "11f6b17414640021ac451d00789223834aeaa55ec93dfb832cac674a024db7cb"
+    },
+    {
+      "bytes": 6891,
+      "path": "apps_mobile_components_AzanPlayer.tsx__d6d1b42f.chunks.jsonl",
+      "sha256": "d86f34f94206a2c86b64b7a4c0ac7f8b6ebc2b91c508e91e5f559884502b0a3a"
+    },
+    {
+      "bytes": 8977,
+      "path": "apps_mobile_components_DebugPanel.tsx__aabd90d2.chunks.jsonl",
+      "sha256": "17090d5c96eb73893db5e220cd7a4de92c33d648db33952d00ea29a4918b8517"
+    },
+    {
+      "bytes": 2835,
+      "path": "apps_mobile_components_IqamaCountdown.tsx__a0e582e3.chunks.jsonl",
+      "sha256": "cfe3eddad610f67b884e0e98615dee7fbbc7b4416abe8156feadc8ee3de5a85e"
+    },
+    {
+      "bytes": 4279,
+      "path": "apps_mobile_components_MosqueCard.tsx__6fdf2ba0.chunks.jsonl",
+      "sha256": "dad343a19f2ea6365356f3aed91e81cc0c563b23a28288277d63a26bbae39acf"
+    },
+    {
+      "bytes": 1898,
+      "path": "apps_mobile_components_MosqueMap.tsx__41b102e2.chunks.jsonl",
+      "sha256": "f15863634cef28fc1fcd9d979f0bd277809850d1fb382173106b10e83e67a7e8"
+    },
+    {
+      "bytes": 9216,
+      "path": "apps_mobile_components_NotificationSettings.tsx__f7e68017.chunks.jsonl",
+      "sha256": "4d84a91ac389d9d57a424309fb105566c8a2dbdeff84aa79fbeead71749fbca1"
+    },
+    {
+      "bytes": 3106,
+      "path": "apps_mobile_components_PrayerTimeCard.tsx__2ac1e725.chunks.jsonl",
+      "sha256": "624981c9948e4491a12354cc4255278c5d2b9d91f6f6e94d93cb1f9cd68a9eb4"
+    },
+    {
+      "bytes": 949,
+      "path": "apps_mobile_metro.config.js__90486b96.chunks.jsonl",
+      "sha256": "093536920e2cb939035cfa11e56ee20701a7b378cd7b6373d26065345630e900"
+    },
+    {
+      "bytes": 1415,
+      "path": "apps_mobile_package.json__179bbaee.chunks.jsonl",
+      "sha256": "6b48c8a8ea8523fc517ed6bf647536f0787140d6520528ff75a33035a9384694"
+    },
+    {
+      "bytes": 7468,
+      "path": "apps_mobile_services_api.ts__2f251033.chunks.jsonl",
+      "sha256": "b1ddfba8a8897b4b825321843e4ae3c2fa16f9e0347a7687c59850040bef7dcf"
+    },
+    {
+      "bytes": 5456,
+      "path": "apps_mobile_services_azanAudio.ts__f7c778e0.chunks.jsonl",
+      "sha256": "b3b233142acbbf67d7a61a64375361b2843f2bea59a76d3fcaf95a8f67ff65d7"
+    },
+    {
+      "bytes": 3076,
+      "path": "apps_mobile_services_cache.ts__4eaf0606.chunks.jsonl",
+      "sha256": "3baabb43d7f34dcd70ce92dfc73ed0493477c611a26b0e7eda395258aef4189a"
+    },
+    {
+      "bytes": 17528,
+      "path": "apps_mobile_services_iqamaDiscovery.ts__d8aa49be.chunks.jsonl",
+      "sha256": "d2bea79f0bf21e46a401f173859058700523970b6b968ecd17e58c361cebbbf4"
+    },
+    {
+      "bytes": 3254,
+      "path": "apps_mobile_services_localMosqueSearch.ts__ee990f89.chunks.jsonl",
+      "sha256": "1e01b7588819c36e1cb4d87fbd6cb7a71205c9201e7cc9c926e4ce4feaa98abe"
+    },
+    {
+      "bytes": 6651,
+      "path": "apps_mobile_services_location.ts__2e344b6b.chunks.jsonl",
+      "sha256": "9cd43528c9142324b970593311522c77a26095b562f100d4a60bb3c572e1b493"
+    },
+    {
+      "bytes": 10195,
+      "path": "apps_mobile_services_mawaqitService.ts__2c94413a.chunks.jsonl",
+      "sha256": "f2f5480603c5af9b436b17ede51f8e9d6a021df6bd5dd5eded9bebf0f959b17d"
+    },
+    {
+      "bytes": 8110,
+      "path": "apps_mobile_services_notifications.ts__7ef996d5.chunks.jsonl",
+      "sha256": "a57a3c2e68fc45026f96728f390732db010a09bcf14f0b4b58c00940b86940e7"
+    },
+    {
+      "bytes": 4809,
+      "path": "apps_mobile_services_overpassService.ts__ed0d6608.chunks.jsonl",
+      "sha256": "fc459123bde8f04581b89e29e92c5e3a24cb712c072e6aab21c53995655ee189"
+    },
+    {
+      "bytes": 4074,
+      "path": "apps_mobile_services_prayerTimes.ts__dce375ce.chunks.jsonl",
+      "sha256": "9d4e87fe84b5920d6518d57595bf4fb6e1f8a20446102374b822c8bdb8307552"
+    },
+    {
+      "bytes": 3721,
+      "path": "apps_mobile_stores_authStore.ts__f382236f.chunks.jsonl",
+      "sha256": "9abb45d7bbe2dd725e74928e5ccf7e9016b15000435fce0e7eb3207a2a02e83d"
+    },
+    {
+      "bytes": 10580,
+      "path": "apps_mobile_stores_mosqueStore.ts__29749f64.chunks.jsonl",
+      "sha256": "7f5432c44ffadce696f69fa7a21603b34d76f3c3cf3ec69f3fdc6f0ecb45ada2"
+    },
+    {
+      "bytes": 1219,
+      "path": "apps_mobile_stores_prayerStore.ts__4dd92d2a.chunks.jsonl",
+      "sha256": "a7c5144cdf2499ee620e804ec7de381053b72497f08d4b4f8a85242235cc0d73"
+    },
+    {
+      "bytes": 2237,
+      "path": "apps_mobile_stores_settingsStore.ts__236c0725.chunks.jsonl",
+      "sha256": "b3b4bab11bcbf890b9e8ecea521f0130cf54326b22d55cf023aa1aa540cb6aab"
+    },
+    {
+      "bytes": 538,
+      "path": "apps_mobile_tsconfig.json__c9d35250.chunks.jsonl",
+      "sha256": "adf36d8863986609e05e631267266fd29545c6f2525157935933b09b9fb3b9b0"
+    },
+    {
+      "bytes": 10477,
+      "path": "data_mosques_meta_coverage-map.json__67dcce29.chunks.jsonl",
+      "sha256": "46f7b3d177e2983fccaa0e57cebe6e163b07a395fdca3e1d0454e4b1798212e0"
+    },
+    {
+      "bytes": 3210,
+      "path": "data_mosques_canada_alberta_calgary.json__64f781fb.chunks.jsonl",
+      "sha256": "3fcb385fe6ac9dc68c3a23acf4536ab822daee6ec99011e9273244a91e605caf"
+    },
+    {
+      "bytes": 2608,
+      "path": "data_mosques_canada_alberta_edmonton.json__6cddadcb.chunks.jsonl",
+      "sha256": "82d32b172e4579d6efef03cbebb034e2aa839fd586d8fdf2cee1de159bc0800a"
+    },
+    {
+      "bytes": 4034,
+      "path": "data_mosques_canada_british-columbia_vancouver.json__5efeac64.chunks.jsonl",
+      "sha256": "d200c5546983d6e0c6f75aa739cbc4e7229995e67c26f0c949d29cbb50d0ab11"
+    },
+    {
+      "bytes": 2621,
+      "path": "data_mosques_canada_manitoba_winnipeg.json__13ccff4d.chunks.jsonl",
+      "sha256": "8924cea59bbbc267bc1f6fe7428afa42c276915b3601945bf22884ea016e44b8"
+    },
+    {
+      "bytes": 1900,
+      "path": "data_mosques_canada_nova-scotia_halifax.json__5a7c2a3c.chunks.jsonl",
+      "sha256": "8eb658a27a9d1d9bfb54470c3608a283e32fed2a3047e75671d8f5018b594346"
+    },
+    {
+      "bytes": 1670,
+      "path": "data_mosques_canada_ontario_alliston.json__155eb1b4.chunks.jsonl",
+      "sha256": "fe33affbf64457ddcd70db4b7627b5188b5dcbf3ee13a912f52815c755a1d8da"
+    },
+    {
+      "bytes": 4219,
+      "path": "data_mosques_canada_ontario_barrie.json__09c6b16c.chunks.jsonl",
+      "sha256": "509579afa7951feeaac39327cb064617f90d89a1785c7fe77cbfa0e808b17091"
+    },
+    {
+      "bytes": 2704,
+      "path": "data_mosques_canada_ontario_belleville.json__47730d79.chunks.jsonl",
+      "sha256": "38595ba9dad193c6e3127110381e5b0d07863ea1ae89d4b4252272335d17fee4"
+    },
+    {
+      "bytes": 2555,
+      "path": "data_mosques_canada_ontario_bradford.json__58476134.chunks.jsonl",
+      "sha256": "a68d167ec82168b61d7adbc8816173a949676ee870c99be823fd686fc956e7c4"
+    },
+    {
+      "bytes": 20275,
+      "path": "data_mosques_canada_ontario_brampton.json__069bc10a.chunks.jsonl",
+      "sha256": "ba789fcc018ebb5264c93e0034a95daf869565231ab3a3f9899aa2b65ef2c1b4"
+    },
+    {
+      "bytes": 3114,
+      "path": "data_mosques_canada_ontario_brantford.json__b98d3f82.chunks.jsonl",
+      "sha256": "b97a875fbed6fc5e5bd6a3a5a222c3cfffa47b28b23537408aa4a8e0cd27bf01"
+    },
+    {
+      "bytes": 1806,
+      "path": "data_mosques_canada_ontario_brockville.json__ddd27bcf.chunks.jsonl",
+      "sha256": "77c1d92b4881579b2e95e6f0b4f158caaecb371514be566e0e30debb2b3ca6ed"
+    },
+    {
+      "bytes": 10622,
+      "path": "data_mosques_canada_ontario_burlington.json__4f8186f0.chunks.jsonl",
+      "sha256": "a754276cd858c5c5e5cd0a229205620ae79b58507c2500c018cd62e65086477a"
+    },
+    {
+      "bytes": 1534,
+      "path": "data_mosques_canada_ontario_caledon.json__dbfcab5b.chunks.jsonl",
+      "sha256": "19688aec11b879385a080d4edfa57a72ff5cc72bc433f1e762a87ac003ede9c7"
+    },
+    {
+      "bytes": 11227,
+      "path": "data_mosques_canada_ontario_cambridge-kitchener.json__8dce5c72.chunks.jsonl",
+      "sha256": "82108512a8a55184fdc2ab6047a7d7c4d914d9fe7ebbe025529d2af3680ed53b"
+    },
+    {
+      "bytes": 1578,
+      "path": "data_mosques_canada_ontario_chatham-kent.json__767b0acd.chunks.jsonl",
+      "sha256": "53a9bbf233567e63a80c87b6b7fba317b8e2c4bf7007510cc25551fbbbc5af57"
+    },
+    {
+      "bytes": 1717,
+      "path": "data_mosques_canada_ontario_collingwood.json__a9059b66.chunks.jsonl",
+      "sha256": "a59d16ce1f510ecf5d83104fb9f9a3c724bd08f664761d75ea5e4dcf1594da36"
+    },
+    {
+      "bytes": 5405,
+      "path": "data_mosques_canada_ontario_cornwall.json__5b7f97c7.chunks.jsonl",
+      "sha256": "85b41524e40dca3e43d3bf5fd4f160efe5b8661bf9bdf315646f1356ff50dfd7"
+    },
+    {
+      "bytes": 2606,
+      "path": "data_mosques_canada_ontario_erin.json__568bc83a.chunks.jsonl",
+      "sha256": "6eb5d1180af34eec82e3761fd6a383ca2c3160da061f9db3d1881f1ccfe45582"
+    },
+    {
+      "bytes": 5383,
+      "path": "data_mosques_canada_ontario_guelph.json__288059af.chunks.jsonl",
+      "sha256": "6387a5f2ea49922a5b2c0e1b45fc054867439b5eb04d631084947fc3e867b9f1"
+    },
+    {
+      "bytes": 15219,
+      "path": "data_mosques_canada_ontario_hamilton.json__2dc4501c.chunks.jsonl",
+      "sha256": "3a2522719f690c782fd1d88d98e888e22cdcf92de7daa7df6a22854a25f3af5f"
+    },
+    {
+      "bytes": 1971,
+      "path": "data_mosques_canada_ontario_hawkesbury.json__6bca4c80.chunks.jsonl",
+      "sha256": "c085def720c03bbf31deeee9151e2d9ca150158b774a9e14da7a849c4918a2f3"
+    },
+    {
+      "bytes": 4230,
+      "path": "data_mosques_canada_ontario_kingston.json__38d16cf1.chunks.jsonl",
+      "sha256": "5e0b1753d4b276e163b3e6d12be83703517f978f2019687a3829e279c659854a"
+    },
+    {
+      "bytes": 1785,
+      "path": "data_mosques_canada_ontario_lindsay.json__c0a8f453.chunks.jsonl",
+      "sha256": "11826e33f6451ade8a2b02915655a5b55f4e46328d9278d18b8df36cc344dc84"
+    },
+    {
+      "bytes": 9195,
+      "path": "data_mosques_canada_ontario_london.json__667f0c15.chunks.jsonl",
+      "sha256": "0f7ea79b7258c610589ef2fb5127fa780b1b01bbe3b68116ddc7d534052c9317"
+    },
+    {
+      "bytes": 14511,
+      "path": "data_mosques_canada_ontario_markham.json__619aaf96.chunks.jsonl",
+      "sha256": "38c205c6df18ab6bed21f95bbba0a8feac0de2045140a1ee83f7d5530f05e8b6"
+    },
+    {
+      "bytes": 5854,
+      "path": "data_mosques_canada_ontario_milton.json__628dd0ef.chunks.jsonl",
+      "sha256": "d70bd264e62f0062f1a26b771253edb3e154c8e4ae6470e4c0072333b7402f39"
+    },
+    {
+      "bytes": 29859,
+      "path": "data_mosques_canada_ontario_mississauga.json__5a9afd6e.chunks.jsonl",
+      "sha256": "f78000ba7916172790f58d1ab90b8baede948ae50b71fd094cab1354717a434e"
+    },
+    {
+      "bytes": 1652,
+      "path": "data_mosques_canada_ontario_muskoka.json__13e66125.chunks.jsonl",
+      "sha256": "1bae5c10f8f904ccc079f16096094cb70dbbeba5d273c287035e8047bb0b8d4c"
+    },
+    {
+      "bytes": 1744,
+      "path": "data_mosques_canada_ontario_newmarket.json__2e1f5176.chunks.jsonl",
+      "sha256": "19bfa55dca0f3d07c4209514d7ca4163f61e65988bca9f8adf694d730c5581b5"
+    },
+    {
+      "bytes": 8519,
+      "path": "data_mosques_canada_ontario_niagara.json__4b95028e.chunks.jsonl",
+      "sha256": "b3af2d6b6f0dcc9e5c2125ac3acd48c9239b551133248ce044410291ffe482ab"
+    },
+    {
+      "bytes": 1971,
+      "path": "data_mosques_canada_ontario_north-bay.json__c505ea57.chunks.jsonl",
+      "sha256": "44bd89a23c2365dbe042be37bfe2491ec44531085cd3cc2e527f66d385d70e2b"
+    },
+    {
+      "bytes": 3971,
+      "path": "data_mosques_canada_ontario_orangeville.json__142baf6a.chunks.jsonl",
+      "sha256": "4875ef8798137427216cc6f1e34478a5ada63109ed517a9f50ce2303653dbca3"
+    },
+    {
+      "bytes": 10187,
+      "path": "data_mosques_canada_ontario_oshawa.json__b669de8b.chunks.jsonl",
+      "sha256": "dfe8f4b5657b9bcc36cd07a550633c9adfd9c826d1487bad1bea4ccaef97e026"
+    },
+    {
+      "bytes": 36500,
+      "path": "data_mosques_canada_ontario_ottawa.json__c713eba0.chunks.jsonl",
+      "sha256": "fce9f14a4b551e966512b8612ee993a7d5a8947a7f76100d60a387a7ccc92892"
+    },
+    {
+      "bytes": 3399,
+      "path": "data_mosques_canada_ontario_owen-sound.json__b287f57a.chunks.jsonl",
+      "sha256": "5766ef1387853da9a8de39992e4fd6ef9963647c757293f0640cf51d895eacfb"
+    },
+    {
+      "bytes": 1755,
+      "path": "data_mosques_canada_ontario_pembroke.json__c11411a5.chunks.jsonl",
+      "sha256": "7ef4eb3ffdbf68a188d34dae080380aba48e02309eb054b52dae6dda0304f7cf"
+    },
+    {
+      "bytes": 2891,
+      "path": "data_mosques_canada_ontario_peterborough.json__513505ec.chunks.jsonl",
+      "sha256": "7db2dc821b3c7026d1781a0ba57cef75a261fa0afc933e047a68764762a95fde"
+    },
+    {
+      "bytes": 2933,
+      "path": "data_mosques_canada_ontario_sarnia.json__26da8902.chunks.jsonl",
+      "sha256": "3f7ed4655d718a9011782b778e4830ada7ce9a413242486e7bbd2b6ef81a6e5d"
+    },
+    {
+      "bytes": 2042,
+      "path": "data_mosques_canada_ontario_sault-ste-marie.json__2ff89260.chunks.jsonl",
+      "sha256": "4f7ac379af72357ac22f2a6d0db8e97aa2ca293388f58421bcf4b591250bd374"
+    },
+    {
+      "bytes": 1529,
+      "path": "data_mosques_canada_ontario_stratford.json__374645e4.chunks.jsonl",
+      "sha256": "90790a9ff28b171c831d1ab4874f387de57485fa63ef9d18ed97b44e2f3a1752"
+    },
+    {
+      "bytes": 3161,
+      "path": "data_mosques_canada_ontario_sudbury.json__12efca5b.chunks.jsonl",
+      "sha256": "af8e079904a88e486556d033a3541fef10e498f261df6ed8a3b3c3c44de18f45"
+    },
+    {
+      "bytes": 3149,
+      "path": "data_mosques_canada_ontario_thunder-bay.json__6cbd8663.chunks.jsonl",
+      "sha256": "8387ff73084db120fc142840a20bae291d71c7450129d5bcca7b3e429dedaf23"
+    },
+    {
+      "bytes": 1621,
+      "path": "data_mosques_canada_ontario_tillsonburg.json__fa664b0c.chunks.jsonl",
+      "sha256": "746f9e895ab678a678037be927717bec9965f2e993a664af7bb94d5e83778da0"
+    },
+    {
+      "bytes": 1828,
+      "path": "data_mosques_canada_ontario_timmins.json__f46e2dce.chunks.jsonl",
+      "sha256": "565fc42338d6bd1d6953fb0a9d9b2e59ff4567e4ebbb8a70fab547dd6605f431"
+    },
+    {
+      "bytes": 166071,
+      "path": "data_mosques_canada_ontario_toronto.json__4c838e4e.chunks.jsonl",
+      "sha256": "41b4368f7cec1f0b9b7da5f35ad380a20cce0f38d679a5bace48f18424201d66"
+    },
+    {
+      "bytes": 4528,
+      "path": "data_mosques_canada_ontario_vaughan.json__77f85848.chunks.jsonl",
+      "sha256": "7fd27875b60229d8cb9ad45765073f28dcdbf696d3ae4e21240c7010f6d244da"
+    },
+    {
+      "bytes": 21331,
+      "path": "data_mosques_canada_ontario_waterloo.json__6c3c14be.chunks.jsonl",
+      "sha256": "7cdf1c8397faa578f35fdeb373924c6afe4a08a84bf87017826bb3f6fd5ae4de"
+    },
+    {
+      "bytes": 7180,
+      "path": "data_mosques_canada_ontario_whitby-ajax.json__442e60f9.chunks.jsonl",
+      "sha256": "0441637ab518d7c5f5f82b9e4f446028d6c2240ade74cf42e7e150916c870863"
+    },
+    {
+      "bytes": 16796,
+      "path": "data_mosques_canada_ontario_windsor.json__57e62772.chunks.jsonl",
+      "sha256": "2484f695113fa3ff2f14382d29fefb1fd137e63e0897b3c53d4006f6215102c5"
+    },
+    {
+      "bytes": 1643,
+      "path": "data_mosques_canada_ontario_woodstock.json__37073004.chunks.jsonl",
+      "sha256": "fbf08e70e3b1c871918f85c20d3211e874622529c0ce2846e00f81c5acaa087a"
+    },
+    {
+      "bytes": 3957,
+      "path": "data_mosques_canada_quebec_montreal.json__b61344a4.chunks.jsonl",
+      "sha256": "60539bc6712db06aa2ea3e829201033d567b2335371b430737b2865d7842dfbf"
+    },
+    {
+      "bytes": 1859,
+      "path": "data_mosques_canada_saskatchewan_saskatoon.json__d56e3b13.chunks.jsonl",
+      "sha256": "9791bf3eabf76908a46778bfc1c68668af3c77a27ed9811cf2bbee68fd76c8aa"
+    },
+    {
+      "bytes": 274,
+      "path": "distancecalculation-Labeeb.py__eb9e3452.chunks.jsonl",
+      "sha256": "677cbc24af76dd0d091284d35f02f20ed6f17df252c1ebf0afa37e7b0cd054fe"
+    },
+    {
+      "bytes": 1417,
+      "path": "docker-compose.local.yml__ae586547.chunks.jsonl",
+      "sha256": "c57d649035779c862b550376801cfc7be64e371c7518a97c6eadab40c34d571e"
+    },
+    {
+      "bytes": 1340,
+      "path": "docker-compose.prod.yml__4563fbe9.chunks.jsonl",
+      "sha256": "2e4fe14788ef7d83d5a9c0d06e1a95f4a2db79099f0914dbe947d83eb16b53ce"
+    },
+    {
+      "bytes": 742,
+      "path": "docker_admin_Dockerfile.prod__5262ef9c.chunks.jsonl",
+      "sha256": "a2b4ee2c5f7bf079fbc476bd3466566be0cd3d7d1a7d6b9fd3424f4f0c149195"
+    },
+    {
+      "bytes": 552,
+      "path": "docker_admin_nginx.conf__709bb506.chunks.jsonl",
+      "sha256": "787ba524a76b363166a83eb6dc89b79f5b519cff872c7ed3d759784e6476ec6d"
+    },
+    {
+      "bytes": 773,
+      "path": "docker_server_Dockerfile.local__36df2ef8.chunks.jsonl",
+      "sha256": "7f69fb158a261d4ccdb86ef249c51f65f185dd2d08ac95da56000e847d8fd416"
+    },
+    {
+      "bytes": 1215,
+      "path": "docker_server_Dockerfile.prod__8d244682.chunks.jsonl",
+      "sha256": "6fc898cb76e33f05a908fbdb2e11bbedb68dacc0dd1e7500b77543f397b22bc1"
+    },
+    {
+      "bytes": 558,
+      "path": "docker_server_entrypoint.local.sh__05a1ef61.chunks.jsonl",
+      "sha256": "37fa573c6d040aede5f63f67357e9dd3d3ccc078b31f53e7e0773db4541abbdd"
+    },
+    {
+      "bytes": 411,
+      "path": "docker_server_entrypoint.prod.sh__ff4bed49.chunks.jsonl",
+      "sha256": "a9e20b62d960e3e5ad729bd0c39c127b6b6f0050aa3ddf90a2fc9719a8feeb0a"
+    },
+    {
+      "bytes": 668743,
+      "path": "package-lock.json__053150b6.chunks.jsonl",
+      "sha256": "1a5ac2fec6316ef422bab8293f1cb1d66521fb60387203831cc8ee3f507cdd0b"
+    },
+    {
+      "bytes": 879,
+      "path": "package.json__7ae45ad1.chunks.jsonl",
+      "sha256": "804b81e332a29ac07ff2215b8d8b311053aad6b903c9d6149d7a9b4957295ccf"
+    },
+    {
+      "bytes": 450,
+      "path": "packages_shared_package.json__3752b1e4.chunks.jsonl",
+      "sha256": "21ac55d53869fa0990450641fbb7ccd01de4985c58a2e3209570546bb4355a1e"
+    },
+    {
+      "bytes": 1610,
+      "path": "packages_shared_src_constants.ts__1d536cd3.chunks.jsonl",
+      "sha256": "27fc3aa25affa7347b819c6d3611bbf1216fbadb1b31d677486f4944db98ae30"
+    },
+    {
+      "bytes": 260,
+      "path": "packages_shared_src_index.ts__ecabfdd7.chunks.jsonl",
+      "sha256": "46ce1f25ff03f67304a7e0e085692aa98b45e91ff3319774ed78ea7c50701f75"
+    },
+    {
+      "bytes": 8115,
+      "path": "packages_shared_src_types.ts__be0f73bc.chunks.jsonl",
+      "sha256": "bb5b48525f9449485bafc75e646559528987f67029c9ed2d68bfe233cf4c2277"
+    },
+    {
+      "bytes": 3527,
+      "path": "packages_shared_src_utils.ts__1e4115ea.chunks.jsonl",
+      "sha256": "eaa9a934a70c71a652617867e74cf04cc09e08fb2b096712b629fb8ed1c95412"
+    },
+    {
+      "bytes": 340,
+      "path": "packages_shared_tsconfig.json__28fbbd10.chunks.jsonl",
+      "sha256": "b247a08683223274d8548a68bfc4cf070a0be421179b57de0be5a31273743968"
+    },
+    {
+      "bytes": 16172,
+      "path": "scripts_enrich-iqama.ts__f09f4323.chunks.jsonl",
+      "sha256": "3df659bf34cc4b474b25c806d3ef88cd9a27abfb60f14f4516a6df2edc52b28e"
+    },
+    {
+      "bytes": 7169,
+      "path": "scripts_generate-mobile-assets.py__b5d685ce.chunks.jsonl",
+      "sha256": "0ead83b717b8b532df28e0e66fe4a985f2c9dc308d23bc804d94a92e32d177ea"
+    },
+    {
+      "bytes": 4932,
+      "path": "scripts_generate-mosque-bundle.py__be268584.chunks.jsonl",
+      "sha256": "6c4de13964d612ea1407caf294fd1a37684716cca732d25f74da2e6c43e11757"
+    },
+    {
+      "bytes": 19242,
+      "path": "scripts_research-mosques.ts__1222869c.chunks.jsonl",
+      "sha256": "747a98222f3f032eb611e8c84ad293dc3e34ae3bb4f452cd9c5db297d8acb776"
+    },
+    {
+      "bytes": 1235,
+      "path": "server_package.json__da00458c.chunks.jsonl",
+      "sha256": "007d6f6170eac18fa2e4c87420a53b300f878c0028d6e9f17c3db8c558bb92ae"
+    },
+    {
+      "bytes": 5957,
+      "path": "server_prisma_schema.prisma__f15e3ac1.chunks.jsonl",
+      "sha256": "2efb7c2e1c74025ce3bb37d297fd84ce4674e49e44337f9d7440faf804180e2a"
+    },
+    {
+      "bytes": 9029,
+      "path": "server_prisma_seed.ts__094f9170.chunks.jsonl",
+      "sha256": "5bdc18411db36864f294de2e6559608e95aca11571eeb6b4888a62963ac1d8b1"
+    },
+    {
+      "bytes": 1828,
+      "path": "server_src_index.ts__c299744f.chunks.jsonl",
+      "sha256": "b165228a7d5b6d61f51f07445091e7077ff6e743ce395e38a2a79dcc73bdd8bc"
+    },
+    {
+      "bytes": 3656,
+      "path": "server_src_jobs_iqamaRefreshJob.ts__65fb9146.chunks.jsonl",
+      "sha256": "525422b631f719a5f53e71c8b103700188d6790f1e86685c72525521cda47271"
+    },
+    {
+      "bytes": 474,
+      "path": "server_src_lib_prisma.ts__fcb5c0f5.chunks.jsonl",
+      "sha256": "42963eeef6fa7b849d336b839e023d52980ac17d23fe6c254a82a69836425bd6"
+    },
+    {
+      "bytes": 2374,
+      "path": "server_src_middleware_auth.ts__2369efd4.chunks.jsonl",
+      "sha256": "3e809e7f5a367349538db6d9706402d62831add17110618c8e896812d1b53da7"
+    },
+    {
+      "bytes": 5988,
+      "path": "server_src_routes_admin.ts__eb832aec.chunks.jsonl",
+      "sha256": "8f48f44442c68e74cafaab3dab231d0391464299fcaef2a0b0887841686f9368"
+    },
+    {
+      "bytes": 4891,
+      "path": "server_src_routes_auth.ts__aceed278.chunks.jsonl",
+      "sha256": "892f250c2a356c35e5030907e08fe4886b79bb167795e3579bc91c296925a334"
+    },
+    {
+      "bytes": 3782,
+      "path": "server_src_routes_coverageRequests.ts__b9e98a61.chunks.jsonl",
+      "sha256": "db1f9340ea8c537f4ec51e5e0e65952c8acfb5d088e53f247981bdedf901798d"
+    },
+    {
+      "bytes": 4189,
+      "path": "server_src_routes_iqama.ts__308be223.chunks.jsonl",
+      "sha256": "c4fe46c0a4716375eac5afe39f94e85a1ca33c13686195308396270fde251bca"
+    },
+    {
+      "bytes": 7374,
+      "path": "server_src_routes_mosques.ts__1f50029e.chunks.jsonl",
+      "sha256": "77a60d7467cb84fab0d64c26c53cff1aca9fbc7009cb199dfa683a720b4ee87f"
+    },
+    {
+      "bytes": 1253,
+      "path": "server_src_routes_prayerTimes.ts__ea2cdba2.chunks.jsonl",
+      "sha256": "1164a75a10dd1df14f40b8665aff12c061c439ea1fce747a048b18d82a643f56"
+    },
+    {
+      "bytes": 8419,
+      "path": "server_src_routes_submissions.ts__e49fb93f.chunks.jsonl",
+      "sha256": "16f3bfc580ef1345cb8d2164d848070a496b6143ec9e263bd2149f0a5b4df58d"
+    },
+    {
+      "bytes": 7142,
+      "path": "server_src_routes_users.ts__6bf91d86.chunks.jsonl",
+      "sha256": "220c5ae8c6e2b370c5d8458aa3c065aa216b5c1dfce15c3114137c27cc06ece5"
+    },
+    {
+      "bytes": 1453,
+      "path": "server_src_services_aladhanService.ts__1871b8ef.chunks.jsonl",
+      "sha256": "fc05d85fc2c6ff142e246b4449bd4fe5c2a30aa6f554e666482ab4deb7316d23"
+    },
+    {
+      "bytes": 16079,
+      "path": "server_src_services_iqamaEnrichment.ts__a4070bdc.chunks.jsonl",
+      "sha256": "f4c839b9e709ae5f6c28eab4da57cc11d4efe3f83a84bbc736fc832cafd5ba68"
+    },
+    {
+      "bytes": 813,
+      "path": "server_src_services_notificationService.ts__a438978e.chunks.jsonl",
+      "sha256": "f42451eb84a379a5a35dfe1a9de0136d6670053907d579fc9b10a1e6a0d99e98"
+    },
+    {
+      "bytes": 429,
+      "path": "server_src_services_streamService.ts__3d64dff5.chunks.jsonl",
+      "sha256": "ad9f0fabdfbbbe747f27f876d810c8052ef17d51757e463cfde830306722d6fb"
+    },
+    {
+      "bytes": 370,
+      "path": "server_tsconfig.json__f3eab147.chunks.jsonl",
+      "sha256": "7c60a0abbd32dd8acda39fc297db994247e595665bac8ae422f6603b7dbb339b"
+    },
+    {
+      "bytes": 59017,
+      "path": "setup.py__60f61ab7.chunks.jsonl",
+      "sha256": "9148f7d43f1eb17af381565bbb76ba0cbf206b6c971c887491fa5879be47e159"
+    },
+    {
+      "bytes": 549,
+      "path": "tsconfig.base.json__0b280a44.chunks.jsonl",
+      "sha256": "3b38c8f922aeaf15f90060a52a24815432e07e897254463edc1058f4a19b3786"
+    },
+    {
+      "bytes": 473,
+      "path": "turbo.json__f8de9652.chunks.jsonl",
+      "sha256": "b95de200e92ea13d8ea6a379452ee8cc5cad9a76e20ce43496d6bbf49cb6c976"
+    },
+    {
+      "bytes": 56943,
+      "path": "REPO_FILE_INDEX.jsonl",
+      "sha256": "b8ef2b27d290277a130f0dc4ccab0a9a99e744d58aaa5fddf05d195f7edd1276"
+    }
+  ],
+  "chunk_count": 350,
+  "generated_utc": "2026-03-16T18:07:17.037773+00:00",
+  "repo_file_count_binary": 26,
+  "repo_file_count_text": 178,
+  "repo_file_count_total": 204,
+  "repo_root": "A:\\git\\LiveAzan",
+  "scan_exclusions": [
+    "*.egg-info",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".next",
+    ".nox",
+    ".nuxt",
+    ".output",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "Pods",
+    "__pycache__",
+    "build",
+    "dist",
+    "env",
+    "node_modules",
+    "out",
+    "target",
+    "venv"
+  ],
+  "validation": "PASS",
+  "zkme_version": "2.14.1"
+}

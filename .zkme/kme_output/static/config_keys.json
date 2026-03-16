@@ -1,0 +1,372 @@
+[
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 656,
+        "path": "setup.py"
+      }
+    ],
+    "file_path": "setup.py",
+    "name": "ANDROID_HOME",
+    "source": "environment"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 657,
+        "path": "setup.py"
+      }
+    ],
+    "file_path": "setup.py",
+    "name": "ANDROID_SDK_ROOT",
+    "source": "environment"
+  },
+  {
+    "confidence": "high",
+    "default_value": "",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 661,
+        "path": "setup.py"
+      }
+    ],
+    "file_path": "setup.py",
+    "name": "LOCALAPPDATA",
+    "source": "environment"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 945,
+        "path": "setup.py"
+      }
+    ],
+    "file_path": "setup.py",
+    "name": "JAVA_HOME",
+    "source": "environment"
+  },
+  {
+    "confidence": "medium",
+    "default_value": "liveaszan_local",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 34,
+        "path": "setup.py"
+      }
+    ],
+    "file_path": "setup.py",
+    "name": "PROJECT_LOCAL",
+    "source": "constant"
+  },
+  {
+    "confidence": "medium",
+    "default_value": "liveaszan_prod",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 35,
+        "path": "setup.py"
+      }
+    ],
+    "file_path": "setup.py",
+    "name": "PROJECT_PROD",
+    "source": "constant"
+  },
+  {
+    "confidence": "medium",
+    "default_value": "None",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 38,
+        "path": "setup.py"
+      }
+    ],
+    "file_path": "setup.py",
+    "name": "COMPOSE_CMD",
+    "source": "constant"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 41,
+        "path": "setup.py"
+      }
+    ],
+    "file_path": "setup.py",
+    "name": "ADMIN_APP",
+    "source": "constant"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 49,
+        "path": "setup.py"
+      }
+    ],
+    "file_path": "setup.py",
+    "name": "MOBILE_APP",
+    "source": "constant"
+  },
+  {
+    "confidence": "medium",
+    "default_value": ".liveaszan_pids",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 55,
+        "path": "setup.py"
+      }
+    ],
+    "file_path": "setup.py",
+    "name": "PID_FILE",
+    "source": "constant"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 11,
+        "path": "apps\\admin\\vite.config.ts"
+      }
+    ],
+    "file_path": "apps\\admin\\vite.config.ts",
+    "name": "API_URL",
+    "source": "environment"
+  },
+  {
+    "confidence": "high",
+    "default_value": "http://192.168.68.67:3001",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\.env"
+      }
+    ],
+    "file_path": "apps\\mobile\\.env",
+    "name": "EXPO_PUBLIC_API_URL",
+    "source": "environment"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 15,
+        "path": "apps\\mobile\\services\\api.ts"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "name": "EXPO_PUBLIC_API_URL",
+    "source": "environment"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 21,
+        "path": "scripts\\generate-mobile-assets.py"
+      }
+    ],
+    "file_path": "scripts\\generate-mobile-assets.py",
+    "name": "BRAND_GREEN",
+    "source": "constant"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 22,
+        "path": "scripts\\generate-mobile-assets.py"
+      }
+    ],
+    "file_path": "scripts\\generate-mobile-assets.py",
+    "name": "WHITE",
+    "source": "constant"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 23,
+        "path": "scripts\\generate-mobile-assets.py"
+      }
+    ],
+    "file_path": "scripts\\generate-mobile-assets.py",
+    "name": "LIGHT_GREEN",
+    "source": "constant"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 119,
+        "path": "scripts\\generate-mobile-assets.py"
+      }
+    ],
+    "file_path": "scripts\\generate-mobile-assets.py",
+    "name": "ASSETS_DIR",
+    "source": "constant"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 17,
+        "path": "scripts\\generate-mosque-bundle.py"
+      }
+    ],
+    "file_path": "scripts\\generate-mosque-bundle.py",
+    "name": "REPO",
+    "source": "constant"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 18,
+        "path": "scripts\\generate-mosque-bundle.py"
+      }
+    ],
+    "file_path": "scripts\\generate-mosque-bundle.py",
+    "name": "DATA_DIR",
+    "source": "constant"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 19,
+        "path": "scripts\\generate-mosque-bundle.py"
+      }
+    ],
+    "file_path": "scripts\\generate-mosque-bundle.py",
+    "name": "OUT_DIR",
+    "source": "constant"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 20,
+        "path": "scripts\\generate-mosque-bundle.py"
+      }
+    ],
+    "file_path": "scripts\\generate-mosque-bundle.py",
+    "name": "OUT_FILE",
+    "source": "constant"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 240,
+        "path": "server\\prisma\\seed.ts"
+      }
+    ],
+    "file_path": "server\\prisma\\seed.ts",
+    "name": "ADMIN_EMAIL",
+    "source": "environment"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 241,
+        "path": "server\\prisma\\seed.ts"
+      }
+    ],
+    "file_path": "server\\prisma\\seed.ts",
+    "name": "ADMIN_PASSWORD",
+    "source": "environment"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 15,
+        "path": "server\\src\\index.ts"
+      }
+    ],
+    "file_path": "server\\src\\index.ts",
+    "name": "PORT",
+    "source": "environment"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 44,
+        "path": "server\\src\\index.ts"
+      }
+    ],
+    "file_path": "server\\src\\index.ts",
+    "name": "NODE_ENV",
+    "source": "environment"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 9,
+        "path": "server\\src\\lib\\prisma.ts"
+      }
+    ],
+    "file_path": "server\\src\\lib\\prisma.ts",
+    "name": "NODE_ENV",
+    "source": "environment"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 17,
+        "path": "server\\src\\middleware\\auth.ts"
+      }
+    ],
+    "file_path": "server\\src\\middleware\\auth.ts",
+    "name": "JWT_SECRET",
+    "source": "environment"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 10,
+        "path": "server\\src\\routes\\auth.ts"
+      }
+    ],
+    "file_path": "server\\src\\routes\\auth.ts",
+    "name": "JWT_SECRET",
+    "source": "environment"
+  }
+]

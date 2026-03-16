@@ -1,0 +1,15 @@
+{
+  "migration_files": [],
+  "total_migration_files": 0,
+  "operations": [],
+  "total_operations": 0,
+  "constraints_summary": {
+    "not_null_columns": [],
+    "unique_columns": [],
+    "foreign_keys": [],
+    "enums": [],
+    "defaults": []
+  },
+  "tables_created": [],
+  "tables_modified": []
+}

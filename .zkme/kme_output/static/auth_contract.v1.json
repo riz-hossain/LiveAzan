@@ -1,0 +1,12 @@
+{
+  "auth_detected": true,
+  "login_routes": [],
+  "guards": [],
+  "roles": [],
+  "auth_libraries": [],
+  "auth_config_keys": [
+    "JWT_SECRET",
+    "JWT_SECRET"
+  ],
+  "evidence_refs": []
+}

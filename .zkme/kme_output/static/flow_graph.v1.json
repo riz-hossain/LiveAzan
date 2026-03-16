@@ -1,0 +1,34 @@
+{
+  "nodes": [
+    {
+      "id": "table:{'platform'}.import",
+      "type": "db_operation",
+      "label": "IMPORT {'platform'}",
+      "table": "{'platform'}",
+      "operation": "import"
+    },
+    {
+      "id": "table:@prisma/client.import",
+      "type": "db_operation",
+      "label": "IMPORT @prisma/client",
+      "table": "@prisma/client",
+      "operation": "import"
+    },
+    {
+      "id": "table:../lib/prisma.import",
+      "type": "db_operation",
+      "label": "IMPORT ../lib/prisma",
+      "table": "../lib/prisma",
+      "operation": "import"
+    }
+  ],
+  "edges": [],
+  "stats": {
+    "total_nodes": 3,
+    "total_edges": 0,
+    "node_types": {
+      "db_operation": 3
+    },
+    "edge_types": {}
+  }
+}

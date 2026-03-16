@@ -1,0 +1,10 @@
+{
+  "bindings": [],
+  "total": 0,
+  "with_network_call": 0,
+  "coverage": {
+    "total_interactive_elements": 1,
+    "bound_elements": 0,
+    "coverage_pct": 0.0
+  }
+}

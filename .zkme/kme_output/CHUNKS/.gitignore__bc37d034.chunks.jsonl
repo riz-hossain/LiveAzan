@@ -1,0 +1,1 @@
+{"chunk_id": "CHK-bc37d034-0000", "end_line": 8, "next_chunk_id": null, "prev_chunk_id": null, "source_path": ".gitignore", "start_line": 1, "text": "node_modules/\ndist/\n.env\n.env.local\n*.log\n.expo/\n.turbo/\n"}

@@ -1,0 +1,55 @@
+{
+  "build_systems": [
+    "node",
+    "python"
+  ],
+  "confidence": "high",
+  "languages": {
+    "config": 1,
+    "gradle": 3,
+    "html": 1,
+    "javascript": 1,
+    "json": 68,
+    "kotlin": 4,
+    "markdown": 3,
+    "properties": 2,
+    "python": 4,
+    "shell": 3,
+    "typescript": 59,
+    "unknown": 18,
+    "xml": 10,
+    "yaml": 2
+  },
+  "notes": [
+    "Multiple top-level build roots detected; treating as monorepo."
+  ],
+  "recommended_ignores": [
+    ".git/",
+    ".hg/",
+    ".idea/",
+    ".mypy_cache/",
+    ".pytest_cache/",
+    ".ruff_cache/",
+    ".svn/",
+    ".venv/",
+    ".vscode/",
+    "bin/",
+    "build/",
+    "dist/",
+    "node_modules/",
+    "obj/",
+    "out/",
+    "target/",
+    "venv/"
+  ],
+  "repo_kind": "monorepo",
+  "service_roots": [
+    "apps/mobile",
+    "setup.py",
+    "packages/shared",
+    "package-lock.json",
+    "package.json",
+    "server",
+    "apps/admin"
+  ]
+}

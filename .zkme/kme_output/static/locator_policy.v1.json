@@ -1,0 +1,63 @@
+{
+  "primary_platform": "web_generic",
+  "primary_priority": [
+    "data-automation",
+    "data-testid",
+    "data-test",
+    "aria-label",
+    "role",
+    "id",
+    "name",
+    "class",
+    "css",
+    "xpath",
+    "text"
+  ],
+  "all_policies": [
+    {
+      "platform_key": "web_generic",
+      "platform": "Web (Generic)",
+      "priority": [
+        "data-automation",
+        "data-testid",
+        "data-test",
+        "aria-label",
+        "role",
+        "id",
+        "name",
+        "class",
+        "css",
+        "xpath",
+        "text"
+      ],
+      "notes": "Generic web locator priorities."
+    },
+    {
+      "platform_key": "web_react",
+      "platform": "Web (React/Next.js)",
+      "priority": [
+        "data-automation",
+        "data-testid",
+        "data-test",
+        "data-cy",
+        "aria-label",
+        "aria-labelledby",
+        "role",
+        "id",
+        "name",
+        "class",
+        "css",
+        "xpath",
+        "text"
+      ],
+      "notes": "Prefer data-testid for stable selectors. Avoid class-based selectors as they change with CSS."
+    }
+  ],
+  "total_platforms_detected": 2,
+  "evidence_refs": [
+    {
+      "file": "repo_signals.json",
+      "line": 0
+    }
+  ]
+}

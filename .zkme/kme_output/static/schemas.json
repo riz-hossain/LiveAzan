@@ -1,0 +1,2668 @@
+[
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "apps\\admin\\src\\pages\\Dashboard.tsx"
+      }
+    ],
+    "fields": [
+      {
+        "name": "totalMosques",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "totalUsers",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "pendingRequests",
+        "required": true,
+        "type": "number"
+      }
+    ],
+    "file_path": "apps\\admin\\src\\pages\\Dashboard.tsx",
+    "framework": "typescript",
+    "name": "Stats"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 4,
+        "path": "apps\\admin\\src\\pages\\IqamaEditor.tsx"
+      }
+    ],
+    "fields": [
+      {
+        "name": "fajr",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "dhuhr",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "asr",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "maghrib",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "isha",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "jummah",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "effectiveFrom",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "effectiveTo",
+        "required": true,
+        "type": "string"
+      }
+    ],
+    "file_path": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+    "framework": "typescript",
+    "name": "IqamaFormData"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 6,
+        "path": "apps\\mobile\\components\\AzanPlayer.tsx"
+      }
+    ],
+    "fields": [
+      {
+        "name": "mosqueId",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "prayer",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "hasLiveStream",
+        "required": false,
+        "type": "boolean"
+      },
+      {
+        "name": "streamUrl",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "onClose",
+        "required": false,
+        "type": "() => void"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\AzanPlayer.tsx",
+    "framework": "typescript",
+    "name": "AzanPlayerProps"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 25,
+        "path": "apps\\mobile\\components\\DebugPanel.tsx"
+      }
+    ],
+    "fields": [
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "status",
+        "required": true,
+        "type": "\"idle\" | \"loading\" | \"ok\" | \"error\""
+      },
+      {
+        "name": "count",
+        "required": false,
+        "type": "number"
+      },
+      {
+        "name": "error",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\DebugPanel.tsx",
+    "framework": "typescript",
+    "name": "SourceResult"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 32,
+        "path": "apps\\mobile\\components\\DebugPanel.tsx"
+      }
+    ],
+    "fields": [
+      {
+        "name": "lat",
+        "required": true,
+        "type": "number | null"
+      },
+      {
+        "name": "lon",
+        "required": true,
+        "type": "number | null"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\DebugPanel.tsx",
+    "framework": "typescript",
+    "name": "Props"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 4,
+        "path": "apps\\mobile\\components\\IqamaCountdown.tsx"
+      }
+    ],
+    "fields": [
+      {
+        "name": "prayerName",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "iqamaTime",
+        "required": true,
+        "type": "string; // \"HH:mm\""
+      },
+      {
+        "name": "mosqueName",
+        "required": true,
+        "type": "string"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+    "framework": "typescript",
+    "name": "IqamaCountdownProps"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 6,
+        "path": "apps\\mobile\\components\\MosqueCard.tsx"
+      }
+    ],
+    "fields": [
+      {
+        "name": "mosque",
+        "required": true,
+        "type": "Mosque"
+      },
+      {
+        "name": "onPress",
+        "required": true,
+        "type": "() => void"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\MosqueCard.tsx",
+    "framework": "typescript",
+    "name": "MosqueCardProps"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 6,
+        "path": "apps\\mobile\\components\\MosqueMap.tsx"
+      }
+    ],
+    "fields": [
+      {
+        "name": "mosques",
+        "required": true,
+        "type": "Mosque[]"
+      },
+      {
+        "name": "userLocation",
+        "required": true,
+        "type": "{ latitude: number; longitude: number }"
+      },
+      {
+        "name": "onMosquePress",
+        "required": true,
+        "type": "(mosque: Mosque) => void"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\MosqueMap.tsx",
+    "framework": "typescript",
+    "name": "MosqueMapProps"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 16,
+        "path": "apps\\mobile\\components\\NotificationSettings.tsx"
+      }
+    ],
+    "fields": [
+      {
+        "name": "prayerPrefs",
+        "required": true,
+        "type": "UserPrayerPreference[]"
+      },
+      {
+        "name": "onUpdate",
+        "required": true,
+        "type": "(prayer: Prayer, leadMinutes: number) => void"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\NotificationSettings.tsx",
+    "framework": "typescript",
+    "name": "NotificationSettingsProps"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 4,
+        "path": "apps\\mobile\\components\\PrayerTimeCard.tsx"
+      }
+    ],
+    "fields": [
+      {
+        "name": "prayerName",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "adhanTime",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "iqamaTime",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "isNext",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "onPress",
+        "required": false,
+        "type": "() => void"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+    "framework": "typescript",
+    "name": "PrayerTimeCardProps"
+  },
+  {
+    "base_classes": [
+      "Mosque"
+    ],
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 45,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "discoveredIqama",
+        "required": false,
+        "type": "IqamaTimes;   // iqama times found during this session"
+      },
+      {
+        "name": "iqamaSource",
+        "required": false,
+        "type": "\"mawaqit\" | \"website\" | \"manual\""
+      },
+      {
+        "name": "iqamaLastFetched",
+        "required": false,
+        "type": "string;      // ISO string"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "framework": "typescript",
+    "name": "DiscoveredMosque"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 281,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "iqamaTimes",
+        "required": true,
+        "type": "IqamaTimes"
+      },
+      {
+        "name": "services",
+        "required": false,
+        "type": "string[]"
+      },
+      {
+        "name": "hours",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "framework": "typescript",
+    "name": "ScrapedMosqueData"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 16,
+        "path": "apps\\mobile\\services\\localMosqueSearch.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "name",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "type",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "address",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "city",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "province",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "country",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "latitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "longitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "phone",
+        "required": false,
+        "type": "string | null"
+      },
+      {
+        "name": "website",
+        "required": false,
+        "type": "string | null"
+      },
+      {
+        "name": "hasLiveStream",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "verified",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "iqamaTimes",
+        "required": true,
+        "type": "IqamaTimes"
+      },
+      {
+        "name": "description",
+        "required": false,
+        "type": "string | null"
+      },
+      {
+        "name": "denomination",
+        "required": false,
+        "type": "string | null"
+      },
+      {
+        "name": "hours",
+        "required": false,
+        "type": "string | null"
+      },
+      {
+        "name": "accessInfo",
+        "required": false,
+        "type": "string | null"
+      },
+      {
+        "name": "services",
+        "required": false,
+        "type": "string[]"
+      },
+      {
+        "name": "facilities",
+        "required": false,
+        "type": "string[]"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\localMosqueSearch.ts",
+    "framework": "typescript",
+    "name": "LocalMosqueRecord"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 15,
+        "path": "apps\\mobile\\services\\mawaqitService.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "uuid",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "name",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "label",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "type",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "latitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "longitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "iqamaCalendar",
+        "required": false,
+        "type": "Record<string, (string | null)[]>"
+      },
+      {
+        "name": "times",
+        "required": false,
+        "type": "string[]"
+      },
+      {
+        "name": "iqama",
+        "required": false,
+        "type": "(number | null)[]"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "framework": "typescript",
+    "name": "MawaqitMosque"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 33,
+        "path": "apps\\mobile\\services\\mawaqitService.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "fajr",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "dhuhr",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "asr",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "maghrib",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "isha",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "framework": "typescript",
+    "name": "IqamaTimes"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 17,
+        "path": "apps\\mobile\\services\\overpassService.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "latitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "longitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "address",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "city",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "phone",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "website",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\overpassService.ts",
+    "framework": "typescript",
+    "name": "OverpassMosque"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 6,
+        "path": "apps\\mobile\\services\\prayerTimes.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "data",
+        "required": true,
+        "type": "PrayerTimes"
+      },
+      {
+        "name": "timestamp",
+        "required": true,
+        "type": "number"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\prayerTimes.ts",
+    "framework": "typescript",
+    "name": "CacheEntry"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 10,
+        "path": "apps\\mobile\\stores\\authStore.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "user",
+        "required": true,
+        "type": "User | null"
+      },
+      {
+        "name": "token",
+        "required": true,
+        "type": "string | null"
+      },
+      {
+        "name": "isGuest",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "isLoading",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "login",
+        "required": true,
+        "type": "(email: string, password: string) => Promise<void>"
+      },
+      {
+        "name": "oauthLogin",
+        "required": true,
+        "type": "("
+      },
+      {
+        "name": "provider",
+        "required": true,
+        "type": "string,"
+      },
+      {
+        "name": "providerId",
+        "required": true,
+        "type": "string,"
+      },
+      {
+        "name": "email",
+        "required": true,
+        "type": "string,"
+      },
+      {
+        "name": "displayName",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "register",
+        "required": true,
+        "type": "("
+      },
+      {
+        "name": "email",
+        "required": true,
+        "type": "string,"
+      },
+      {
+        "name": "password",
+        "required": true,
+        "type": "string,"
+      },
+      {
+        "name": "displayName",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "continueAsGuest",
+        "required": true,
+        "type": "() => Promise<void>"
+      },
+      {
+        "name": "logout",
+        "required": true,
+        "type": "() => Promise<void>"
+      },
+      {
+        "name": "loadStoredAuth",
+        "required": true,
+        "type": "() => Promise<void>"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\authStore.ts",
+    "framework": "typescript",
+    "name": "AuthState"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 29,
+        "path": "apps\\mobile\\stores\\mosqueStore.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "schedules",
+        "required": true,
+        "type": "IqamaSchedule[]"
+      },
+      {
+        "name": "source",
+        "required": false,
+        "type": "\"mawaqit\" | \"website\" | \"manual\""
+      },
+      {
+        "name": "lastFetched",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\mosqueStore.ts",
+    "framework": "typescript",
+    "name": "CachedIqama"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 35,
+        "path": "apps\\mobile\\stores\\mosqueStore.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "nearbyMosques",
+        "required": true,
+        "type": "Mosque[]"
+      },
+      {
+        "name": "primaryMosque",
+        "required": true,
+        "type": "Mosque | null"
+      },
+      {
+        "name": "activeMosque",
+        "required": true,
+        "type": "Mosque | null"
+      },
+      {
+        "name": "iqamaSchedule",
+        "required": true,
+        "type": "IqamaSchedule[]"
+      },
+      {
+        "name": "iqamaSource",
+        "required": true,
+        "type": "\"mawaqit\" | \"website\" | \"manual\" | null"
+      },
+      {
+        "name": "iqamaLastFetched",
+        "required": true,
+        "type": "string | null"
+      },
+      {
+        "name": "uncoveredArea",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "isLoading",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "isDiscovering",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "fetchNearbyMosques",
+        "required": true,
+        "type": "(lat: number, lon: number) => Promise<void>"
+      },
+      {
+        "name": "discoverIqamaNearby",
+        "required": true,
+        "type": "(lat: number, lon: number) => Promise<DiscoveredMosque[]>"
+      },
+      {
+        "name": "refreshIqama",
+        "required": true,
+        "type": "(mosque: Mosque) => Promise<void>"
+      },
+      {
+        "name": "setPrimaryMosque",
+        "required": true,
+        "type": "(mosqueId: string) => Promise<void>"
+      },
+      {
+        "name": "fetchIqamaSchedule",
+        "required": true,
+        "type": "(mosqueId: string) => Promise<void>"
+      },
+      {
+        "name": "requestCoverage",
+        "required": true,
+        "type": "(lat: number, lon: number) => Promise<void>"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\mosqueStore.ts",
+    "framework": "typescript",
+    "name": "MosqueState"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 5,
+        "path": "apps\\mobile\\stores\\prayerStore.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "prayerTimes",
+        "required": true,
+        "type": "PrayerTimes | null"
+      },
+      {
+        "name": "nextPrayer",
+        "required": true,
+        "type": "NextPrayer | null"
+      },
+      {
+        "name": "isLoading",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "fetchPrayerTimes",
+        "required": true,
+        "type": "(lat: number, lon: number) => Promise<void>"
+      },
+      {
+        "name": "updateNextPrayer",
+        "required": true,
+        "type": "() => void"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\prayerStore.ts",
+    "framework": "typescript",
+    "name": "PrayerState"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 10,
+        "path": "apps\\mobile\\stores\\settingsStore.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "prayerPrefs",
+        "required": true,
+        "type": "UserPrayerPreference[]"
+      },
+      {
+        "name": "calcMethod",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "azanSound",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "defaultLeadMinutes",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "fetchPreferences",
+        "required": true,
+        "type": "() => Promise<void>"
+      },
+      {
+        "name": "updateLeadTime",
+        "required": true,
+        "type": "(prayer: Prayer, minutes: number) => Promise<void>"
+      },
+      {
+        "name": "updateCalcMethod",
+        "required": true,
+        "type": "(method: number) => Promise<void>"
+      },
+      {
+        "name": "updateAzanSound",
+        "required": true,
+        "type": "(sound: string) => Promise<void>"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\settingsStore.ts",
+    "framework": "typescript",
+    "name": "SettingsState"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 45,
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "fajr",
+        "required": true,
+        "type": "string; // \"HH:mm\""
+      },
+      {
+        "name": "dhuhr",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "asr",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "maghrib",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "isha",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "date",
+        "required": true,
+        "type": "string; // \"YYYY-MM-DD\""
+      },
+      {
+        "name": "method",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "latitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "longitude",
+        "required": true,
+        "type": "number"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "framework": "typescript",
+    "name": "PrayerTimes"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 57,
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "prayer",
+        "required": true,
+        "type": "Prayer"
+      },
+      {
+        "name": "time",
+        "required": true,
+        "type": "string; // \"HH:mm\""
+      },
+      {
+        "name": "timeUntilMs",
+        "required": true,
+        "type": "number"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "framework": "typescript",
+    "name": "NextPrayer"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 70,
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "name",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "type",
+        "required": true,
+        "type": "PlaceType"
+      },
+      {
+        "name": "address",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "city",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "province",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "country",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "latitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "longitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "phone",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "website",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "hasLiveStream",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "streamUrl",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "verified",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "googleRating",
+        "required": false,
+        "type": "number; // e.g. 4.5"
+      },
+      {
+        "name": "googleReviewCount",
+        "required": false,
+        "type": "number; // e.g. 123"
+      },
+      {
+        "name": "distanceKm",
+        "required": false,
+        "type": "number; // computed at query time"
+      },
+      {
+        "name": "mawaqitId",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "iqamaSource",
+        "required": false,
+        "type": "\"mawaqit\" | \"website\" | \"manual\""
+      },
+      {
+        "name": "iqamaLastFetched",
+        "required": false,
+        "type": "string; // ISO date string"
+      },
+      {
+        "name": "description",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "denomination",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "hours",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "accessInfo",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "services",
+        "required": false,
+        "type": "string[];   // e.g. [\"funeral_services\", \"nikah\", \"quran_classes\"]"
+      },
+      {
+        "name": "facilities",
+        "required": false,
+        "type": "string[]; // e.g. [\"wudu_area\", \"parking\", \"women_section\"]"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "framework": "typescript",
+    "name": "Mosque"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 101,
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "mosqueId",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "prayer",
+        "required": true,
+        "type": "Prayer"
+      },
+      {
+        "name": "iqamaTime",
+        "required": true,
+        "type": "string; // \"HH:mm\""
+      },
+      {
+        "name": "effectiveFrom",
+        "required": true,
+        "type": "string; // ISO date"
+      },
+      {
+        "name": "effectiveTo",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "framework": "typescript",
+    "name": "IqamaSchedule"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 112,
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "email",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "displayName",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "avatarUrl",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "authProvider",
+        "required": true,
+        "type": "AuthProvider"
+      },
+      {
+        "name": "emailVerified",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "defaultLeadMinutes",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "calcMethod",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "azanSound",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "role",
+        "required": true,
+        "type": "UserRole"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "framework": "typescript",
+    "name": "User"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 125,
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "userId",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "prayer",
+        "required": true,
+        "type": "Prayer"
+      },
+      {
+        "name": "leadMinutes",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "notificationType",
+        "required": true,
+        "type": "NotificationType"
+      },
+      {
+        "name": "enabled",
+        "required": true,
+        "type": "boolean"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "framework": "typescript",
+    "name": "UserPrayerPreference"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 134,
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "userId",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "mosqueId",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "isPrimary",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "mosque",
+        "required": false,
+        "type": "Mosque"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "framework": "typescript",
+    "name": "UserMosque"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 143,
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "userId",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "latitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "longitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "cityName",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "province",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "country",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "status",
+        "required": true,
+        "type": "RequestStatus"
+      },
+      {
+        "name": "adminNotes",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "createdAt",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "resolvedAt",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "framework": "typescript",
+    "name": "CoverageRequest"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 159,
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "userId",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "email",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "role",
+        "required": true,
+        "type": "UserRole"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "framework": "typescript",
+    "name": "AuthTokenPayload"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 165,
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "token",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "user",
+        "required": true,
+        "type": "User"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "framework": "typescript",
+    "name": "LoginResponse"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 170,
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "email",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "password",
+        "required": false,
+        "type": "string; // only for EMAIL auth"
+      },
+      {
+        "name": "displayName",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "authProvider",
+        "required": true,
+        "type": "AuthProvider"
+      },
+      {
+        "name": "authProviderId",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "framework": "typescript",
+    "name": "RegisterRequest"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 180,
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "region",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "province",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "country",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "centerLat",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "centerLon",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "radiusKm",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "lastResearched",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "researchedBy",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "mosques",
+        "required": true,
+        "type": "MosqueSeedEntry[]"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "framework": "typescript",
+    "name": "MosqueSeedFile"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 192,
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "type",
+        "required": true,
+        "type": "\"mosque\" | \"musalla\""
+      },
+      {
+        "name": "address",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "city",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "province",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "latitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "longitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "phone",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "website",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "googleRating",
+        "required": false,
+        "type": "number"
+      },
+      {
+        "name": "googleReviewCount",
+        "required": false,
+        "type": "number"
+      },
+      {
+        "name": "hasLiveStream",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "verified",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "sources",
+        "required": true,
+        "type": "string[]"
+      },
+      {
+        "name": "mawaqitId",
+        "required": false,
+        "type": "string; // linked MAWAQIT UUID, filled by research script"
+      },
+      {
+        "name": "iqamaTimes",
+        "required": false,
+        "type": "{"
+      },
+      {
+        "name": "fajr",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "dhuhr",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "asr",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "maghrib",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "isha",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "jummah",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "notes",
+        "required": false,
+        "type": "string; // e.g. \"University prayer room, open 7am-11pm\""
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "framework": "typescript",
+    "name": "MosqueSeedEntry"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 221,
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "mosques",
+        "required": true,
+        "type": "Mosque[]"
+      },
+      {
+        "name": "uncoveredArea",
+        "required": true,
+        "type": "boolean"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "framework": "typescript",
+    "name": "NearbyMosquesResponse"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 226,
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "error",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "message",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "statusCode",
+        "required": true,
+        "type": "number"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "framework": "typescript",
+    "name": "ApiError"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 20,
+        "path": "scripts\\enrich-iqama.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "type",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "latitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "longitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "website",
+        "required": false,
+        "type": "string | null"
+      },
+      {
+        "name": "mawaqitId",
+        "required": false,
+        "type": "string | null"
+      },
+      {
+        "name": "iqamaTimes",
+        "required": false,
+        "type": "IqamaTimes | null"
+      },
+      {
+        "name": "sources",
+        "required": false,
+        "type": "string[]"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "framework": "typescript",
+    "name": "SeedMosque"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 32,
+        "path": "scripts\\enrich-iqama.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "region",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "province",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "mosques",
+        "required": true,
+        "type": "SeedMosque[]"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "framework": "typescript",
+    "name": "SeedFile"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 41,
+        "path": "scripts\\enrich-iqama.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "uuid",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "name",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "latitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "longitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "iqamaCalendar",
+        "required": false,
+        "type": "Record<string, (string | null)[]>"
+      },
+      {
+        "name": "times",
+        "required": false,
+        "type": "string[]"
+      },
+      {
+        "name": "iqama",
+        "required": false,
+        "type": "(number | null)[]"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "framework": "typescript",
+    "name": "MawaqitMosque"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 53,
+        "path": "scripts\\enrich-iqama.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "city",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "province",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "allCities",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "force",
+        "required": true,
+        "type": "boolean"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "framework": "typescript",
+    "name": "Args"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 22,
+        "path": "scripts\\research-mosques.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "city",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "province",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "country",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "radius",
+        "required": true,
+        "type": "number"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "framework": "typescript",
+    "name": "Args"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 29,
+        "path": "scripts\\research-mosques.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "type",
+        "required": true,
+        "type": "\"mosque\" | \"musalla\""
+      },
+      {
+        "name": "address",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "city",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "latitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "longitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "phone",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "website",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "googleRating",
+        "required": false,
+        "type": "number"
+      },
+      {
+        "name": "googleReviewCount",
+        "required": false,
+        "type": "number"
+      },
+      {
+        "name": "source",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "notes",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "framework": "typescript",
+    "name": "RawMosque"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 44,
+        "path": "scripts\\research-mosques.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "uuid",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "name",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "latitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "longitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "iqamaCalendar",
+        "required": false,
+        "type": "Record<string, (string | null)[]>"
+      },
+      {
+        "name": "times",
+        "required": false,
+        "type": "string[]"
+      },
+      {
+        "name": "iqama",
+        "required": false,
+        "type": "(number | null)[]"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "framework": "typescript",
+    "name": "MawaqitMosque"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 54,
+        "path": "scripts\\research-mosques.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "fajr",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "dhuhr",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "asr",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "maghrib",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "isha",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "jummah",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "framework": "typescript",
+    "name": "IqamaTimes"
+  },
+  {
+    "base_classes": [
+      "RawMosque"
+    ],
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 355,
+        "path": "scripts\\research-mosques.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "mawaqitId",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "iqamaTimes",
+        "required": false,
+        "type": "IqamaTimes"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "framework": "typescript",
+    "name": "EnrichedMosque"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 20,
+        "path": "server\\prisma\\seed.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "address",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "city",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "province",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "country",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "latitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "longitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "phone",
+        "required": true,
+        "type": "string | null"
+      },
+      {
+        "name": "website",
+        "required": true,
+        "type": "string | null"
+      },
+      {
+        "name": "hasLiveStream",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "verified",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "iqamaTimes",
+        "required": true,
+        "type": "{"
+      },
+      {
+        "name": "fajr",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "dhuhr",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "asr",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "maghrib",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "isha",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "jummah",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "sources",
+        "required": true,
+        "type": "string[]"
+      }
+    ],
+    "file_path": "server\\prisma\\seed.ts",
+    "framework": "typescript",
+    "name": "MosqueSeedEntry"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 43,
+        "path": "server\\prisma\\seed.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "region",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "province",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "country",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "centerLat",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "centerLon",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "radiusKm",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "lastResearched",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "researchedBy",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "mosques",
+        "required": true,
+        "type": "MosqueSeedEntry[]"
+      }
+    ],
+    "file_path": "server\\prisma\\seed.ts",
+    "framework": "typescript",
+    "name": "MosqueSeedFile"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 6,
+        "path": "server\\src\\middleware\\auth.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "user",
+        "required": false,
+        "type": "{"
+      },
+      {
+        "name": "userId",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "email",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "role",
+        "required": true,
+        "type": "string"
+      }
+    ],
+    "file_path": "server\\src\\middleware\\auth.ts",
+    "framework": "typescript",
+    "name": "Request"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 1,
+        "path": "server\\src\\services\\aladhanService.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "fajr",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "dhuhr",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "asr",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "maghrib",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "isha",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "date",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "method",
+        "required": true,
+        "type": "number"
+      }
+    ],
+    "file_path": "server\\src\\services\\aladhanService.ts",
+    "framework": "typescript",
+    "name": "PrayerTimes"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 19,
+        "path": "server\\src\\services\\iqamaEnrichment.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "uuid",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "name",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "latitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "longitude",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "iqamaCalendar",
+        "required": false,
+        "type": "Record<string, (string | null)[]>"
+      },
+      {
+        "name": "times",
+        "required": false,
+        "type": "string[]"
+      },
+      {
+        "name": "iqama",
+        "required": false,
+        "type": "(number | null)[]"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "framework": "typescript",
+    "name": "MawaqitMosque"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 33,
+        "path": "server\\src\\services\\iqamaEnrichment.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "mosqueId",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "mosqueName",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "source",
+        "required": true,
+        "type": "\"mawaqit\" | \"website\" | null"
+      },
+      {
+        "name": "prayersFound",
+        "required": true,
+        "type": "string[]"
+      },
+      {
+        "name": "alreadyUpToDate",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "skipped",
+        "required": true,
+        "type": "boolean"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "framework": "typescript",
+    "name": "EnrichmentResult"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 42,
+        "path": "server\\src\\services\\iqamaEnrichment.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "city",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "province",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "total",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "enriched",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "alreadyUpToDate",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "skipped",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "stillMissing",
+        "required": true,
+        "type": "string[]; // mosque names"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "framework": "typescript",
+    "name": "EnrichmentReport"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "server\\src\\services\\streamService.ts"
+      }
+    ],
+    "fields": [
+      {
+        "name": "active",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "url",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "file_path": "server\\src\\services\\streamService.ts",
+    "framework": "typescript",
+    "name": "StreamStatus"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "notes": [
+    "Best-effort only. Prefer schema.graphql + .graphql operations if present.",
+    "If your build pipeline can emit a single consolidated schema, add it to the repo for higher accuracy."
+  ],
+  "operation_files": [],
+  "operations_extracted": [],
+  "operations_from_gql_templates": [],
+  "schema_files": []
+}

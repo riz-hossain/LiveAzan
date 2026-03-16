@@ -1,0 +1,3168 @@
+{
+  "contracts": [
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "setup.py"
+        }
+      ],
+      "file": "setup.py",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 1069,
+              "line_start": 12,
+              "path": "setup.py"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 12,
+              "text": "python setup.py clean                   Full wipe: containers + volumes + images"
+            },
+            {
+              "line": 858,
+              "text": "def _ensure_expo_prebuild(app_dir, clean=False):"
+            },
+            {
+              "line": 860,
+              "text": "if (app_dir / \"android\" / gradlew).exists() and not clean:"
+            },
+            {
+              "line": 867,
+              "text": "if clean:"
+            },
+            {
+              "line": 868,
+              "text": "cmd_args.append(\"--clean\")"
+            },
+            {
+              "line": 869,
+              "text": "info(\"Running: npx expo prebuild --platform android --clean\")"
+            },
+            {
+              "line": 1055,
+              "text": "_ensure_expo_prebuild(app_dir, clean=fresh)"
+            },
+            {
+              "line": 1069,
+              "text": "gradle_cmd = [\"cmd\", \"/c\", \".\\\\gradlew.bat\", \"clean\", \"assembleRelease\","
+            }
+          ],
+          "type": "validation"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 1271,
+              "line_start": 13,
+              "path": "setup.py"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 13,
+              "text": "python setup.py status                  Show container + dev server status"
+            },
+            {
+              "line": 280,
+              "text": "if \"State : Enabled\" in fi:"
+            },
+            {
+              "line": 539,
+              "text": "status = \"running\" if running else \"stopped\""
+            },
+            {
+              "line": 540,
+              "text": "info(f\"Admin dev server: {status}  (PID {pid}, http://localhost:{ADMIN_APP['port']})\")"
+            },
+            {
+              "line": 1155,
+              "text": "header(\"Container Status\")"
+            },
+            {
+              "line": 1177,
+              "text": "header(\"Container Status\")"
+            },
+            {
+              "line": 1199,
+              "text": "header(\"Container Status\")"
+            },
+            {
+              "line": 1271,
+              "text": "STATUS:"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 1265,
+              "line_start": 270,
+              "path": "setup.py"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 270,
+              "text": "die(\"Virtualization must be enabled in firmware before Docker can work.\", code=2)"
+            },
+            {
+              "line": 361,
+              "text": "\"\"\"Ensure .env.prod exists for production.\"\"\""
+            },
+            {
+              "line": 370,
+              "text": "info(\"  IMPORTANT: Edit .env.prod and set strong DB_PASSWORD and JWT_SECRET before deploying!\")"
+            },
+            {
+              "line": 464,
+              "text": "# Ensure deps are installed"
+            },
+            {
+              "line": 597,
+              "text": "\"\"\"Upfront checks for Node, npm, Java, and Android SDK before any build work.\"\"\""
+            },
+            {
+              "line": 838,
+              "text": "is visible before Gradle even starts.\"\"\""
+            },
+            {
+              "line": 1021,
+              "text": "raise RuntimeError(\"Android build failed after retry.\")"
+            },
+            {
+              "line": 1265,
+              "text": "restart <mode>        Rebuild images and restart after code changes"
+            }
+          ],
+          "type": "ordering"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 142,
+              "line_start": 68,
+              "path": "setup.py"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 68,
+              "text": "\"\"\"Run command, return stdout. Raises RuntimeError on failure if check=True.\"\"\""
+            },
+            {
+              "line": 76,
+              "text": "except subprocess.CalledProcessError as e:"
+            },
+            {
+              "line": 79,
+              "text": "raise RuntimeError(f\"Command failed: {' '.join(str(x) for x in cmd)}\\n{out}\") from e"
+            },
+            {
+              "line": 87,
+              "text": "except subprocess.CalledProcessError as e:"
+            },
+            {
+              "line": 89,
+              "text": "raise RuntimeError(f\"Command failed: {' '.join(str(x) for x in cmd)}\") from e"
+            },
+            {
+              "line": 97,
+              "text": "print(f\"\\n  ERROR: {msg}\\n\", file=sys.stderr)"
+            },
+            {
+              "line": 120,
+              "text": "except (EOFError, KeyboardInterrupt):"
+            },
+            {
+              "line": 142,
+              "text": "except FileNotFoundError:"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\services\\api.ts"
+        }
+      ],
+      "file": "apps\\mobile\\services\\api.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 32,
+              "line_start": 32,
+              "path": "apps\\mobile\\services\\api.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 32,
+              "text": "headers[\"Authorization\"] = `Bearer ${token}`;"
+            }
+          ],
+          "type": "authz"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 56,
+              "line_start": 51,
+              "path": "apps\\mobile\\services\\api.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 51,
+              "text": "errorBody?.message || errorBody?.error || `Request failed (${response.status})`;"
+            },
+            {
+              "line": 56,
+              "text": "if (response.status === 204) {"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 52,
+              "line_start": 51,
+              "path": "apps\\mobile\\services\\api.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 51,
+              "text": "errorBody?.message || errorBody?.error || `Request failed (${response.status})`;"
+            },
+            {
+              "line": 52,
+              "text": "throw new Error(message);"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "scripts\\enrich-iqama.ts"
+        }
+      ],
+      "file": "scripts\\enrich-iqama.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 10,
+              "line_start": 3,
+              "path": "scripts\\enrich-iqama.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 3,
+              "text": "* and writes them back. Run this before committing new city data."
+            },
+            {
+              "line": 10,
+              "text": "* After running, review the diff and commit:"
+            }
+          ],
+          "type": "ordering"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 393,
+              "line_start": 320,
+              "path": "scripts\\enrich-iqama.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 320,
+              "text": "console.error(\"Usage:\");"
+            },
+            {
+              "line": 321,
+              "text": "console.error(\"  npx tsx scripts/enrich-iqama.ts --city \\\"Waterloo\\\" --province \\\"Ontario\\\"\");"
+            },
+            {
+              "line": 322,
+              "text": "console.error(\"  npx tsx scripts/enrich-iqama.ts --all-cities\");"
+            },
+            {
+              "line": 338,
+              "text": "console.error(`No seed file found for ${args.city}, ${args.province}`);"
+            },
+            {
+              "line": 339,
+              "text": "console.error(`Expected: data/mosques/canada/${args.province!.toLowerCase().replace(/\\s+/g, \"-\")}/${args.city!.toLowerCase().replace(/\\s+/g, \"-\")}.json`);"
+            },
+            {
+              "line": 340,
+              "text": "console.error(\"Run research-mosques.ts first to create the seed file.\");"
+            },
+            {
+              "line": 393,
+              "text": "main().catch(console.error);"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "packages\\shared\\src\\types.ts"
+        }
+      ],
+      "file": "packages\\shared\\src\\types.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 162,
+              "line_start": 122,
+              "path": "packages\\shared\\src\\types.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 122,
+              "text": "role: UserRole;"
+            },
+            {
+              "line": 162,
+              "text": "role: UserRole;"
+            }
+          ],
+          "type": "authz"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 151,
+              "line_start": 151,
+              "path": "packages\\shared\\src\\types.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 151,
+              "text": "status: RequestStatus;"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 227,
+              "line_start": 227,
+              "path": "packages\\shared\\src\\types.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 227,
+              "text": "error: string;"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "scripts\\research-mosques.ts"
+        }
+      ],
+      "file": "scripts\\research-mosques.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 203,
+              "line_start": 143,
+              "path": "scripts\\research-mosques.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 143,
+              "text": "console.error(`  [Overpass API] HTTP ${response.status}: ${response.statusText}`);"
+            },
+            {
+              "line": 203,
+              "text": "console.warn(`  [MAWAQIT] Search returned HTTP ${res.status}`);"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 433,
+              "line_start": 433,
+              "path": "scripts\\research-mosques.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 433,
+              "text": "console.log(`  After deduplication: ${unique.length}`);"
+            }
+          ],
+          "type": "ordering"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 491,
+              "line_start": 76,
+              "path": "scripts\\research-mosques.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 76,
+              "text": "console.error(\"Usage: npx tsx scripts/research-mosques.ts --city <city> --province <province> [--radius <km>]\");"
+            },
+            {
+              "line": 143,
+              "text": "console.error(`  [Overpass API] HTTP ${response.status}: ${response.statusText}`);"
+            },
+            {
+              "line": 188,
+              "text": "} catch (error) {"
+            },
+            {
+              "line": 189,
+              "text": "console.error(\"  [Overpass API] Error:\", error);"
+            },
+            {
+              "line": 419,
+              "text": "console.error(`Unknown city: ${args.city}. Add coordinates to CITY_COORDS in this script.`);"
+            },
+            {
+              "line": 420,
+              "text": "console.error(\"Available cities:\", Object.keys(CITY_COORDS).join(\", \"));"
+            },
+            {
+              "line": 491,
+              "text": "main().catch(console.error);"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\services\\location.ts"
+        }
+      ],
+      "file": "apps\\mobile\\services\\location.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 105,
+              "line_start": 58,
+              "path": "apps\\mobile\\services\\location.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 58,
+              "text": "throw new Error(\"Location permission not granted.\");"
+            },
+            {
+              "line": 105,
+              "text": "throw new Error(\"Background location permission not granted.\");"
+            }
+          ],
+          "type": "authz"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 47,
+              "line_start": 37,
+              "path": "apps\\mobile\\services\\location.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 37,
+              "text": "const { status: foregroundStatus } ="
+            },
+            {
+              "line": 46,
+              "text": "const { status } = await Location.requestBackgroundPermissionsAsync();"
+            },
+            {
+              "line": 47,
+              "text": "return status === \"granted\";"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 105,
+              "line_start": 58,
+              "path": "apps\\mobile\\services\\location.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 58,
+              "text": "throw new Error(\"Location permission not granted.\");"
+            },
+            {
+              "line": 105,
+              "text": "throw new Error(\"Background location permission not granted.\");"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "packages\\shared\\src\\constants.ts"
+        }
+      ],
+      "file": "packages\\shared\\src\\constants.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 33,
+              "line_start": 33,
+              "path": "packages\\shared\\src\\constants.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 33,
+              "text": "// Default notification lead times (minutes before iqama)"
+            }
+          ],
+          "type": "ordering"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\services\\mawaqitService.ts"
+        }
+      ],
+      "file": "apps\\mobile\\services\\mawaqitService.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 89,
+              "line_start": 63,
+              "path": "apps\\mobile\\services\\mawaqitService.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 63,
+              "text": "console.warn(`[MAWAQIT] Search returned HTTP ${res.status}`);"
+            },
+            {
+              "line": 89,
+              "text": "console.warn(`[MAWAQIT] getByUuid ${uuid} returned HTTP ${res.status}`);"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 29,
+              "line_start": 29,
+              "path": "apps\\mobile\\services\\mawaqitService.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 29,
+              "text": "// Iqama offsets in minutes from adhan (fallback if no iqamaCalendar)"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\services\\azanAudio.ts"
+        }
+      ],
+      "file": "apps\\mobile\\services\\azanAudio.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 62,
+              "line_start": 62,
+              "path": "apps\\mobile\\services\\azanAudio.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 62,
+              "text": "// Clean up when playback finishes"
+            }
+          ],
+          "type": "validation"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 91,
+              "line_start": 27,
+              "path": "apps\\mobile\\services\\azanAudio.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 27,
+              "text": "// \u2500\u2500\u2500 Player State \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+            },
+            {
+              "line": 63,
+              "text": "sound.setOnPlaybackStatusUpdate((status) => {"
+            },
+            {
+              "line": 64,
+              "text": "if (\"didJustFinish\" in status && status.didJustFinish) {"
+            },
+            {
+              "line": 91,
+              "text": "// \u2500\u2500\u2500 Check Playing State \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 24,
+              "line_start": 7,
+              "path": "apps\\mobile\\services\\azanAudio.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 7,
+              "text": "// entries below AND a corresponding require() in soundAssets."
+            },
+            {
+              "line": 19,
+              "text": "// Use require() so Metro bundler validates the file exists at build time"
+            },
+            {
+              "line": 21,
+              "text": "// eslint-disable-next-line @typescript-eslint/no-require-imports"
+            },
+            {
+              "line": 23,
+              "text": "// eslint-disable-next-line @typescript-eslint/no-require-imports"
+            },
+            {
+              "line": 24,
+              "text": "\"azan-default\": require(\"../assets/sounds/azan_default.wav\"),"
+            }
+          ],
+          "type": "ordering"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 73,
+              "line_start": 71,
+              "path": "apps\\mobile\\services\\azanAudio.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 71,
+              "text": "} catch (error) {"
+            },
+            {
+              "line": 73,
+              "text": "throw error;"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\services\\iqamaDiscovery.ts"
+        }
+      ],
+      "file": "apps\\mobile\\services\\iqamaDiscovery.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 87,
+              "line_start": 81,
+              "path": "apps\\mobile\\services\\iqamaDiscovery.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 81,
+              "text": "backendResponse.status === \"fulfilled\""
+            },
+            {
+              "line": 85,
+              "text": "mawaqitMosques.status === \"fulfilled\" ? mawaqitMosques.value : [];"
+            },
+            {
+              "line": 87,
+              "text": "overpassResponse.status === \"fulfilled\" ? overpassResponse.value : [];"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 344,
+              "line_start": 344,
+              "path": "apps\\mobile\\services\\iqamaDiscovery.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 344,
+              "text": "// Look for a time within 100 characters after the prayer name"
+            }
+          ],
+          "type": "ordering"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 279,
+              "line_start": 106,
+              "path": "apps\\mobile\\services\\iqamaDiscovery.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 106,
+              "text": "// Start with source mosques \u2014 backend (authoritative) or local bundle (offline fallback)"
+            },
+            {
+              "line": 255,
+              "text": "// Fallback: mosque website"
+            },
+            {
+              "line": 279,
+              "text": "// \u2500\u2500\u2500 Website scraping (fallback) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\services\\notifications.ts"
+        }
+      ],
+      "file": "apps\\mobile\\services\\notifications.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 28,
+              "line_start": 22,
+              "path": "apps\\mobile\\services\\notifications.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 22,
+              "text": "const { status: existingStatus } ="
+            },
+            {
+              "line": 27,
+              "text": "const { status } = await Notifications.requestPermissionsAsync();"
+            },
+            {
+              "line": 28,
+              "text": "return status === \"granted\";"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 55,
+              "line_start": 55,
+              "path": "apps\\mobile\\services\\notifications.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 55,
+              "text": "// For MAGHRIB: if notification time would be before sunset (iqama time),"
+            }
+          ],
+          "type": "ordering"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\services\\overpassService.ts"
+        }
+      ],
+      "file": "apps\\mobile\\services\\overpassService.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 93,
+              "line_start": 58,
+              "path": "apps\\mobile\\services\\overpassService.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 58,
+              "text": "console.warn(`[Overpass] HTTP ${res.status}`);"
+            },
+            {
+              "line": 93,
+              "text": "tags[\"addr:province\"] || tags[\"addr:state\"],"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 31,
+              "line_start": 5,
+              "path": "apps\\mobile\\services\\overpassService.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 5,
+              "text": "* fallback when the backend, local bundle, and MAWAQIT are all unavailable."
+            },
+            {
+              "line": 31,
+              "text": "* Returns an empty array on any error or timeout."
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\admin\\src\\App.tsx"
+        }
+      ],
+      "file": "apps\\admin\\src\\App.tsx",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 130,
+              "line_start": 130,
+              "path": "apps\\admin\\src\\App.tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 130,
+              "text": "<th style={{ padding: 8 }}>Status</th>"
+            }
+          ],
+          "type": "state"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\services\\prayerTimes.ts"
+        }
+      ],
+      "file": "apps\\mobile\\services\\prayerTimes.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 60,
+              "line_start": 60,
+              "path": "apps\\mobile\\services\\prayerTimes.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 60,
+              "text": "throw new Error("
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt"
+        }
+      ],
+      "file": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 16,
+              "line_start": 16,
+              "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 16,
+              "text": "// coloring the background, status bar, and navigation bar."
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 15,
+              "line_start": 15,
+              "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 15,
+              "text": "// Set the theme to AppTheme BEFORE onCreate to support"
+            }
+          ],
+          "type": "ordering"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\stores\\authStore.ts"
+        }
+      ],
+      "file": "apps\\mobile\\stores\\authStore.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 87,
+              "line_start": 45,
+              "path": "apps\\mobile\\stores\\authStore.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 45,
+              "text": "} catch (error) {"
+            },
+            {
+              "line": 47,
+              "text": "throw error;"
+            },
+            {
+              "line": 68,
+              "text": "} catch (error) {"
+            },
+            {
+              "line": 70,
+              "text": "throw error;"
+            },
+            {
+              "line": 85,
+              "text": "} catch (error) {"
+            },
+            {
+              "line": 87,
+              "text": "throw error;"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "server\\src\\services\\aladhanService.ts"
+        }
+      ],
+      "file": "server\\src\\services\\aladhanService.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 22,
+              "line_start": 22,
+              "path": "server\\src\\services\\aladhanService.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 22,
+              "text": "throw new Error(`Aladhan API error: ${response.status} ${response.statusText}`);"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 22,
+              "line_start": 22,
+              "path": "server\\src\\services\\aladhanService.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 22,
+              "text": "throw new Error(`Aladhan API error: ${response.status} ${response.statusText}`);"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "server\\prisma\\seed.ts"
+        }
+      ],
+      "file": "server\\prisma\\seed.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 264,
+              "line_start": 246,
+              "path": "server\\prisma\\seed.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 246,
+              "text": "if (existingAdmin.role !== \"ADMIN\") {"
+            },
+            {
+              "line": 249,
+              "text": "data: { role: \"ADMIN\" },"
+            },
+            {
+              "line": 264,
+              "text": "role: \"ADMIN\","
+            }
+          ],
+          "type": "authz"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 278,
+              "line_start": 90,
+              "path": "server\\prisma\\seed.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 90,
+              "text": "if (!result) throw new Error(`Unknown prayer: ${name}`);"
+            },
+            {
+              "line": 117,
+              "text": "console.error(`  Skipping ${relativePath}: invalid JSON`);"
+            },
+            {
+              "line": 278,
+              "text": "console.error(\"Seed failed:\", e);"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\services\\localMosqueSearch.ts"
+        }
+      ],
+      "file": "apps\\mobile\\services\\localMosqueSearch.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 6,
+              "line_start": 6,
+              "path": "apps\\mobile\\services\\localMosqueSearch.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 6,
+              "text": "* fallback for when the backend is unavailable; the backend always takes"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\components\\DebugPanel.tsx"
+        }
+      ],
+      "file": "apps\\mobile\\components\\DebugPanel.tsx",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 63,
+              "line_start": 27,
+              "path": "apps\\mobile\\components\\DebugPanel.tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 27,
+              "text": "status: \"idle\" | \"loading\" | \"ok\" | \"error\";"
+            },
+            {
+              "line": 42,
+              "text": "backend: { label: \"Backend API\", status: \"idle\" },"
+            },
+            {
+              "line": 43,
+              "text": "local: { label: \"Local Bundle\", status: \"idle\" },"
+            },
+            {
+              "line": 44,
+              "text": "mawaqit: { label: \"MAWAQIT\", status: \"idle\" },"
+            },
+            {
+              "line": 45,
+              "text": "overpass: { label: \"Overpass (OSM)\", status: \"idle\" },"
+            },
+            {
+              "line": 55,
+              "text": "setResults((r) => ({ ...r, [key]: { ...r[key], status: \"loading\" } }));"
+            },
+            {
+              "line": 58,
+              "text": "setResults((r) => ({ ...r, [key]: { ...r[key], status: \"ok\", count } }));"
+            },
+            {
+              "line": 63,
+              "text": "setResults((r) => ({ ...r, [key]: { ...r[key], status: \"error\", error: err } }));"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 163,
+              "line_start": 27,
+              "path": "apps\\mobile\\components\\DebugPanel.tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 27,
+              "text": "status: \"idle\" | \"loading\" | \"ok\" | \"error\";"
+            },
+            {
+              "line": 29,
+              "text": "error?: string;"
+            },
+            {
+              "line": 63,
+              "text": "setResults((r) => ({ ...r, [key]: { ...r[key], status: \"error\", error: err } }));"
+            },
+            {
+              "line": 149,
+              "text": "r.status === \"error\" && styles.btnError,"
+            },
+            {
+              "line": 160,
+              "text": "{r.status === \"error\" && \"\u2717 \"}"
+            },
+            {
+              "line": 163,
+              "text": "{r.status === \"error\" && `: ${r.error}`}"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\components\\NotificationSettings.tsx"
+        }
+      ],
+      "file": "apps\\mobile\\components\\NotificationSettings.tsx",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 80,
+              "line_start": 80,
+              "path": "apps\\mobile\\components\\NotificationSettings.tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 80,
+              "text": "{isEnabled ? `${leadMinutes} min before` : \"Disabled\"}"
+            }
+          ],
+          "type": "ordering"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\stores\\mosqueStore.ts"
+        }
+      ],
+      "file": "apps\\mobile\\stores\\mosqueStore.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 275,
+              "line_start": 199,
+              "path": "apps\\mobile\\stores\\mosqueStore.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 199,
+              "text": "} catch (error) {"
+            },
+            {
+              "line": 200,
+              "text": "throw error;"
+            },
+            {
+              "line": 274,
+              "text": "} catch (error) {"
+            },
+            {
+              "line": 275,
+              "text": "throw error;"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "server\\src\\middleware\\auth.ts"
+        }
+      ],
+      "file": "server\\src\\middleware\\auth.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 89,
+              "line_start": 10,
+              "path": "server\\src\\middleware\\auth.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 10,
+              "text": "role: string;"
+            },
+            {
+              "line": 29,
+              "text": "const authHeader = req.headers.authorization;"
+            },
+            {
+              "line": 41,
+              "text": "role: string;"
+            },
+            {
+              "line": 46,
+              "text": "role: decoded.role,"
+            },
+            {
+              "line": 59,
+              "text": "const authHeader = req.headers.authorization;"
+            },
+            {
+              "line": 70,
+              "text": "role: string;"
+            },
+            {
+              "line": 75,
+              "text": "role: decoded.role,"
+            },
+            {
+              "line": 89,
+              "text": "if (!roles.includes(req.user.role)) {"
+            }
+          ],
+          "type": "authz"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 90,
+              "line_start": 31,
+              "path": "server\\src\\middleware\\auth.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 31,
+              "text": "res.status(401).json({ error: \"No token provided\" });"
+            },
+            {
+              "line": 50,
+              "text": "res.status(401).json({ error: \"Invalid or expired token\" });"
+            },
+            {
+              "line": 86,
+              "text": "res.status(401).json({ error: \"Authentication required\" });"
+            },
+            {
+              "line": 90,
+              "text": "res.status(403).json({ error: \"Insufficient permissions\" });"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 90,
+              "line_start": 19,
+              "path": "server\\src\\middleware\\auth.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 19,
+              "text": "throw new Error(\"JWT_SECRET environment variable is not set\");"
+            },
+            {
+              "line": 31,
+              "text": "res.status(401).json({ error: \"No token provided\" });"
+            },
+            {
+              "line": 50,
+              "text": "res.status(401).json({ error: \"Invalid or expired token\" });"
+            },
+            {
+              "line": 86,
+              "text": "res.status(401).json({ error: \"Authentication required\" });"
+            },
+            {
+              "line": 90,
+              "text": "res.status(403).json({ error: \"Insufficient permissions\" });"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "scripts\\generate-mosque-bundle.py"
+        }
+      ],
+      "file": "scripts\\generate-mosque-bundle.py",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 48,
+              "line_start": 48,
+              "path": "scripts\\generate-mosque-bundle.py"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 48,
+              "text": "except Exception as e:"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\admin\\src\\pages\\Dashboard.tsx"
+        }
+      ],
+      "file": "apps\\admin\\src\\pages\\Dashboard.tsx",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 33,
+              "line_start": 33,
+              "path": "apps\\admin\\src\\pages\\Dashboard.tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 33,
+              "text": "// Fallback mock data for development"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+        }
+      ],
+      "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 97,
+              "line_start": 96,
+              "path": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 96,
+              "text": "sound.setOnPlaybackStatusUpdate((status) => {"
+            },
+            {
+              "line": 97,
+              "text": "if (status.isLoaded && status.didJustFinish) {"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 36,
+              "line_start": 36,
+              "path": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 36,
+              "text": "const AZAN_SOUND_FILE = require(\"../../assets/sounds/azan_default.wav\");"
+            }
+          ],
+          "type": "ordering"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 120,
+              "line_start": 120,
+              "path": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 120,
+              "text": "Alert.alert(\"Error\", \"Failed to update notification preference.\");"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\stores\\settingsStore.ts"
+        }
+      ],
+      "file": "apps\\mobile\\stores\\settingsStore.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 72,
+              "line_start": 47,
+              "path": "apps\\mobile\\stores\\settingsStore.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 47,
+              "text": "} catch (error) {"
+            },
+            {
+              "line": 48,
+              "text": "throw error;"
+            },
+            {
+              "line": 59,
+              "text": "} catch (error) {"
+            },
+            {
+              "line": 60,
+              "text": "throw error;"
+            },
+            {
+              "line": 71,
+              "text": "} catch (error) {"
+            },
+            {
+              "line": 72,
+              "text": "throw error;"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "server\\src\\routes\\auth.ts"
+        }
+      ],
+      "file": "server\\src\\routes\\auth.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 169,
+              "line_start": 17,
+              "path": "server\\src\\routes\\auth.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 17,
+              "text": "function generateToken(user: { id: string; email: string; role: string }): string {"
+            },
+            {
+              "line": 19,
+              "text": "{ userId: user.id, email: user.email, role: user.role },"
+            },
+            {
+              "line": 66,
+              "text": "role: user.role,"
+            },
+            {
+              "line": 110,
+              "text": "role: user.role,"
+            },
+            {
+              "line": 169,
+              "text": "role: user.role,"
+            }
+          ],
+          "type": "authz"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 115,
+              "line_start": 35,
+              "path": "server\\src\\routes\\auth.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 35,
+              "text": "res.status(400).json({ error: \"Validation failed\", details: parsed.error.flatten() });"
+            },
+            {
+              "line": 43,
+              "text": "res.status(409).json({ error: \"Email already registered\" });"
+            },
+            {
+              "line": 60,
+              "text": "res.status(201).json({"
+            },
+            {
+              "line": 71,
+              "text": "res.status(500).json({ error: \"Internal server error\" });"
+            },
+            {
+              "line": 84,
+              "text": "res.status(400).json({ error: \"Validation failed\", details: parsed.error.flatten() });"
+            },
+            {
+              "line": 92,
+              "text": "res.status(401).json({ error: \"Invalid email or password\" });"
+            },
+            {
+              "line": 98,
+              "text": "res.status(401).json({ error: \"Invalid email or password\" });"
+            },
+            {
+              "line": 115,
+              "text": "res.status(500).json({ error: \"Internal server error\" });"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 92,
+              "line_start": 12,
+              "path": "server\\src\\routes\\auth.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 12,
+              "text": "throw new Error(\"JWT_SECRET environment variable is not set\");"
+            },
+            {
+              "line": 35,
+              "text": "res.status(400).json({ error: \"Validation failed\", details: parsed.error.flatten() });"
+            },
+            {
+              "line": 43,
+              "text": "res.status(409).json({ error: \"Email already registered\" });"
+            },
+            {
+              "line": 69,
+              "text": "} catch (error) {"
+            },
+            {
+              "line": 70,
+              "text": "console.error(\"Register error:\", error);"
+            },
+            {
+              "line": 71,
+              "text": "res.status(500).json({ error: \"Internal server error\" });"
+            },
+            {
+              "line": 84,
+              "text": "res.status(400).json({ error: \"Validation failed\", details: parsed.error.flatten() });"
+            },
+            {
+              "line": 92,
+              "text": "res.status(401).json({ error: \"Invalid email or password\" });"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\admin\\src\\pages\\StreamSetup.tsx"
+        }
+      ],
+      "file": "apps\\admin\\src\\pages\\StreamSetup.tsx",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 65,
+              "line_start": 65,
+              "path": "apps\\admin\\src\\pages\\StreamSetup.tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 65,
+              "text": "<span>Status</span>"
+            }
+          ],
+          "type": "state"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\app\\_layout.tsx"
+        }
+      ],
+      "file": "apps\\mobile\\app\\_layout.tsx",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 5,
+              "line_start": 5,
+              "path": "apps\\mobile\\app\\_layout.tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 5,
+              "text": "import { StatusBar } from \"expo-status-bar\";"
+            }
+          ],
+          "type": "state"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\app\\(auth)\\login.tsx"
+        }
+      ],
+      "file": "apps\\mobile\\app\\(auth)\\login.tsx",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 24,
+              "line_start": 24,
+              "path": "apps\\mobile\\app\\(auth)\\login.tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 24,
+              "text": "Alert.alert(\"Error\", \"Please enter email and password.\");"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\app\\(auth)\\register.tsx"
+        }
+      ],
+      "file": "apps\\mobile\\app\\(auth)\\register.tsx",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 24,
+              "line_start": 24,
+              "path": "apps\\mobile\\app\\(auth)\\register.tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 24,
+              "text": "Alert.alert(\"Error\", \"Email and password are required.\");"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "server\\src\\index.ts"
+        }
+      ],
+      "file": "server\\src\\index.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 39,
+              "line_start": 23,
+              "path": "server\\src\\index.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 23,
+              "text": "res.json({ status: \"ok\", timestamp: new Date().toISOString() });"
+            },
+            {
+              "line": 39,
+              "text": "res.status(500).json({ error: \"Internal server error\" });"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 39,
+              "line_start": 36,
+              "path": "server\\src\\index.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 36,
+              "text": "// Error handler middleware"
+            },
+            {
+              "line": 37,
+              "text": "app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {"
+            },
+            {
+              "line": 38,
+              "text": "console.error(\"Unhandled error:\", err);"
+            },
+            {
+              "line": 39,
+              "text": "res.status(500).json({ error: \"Internal server error\" });"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\app\\mosque\\[id].tsx"
+        }
+      ],
+      "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 135,
+              "line_start": 135,
+              "path": "apps\\mobile\\app\\mosque\\[id].tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 135,
+              "text": "Alert.alert(\"Error\", \"Failed to set primary mosque.\");"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+        }
+      ],
+      "file": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 74,
+              "line_start": 74,
+              "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 74,
+              "text": "// Error handled in store"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\components\\AzanPlayer.tsx"
+        }
+      ],
+      "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 85,
+              "line_start": 36,
+              "path": "apps\\mobile\\components\\AzanPlayer.tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 36,
+              "text": "setAudioError(err instanceof Error ? err.message : \"Failed to play audio\");"
+            },
+            {
+              "line": 85,
+              "text": "{/* Audio error banner */}"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "server\\src\\jobs\\iqamaRefreshJob.ts"
+        }
+      ],
+      "file": "server\\src\\jobs\\iqamaRefreshJob.ts",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 80,
+              "line_start": 46,
+              "path": "server\\src\\jobs\\iqamaRefreshJob.ts"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 46,
+              "text": "console.error(`[IqamaRefreshJob]   Failed for ${city}:`, err);"
+            },
+            {
+              "line": 80,
+              "text": "console.error(\"[IqamaRefreshJob] Unhandled error:\", err);"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\app\\(tabs)\\index.tsx"
+        }
+      ],
+      "file": "apps\\mobile\\app\\(tabs)\\index.tsx",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 87,
+              "line_start": 87,
+              "path": "apps\\mobile\\app\\(tabs)\\index.tsx"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 87,
+              "text": "// Location or API error \u2014 saved location data already shown"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": ".env.prod.example"
+        }
+      ],
+      "file": ".env.prod.example",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 8,
+              "line_start": 2,
+              "path": ".env.prod.example"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 2,
+              "text": "# Copy this file to .env.prod and set strong secrets before deploying."
+            },
+            {
+              "line": 8,
+              "text": "# Admin account created on first startup \u2014 CHANGE THESE before deploying"
+            }
+          ],
+          "type": "ordering"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "DESIGN_PLAN.md"
+        }
+      ],
+      "file": "DESIGN_PLAN.md",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 489,
+              "line_start": 341,
+              "path": "DESIGN_PLAN.md"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 341,
+              "text": "- Request location permission"
+            },
+            {
+              "line": 489,
+              "text": "1. Open app \u2192 grant location permission"
+            }
+          ],
+          "type": "authz"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 532,
+              "line_start": 193,
+              "path": "DESIGN_PLAN.md"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 193,
+              "text": "\u2502   \u2502   \u2514\u2500\u2500 schema.prisma            # Database schema"
+            },
+            {
+              "line": 205,
+              "text": "### `schema.prisma`"
+            },
+            {
+              "line": 532,
+              "text": "- `server/prisma/schema.prisma` \u2014 Database schema"
+            }
+          ],
+          "type": "validation"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 213,
+              "line_start": 213,
+              "path": "DESIGN_PLAN.md"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 213,
+              "text": "state           String"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 494,
+              "line_start": 9,
+              "path": "DESIGN_PLAN.md"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 9,
+              "text": "- Alerting users **10-15 minutes before iqama** (not adhan time)"
+            },
+            {
+              "line": 72,
+              "text": "- Require verification (photo of iqama board, multiple users confirming)"
+            },
+            {
+              "line": 248,
+              "text": "notifyMinutesBefore Int       @default(15)  // 10-15 min before iqama"
+            },
+            {
+              "line": 310,
+              "text": "- Example: Dhuhr iqama at 1:30 PM, notify at 1:15 PM (15 min before)"
+            },
+            {
+              "line": 368,
+              "text": "When the user is traveling within their timezone, the app must **automatically**:"
+            },
+            {
+              "line": 373,
+              "text": "4. **Notify with azan** 10-15 min before iqama at the nearest masjid"
+            },
+            {
+              "line": 391,
+              "text": "\u2502     \u2192 Fire notification 10-15 min before iqama       \u2502"
+            },
+            {
+              "line": 494,
+              "text": "6. User sets notification preference (10 or 15 min before iqama)"
+            }
+          ],
+          "type": "ordering"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 619,
+              "line_start": 8,
+              "path": "DESIGN_PLAN.md"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 8,
+              "text": "- Playing **live azan** streamed from partner mosques (fallback to recorded azan)"
+            },
+            {
+              "line": 11,
+              "text": "- Using **Aladhan API + offline fallback** for prayer times"
+            },
+            {
+              "line": 78,
+              "text": "- **Phase 4**: Add crowdsourcing as fallback"
+            },
+            {
+              "line": 285,
+              "text": "- On failure, use `adhan` npm package for offline calculation"
+            },
+            {
+              "line": 604,
+              "text": "- [ ] Fallback to recorded azan when stream unavailable"
+            },
+            {
+              "line": 619,
+              "text": "- Test live stream connection and fallback to recorded azan"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "IMPLEMENTATION_GUIDE.md"
+        }
+      ],
+      "file": "IMPLEMENTATION_GUIDE.md",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 620,
+              "line_start": 211,
+              "path": "IMPLEMENTATION_GUIDE.md"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 211,
+              "text": "### Schema Overview"
+            },
+            {
+              "line": 239,
+              "text": "# Create a new migration after schema changes"
+            },
+            {
+              "line": 620,
+              "text": "npm cache clean --force"
+            }
+          ],
+          "type": "validation"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 637,
+              "line_start": 19,
+              "path": "IMPLEMENTATION_GUIDE.md"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 19,
+              "text": "11. [Development Workflow](#development-workflow)"
+            },
+            {
+              "line": 459,
+              "text": "## Development Workflow"
+            },
+            {
+              "line": 497,
+              "text": "### Git Workflow"
+            },
+            {
+              "line": 585,
+              "text": "sudo systemctl status postgresql  # Linux"
+            },
+            {
+              "line": 637,
+              "text": "| City | Mosques | Musallas | Total | Status |"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 380,
+              "line_start": 239,
+              "path": "IMPLEMENTATION_GUIDE.md"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 239,
+              "text": "# Create a new migration after schema changes"
+            },
+            {
+              "line": 380,
+              "text": "| `iqamaTimes.maghrib` | string | Use `\"sunset+N\"` format for minutes after sunset |"
+            }
+          ],
+          "type": "ordering"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 628,
+              "line_start": 536,
+              "path": "IMPLEMENTATION_GUIDE.md"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 536,
+              "text": "- [ ] Set up error monitoring (Sentry)"
+            },
+            {
+              "line": 575,
+              "text": "- Fallback: `adhan` npm package for offline calculation"
+            },
+            {
+              "line": 619,
+              "text": "# Clear npm cache and retry"
+            },
+            {
+              "line": 628,
+              "text": "- The `adhan` npm package provides offline fallback"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "package-lock.json"
+        }
+      ],
+      "file": "package-lock.json",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 756,
+              "line_start": 376,
+              "path": "package-lock.json"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 376,
+              "text": "\"@babel/helper-validator-identifier\": \"^7.28.5\","
+            },
+            {
+              "line": 451,
+              "text": "\"@babel/helper-validator-option\": \"^7.27.1\","
+            },
+            {
+              "line": 618,
+              "text": "\"@babel/helper-validator-identifier\": \"^7.28.5\","
+            },
+            {
+              "line": 705,
+              "text": "\"node_modules/@babel/helper-validator-identifier\": {"
+            },
+            {
+              "line": 707,
+              "text": "\"resolved\": \"https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.28.5.tgz\","
+            },
+            {
+              "line": 714,
+              "text": "\"node_modules/@babel/helper-validator-option\": {"
+            },
+            {
+              "line": 716,
+              "text": "\"resolved\": \"https://registry.npmjs.org/@babel/helper-validator-option/-/helper-validator-option-7.27.1.tgz\","
+            },
+            {
+              "line": 756,
+              "text": "\"@babel/helper-validator-identifier\": \"^7.25.9\","
+            }
+          ],
+          "type": "validation"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 261,
+              "line_start": 261,
+              "path": "package-lock.json"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 261,
+              "text": "\"expo-status-bar\": \"~1.12.0\","
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 2077,
+              "line_start": 1935,
+              "path": "package-lock.json"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 1935,
+              "text": "\"require-from-string\": \"^2.0.2\","
+            },
+            {
+              "line": 2077,
+              "text": "\"require-from-string\": \"^2.0.2\","
+            }
+          ],
+          "type": "ordering"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 2652,
+              "line_start": 1895,
+              "path": "package-lock.json"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 1895,
+              "text": "\"@urql/exchange-retry\": \"0.3.0\","
+            },
+            {
+              "line": 2652,
+              "text": "\"fetch-retry\": \"^4.1.1\","
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "turbo.json"
+        }
+      ],
+      "file": "turbo.json",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 2,
+              "line_start": 2,
+              "path": "turbo.json"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 2,
+              "text": "\"$schema\": \"https://turbo.build/schema.json\","
+            }
+          ],
+          "type": "validation"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\metro.config.js"
+        }
+      ],
+      "file": "apps\\mobile\\metro.config.js",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 2,
+              "line_start": 1,
+              "path": "apps\\mobile\\metro.config.js"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 1,
+              "text": "const { getDefaultConfig } = require(\"expo/metro-config\");"
+            },
+            {
+              "line": 2,
+              "text": "const path = require(\"path\");"
+            }
+          ],
+          "type": "ordering"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\package.json"
+        }
+      ],
+      "file": "apps\\mobile\\package.json",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 27,
+              "line_start": 27,
+              "path": "apps\\mobile\\package.json"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 27,
+              "text": "\"expo-status-bar\": \"~1.12.0\","
+            }
+          ],
+          "type": "state"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\android\\build.gradle"
+        }
+      ],
+      "file": "apps\\mobile\\android\\build.gradle",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 34,
+              "line_start": 30,
+              "path": "apps\\mobile\\android\\build.gradle"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 30,
+              "text": "url(new File(['node', '--print', \"require.resolve('react-native/package.json')\"].execute(null, rootDir).text.trim(), '../android'))"
+            },
+            {
+              "line": 34,
+              "text": "url(new File(['node', '--print', \"require.resolve('jsc-android/package.json', { paths: [require.resolve('react-native/package.json')] })\"].execute(null, rootDir).text.trim(), '../dist'))"
+            }
+          ],
+          "type": "ordering"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\android\\gradlew"
+        }
+      ],
+      "file": "apps\\mobile\\android\\gradlew",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 37,
+              "line_start": 37,
+              "path": "apps\\mobile\\android\\gradlew"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 37,
+              "text": "#         * compound commands having a testable exit status, especially \u00abcase\u00bb;"
+            }
+          ],
+          "type": "state"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 193,
+              "line_start": 27,
+              "path": "apps\\mobile\\android\\gradlew"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 27,
+              "text": "#       bash, then to run this script, type that shell name before the whole"
+            },
+            {
+              "line": 103,
+              "text": "# OS specific support (must be 'true' or 'false')."
+            },
+            {
+              "line": 170,
+              "text": "# For Cygwin or MSYS, switch paths to Windows format before running java"
+            },
+            {
+              "line": 193,
+              "text": "# NB: a `for` loop captures its iteration list before it begins, so"
+            }
+          ],
+          "type": "ordering"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 136,
+              "line_start": 7,
+              "path": "apps\\mobile\\android\\gradlew"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 7,
+              "text": "# you may not use this file except in compliance with the License."
+            },
+            {
+              "line": 127,
+              "text": "die \"ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME"
+            },
+            {
+              "line": 136,
+              "text": "die \"ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH."
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\android\\gradlew.bat"
+        }
+      ],
+      "file": "apps\\mobile\\android\\gradlew.bat",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 78,
+              "line_start": 24,
+              "path": "apps\\mobile\\android\\gradlew.bat"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 24,
+              "text": "@rem Set local scope for the variables with windows NT shell"
+            },
+            {
+              "line": 78,
+              "text": "@rem End local scope for the variables with windows NT shell"
+            }
+          ],
+          "type": "authz"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 61,
+              "line_start": 5,
+              "path": "apps\\mobile\\android\\gradlew.bat"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 5,
+              "text": "@rem you may not use this file except in compliance with the License."
+            },
+            {
+              "line": 47,
+              "text": "echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH. 1>&2"
+            },
+            {
+              "line": 61,
+              "text": "echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME% 1>&2"
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\android\\settings.gradle"
+        }
+      ],
+      "file": "apps\\mobile\\android\\settings.gradle",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 66,
+              "line_start": 3,
+              "path": "apps\\mobile\\android\\settings.gradle"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 3,
+              "text": "commandLine(\"node\", \"-e\", \"console.log(require('react-native/package.json').version);\")"
+            },
+            {
+              "line": 7,
+              "text": "includeBuild(new File([\"node\", \"--print\", \"require.resolve('@react-native/gradle-plugin/package.json')\"].execute(null, rootDir).text.trim()).getParentFile().toString())"
+            },
+            {
+              "line": 17,
+              "text": "commandLine(\"node\", \"-e\", \"console.log(require('react-native/package.json').version);\")"
+            },
+            {
+              "line": 34,
+              "text": "'require(require.resolve(\\'expo-modules-autolinking\\', { paths: [require.resolve(\\'expo/package.json\\')] }))(process.argv.slice(1))',"
+            },
+            {
+              "line": 52,
+              "text": "from(files(new File([\"node\", \"--print\", \"require.resolve('react-native/package.json')\"].execute(null, rootDir).text.trim(), \"../gradle/libs.versions.toml\")))"
+            },
+            {
+              "line": 57,
+              "text": "apply from: new File([\"node\", \"--print\", \"require.resolve('expo/package.json')\"].execute(null, rootDir).text.trim(), \"../scripts/autolinking.gradle\");"
+            },
+            {
+              "line": 61,
+              "text": "apply from: new File([\"node\", \"--print\", \"require.resolve('@react-native-community/cli-platform-android/package.json', { paths: [require.resolve('react-native/package.json')] })\"].execute(null, rootDi"
+            },
+            {
+              "line": 66,
+              "text": "includeBuild(new File([\"node\", \"--print\", \"require.resolve('@react-native/gradle-plugin/package.json', { paths: [require.resolve('react-native/package.json')] })\"].execute(null, rootDir).text.trim())."
+            }
+          ],
+          "type": "ordering"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\android\\app\\build.gradle"
+        }
+      ],
+      "file": "apps\\mobile\\android\\app\\build.gradle",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 199,
+              "line_start": 14,
+              "path": "apps\\mobile\\android\\app\\build.gradle"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 14,
+              "text": "commandLine(\"node\", \"-e\", \"console.log(require('react-native/package.json').version);\")"
+            },
+            {
+              "line": 33,
+              "text": "entryFile = file([\"node\", \"-e\", \"require('expo/scripts/resolveAppEntry')\", projectRoot, \"android\", \"absolute\"].execute(null, rootDir).text.trim())"
+            },
+            {
+              "line": 34,
+              "text": "reactNativeDir = new File([\"node\", \"--print\", \"require.resolve('react-native/package.json')\"].execute(null, rootDir).text.trim()).getParentFile().getAbsoluteFile()"
+            },
+            {
+              "line": 35,
+              "text": "hermesCommand = new File([\"node\", \"--print\", \"require.resolve('react-native/package.json')\"].execute(null, rootDir).text.trim()).getParentFile().getAbsolutePath() + \"/sdks/hermesc/%OS-BIN%/hermesc\""
+            },
+            {
+              "line": 36,
+              "text": "codegenDir = new File([\"node\", \"--print\", \"require.resolve('@react-native/codegen/package.json', { paths: [require.resolve('react-native/package.json')] })\"].execute(null, rootDir).text.trim()).getPar"
+            },
+            {
+              "line": 40,
+              "text": "cliFile = new File([\"node\", \"--print\", \"require.resolve('@expo/cli', { paths: [require.resolve('expo/package.json')] })\"].execute(null, rootDir).text.trim())"
+            },
+            {
+              "line": 199,
+              "text": "apply from: new File([\"node\", \"--print\", \"require.resolve('@react-native-community/cli-platform-android/package.json', { paths: [require.resolve('react-native/package.json')] })\"].execute(null, rootDi"
+            }
+          ],
+          "type": "ordering"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\android\\app\\src\\debug\\AndroidManifest.xml"
+        }
+      ],
+      "file": "apps\\mobile\\android\\app\\src\\debug\\AndroidManifest.xml",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 4,
+              "line_start": 4,
+              "path": "apps\\mobile\\android\\app\\src\\debug\\AndroidManifest.xml"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 4,
+              "text": "<uses-permission android:name=\"android.permission.SYSTEM_ALERT_WINDOW\"/>"
+            }
+          ],
+          "type": "authz"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\android\\app\\src\\main\\AndroidManifest.xml"
+        }
+      ],
+      "file": "apps\\mobile\\android\\app\\src\\main\\AndroidManifest.xml",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 9,
+              "line_start": 2,
+              "path": "apps\\mobile\\android\\app\\src\\main\\AndroidManifest.xml"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 2,
+              "text": "<uses-permission android:name=\"android.permission.ACCESS_BACKGROUND_LOCATION\"/>"
+            },
+            {
+              "line": 3,
+              "text": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>"
+            },
+            {
+              "line": 4,
+              "text": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>"
+            },
+            {
+              "line": 5,
+              "text": "<uses-permission android:name=\"android.permission.INTERNET\"/>"
+            },
+            {
+              "line": 6,
+              "text": "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>"
+            },
+            {
+              "line": 7,
+              "text": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\"/>"
+            },
+            {
+              "line": 8,
+              "text": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>"
+            },
+            {
+              "line": 9,
+              "text": "<uses-permission android:name=\"android.permission.SYSTEM_ALERT_WINDOW\"/>"
+            }
+          ],
+          "type": "authz"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\android\\app\\src\\main\\res\\drawable\\rn_edit_text_material.xml"
+        }
+      ],
+      "file": "apps\\mobile\\android\\app\\src\\main\\res\\drawable\\rn_edit_text_material.xml",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 5,
+              "line_start": 5,
+              "path": "apps\\mobile\\android\\app\\src\\main\\res\\drawable\\rn_edit_text_material.xml"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 5,
+              "text": "you may not use this file except in compliance with the License."
+            }
+          ],
+          "type": "error"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\assets\\data\\mosques-index.json"
+        }
+      ],
+      "file": "apps\\mobile\\assets\\data\\mosques-index.json",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 6806,
+              "line_start": 6806,
+              "path": "apps\\mobile\\assets\\data\\mosques-index.json"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 6806,
+              "text": "\"description\": \"Established in 1996, IIT serves as a mosque, school, Islamic studies institution and community centre, filling a vital role in the Scarborough Muslim community.\","
+            }
+          ],
+          "type": "authz"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 5237,
+              "line_start": 3550,
+              "path": "apps\\mobile\\assets\\data\\mosques-index.json"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 3550,
+              "text": "\"description\": \"Masjid and dawah centre operated by the Ahle-Hadith Society of Canada, offering Quran classes, Tajweed courses, and Sunnah sessions in a clean and cozy environment.\","
+            },
+            {
+              "line": 5237,
+              "text": "\"description\": \"A small, neat and clean Sunni musalla serving the Vanier/Overbrook community with daily prayers.\","
+            }
+          ],
+          "type": "validation"
+        },
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 4967,
+              "line_start": 873,
+              "path": "apps\\mobile\\assets\\data\\mosques-index.json"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 873,
+              "text": "\"hours\": \"15 minutes before and after congregational prayer times\","
+            },
+            {
+              "line": 4666,
+              "text": "\"description\": \"Islamic centre serving the North Bay Muslim community, established in 2008 by the Muslim Society of North Bay. Converted from a former welding shop after a year of renovations.\","
+            },
+            {
+              "line": 4967,
+              "text": "\"description\": \"A registered charitable organization providing free religious and educational services including a full-time Hifz program, after-school programs, and youth activities for the Oshawa Mu"
+            }
+          ],
+          "type": "ordering"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "data\\mosques\\canada\\ontario\\alliston.json"
+        }
+      ],
+      "file": "data\\mosques\\canada\\ontario\\alliston.json",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 43,
+              "line_start": 43,
+              "path": "data\\mosques\\canada\\ontario\\alliston.json"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 43,
+              "text": "\"notes\": \"Open 24/7. Friday prayer at 12 PM. May have relocated \u2014 multiple addresses found online. Confirm current location before visiting.\""
+            }
+          ],
+          "type": "ordering"
+        }
+      ]
+    },
+    {
+      "classification": "fact",
+      "evidence": [
+        {
+          "path": "data\\mosques\\canada\\ontario\\brampton.json"
+        }
+      ],
+      "file": "data\\mosques\\canada\\ontario\\brampton.json",
+      "signals": [
+        {
+          "classification": "fact",
+          "evidence": [
+            {
+              "line_end": 186,
+              "line_start": 186,
+              "path": "data\\mosques\\canada\\ontario\\brampton.json"
+            }
+          ],
+          "occurrences": [
+            {
+              "line": 186,
+              "text": "\"hours\": \"15 minutes before and after congregational prayer times\","
+            }
+          ],
+          "type": "ordering"
+        }
+      ]
+    }
+  ],
+  "fact_policy": {
+    "fact_definition": "Entries are evidence-anchored file-level signals; verify semantics before refactors."
+  },
+  "repo_root": "A:\\git\\LiveAzan",
+  "schema": "zkme.contracts_invariants.v2",
+  "snapshot_digest": "f9655f2963f29f6c21b555cb0f95e0b3a66b63ea"
+}
