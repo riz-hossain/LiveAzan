@@ -207,11 +207,15 @@ export const useMosqueStore = create<MosqueState>((set, get) => ({
     const cacheK = iqamaKey(mosqueId);
     const detailK = mosqueDetailKey(mosqueId);
 
-    // Immediately populate activeMosque from already-loaded list so detail screen renders instantly
+    // Always reset to the newly selected mosque immediately so navigating
+    // between mosques never shows stale data from a previously visited mosque.
     const fromList = get().nearbyMosques.find((m) => m.id === mosqueId);
-    if (fromList && !get().activeMosque) {
-      set({ activeMosque: fromList });
-    }
+    set({
+      activeMosque: fromList ?? null,
+      iqamaSchedule: [],
+      iqamaSource: null,
+      iqamaLastFetched: null,
+    });
 
     // Serve from cache immediately
     const [cachedIqama, cachedMosque] = await Promise.all([
