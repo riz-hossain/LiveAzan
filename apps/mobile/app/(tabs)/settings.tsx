@@ -8,6 +8,7 @@ import {
   Alert,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 import { useAuthStore } from "../../stores/authStore";
 import { useSettingsStore } from "../../stores/settingsStore";
 import { useMosqueStore } from "../../stores/mosqueStore";
@@ -31,7 +32,8 @@ const AZAN_SOUNDS: { label: string; value: string }[] = [
 ];
 
 export default function SettingsScreen() {
-  const { user, logout } = useAuthStore();
+  const { user, isGuest, logout } = useAuthStore();
+  const router = useRouter();
   const { prayerPrefs, calcMethod, azanSound, fetchPreferences, updateCalcMethod, updateAzanSound, updateLeadTime } =
     useSettingsStore();
   const { primaryMosque } = useMosqueStore();
@@ -40,8 +42,10 @@ export default function SettingsScreen() {
   const [showAzanPicker, setShowAzanPicker] = useState(false);
 
   useEffect(() => {
-    fetchPreferences();
-  }, []);
+    if (user) {
+      fetchPreferences();
+    }
+  }, [user]);
 
   const handleLogout = () => {
     Alert.alert("Sign Out", "Are you sure you want to sign out?", [
@@ -78,9 +82,13 @@ export default function SettingsScreen() {
             </View>
             <View style={styles.profileInfo}>
               <Text style={styles.profileName}>
-                {user?.displayName || "User"}
+                {user?.displayName || (isGuest ? "Guest" : "User")}
               </Text>
-              <Text style={styles.profileEmail}>{user?.email}</Text>
+              {user?.email ? (
+                <Text style={styles.profileEmail}>{user.email}</Text>
+              ) : isGuest ? (
+                <Text style={styles.profileEmail}>No account</Text>
+              ) : null}
             </View>
           </View>
         </View>
@@ -205,11 +213,24 @@ export default function SettingsScreen() {
         )}
       </View>
 
-      {/* Sign Out */}
-      <TouchableOpacity style={styles.signOutButton} onPress={handleLogout}>
-        <Ionicons name="log-out-outline" size={20} color="#D32F2F" />
-        <Text style={styles.signOutText}>Sign Out</Text>
-      </TouchableOpacity>
+      {/* Sign Out / Sign In */}
+      {isGuest && !user ? (
+        <TouchableOpacity
+          style={styles.signInButton}
+          onPress={() => {
+            logout();
+            router.replace("/(auth)/login");
+          }}
+        >
+          <Ionicons name="log-in-outline" size={20} color="#1B5E20" />
+          <Text style={styles.signInText}>Sign In</Text>
+        </TouchableOpacity>
+      ) : (
+        <TouchableOpacity style={styles.signOutButton} onPress={handleLogout}>
+          <Ionicons name="log-out-outline" size={20} color="#D32F2F" />
+          <Text style={styles.signOutText}>Sign Out</Text>
+        </TouchableOpacity>
+      )}
     </ScrollView>
   );
 }
@@ -333,5 +354,20 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "600",
     color: "#D32F2F",
+  },
+  signInButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 14,
+    borderRadius: 12,
+    backgroundColor: "#1B5E20",
+    gap: 8,
+    marginTop: 8,
+  },
+  signInText: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#fff",
   },
 });

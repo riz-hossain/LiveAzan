@@ -5,10 +5,12 @@ import { loginApi, registerApi, oauthLoginApi } from "../services/api";
 
 const TOKEN_KEY = "live_azan_token";
 const USER_KEY = "live_azan_user";
+const GUEST_KEY = "live_azan_guest";
 
 interface AuthState {
   user: User | null;
   token: string | null;
+  isGuest: boolean;
   isLoading: boolean;
   login: (email: string, password: string) => Promise<void>;
   oauthLogin: (
@@ -22,6 +24,7 @@ interface AuthState {
     password: string,
     displayName?: string
   ) => Promise<void>;
+  continueAsGuest: () => Promise<void>;
   logout: () => Promise<void>;
   loadStoredAuth: () => Promise<void>;
 }
@@ -29,6 +32,7 @@ interface AuthState {
 export const useAuthStore = create<AuthState>((set, get) => ({
   user: null,
   token: null,
+  isGuest: false,
   isLoading: true,
 
   login: async (email: string, password: string) => {
@@ -84,10 +88,16 @@ export const useAuthStore = create<AuthState>((set, get) => ({
     }
   },
 
+  continueAsGuest: async () => {
+    await SecureStore.setItemAsync(GUEST_KEY, "true");
+    set({ isGuest: true, isLoading: false });
+  },
+
   logout: async () => {
     await SecureStore.deleteItemAsync(TOKEN_KEY);
     await SecureStore.deleteItemAsync(USER_KEY);
-    set({ user: null, token: null });
+    await SecureStore.deleteItemAsync(GUEST_KEY);
+    set({ user: null, token: null, isGuest: false });
   },
 
   loadStoredAuth: async () => {
@@ -99,7 +109,8 @@ export const useAuthStore = create<AuthState>((set, get) => ({
         const user = JSON.parse(userJson) as User;
         set({ user, token, isLoading: false });
       } else {
-        set({ isLoading: false });
+        const guest = await SecureStore.getItemAsync(GUEST_KEY);
+        set({ isGuest: guest === "true", isLoading: false });
       }
     } catch {
       set({ isLoading: false });

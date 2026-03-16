@@ -5,6 +5,7 @@ import {
   updatePrayerPrefs,
   updateProfile,
 } from "../services/api";
+import { useAuthStore } from "./authStore";
 
 interface SettingsState {
   prayerPrefs: UserPrayerPreference[];
@@ -34,8 +35,11 @@ export const useSettingsStore = create<SettingsState>((set, get) => ({
 
   updateLeadTime: async (prayer: Prayer, minutes: number) => {
     const { prayerPrefs } = get();
+    const { token } = useAuthStore.getState();
     try {
-      await updatePrayerPrefs(prayer, { leadMinutes: minutes });
+      if (token) {
+        await updatePrayerPrefs(prayer, { leadMinutes: minutes });
+      }
       const updated = prayerPrefs.map((p) =>
         p.prayer === prayer ? { ...p, leadMinutes: minutes } : p
       );
@@ -46,8 +50,11 @@ export const useSettingsStore = create<SettingsState>((set, get) => ({
   },
 
   updateCalcMethod: async (method: number) => {
+    const { token } = useAuthStore.getState();
     try {
-      await updateProfile({ calcMethod: method });
+      if (token) {
+        await updateProfile({ calcMethod: method });
+      }
       set({ calcMethod: method });
     } catch (error) {
       throw error;
@@ -55,8 +62,11 @@ export const useSettingsStore = create<SettingsState>((set, get) => ({
   },
 
   updateAzanSound: async (sound: string) => {
+    const { token } = useAuthStore.getState();
     try {
-      await updateProfile({ azanSound: sound });
+      if (token) {
+        await updateProfile({ azanSound: sound });
+      }
       set({ azanSound: sound });
     } catch (error) {
       throw error;

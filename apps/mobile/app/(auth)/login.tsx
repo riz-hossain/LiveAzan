@@ -17,7 +17,7 @@ import { useAuthStore } from "../../stores/authStore";
 export default function LoginScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { login, oauthLogin, isLoading } = useAuthStore();
+  const { login, oauthLogin, continueAsGuest, isLoading } = useAuthStore();
 
   const handleLogin = async () => {
     if (!email || !password) {
@@ -117,6 +117,14 @@ export default function LoginScreen() {
             Don't have an account? <Text style={styles.linkBold}>Sign up</Text>
           </Text>
         </Link>
+
+        <TouchableOpacity
+          style={styles.guestButton}
+          onPress={continueAsGuest}
+          disabled={isLoading}
+        >
+          <Text style={styles.guestText}>Continue without account</Text>
+        </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
   );
@@ -216,5 +224,16 @@ const styles = StyleSheet.create({
   linkBold: {
     color: "#1B5E20",
     fontWeight: "600",
+  },
+  guestButton: {
+    marginTop: 16,
+    alignSelf: "center",
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+  },
+  guestText: {
+    fontSize: 15,
+    color: "#1B5E20",
+    fontWeight: "500",
   },
 });
