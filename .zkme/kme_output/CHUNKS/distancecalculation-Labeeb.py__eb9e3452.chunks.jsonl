@@ -1,0 +1,1 @@
+{"chunk_id": "CHK-eb9e3452-0000", "end_line": 12, "next_chunk_id": null, "prev_chunk_id": null, "source_path": "distancecalculation-Labeeb.py", "start_line": 1, "text": "'''\nCreated on Jan 7, 2024\n\n@author: User\n'''\n\nx =1\n\nprint (\"hello\")\n\n#another comment\n"}

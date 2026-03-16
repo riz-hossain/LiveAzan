@@ -1,0 +1,330 @@
+{
+  "version": "1.0",
+  "description": "All detected external data interactions (db, file, queue, cache, network)",
+  "total": 24,
+  "data_touches": [
+    {
+      "kind": "database",
+      "name": "db:setup.py",
+      "confidence": "high",
+      "target": "{'platform'}",
+      "operation": "import",
+      "evidence": [
+        {
+          "path": "setup.py",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "kind": "database",
+      "name": "db:@prisma/client",
+      "confidence": "medium",
+      "target": "@prisma/client",
+      "operation": "import",
+      "evidence": [
+        {
+          "path": "server\\prisma\\seed.ts",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "database",
+      "name": "db:../lib/prisma",
+      "confidence": "medium",
+      "target": "../lib/prisma",
+      "operation": "import",
+      "evidence": [
+        {
+          "path": "server\\src\\jobs\\iqamaRefreshJob.ts",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "database",
+      "name": "db:@prisma/client",
+      "confidence": "medium",
+      "target": "@prisma/client",
+      "operation": "import",
+      "evidence": [
+        {
+          "path": "server\\src\\lib\\prisma.ts",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "database",
+      "name": "db:../lib/prisma",
+      "confidence": "medium",
+      "target": "../lib/prisma",
+      "operation": "import",
+      "evidence": [
+        {
+          "path": "server\\src\\routes\\admin.ts",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "database",
+      "name": "db:../lib/prisma",
+      "confidence": "medium",
+      "target": "../lib/prisma",
+      "operation": "import",
+      "evidence": [
+        {
+          "path": "server\\src\\routes\\auth.ts",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "database",
+      "name": "db:../lib/prisma",
+      "confidence": "medium",
+      "target": "../lib/prisma",
+      "operation": "import",
+      "evidence": [
+        {
+          "path": "server\\src\\routes\\coverageRequests.ts",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "database",
+      "name": "db:../lib/prisma",
+      "confidence": "medium",
+      "target": "../lib/prisma",
+      "operation": "import",
+      "evidence": [
+        {
+          "path": "server\\src\\routes\\iqama.ts",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "database",
+      "name": "db:../lib/prisma",
+      "confidence": "medium",
+      "target": "../lib/prisma",
+      "operation": "import",
+      "evidence": [
+        {
+          "path": "server\\src\\routes\\mosques.ts",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "database",
+      "name": "db:../lib/prisma",
+      "confidence": "medium",
+      "target": "../lib/prisma",
+      "operation": "import",
+      "evidence": [
+        {
+          "path": "server\\src\\routes\\submissions.ts",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "database",
+      "name": "db:../lib/prisma",
+      "confidence": "medium",
+      "target": "../lib/prisma",
+      "operation": "import",
+      "evidence": [
+        {
+          "path": "server\\src\\routes\\users.ts",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "database",
+      "name": "db:../lib/prisma",
+      "confidence": "medium",
+      "target": "../lib/prisma",
+      "operation": "import",
+      "evidence": [
+        {
+          "path": "server\\src\\services\\iqamaEnrichment.ts",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "database",
+      "name": "db:@prisma/client",
+      "confidence": "medium",
+      "target": "@prisma/client",
+      "operation": "import",
+      "evidence": [
+        {
+          "path": "server\\src\\services\\iqamaEnrichment.ts",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "network",
+      "name": "api_call:/api/admin/stats",
+      "confidence": "medium",
+      "target": "/api/admin/stats",
+      "operation": "request",
+      "evidence": [
+        {
+          "path": "apps\\admin\\src\\pages\\Dashboard.tsx",
+          "line_start": 29,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "network",
+      "name": "api_call:/api/iqama/${selectedMosque}",
+      "confidence": "medium",
+      "target": "/api/iqama/${selectedMosque}",
+      "operation": "request",
+      "evidence": [
+        {
+          "path": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+          "line_start": 62,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "network",
+      "name": "api_call:/api/iqama/${selectedMosque}",
+      "confidence": "medium",
+      "target": "/api/iqama/${selectedMosque}",
+      "operation": "request",
+      "evidence": [
+        {
+          "path": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+          "line_start": 85,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "network",
+      "name": "api_call:${BASE_URL}${endpoint}",
+      "confidence": "medium",
+      "target": "${BASE_URL}${endpoint}",
+      "operation": "request",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\services\\api.ts",
+          "line_start": 39,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "network",
+      "name": "api_call:${MAWAQIT_BASE}/mosque/${uuid}",
+      "confidence": "medium",
+      "target": "${MAWAQIT_BASE}/mosque/${uuid}",
+      "operation": "request",
+      "evidence": [
+        {
+          "path": "apps\\mobile\\services\\mawaqitService.ts",
+          "line_start": 84,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "network",
+      "name": "api_call:${MAWAQIT_BASE}/mosque/search?lat=${lat}&lon=${lon}&radius=${radiusM}",
+      "confidence": "medium",
+      "target": "${MAWAQIT_BASE}/mosque/search?lat=${lat}&lon=${lon}&radius=${radiusM}",
+      "operation": "request",
+      "evidence": [
+        {
+          "path": "scripts\\enrich-iqama.ts",
+          "line_start": 108,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "network",
+      "name": "api_call:${MAWAQIT_BASE}/mosque/${uuid}",
+      "confidence": "medium",
+      "target": "${MAWAQIT_BASE}/mosque/${uuid}",
+      "operation": "request",
+      "evidence": [
+        {
+          "path": "scripts\\enrich-iqama.ts",
+          "line_start": 121,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "network",
+      "name": "api_call:https://overpass-api.de/api/interpreter",
+      "confidence": "medium",
+      "target": "https://overpass-api.de/api/interpreter",
+      "operation": "request",
+      "evidence": [
+        {
+          "path": "scripts\\research-mosques.ts",
+          "line_start": 136,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "network",
+      "name": "api_call:${MAWAQIT_BASE}/mosque/${uuid}",
+      "confidence": "medium",
+      "target": "${MAWAQIT_BASE}/mosque/${uuid}",
+      "operation": "request",
+      "evidence": [
+        {
+          "path": "scripts\\research-mosques.ts",
+          "line_start": 215,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "network",
+      "name": "api_call:${MAWAQIT_BASE}/mosque/search?lat=${lat}&lon=${lon}&radius=${radiusM}",
+      "confidence": "medium",
+      "target": "${MAWAQIT_BASE}/mosque/search?lat=${lat}&lon=${lon}&radius=${radiusM}",
+      "operation": "request",
+      "evidence": [
+        {
+          "path": "server\\src\\services\\iqamaEnrichment.ts",
+          "line_start": 215,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "kind": "network",
+      "name": "api_call:${MAWAQIT_BASE}/mosque/${uuid}",
+      "confidence": "medium",
+      "target": "${MAWAQIT_BASE}/mosque/${uuid}",
+      "operation": "request",
+      "evidence": [
+        {
+          "path": "server\\src\\services\\iqamaEnrichment.ts",
+          "line_start": 229,
+          "confidence": "medium"
+        }
+      ]
+    }
+  ]
+}

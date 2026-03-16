@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "repo_metadata": {
+    "repo_name": "LiveAzan",
+    "scan_timestamp": "2026-03-16T18:07:14Z",
+    "detected_platforms": [
+      "mobile"
+    ],
+    "detected_frameworks": [
+      "android_native",
+      "ios_native"
+    ],
+    "detection_evidence": {
+      "android_native": [
+        "node_modules\\expo-av\\android\\src\\main\\res\\layout\\expo_media_controller.xml"
+      ],
+      "ios_native": [
+        "node_modules\\react-native\\template\\ios\\HelloWorld\\LaunchScreen.storyboard"
+      ]
+    },
+    "prop_graph_stats": {
+      "components_indexed": 55,
+      "files_scanned": 33
+    }
+  },
+  "surfaces": [],
+  "elements": [],
+  "flows": []
+}

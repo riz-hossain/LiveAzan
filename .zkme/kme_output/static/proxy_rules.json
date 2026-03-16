@@ -1,0 +1,5 @@
+{
+  "note": "Best-effort proxy/rewrite detection (Next/Vite/nginx/traefik/etc.).",
+  "rules": [],
+  "schema": "zkme.proxy_rules.v1"
+}

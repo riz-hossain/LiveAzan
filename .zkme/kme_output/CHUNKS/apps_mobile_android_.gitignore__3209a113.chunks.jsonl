@@ -1,0 +1,1 @@
+{"chunk_id": "CHK-3209a113-0000", "end_line": 17, "next_chunk_id": null, "prev_chunk_id": null, "source_path": "apps/mobile/android/.gitignore", "start_line": 1, "text": "# OSX\n#\n.DS_Store\n\n# Android/IntelliJ\n#\nbuild/\n.idea\n.gradle\nlocal.properties\n*.iml\n*.hprof\n.cxx/\n\n# Bundle artifacts\n*.jsbundle\n"}

@@ -1,0 +1,1023 @@
+{
+  "by_category": {
+    "flex": [
+      {
+        "category": "flex",
+        "file": "apps\\admin\\src\\App.tsx",
+        "line": 22,
+        "snippet": "  padding: \"24px 16px\",\n  display: \"flex\",\n  flexDirection: \"column\",\n  gap: 8,\n};",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\admin\\src\\App.tsx",
+        "line": 34,
+        "snippet": "\nconst contentStyle: React.CSSProperties = {\n  flex: 1,\n  padding: 32,\n};",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\admin\\src\\pages\\Dashboard.tsx",
+        "line": 14,
+        "snippet": "  padding: 24,\n  boxShadow: \"0 1px 3px rgba(0,0,0,0.1)\",\n  flex: \"1 1 200px\",\n};\n",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\admin\\src\\pages\\Dashboard.tsx",
+        "line": 59,
+        "snippet": "\n      {/* Stat cards */}\n      <div style={{ display: \"flex\", gap: 16, flexWrap: \"wrap\", marginBottom: 32 }}>\n        <div style={cardStyle}>\n          <div style={{ fontSize: 36, fontWeight: 700, color: \"#16213e\" }}>",
+        "token": "flexWrap"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\admin\\src\\pages\\Dashboard.tsx",
+        "line": 83,
+        "snippet": "\n      {/* Recent activity */}\n      <div style={{ ...cardStyle, flex: \"unset\" }}>\n        <h3 style={{ marginBottom: 12 }}>Recent Activity</h3>\n        <ul style={{ listStyle: \"none\", padding: 0 }}>",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\_layout.tsx",
+        "line": 47,
+        "snippet": "const styles = StyleSheet.create({\n  loading: {\n    flex: 1,\n    justifyContent: \"center\",\n    alignItems: \"center\",",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(auth)\\login.tsx",
+        "line": 135,
+        "snippet": "const styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    backgroundColor: \"#fff\",\n  },",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(auth)\\login.tsx",
+        "line": 139,
+        "snippet": "  },\n  inner: {\n    flex: 1,\n    justifyContent: \"center\",\n    paddingHorizontal: 24,",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(auth)\\login.tsx",
+        "line": 157,
+        "snippet": "  },\n  oauthButton: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    justifyContent: \"center\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(auth)\\login.tsx",
+        "line": 180,
+        "snippet": "  },\n  divider: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    marginVertical: 20,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(auth)\\login.tsx",
+        "line": 185,
+        "snippet": "  },\n  dividerLine: {\n    flex: 1,\n    height: 1,\n    backgroundColor: \"#ddd\",",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(auth)\\register.tsx",
+        "line": 95,
+        "snippet": "const styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    backgroundColor: \"#fff\",\n  },",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(auth)\\register.tsx",
+        "line": 99,
+        "snippet": "  },\n  inner: {\n    flex: 1,\n    justifyContent: \"center\",\n    paddingHorizontal: 24,",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\index.tsx",
+        "line": 212,
+        "snippet": "const styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    backgroundColor: \"#f5f5f5\",\n  },",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\index.tsx",
+        "line": 248,
+        "snippet": "  },\n  nearbySectionHeader: {\n    flexDirection: \"row\",\n    justifyContent: \"space-between\",\n    alignItems: \"center\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\index.tsx",
+        "line": 269,
+        "snippet": "  },\n  nearbyLoading: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 8,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\index.tsx",
+        "line": 279,
+        "snippet": "  },\n  findButton: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    justifyContent: \"center\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+        "line": 167,
+        "snippet": "const styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    backgroundColor: \"#f5f5f5\",\n  },",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+        "line": 171,
+        "snippet": "  },\n  toggleBar: {\n    flexDirection: \"row\",\n    padding: 12,\n    gap: 8,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+        "line": 179,
+        "snippet": "  },\n  toggleButton: {\n    flex: 1,\n    flexDirection: \"row\",\n    alignItems: \"center\",",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+        "line": 180,
+        "snippet": "  toggleButton: {\n    flex: 1,\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    justifyContent: \"center\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+        "line": 201,
+        "snippet": "  },\n  loadingBar: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    justifyContent: \"center\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+        "line": 208,
+        "snippet": "  },\n  loadingContainer: {\n    flex: 1,\n    justifyContent: \"center\",\n    alignItems: \"center\",",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+        "line": 231,
+        "snippet": "  },\n  coverageButton: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    justifyContent: \"center\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 317,
+        "snippet": "const styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    backgroundColor: \"#f5f5f5\",\n  },",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 346,
+        "snippet": "  },\n  profileRow: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 12,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 359,
+        "snippet": "  },\n  profileInfo: {\n    flex: 1,\n  },\n  profileName: {",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 372,
+        "snippet": "  },\n  row: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 10,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 377,
+        "snippet": "  },\n  rowText: {\n    flex: 1,\n    fontSize: 16,\n    color: \"#333\",",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 399,
+        "snippet": "  },\n  pickerItem: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    justifyContent: \"space-between\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 411,
+        "snippet": "  },\n  pickerItemText: {\n    flex: 1,\n    fontSize: 15,\n    color: \"#333\",",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 420,
+        "snippet": "  },\n  pickerItemRight: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 12,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 428,
+        "snippet": "  },\n  signOutButton: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    justifyContent: \"center\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 445,
+        "snippet": "  },\n  signInButton: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    justifyContent: \"center\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 449,
+        "snippet": "const styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    backgroundColor: \"#f5f5f5\",\n  },",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 457,
+        "snippet": "  },\n  loadingContainer: {\n    flex: 1,\n    justifyContent: \"center\",\n    alignItems: \"center\",",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 472,
+        "snippet": "  },\n  badges: {\n    flexDirection: \"row\",\n    flexWrap: \"wrap\",\n    gap: 8,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 473,
+        "snippet": "  badges: {\n    flexDirection: \"row\",\n    flexWrap: \"wrap\",\n    gap: 8,\n  },",
+        "token": "flexWrap"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 477,
+        "snippet": "  },\n  badge: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 4,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 515,
+        "snippet": "  },\n  infoRow: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 10,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 520,
+        "snippet": "  },\n  infoText: {\n    flex: 1,\n    fontSize: 15,\n    color: \"#333\",",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 547,
+        "snippet": "  },\n  sectionHeader: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    justifyContent: \"space-between\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 567,
+        "snippet": "  },\n  metaRow: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 8,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 587,
+        "snippet": "  },\n  noIqamaHint: {\n    flexDirection: \"row\",\n    alignItems: \"flex-start\",\n    gap: 6,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 596,
+        "snippet": "  },\n  noIqamaText: {\n    flex: 1,\n    fontSize: 13,\n    color: \"#795548\",",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 613,
+        "snippet": "  },\n  scheduleRow: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    paddingVertical: 12,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 625,
+        "snippet": "  },\n  scheduleCell: {\n    flex: 1,\n    textAlign: \"center\",\n  },",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 630,
+        "snippet": "  prayerCol: {\n    textAlign: \"left\",\n    flex: 1.2,\n  },\n  columnHeader: {",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 659,
+        "snippet": "  // Services & Facilities chips\n  chipRow: {\n    flexDirection: \"row\",\n    flexWrap: \"wrap\",\n    gap: 8,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 660,
+        "snippet": "  chipRow: {\n    flexDirection: \"row\",\n    flexWrap: \"wrap\",\n    gap: 8,\n  },",
+        "token": "flexWrap"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 685,
+        "snippet": "  },\n  actionButton: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    justifyContent: \"center\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 707,
+        "snippet": "  },\n  primaryButton: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    justifyContent: \"center\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 721,
+        "snippet": "  },\n  primaryIndicator: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    justifyContent: \"center\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "line": 141,
+        "snippet": "  },\n  header: {\n    flexDirection: \"row\",\n    justifyContent: \"space-between\",\n    alignItems: \"center\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "line": 155,
+        "snippet": "  },\n  liveIndicator: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 6,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "line": 177,
+        "snippet": "  },\n  controls: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    justifyContent: \"center\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "line": 213,
+        "snippet": "  },\n  soundOptions: {\n    flexDirection: \"row\",\n    flexWrap: \"wrap\",\n    gap: 8,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "line": 214,
+        "snippet": "  soundOptions: {\n    flexDirection: \"row\",\n    flexWrap: \"wrap\",\n    gap: 8,\n  },",
+        "token": "flexWrap"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "line": 239,
+        "snippet": "  },\n  errorBanner: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 6,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "line": 249,
+        "snippet": "  },\n  errorText: {\n    flex: 1,\n    fontSize: 13,\n    color: \"#B71C1C\",",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\DebugPanel.tsx",
+        "line": 197,
+        "snippet": "  },\n  header: {\n    flexDirection: \"row\",\n    justifyContent: \"space-between\",\n    alignItems: \"center\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\MosqueCard.tsx",
+        "line": 76,
+        "snippet": "const styles = StyleSheet.create({\n  card: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    backgroundColor: \"#fff\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\MosqueCard.tsx",
+        "line": 88,
+        "snippet": "  },\n  content: {\n    flex: 1,\n    marginRight: 8,\n  },",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\MosqueCard.tsx",
+        "line": 92,
+        "snippet": "  },\n  header: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 6,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\MosqueCard.tsx",
+        "line": 101,
+        "snippet": "    fontWeight: \"600\",\n    color: \"#222\",\n    flex: 1,\n  },\n  badges: {",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\MosqueCard.tsx",
+        "line": 104,
+        "snippet": "  },\n  badges: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 6,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\MosqueCard.tsx",
+        "line": 109,
+        "snippet": "  },\n  liveBadge: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 4,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\MosqueCard.tsx",
+        "line": 134,
+        "snippet": "  },\n  metaRow: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 8,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\MosqueCard.tsx",
+        "line": 139,
+        "snippet": "  },\n  distanceRow: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 4,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\MosqueMap.tsx",
+        "line": 64,
+        "snippet": "const styles = StyleSheet.create({\n  container: {\n    flex: 1,\n  },\n  map: {",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\MosqueMap.tsx",
+        "line": 67,
+        "snippet": "  },\n  map: {\n    flex: 1,\n  },\n});",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "line": 195,
+        "snippet": "  },\n  prayerHeader: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    justifyContent: \"space-between\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "line": 202,
+        "snippet": "  },\n  prayerHeaderLeft: {\n    flex: 1,\n  },\n  prayerName: {",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "line": 215,
+        "snippet": "  },\n  prayerHeaderRight: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 8,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "line": 235,
+        "snippet": "  },\n  leadTimeOptions: {\n    flexDirection: \"row\",\n    flexWrap: \"wrap\",\n    gap: 6,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "line": 236,
+        "snippet": "  leadTimeOptions: {\n    flexDirection: \"row\",\n    flexWrap: \"wrap\",\n    gap: 6,\n  },",
+        "token": "flexWrap"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "line": 261,
+        "snippet": "  },\n  typeOptions: {\n    flexDirection: \"row\",\n    flexWrap: \"wrap\",\n    gap: 6,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "line": 262,
+        "snippet": "  typeOptions: {\n    flexDirection: \"row\",\n    flexWrap: \"wrap\",\n    gap: 6,\n  },",
+        "token": "flexWrap"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "line": 287,
+        "snippet": "  },\n  noteContainer: {\n    flexDirection: \"row\",\n    gap: 6,\n    backgroundColor: \"#FFF3E0\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "line": 295,
+        "snippet": "  },\n  noteText: {\n    flex: 1,\n    fontSize: 13,\n    color: \"#E65100\",",
+        "token": "flex"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+        "line": 56,
+        "snippet": "const styles = StyleSheet.create({\n  card: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    justifyContent: \"space-between\",",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+        "line": 73,
+        "snippet": "  },\n  leftSection: {\n    flexDirection: \"row\",\n    alignItems: \"center\",\n    gap: 8,",
+        "token": "flexDirection"
+      },
+      {
+        "category": "flex",
+        "file": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+        "line": 98,
+        "snippet": "  },\n  timesSection: {\n    flexDirection: \"row\",\n    gap: 20,\n  },",
+        "token": "flexDirection"
+      }
+    ],
+    "overflow": [
+      {
+        "category": "overflow",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 391,
+        "snippet": "    borderRadius: 12,\n    marginTop: 4,\n    overflow: \"hidden\",\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },",
+        "token": "overflow"
+      },
+      {
+        "category": "overflow",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 605,
+        "snippet": "    backgroundColor: \"#fff\",\n    borderRadius: 12,\n    overflow: \"hidden\",\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },",
+        "token": "overflow"
+      },
+      {
+        "category": "overflow",
+        "file": "apps\\mobile\\components\\DebugPanel.tsx",
+        "line": 194,
+        "snippet": "    borderColor: \"#f59e0b\",\n    backgroundColor: \"#fffbeb\",\n    overflow: \"hidden\",\n  },\n  header: {",
+        "token": "overflow"
+      },
+      {
+        "category": "overflow",
+        "file": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "line": 183,
+        "snippet": "    backgroundColor: \"#fff\",\n    borderRadius: 12,\n    overflow: \"hidden\",\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },",
+        "token": "overflow"
+      },
+      {
+        "category": "overflow",
+        "file": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+        "line": 93,
+        "snippet": "    paddingVertical: 2,\n    borderRadius: 4,\n    overflow: \"hidden\",\n    textTransform: \"uppercase\",\n    letterSpacing: 0.5,",
+        "token": "overflow"
+      }
+    ],
+    "sizing": [
+      {
+        "category": "sizing",
+        "file": "apps\\admin\\src\\App.tsx",
+        "line": 13,
+        "snippet": "const layoutStyle: React.CSSProperties = {\n  display: \"flex\",\n  minHeight: \"100vh\",\n};\n",
+        "token": "minHeight"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\admin\\src\\App.tsx",
+        "line": 17,
+        "snippet": "\nconst sidebarStyle: React.CSSProperties = {\n  width: 220,\n  background: \"#1a1a2e\",\n  color: \"#eee\",",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\admin\\src\\App.tsx",
+        "line": 44,
+        "snippet": "function Login() {\n  return (\n    <div style={{ maxWidth: 400, margin: \"120px auto\", textAlign: \"center\" }}>\n      <h1>LiveAzan Admin</h1>\n      <p style={{ margin: \"16px 0\", color: \"#666\" }}>",
+        "token": "maxWidth"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\admin\\src\\App.tsx",
+        "line": 59,
+        "snippet": "          type=\"email\"\n          placeholder=\"admin@liveaszan.com\"\n          style={{ display: \"block\", width: \"100%\", padding: 10, marginBottom: 12, borderRadius: 6, border: \"1px solid #ccc\" }}\n        />\n        <input",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\admin\\src\\App.tsx",
+        "line": 64,
+        "snippet": "          type=\"password\"\n          placeholder=\"Password\"\n          style={{ display: \"block\", width: \"100%\", padding: 10, marginBottom: 16, borderRadius: 6, border: \"1px solid #ccc\" }}\n        />\n        <button",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\admin\\src\\App.tsx",
+        "line": 68,
+        "snippet": "        <button\n          type=\"submit\"\n          style={{ width: \"100%\", padding: 12, background: \"#16213e\", color: \"#fff\", border: \"none\", borderRadius: 6, cursor: \"pointer\", fontSize: 16 }}\n        >\n          Sign In",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\admin\\src\\App.tsx",
+        "line": 91,
+        "snippet": "        Manage registered mosques and their iqama schedules.\n      </p>\n      <table style={{ width: \"100%\", borderCollapse: \"collapse\" }}>\n        <thead>\n          <tr style={{ borderBottom: \"2px solid #ddd\", textAlign: \"left\" }}>",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\admin\\src\\App.tsx",
+        "line": 125,
+        "snippet": "        Users requesting mosque coverage in new areas.\n      </p>\n      <table style={{ width: \"100%\", borderCollapse: \"collapse\" }}>\n        <thead>\n          <tr style={{ borderBottom: \"2px solid #ddd\", textAlign: \"left\" }}>",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+        "line": 19,
+        "snippet": "  borderRadius: 6,\n  border: \"1px solid #ccc\",\n  width: 120,\n};\n",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+        "line": 117,
+        "snippet": "            value={selectedMosque}\n            onChange={(e) => setSelectedMosque(e.target.value)}\n            style={{ ...inputStyle, width: 260 }}\n          >\n            <option value=\"\">-- Select a mosque --</option>",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+        "line": 132,
+        "snippet": "        <form\n          onSubmit={handleSave}\n          style={{ background: \"#fff\", padding: 24, borderRadius: 8, boxShadow: \"0 1px 3px rgba(0,0,0,0.1)\", maxWidth: 500 }}\n        >\n          <h3 style={{ marginBottom: 16 }}>Prayer Times</h3>",
+        "token": "maxWidth"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\admin\\src\\pages\\StreamSetup.tsx",
+        "line": 8,
+        "snippet": "  padding: 32,\n  boxShadow: \"0 1px 3px rgba(0,0,0,0.1)\",\n  maxWidth: 600,\n  textAlign: \"center\",\n};",
+        "token": "maxWidth"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\admin\\src\\pages\\StreamSetup.tsx",
+        "line": 55,
+        "snippet": "          <p style={{ fontWeight: 600, marginBottom: 16 }}>Stream Configuration (mockup)</p>\n\n          <div style={{ textAlign: \"left\", maxWidth: 400, margin: \"0 auto\" }}>\n            <div style={{ padding: \"8px 0\", borderBottom: \"1px solid #eee\", display: \"flex\", justifyContent: \"space-between\" }}>\n              <span>Stream URL</span>",
+        "token": "maxWidth"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\app\\(auth)\\login.tsx",
+        "line": 186,
+        "snippet": "  dividerLine: {\n    flex: 1,\n    height: 1,\n    backgroundColor: \"#ddd\",\n  },",
+        "token": "height"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 340,
+        "snippet": "    padding: 16,\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 340,
+        "snippet": "    padding: 16,\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "height"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 351,
+        "snippet": "  },\n  avatar: {\n    width: 48,\n    height: 48,\n    borderRadius: 24,",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 352,
+        "snippet": "  avatar: {\n    width: 48,\n    height: 48,\n    borderRadius: 24,\n    backgroundColor: \"#1B5E20\",",
+        "token": "height"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 393,
+        "snippet": "    overflow: \"hidden\",\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "line": 393,
+        "snippet": "    overflow: \"hidden\",\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "height"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 509,
+        "snippet": "    gap: 12,\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 509,
+        "snippet": "    gap: 12,\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "height"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 533,
+        "snippet": "    marginBottom: 12,\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 533,
+        "snippet": "    marginBottom: 12,\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "height"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 607,
+        "snippet": "    overflow: \"hidden\",\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "line": 607,
+        "snippet": "    overflow: \"hidden\",\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "height"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "line": 135,
+        "snippet": "    margin: 16,\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 2 },\n    shadowOpacity: 0.1,\n    shadowRadius: 8,",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "line": 135,
+        "snippet": "    margin: 16,\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 2 },\n    shadowOpacity: 0.1,\n    shadowRadius: 8,",
+        "token": "height"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "line": 166,
+        "snippet": "  },\n  liveDot: {\n    width: 8,\n    height: 8,\n    borderRadius: 4,",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "line": 167,
+        "snippet": "  liveDot: {\n    width: 8,\n    height: 8,\n    borderRadius: 4,\n    backgroundColor: \"#D32F2F\",",
+        "token": "height"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "line": 184,
+        "snippet": "  },\n  playButton: {\n    width: 64,\n    height: 64,\n    borderRadius: 32,",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "line": 185,
+        "snippet": "  playButton: {\n    width: 64,\n    height: 64,\n    borderRadius: 32,\n    backgroundColor: \"#1B5E20\",",
+        "token": "height"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "line": 192,
+        "snippet": "  },\n  stopButton: {\n    width: 44,\n    height: 44,\n    borderRadius: 22,",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "line": 193,
+        "snippet": "  stopButton: {\n    width: 44,\n    height: 44,\n    borderRadius: 22,\n    backgroundColor: \"#FFEBEE\",",
+        "token": "height"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\DebugPanel.tsx",
+        "line": 241,
+        "snippet": "  },\n  logBox: {\n    maxHeight: 120,\n    backgroundColor: \"#1c1917\",\n    borderRadius: 4,",
+        "token": "maxHeight"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\MosqueCard.tsx",
+        "line": 82,
+        "snippet": "    padding: 16,\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\MosqueCard.tsx",
+        "line": 82,
+        "snippet": "    padding: 16,\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "height"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\MosqueCard.tsx",
+        "line": 118,
+        "snippet": "  },\n  liveDot: {\n    width: 6,\n    height: 6,\n    borderRadius: 3,",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\MosqueCard.tsx",
+        "line": 119,
+        "snippet": "  liveDot: {\n    width: 6,\n    height: 6,\n    borderRadius: 3,\n    backgroundColor: \"#D32F2F\",",
+        "token": "height"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "line": 185,
+        "snippet": "    overflow: \"hidden\",\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "line": 185,
+        "snippet": "    overflow: \"hidden\",\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "height"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+        "line": 64,
+        "snippet": "    paddingHorizontal: 16,\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "width"
+      },
+      {
+        "category": "sizing",
+        "file": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+        "line": 64,
+        "snippet": "    paddingHorizontal: 16,\n    shadowColor: \"#000\",\n    shadowOffset: { width: 0, height: 1 },\n    shadowOpacity: 0.05,\n    shadowRadius: 4,",
+        "token": "height"
+      }
+    ]
+  },
+  "by_file": {
+    "apps\\admin\\src\\App.tsx": [
+      "flex",
+      "flexDirection",
+      "maxWidth",
+      "minHeight",
+      "width"
+    ],
+    "apps\\admin\\src\\pages\\Dashboard.tsx": [
+      "flex",
+      "flexWrap"
+    ],
+    "apps\\admin\\src\\pages\\IqamaEditor.tsx": [
+      "maxWidth",
+      "width"
+    ],
+    "apps\\admin\\src\\pages\\StreamSetup.tsx": [
+      "maxWidth"
+    ],
+    "apps\\mobile\\app\\(auth)\\login.tsx": [
+      "flex",
+      "flexDirection",
+      "height"
+    ],
+    "apps\\mobile\\app\\(auth)\\register.tsx": [
+      "flex"
+    ],
+    "apps\\mobile\\app\\(tabs)\\index.tsx": [
+      "flex",
+      "flexDirection"
+    ],
+    "apps\\mobile\\app\\(tabs)\\mosques.tsx": [
+      "flex",
+      "flexDirection"
+    ],
+    "apps\\mobile\\app\\(tabs)\\settings.tsx": [
+      "flex",
+      "flexDirection",
+      "height",
+      "overflow",
+      "width"
+    ],
+    "apps\\mobile\\app\\_layout.tsx": [
+      "flex"
+    ],
+    "apps\\mobile\\app\\mosque\\[id].tsx": [
+      "flex",
+      "flexDirection",
+      "flexWrap",
+      "height",
+      "overflow",
+      "width"
+    ],
+    "apps\\mobile\\components\\AzanPlayer.tsx": [
+      "flex",
+      "flexDirection",
+      "flexWrap",
+      "height",
+      "width"
+    ],
+    "apps\\mobile\\components\\DebugPanel.tsx": [
+      "flexDirection",
+      "maxHeight",
+      "overflow"
+    ],
+    "apps\\mobile\\components\\MosqueCard.tsx": [
+      "flex",
+      "flexDirection",
+      "height",
+      "width"
+    ],
+    "apps\\mobile\\components\\MosqueMap.tsx": [
+      "flex"
+    ],
+    "apps\\mobile\\components\\NotificationSettings.tsx": [
+      "flex",
+      "flexDirection",
+      "flexWrap",
+      "height",
+      "overflow",
+      "width"
+    ],
+    "apps\\mobile\\components\\PrayerTimeCard.tsx": [
+      "flexDirection",
+      "height",
+      "overflow",
+      "width"
+    ]
+  },
+  "categories": {
+    "flex": 83,
+    "overflow": 5,
+    "sizing": 43
+  },
+  "schema": "zkme.layout_tokens.v1",
+  "total_tokens": 131
+}

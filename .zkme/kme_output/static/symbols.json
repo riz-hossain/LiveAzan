@@ -1,0 +1,5647 @@
+[
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 60,
+        "line_start": 59,
+        "path": "setup.py",
+        "symbol": "is_windows"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 60,
+    "line_start": 59,
+    "name": "is_windows",
+    "qualified_name": "is_windows",
+    "signature": "def is_windows()",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 64,
+        "line_start": 63,
+        "path": "setup.py",
+        "symbol": "is_mac"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 64,
+    "line_start": 63,
+    "name": "is_mac",
+    "qualified_name": "is_mac",
+    "signature": "def is_mac()",
+    "visibility": "public"
+  },
+  {
+    "docstring": "Run command, return stdout. Raises RuntimeError on failure if check=True.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 80,
+        "line_start": 67,
+        "path": "setup.py",
+        "symbol": "run"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 80,
+    "line_start": 67,
+    "name": "run",
+    "qualified_name": "run",
+    "signature": "def run(cmd, cwd, check, capture)",
+    "visibility": "public"
+  },
+  {
+    "docstring": "Run command with output shown to user.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 89,
+        "line_start": 83,
+        "path": "setup.py",
+        "symbol": "run_visible"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 89,
+    "line_start": 83,
+    "name": "run_visible",
+    "qualified_name": "run_visible",
+    "signature": "def run_visible(cmd, cwd, check, env)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 93,
+        "line_start": 92,
+        "path": "setup.py",
+        "symbol": "has_cmd"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 93,
+    "line_start": 92,
+    "name": "has_cmd",
+    "qualified_name": "has_cmd",
+    "signature": "def has_cmd(name)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 98,
+        "line_start": 96,
+        "path": "setup.py",
+        "symbol": "die"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 98,
+    "line_start": 96,
+    "name": "die",
+    "qualified_name": "die",
+    "signature": "def die(msg, code)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 102,
+        "line_start": 101,
+        "path": "setup.py",
+        "symbol": "info"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 102,
+    "line_start": 101,
+    "name": "info",
+    "qualified_name": "info",
+    "signature": "def info(msg)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 106,
+        "line_start": 105,
+        "path": "setup.py",
+        "symbol": "warn"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 106,
+    "line_start": 105,
+    "name": "warn",
+    "qualified_name": "warn",
+    "signature": "def warn(msg)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 113,
+        "line_start": 109,
+        "path": "setup.py",
+        "symbol": "header"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 113,
+    "line_start": 109,
+    "name": "header",
+    "qualified_name": "header",
+    "signature": "def header(msg)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 125,
+        "line_start": 116,
+        "path": "setup.py",
+        "symbol": "ask_yes_no"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 125,
+    "line_start": 116,
+    "name": "ask_yes_no",
+    "qualified_name": "ask_yes_no",
+    "signature": "def ask_yes_no(prompt, default)",
+    "visibility": "public"
+  },
+  {
+    "docstring": "Detect docker compose v2 plugin or docker-compose v1 standalone.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 159,
+        "line_start": 130,
+        "path": "setup.py",
+        "symbol": "detect_compose"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 159,
+    "line_start": 130,
+    "name": "detect_compose",
+    "qualified_name": "detect_compose",
+    "signature": "def detect_compose()",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 170,
+        "line_start": 162,
+        "path": "setup.py",
+        "symbol": "docker_running"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 170,
+    "line_start": 162,
+    "name": "docker_running",
+    "qualified_name": "docker_running",
+    "signature": "def docker_running()",
+    "visibility": "public"
+  },
+  {
+    "docstring": "Wait for Docker daemon; try to auto-start it.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 217,
+        "line_start": 173,
+        "path": "setup.py",
+        "symbol": "wait_docker"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 217,
+    "line_start": 173,
+    "name": "wait_docker",
+    "qualified_name": "wait_docker",
+    "signature": "def wait_docker(timeout_sec)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 225,
+        "line_start": 222,
+        "path": "setup.py",
+        "symbol": "windows_check_virtualization"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 225,
+    "line_start": 222,
+    "name": "windows_check_virtualization",
+    "qualified_name": "windows_check_virtualization",
+    "signature": "def windows_check_virtualization()",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 270,
+        "line_start": 228,
+        "path": "setup.py",
+        "symbol": "_check_hyperv_virtualization"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 270,
+    "line_start": 228,
+    "name": "_check_hyperv_virtualization",
+    "qualified_name": "_check_hyperv_virtualization",
+    "signature": "def _check_hyperv_virtualization()",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 300,
+        "line_start": 273,
+        "path": "setup.py",
+        "symbol": "_ensure_wsl2_features"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 300,
+    "line_start": 273,
+    "name": "_ensure_wsl2_features",
+    "qualified_name": "_ensure_wsl2_features",
+    "signature": "def _ensure_wsl2_features()",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 317,
+        "line_start": 303,
+        "path": "setup.py",
+        "symbol": "_check_wsl_installed"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 317,
+    "line_start": 303,
+    "name": "_check_wsl_installed",
+    "qualified_name": "_check_wsl_installed",
+    "signature": "def _check_wsl_installed()",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 329,
+        "line_start": 320,
+        "path": "setup.py",
+        "symbol": "windows_check_docker_backend"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 329,
+    "line_start": 320,
+    "name": "windows_check_docker_backend",
+    "qualified_name": "windows_check_docker_backend",
+    "signature": "def windows_check_docker_backend()",
+    "visibility": "public"
+  },
+  {
+    "docstring": "Create .env.local from example if missing.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 357,
+        "line_start": 334,
+        "path": "setup.py",
+        "symbol": "ensure_env_local"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 357,
+    "line_start": 334,
+    "name": "ensure_env_local",
+    "qualified_name": "ensure_env_local",
+    "signature": "def ensure_env_local(repo)",
+    "visibility": "public"
+  },
+  {
+    "docstring": "Ensure .env.prod exists for production.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 378,
+        "line_start": 360,
+        "path": "setup.py",
+        "symbol": "ensure_env_prod"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 378,
+    "line_start": 360,
+    "name": "ensure_env_prod",
+    "qualified_name": "ensure_env_prod",
+    "signature": "def ensure_env_prod(repo)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 388,
+        "line_start": 383,
+        "path": "setup.py",
+        "symbol": "compose_local"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 388,
+    "line_start": 383,
+    "name": "compose_local",
+    "qualified_name": "compose_local",
+    "signature": "def compose_local(repo)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 396,
+        "line_start": 391,
+        "path": "setup.py",
+        "symbol": "compose_prod"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 396,
+    "line_start": 391,
+    "name": "compose_prod",
+    "qualified_name": "compose_prod",
+    "signature": "def compose_prod(repo)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 400,
+        "line_start": 399,
+        "path": "setup.py",
+        "symbol": "get_compose_prefix"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 400,
+    "line_start": 399,
+    "name": "get_compose_prefix",
+    "qualified_name": "get_compose_prefix",
+    "signature": "def get_compose_prefix(repo, mode)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 407,
+        "line_start": 405,
+        "path": "setup.py",
+        "symbol": "compose_up"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 407,
+    "line_start": 405,
+    "name": "compose_up",
+    "qualified_name": "compose_up",
+    "signature": "def compose_up(repo, mode)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 419,
+        "line_start": 410,
+        "path": "setup.py",
+        "symbol": "compose_down"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 419,
+    "line_start": 410,
+    "name": "compose_down",
+    "qualified_name": "compose_down",
+    "signature": "def compose_down(repo, mode, wipe_volumes)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 431,
+        "line_start": 422,
+        "path": "setup.py",
+        "symbol": "compose_status"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 431,
+    "line_start": 422,
+    "name": "compose_status",
+    "qualified_name": "compose_status",
+    "signature": "def compose_status(repo, mode)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 437,
+        "line_start": 436,
+        "path": "setup.py",
+        "symbol": "_pid_file"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 437,
+    "line_start": 436,
+    "name": "_pid_file",
+    "qualified_name": "_pid_file",
+    "signature": "def _pid_file(repo)",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 452,
+        "line_start": 440,
+        "path": "setup.py",
+        "symbol": "_is_process_running"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 452,
+    "line_start": 440,
+    "name": "_is_process_running",
+    "qualified_name": "_is_process_running",
+    "signature": "def _is_process_running(pid)",
+    "visibility": "private"
+  },
+  {
+    "docstring": "Start the Vite dev server as a background process.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 497,
+        "line_start": 455,
+        "path": "setup.py",
+        "symbol": "start_admin"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 497,
+    "line_start": 455,
+    "name": "start_admin",
+    "qualified_name": "start_admin",
+    "signature": "def start_admin(repo)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 523,
+        "line_start": 500,
+        "path": "setup.py",
+        "symbol": "stop_admin"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 523,
+    "line_start": 500,
+    "name": "stop_admin",
+    "qualified_name": "stop_admin",
+    "signature": "def stop_admin(repo, quiet)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 540,
+        "line_start": 526,
+        "path": "setup.py",
+        "symbol": "admin_status"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 540,
+    "line_start": 526,
+    "name": "admin_status",
+    "qualified_name": "admin_status",
+    "signature": "def admin_status(repo)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 554,
+        "line_start": 545,
+        "path": "setup.py",
+        "symbol": "_get_local_ip"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 554,
+    "line_start": 545,
+    "name": "_get_local_ip",
+    "qualified_name": "_get_local_ip",
+    "signature": "def _get_local_ip()",
+    "visibility": "private"
+  },
+  {
+    "docstring": "Write apps/mobile/.env with the machine's LAN IP for Expo dev.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 571,
+        "line_start": 557,
+        "path": "setup.py",
+        "symbol": "ensure_mobile_env"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 571,
+    "line_start": 557,
+    "name": "ensure_mobile_env",
+    "qualified_name": "ensure_mobile_env",
+    "signature": "def ensure_mobile_env(repo)",
+    "visibility": "public"
+  },
+  {
+    "docstring": "Merge /data/mosques/**/*.json into the mobile app's bundled asset.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 583,
+        "line_start": 576,
+        "path": "setup.py",
+        "symbol": "generate_mosque_bundle"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 583,
+    "line_start": 576,
+    "name": "generate_mosque_bundle",
+    "qualified_name": "generate_mosque_bundle",
+    "signature": "def generate_mosque_bundle(repo)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 591,
+        "line_start": 586,
+        "path": "setup.py",
+        "symbol": "cmd_generate_data"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 591,
+    "line_start": 586,
+    "name": "cmd_generate_data",
+    "qualified_name": "cmd_generate_data",
+    "signature": "def cmd_generate_data(repo)",
+    "visibility": "public"
+  },
+  {
+    "docstring": "Upfront checks for Node, npm, Java, and Android SDK before any build work.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 678,
+        "line_start": 596,
+        "path": "setup.py",
+        "symbol": "_check_android_prerequisites"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 678,
+    "line_start": 596,
+    "name": "_check_android_prerequisites",
+    "qualified_name": "_check_android_prerequisites",
+    "signature": "def _check_android_prerequisites()",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 705,
+        "line_start": 681,
+        "path": "setup.py",
+        "symbol": "_stop_gradle_daemons"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 705,
+    "line_start": 681,
+    "name": "_stop_gradle_daemons",
+    "qualified_name": "_stop_gradle_daemons",
+    "signature": "def _stop_gradle_daemons(android_dir)",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 726,
+        "line_start": 708,
+        "path": "setup.py",
+        "symbol": "_clean_gradle_caches"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 726,
+    "line_start": 708,
+    "name": "_clean_gradle_caches",
+    "qualified_name": "_clean_gradle_caches",
+    "signature": "def _clean_gradle_caches(android_dir, nuke_global)",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 746,
+        "line_start": 729,
+        "path": "setup.py",
+        "symbol": "_ensure_mobile_deps"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 746,
+    "line_start": 729,
+    "name": "_ensure_mobile_deps",
+    "qualified_name": "_ensure_mobile_deps",
+    "signature": "def _ensure_mobile_deps(app_dir, fresh)",
+    "visibility": "private"
+  },
+  {
+    "docstring": "Fix MissingPropertyException for 'components.release' in ExpoModulesCorePlugin.gradle.\nAGP 8.3 (used by React Native 0.74) registers the release SoftwareComponent later\nin the lifecycle than AGP 8.1, ",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 771,
+        "line_start": 750,
+        "path": "setup.py",
+        "symbol": "_patch_expo_modules_core_gradle"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 771,
+    "line_start": 750,
+    "name": "_patch_expo_modules_core_gradle",
+    "qualified_name": "_patch_expo_modules_core_gradle",
+    "signature": "def _patch_expo_modules_core_gradle(app_dir)",
+    "visibility": "private"
+  },
+  {
+    "docstring": "Pin Gradle wrapper to exactly 8.7.\n- Gradle \u00e2\u2030\u00a48.6 ships with ASM 9.5 which crashes on kotlin-compiler-embeddable\n  1.9.24 class files (ArrayIndexOutOfBoundsException in ClassReader).\n- Gradle 8.7 shi",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 803,
+        "line_start": 774,
+        "path": "setup.py",
+        "symbol": "_patch_gradle_wrapper"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 803,
+    "line_start": 774,
+    "name": "_patch_gradle_wrapper",
+    "qualified_name": "_patch_gradle_wrapper",
+    "signature": "def _patch_gradle_wrapper(android_dir)",
+    "visibility": "private"
+  },
+  {
+    "docstring": "On Windows, downgrade NDK 26.1.10909125 \u00e2\u2020\u2019 25.1.8937393.\n\nNDK 26.1 ships with a broken ld.lld.exe on Windows that fails with\n'Unknown error (0xC1)' when linking any C/C++ code (e.g. expo-av,\nexpo-mod",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 832,
+        "line_start": 806,
+        "path": "setup.py",
+        "symbol": "_patch_ndk_version"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 832,
+    "line_start": 806,
+    "name": "_patch_ndk_version",
+    "qualified_name": "_patch_ndk_version",
+    "signature": "def _patch_ndk_version(android_dir)",
+    "visibility": "private"
+  },
+  {
+    "docstring": "Scan settings.gradle for includeBuild entries and verify each path exists.\nEmits clear diagnostics so the cause of 'Included build does not exist' errors\nis visible before Gradle even starts.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 855,
+        "line_start": 835,
+        "path": "setup.py",
+        "symbol": "_preflight_check_settings_gradle"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 855,
+    "line_start": 835,
+    "name": "_preflight_check_settings_gradle",
+    "qualified_name": "_preflight_check_settings_gradle",
+    "signature": "def _preflight_check_settings_gradle(android_dir)",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 878,
+        "line_start": 858,
+        "path": "setup.py",
+        "symbol": "_ensure_expo_prebuild"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 878,
+    "line_start": 858,
+    "name": "_ensure_expo_prebuild",
+    "qualified_name": "_ensure_expo_prebuild",
+    "signature": "def _ensure_expo_prebuild(app_dir, clean)",
+    "visibility": "private"
+  },
+  {
+    "docstring": "Patch AndroidManifest.xml to allow plain HTTP for local dev.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 896,
+        "line_start": 881,
+        "path": "setup.py",
+        "symbol": "_ensure_cleartext_traffic"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 896,
+    "line_start": 881,
+    "name": "_ensure_cleartext_traffic",
+    "qualified_name": "_ensure_cleartext_traffic",
+    "signature": "def _ensure_cleartext_traffic(app_dir)",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 906,
+        "line_start": 899,
+        "path": "setup.py",
+        "symbol": "_clean_stale_outputs"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 906,
+    "line_start": 899,
+    "name": "_clean_stale_outputs",
+    "qualified_name": "_clean_stale_outputs",
+    "signature": "def _clean_stale_outputs(app_dir)",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 913,
+        "line_start": 909,
+        "path": "setup.py",
+        "symbol": "_find_apk"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 913,
+    "line_start": 909,
+    "name": "_find_apk",
+    "qualified_name": "_find_apk",
+    "signature": "def _find_apk(outputs_dir)",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 923,
+        "line_start": 916,
+        "path": "setup.py",
+        "symbol": "_java_major_from"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 923,
+    "line_start": 916,
+    "name": "_java_major_from",
+    "qualified_name": "_java_major_from",
+    "signature": "def _java_major_from(java_exe)",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 935,
+        "line_start": 926,
+        "path": "setup.py",
+        "symbol": "_detect_agp_version"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 935,
+    "line_start": 926,
+    "name": "_detect_agp_version",
+    "qualified_name": "_detect_agp_version",
+    "signature": "def _detect_agp_version(android_dir)",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 985,
+        "line_start": 938,
+        "path": "setup.py",
+        "symbol": "_select_jdk_for_android"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 985,
+    "line_start": 938,
+    "name": "_select_jdk_for_android",
+    "qualified_name": "_select_jdk_for_android",
+    "signature": "def _select_jdk_for_android(android_dir)",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 1002,
+        "line_start": 988,
+        "path": "setup.py",
+        "symbol": "_run_streaming"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 1002,
+    "line_start": 988,
+    "name": "_run_streaming",
+    "qualified_name": "_run_streaming",
+    "signature": "def _run_streaming(cmd, cwd, env)",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 1021,
+        "line_start": 1005,
+        "path": "setup.py",
+        "symbol": "_gradle_build_with_retry"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 1021,
+    "line_start": 1005,
+    "name": "_gradle_build_with_retry",
+    "qualified_name": "_gradle_build_with_retry",
+    "signature": "def _gradle_build_with_retry(android_dir, base_cmd, env)",
+    "visibility": "private"
+  },
+  {
+    "docstring": "Build Android APK for the mobile app.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 1104,
+        "line_start": 1024,
+        "path": "setup.py",
+        "symbol": "cmd_android"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 1104,
+    "line_start": 1024,
+    "name": "cmd_android",
+    "qualified_name": "cmd_android",
+    "signature": "def cmd_android(repo, fresh, nuke_gradle)",
+    "visibility": "public"
+  },
+  {
+    "docstring": "Read a single key from a .env file.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 1118,
+        "line_start": 1109,
+        "path": "setup.py",
+        "symbol": "_read_env_value"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 1118,
+    "line_start": 1109,
+    "name": "_read_env_value",
+    "qualified_name": "_read_env_value",
+    "signature": "def _read_env_value(env_file, key)",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 1134,
+        "line_start": 1121,
+        "path": "setup.py",
+        "symbol": "print_admin_credentials"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 1134,
+    "line_start": 1121,
+    "name": "print_admin_credentials",
+    "qualified_name": "print_admin_credentials",
+    "signature": "def print_admin_credentials(repo, mode)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 1184,
+        "line_start": 1139,
+        "path": "setup.py",
+        "symbol": "cmd_up"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 1184,
+    "line_start": 1139,
+    "name": "cmd_up",
+    "qualified_name": "cmd_up",
+    "signature": "def cmd_up(repo, mode)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 1201,
+        "line_start": 1187,
+        "path": "setup.py",
+        "symbol": "cmd_restart"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 1201,
+    "line_start": 1187,
+    "name": "cmd_restart",
+    "qualified_name": "cmd_restart",
+    "signature": "def cmd_restart(repo, mode)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 1212,
+        "line_start": 1204,
+        "path": "setup.py",
+        "symbol": "cmd_down"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 1212,
+    "line_start": 1204,
+    "name": "cmd_down",
+    "qualified_name": "cmd_down",
+    "signature": "def cmd_down(repo)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 1241,
+        "line_start": 1215,
+        "path": "setup.py",
+        "symbol": "cmd_clean"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 1241,
+    "line_start": 1215,
+    "name": "cmd_clean",
+    "qualified_name": "cmd_clean",
+    "signature": "def cmd_clean(repo)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 1250,
+        "line_start": 1244,
+        "path": "setup.py",
+        "symbol": "cmd_status"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 1250,
+    "line_start": 1244,
+    "name": "cmd_status",
+    "qualified_name": "cmd_status",
+    "signature": "def cmd_status(repo)",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 1308,
+        "line_start": 1253,
+        "path": "setup.py",
+        "symbol": "show_help"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 1308,
+    "line_start": 1253,
+    "name": "show_help",
+    "qualified_name": "show_help",
+    "signature": "def show_help()",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 1389,
+        "line_start": 1313,
+        "path": "setup.py",
+        "symbol": "main"
+      }
+    ],
+    "file_path": "setup.py",
+    "kind": "function",
+    "line_end": 1389,
+    "line_start": 1313,
+    "name": "main",
+    "qualified_name": "main",
+    "signature": "def main()",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 42,
+        "path": "apps\\admin\\src\\App.tsx",
+        "symbol": "Login"
+      }
+    ],
+    "file_path": "apps\\admin\\src\\App.tsx",
+    "kind": "component",
+    "line_start": 42,
+    "name": "Login",
+    "qualified_name": "Login"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 77,
+        "path": "apps\\admin\\src\\App.tsx",
+        "symbol": "MosqueList"
+      }
+    ],
+    "file_path": "apps\\admin\\src\\App.tsx",
+    "kind": "component",
+    "line_start": 77,
+    "name": "MosqueList",
+    "qualified_name": "MosqueList"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 117,
+        "path": "apps\\admin\\src\\App.tsx",
+        "symbol": "CoverageRequests"
+      }
+    ],
+    "file_path": "apps\\admin\\src\\App.tsx",
+    "kind": "component",
+    "line_start": 117,
+    "name": "CoverageRequests",
+    "qualified_name": "CoverageRequests"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 162,
+        "path": "apps\\admin\\src\\App.tsx",
+        "symbol": "AdminLayout"
+      }
+    ],
+    "file_path": "apps\\admin\\src\\App.tsx",
+    "kind": "component",
+    "line_start": 162,
+    "name": "AdminLayout",
+    "qualified_name": "AdminLayout"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "apps\\admin\\src\\pages\\Dashboard.tsx",
+        "symbol": "Stats"
+      }
+    ],
+    "file_path": "apps\\admin\\src\\pages\\Dashboard.tsx",
+    "kind": "type",
+    "line_start": 3,
+    "name": "Stats",
+    "qualified_name": "Stats"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 4,
+        "path": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+        "symbol": "IqamaFormData"
+      }
+    ],
+    "file_path": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+    "kind": "type",
+    "line_start": 4,
+    "name": "IqamaFormData",
+    "qualified_name": "IqamaFormData"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 13,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+        "symbol": "MainActivity"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+    "kind": "class",
+    "line_start": 13,
+    "name": "MainActivity",
+    "qualified_name": "MainActivity"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 14,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+        "symbol": "onCreate"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+    "kind": "method",
+    "line_start": 14,
+    "name": "onCreate",
+    "qualified_name": "onCreate"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 18,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+        "symbol": "setTheme"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+    "kind": "method",
+    "line_start": 18,
+    "name": "setTheme",
+    "qualified_name": "setTheme"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 26,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+        "symbol": "getMainComponentName"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+    "kind": "method",
+    "line_start": 26,
+    "name": "getMainComponentName",
+    "qualified_name": "getMainComponentName"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 32,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+        "symbol": "createReactActivityDelegate"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+    "kind": "method",
+    "line_start": 32,
+    "name": "createReactActivityDelegate",
+    "qualified_name": "createReactActivityDelegate"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 33,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+        "symbol": "ReactActivityDelegateWrapper"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+    "kind": "method",
+    "line_start": 33,
+    "name": "ReactActivityDelegateWrapper",
+    "qualified_name": "ReactActivityDelegateWrapper"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 48,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+        "symbol": "invokeDefaultOnBackPressed"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+    "kind": "method",
+    "line_start": 48,
+    "name": "invokeDefaultOnBackPressed",
+    "qualified_name": "invokeDefaultOnBackPressed"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 18,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+        "symbol": "MainApplication"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+    "kind": "class",
+    "line_start": 18,
+    "name": "MainApplication",
+    "qualified_name": "MainApplication"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 23,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+        "symbol": "getPackages"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+    "kind": "method",
+    "line_start": 23,
+    "name": "getPackages",
+    "qualified_name": "getPackages"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 26,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+        "symbol": "PackageList"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+    "kind": "method",
+    "line_start": 26,
+    "name": "PackageList",
+    "qualified_name": "PackageList"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 28,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+        "symbol": "getJSMainModuleName"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+    "kind": "method",
+    "line_start": 28,
+    "name": "getJSMainModuleName",
+    "qualified_name": "getJSMainModuleName"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 30,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+        "symbol": "getUseDeveloperSupport"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+    "kind": "method",
+    "line_start": 30,
+    "name": "getUseDeveloperSupport",
+    "qualified_name": "getUseDeveloperSupport"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 39,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+        "symbol": "get"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+    "kind": "method",
+    "line_start": 39,
+    "name": "get",
+    "qualified_name": "get"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 40,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+        "symbol": "onCreate"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+    "kind": "method",
+    "line_start": 40,
+    "name": "onCreate",
+    "qualified_name": "onCreate"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 46,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+        "symbol": "load"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+    "kind": "method",
+    "line_start": 46,
+    "name": "load",
+    "qualified_name": "load"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 50,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+        "symbol": "onConfigurationChanged"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+    "kind": "method",
+    "line_start": 50,
+    "name": "onConfigurationChanged",
+    "qualified_name": "onConfigurationChanged"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 4,
+        "path": "apps\\mobile\\android\\react-settings-plugin\\build.gradle.kts",
+        "symbol": "kotlin"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\react-settings-plugin\\build.gradle.kts",
+    "kind": "method",
+    "line_start": 4,
+    "name": "kotlin",
+    "qualified_name": "kotlin"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 5,
+        "path": "apps\\mobile\\android\\react-settings-plugin\\build.gradle.kts",
+        "symbol": "id"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\react-settings-plugin\\build.gradle.kts",
+    "kind": "method",
+    "line_start": 5,
+    "name": "id",
+    "qualified_name": "id"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 9,
+        "path": "apps\\mobile\\android\\react-settings-plugin\\build.gradle.kts",
+        "symbol": "mavenCentral"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\react-settings-plugin\\build.gradle.kts",
+    "kind": "method",
+    "line_start": 9,
+    "name": "mavenCentral",
+    "qualified_name": "mavenCentral"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 14,
+        "path": "apps\\mobile\\android\\react-settings-plugin\\build.gradle.kts",
+        "symbol": "create"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\react-settings-plugin\\build.gradle.kts",
+    "kind": "method",
+    "line_start": 14,
+    "name": "create",
+    "qualified_name": "create"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 6,
+        "path": "apps\\mobile\\android\\react-settings-plugin\\src\\main\\kotlin\\expo\\plugins\\ReactSettingsPlugin.kt",
+        "symbol": "ReactSettingsPlugin"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\react-settings-plugin\\src\\main\\kotlin\\expo\\plugins\\ReactSettingsPlugin.kt",
+    "kind": "class",
+    "line_start": 6,
+    "name": "ReactSettingsPlugin",
+    "qualified_name": "ReactSettingsPlugin"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "low",
+        "line_start": 7,
+        "path": "apps\\mobile\\android\\react-settings-plugin\\src\\main\\kotlin\\expo\\plugins\\ReactSettingsPlugin.kt",
+        "symbol": "apply"
+      }
+    ],
+    "file_path": "apps\\mobile\\android\\react-settings-plugin\\src\\main\\kotlin\\expo\\plugins\\ReactSettingsPlugin.kt",
+    "kind": "method",
+    "line_start": 7,
+    "name": "apply",
+    "qualified_name": "apply"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 21,
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+        "symbol": "deduplicateMosques"
+      }
+    ],
+    "file_path": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+    "kind": "function",
+    "line_start": 21,
+    "name": "deduplicateMosques",
+    "qualified_name": "deduplicateMosques"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 19,
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+        "symbol": "ViewMode"
+      }
+    ],
+    "file_path": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+    "kind": "type",
+    "line_start": 19,
+    "name": "ViewMode",
+    "qualified_name": "ViewMode"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 67,
+        "path": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "symbol": "staleness"
+      }
+    ],
+    "file_path": "apps\\mobile\\app\\mosque\\[id].tsx",
+    "kind": "function",
+    "line_start": 67,
+    "name": "staleness",
+    "qualified_name": "staleness"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 14,
+        "path": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "symbol": "AzanPlayer"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\AzanPlayer.tsx",
+    "kind": "component",
+    "line_start": 14,
+    "name": "AzanPlayer",
+    "qualified_name": "AzanPlayer"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 6,
+        "path": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "symbol": "AzanPlayerProps"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\AzanPlayer.tsx",
+    "kind": "type",
+    "line_start": 6,
+    "name": "AzanPlayerProps",
+    "qualified_name": "AzanPlayerProps"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 39,
+        "path": "apps\\mobile\\components\\DebugPanel.tsx",
+        "symbol": "DebugPanel"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\DebugPanel.tsx",
+    "kind": "component",
+    "line_start": 39,
+    "name": "DebugPanel",
+    "qualified_name": "DebugPanel"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 25,
+        "path": "apps\\mobile\\components\\DebugPanel.tsx",
+        "symbol": "SourceResult"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\DebugPanel.tsx",
+    "kind": "type",
+    "line_start": 25,
+    "name": "SourceResult",
+    "qualified_name": "SourceResult"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 32,
+        "path": "apps\\mobile\\components\\DebugPanel.tsx",
+        "symbol": "Props"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\DebugPanel.tsx",
+    "kind": "type",
+    "line_start": 32,
+    "name": "Props",
+    "qualified_name": "Props"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 10,
+        "path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+        "symbol": "getTimeUntilMs"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+    "kind": "function",
+    "line_start": 10,
+    "name": "getTimeUntilMs",
+    "qualified_name": "getTimeUntilMs"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 24,
+        "path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+        "symbol": "formatCountdown"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+    "kind": "function",
+    "line_start": 24,
+    "name": "formatCountdown",
+    "qualified_name": "formatCountdown"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 38,
+        "path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+        "symbol": "IqamaCountdown"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+    "kind": "component",
+    "line_start": 38,
+    "name": "IqamaCountdown",
+    "qualified_name": "IqamaCountdown"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 4,
+        "path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+        "symbol": "IqamaCountdownProps"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+    "kind": "type",
+    "line_start": 4,
+    "name": "IqamaCountdownProps",
+    "qualified_name": "IqamaCountdownProps"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 11,
+        "path": "apps\\mobile\\components\\MosqueCard.tsx",
+        "symbol": "getSourceInfo"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\MosqueCard.tsx",
+    "kind": "function",
+    "line_start": 11,
+    "name": "getSourceInfo",
+    "qualified_name": "getSourceInfo"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 20,
+        "path": "apps\\mobile\\components\\MosqueCard.tsx",
+        "symbol": "MosqueCard"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\MosqueCard.tsx",
+    "kind": "component",
+    "line_start": 20,
+    "name": "MosqueCard",
+    "qualified_name": "MosqueCard"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 6,
+        "path": "apps\\mobile\\components\\MosqueCard.tsx",
+        "symbol": "MosqueCardProps"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\MosqueCard.tsx",
+    "kind": "type",
+    "line_start": 6,
+    "name": "MosqueCardProps",
+    "qualified_name": "MosqueCardProps"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 12,
+        "path": "apps\\mobile\\components\\MosqueMap.tsx",
+        "symbol": "MosqueMap"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\MosqueMap.tsx",
+    "kind": "component",
+    "line_start": 12,
+    "name": "MosqueMap",
+    "qualified_name": "MosqueMap"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 6,
+        "path": "apps\\mobile\\components\\MosqueMap.tsx",
+        "symbol": "MosqueMapProps"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\MosqueMap.tsx",
+    "kind": "type",
+    "line_start": 6,
+    "name": "MosqueMapProps",
+    "qualified_name": "MosqueMapProps"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 45,
+        "path": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "symbol": "NotificationSettings"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\NotificationSettings.tsx",
+    "kind": "component",
+    "line_start": 45,
+    "name": "NotificationSettings",
+    "qualified_name": "NotificationSettings"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 16,
+        "path": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "symbol": "NotificationSettingsProps"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\NotificationSettings.tsx",
+    "kind": "type",
+    "line_start": 16,
+    "name": "NotificationSettingsProps",
+    "qualified_name": "NotificationSettingsProps"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 12,
+        "path": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+        "symbol": "PrayerTimeCard"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+    "kind": "component",
+    "line_start": 12,
+    "name": "PrayerTimeCard",
+    "qualified_name": "PrayerTimeCard"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 4,
+        "path": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+        "symbol": "PrayerTimeCardProps"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+    "kind": "type",
+    "line_start": 4,
+    "name": "PrayerTimeCardProps",
+    "qualified_name": "PrayerTimeCardProps"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 65,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "loginApi"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "function",
+    "line_start": 65,
+    "name": "loginApi",
+    "qualified_name": "loginApi"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 75,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "registerApi"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "function",
+    "line_start": 75,
+    "name": "registerApi",
+    "qualified_name": "registerApi"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 91,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "oauthLoginApi"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "function",
+    "line_start": 91,
+    "name": "oauthLoginApi",
+    "qualified_name": "oauthLoginApi"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 110,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "fetchMosquesNearby"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "function",
+    "line_start": 110,
+    "name": "fetchMosquesNearby",
+    "qualified_name": "fetchMosquesNearby"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 120,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "fetchMosqueById"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "function",
+    "line_start": 120,
+    "name": "fetchMosqueById",
+    "qualified_name": "fetchMosqueById"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 124,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "fetchIqama"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "function",
+    "line_start": 124,
+    "name": "fetchIqama",
+    "qualified_name": "fetchIqama"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 130,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "followMosque"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "function",
+    "line_start": 130,
+    "name": "followMosque",
+    "qualified_name": "followMosque"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 140,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "unfollowMosque"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "function",
+    "line_start": 140,
+    "name": "unfollowMosque",
+    "qualified_name": "unfollowMosque"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 148,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "fetchPrayerTimesApi"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "function",
+    "line_start": 148,
+    "name": "fetchPrayerTimesApi",
+    "qualified_name": "fetchPrayerTimesApi"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 166,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "updateProfile"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "function",
+    "line_start": 166,
+    "name": "updateProfile",
+    "qualified_name": "updateProfile"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 175,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "fetchPrayerPrefs"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "function",
+    "line_start": 175,
+    "name": "fetchPrayerPrefs",
+    "qualified_name": "fetchPrayerPrefs"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 179,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "updatePrayerPrefs"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "function",
+    "line_start": 179,
+    "name": "updatePrayerPrefs",
+    "qualified_name": "updatePrayerPrefs"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 191,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "requestCoverage"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "function",
+    "line_start": 191,
+    "name": "requestCoverage",
+    "qualified_name": "requestCoverage"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 201,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "fetchCoverageRequests"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "function",
+    "line_start": 201,
+    "name": "fetchCoverageRequests",
+    "qualified_name": "fetchCoverageRequests"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 33,
+        "path": "apps\\mobile\\services\\azanAudio.ts",
+        "symbol": "configureAudioSession"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\azanAudio.ts",
+    "kind": "function",
+    "line_start": 33,
+    "name": "configureAudioSession",
+    "qualified_name": "configureAudioSession"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 45,
+        "path": "apps\\mobile\\services\\azanAudio.ts",
+        "symbol": "playAzan"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\azanAudio.ts",
+    "kind": "function",
+    "line_start": 45,
+    "name": "playAzan",
+    "qualified_name": "playAzan"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 79,
+        "path": "apps\\mobile\\services\\azanAudio.ts",
+        "symbol": "stopAzan"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\azanAudio.ts",
+    "kind": "function",
+    "line_start": 79,
+    "name": "stopAzan",
+    "qualified_name": "stopAzan"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 93,
+        "path": "apps\\mobile\\services\\azanAudio.ts",
+        "symbol": "isPlaying"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\azanAudio.ts",
+    "kind": "function",
+    "line_start": 93,
+    "name": "isPlaying",
+    "qualified_name": "isPlaying"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 15,
+        "path": "apps\\mobile\\services\\azanAudio.ts",
+        "symbol": "AzanSoundId"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\azanAudio.ts",
+    "kind": "type",
+    "line_start": 15,
+    "name": "AzanSoundId",
+    "qualified_name": "AzanSoundId"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 37,
+        "path": "apps\\mobile\\services\\cache.ts",
+        "symbol": "getCachedTimestamp"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\cache.ts",
+    "kind": "function",
+    "line_start": 37,
+    "name": "getCachedTimestamp",
+    "qualified_name": "getCachedTimestamp"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 48,
+        "path": "apps\\mobile\\services\\cache.ts",
+        "symbol": "clearCached"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\cache.ts",
+    "kind": "function",
+    "line_start": 48,
+    "name": "clearCached",
+    "qualified_name": "clearCached"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 8,
+        "path": "apps\\mobile\\services\\cache.ts",
+        "symbol": "CacheEntry"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\cache.ts",
+    "kind": "type",
+    "line_start": 8,
+    "name": "CacheEntry",
+    "qualified_name": "CacheEntry"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 63,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+        "symbol": "discoverNearbyIqama"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "kind": "function",
+    "line_start": 63,
+    "name": "discoverNearbyIqama",
+    "qualified_name": "discoverNearbyIqama"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 220,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+        "symbol": "refreshSingleMosqueIqama"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "kind": "function",
+    "line_start": 220,
+    "name": "refreshSingleMosqueIqama",
+    "qualified_name": "refreshSingleMosqueIqama"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 292,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+        "symbol": "scrapeWebsiteIqama"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "kind": "function",
+    "line_start": 292,
+    "name": "scrapeWebsiteIqama",
+    "qualified_name": "scrapeWebsiteIqama"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 325,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+        "symbol": "parseIqamaFromText"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "kind": "function",
+    "line_start": 325,
+    "name": "parseIqamaFromText",
+    "qualified_name": "parseIqamaFromText"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 361,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+        "symbol": "parseServicesFromText"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "kind": "function",
+    "line_start": 361,
+    "name": "parseServicesFromText",
+    "qualified_name": "parseServicesFromText"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 399,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+        "symbol": "parseHoursFromText"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "kind": "function",
+    "line_start": 399,
+    "name": "parseHoursFromText",
+    "qualified_name": "parseHoursFromText"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 408,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+        "symbol": "mapOverpassToDiscovered"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "kind": "function",
+    "line_start": 408,
+    "name": "mapOverpassToDiscovered",
+    "qualified_name": "mapOverpassToDiscovered"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 428,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+        "symbol": "haversineKm"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "kind": "function",
+    "line_start": 428,
+    "name": "haversineKm",
+    "qualified_name": "haversineKm"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 445,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+        "symbol": "cacheIqama"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "kind": "function",
+    "line_start": 445,
+    "name": "cacheIqama",
+    "qualified_name": "cacheIqama"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 458,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+        "symbol": "iqamaTimesToSchedules"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "kind": "function",
+    "line_start": 458,
+    "name": "iqamaTimesToSchedules",
+    "qualified_name": "iqamaTimesToSchedules"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 45,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+        "symbol": "DiscoveredMosque"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "kind": "type",
+    "line_start": 45,
+    "name": "DiscoveredMosque",
+    "qualified_name": "DiscoveredMosque"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 281,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+        "symbol": "ScrapedMosqueData"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "kind": "type",
+    "line_start": 281,
+    "name": "ScrapedMosqueData",
+    "qualified_name": "ScrapedMosqueData"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 43,
+        "path": "apps\\mobile\\services\\localMosqueSearch.ts",
+        "symbol": "searchLocalMosques"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\localMosqueSearch.ts",
+    "kind": "function",
+    "line_start": 43,
+    "name": "searchLocalMosques",
+    "qualified_name": "searchLocalMosques"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 85,
+        "path": "apps\\mobile\\services\\localMosqueSearch.ts",
+        "symbol": "haversineKm"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\localMosqueSearch.ts",
+    "kind": "function",
+    "line_start": 85,
+    "name": "haversineKm",
+    "qualified_name": "haversineKm"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 16,
+        "path": "apps\\mobile\\services\\localMosqueSearch.ts",
+        "symbol": "LocalMosqueRecord"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\localMosqueSearch.ts",
+    "kind": "type",
+    "line_start": 16,
+    "name": "LocalMosqueRecord",
+    "qualified_name": "LocalMosqueRecord"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 10,
+        "path": "apps\\mobile\\services\\location.ts",
+        "symbol": "getSavedLocation"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\location.ts",
+    "kind": "function",
+    "line_start": 10,
+    "name": "getSavedLocation",
+    "qualified_name": "getSavedLocation"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 23,
+        "path": "apps\\mobile\\services\\location.ts",
+        "symbol": "saveLocation"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\location.ts",
+    "kind": "function",
+    "line_start": 23,
+    "name": "saveLocation",
+    "qualified_name": "saveLocation"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 36,
+        "path": "apps\\mobile\\services\\location.ts",
+        "symbol": "requestPermissions"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\location.ts",
+    "kind": "function",
+    "line_start": 36,
+    "name": "requestPermissions",
+    "qualified_name": "requestPermissions"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 45,
+        "path": "apps\\mobile\\services\\location.ts",
+        "symbol": "requestBackgroundPermissions"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\location.ts",
+    "kind": "function",
+    "line_start": 45,
+    "name": "requestBackgroundPermissions",
+    "qualified_name": "requestBackgroundPermissions"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 52,
+        "path": "apps\\mobile\\services\\location.ts",
+        "symbol": "getCurrentLocation"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\location.ts",
+    "kind": "function",
+    "line_start": 52,
+    "name": "getCurrentLocation",
+    "qualified_name": "getCurrentLocation"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 97,
+        "path": "apps\\mobile\\services\\location.ts",
+        "symbol": "startBackgroundTracking"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\location.ts",
+    "kind": "function",
+    "line_start": 97,
+    "name": "startBackgroundTracking",
+    "qualified_name": "startBackgroundTracking"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 141,
+        "path": "apps\\mobile\\services\\location.ts",
+        "symbol": "stopBackgroundTracking"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\location.ts",
+    "kind": "function",
+    "line_start": 141,
+    "name": "stopBackgroundTracking",
+    "qualified_name": "stopBackgroundTracking"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 150,
+        "path": "apps\\mobile\\services\\location.ts",
+        "symbol": "haversineDistance"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\location.ts",
+    "kind": "function",
+    "line_start": 150,
+    "name": "haversineDistance",
+    "qualified_name": "haversineDistance"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 169,
+        "path": "apps\\mobile\\services\\location.ts",
+        "symbol": "toRadians"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\location.ts",
+    "kind": "function",
+    "line_start": 169,
+    "name": "toRadians",
+    "qualified_name": "toRadians"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 47,
+        "path": "apps\\mobile\\services\\mawaqitService.ts",
+        "symbol": "searchNearby"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "kind": "function",
+    "line_start": 47,
+    "name": "searchNearby",
+    "qualified_name": "searchNearby"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 80,
+        "path": "apps\\mobile\\services\\mawaqitService.ts",
+        "symbol": "getByUuid"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "kind": "function",
+    "line_start": 80,
+    "name": "getByUuid",
+    "qualified_name": "getByUuid"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 107,
+        "path": "apps\\mobile\\services\\mawaqitService.ts",
+        "symbol": "findBestMatch"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "kind": "function",
+    "line_start": 107,
+    "name": "findBestMatch",
+    "qualified_name": "findBestMatch"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 143,
+        "path": "apps\\mobile\\services\\mawaqitService.ts",
+        "symbol": "extractIqamaTimes"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "kind": "function",
+    "line_start": 143,
+    "name": "extractIqamaTimes",
+    "qualified_name": "extractIqamaTimes"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 198,
+        "path": "apps\\mobile\\services\\mawaqitService.ts",
+        "symbol": "haversineKm"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "kind": "function",
+    "line_start": 198,
+    "name": "haversineKm",
+    "qualified_name": "haversineKm"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 215,
+        "path": "apps\\mobile\\services\\mawaqitService.ts",
+        "symbol": "jaccardSimilarity"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "kind": "function",
+    "line_start": 215,
+    "name": "jaccardSimilarity",
+    "qualified_name": "jaccardSimilarity"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 224,
+        "path": "apps\\mobile\\services\\mawaqitService.ts",
+        "symbol": "isValidTime"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "kind": "function",
+    "line_start": 224,
+    "name": "isValidTime",
+    "qualified_name": "isValidTime"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 229,
+        "path": "apps\\mobile\\services\\mawaqitService.ts",
+        "symbol": "normalizeTime"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "kind": "function",
+    "line_start": 229,
+    "name": "normalizeTime",
+    "qualified_name": "normalizeTime"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 248,
+        "path": "apps\\mobile\\services\\mawaqitService.ts",
+        "symbol": "addMinutes"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "kind": "function",
+    "line_start": 248,
+    "name": "addMinutes",
+    "qualified_name": "addMinutes"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 15,
+        "path": "apps\\mobile\\services\\mawaqitService.ts",
+        "symbol": "MawaqitMosque"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "kind": "type",
+    "line_start": 15,
+    "name": "MawaqitMosque",
+    "qualified_name": "MawaqitMosque"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 33,
+        "path": "apps\\mobile\\services\\mawaqitService.ts",
+        "symbol": "IqamaTimes"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "kind": "type",
+    "line_start": 33,
+    "name": "IqamaTimes",
+    "qualified_name": "IqamaTimes"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 21,
+        "path": "apps\\mobile\\services\\notifications.ts",
+        "symbol": "requestPermissions"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\notifications.ts",
+    "kind": "function",
+    "line_start": 21,
+    "name": "requestPermissions",
+    "qualified_name": "requestPermissions"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 33,
+        "path": "apps\\mobile\\services\\notifications.ts",
+        "symbol": "parseTimeToDate"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\notifications.ts",
+    "kind": "function",
+    "line_start": 33,
+    "name": "parseTimeToDate",
+    "qualified_name": "parseTimeToDate"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 42,
+        "path": "apps\\mobile\\services\\notifications.ts",
+        "symbol": "scheduleIqamaNotification"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\notifications.ts",
+    "kind": "function",
+    "line_start": 42,
+    "name": "scheduleIqamaNotification",
+    "qualified_name": "scheduleIqamaNotification"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 98,
+        "path": "apps\\mobile\\services\\notifications.ts",
+        "symbol": "scheduleMaghribNotification"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\notifications.ts",
+    "kind": "function",
+    "line_start": 98,
+    "name": "scheduleMaghribNotification",
+    "qualified_name": "scheduleMaghribNotification"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 150,
+        "path": "apps\\mobile\\services\\notifications.ts",
+        "symbol": "cancelAllNotifications"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\notifications.ts",
+    "kind": "function",
+    "line_start": 150,
+    "name": "cancelAllNotifications",
+    "qualified_name": "cancelAllNotifications"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 154,
+        "path": "apps\\mobile\\services\\notifications.ts",
+        "symbol": "rescheduleAll"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\notifications.ts",
+    "kind": "function",
+    "line_start": 154,
+    "name": "rescheduleAll",
+    "qualified_name": "rescheduleAll"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 186,
+        "path": "apps\\mobile\\services\\notifications.ts",
+        "symbol": "formatPrayerName"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\notifications.ts",
+    "kind": "function",
+    "line_start": 186,
+    "name": "formatPrayerName",
+    "qualified_name": "formatPrayerName"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 33,
+        "path": "apps\\mobile\\services\\overpassService.ts",
+        "symbol": "searchOverpassMosques"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\overpassService.ts",
+    "kind": "function",
+    "line_start": 33,
+    "name": "searchOverpassMosques",
+    "qualified_name": "searchOverpassMosques"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 77,
+        "path": "apps\\mobile\\services\\overpassService.ts",
+        "symbol": "parseElement"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\overpassService.ts",
+    "kind": "function",
+    "line_start": 77,
+    "name": "parseElement",
+    "qualified_name": "parseElement"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 17,
+        "path": "apps\\mobile\\services\\overpassService.ts",
+        "symbol": "OverpassMosque"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\overpassService.ts",
+    "kind": "type",
+    "line_start": 17,
+    "name": "OverpassMosque",
+    "qualified_name": "OverpassMosque"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 14,
+        "path": "apps\\mobile\\services\\prayerTimes.ts",
+        "symbol": "getCacheKey"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\prayerTimes.ts",
+    "kind": "function",
+    "line_start": 14,
+    "name": "getCacheKey",
+    "qualified_name": "getCacheKey"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 21,
+        "path": "apps\\mobile\\services\\prayerTimes.ts",
+        "symbol": "getFromCache"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\prayerTimes.ts",
+    "kind": "function",
+    "line_start": 21,
+    "name": "getFromCache",
+    "qualified_name": "getFromCache"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 34,
+        "path": "apps\\mobile\\services\\prayerTimes.ts",
+        "symbol": "setCache"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\prayerTimes.ts",
+    "kind": "function",
+    "line_start": 34,
+    "name": "setCache",
+    "qualified_name": "setCache"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 40,
+        "path": "apps\\mobile\\services\\prayerTimes.ts",
+        "symbol": "getPrayerTimes"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\prayerTimes.ts",
+    "kind": "function",
+    "line_start": 40,
+    "name": "getPrayerTimes",
+    "qualified_name": "getPrayerTimes"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 66,
+        "path": "apps\\mobile\\services\\prayerTimes.ts",
+        "symbol": "getNextPrayer"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\prayerTimes.ts",
+    "kind": "function",
+    "line_start": 66,
+    "name": "getNextPrayer",
+    "qualified_name": "getNextPrayer"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 6,
+        "path": "apps\\mobile\\services\\prayerTimes.ts",
+        "symbol": "CacheEntry"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\prayerTimes.ts",
+    "kind": "type",
+    "line_start": 6,
+    "name": "CacheEntry",
+    "qualified_name": "CacheEntry"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 10,
+        "path": "apps\\mobile\\stores\\authStore.ts",
+        "symbol": "AuthState"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\authStore.ts",
+    "kind": "type",
+    "line_start": 10,
+    "name": "AuthState",
+    "qualified_name": "AuthState"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 29,
+        "path": "apps\\mobile\\stores\\mosqueStore.ts",
+        "symbol": "CachedIqama"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\mosqueStore.ts",
+    "kind": "type",
+    "line_start": 29,
+    "name": "CachedIqama",
+    "qualified_name": "CachedIqama"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 35,
+        "path": "apps\\mobile\\stores\\mosqueStore.ts",
+        "symbol": "MosqueState"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\mosqueStore.ts",
+    "kind": "type",
+    "line_start": 35,
+    "name": "MosqueState",
+    "qualified_name": "MosqueState"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 5,
+        "path": "apps\\mobile\\stores\\prayerStore.ts",
+        "symbol": "PrayerState"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\prayerStore.ts",
+    "kind": "type",
+    "line_start": 5,
+    "name": "PrayerState",
+    "qualified_name": "PrayerState"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 10,
+        "path": "apps\\mobile\\stores\\settingsStore.ts",
+        "symbol": "SettingsState"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\settingsStore.ts",
+    "kind": "type",
+    "line_start": 10,
+    "name": "SettingsState",
+    "qualified_name": "SettingsState"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 45,
+        "path": "packages\\shared\\src\\types.ts",
+        "symbol": "PrayerTimes"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "type",
+    "line_start": 45,
+    "name": "PrayerTimes",
+    "qualified_name": "PrayerTimes"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 57,
+        "path": "packages\\shared\\src\\types.ts",
+        "symbol": "NextPrayer"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "type",
+    "line_start": 57,
+    "name": "NextPrayer",
+    "qualified_name": "NextPrayer"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 70,
+        "path": "packages\\shared\\src\\types.ts",
+        "symbol": "Mosque"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "type",
+    "line_start": 70,
+    "name": "Mosque",
+    "qualified_name": "Mosque"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 101,
+        "path": "packages\\shared\\src\\types.ts",
+        "symbol": "IqamaSchedule"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "type",
+    "line_start": 101,
+    "name": "IqamaSchedule",
+    "qualified_name": "IqamaSchedule"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 112,
+        "path": "packages\\shared\\src\\types.ts",
+        "symbol": "User"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "type",
+    "line_start": 112,
+    "name": "User",
+    "qualified_name": "User"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 125,
+        "path": "packages\\shared\\src\\types.ts",
+        "symbol": "UserPrayerPreference"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "type",
+    "line_start": 125,
+    "name": "UserPrayerPreference",
+    "qualified_name": "UserPrayerPreference"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 134,
+        "path": "packages\\shared\\src\\types.ts",
+        "symbol": "UserMosque"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "type",
+    "line_start": 134,
+    "name": "UserMosque",
+    "qualified_name": "UserMosque"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 143,
+        "path": "packages\\shared\\src\\types.ts",
+        "symbol": "CoverageRequest"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "type",
+    "line_start": 143,
+    "name": "CoverageRequest",
+    "qualified_name": "CoverageRequest"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 159,
+        "path": "packages\\shared\\src\\types.ts",
+        "symbol": "AuthTokenPayload"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "type",
+    "line_start": 159,
+    "name": "AuthTokenPayload",
+    "qualified_name": "AuthTokenPayload"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 165,
+        "path": "packages\\shared\\src\\types.ts",
+        "symbol": "LoginResponse"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "type",
+    "line_start": 165,
+    "name": "LoginResponse",
+    "qualified_name": "LoginResponse"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 170,
+        "path": "packages\\shared\\src\\types.ts",
+        "symbol": "RegisterRequest"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "type",
+    "line_start": 170,
+    "name": "RegisterRequest",
+    "qualified_name": "RegisterRequest"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 180,
+        "path": "packages\\shared\\src\\types.ts",
+        "symbol": "MosqueSeedFile"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "type",
+    "line_start": 180,
+    "name": "MosqueSeedFile",
+    "qualified_name": "MosqueSeedFile"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 192,
+        "path": "packages\\shared\\src\\types.ts",
+        "symbol": "MosqueSeedEntry"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "type",
+    "line_start": 192,
+    "name": "MosqueSeedEntry",
+    "qualified_name": "MosqueSeedEntry"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 221,
+        "path": "packages\\shared\\src\\types.ts",
+        "symbol": "NearbyMosquesResponse"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "type",
+    "line_start": 221,
+    "name": "NearbyMosquesResponse",
+    "qualified_name": "NearbyMosquesResponse"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 226,
+        "path": "packages\\shared\\src\\types.ts",
+        "symbol": "ApiError"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "type",
+    "line_start": 226,
+    "name": "ApiError",
+    "qualified_name": "ApiError"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 7,
+        "path": "packages\\shared\\src\\utils.ts",
+        "symbol": "parseTime"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\utils.ts",
+    "kind": "function",
+    "line_start": 7,
+    "name": "parseTime",
+    "qualified_name": "parseTime"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 17,
+        "path": "packages\\shared\\src\\utils.ts",
+        "symbol": "formatTime"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\utils.ts",
+    "kind": "function",
+    "line_start": 17,
+    "name": "formatTime",
+    "qualified_name": "formatTime"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 28,
+        "path": "packages\\shared\\src\\utils.ts",
+        "symbol": "formatTime12h"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\utils.ts",
+    "kind": "function",
+    "line_start": 28,
+    "name": "formatTime12h",
+    "qualified_name": "formatTime12h"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 39,
+        "path": "packages\\shared\\src\\utils.ts",
+        "symbol": "getNextPrayer"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\utils.ts",
+    "kind": "function",
+    "line_start": 39,
+    "name": "getNextPrayer",
+    "qualified_name": "getNextPrayer"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 71,
+        "path": "packages\\shared\\src\\utils.ts",
+        "symbol": "haversineDistance"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\utils.ts",
+    "kind": "function",
+    "line_start": 71,
+    "name": "haversineDistance",
+    "qualified_name": "haversineDistance"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 90,
+        "path": "packages\\shared\\src\\utils.ts",
+        "symbol": "toRad"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\utils.ts",
+    "kind": "function",
+    "line_start": 90,
+    "name": "toRad",
+    "qualified_name": "toRad"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 98,
+        "path": "packages\\shared\\src\\utils.ts",
+        "symbol": "formatCountdown"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\utils.ts",
+    "kind": "function",
+    "line_start": 98,
+    "name": "formatCountdown",
+    "qualified_name": "formatCountdown"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 111,
+        "path": "packages\\shared\\src\\utils.ts",
+        "symbol": "isMaghrib"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\utils.ts",
+    "kind": "function",
+    "line_start": 111,
+    "name": "isMaghrib",
+    "qualified_name": "isMaghrib"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 118,
+        "path": "packages\\shared\\src\\utils.ts",
+        "symbol": "getTodayForAladhan"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\utils.ts",
+    "kind": "function",
+    "line_start": 118,
+    "name": "getTodayForAladhan",
+    "qualified_name": "getTodayForAladhan"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 126,
+        "path": "packages\\shared\\src\\utils.ts",
+        "symbol": "getTodayISO"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\utils.ts",
+    "kind": "function",
+    "line_start": 126,
+    "name": "getTodayISO",
+    "qualified_name": "getTodayISO"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 60,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "parseArgs"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 60,
+    "name": "parseArgs",
+    "qualified_name": "parseArgs"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 81,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "findSeedFile"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 81,
+    "name": "findSeedFile",
+    "qualified_name": "findSeedFile"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 88,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "findAllSeedFiles"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 88,
+    "name": "findAllSeedFiles",
+    "qualified_name": "findAllSeedFiles"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 106,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "mawaqitSearch"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 106,
+    "name": "mawaqitSearch",
+    "qualified_name": "mawaqitSearch"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 119,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "mawaqitFetch"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 119,
+    "name": "mawaqitFetch",
+    "qualified_name": "mawaqitFetch"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 129,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "bestMatch"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 129,
+    "name": "bestMatch",
+    "qualified_name": "bestMatch"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 143,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "extractIqama"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 143,
+    "name": "extractIqama",
+    "qualified_name": "extractIqama"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 177,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "scrapeWebsite"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 177,
+    "name": "scrapeWebsite",
+    "qualified_name": "scrapeWebsite"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 192,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "parseIqama"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 192,
+    "name": "parseIqama",
+    "qualified_name": "parseIqama"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 216,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "enrichSeedFile"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 216,
+    "name": "enrichSeedFile",
+    "qualified_name": "enrichSeedFile"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 309,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "addSource"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 309,
+    "name": "addSource",
+    "qualified_name": "addSource"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 316,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "main"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 316,
+    "name": "main",
+    "qualified_name": "main"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 351,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "haversineKm"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 351,
+    "name": "haversineKm",
+    "qualified_name": "haversineKm"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 359,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "jaccard"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 359,
+    "name": "jaccard",
+    "qualified_name": "jaccard"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 368,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "normTime"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 368,
+    "name": "normTime",
+    "qualified_name": "normTime"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 383,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "addMins"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 383,
+    "name": "addMins",
+    "qualified_name": "addMins"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 389,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "sleep"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "function",
+    "line_start": 389,
+    "name": "sleep",
+    "qualified_name": "sleep"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 20,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "SeedMosque"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "type",
+    "line_start": 20,
+    "name": "SeedMosque",
+    "qualified_name": "SeedMosque"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 32,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "SeedFile"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "type",
+    "line_start": 32,
+    "name": "SeedFile",
+    "qualified_name": "SeedFile"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 39,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "IqamaTimes"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "type",
+    "line_start": 39,
+    "name": "IqamaTimes",
+    "qualified_name": "IqamaTimes"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 41,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "MawaqitMosque"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "type",
+    "line_start": 41,
+    "name": "MawaqitMosque",
+    "qualified_name": "MawaqitMosque"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 53,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "Args"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "type",
+    "line_start": 53,
+    "name": "Args",
+    "qualified_name": "Args"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 29,
+        "line_start": 27,
+        "path": "scripts\\generate-mobile-assets.py",
+        "symbol": "_chunk"
+      }
+    ],
+    "file_path": "scripts\\generate-mobile-assets.py",
+    "kind": "function",
+    "line_end": 29,
+    "line_start": 27,
+    "name": "_chunk",
+    "qualified_name": "_chunk",
+    "signature": "def _chunk(name: bytes, data: bytes) -> bytes",
+    "visibility": "private"
+  },
+  {
+    "docstring": "Generate a minimal valid RGBA PNG.\npixels: callable(x, y) -> (r, g, b, a) tuple",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 57,
+        "line_start": 31,
+        "path": "scripts\\generate-mobile-assets.py",
+        "symbol": "_make_png"
+      }
+    ],
+    "file_path": "scripts\\generate-mobile-assets.py",
+    "kind": "function",
+    "line_end": 57,
+    "line_start": 31,
+    "name": "_make_png",
+    "qualified_name": "_make_png",
+    "signature": "def _make_png(width: int, height: int, pixels) -> bytes",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 62,
+        "line_start": 61,
+        "path": "scripts\\generate-mobile-assets.py",
+        "symbol": "_in_circle"
+      }
+    ],
+    "file_path": "scripts\\generate-mobile-assets.py",
+    "kind": "function",
+    "line_end": 62,
+    "line_start": 61,
+    "name": "_in_circle",
+    "qualified_name": "_in_circle",
+    "signature": "def _in_circle(x: int, y: int, cx: float, cy: float, r: float) -> bool",
+    "visibility": "private"
+  },
+  {
+    "docstring": "Brand-green background, white crescent + dot.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 86,
+        "line_start": 64,
+        "path": "scripts\\generate-mobile-assets.py",
+        "symbol": "_icon_pixel"
+      }
+    ],
+    "file_path": "scripts\\generate-mobile-assets.py",
+    "kind": "function",
+    "line_end": 86,
+    "line_start": 64,
+    "name": "_icon_pixel",
+    "qualified_name": "_icon_pixel",
+    "signature": "def _icon_pixel(x: int, y: int, size: int)",
+    "visibility": "private"
+  },
+  {
+    "docstring": "Brand-green fill with a centred white crescent (larger).",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 105,
+        "line_start": 88,
+        "path": "scripts\\generate-mobile-assets.py",
+        "symbol": "_splash_pixel"
+      }
+    ],
+    "file_path": "scripts\\generate-mobile-assets.py",
+    "kind": "function",
+    "line_end": 105,
+    "line_start": 88,
+    "name": "_splash_pixel",
+    "qualified_name": "_splash_pixel",
+    "signature": "def _splash_pixel(x: int, y: int, size: int)",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 115,
+        "line_start": 109,
+        "path": "scripts\\generate-mobile-assets.py",
+        "symbol": "_make_silent_wav"
+      }
+    ],
+    "file_path": "scripts\\generate-mobile-assets.py",
+    "kind": "function",
+    "line_end": 115,
+    "line_start": 109,
+    "name": "_make_silent_wav",
+    "qualified_name": "_make_silent_wav",
+    "signature": "def _make_silent_wav(path: str, duration_sec: float, sample_rate: int)",
+    "visibility": "private"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 154,
+        "line_start": 124,
+        "path": "scripts\\generate-mobile-assets.py",
+        "symbol": "main"
+      }
+    ],
+    "file_path": "scripts\\generate-mobile-assets.py",
+    "kind": "function",
+    "line_end": 154,
+    "line_start": 124,
+    "name": "main",
+    "qualified_name": "main",
+    "signature": "def main()",
+    "visibility": "public"
+  },
+  {
+    "docstring": "Lowercase, replace spaces/special chars with underscores.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 25,
+        "line_start": 23,
+        "path": "scripts\\generate-mosque-bundle.py",
+        "symbol": "slugify"
+      }
+    ],
+    "file_path": "scripts\\generate-mosque-bundle.py",
+    "kind": "function",
+    "line_end": 25,
+    "line_start": 23,
+    "name": "slugify",
+    "qualified_name": "slugify",
+    "signature": "def slugify(text: str) -> str",
+    "visibility": "public"
+  },
+  {
+    "docstring": "Returns True if t looks like HH:mm (not 'sunset+X' etc.).",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 30,
+        "line_start": 28,
+        "path": "scripts\\generate-mosque-bundle.py",
+        "symbol": "is_valid_time"
+      }
+    ],
+    "file_path": "scripts\\generate-mosque-bundle.py",
+    "kind": "function",
+    "line_end": 30,
+    "line_start": 28,
+    "name": "is_valid_time",
+    "qualified_name": "is_valid_time",
+    "signature": "def is_valid_time(t: str) -> bool",
+    "visibility": "public"
+  },
+  {
+    "docstring": "Filter iqamaTimes to only include valid HH:mm entries.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 41,
+        "line_start": 33,
+        "path": "scripts\\generate-mosque-bundle.py",
+        "symbol": "build_iqama_times"
+      }
+    ],
+    "file_path": "scripts\\generate-mosque-bundle.py",
+    "kind": "function",
+    "line_end": 41,
+    "line_start": 33,
+    "name": "build_iqama_times",
+    "qualified_name": "build_iqama_times",
+    "signature": "def build_iqama_times(raw: dict) -> dict",
+    "visibility": "public"
+  },
+  {
+    "docstring": "Read one city JSON file and return a list of flattened mosque records.",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 103,
+        "line_start": 44,
+        "path": "scripts\\generate-mosque-bundle.py",
+        "symbol": "process_file"
+      }
+    ],
+    "file_path": "scripts\\generate-mosque-bundle.py",
+    "kind": "function",
+    "line_end": 103,
+    "line_start": 44,
+    "name": "process_file",
+    "qualified_name": "process_file",
+    "signature": "def process_file(json_file: Path) -> list",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 131,
+        "line_start": 106,
+        "path": "scripts\\generate-mosque-bundle.py",
+        "symbol": "main"
+      }
+    ],
+    "file_path": "scripts\\generate-mosque-bundle.py",
+    "kind": "function",
+    "line_end": 131,
+    "line_start": 106,
+    "name": "main",
+    "qualified_name": "main",
+    "signature": "def main()",
+    "visibility": "public"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 65,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "parseArgs"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "function",
+    "line_start": 65,
+    "name": "parseArgs",
+    "qualified_name": "parseArgs"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 121,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "searchOverpassAPI"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "function",
+    "line_start": 121,
+    "name": "searchOverpassAPI",
+    "qualified_name": "searchOverpassAPI"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 198,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "searchMawaqitNearby"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "function",
+    "line_start": 198,
+    "name": "searchMawaqitNearby",
+    "qualified_name": "searchMawaqitNearby"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 213,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "fetchMawaqitById"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "function",
+    "line_start": 213,
+    "name": "fetchMawaqitById",
+    "qualified_name": "fetchMawaqitById"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 225,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "findMawaqitMatch"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "function",
+    "line_start": 225,
+    "name": "findMawaqitMatch",
+    "qualified_name": "findMawaqitMatch"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 250,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "extractIqamaFromMawaqit"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "function",
+    "line_start": 250,
+    "name": "extractIqamaFromMawaqit",
+    "qualified_name": "extractIqamaFromMawaqit"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 287,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "deduplicateMosques"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "function",
+    "line_start": 287,
+    "name": "deduplicateMosques",
+    "qualified_name": "deduplicateMosques"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 305,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "nameSimilarity"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "function",
+    "line_start": 305,
+    "name": "nameSimilarity",
+    "qualified_name": "nameSimilarity"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 317,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "haversine"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "function",
+    "line_start": 317,
+    "name": "haversine",
+    "qualified_name": "haversine"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 327,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "normalizeTime"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "function",
+    "line_start": 327,
+    "name": "normalizeTime",
+    "qualified_name": "normalizeTime"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 345,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "addMinutes"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "function",
+    "line_start": 345,
+    "name": "addMinutes",
+    "qualified_name": "addMinutes"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 360,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "generateSeedFile"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "function",
+    "line_start": 360,
+    "name": "generateSeedFile",
+    "qualified_name": "generateSeedFile"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 413,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "main"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "function",
+    "line_start": 413,
+    "name": "main",
+    "qualified_name": "main"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 22,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "Args"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "type",
+    "line_start": 22,
+    "name": "Args",
+    "qualified_name": "Args"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 29,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "RawMosque"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "type",
+    "line_start": 29,
+    "name": "RawMosque",
+    "qualified_name": "RawMosque"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 44,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "MawaqitMosque"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "type",
+    "line_start": 44,
+    "name": "MawaqitMosque",
+    "qualified_name": "MawaqitMosque"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 54,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "IqamaTimes"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "type",
+    "line_start": 54,
+    "name": "IqamaTimes",
+    "qualified_name": "IqamaTimes"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 355,
+        "path": "scripts\\research-mosques.ts",
+        "symbol": "EnrichedMosque"
+      }
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "type",
+    "line_start": 355,
+    "name": "EnrichedMosque",
+    "qualified_name": "EnrichedMosque"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 58,
+        "path": "server\\prisma\\seed.ts",
+        "symbol": "findJsonFiles"
+      }
+    ],
+    "file_path": "server\\prisma\\seed.ts",
+    "kind": "function",
+    "line_start": 58,
+    "name": "findJsonFiles",
+    "qualified_name": "findJsonFiles"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 75,
+        "path": "server\\prisma\\seed.ts",
+        "symbol": "regionKey"
+      }
+    ],
+    "file_path": "server\\prisma\\seed.ts",
+    "kind": "function",
+    "line_start": 75,
+    "name": "regionKey",
+    "qualified_name": "regionKey"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 80,
+        "path": "server\\prisma\\seed.ts",
+        "symbol": "toPrayerEnum"
+      }
+    ],
+    "file_path": "server\\prisma\\seed.ts",
+    "kind": "function",
+    "line_start": 80,
+    "name": "toPrayerEnum",
+    "qualified_name": "toPrayerEnum"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 96,
+        "path": "server\\prisma\\seed.ts",
+        "symbol": "main"
+      }
+    ],
+    "file_path": "server\\prisma\\seed.ts",
+    "kind": "function",
+    "line_start": 96,
+    "name": "main",
+    "qualified_name": "main"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 20,
+        "path": "server\\prisma\\seed.ts",
+        "symbol": "MosqueSeedEntry"
+      }
+    ],
+    "file_path": "server\\prisma\\seed.ts",
+    "kind": "type",
+    "line_start": 20,
+    "name": "MosqueSeedEntry",
+    "qualified_name": "MosqueSeedEntry"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 43,
+        "path": "server\\prisma\\seed.ts",
+        "symbol": "MosqueSeedFile"
+      }
+    ],
+    "file_path": "server\\prisma\\seed.ts",
+    "kind": "type",
+    "line_start": 43,
+    "name": "MosqueSeedFile",
+    "qualified_name": "MosqueSeedFile"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 17,
+        "path": "server\\src\\jobs\\iqamaRefreshJob.ts",
+        "symbol": "runIqamaRefreshJob"
+      }
+    ],
+    "file_path": "server\\src\\jobs\\iqamaRefreshJob.ts",
+    "kind": "function",
+    "line_start": 17,
+    "name": "runIqamaRefreshJob",
+    "qualified_name": "runIqamaRefreshJob"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 77,
+        "path": "server\\src\\jobs\\iqamaRefreshJob.ts",
+        "symbol": "startIqamaRefreshJob"
+      }
+    ],
+    "file_path": "server\\src\\jobs\\iqamaRefreshJob.ts",
+    "kind": "function",
+    "line_start": 77,
+    "name": "startIqamaRefreshJob",
+    "qualified_name": "startIqamaRefreshJob"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 16,
+        "path": "server\\src\\middleware\\auth.ts",
+        "symbol": "getJwtSecret"
+      }
+    ],
+    "file_path": "server\\src\\middleware\\auth.ts",
+    "kind": "function",
+    "line_start": 16,
+    "name": "getJwtSecret",
+    "qualified_name": "getJwtSecret"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 24,
+        "path": "server\\src\\middleware\\auth.ts",
+        "symbol": "authenticate"
+      }
+    ],
+    "file_path": "server\\src\\middleware\\auth.ts",
+    "kind": "function",
+    "line_start": 24,
+    "name": "authenticate",
+    "qualified_name": "authenticate"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 54,
+        "path": "server\\src\\middleware\\auth.ts",
+        "symbol": "optionalAuth"
+      }
+    ],
+    "file_path": "server\\src\\middleware\\auth.ts",
+    "kind": "function",
+    "line_start": 54,
+    "name": "optionalAuth",
+    "qualified_name": "optionalAuth"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 83,
+        "path": "server\\src\\middleware\\auth.ts",
+        "symbol": "requireRole"
+      }
+    ],
+    "file_path": "server\\src\\middleware\\auth.ts",
+    "kind": "function",
+    "line_start": 83,
+    "name": "requireRole",
+    "qualified_name": "requireRole"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 9,
+        "path": "server\\src\\routes\\auth.ts",
+        "symbol": "getJwtSecret"
+      }
+    ],
+    "file_path": "server\\src\\routes\\auth.ts",
+    "kind": "function",
+    "line_start": 9,
+    "name": "getJwtSecret",
+    "qualified_name": "getJwtSecret"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 17,
+        "path": "server\\src\\routes\\auth.ts",
+        "symbol": "generateToken"
+      }
+    ],
+    "file_path": "server\\src\\routes\\auth.ts",
+    "kind": "function",
+    "line_start": 17,
+    "name": "generateToken",
+    "qualified_name": "generateToken"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 11,
+        "path": "server\\src\\services\\aladhanService.ts",
+        "symbol": "fetchPrayerTimes"
+      }
+    ],
+    "file_path": "server\\src\\services\\aladhanService.ts",
+    "kind": "function",
+    "line_start": 11,
+    "name": "fetchPrayerTimes",
+    "qualified_name": "fetchPrayerTimes"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 45,
+        "path": "server\\src\\services\\aladhanService.ts",
+        "symbol": "formatDate"
+      }
+    ],
+    "file_path": "server\\src\\services\\aladhanService.ts",
+    "kind": "function",
+    "line_start": 45,
+    "name": "formatDate",
+    "qualified_name": "formatDate"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 1,
+        "path": "server\\src\\services\\aladhanService.ts",
+        "symbol": "PrayerTimes"
+      }
+    ],
+    "file_path": "server\\src\\services\\aladhanService.ts",
+    "kind": "type",
+    "line_start": 1,
+    "name": "PrayerTimes",
+    "qualified_name": "PrayerTimes"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 62,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "enrichMosque"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 62,
+    "name": "enrichMosque",
+    "qualified_name": "enrichMosque"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 121,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "enrichCity"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 121,
+    "name": "enrichCity",
+    "qualified_name": "enrichCity"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 164,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "getActiveCities"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 164,
+    "name": "getActiveCities",
+    "qualified_name": "getActiveCities"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 185,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "tryMawaqit"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 185,
+    "name": "tryMawaqit",
+    "qualified_name": "tryMawaqit"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 213,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "mawaqitSearchNearby"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 213,
+    "name": "mawaqitSearchNearby",
+    "qualified_name": "mawaqitSearchNearby"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 227,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "mawaqitGetByUuid"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 227,
+    "name": "mawaqitGetByUuid",
+    "qualified_name": "mawaqitGetByUuid"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 239,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "mawaqitFindBestMatch"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 239,
+    "name": "mawaqitFindBestMatch",
+    "qualified_name": "mawaqitFindBestMatch"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 262,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "extractIqamaTimes"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 262,
+    "name": "extractIqamaTimes",
+    "qualified_name": "extractIqamaTimes"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 296,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "scrapeWebsiteIqama"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 296,
+    "name": "scrapeWebsiteIqama",
+    "qualified_name": "scrapeWebsiteIqama"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 311,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "parseIqamaFromText"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 311,
+    "name": "parseIqamaFromText",
+    "qualified_name": "parseIqamaFromText"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 352,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "upsertIqama"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 352,
+    "name": "upsertIqama",
+    "qualified_name": "upsertIqama"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 400,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "haversineKm"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 400,
+    "name": "haversineKm",
+    "qualified_name": "haversineKm"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 410,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "jaccardSimilarity"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 410,
+    "name": "jaccardSimilarity",
+    "qualified_name": "jaccardSimilarity"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 419,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "normalizeTime"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 419,
+    "name": "normalizeTime",
+    "qualified_name": "normalizeTime"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 435,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "addMinutes"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 435,
+    "name": "addMinutes",
+    "qualified_name": "addMinutes"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 441,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "sleep"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "function",
+    "line_start": 441,
+    "name": "sleep",
+    "qualified_name": "sleep"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 19,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "MawaqitMosque"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "type",
+    "line_start": 19,
+    "name": "MawaqitMosque",
+    "qualified_name": "MawaqitMosque"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 29,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "IqamaTimes"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "type",
+    "line_start": 29,
+    "name": "IqamaTimes",
+    "qualified_name": "IqamaTimes"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 33,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "EnrichmentResult"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "type",
+    "line_start": 33,
+    "name": "EnrichmentResult",
+    "qualified_name": "EnrichmentResult"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 42,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "EnrichmentReport"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "type",
+    "line_start": 42,
+    "name": "EnrichmentReport",
+    "qualified_name": "EnrichmentReport"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "server\\src\\services\\notificationService.ts",
+        "symbol": "scheduleIqamaNotification"
+      }
+    ],
+    "file_path": "server\\src\\services\\notificationService.ts",
+    "kind": "function",
+    "line_start": 3,
+    "name": "scheduleIqamaNotification",
+    "qualified_name": "scheduleIqamaNotification"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 17,
+        "path": "server\\src\\services\\notificationService.ts",
+        "symbol": "cancelUserNotifications"
+      }
+    ],
+    "file_path": "server\\src\\services\\notificationService.ts",
+    "kind": "function",
+    "line_start": 17,
+    "name": "cancelUserNotifications",
+    "qualified_name": "cancelUserNotifications"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 8,
+        "path": "server\\src\\services\\streamService.ts",
+        "symbol": "getStreamStatus"
+      }
+    ],
+    "file_path": "server\\src\\services\\streamService.ts",
+    "kind": "function",
+    "line_start": 8,
+    "name": "getStreamStatus",
+    "qualified_name": "getStreamStatus"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "server\\src\\services\\streamService.ts",
+        "symbol": "StreamStatus"
+      }
+    ],
+    "file_path": "server\\src\\services\\streamService.ts",
+    "kind": "type",
+    "line_start": 3,
+    "name": "StreamStatus",
+    "qualified_name": "StreamStatus"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 184,
+        "path": "apps\\admin\\src\\App.tsx",
+        "symbol": "App"
+      }
+    ],
+    "file_path": "apps\\admin\\src\\App.tsx",
+    "kind": "component",
+    "line_start": 184,
+    "name": "App",
+    "qualified_name": "App"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 17,
+        "path": "apps\\admin\\src\\pages\\Dashboard.tsx",
+        "symbol": "Dashboard"
+      }
+    ],
+    "file_path": "apps\\admin\\src\\pages\\Dashboard.tsx",
+    "kind": "component",
+    "line_start": 17,
+    "name": "Dashboard",
+    "qualified_name": "Dashboard"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 39,
+        "path": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+        "symbol": "IqamaEditor"
+      }
+    ],
+    "file_path": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+    "kind": "component",
+    "line_start": 39,
+    "name": "IqamaEditor",
+    "qualified_name": "IqamaEditor"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 20,
+        "path": "apps\\admin\\src\\pages\\StreamSetup.tsx",
+        "symbol": "StreamSetup"
+      }
+    ],
+    "file_path": "apps\\admin\\src\\pages\\StreamSetup.tsx",
+    "kind": "component",
+    "line_start": 20,
+    "name": "StreamSetup",
+    "qualified_name": "StreamSetup"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 8,
+        "path": "apps\\mobile\\app\\_layout.tsx",
+        "symbol": "RootLayout"
+      }
+    ],
+    "file_path": "apps\\mobile\\app\\_layout.tsx",
+    "kind": "component",
+    "line_start": 8,
+    "name": "RootLayout",
+    "qualified_name": "RootLayout"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 17,
+        "path": "apps\\mobile\\app\\(auth)\\login.tsx",
+        "symbol": "LoginScreen"
+      }
+    ],
+    "file_path": "apps\\mobile\\app\\(auth)\\login.tsx",
+    "kind": "component",
+    "line_start": 17,
+    "name": "LoginScreen",
+    "qualified_name": "LoginScreen"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 16,
+        "path": "apps\\mobile\\app\\(auth)\\register.tsx",
+        "symbol": "RegisterScreen"
+      }
+    ],
+    "file_path": "apps\\mobile\\app\\(auth)\\register.tsx",
+    "kind": "component",
+    "line_start": 16,
+    "name": "RegisterScreen",
+    "qualified_name": "RegisterScreen"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 3,
+        "path": "apps\\mobile\\app\\(auth)\\_layout.tsx",
+        "symbol": "AuthLayout"
+      }
+    ],
+    "file_path": "apps\\mobile\\app\\(auth)\\_layout.tsx",
+    "kind": "component",
+    "line_start": 3,
+    "name": "AuthLayout",
+    "qualified_name": "AuthLayout"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 39,
+        "path": "apps\\mobile\\app\\(tabs)\\index.tsx",
+        "symbol": "HomeScreen"
+      }
+    ],
+    "file_path": "apps\\mobile\\app\\(tabs)\\index.tsx",
+    "kind": "component",
+    "line_start": 39,
+    "name": "HomeScreen",
+    "qualified_name": "HomeScreen"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 34,
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+        "symbol": "MosquesScreen"
+      }
+    ],
+    "file_path": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+    "kind": "component",
+    "line_start": 34,
+    "name": "MosquesScreen",
+    "qualified_name": "MosquesScreen"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 36,
+        "path": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "symbol": "AZAN_SOUND_FILE"
+      }
+    ],
+    "file_path": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+    "kind": "component",
+    "line_start": 36,
+    "name": "AZAN_SOUND_FILE",
+    "qualified_name": "AZAN_SOUND_FILE"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 38,
+        "path": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "symbol": "SettingsScreen"
+      }
+    ],
+    "file_path": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+    "kind": "component",
+    "line_start": 38,
+    "name": "SettingsScreen",
+    "qualified_name": "SettingsScreen"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 4,
+        "path": "apps\\mobile\\app\\(tabs)\\_layout.tsx",
+        "symbol": "TabsLayout"
+      }
+    ],
+    "file_path": "apps\\mobile\\app\\(tabs)\\_layout.tsx",
+    "kind": "component",
+    "line_start": 4,
+    "name": "TabsLayout",
+    "qualified_name": "TabsLayout"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 76,
+        "path": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "symbol": "MosqueDetailScreen"
+      }
+    ],
+    "file_path": "apps\\mobile\\app\\mosque\\[id].tsx",
+    "kind": "component",
+    "line_start": 76,
+    "name": "MosqueDetailScreen",
+    "qualified_name": "MosqueDetailScreen"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 43,
+        "path": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "symbol": "LEAD_TIME_OPTIONS"
+      }
+    ],
+    "file_path": "apps\\mobile\\components\\NotificationSettings.tsx",
+    "kind": "component",
+    "line_start": 43,
+    "name": "LEAD_TIME_OPTIONS",
+    "qualified_name": "LEAD_TIME_OPTIONS"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 14,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "BASE_URL"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "component",
+    "line_start": 14,
+    "name": "BASE_URL",
+    "qualified_name": "BASE_URL"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 16,
+        "path": "apps\\mobile\\services\\api.ts",
+        "symbol": "TOKEN_KEY"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\api.ts",
+    "kind": "component",
+    "line_start": 16,
+    "name": "TOKEN_KEY",
+    "qualified_name": "TOKEN_KEY"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 8,
+        "path": "apps\\mobile\\services\\azanAudio.ts",
+        "symbol": "AZAN_SOUNDS"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\azanAudio.ts",
+    "kind": "component",
+    "line_start": 8,
+    "name": "AZAN_SOUNDS",
+    "qualified_name": "AZAN_SOUNDS"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 69,
+        "path": "apps\\mobile\\services\\cache.ts",
+        "symbol": "NEARBY_MOSQUE_TTL"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\cache.ts",
+    "kind": "component",
+    "line_start": 69,
+    "name": "NEARBY_MOSQUE_TTL",
+    "qualified_name": "NEARBY_MOSQUE_TTL"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 72,
+        "path": "apps\\mobile\\services\\cache.ts",
+        "symbol": "IQAMA_TTL"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\cache.ts",
+    "kind": "component",
+    "line_start": 72,
+    "name": "IQAMA_TTL",
+    "qualified_name": "IQAMA_TTL"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 75,
+        "path": "apps\\mobile\\services\\cache.ts",
+        "symbol": "MOSQUE_DETAIL_TTL"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\cache.ts",
+    "kind": "component",
+    "line_start": 75,
+    "name": "MOSQUE_DETAIL_TTL",
+    "qualified_name": "MOSQUE_DETAIL_TTL"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 4,
+        "path": "apps\\mobile\\services\\location.ts",
+        "symbol": "TRAVEL_THRESHOLD_KM"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\location.ts",
+    "kind": "component",
+    "line_start": 4,
+    "name": "TRAVEL_THRESHOLD_KM",
+    "qualified_name": "TRAVEL_THRESHOLD_KM"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 6,
+        "path": "apps\\mobile\\services\\location.ts",
+        "symbol": "SAVED_LOCATION_KEY"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\location.ts",
+    "kind": "component",
+    "line_start": 6,
+    "name": "SAVED_LOCATION_KEY",
+    "qualified_name": "SAVED_LOCATION_KEY"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 93,
+        "path": "apps\\mobile\\services\\location.ts",
+        "symbol": "BACKGROUND_TASK_NAME"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\location.ts",
+    "kind": "component",
+    "line_start": 93,
+    "name": "BACKGROUND_TASK_NAME",
+    "qualified_name": "BACKGROUND_TASK_NAME"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 11,
+        "path": "apps\\mobile\\services\\mawaqitService.ts",
+        "symbol": "MAWAQIT_BASE"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "kind": "component",
+    "line_start": 11,
+    "name": "MAWAQIT_BASE",
+    "qualified_name": "MAWAQIT_BASE"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 13,
+        "path": "apps\\mobile\\services\\overpassService.ts",
+        "symbol": "OVERPASS_URL"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\overpassService.ts",
+    "kind": "component",
+    "line_start": 13,
+    "name": "OVERPASS_URL",
+    "qualified_name": "OVERPASS_URL"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 12,
+        "path": "apps\\mobile\\services\\prayerTimes.ts",
+        "symbol": "CACHE_DURATION_MS"
+      }
+    ],
+    "file_path": "apps\\mobile\\services\\prayerTimes.ts",
+    "kind": "component",
+    "line_start": 12,
+    "name": "CACHE_DURATION_MS",
+    "qualified_name": "CACHE_DURATION_MS"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 7,
+        "path": "apps\\mobile\\stores\\authStore.ts",
+        "symbol": "USER_KEY"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\authStore.ts",
+    "kind": "component",
+    "line_start": 7,
+    "name": "USER_KEY",
+    "qualified_name": "USER_KEY"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 8,
+        "path": "apps\\mobile\\stores\\authStore.ts",
+        "symbol": "GUEST_KEY"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\authStore.ts",
+    "kind": "component",
+    "line_start": 8,
+    "name": "GUEST_KEY",
+    "qualified_name": "GUEST_KEY"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 32,
+        "path": "apps\\mobile\\stores\\authStore.ts",
+        "symbol": "useAuthStore"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\authStore.ts",
+    "kind": "function",
+    "line_start": 32,
+    "name": "useAuthStore",
+    "qualified_name": "useAuthStore"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 54,
+        "path": "apps\\mobile\\stores\\mosqueStore.ts",
+        "symbol": "useMosqueStore"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\mosqueStore.ts",
+    "kind": "function",
+    "line_start": 54,
+    "name": "useMosqueStore",
+    "qualified_name": "useMosqueStore"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 13,
+        "path": "apps\\mobile\\stores\\prayerStore.ts",
+        "symbol": "usePrayerStore"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\prayerStore.ts",
+    "kind": "function",
+    "line_start": 13,
+    "name": "usePrayerStore",
+    "qualified_name": "usePrayerStore"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 21,
+        "path": "apps\\mobile\\stores\\settingsStore.ts",
+        "symbol": "useSettingsStore"
+      }
+    ],
+    "file_path": "apps\\mobile\\stores\\settingsStore.ts",
+    "kind": "function",
+    "line_start": 21,
+    "name": "useSettingsStore",
+    "qualified_name": "useSettingsStore"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 4,
+        "path": "packages\\shared\\src\\constants.ts",
+        "symbol": "CALC_METHODS"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\constants.ts",
+    "kind": "component",
+    "line_start": 4,
+    "name": "CALC_METHODS",
+    "qualified_name": "CALC_METHODS"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 12,
+        "path": "packages\\shared\\src\\constants.ts",
+        "symbol": "DEFAULT_CALC_METHOD"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\constants.ts",
+    "kind": "component",
+    "line_start": 12,
+    "name": "DEFAULT_CALC_METHOD",
+    "qualified_name": "DEFAULT_CALC_METHOD"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 34,
+        "path": "packages\\shared\\src\\constants.ts",
+        "symbol": "DEFAULT_LEAD_MINUTES"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\constants.ts",
+    "kind": "component",
+    "line_start": 34,
+    "name": "DEFAULT_LEAD_MINUTES",
+    "qualified_name": "DEFAULT_LEAD_MINUTES"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 35,
+        "path": "packages\\shared\\src\\constants.ts",
+        "symbol": "MIN_LEAD_MINUTES"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\constants.ts",
+    "kind": "component",
+    "line_start": 35,
+    "name": "MIN_LEAD_MINUTES",
+    "qualified_name": "MIN_LEAD_MINUTES"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 36,
+        "path": "packages\\shared\\src\\constants.ts",
+        "symbol": "MAX_LEAD_MINUTES"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\constants.ts",
+    "kind": "component",
+    "line_start": 36,
+    "name": "MAX_LEAD_MINUTES",
+    "qualified_name": "MAX_LEAD_MINUTES"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 39,
+        "path": "packages\\shared\\src\\constants.ts",
+        "symbol": "DEFAULT_SEARCH_RADIUS_KM"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\constants.ts",
+    "kind": "component",
+    "line_start": 39,
+    "name": "DEFAULT_SEARCH_RADIUS_KM",
+    "qualified_name": "DEFAULT_SEARCH_RADIUS_KM"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 40,
+        "path": "packages\\shared\\src\\constants.ts",
+        "symbol": "TRAVEL_DETECTION_THRESHOLD_KM"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\constants.ts",
+    "kind": "component",
+    "line_start": 40,
+    "name": "TRAVEL_DETECTION_THRESHOLD_KM",
+    "qualified_name": "TRAVEL_DETECTION_THRESHOLD_KM"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 41,
+        "path": "packages\\shared\\src\\constants.ts",
+        "symbol": "TRAVEL_DETECTION_COOLDOWN_MS"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\constants.ts",
+    "kind": "component",
+    "line_start": 41,
+    "name": "TRAVEL_DETECTION_COOLDOWN_MS",
+    "qualified_name": "TRAVEL_DETECTION_COOLDOWN_MS"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 44,
+        "path": "packages\\shared\\src\\constants.ts",
+        "symbol": "ALADHAN_API_BASE"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\constants.ts",
+    "kind": "component",
+    "line_start": 44,
+    "name": "ALADHAN_API_BASE",
+    "qualified_name": "ALADHAN_API_BASE"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 47,
+        "path": "packages\\shared\\src\\constants.ts",
+        "symbol": "PRAYER_TIMES_CACHE_HOURS"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\constants.ts",
+    "kind": "component",
+    "line_start": 47,
+    "name": "PRAYER_TIMES_CACHE_HOURS",
+    "qualified_name": "PRAYER_TIMES_CACHE_HOURS"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 48,
+        "path": "packages\\shared\\src\\constants.ts",
+        "symbol": "MOSQUE_CACHE_HOURS"
+      }
+    ],
+    "file_path": "packages\\shared\\src\\constants.ts",
+    "kind": "component",
+    "line_start": 48,
+    "name": "MOSQUE_CACHE_HOURS",
+    "qualified_name": "MOSQUE_CACHE_HOURS"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 79,
+        "path": "scripts\\enrich-iqama.ts",
+        "symbol": "DATA_ROOT"
+      }
+    ],
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "component",
+    "line_start": 79,
+    "name": "DATA_ROOT",
+    "qualified_name": "DATA_ROOT"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 15,
+        "path": "server\\src\\index.ts",
+        "symbol": "PORT"
+      }
+    ],
+    "file_path": "server\\src\\index.ts",
+    "kind": "component",
+    "line_start": 15,
+    "name": "PORT",
+    "qualified_name": "PORT"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 53,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "STALE_DAYS"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "component",
+    "line_start": 53,
+    "name": "STALE_DAYS",
+    "qualified_name": "STALE_DAYS"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 54,
+        "path": "server\\src\\services\\iqamaEnrichment.ts",
+        "symbol": "RATE_LIMIT_MS"
+      }
+    ],
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "component",
+    "line_start": 54,
+    "name": "RATE_LIMIT_MS",
+    "qualified_name": "RATE_LIMIT_MS"
+  }
+]

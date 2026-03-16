@@ -1,0 +1,736 @@
+[
+  {
+    "confidence": "medium",
+    "description": "Auto-inferred feature spanning 19 files (143 functions, 8 methods)",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 116,
+        "path": "setup.py",
+        "symbol": "ask_yes_no"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 500,
+        "path": "setup.py",
+        "symbol": "stop_admin"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 1204,
+        "path": "setup.py",
+        "symbol": "cmd_down"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 27,
+        "path": "scripts\\generate-mobile-assets.py",
+        "symbol": "_chunk"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 399,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+        "symbol": "parseHoursFromText"
+      }
+    ],
+    "name": "Setup.Py: Ask Yes No",
+    "symbols": [
+      "ask_yes_no",
+      "stop_admin",
+      "cmd_down",
+      "_chunk",
+      "parseHoursFromText",
+      "upsertIqama",
+      "process_file",
+      "enrichSeedFile",
+      "windows_check_docker_backend",
+      "setCache",
+      "load",
+      "_clean_stale_outputs",
+      "_make_png",
+      "_stop_gradle_daemons",
+      "_patch_ndk_version",
+      "warn",
+      "addMinutes",
+      "getCacheKey",
+      "print_admin_credentials",
+      "registerApi",
+      "searchOverpassMosques",
+      "regionKey",
+      "id",
+      "_is_process_running",
+      "cacheIqama",
+      "run_visible",
+      "haversine",
+      "_make_silent_wav",
+      "fetchPrayerPrefs",
+      "fetchMosqueById",
+      "refreshSingleMosqueIqama",
+      "oauthLoginApi",
+      "has_cmd",
+      "is_mac",
+      "searchNearby",
+      "cmd_status",
+      "getByUuid",
+      "updateProfile",
+      "die",
+      "show_help",
+      "fetchMosquesNearby",
+      "bestMatch",
+      "updatePrayerPrefs",
+      "findMawaqitMatch",
+      "main",
+      "_check_wsl_installed",
+      "haversineKm",
+      "deduplicateMosques",
+      "_ensure_wsl2_features",
+      "header",
+      "mawaqitGetByUuid",
+      "_select_jdk_for_android",
+      "normTime",
+      "parseIqama",
+      "admin_status",
+      "parseTime",
+      "_ensure_expo_prebuild",
+      "wait_docker",
+      "slugify",
+      "requestCoverage",
+      "fetchIqama",
+      "normalizeTime",
+      "is_valid_time",
+      "docker_running",
+      "_patch_gradle_wrapper",
+      "findBestMatch",
+      "compose_local",
+      "parseIqamaFromText",
+      "ensure_env_prod",
+      "findSeedFile",
+      "extractIqama",
+      "cmd_android",
+      "_java_major_from",
+      "enrichCity",
+      "findAllSeedFiles",
+      "mawaqitSearchNearby",
+      "mavenCentral",
+      "cmd_up",
+      "toPrayerEnum",
+      "getNextPrayer",
+      "generate_mosque_bundle",
+      "_pid_file",
+      "iqamaTimesToSchedules",
+      "requireRole",
+      "_detect_agp_version",
+      "fetchMawaqitById",
+      "cmd_restart",
+      "generateSeedFile",
+      "nameSimilarity",
+      "_find_apk",
+      "startIqamaRefreshJob",
+      "loginApi",
+      "run",
+      "start_admin",
+      "_ensure_mobile_deps",
+      "cmd_clean",
+      "parseServicesFromText",
+      "mawaqitFetch",
+      "ensure_env_local",
+      "compose_up",
+      "extractIqamaFromMawaqit",
+      "discoverNearbyIqama",
+      "get_compose_prefix",
+      "jaccardSimilarity",
+      "_get_local_ip",
+      "getActiveCities",
+      "is_windows",
+      "compose_prod",
+      "_preflight_check_settings_gradle",
+      "parseArgs",
+      "addSource",
+      "searchLocalMosques",
+      "cmd_generate_data",
+      "tryMawaqit",
+      "mawaqitFindBestMatch",
+      "info",
+      "_check_hyperv_virtualization",
+      "runIqamaRefreshJob",
+      "extractIqamaTimes",
+      "searchMawaqitNearby",
+      "scrapeWebsiteIqama",
+      "_check_android_prerequisites",
+      "compose_status",
+      "jaccard",
+      "compose_down",
+      "ensure_mobile_env",
+      "detect_compose",
+      "_clean_gradle_caches",
+      "kotlin",
+      "create",
+      "addMins",
+      "isValidTime",
+      "_patch_expo_modules_core_gradle",
+      "getPrayerTimes",
+      "sleep",
+      "_gradle_build_with_retry",
+      "searchOverpassAPI",
+      "findJsonFiles",
+      "getFromCache",
+      "setTheme",
+      "get",
+      "scrapeWebsite",
+      "_run_streaming",
+      "windows_check_virtualization",
+      "fetchPrayerTimesApi",
+      "mawaqitSearch",
+      "_ensure_cleartext_traffic",
+      "onCreate",
+      "enrichMosque",
+      "_read_env_value",
+      "build_iqama_times"
+    ]
+  },
+  {
+    "confidence": "medium",
+    "description": "Auto-inferred feature spanning 1 files (2 methods)",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 33,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+        "symbol": "ReactActivityDelegateWrapper"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 32,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+        "symbol": "createReactActivityDelegate"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 28,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+        "symbol": "getJSMainModuleName"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 30,
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+        "symbol": "getUseDeveloperSupport"
+      }
+    ],
+    "name": "Mobile: Com Liveaszan",
+    "symbols": [
+      "ReactActivityDelegateWrapper",
+      "createReactActivityDelegate",
+      "getJSMainModuleName",
+      "getUseDeveloperSupport"
+    ]
+  },
+  {
+    "confidence": "medium",
+    "description": "Auto-inferred feature spanning 7 files (11 functions, 3 components)",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 11,
+        "path": "server\\src\\services\\aladhanService.ts",
+        "symbol": "fetchPrayerTimes"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 34,
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+        "symbol": "MosquesScreen"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 169,
+        "path": "apps\\mobile\\services\\location.ts",
+        "symbol": "toRadians"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 23,
+        "path": "apps\\mobile\\services\\location.ts",
+        "symbol": "saveLocation"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 21,
+        "path": "apps\\mobile\\services\\notifications.ts",
+        "symbol": "requestPermissions"
+      }
+    ],
+    "name": "Server: Fetch Prayer Times",
+    "symbols": [
+      "fetchPrayerTimes",
+      "MosquesScreen",
+      "toRadians",
+      "saveLocation",
+      "requestPermissions",
+      "requestBackgroundPermissions",
+      "getCurrentLocation",
+      "formatDate",
+      "startBackgroundTracking",
+      "toRad",
+      "getSavedLocation",
+      "MosqueDetailScreen",
+      "HomeScreen",
+      "haversineDistance"
+    ]
+  },
+  {
+    "confidence": "medium",
+    "description": "Auto-inferred feature spanning 2 files (3 functions, 1 components)",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 14,
+        "path": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "symbol": "AzanPlayer"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 45,
+        "path": "apps\\mobile\\services\\azanAudio.ts",
+        "symbol": "playAzan"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 79,
+        "path": "apps\\mobile\\services\\azanAudio.ts",
+        "symbol": "stopAzan"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 33,
+        "path": "apps\\mobile\\services\\azanAudio.ts",
+        "symbol": "configureAudioSession"
+      }
+    ],
+    "name": "Mobile: Apps Mobile",
+    "symbols": [
+      "AzanPlayer",
+      "playAzan",
+      "stopAzan",
+      "configureAudioSession"
+    ]
+  },
+  {
+    "confidence": "medium",
+    "description": "Auto-inferred feature spanning 2 files (2 functions, 1 components)",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 10,
+        "path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+        "symbol": "getTimeUntilMs"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 38,
+        "path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+        "symbol": "IqamaCountdown"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 98,
+        "path": "packages\\shared\\src\\utils.ts",
+        "symbol": "formatCountdown"
+      }
+    ],
+    "name": "Mobile: Get Time Until Ms",
+    "symbols": [
+      "getTimeUntilMs",
+      "IqamaCountdown",
+      "formatCountdown"
+    ]
+  },
+  {
+    "confidence": "medium",
+    "description": "Directory-based feature group from apps\\mobile\\components (13 symbols)",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 11,
+        "path": "apps\\mobile\\components\\MosqueCard.tsx",
+        "symbol": "getSourceInfo"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 20,
+        "path": "apps\\mobile\\components\\MosqueCard.tsx",
+        "symbol": "MosqueCard"
+      },
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\components\\AzanPlayer.tsx"
+      }
+    ],
+    "name": "Mobile Components",
+    "symbols": [
+      "AzanPlayerProps",
+      "DebugPanel",
+      "IqamaCountdownProps",
+      "LEAD_TIME_OPTIONS",
+      "MosqueCard",
+      "MosqueCardProps",
+      "MosqueMap",
+      "MosqueMapProps",
+      "NotificationSettings",
+      "NotificationSettingsProps",
+      "PrayerTimeCard",
+      "PrayerTimeCardProps",
+      "Props",
+      "SourceResult",
+      "getSourceInfo"
+    ]
+  },
+  {
+    "confidence": "medium",
+    "description": "Auto-inferred feature spanning 2 files (6 functions)",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 186,
+        "path": "apps\\mobile\\services\\notifications.ts",
+        "symbol": "formatPrayerName"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 33,
+        "path": "apps\\mobile\\services\\notifications.ts",
+        "symbol": "parseTimeToDate"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "server\\src\\services\\notificationService.ts",
+        "symbol": "scheduleIqamaNotification"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 98,
+        "path": "apps\\mobile\\services\\notifications.ts",
+        "symbol": "scheduleMaghribNotification"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 150,
+        "path": "apps\\mobile\\services\\notifications.ts",
+        "symbol": "cancelAllNotifications"
+      }
+    ],
+    "name": "Mobile: Format Prayer Name",
+    "symbols": [
+      "formatPrayerName",
+      "parseTimeToDate",
+      "scheduleIqamaNotification",
+      "scheduleMaghribNotification",
+      "cancelAllNotifications",
+      "rescheduleAll"
+    ]
+  },
+  {
+    "confidence": "medium",
+    "description": "Directory-based feature group from scripts (11 symbols)",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 61,
+        "path": "scripts\\generate-mobile-assets.py",
+        "symbol": "_in_circle"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 88,
+        "path": "scripts\\generate-mobile-assets.py",
+        "symbol": "_splash_pixel"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 64,
+        "path": "scripts\\generate-mobile-assets.py",
+        "symbol": "_icon_pixel"
+      },
+      {
+        "confidence": "low",
+        "path": "scripts\\enrich-iqama.ts"
+      }
+    ],
+    "name": "Scripts",
+    "symbols": [
+      "Args",
+      "DATA_ROOT",
+      "EnrichedMosque",
+      "IqamaTimes",
+      "MawaqitMosque",
+      "RawMosque",
+      "SeedFile",
+      "SeedMosque",
+      "_icon_pixel",
+      "_in_circle",
+      "_splash_pixel"
+    ]
+  },
+  {
+    "confidence": "medium",
+    "description": "Auto-inferred feature spanning 2 files (4 functions)",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 9,
+        "path": "server\\src\\routes\\auth.ts",
+        "symbol": "getJwtSecret"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 24,
+        "path": "server\\src\\middleware\\auth.ts",
+        "symbol": "authenticate"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 17,
+        "path": "server\\src\\routes\\auth.ts",
+        "symbol": "generateToken"
+      },
+      {
+        "confidence": "medium",
+        "line_start": 54,
+        "path": "server\\src\\middleware\\auth.ts",
+        "symbol": "optionalAuth"
+      }
+    ],
+    "name": "Server",
+    "symbols": [
+      "getJwtSecret",
+      "authenticate",
+      "generateToken",
+      "optionalAuth"
+    ]
+  },
+  {
+    "confidence": "low",
+    "description": "Directory-based feature group from apps\\admin\\src (5 symbols)",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\admin\\src\\App.tsx"
+      }
+    ],
+    "name": "Admin: Src",
+    "symbols": [
+      "Login",
+      "MosqueList",
+      "CoverageRequests",
+      "AdminLayout",
+      "App"
+    ]
+  },
+  {
+    "confidence": "low",
+    "description": "Directory-based feature group from apps\\admin\\src\\pages (5 symbols)",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\admin\\src\\pages\\Dashboard.tsx"
+      }
+    ],
+    "name": "Admin: Pages",
+    "symbols": [
+      "Stats",
+      "IqamaFormData",
+      "Dashboard",
+      "IqamaEditor",
+      "StreamSetup"
+    ]
+  },
+  {
+    "confidence": "low",
+    "description": "Directory-based feature group from apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app (7 symbols)",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt"
+      }
+    ],
+    "name": "Mobile: App",
+    "symbols": [
+      "MainActivity",
+      "getMainComponentName",
+      "invokeDefaultOnBackPressed",
+      "MainApplication",
+      "getPackages",
+      "PackageList",
+      "onConfigurationChanged"
+    ]
+  },
+  {
+    "confidence": "low",
+    "description": "Directory-based feature group from apps\\mobile\\app\\(tabs) (4 symbols)",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+      }
+    ],
+    "name": "Mobile: (Tabs)",
+    "symbols": [
+      "ViewMode",
+      "AZAN_SOUND_FILE",
+      "SettingsScreen",
+      "TabsLayout"
+    ]
+  },
+  {
+    "confidence": "low",
+    "description": "Directory-based feature group from apps\\mobile\\services (30 symbols)",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\services\\api.ts"
+      }
+    ],
+    "name": "Mobile: Services",
+    "symbols": [
+      "followMosque",
+      "unfollowMosque",
+      "fetchCoverageRequests",
+      "isPlaying",
+      "AzanSoundId",
+      "getCachedTimestamp",
+      "clearCached",
+      "CacheEntry",
+      "mapOverpassToDiscovered",
+      "DiscoveredMosque",
+      "ScrapedMosqueData",
+      "LocalMosqueRecord",
+      "stopBackgroundTracking",
+      "MawaqitMosque",
+      "IqamaTimes",
+      "parseElement",
+      "OverpassMosque",
+      "CacheEntry",
+      "BASE_URL",
+      "TOKEN_KEY",
+      "AZAN_SOUNDS",
+      "NEARBY_MOSQUE_TTL",
+      "IQAMA_TTL",
+      "MOSQUE_DETAIL_TTL",
+      "TRAVEL_THRESHOLD_KM",
+      "SAVED_LOCATION_KEY",
+      "BACKGROUND_TASK_NAME",
+      "MAWAQIT_BASE",
+      "OVERPASS_URL",
+      "CACHE_DURATION_MS"
+    ]
+  },
+  {
+    "confidence": "low",
+    "description": "Directory-based feature group from apps\\mobile\\stores (11 symbols)",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\stores\\authStore.ts"
+      }
+    ],
+    "name": "Mobile: Stores",
+    "symbols": [
+      "AuthState",
+      "CachedIqama",
+      "MosqueState",
+      "PrayerState",
+      "SettingsState",
+      "USER_KEY",
+      "GUEST_KEY",
+      "useAuthStore",
+      "useMosqueStore",
+      "usePrayerStore",
+      "useSettingsStore"
+    ]
+  },
+  {
+    "confidence": "low",
+    "description": "Directory-based feature group from packages\\shared\\src (31 symbols)",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "packages\\shared\\src\\types.ts"
+      }
+    ],
+    "name": "Shared: Src",
+    "symbols": [
+      "PrayerTimes",
+      "NextPrayer",
+      "Mosque",
+      "IqamaSchedule",
+      "User",
+      "UserPrayerPreference",
+      "UserMosque",
+      "CoverageRequest",
+      "AuthTokenPayload",
+      "LoginResponse",
+      "RegisterRequest",
+      "MosqueSeedFile",
+      "MosqueSeedEntry",
+      "NearbyMosquesResponse",
+      "ApiError",
+      "formatTime",
+      "formatTime12h",
+      "isMaghrib",
+      "getTodayForAladhan",
+      "getTodayISO",
+      "CALC_METHODS",
+      "DEFAULT_CALC_METHOD",
+      "DEFAULT_LEAD_MINUTES",
+      "MIN_LEAD_MINUTES",
+      "MAX_LEAD_MINUTES",
+      "DEFAULT_SEARCH_RADIUS_KM",
+      "TRAVEL_DETECTION_THRESHOLD_KM",
+      "TRAVEL_DETECTION_COOLDOWN_MS",
+      "ALADHAN_API_BASE",
+      "PRAYER_TIMES_CACHE_HOURS",
+      "MOSQUE_CACHE_HOURS"
+    ]
+  },
+  {
+    "confidence": "low",
+    "description": "Directory-based feature group from server\\src\\services (10 symbols)",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "server\\src\\services\\aladhanService.ts"
+      }
+    ],
+    "name": "Server: Services",
+    "symbols": [
+      "PrayerTimes",
+      "MawaqitMosque",
+      "IqamaTimes",
+      "EnrichmentResult",
+      "EnrichmentReport",
+      "cancelUserNotifications",
+      "getStreamStatus",
+      "StreamStatus",
+      "STALE_DAYS",
+      "RATE_LIMIT_MS"
+    ]
+  },
+  {
+    "confidence": "low",
+    "description": "Directory-based feature group from apps\\mobile\\app\\(auth) (3 symbols)",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(auth)\\login.tsx"
+      }
+    ],
+    "name": "Mobile: (Auth)",
+    "symbols": [
+      "LoginScreen",
+      "RegisterScreen",
+      "AuthLayout"
+    ]
+  }
+]

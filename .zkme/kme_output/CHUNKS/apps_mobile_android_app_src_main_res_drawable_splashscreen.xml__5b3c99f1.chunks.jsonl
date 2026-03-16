@@ -1,0 +1,1 @@
+{"chunk_id": "CHK-5b3c99f1-0000", "end_line": 3, "next_chunk_id": null, "prev_chunk_id": null, "source_path": "apps/mobile/android/app/src/main/res/drawable/splashscreen.xml", "start_line": 1, "text": "<layer-list xmlns:android=\"http://schemas.android.com/apk/res/android\">\n  <item android:drawable=\"@color/splashscreen_background\"/>\n</layer-list>"}

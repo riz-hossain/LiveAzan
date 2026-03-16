@@ -1,0 +1,13 @@
+{
+  "conclusion": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "notes": [
+    "This is heuristic detection based on imports/config/file paths.",
+    "If both are detected, the repo may support both or contain legacy naming."
+  ],
+  "scores": {
+    "elasticsearch": 0,
+    "opensearch": 0
+  }
+}

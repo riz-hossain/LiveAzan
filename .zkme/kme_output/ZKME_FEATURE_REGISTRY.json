@@ -1,0 +1,1458 @@
+{
+  "features": [
+    {
+      "classification": "fact",
+      "confidence": "medium",
+      "core_files": [
+        {
+          "path": "setup.py",
+          "score": 1.4
+        },
+        {
+          "path": "apps\\mobile\\services\\api.ts",
+          "score": 0.38708911077252595
+        },
+        {
+          "path": "scripts\\enrich-iqama.ts",
+          "score": 0.34053660715080547
+        },
+        {
+          "path": "server\\src\\services\\iqamaEnrichment.ts",
+          "score": 0.30603402442214633
+        },
+        {
+          "path": "scripts\\research-mosques.ts",
+          "score": 0.285310289956004
+        },
+        {
+          "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+          "score": 0.23981100848481157
+        },
+        {
+          "path": "apps\\mobile\\services\\mawaqitService.ts",
+          "score": 0.21078102723597744
+        },
+        {
+          "path": "packages\\shared\\src\\utils.ts",
+          "score": 0.21055114815365308
+        },
+        {
+          "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+          "score": 0.15917000976414863
+        },
+        {
+          "path": "scripts\\generate-mobile-assets.py",
+          "score": 0.15170028413779554
+        },
+        {
+          "path": "apps\\mobile\\services\\overpassService.ts",
+          "score": 0.1295291357266355
+        },
+        {
+          "path": "apps\\mobile\\services\\prayerTimes.ts",
+          "score": 0.11688981836748193
+        },
+        {
+          "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+          "score": 0.11435877690736383
+        },
+        {
+          "path": "apps\\mobile\\android\\react-settings-plugin\\build.gradle.kts",
+          "score": 0.10515685621754504
+        },
+        {
+          "path": "server\\prisma\\seed.ts",
+          "score": 0.09180439786713382
+        },
+        {
+          "path": "apps\\mobile\\services\\localMosqueSearch.ts",
+          "score": 0.08387404482263039
+        },
+        {
+          "path": "server\\src\\middleware\\auth.ts",
+          "score": 0.07660397884435445
+        },
+        {
+          "path": "scripts\\generate-mosque-bundle.py",
+          "score": 0.0689846414474328
+        },
+        {
+          "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+          "score": 0.03151729472641387
+        },
+        {
+          "path": "server\\src\\jobs\\iqamaRefreshJob.ts",
+          "score": 0.01861547300969312
+        }
+      ],
+      "description": "Auto-inferred feature spanning 19 files (143 functions, 8 methods)",
+      "entry_points": [
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_end": 42,
+              "line_start": 39,
+              "path": "apps\\mobile\\services\\api.ts",
+              "snippet": "  const controller = new AbortController();\n  const timeoutId = setTimeout(() => controller.abort(), 8_000);\n  let response: Response;\n  try {\n    response = await fetch(`${BASE_URL}${endpoint}`, {\n      ...options,\n      headers,\n      signal: controller.signal,\n    });"
+            }
+          ],
+          "file_path": "apps\\mobile\\services\\api.ts",
+          "handler_symbol": null,
+          "kind": "http",
+          "name": "FRONTEND GET `${BASE_URL}${endpoint}`"
+        },
+        {
+          "classification": "fact",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "confidence": "medium",
+              "path": "scripts\\generate-mosque-bundle.py"
+            }
+          ],
+          "file_path": "scripts\\generate-mosque-bundle.py",
+          "handler_symbol": "False",
+          "kind": "http",
+          "name": "GET hasLiveStream"
+        },
+        {
+          "classification": "fact",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "confidence": "medium",
+              "path": "scripts\\generate-mosque-bundle.py"
+            }
+          ],
+          "file_path": "scripts\\generate-mosque-bundle.py",
+          "handler_symbol": "True",
+          "kind": "http",
+          "name": "GET verified"
+        }
+      ],
+      "evidence": [
+        {
+          "confidence": "medium",
+          "line_start": 116,
+          "path": "setup.py",
+          "symbol": "ask_yes_no"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 500,
+          "path": "setup.py",
+          "symbol": "stop_admin"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 1204,
+          "path": "setup.py",
+          "symbol": "cmd_down"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 27,
+          "path": "scripts\\generate-mobile-assets.py",
+          "symbol": "_chunk"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 399,
+          "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+          "symbol": "parseHoursFromText"
+        }
+      ],
+      "id": "de784e4ed618",
+      "interfaces": [],
+      "name": "Setup.Py: Ask Yes No",
+      "symbols": [
+        "ask_yes_no",
+        "stop_admin",
+        "cmd_down",
+        "_chunk",
+        "parseHoursFromText",
+        "upsertIqama",
+        "process_file",
+        "enrichSeedFile",
+        "windows_check_docker_backend",
+        "setCache",
+        "load",
+        "_clean_stale_outputs",
+        "_make_png",
+        "_stop_gradle_daemons",
+        "_patch_ndk_version",
+        "warn",
+        "addMinutes",
+        "getCacheKey",
+        "print_admin_credentials",
+        "registerApi",
+        "searchOverpassMosques",
+        "regionKey",
+        "id",
+        "_is_process_running",
+        "cacheIqama",
+        "run_visible",
+        "haversine",
+        "_make_silent_wav",
+        "fetchPrayerPrefs",
+        "fetchMosqueById",
+        "refreshSingleMosqueIqama",
+        "oauthLoginApi",
+        "has_cmd",
+        "is_mac",
+        "searchNearby",
+        "cmd_status",
+        "getByUuid",
+        "updateProfile",
+        "die",
+        "show_help",
+        "fetchMosquesNearby",
+        "bestMatch",
+        "updatePrayerPrefs",
+        "findMawaqitMatch",
+        "main",
+        "_check_wsl_installed",
+        "haversineKm",
+        "deduplicateMosques",
+        "_ensure_wsl2_features",
+        "header"
+      ]
+    },
+    {
+      "classification": "fact",
+      "confidence": "medium",
+      "core_files": [
+        {
+          "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+          "score": 0.22283801366980807
+        },
+        {
+          "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+          "score": 0.16010228767030935
+        }
+      ],
+      "description": "Auto-inferred feature spanning 1 files (2 methods)",
+      "entry_points": [],
+      "evidence": [
+        {
+          "confidence": "medium",
+          "line_start": 33,
+          "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+          "symbol": "ReactActivityDelegateWrapper"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 32,
+          "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+          "symbol": "createReactActivityDelegate"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 28,
+          "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+          "symbol": "getJSMainModuleName"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 30,
+          "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+          "symbol": "getUseDeveloperSupport"
+        }
+      ],
+      "id": "8736d97e10ff",
+      "interfaces": [],
+      "name": "Mobile: Com Liveaszan",
+      "symbols": [
+        "ReactActivityDelegateWrapper",
+        "createReactActivityDelegate",
+        "getJSMainModuleName",
+        "getUseDeveloperSupport"
+      ]
+    },
+    {
+      "classification": "fact",
+      "confidence": "medium",
+      "core_files": [
+        {
+          "path": "apps\\mobile\\services\\location.ts",
+          "score": 0.35781871499963186
+        },
+        {
+          "path": "apps\\mobile\\services\\notifications.ts",
+          "score": 0.2154809365812739
+        },
+        {
+          "path": "packages\\shared\\src\\utils.ts",
+          "score": 0.21055114815365308
+        },
+        {
+          "path": "server\\src\\services\\aladhanService.ts",
+          "score": 0.13006374414163172
+        },
+        {
+          "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+          "score": 0.044124212616979415
+        },
+        {
+          "path": "apps\\mobile\\app\\mosque\\[id].tsx",
+          "score": 0.03582057173115123
+        },
+        {
+          "path": "apps\\mobile\\app\\(tabs)\\index.tsx",
+          "score": 0.009620431844167188
+        }
+      ],
+      "description": "Auto-inferred feature spanning 7 files (11 functions, 3 components)",
+      "entry_points": [
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_end": 23,
+              "line_start": 20,
+              "path": "server\\src\\services\\aladhanService.ts",
+              "snippet": "): Promise<PrayerTimes> {\n  const dateStr = date ?? formatDate(new Date());\n  const url = `https://api.aladhan.com/v1/timings/${dateStr}?latitude=${lat}&longitude=${lon}&method=${method}`;\n\n  const response = await fetch(url);\n  if (!response.ok) {\n    throw new Error(`Aladhan API error: ${response.status} ${response.statusText}`);\n  }\n"
+            }
+          ],
+          "file_path": "server\\src\\services\\aladhanService.ts",
+          "handler_symbol": null,
+          "kind": "http",
+          "name": "FRONTEND GET url"
+        }
+      ],
+      "evidence": [
+        {
+          "confidence": "medium",
+          "line_start": 11,
+          "path": "server\\src\\services\\aladhanService.ts",
+          "symbol": "fetchPrayerTimes"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 34,
+          "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+          "symbol": "MosquesScreen"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 169,
+          "path": "apps\\mobile\\services\\location.ts",
+          "symbol": "toRadians"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 23,
+          "path": "apps\\mobile\\services\\location.ts",
+          "symbol": "saveLocation"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 21,
+          "path": "apps\\mobile\\services\\notifications.ts",
+          "symbol": "requestPermissions"
+        }
+      ],
+      "id": "b68f559744cf",
+      "interfaces": [],
+      "name": "Server: Fetch Prayer Times",
+      "symbols": [
+        "fetchPrayerTimes",
+        "MosquesScreen",
+        "toRadians",
+        "saveLocation",
+        "requestPermissions",
+        "requestBackgroundPermissions",
+        "getCurrentLocation",
+        "formatDate",
+        "startBackgroundTracking",
+        "toRad",
+        "getSavedLocation",
+        "MosqueDetailScreen",
+        "HomeScreen",
+        "haversineDistance"
+      ]
+    },
+    {
+      "classification": "fact",
+      "confidence": "medium",
+      "core_files": [
+        {
+          "path": "apps\\mobile\\services\\azanAudio.ts",
+          "score": 0.25821271086051767
+        },
+        {
+          "path": "apps\\mobile\\components\\AzanPlayer.tsx",
+          "score": 0.03746086797315584
+        }
+      ],
+      "description": "Auto-inferred feature spanning 2 files (3 functions, 1 components)",
+      "entry_points": [],
+      "evidence": [
+        {
+          "confidence": "medium",
+          "line_start": 14,
+          "path": "apps\\mobile\\components\\AzanPlayer.tsx",
+          "symbol": "AzanPlayer"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 45,
+          "path": "apps\\mobile\\services\\azanAudio.ts",
+          "symbol": "playAzan"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 79,
+          "path": "apps\\mobile\\services\\azanAudio.ts",
+          "symbol": "stopAzan"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 33,
+          "path": "apps\\mobile\\services\\azanAudio.ts",
+          "symbol": "configureAudioSession"
+        }
+      ],
+      "id": "f5a4ba6e1f11",
+      "interfaces": [],
+      "name": "Mobile: Apps Mobile",
+      "symbols": [
+        "AzanPlayer",
+        "playAzan",
+        "stopAzan",
+        "configureAudioSession"
+      ]
+    },
+    {
+      "classification": "fact",
+      "confidence": "medium",
+      "core_files": [
+        {
+          "path": "packages\\shared\\src\\utils.ts",
+          "score": 0.2947716074151143
+        },
+        {
+          "path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+          "score": 0.1092525001340429
+        }
+      ],
+      "description": "Auto-inferred feature spanning 2 files (2 functions, 1 components)",
+      "entry_points": [],
+      "evidence": [
+        {
+          "confidence": "medium",
+          "line_start": 10,
+          "path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+          "symbol": "getTimeUntilMs"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 38,
+          "path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+          "symbol": "IqamaCountdown"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 98,
+          "path": "packages\\shared\\src\\utils.ts",
+          "symbol": "formatCountdown"
+        }
+      ],
+      "id": "66b3932d41d0",
+      "interfaces": [],
+      "name": "Mobile: Get Time Until Ms",
+      "symbols": [
+        "getTimeUntilMs",
+        "IqamaCountdown",
+        "formatCountdown"
+      ]
+    },
+    {
+      "classification": "fact",
+      "confidence": "medium",
+      "core_files": [
+        {
+          "path": "apps\\mobile\\components\\MosqueCard.tsx",
+          "score": 0.10735731180147484
+        },
+        {
+          "path": "apps\\mobile\\components\\DebugPanel.tsx",
+          "score": 0.0828649749716698
+        },
+        {
+          "path": "apps\\mobile\\components\\NotificationSettings.tsx",
+          "score": 0.0828649749716698
+        },
+        {
+          "path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+          "score": 0.07803750009574494
+        },
+        {
+          "path": "apps\\mobile\\components\\MosqueMap.tsx",
+          "score": 0.06310325406210465
+        },
+        {
+          "path": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+          "score": 0.06310325406210465
+        },
+        {
+          "path": "apps\\mobile\\components\\AzanPlayer.tsx",
+          "score": 0.03746086797315584
+        }
+      ],
+      "description": "Directory-based feature group from apps\\mobile\\components (13 symbols)",
+      "entry_points": [],
+      "evidence": [
+        {
+          "confidence": "medium",
+          "line_start": 11,
+          "path": "apps\\mobile\\components\\MosqueCard.tsx",
+          "symbol": "getSourceInfo"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 20,
+          "path": "apps\\mobile\\components\\MosqueCard.tsx",
+          "symbol": "MosqueCard"
+        },
+        {
+          "confidence": "low",
+          "path": "apps\\mobile\\components\\AzanPlayer.tsx"
+        }
+      ],
+      "id": "5dd77966ce89",
+      "interfaces": [],
+      "name": "Mobile Components",
+      "symbols": [
+        "AzanPlayerProps",
+        "DebugPanel",
+        "IqamaCountdownProps",
+        "LEAD_TIME_OPTIONS",
+        "MosqueCard",
+        "MosqueCardProps",
+        "MosqueMap",
+        "MosqueMapProps",
+        "NotificationSettings",
+        "NotificationSettingsProps",
+        "PrayerTimeCard",
+        "PrayerTimeCardProps",
+        "Props",
+        "SourceResult",
+        "getSourceInfo"
+      ]
+    },
+    {
+      "classification": "fact",
+      "confidence": "medium",
+      "core_files": [
+        {
+          "path": "apps\\mobile\\services\\notifications.ts",
+          "score": 0.2154809365812739
+        },
+        {
+          "path": "server\\src\\services\\notificationService.ts",
+          "score": 0.047267358685501304
+        }
+      ],
+      "description": "Auto-inferred feature spanning 2 files (6 functions)",
+      "entry_points": [],
+      "evidence": [
+        {
+          "confidence": "medium",
+          "line_start": 186,
+          "path": "apps\\mobile\\services\\notifications.ts",
+          "symbol": "formatPrayerName"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 33,
+          "path": "apps\\mobile\\services\\notifications.ts",
+          "symbol": "parseTimeToDate"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 3,
+          "path": "server\\src\\services\\notificationService.ts",
+          "symbol": "scheduleIqamaNotification"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 98,
+          "path": "apps\\mobile\\services\\notifications.ts",
+          "symbol": "scheduleMaghribNotification"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 150,
+          "path": "apps\\mobile\\services\\notifications.ts",
+          "symbol": "cancelAllNotifications"
+        }
+      ],
+      "id": "4508c804fdca",
+      "interfaces": [],
+      "name": "Mobile: Format Prayer Name",
+      "symbols": [
+        "formatPrayerName",
+        "parseTimeToDate",
+        "scheduleIqamaNotification",
+        "scheduleMaghribNotification",
+        "cancelAllNotifications",
+        "rescheduleAll"
+      ]
+    },
+    {
+      "classification": "fact",
+      "confidence": "medium",
+      "core_files": [
+        {
+          "path": "scripts\\enrich-iqama.ts",
+          "score": 0.4767512500111276
+        },
+        {
+          "path": "server\\src\\services\\iqamaEnrichment.ts",
+          "score": 0.30603402442214633
+        },
+        {
+          "path": "scripts\\research-mosques.ts",
+          "score": 0.285310289956004
+        },
+        {
+          "path": "apps\\mobile\\services\\mawaqitService.ts",
+          "score": 0.21078102723597744
+        },
+        {
+          "path": "scripts\\generate-mobile-assets.py",
+          "score": 0.15170028413779554
+        }
+      ],
+      "description": "Directory-based feature group from scripts (11 symbols)",
+      "entry_points": [],
+      "evidence": [
+        {
+          "confidence": "medium",
+          "line_start": 61,
+          "path": "scripts\\generate-mobile-assets.py",
+          "symbol": "_in_circle"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 88,
+          "path": "scripts\\generate-mobile-assets.py",
+          "symbol": "_splash_pixel"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 64,
+          "path": "scripts\\generate-mobile-assets.py",
+          "symbol": "_icon_pixel"
+        },
+        {
+          "confidence": "low",
+          "path": "scripts\\enrich-iqama.ts"
+        }
+      ],
+      "id": "16728d18790d",
+      "interfaces": [],
+      "name": "Scripts",
+      "symbols": [
+        "Args",
+        "DATA_ROOT",
+        "EnrichedMosque",
+        "IqamaTimes",
+        "MawaqitMosque",
+        "RawMosque",
+        "SeedFile",
+        "SeedMosque",
+        "_icon_pixel",
+        "_in_circle",
+        "_splash_pixel"
+      ]
+    },
+    {
+      "classification": "fact",
+      "confidence": "medium",
+      "core_files": [
+        {
+          "path": "server\\src\\middleware\\auth.ts",
+          "score": 0.10724557038209623
+        },
+        {
+          "path": "server\\src\\routes\\auth.ts",
+          "score": 0.06777230311982489
+        }
+      ],
+      "description": "Auto-inferred feature spanning 2 files (4 functions)",
+      "entry_points": [
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_start": 31,
+              "path": "server\\src\\routes\\auth.ts"
+            }
+          ],
+          "file_path": "server\\src\\routes\\auth.ts",
+          "handler_symbol": null,
+          "kind": "http",
+          "name": "POST /register"
+        },
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_start": 80,
+              "path": "server\\src\\routes\\auth.ts"
+            }
+          ],
+          "file_path": "server\\src\\routes\\auth.ts",
+          "handler_symbol": null,
+          "kind": "http",
+          "name": "POST /login"
+        },
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_start": 126,
+              "path": "server\\src\\routes\\auth.ts"
+            }
+          ],
+          "file_path": "server\\src\\routes\\auth.ts",
+          "handler_symbol": null,
+          "kind": "http",
+          "name": "POST /oauth"
+        },
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_start": 31,
+              "path": "server\\src\\routes\\auth.ts"
+            }
+          ],
+          "file_path": "server\\src\\routes\\auth.ts",
+          "handler_symbol": null,
+          "kind": "http",
+          "name": "POST /register"
+        },
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_start": 80,
+              "path": "server\\src\\routes\\auth.ts"
+            }
+          ],
+          "file_path": "server\\src\\routes\\auth.ts",
+          "handler_symbol": null,
+          "kind": "http",
+          "name": "POST /login"
+        },
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_start": 126,
+              "path": "server\\src\\routes\\auth.ts"
+            }
+          ],
+          "file_path": "server\\src\\routes\\auth.ts",
+          "handler_symbol": null,
+          "kind": "http",
+          "name": "POST /oauth"
+        }
+      ],
+      "evidence": [
+        {
+          "confidence": "medium",
+          "line_start": 9,
+          "path": "server\\src\\routes\\auth.ts",
+          "symbol": "getJwtSecret"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 24,
+          "path": "server\\src\\middleware\\auth.ts",
+          "symbol": "authenticate"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 17,
+          "path": "server\\src\\routes\\auth.ts",
+          "symbol": "generateToken"
+        },
+        {
+          "confidence": "medium",
+          "line_start": 54,
+          "path": "server\\src\\middleware\\auth.ts",
+          "symbol": "optionalAuth"
+        }
+      ],
+      "id": "3de4f901fffb",
+      "interfaces": [],
+      "name": "Server",
+      "symbols": [
+        "getJwtSecret",
+        "authenticate",
+        "generateToken",
+        "optionalAuth"
+      ]
+    },
+    {
+      "classification": "hypothesis",
+      "confidence": "low",
+      "core_files": [
+        {
+          "path": "apps\\admin\\src\\App.tsx",
+          "score": 0.17134378350712
+        }
+      ],
+      "description": "Directory-based feature group from apps\\admin\\src (5 symbols)",
+      "entry_points": [
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_start": 188,
+              "path": "apps\\admin\\src\\App.tsx"
+            }
+          ],
+          "file_path": "apps\\admin\\src\\App.tsx",
+          "handler_symbol": null,
+          "kind": "ui",
+          "name": "page:/login"
+        },
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_start": 189,
+              "path": "apps\\admin\\src\\App.tsx"
+            }
+          ],
+          "file_path": "apps\\admin\\src\\App.tsx",
+          "handler_symbol": null,
+          "kind": "ui",
+          "name": "page:/dashboard"
+        },
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_start": 197,
+              "path": "apps\\admin\\src\\App.tsx"
+            }
+          ],
+          "file_path": "apps\\admin\\src\\App.tsx",
+          "handler_symbol": null,
+          "kind": "ui",
+          "name": "page:/mosques"
+        },
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_start": 205,
+              "path": "apps\\admin\\src\\App.tsx"
+            }
+          ],
+          "file_path": "apps\\admin\\src\\App.tsx",
+          "handler_symbol": null,
+          "kind": "ui",
+          "name": "page:/mosques/:id/iqama"
+        },
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_start": 213,
+              "path": "apps\\admin\\src\\App.tsx"
+            }
+          ],
+          "file_path": "apps\\admin\\src\\App.tsx",
+          "handler_symbol": null,
+          "kind": "ui",
+          "name": "page:/coverage-requests"
+        },
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_start": 221,
+              "path": "apps\\admin\\src\\App.tsx"
+            }
+          ],
+          "file_path": "apps\\admin\\src\\App.tsx",
+          "handler_symbol": null,
+          "kind": "ui",
+          "name": "page:/stream-setup"
+        },
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_start": 229,
+              "path": "apps\\admin\\src\\App.tsx"
+            }
+          ],
+          "file_path": "apps\\admin\\src\\App.tsx",
+          "handler_symbol": null,
+          "kind": "ui",
+          "name": "page:*"
+        }
+      ],
+      "evidence": [
+        {
+          "confidence": "low",
+          "path": "apps\\admin\\src\\App.tsx"
+        }
+      ],
+      "id": "6e96bcc8034f",
+      "interfaces": [],
+      "name": "Admin: Src",
+      "symbols": [
+        "Login",
+        "MosqueList",
+        "CoverageRequests",
+        "AdminLayout",
+        "App"
+      ]
+    },
+    {
+      "classification": "hypothesis",
+      "confidence": "low",
+      "core_files": [
+        {
+          "path": "apps\\admin\\src\\pages\\Dashboard.tsx",
+          "score": 0.0883445556869465
+        },
+        {
+          "path": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+          "score": 0.06310325406210465
+        },
+        {
+          "path": "apps\\admin\\src\\pages\\StreamSetup.tsx",
+          "score": 0.04334153315253953
+        }
+      ],
+      "description": "Directory-based feature group from apps\\admin\\src\\pages (5 symbols)",
+      "entry_points": [
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_end": 32,
+              "line_start": 29,
+              "path": "apps\\admin\\src\\pages\\Dashboard.tsx",
+              "snippet": "  useEffect(() => {\n    // TODO: Replace with real API call \u00e2\u20ac\u201d GET /api/admin/stats\n    const fetchStats = async () => {\n      try {\n        const res = await fetch(\"/api/admin/stats\");\n        if (res.ok) {\n          setStats(await res.json());\n        } else {\n          // Fallback mock data for development"
+            }
+          ],
+          "file_path": "apps\\admin\\src\\pages\\Dashboard.tsx",
+          "handler_symbol": null,
+          "kind": "http",
+          "name": "FRONTEND GET /api/admin/stats"
+        },
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_end": 65,
+              "line_start": 62,
+              "path": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+              "snippet": "\n    // TODO: Fetch existing iqama times \u00e2\u20ac\u201d GET /api/iqama/:mosqueId\n    const fetchIqama = async () => {\n      try {\n        const res = await fetch(`/api/iqama/${selectedMosque}`);\n        if (res.ok) {\n          const data = await res.json();\n          setForm((prev) => ({ ...prev, ...data }));\n        }"
+            }
+          ],
+          "file_path": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+          "handler_symbol": null,
+          "kind": "http",
+          "name": "FRONTEND GET /api/iqama"
+        }
+      ],
+      "evidence": [
+        {
+          "confidence": "low",
+          "path": "apps\\admin\\src\\pages\\Dashboard.tsx"
+        }
+      ],
+      "id": "1e9a45372cf5",
+      "interfaces": [],
+      "name": "Admin: Pages",
+      "symbols": [
+        "Stats",
+        "IqamaFormData",
+        "Dashboard",
+        "IqamaEditor",
+        "StreamSetup"
+      ]
+    },
+    {
+      "classification": "hypothesis",
+      "confidence": "low",
+      "core_files": [
+        {
+          "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+          "score": 0.16010228767030935
+        },
+        {
+          "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+          "score": 0.15917000976414863
+        }
+      ],
+      "description": "Directory-based feature group from apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app (7 symbols)",
+      "entry_points": [],
+      "evidence": [
+        {
+          "confidence": "low",
+          "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt"
+        }
+      ],
+      "id": "a353ca7cd8b5",
+      "interfaces": [],
+      "name": "Mobile: App",
+      "symbols": [
+        "MainActivity",
+        "getMainComponentName",
+        "invokeDefaultOnBackPressed",
+        "MainApplication",
+        "getPackages",
+        "PackageList",
+        "onConfigurationChanged"
+      ]
+    },
+    {
+      "classification": "hypothesis",
+      "confidence": "low",
+      "core_files": [
+        {
+          "path": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+          "score": 0.06310325406210465
+        },
+        {
+          "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+          "score": 0.044124212616979415
+        },
+        {
+          "path": "apps\\mobile\\app\\(tabs)\\_layout.tsx",
+          "score": 0.04334153315253953
+        }
+      ],
+      "description": "Directory-based feature group from apps\\mobile\\app\\(tabs) (4 symbols)",
+      "entry_points": [],
+      "evidence": [
+        {
+          "confidence": "low",
+          "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+        }
+      ],
+      "id": "7d4b7f60e5da",
+      "interfaces": [],
+      "name": "Mobile: (Tabs)",
+      "symbols": [
+        "ViewMode",
+        "AZAN_SOUND_FILE",
+        "SettingsScreen",
+        "TabsLayout"
+      ]
+    },
+    {
+      "classification": "hypothesis",
+      "confidence": "low",
+      "core_files": [
+        {
+          "path": "apps\\mobile\\services\\api.ts",
+          "score": 0.5419247550815363
+        },
+        {
+          "path": "scripts\\enrich-iqama.ts",
+          "score": 0.34053660715080547
+        },
+        {
+          "path": "server\\src\\services\\iqamaEnrichment.ts",
+          "score": 0.30603402442214633
+        },
+        {
+          "path": "scripts\\research-mosques.ts",
+          "score": 0.285310289956004
+        },
+        {
+          "path": "apps\\mobile\\services\\location.ts",
+          "score": 0.2555847964283085
+        },
+        {
+          "path": "apps\\mobile\\services\\mawaqitService.ts",
+          "score": 0.21078102723597744
+        },
+        {
+          "path": "apps\\mobile\\services\\azanAudio.ts",
+          "score": 0.18443765061465547
+        },
+        {
+          "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+          "score": 0.17129357748915114
+        },
+        {
+          "path": "apps\\mobile\\services\\overpassService.ts",
+          "score": 0.1295291357266355
+        },
+        {
+          "path": "apps\\mobile\\services\\cache.ts",
+          "score": 0.12685175464916001
+        },
+        {
+          "path": "apps\\mobile\\services\\prayerTimes.ts",
+          "score": 0.11688981836748193
+        },
+        {
+          "path": "apps\\mobile\\services\\localMosqueSearch.ts",
+          "score": 0.08387404482263039
+        }
+      ],
+      "description": "Directory-based feature group from apps\\mobile\\services (30 symbols)",
+      "entry_points": [
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_end": 42,
+              "line_start": 39,
+              "path": "apps\\mobile\\services\\api.ts",
+              "snippet": "  const controller = new AbortController();\n  const timeoutId = setTimeout(() => controller.abort(), 8_000);\n  let response: Response;\n  try {\n    response = await fetch(`${BASE_URL}${endpoint}`, {\n      ...options,\n      headers,\n      signal: controller.signal,\n    });"
+            }
+          ],
+          "file_path": "apps\\mobile\\services\\api.ts",
+          "handler_symbol": null,
+          "kind": "http",
+          "name": "FRONTEND GET `${BASE_URL}${endpoint}`"
+        }
+      ],
+      "evidence": [
+        {
+          "confidence": "low",
+          "path": "apps\\mobile\\services\\api.ts"
+        }
+      ],
+      "id": "8c59ce516dc5",
+      "interfaces": [],
+      "name": "Mobile: Services",
+      "symbols": [
+        "followMosque",
+        "unfollowMosque",
+        "fetchCoverageRequests",
+        "isPlaying",
+        "AzanSoundId",
+        "getCachedTimestamp",
+        "clearCached",
+        "CacheEntry",
+        "mapOverpassToDiscovered",
+        "DiscoveredMosque",
+        "ScrapedMosqueData",
+        "LocalMosqueRecord",
+        "stopBackgroundTracking",
+        "MawaqitMosque",
+        "IqamaTimes",
+        "parseElement",
+        "OverpassMosque",
+        "CacheEntry",
+        "BASE_URL",
+        "TOKEN_KEY",
+        "AZAN_SOUNDS",
+        "NEARBY_MOSQUE_TTL",
+        "IQAMA_TTL",
+        "MOSQUE_DETAIL_TTL",
+        "TRAVEL_THRESHOLD_KM",
+        "SAVED_LOCATION_KEY",
+        "BACKGROUND_TASK_NAME",
+        "MAWAQIT_BASE",
+        "OVERPASS_URL",
+        "CACHE_DURATION_MS"
+      ]
+    },
+    {
+      "classification": "hypothesis",
+      "confidence": "low",
+      "core_files": [
+        {
+          "path": "apps\\mobile\\stores\\authStore.ts",
+          "score": 0.14367737423372884
+        },
+        {
+          "path": "apps\\mobile\\stores\\mosqueStore.ts",
+          "score": 0.0828649749716698
+        },
+        {
+          "path": "apps\\mobile\\stores\\prayerStore.ts",
+          "score": 0.06310325406210465
+        },
+        {
+          "path": "apps\\mobile\\stores\\settingsStore.ts",
+          "score": 0.06310325406210465
+        }
+      ],
+      "description": "Directory-based feature group from apps\\mobile\\stores (11 symbols)",
+      "entry_points": [],
+      "evidence": [
+        {
+          "confidence": "low",
+          "path": "apps\\mobile\\stores\\authStore.ts"
+        }
+      ],
+      "id": "945cb97e71b1",
+      "interfaces": [],
+      "name": "Mobile: Stores",
+      "symbols": [
+        "AuthState",
+        "CachedIqama",
+        "MosqueState",
+        "PrayerState",
+        "SettingsState",
+        "USER_KEY",
+        "GUEST_KEY",
+        "useAuthStore",
+        "useMosqueStore",
+        "usePrayerStore",
+        "useSettingsStore"
+      ]
+    },
+    {
+      "classification": "hypothesis",
+      "confidence": "low",
+      "core_files": [
+        {
+          "path": "packages\\shared\\src\\types.ts",
+          "score": 0.41274791891479534
+        },
+        {
+          "path": "packages\\shared\\src\\constants.ts",
+          "score": 0.24095874224819078
+        },
+        {
+          "path": "packages\\shared\\src\\utils.ts",
+          "score": 0.21055114815365308
+        },
+        {
+          "path": "server\\src\\services\\aladhanService.ts",
+          "score": 0.09290267438687981
+        },
+        {
+          "path": "server\\prisma\\seed.ts",
+          "score": 0.09180439786713382
+        }
+      ],
+      "description": "Directory-based feature group from packages\\shared\\src (31 symbols)",
+      "entry_points": [
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_end": 23,
+              "line_start": 20,
+              "path": "server\\src\\services\\aladhanService.ts",
+              "snippet": "): Promise<PrayerTimes> {\n  const dateStr = date ?? formatDate(new Date());\n  const url = `https://api.aladhan.com/v1/timings/${dateStr}?latitude=${lat}&longitude=${lon}&method=${method}`;\n\n  const response = await fetch(url);\n  if (!response.ok) {\n    throw new Error(`Aladhan API error: ${response.status} ${response.statusText}`);\n  }\n"
+            }
+          ],
+          "file_path": "server\\src\\services\\aladhanService.ts",
+          "handler_symbol": null,
+          "kind": "http",
+          "name": "FRONTEND GET url"
+        }
+      ],
+      "evidence": [
+        {
+          "confidence": "low",
+          "path": "packages\\shared\\src\\types.ts"
+        }
+      ],
+      "id": "b7d599e6939b",
+      "interfaces": [],
+      "name": "Shared: Src",
+      "symbols": [
+        "PrayerTimes",
+        "NextPrayer",
+        "Mosque",
+        "IqamaSchedule",
+        "User",
+        "UserPrayerPreference",
+        "UserMosque",
+        "CoverageRequest",
+        "AuthTokenPayload",
+        "LoginResponse",
+        "RegisterRequest",
+        "MosqueSeedFile",
+        "MosqueSeedEntry",
+        "NearbyMosquesResponse",
+        "ApiError",
+        "formatTime",
+        "formatTime12h",
+        "isMaghrib",
+        "getTodayForAladhan",
+        "getTodayISO",
+        "CALC_METHODS",
+        "DEFAULT_CALC_METHOD",
+        "DEFAULT_LEAD_MINUTES",
+        "MIN_LEAD_MINUTES",
+        "MAX_LEAD_MINUTES",
+        "DEFAULT_SEARCH_RADIUS_KM",
+        "TRAVEL_DETECTION_THRESHOLD_KM",
+        "TRAVEL_DETECTION_COOLDOWN_MS",
+        "ALADHAN_API_BASE",
+        "PRAYER_TIMES_CACHE_HOURS",
+        "MOSQUE_CACHE_HOURS"
+      ]
+    },
+    {
+      "classification": "hypothesis",
+      "confidence": "low",
+      "core_files": [
+        {
+          "path": "scripts\\enrich-iqama.ts",
+          "score": 0.34053660715080547
+        },
+        {
+          "path": "server\\src\\services\\iqamaEnrichment.ts",
+          "score": 0.30603402442214633
+        },
+        {
+          "path": "packages\\shared\\src\\types.ts",
+          "score": 0.2948199420819967
+        },
+        {
+          "path": "scripts\\research-mosques.ts",
+          "score": 0.285310289956004
+        },
+        {
+          "path": "apps\\mobile\\services\\mawaqitService.ts",
+          "score": 0.21078102723597744
+        },
+        {
+          "path": "server\\src\\services\\aladhanService.ts",
+          "score": 0.13006374414163172
+        },
+        {
+          "path": "server\\src\\services\\streamService.ts",
+          "score": 0.06310325406210465
+        },
+        {
+          "path": "server\\src\\services\\notificationService.ts",
+          "score": 0.03376239906107236
+        }
+      ],
+      "description": "Directory-based feature group from server\\src\\services (10 symbols)",
+      "entry_points": [
+        {
+          "classification": "fact",
+          "confidence": "high",
+          "evidence": [
+            {
+              "confidence": "high",
+              "line_end": 23,
+              "line_start": 20,
+              "path": "server\\src\\services\\aladhanService.ts",
+              "snippet": "): Promise<PrayerTimes> {\n  const dateStr = date ?? formatDate(new Date());\n  const url = `https://api.aladhan.com/v1/timings/${dateStr}?latitude=${lat}&longitude=${lon}&method=${method}`;\n\n  const response = await fetch(url);\n  if (!response.ok) {\n    throw new Error(`Aladhan API error: ${response.status} ${response.statusText}`);\n  }\n"
+            }
+          ],
+          "file_path": "server\\src\\services\\aladhanService.ts",
+          "handler_symbol": null,
+          "kind": "http",
+          "name": "FRONTEND GET url"
+        }
+      ],
+      "evidence": [
+        {
+          "confidence": "low",
+          "path": "server\\src\\services\\aladhanService.ts"
+        }
+      ],
+      "id": "74b7b4f4fba4",
+      "interfaces": [],
+      "name": "Server: Services",
+      "symbols": [
+        "PrayerTimes",
+        "MawaqitMosque",
+        "IqamaTimes",
+        "EnrichmentResult",
+        "EnrichmentReport",
+        "cancelUserNotifications",
+        "getStreamStatus",
+        "StreamStatus",
+        "STALE_DAYS",
+        "RATE_LIMIT_MS"
+      ]
+    },
+    {
+      "classification": "hypothesis",
+      "confidence": "low",
+      "core_files": [
+        {
+          "path": "apps\\mobile\\app\\(auth)\\login.tsx",
+          "score": 0.06067814641355534
+        },
+        {
+          "path": "apps\\mobile\\app\\(auth)\\_layout.tsx",
+          "score": 0.04334153315253953
+        },
+        {
+          "path": "apps\\mobile\\app\\(auth)\\register.tsx",
+          "score": 0.04334153315253953
+        }
+      ],
+      "description": "Directory-based feature group from apps\\mobile\\app\\(auth) (3 symbols)",
+      "entry_points": [],
+      "evidence": [
+        {
+          "confidence": "low",
+          "path": "apps\\mobile\\app\\(auth)\\login.tsx"
+        }
+      ],
+      "id": "e517a38dda36",
+      "interfaces": [],
+      "name": "Mobile: (Auth)",
+      "symbols": [
+        "LoginScreen",
+        "RegisterScreen",
+        "AuthLayout"
+      ]
+    }
+  ],
+  "repo_root": "A:\\git\\LiveAzan",
+  "schema": "zkme.feature_registry.v1",
+  "snapshot_digest": "f9655f2963f29f6c21b555cb0f95e0b3a66b63ea"
+}

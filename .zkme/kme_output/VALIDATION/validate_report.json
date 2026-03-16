@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "message": "",
+      "name": "manifest_exists",
+      "status": "PASS"
+    },
+    {
+      "message": "",
+      "name": "file_index_count",
+      "status": "PASS"
+    },
+    {
+      "message": "",
+      "name": "text_files_chunked",
+      "status": "PASS"
+    },
+    {
+      "message": "",
+      "name": "chunk_ids_exist",
+      "status": "PASS"
+    },
+    {
+      "message": "",
+      "name": "packs_valid",
+      "status": "PASS"
+    }
+  ],
+  "generated_utc": "2026-03-16T18:07:17.072906+00:00",
+  "status": "PASS",
+  "summary": {
+    "failed": 0,
+    "passed": 5,
+    "total": 5
+  }
+}

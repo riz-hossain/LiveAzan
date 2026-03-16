@@ -1,0 +1,8 @@
+{
+  "global_prefix": "",
+  "module_wiring_index": {},
+  "notes": "Heuristic regex extraction. Validate against runtime routing if needed.",
+  "prefix_evidence": [],
+  "routes": [],
+  "schema": "zkme.routes_detected.v2"
+}

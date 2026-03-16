@@ -1,0 +1,15 @@
+{
+  "declaration_driven_actions": false,
+  "evidence": [],
+  "guidance": "If declaration_driven_actions=true, treat action/declaration files as source of truth for allowed rows + validation. Avoid introducing parallel policy files (Excel/JSON) unless explicitly required.",
+  "pattern_hits": 0,
+  "patterns": [
+    "allActionDeclarations",
+    "action.declarations",
+    "declaration.rows",
+    "endsWith(\" action\")",
+    "createRow(",
+    "createCell("
+  ],
+  "schema": "zkme.rule_engine_detection.v1"
+}

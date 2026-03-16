@@ -1,0 +1,22 @@
+{
+  "path": "A:\\git\\LiveAzan\\.zkme\\kme_output\\GIT_LEARNING",
+  "expected": [
+    "00_SNAPSHOT_GIT_HISTORY.json",
+    "10_HOT_FILES.csv",
+    "20_TOP_AUTHORS.csv",
+    "30_FILE_COUPLING.csv",
+    "40_LLM_PROMPT.md",
+    "90_VALIDATION.json"
+  ],
+  "missing": [],
+  "labeled_ok": true,
+  "existing": [
+    "00_SNAPSHOT_GIT_HISTORY.json",
+    "10_HOT_FILES.csv",
+    "20_TOP_AUTHORS.csv",
+    "30_FILE_COUPLING.csv",
+    "40_LLM_PROMPT.md",
+    "90_VALIDATION.json"
+  ],
+  "status": "ok"
+}

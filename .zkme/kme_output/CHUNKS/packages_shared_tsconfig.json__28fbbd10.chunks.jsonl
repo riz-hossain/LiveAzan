@@ -1,0 +1,1 @@
+{"chunk_id": "CHK-28fbbd10-0000", "end_line": 9, "next_chunk_id": null, "prev_chunk_id": null, "source_path": "packages/shared/tsconfig.json", "start_line": 1, "text": "{\n  \"extends\": \"../../tsconfig.base.json\",\n  \"compilerOptions\": {\n    \"outDir\": \"./dist\",\n    \"rootDir\": \"./src\"\n  },\n  \"include\": [\"src\"]\n}\n"}

@@ -1,0 +1,533 @@
+[
+  {
+    "confidence": "medium",
+    "file_path": "apps\\admin\\src\\pages\\Dashboard.tsx",
+    "kind": "interface",
+    "line_start": 2,
+    "name": "Stats",
+    "qualified_name": "Stats"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+    "kind": "interface",
+    "line_start": 3,
+    "name": "IqamaFormData",
+    "qualified_name": "IqamaFormData"
+  },
+  {
+    "confidence": "medium",
+    "definition_hint": "\"list\" | \"map\"",
+    "file_path": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+    "kind": "type",
+    "line_start": 18,
+    "name": "ViewMode",
+    "qualified_name": "ViewMode"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\components\\AzanPlayer.tsx",
+    "kind": "interface",
+    "line_start": 5,
+    "name": "AzanPlayerProps",
+    "qualified_name": "AzanPlayerProps"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\components\\DebugPanel.tsx",
+    "kind": "interface",
+    "line_start": 24,
+    "name": "SourceResult",
+    "qualified_name": "SourceResult"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\components\\DebugPanel.tsx",
+    "kind": "interface",
+    "line_start": 31,
+    "name": "Props",
+    "qualified_name": "Props"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+    "kind": "interface",
+    "line_start": 3,
+    "name": "IqamaCountdownProps",
+    "qualified_name": "IqamaCountdownProps"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\components\\MosqueCard.tsx",
+    "kind": "interface",
+    "line_start": 5,
+    "name": "MosqueCardProps",
+    "qualified_name": "MosqueCardProps"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\components\\MosqueMap.tsx",
+    "kind": "interface",
+    "line_start": 5,
+    "name": "MosqueMapProps",
+    "qualified_name": "MosqueMapProps"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\components\\NotificationSettings.tsx",
+    "kind": "interface",
+    "line_start": 15,
+    "name": "NotificationSettingsProps",
+    "qualified_name": "NotificationSettingsProps"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+    "kind": "interface",
+    "line_start": 3,
+    "name": "PrayerTimeCardProps",
+    "qualified_name": "PrayerTimeCardProps"
+  },
+  {
+    "confidence": "medium",
+    "definition_hint": "(typeof AZAN_SOUNDS)[number][\"id\"]",
+    "file_path": "apps\\mobile\\services\\azanAudio.ts",
+    "kind": "type",
+    "line_start": 14,
+    "name": "AzanSoundId",
+    "qualified_name": "AzanSoundId"
+  },
+  {
+    "confidence": "medium",
+    "extends": [
+      "Mosque"
+    ],
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "kind": "interface",
+    "line_start": 44,
+    "name": "DiscoveredMosque",
+    "qualified_name": "DiscoveredMosque"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "kind": "interface",
+    "line_start": 280,
+    "name": "ScrapedMosqueData",
+    "qualified_name": "ScrapedMosqueData"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\services\\localMosqueSearch.ts",
+    "kind": "interface",
+    "line_start": 15,
+    "name": "LocalMosqueRecord",
+    "qualified_name": "LocalMosqueRecord"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "kind": "interface",
+    "line_start": 14,
+    "name": "MawaqitMosque",
+    "qualified_name": "MawaqitMosque"
+  },
+  {
+    "confidence": "medium",
+    "definition_hint": "{",
+    "file_path": "apps\\mobile\\services\\mawaqitService.ts",
+    "kind": "type",
+    "line_start": 32,
+    "name": "IqamaTimes",
+    "qualified_name": "IqamaTimes"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\services\\overpassService.ts",
+    "kind": "interface",
+    "line_start": 16,
+    "name": "OverpassMosque",
+    "qualified_name": "OverpassMosque"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\services\\prayerTimes.ts",
+    "kind": "interface",
+    "line_start": 5,
+    "name": "CacheEntry",
+    "qualified_name": "CacheEntry"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\stores\\authStore.ts",
+    "kind": "interface",
+    "line_start": 9,
+    "name": "AuthState",
+    "qualified_name": "AuthState"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\stores\\mosqueStore.ts",
+    "kind": "interface",
+    "line_start": 28,
+    "name": "CachedIqama",
+    "qualified_name": "CachedIqama"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\stores\\mosqueStore.ts",
+    "kind": "interface",
+    "line_start": 34,
+    "name": "MosqueState",
+    "qualified_name": "MosqueState"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\stores\\prayerStore.ts",
+    "kind": "interface",
+    "line_start": 4,
+    "name": "PrayerState",
+    "qualified_name": "PrayerState"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "apps\\mobile\\stores\\settingsStore.ts",
+    "kind": "interface",
+    "line_start": 9,
+    "name": "SettingsState",
+    "qualified_name": "SettingsState"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "interface",
+    "line_start": 44,
+    "name": "PrayerTimes",
+    "qualified_name": "PrayerTimes"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "interface",
+    "line_start": 56,
+    "name": "NextPrayer",
+    "qualified_name": "NextPrayer"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "interface",
+    "line_start": 69,
+    "name": "Mosque",
+    "qualified_name": "Mosque"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "interface",
+    "line_start": 100,
+    "name": "IqamaSchedule",
+    "qualified_name": "IqamaSchedule"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "interface",
+    "line_start": 111,
+    "name": "User",
+    "qualified_name": "User"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "interface",
+    "line_start": 124,
+    "name": "UserPrayerPreference",
+    "qualified_name": "UserPrayerPreference"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "interface",
+    "line_start": 133,
+    "name": "UserMosque",
+    "qualified_name": "UserMosque"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "interface",
+    "line_start": 142,
+    "name": "CoverageRequest",
+    "qualified_name": "CoverageRequest"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "interface",
+    "line_start": 158,
+    "name": "AuthTokenPayload",
+    "qualified_name": "AuthTokenPayload"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "interface",
+    "line_start": 164,
+    "name": "LoginResponse",
+    "qualified_name": "LoginResponse"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "interface",
+    "line_start": 169,
+    "name": "RegisterRequest",
+    "qualified_name": "RegisterRequest"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "interface",
+    "line_start": 179,
+    "name": "MosqueSeedFile",
+    "qualified_name": "MosqueSeedFile"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "interface",
+    "line_start": 191,
+    "name": "MosqueSeedEntry",
+    "qualified_name": "MosqueSeedEntry"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "interface",
+    "line_start": 220,
+    "name": "NearbyMosquesResponse",
+    "qualified_name": "NearbyMosquesResponse"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "interface",
+    "line_start": 225,
+    "name": "ApiError",
+    "qualified_name": "ApiError"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "enum",
+    "line_start": 2,
+    "name": "Prayer",
+    "qualified_name": "Prayer"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "enum",
+    "line_start": 11,
+    "name": "AuthProvider",
+    "qualified_name": "AuthProvider"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "enum",
+    "line_start": 18,
+    "name": "UserRole",
+    "qualified_name": "UserRole"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "enum",
+    "line_start": 24,
+    "name": "NotificationType",
+    "qualified_name": "NotificationType"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "enum",
+    "line_start": 30,
+    "name": "RequestStatus",
+    "qualified_name": "RequestStatus"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "enum",
+    "line_start": 37,
+    "name": "ScanStatus",
+    "qualified_name": "ScanStatus"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "packages\\shared\\src\\types.ts",
+    "kind": "enum",
+    "line_start": 64,
+    "name": "PlaceType",
+    "qualified_name": "PlaceType"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "interface",
+    "line_start": 19,
+    "name": "SeedMosque",
+    "qualified_name": "SeedMosque"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "interface",
+    "line_start": 31,
+    "name": "SeedFile",
+    "qualified_name": "SeedFile"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "interface",
+    "line_start": 40,
+    "name": "MawaqitMosque",
+    "qualified_name": "MawaqitMosque"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "interface",
+    "line_start": 52,
+    "name": "Args",
+    "qualified_name": "Args"
+  },
+  {
+    "confidence": "medium",
+    "definition_hint": "Partial<Record<\"fajr\" | \"dhuhr\" | \"asr\" | \"maghrib\" | \"isha\", string>>",
+    "file_path": "scripts\\enrich-iqama.ts",
+    "kind": "type",
+    "line_start": 38,
+    "name": "IqamaTimes",
+    "qualified_name": "IqamaTimes"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "interface",
+    "line_start": 21,
+    "name": "Args",
+    "qualified_name": "Args"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "interface",
+    "line_start": 28,
+    "name": "RawMosque",
+    "qualified_name": "RawMosque"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "interface",
+    "line_start": 43,
+    "name": "MawaqitMosque",
+    "qualified_name": "MawaqitMosque"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "interface",
+    "line_start": 53,
+    "name": "IqamaTimes",
+    "qualified_name": "IqamaTimes"
+  },
+  {
+    "confidence": "medium",
+    "extends": [
+      "RawMosque"
+    ],
+    "file_path": "scripts\\research-mosques.ts",
+    "kind": "interface",
+    "line_start": 354,
+    "name": "EnrichedMosque",
+    "qualified_name": "EnrichedMosque"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "server\\prisma\\seed.ts",
+    "kind": "interface",
+    "line_start": 19,
+    "name": "MosqueSeedEntry",
+    "qualified_name": "MosqueSeedEntry"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "server\\prisma\\seed.ts",
+    "kind": "interface",
+    "line_start": 42,
+    "name": "MosqueSeedFile",
+    "qualified_name": "MosqueSeedFile"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "server\\src\\middleware\\auth.ts",
+    "kind": "interface",
+    "line_start": 6,
+    "name": "Request",
+    "qualified_name": "Request"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "server\\src\\services\\aladhanService.ts",
+    "kind": "interface",
+    "line_start": 1,
+    "name": "PrayerTimes",
+    "qualified_name": "PrayerTimes"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "interface",
+    "line_start": 18,
+    "name": "MawaqitMosque",
+    "qualified_name": "MawaqitMosque"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "interface",
+    "line_start": 32,
+    "name": "EnrichmentResult",
+    "qualified_name": "EnrichmentResult"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "interface",
+    "line_start": 41,
+    "name": "EnrichmentReport",
+    "qualified_name": "EnrichmentReport"
+  },
+  {
+    "confidence": "medium",
+    "definition_hint": "Partial<Record<\"fajr\" | \"dhuhr\" | \"asr\" | \"maghrib\" | \"isha\", string>>",
+    "file_path": "server\\src\\services\\iqamaEnrichment.ts",
+    "kind": "type",
+    "line_start": 28,
+    "name": "IqamaTimes",
+    "qualified_name": "IqamaTimes"
+  },
+  {
+    "confidence": "medium",
+    "file_path": "server\\src\\services\\streamService.ts",
+    "kind": "interface",
+    "line_start": 2,
+    "name": "StreamStatus",
+    "qualified_name": "StreamStatus"
+  }
+]

@@ -1,0 +1,1865 @@
+[
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 32,
+        "line_start": 29,
+        "path": "apps\\admin\\src\\pages\\Dashboard.tsx",
+        "snippet": "  useEffect(() => {\n    // TODO: Replace with real API call \u00e2\u20ac\u201d GET /api/admin/stats\n    const fetchStats = async () => {\n      try {\n        const res = await fetch(\"/api/admin/stats\");\n        if (res.ok) {\n          setStats(await res.json());\n        } else {\n          // Fallback mock data for development"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "base_source": null,
+      "caller": "fetchStats",
+      "resolved_path_guess": "/api/admin/stats",
+      "snippet": "  useEffect(() => {\n    // TODO: Replace with real API call \u00e2\u20ac\u201d GET /api/admin/stats\n    const fetchStats = async () => {\n      try {\n        const res = await fetch(\"/api/admin/stats\");\n        if (res.ok) {\n          setStats(await res.json());\n        } else {\n          // Fallback mock data for development",
+      "source": "frontend_call",
+      "url_expr": "\"/api/admin/stats\""
+    },
+    "method": "GET",
+    "name": "FRONTEND GET /api/admin/stats",
+    "path_pattern": "/api/admin/stats"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 65,
+        "line_start": 62,
+        "path": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+        "snippet": "\n    // TODO: Fetch existing iqama times \u00e2\u20ac\u201d GET /api/iqama/:mosqueId\n    const fetchIqama = async () => {\n      try {\n        const res = await fetch(`/api/iqama/${selectedMosque}`);\n        if (res.ok) {\n          const data = await res.json();\n          setForm((prev) => ({ ...prev, ...data }));\n        }"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "base_source": null,
+      "caller": "fetchIqama",
+      "resolved_path_guess": "/api/iqama",
+      "snippet": "\n    // TODO: Fetch existing iqama times \u00e2\u20ac\u201d GET /api/iqama/:mosqueId\n    const fetchIqama = async () => {\n      try {\n        const res = await fetch(`/api/iqama/${selectedMosque}`);\n        if (res.ok) {\n          const data = await res.json();\n          setForm((prev) => ({ ...prev, ...data }));\n        }",
+      "source": "frontend_call",
+      "url_expr": "`/api/iqama/${selectedMosque}`"
+    },
+    "method": "GET",
+    "name": "FRONTEND GET /api/iqama",
+    "path_pattern": "/api/iqama"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 42,
+        "line_start": 39,
+        "path": "apps\\mobile\\services\\api.ts",
+        "snippet": "  const controller = new AbortController();\n  const timeoutId = setTimeout(() => controller.abort(), 8_000);\n  let response: Response;\n  try {\n    response = await fetch(`${BASE_URL}${endpoint}`, {\n      ...options,\n      headers,\n      signal: controller.signal,\n    });"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "base_source": "env:EXPO_PUBLIC_API_URL",
+      "caller": "if",
+      "resolved_path_guess": null,
+      "snippet": "  const controller = new AbortController();\n  const timeoutId = setTimeout(() => controller.abort(), 8_000);\n  let response: Response;\n  try {\n    response = await fetch(`${BASE_URL}${endpoint}`, {\n      ...options,\n      headers,\n      signal: controller.signal,\n    });",
+      "source": "frontend_call",
+      "url_expr": "`${BASE_URL}${endpoint}`"
+    },
+    "method": "GET",
+    "name": "FRONTEND GET `${BASE_URL}${endpoint}`"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 23,
+        "line_start": 20,
+        "path": "server\\src\\services\\aladhanService.ts",
+        "snippet": "): Promise<PrayerTimes> {\n  const dateStr = date ?? formatDate(new Date());\n  const url = `https://api.aladhan.com/v1/timings/${dateStr}?latitude=${lat}&longitude=${lon}&method=${method}`;\n\n  const response = await fetch(url);\n  if (!response.ok) {\n    throw new Error(`Aladhan API error: ${response.status} ${response.statusText}`);\n  }\n"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "base_source": null,
+      "caller": "fetchPrayerTimes",
+      "resolved_path_guess": null,
+      "snippet": "): Promise<PrayerTimes> {\n  const dateStr = date ?? formatDate(new Date());\n  const url = `https://api.aladhan.com/v1/timings/${dateStr}?latitude=${lat}&longitude=${lon}&method=${method}`;\n\n  const response = await fetch(url);\n  if (!response.ok) {\n    throw new Error(`Aladhan API error: ${response.status} ${response.statusText}`);\n  }\n",
+      "source": "frontend_call",
+      "url_expr": "url"
+    },
+    "method": "GET",
+    "name": "FRONTEND GET url"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "path": "scripts\\generate-mosque-bundle.py"
+      }
+    ],
+    "handler_symbol": "False",
+    "kind": "http",
+    "metadata": {
+      "source": "runtime_edge"
+    },
+    "method": "GET",
+    "name": "GET hasLiveStream",
+    "path_pattern": "hasLiveStream"
+  },
+  {
+    "confidence": "medium",
+    "evidence": [
+      {
+        "confidence": "medium",
+        "path": "scripts\\generate-mosque-bundle.py"
+      }
+    ],
+    "handler_symbol": "True",
+    "kind": "http",
+    "metadata": {
+      "source": "runtime_edge"
+    },
+    "method": "GET",
+    "name": "GET verified",
+    "path_pattern": "verified"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 22,
+        "path": "server\\src\\index.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "GET",
+    "name": "GET /api/health",
+    "path_pattern": "/api/health"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 22,
+        "path": "server\\src\\index.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "GET",
+    "name": "GET /api/health",
+    "path_pattern": "/api/health"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 31,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "POST",
+    "name": "POST /enrich-city",
+    "path_pattern": "/enrich-city"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 49,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "POST",
+    "name": "POST /enrich-mosque/:id",
+    "path_pattern": "/enrich-mosque/:id"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 62,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "GET",
+    "name": "GET /iqama-coverage",
+    "path_pattern": "/iqama-coverage"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 95,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "POST",
+    "name": "POST /run-refresh-job",
+    "path_pattern": "/run-refresh-job"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 106,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "GET",
+    "name": "GET /refresh-logs",
+    "path_pattern": "/refresh-logs"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 31,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "POST",
+    "name": "POST /enrich-city",
+    "path_pattern": "/enrich-city"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 49,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "POST",
+    "name": "POST /enrich-mosque/:id",
+    "path_pattern": "/enrich-mosque/:id"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 62,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "GET",
+    "name": "GET /iqama-coverage",
+    "path_pattern": "/iqama-coverage"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 95,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "POST",
+    "name": "POST /run-refresh-job",
+    "path_pattern": "/run-refresh-job"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 106,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "GET",
+    "name": "GET /refresh-logs",
+    "path_pattern": "/refresh-logs"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 31,
+        "path": "server\\src\\routes\\auth.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "POST",
+    "name": "POST /register",
+    "path_pattern": "/register"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 80,
+        "path": "server\\src\\routes\\auth.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "POST",
+    "name": "POST /login",
+    "path_pattern": "/login"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 126,
+        "path": "server\\src\\routes\\auth.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "POST",
+    "name": "POST /oauth",
+    "path_pattern": "/oauth"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 31,
+        "path": "server\\src\\routes\\auth.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "POST",
+    "name": "POST /register",
+    "path_pattern": "/register"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 80,
+        "path": "server\\src\\routes\\auth.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "POST",
+    "name": "POST /login",
+    "path_pattern": "/login"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 126,
+        "path": "server\\src\\routes\\auth.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "POST",
+    "name": "POST /oauth",
+    "path_pattern": "/oauth"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 17,
+        "path": "server\\src\\routes\\coverageRequests.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "POST",
+    "name": "POST /",
+    "path_pattern": "/"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 44,
+        "path": "server\\src\\routes\\coverageRequests.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "GET",
+    "name": "GET /",
+    "path_pattern": "/"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 81,
+        "path": "server\\src\\routes\\coverageRequests.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "PUT",
+    "name": "PUT /:id",
+    "path_pattern": "/:id"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 17,
+        "path": "server\\src\\routes\\coverageRequests.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "POST",
+    "name": "POST /",
+    "path_pattern": "/"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 44,
+        "path": "server\\src\\routes\\coverageRequests.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "GET",
+    "name": "GET /",
+    "path_pattern": "/"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 81,
+        "path": "server\\src\\routes\\coverageRequests.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "PUT",
+    "name": "PUT /:id",
+    "path_pattern": "/:id"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 9,
+        "path": "server\\src\\routes\\iqama.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "GET",
+    "name": "GET /mosque/:mosqueId",
+    "path_pattern": "/mosque/:mosqueId"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 47,
+        "path": "server\\src\\routes\\iqama.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "POST",
+    "name": "POST /mosque/:mosqueId",
+    "path_pattern": "/mosque/:mosqueId"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 103,
+        "path": "server\\src\\routes\\iqama.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "PUT",
+    "name": "PUT /:id",
+    "path_pattern": "/:id"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 9,
+        "path": "server\\src\\routes\\iqama.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "GET",
+    "name": "GET /mosque/:mosqueId",
+    "path_pattern": "/mosque/:mosqueId"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 47,
+        "path": "server\\src\\routes\\iqama.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "POST",
+    "name": "POST /mosque/:mosqueId",
+    "path_pattern": "/mosque/:mosqueId"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 103,
+        "path": "server\\src\\routes\\iqama.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "PUT",
+    "name": "PUT /:id",
+    "path_pattern": "/:id"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 9,
+        "path": "server\\src\\routes\\mosques.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "GET",
+    "name": "GET /nearby",
+    "path_pattern": "/nearby"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 95,
+        "path": "server\\src\\routes\\mosques.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "GET",
+    "name": "GET /:id",
+    "path_pattern": "/:id"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 140,
+        "path": "server\\src\\routes\\mosques.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "POST",
+    "name": "POST /",
+    "path_pattern": "/"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 177,
+        "path": "server\\src\\routes\\mosques.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "PUT",
+    "name": "PUT /:id",
+    "path_pattern": "/:id"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 209,
+        "path": "server\\src\\routes\\mosques.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "DELETE",
+    "name": "DELETE /:id",
+    "path_pattern": "/:id"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 9,
+        "path": "server\\src\\routes\\mosques.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "GET",
+    "name": "GET /nearby",
+    "path_pattern": "/nearby"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 95,
+        "path": "server\\src\\routes\\mosques.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "GET",
+    "name": "GET /:id",
+    "path_pattern": "/:id"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 140,
+        "path": "server\\src\\routes\\mosques.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "POST",
+    "name": "POST /",
+    "path_pattern": "/"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 177,
+        "path": "server\\src\\routes\\mosques.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "PUT",
+    "name": "PUT /:id",
+    "path_pattern": "/:id"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 209,
+        "path": "server\\src\\routes\\mosques.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "DELETE",
+    "name": "DELETE /:id",
+    "path_pattern": "/:id"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 7,
+        "path": "server\\src\\routes\\prayerTimes.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "GET",
+    "name": "GET /",
+    "path_pattern": "/"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 7,
+        "path": "server\\src\\routes\\prayerTimes.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "GET",
+    "name": "GET /",
+    "path_pattern": "/"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 35,
+        "path": "server\\src\\routes\\submissions.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "POST",
+    "name": "POST /",
+    "path_pattern": "/"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 98,
+        "path": "server\\src\\routes\\submissions.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "GET",
+    "name": "GET /mine",
+    "path_pattern": "/mine"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 114,
+        "path": "server\\src\\routes\\submissions.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "GET",
+    "name": "GET /",
+    "path_pattern": "/"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 143,
+        "path": "server\\src\\routes\\submissions.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "PUT",
+    "name": "PUT /:id/review",
+    "path_pattern": "/:id/review"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 35,
+        "path": "server\\src\\routes\\submissions.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "POST",
+    "name": "POST /",
+    "path_pattern": "/"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 98,
+        "path": "server\\src\\routes\\submissions.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "GET",
+    "name": "GET /mine",
+    "path_pattern": "/mine"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 114,
+        "path": "server\\src\\routes\\submissions.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "GET",
+    "name": "GET /",
+    "path_pattern": "/"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 143,
+        "path": "server\\src\\routes\\submissions.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "PUT",
+    "name": "PUT /:id/review",
+    "path_pattern": "/:id/review"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 12,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "GET",
+    "name": "GET /me",
+    "path_pattern": "/me"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 51,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "PUT",
+    "name": "PUT /me",
+    "path_pattern": "/me"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 82,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "GET",
+    "name": "GET /me/prayer-prefs",
+    "path_pattern": "/me/prayer-prefs"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 108,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "PUT",
+    "name": "PUT /me/prayer-prefs",
+    "path_pattern": "/me/prayer-prefs"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 148,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "GET",
+    "name": "GET /me/mosques",
+    "path_pattern": "/me/mosques"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 168,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "POST",
+    "name": "POST /me/mosques",
+    "path_pattern": "/me/mosques"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 210,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "express"
+    },
+    "method": "DELETE",
+    "name": "DELETE /me/mosques/:mosqueId",
+    "path_pattern": "/me/mosques/:mosqueId"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 12,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "GET",
+    "name": "GET /me",
+    "path_pattern": "/me"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 51,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "PUT",
+    "name": "PUT /me",
+    "path_pattern": "/me"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 82,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "GET",
+    "name": "GET /me/prayer-prefs",
+    "path_pattern": "/me/prayer-prefs"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 108,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "PUT",
+    "name": "PUT /me/prayer-prefs",
+    "path_pattern": "/me/prayer-prefs"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 148,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "GET",
+    "name": "GET /me/mosques",
+    "path_pattern": "/me/mosques"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 168,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "POST",
+    "name": "POST /me/mosques",
+    "path_pattern": "/me/mosques"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 210,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "framework": "fastify",
+      "registered_prefixes": []
+    },
+    "method": "DELETE",
+    "name": "DELETE /me/mosques/:mosqueId",
+    "path_pattern": "/me/mosques/:mosqueId"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_end": 10,
+        "line_start": 2,
+        "path": "docker\\admin\\nginx.conf",
+        "snippet": "    listen 80;\n    root /usr/share/nginx/html;\n    index index.html;\n\n    location /api/ {\n        proxy_pass http://server:3001;\n        proxy_set_header Host $host;\n        proxy_set_header X-Real-IP $remote_addr;\n        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;"
+      }
+    ],
+    "kind": "http",
+    "metadata": {
+      "from": "/api/",
+      "proxy_kind": "nginx",
+      "rule_kind": "nginx",
+      "source": "/api/",
+      "target": "http://server:3001",
+      "to": "http://server:3001"
+    },
+    "name": "proxy:/api/\u2192http://server:3001",
+    "path_pattern": "/api/"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 188,
+        "path": "apps\\admin\\src\\App.tsx"
+      }
+    ],
+    "kind": "ui",
+    "metadata": {
+      "routing": "react-router"
+    },
+    "name": "page:/login",
+    "path_pattern": "/login"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 189,
+        "path": "apps\\admin\\src\\App.tsx"
+      }
+    ],
+    "kind": "ui",
+    "metadata": {
+      "routing": "react-router"
+    },
+    "name": "page:/dashboard",
+    "path_pattern": "/dashboard"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 197,
+        "path": "apps\\admin\\src\\App.tsx"
+      }
+    ],
+    "kind": "ui",
+    "metadata": {
+      "routing": "react-router"
+    },
+    "name": "page:/mosques",
+    "path_pattern": "/mosques"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 205,
+        "path": "apps\\admin\\src\\App.tsx"
+      }
+    ],
+    "kind": "ui",
+    "metadata": {
+      "routing": "react-router"
+    },
+    "name": "page:/mosques/:id/iqama",
+    "path_pattern": "/mosques/:id/iqama"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 213,
+        "path": "apps\\admin\\src\\App.tsx"
+      }
+    ],
+    "kind": "ui",
+    "metadata": {
+      "routing": "react-router"
+    },
+    "name": "page:/coverage-requests",
+    "path_pattern": "/coverage-requests"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 221,
+        "path": "apps\\admin\\src\\App.tsx"
+      }
+    ],
+    "kind": "ui",
+    "metadata": {
+      "routing": "react-router"
+    },
+    "name": "page:/stream-setup",
+    "path_pattern": "/stream-setup"
+  },
+  {
+    "confidence": "high",
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 229,
+        "path": "apps\\admin\\src\\App.tsx"
+      }
+    ],
+    "kind": "ui",
+    "metadata": {
+      "routing": "react-router"
+    },
+    "name": "page:*",
+    "path_pattern": "*"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+        "symbol": "handleSave"
+      }
+    ],
+    "handler_symbol": "handleSave",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:handleSave"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(auth)\\login.tsx",
+        "symbol": "continueAsGuest"
+      }
+    ],
+    "handler_symbol": "continueAsGuest",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:continueAsGuest"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(auth)\\login.tsx",
+        "symbol": "setPassword"
+      }
+    ],
+    "handler_symbol": "setPassword",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:setPassword"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(auth)\\login.tsx",
+        "symbol": "handleLogin"
+      }
+    ],
+    "handler_symbol": "handleLogin",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:handleLogin"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(auth)\\login.tsx",
+        "symbol": "setEmail"
+      }
+    ],
+    "handler_symbol": "setEmail",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:setEmail"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(auth)\\register.tsx",
+        "symbol": "setPassword"
+      }
+    ],
+    "handler_symbol": "setPassword",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:setPassword"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(auth)\\register.tsx",
+        "symbol": "handleRegister"
+      }
+    ],
+    "handler_symbol": "handleRegister",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:handleRegister"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(auth)\\register.tsx",
+        "symbol": "setDisplayName"
+      }
+    ],
+    "handler_symbol": "setDisplayName",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:setDisplayName"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(auth)\\register.tsx",
+        "symbol": "setEmail"
+      }
+    ],
+    "handler_symbol": "setEmail",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:setEmail"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(tabs)\\index.tsx",
+        "symbol": "onRefresh"
+      }
+    ],
+    "handler_symbol": "onRefresh",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:onRefresh"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(tabs)\\index.tsx",
+        "symbol": "useCallback"
+      }
+    ],
+    "handler_symbol": "useCallback",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:useCallback"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+        "symbol": "handleMosquePress"
+      }
+    ],
+    "handler_symbol": "handleMosquePress",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:handleMosquePress"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+        "symbol": "handleRequestCoverage"
+      }
+    ],
+    "handler_symbol": "handleRequestCoverage",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:handleRequestCoverage"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "symbol": "handlePrefUpdate"
+      }
+    ],
+    "handler_symbol": "handlePrefUpdate",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:handlePrefUpdate"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+        "symbol": "handleLogout"
+      }
+    ],
+    "handler_symbol": "handleLogout",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:handleLogout"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "symbol": "handleFollow"
+      }
+    ],
+    "handler_symbol": "handleFollow",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:handleFollow"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "symbol": "handleSetPrimary"
+      }
+    ],
+    "handler_symbol": "handleSetPrimary",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:handleSetPrimary"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "symbol": "handleWebsite"
+      }
+    ],
+    "handler_symbol": "handleWebsite",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:handleWebsite"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "symbol": "handleRefreshIqama"
+      }
+    ],
+    "handler_symbol": "handleRefreshIqama",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:handleRefreshIqama"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\app\\mosque\\[id].tsx",
+        "symbol": "handleCall"
+      }
+    ],
+    "handler_symbol": "handleCall",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:handleCall"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "symbol": "onClose"
+      }
+    ],
+    "handler_symbol": "onClose",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:onClose"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "symbol": "handlePlayPause"
+      }
+    ],
+    "handler_symbol": "handlePlayPause",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:handlePlayPause"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\components\\AzanPlayer.tsx",
+        "symbol": "handleStop"
+      }
+    ],
+    "handler_symbol": "handleStop",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:handleStop"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\components\\DebugPanel.tsx",
+        "symbol": "handlers"
+      }
+    ],
+    "handler_symbol": "handlers",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:handlers"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\components\\MosqueCard.tsx",
+        "symbol": "onPress"
+      }
+    ],
+    "handler_symbol": "onPress",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:onPress"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\components\\NotificationSettings.tsx",
+        "symbol": "pref"
+      }
+    ],
+    "handler_symbol": "pref",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:pref"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+        "symbol": "onPress"
+      }
+    ],
+    "handler_symbol": "onPress",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:onPress"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "server\\src\\jobs\\iqamaRefreshJob.ts",
+        "symbol": "Date"
+      }
+    ],
+    "handler_symbol": "Date",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:Date"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "server\\src\\routes\\mosques.ts",
+        "symbol": "await"
+      }
+    ],
+    "handler_symbol": "await",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:await"
+  },
+  {
+    "confidence": "low",
+    "evidence": [
+      {
+        "confidence": "low",
+        "path": "server\\src\\routes\\submissions.ts",
+        "symbol": "z"
+      }
+    ],
+    "handler_symbol": "z",
+    "kind": "ui",
+    "metadata": {
+      "role": "event_handler"
+    },
+    "name": "handler:z"
+  }
+]

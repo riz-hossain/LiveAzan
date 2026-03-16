@@ -1,0 +1,22 @@
+{
+  "file_matches": [
+    "packages/shared/src/types.ts",
+    "server/prisma/schema.prisma",
+    ".dockerignore",
+    ".env.local",
+    ".env.local.example",
+    ".env.prod.example",
+    ".gitignore",
+    ".liveaszan_pids",
+    ".npmrc",
+    "distancecalculation-Labeeb.py",
+    "docker-compose.local.yml",
+    "docker-compose.prod.yml",
+    "package.json",
+    "README.md",
+    "tsconfig.base.json",
+    "turbo.json"
+  ],
+  "keywords": [],
+  "symbol_matches": []
+}

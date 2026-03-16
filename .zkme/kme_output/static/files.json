@@ -1,0 +1,1792 @@
+[
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": ".dockerignore",
+    "size_bytes": 145
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": ".env.local",
+    "size_bytes": 493
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": ".env.local.example",
+    "size_bytes": 622
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": ".env.prod.example",
+    "size_bytes": 638
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": ".gitignore",
+    "size_bytes": 64
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": ".liveaszan_pids",
+    "size_bytes": 13
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": ".npmrc",
+    "size_bytes": 23
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": true,
+    "is_generated": false,
+    "is_test": false,
+    "language": "markdown",
+    "path": "DESIGN_PLAN.md",
+    "size_bytes": 25394
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "python",
+    "path": "distancecalculation-Labeeb.py",
+    "size_bytes": 98
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "yaml",
+    "path": "docker-compose.local.yml",
+    "size_bytes": 1240
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "yaml",
+    "path": "docker-compose.prod.yml",
+    "size_bytes": 1164
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": true,
+    "is_generated": false,
+    "is_test": false,
+    "language": "markdown",
+    "path": "IMPLEMENTATION_GUIDE.md",
+    "size_bytes": 18238
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": true,
+    "is_test": false,
+    "language": "json",
+    "path": "package-lock.json",
+    "size_bytes": 613579
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "package.json",
+    "size_bytes": 650
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": true,
+    "is_generated": false,
+    "is_test": false,
+    "language": "markdown",
+    "path": "README.md",
+    "size_bytes": 28
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "python",
+    "path": "setup.py",
+    "size_bytes": 53075
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "tsconfig.base.json",
+    "size_bytes": 356
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "turbo.json",
+    "size_bytes": 288
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": "apps\\admin\\dev.log",
+    "size_bytes": 739
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "html",
+    "path": "apps\\admin\\index.html",
+    "size_bytes": 533
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "apps\\admin\\package.json",
+    "size_bytes": 541
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "apps\\admin\\tsconfig.json",
+    "size_bytes": 379
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\admin\\vite.config.ts",
+    "size_bytes": 343
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\admin\\src\\App.tsx",
+    "size_bytes": 7447
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\admin\\src\\main.tsx",
+    "size_bytes": 223
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\admin\\src\\pages\\Dashboard.tsx",
+    "size_bytes": 3145
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+    "size_bytes": 5828
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\admin\\src\\pages\\StreamSetup.tsx",
+    "size_bytes": 3383
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": "apps\\mobile\\.env",
+    "size_bytes": 101
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "apps\\mobile\\app.json",
+    "size_bytes": 1570
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "javascript",
+    "path": "apps\\mobile\\metro.config.js",
+    "size_bytes": 763
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "apps\\mobile\\package.json",
+    "size_bytes": 1114
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "apps\\mobile\\tsconfig.json",
+    "size_bytes": 340
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": "apps\\mobile\\android\\.gitignore",
+    "size_bytes": 129
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "gradle",
+    "path": "apps\\mobile\\android\\build.gradle",
+    "size_bytes": 1634
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "properties",
+    "path": "apps\\mobile\\android\\gradle.properties",
+    "size_bytes": 2382
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "shell",
+    "path": "apps\\mobile\\android\\gradlew",
+    "size_bytes": 8692
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": "apps\\mobile\\android\\gradlew.bat",
+    "size_bytes": 2918
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "gradle",
+    "path": "apps\\mobile\\android\\settings.gradle",
+    "size_bytes": 2673
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "gradle",
+    "path": "apps\\mobile\\android\\app\\build.gradle",
+    "size_bytes": 8461
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": "apps\\mobile\\android\\app\\debug.keystore",
+    "size_bytes": 2257
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": "apps\\mobile\\android\\app\\proguard-rules.pro",
+    "size_bytes": 562
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "xml",
+    "path": "apps\\mobile\\android\\app\\src\\debug\\AndroidManifest.xml",
+    "size_bytes": 374
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "xml",
+    "path": "apps\\mobile\\android\\app\\src\\main\\AndroidManifest.xml",
+    "size_bytes": 2578
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "kotlin",
+    "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainActivity.kt",
+    "size_bytes": 2187
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "kotlin",
+    "path": "apps\\mobile\\android\\app\\src\\main\\java\\com\\liveaszan\\app\\MainApplication.kt",
+    "size_bytes": 2003
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "xml",
+    "path": "apps\\mobile\\android\\app\\src\\main\\res\\drawable\\rn_edit_text_material.xml",
+    "size_bytes": 1917
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "xml",
+    "path": "apps\\mobile\\android\\app\\src\\main\\res\\drawable\\splashscreen.xml",
+    "size_bytes": 145
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "xml",
+    "path": "apps\\mobile\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml",
+    "size_bytes": 257
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "xml",
+    "path": "apps\\mobile\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml",
+    "size_bytes": 257
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "xml",
+    "path": "apps\\mobile\\android\\app\\src\\main\\res\\values\\colors.xml",
+    "size_bytes": 221
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "xml",
+    "path": "apps\\mobile\\android\\app\\src\\main\\res\\values\\strings.xml",
+    "size_bytes": 249
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "xml",
+    "path": "apps\\mobile\\android\\app\\src\\main\\res\\values\\styles.xml",
+    "size_bytes": 860
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "xml",
+    "path": "apps\\mobile\\android\\app\\src\\main\\res\\values-night\\colors.xml",
+    "size_bytes": 12
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": "apps\\mobile\\android\\gradle\\wrapper\\gradle-wrapper.jar",
+    "size_bytes": 43453
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "properties",
+    "path": "apps\\mobile\\android\\gradle\\wrapper\\gradle-wrapper.properties",
+    "size_bytes": 257
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "kotlin",
+    "path": "apps\\mobile\\android\\react-settings-plugin\\build.gradle.kts",
+    "size_bytes": 373
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "kotlin",
+    "path": "apps\\mobile\\android\\react-settings-plugin\\src\\main\\kotlin\\expo\\plugins\\ReactSettingsPlugin.kt",
+    "size_bytes": 239
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\app\\_layout.tsx",
+    "size_bytes": 1348
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\app\\(auth)\\login.tsx",
+    "size_bytes": 6069
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\app\\(auth)\\register.tsx",
+    "size_bytes": 3688
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\app\\(auth)\\_layout.tsx",
+    "size_bytes": 236
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\app\\(tabs)\\index.tsx",
+    "size_bytes": 8110
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx",
+    "size_bytes": 7274
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\app\\(tabs)\\settings.tsx",
+    "size_bytes": 13581
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\app\\(tabs)\\_layout.tsx",
+    "size_bytes": 1271
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\app\\mosque\\[id].tsx",
+    "size_bytes": 20250
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "apps\\mobile\\assets\\data\\mosques-index.json",
+    "size_bytes": 351314
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\components\\AzanPlayer.tsx",
+    "size_bytes": 6383
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\components\\DebugPanel.tsx",
+    "size_bytes": 7759
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\components\\IqamaCountdown.tsx",
+    "size_bytes": 2618
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\components\\MosqueCard.tsx",
+    "size_bytes": 4002
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\components\\MosqueMap.tsx",
+    "size_bytes": 1707
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\components\\NotificationSettings.tsx",
+    "size_bytes": 8658
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\components\\PrayerTimeCard.tsx",
+    "size_bytes": 2863
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\services\\api.ts",
+    "size_bytes": 6141
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\services\\azanAudio.ts",
+    "size_bytes": 3928
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\services\\cache.ts",
+    "size_bytes": 2501
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\services\\iqamaDiscovery.ts",
+    "size_bytes": 16123
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\services\\localMosqueSearch.ts",
+    "size_bytes": 3053
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\services\\location.ts",
+    "size_bytes": 5644
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\services\\mawaqitService.ts",
+    "size_bytes": 8716
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\services\\notifications.ts",
+    "size_bytes": 6651
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\services\\overpassService.ts",
+    "size_bytes": 3925
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\services\\prayerTimes.ts",
+    "size_bytes": 3496
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\stores\\authStore.ts",
+    "size_bytes": 3526
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\stores\\mosqueStore.ts",
+    "size_bytes": 9448
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\stores\\prayerStore.ts",
+    "size_bytes": 1035
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "apps\\mobile\\stores\\settingsStore.ts",
+    "size_bytes": 2047
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\alberta\\calgary.json",
+    "size_bytes": 2730
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\alberta\\edmonton.json",
+    "size_bytes": 2188
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\british-columbia\\vancouver.json",
+    "size_bytes": 3471
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\manitoba\\winnipeg.json",
+    "size_bytes": 2200
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\nova-scotia\\halifax.json",
+    "size_bytes": 1547
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\alliston.json",
+    "size_bytes": 1373
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\barrie.json",
+    "size_bytes": 3698
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\belleville.json",
+    "size_bytes": 2321
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\bradford.json",
+    "size_bytes": 2185
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\brampton.json",
+    "size_bytes": 18228
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\brantford.json",
+    "size_bytes": 2702
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\brockville.json",
+    "size_bytes": 1508
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\burlington.json",
+    "size_bytes": 9473
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\caledon.json",
+    "size_bytes": 1247
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\cambridge-kitchener.json",
+    "size_bytes": 9939
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\chatham-kent.json",
+    "size_bytes": 1277
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\collingwood.json",
+    "size_bytes": 1426
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\cornwall.json",
+    "size_bytes": 4828
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\erin.json",
+    "size_bytes": 2238
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\guelph.json",
+    "size_bytes": 4781
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\hamilton.json",
+    "size_bytes": 13692
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\hawkesbury.json",
+    "size_bytes": 1663
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\kingston.json",
+    "size_bytes": 3743
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\lindsay.json",
+    "size_bytes": 1488
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\london.json",
+    "size_bytes": 8284
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\markham.json",
+    "size_bytes": 13069
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\milton.json",
+    "size_bytes": 5227
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\mississauga.json",
+    "size_bytes": 26931
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\muskoka.json",
+    "size_bytes": 1366
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\newmarket.json",
+    "size_bytes": 1425
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\niagara.json",
+    "size_bytes": 7493
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\north-bay.json",
+    "size_bytes": 1648
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\orangeville.json",
+    "size_bytes": 3521
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\oshawa.json",
+    "size_bytes": 9039
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\ottawa.json",
+    "size_bytes": 32935
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\owen-sound.json",
+    "size_bytes": 2993
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\pembroke.json",
+    "size_bytes": 1457
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\peterborough.json",
+    "size_bytes": 2492
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\sarnia.json",
+    "size_bytes": 2521
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\sault-ste-marie.json",
+    "size_bytes": 1709
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\stratford.json",
+    "size_bytes": 1236
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\sudbury.json",
+    "size_bytes": 2752
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\thunder-bay.json",
+    "size_bytes": 2736
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\tillsonburg.json",
+    "size_bytes": 1320
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\timmins.json",
+    "size_bytes": 1529
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\toronto.json",
+    "size_bytes": 149980
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\vaughan.json",
+    "size_bytes": 4034
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\waterloo.json",
+    "size_bytes": 19179
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\whitby-ajax.json",
+    "size_bytes": 6455
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\windsor.json",
+    "size_bytes": 15152
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\ontario\\woodstock.json",
+    "size_bytes": 1354
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\quebec\\montreal.json",
+    "size_bytes": 3395
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\canada\\saskatchewan\\saskatoon.json",
+    "size_bytes": 1507
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "data\\mosques\\_meta\\coverage-map.json",
+    "size_bytes": 9229
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": "docker\\admin\\Dockerfile.prod",
+    "size_bytes": 569
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "config",
+    "path": "docker\\admin\\nginx.conf",
+    "size_bytes": 384
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": "docker\\server\\Dockerfile.local",
+    "size_bytes": 596
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": "docker\\server\\Dockerfile.prod",
+    "size_bytes": 1039
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "shell",
+    "path": "docker\\server\\entrypoint.local.sh",
+    "size_bytes": 370
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "shell",
+    "path": "docker\\server\\entrypoint.prod.sh",
+    "size_bytes": 228
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "packages\\shared\\package.json",
+    "size_bytes": 247
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "packages\\shared\\tsconfig.json",
+    "size_bytes": 149
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "packages\\shared\\src\\constants.ts",
+    "size_bytes": 1417
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "packages\\shared\\src\\index.ts",
+    "size_bytes": 82
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "packages\\shared\\src\\types.ts",
+    "size_bytes": 6289
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "packages\\shared\\src\\utils.ts",
+    "size_bytes": 3304
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "scripts\\enrich-iqama.ts",
+    "size_bytes": 14045
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "python",
+    "path": "scripts\\generate-mobile-assets.py",
+    "size_bytes": 5960
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "python",
+    "path": "scripts\\generate-mosque-bundle.py",
+    "size_bytes": 4552
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "scripts\\research-mosques.ts",
+    "size_bytes": 17308
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "server\\package.json",
+    "size_bytes": 953
+  },
+  {
+    "hash": "",
+    "is_config": true,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "json",
+    "path": "server\\tsconfig.json",
+    "size_bytes": 185
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "unknown",
+    "path": "server\\prisma\\schema.prisma",
+    "size_bytes": 5756
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\prisma\\seed.ts",
+    "size_bytes": 8460
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\index.ts",
+    "size_bytes": 1614
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\jobs\\iqamaRefreshJob.ts",
+    "size_bytes": 3067
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\lib\\prisma.ts",
+    "size_bytes": 301
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\middleware\\auth.ts",
+    "size_bytes": 2179
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\routes\\admin.ts",
+    "size_bytes": 4899
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\routes\\auth.ts",
+    "size_bytes": 4668
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\routes\\coverageRequests.ts",
+    "size_bytes": 3541
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\routes\\iqama.ts",
+    "size_bytes": 3953
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\routes\\mosques.ts",
+    "size_bytes": 7124
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\routes\\prayerTimes.ts",
+    "size_bytes": 1062
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\routes\\submissions.ts",
+    "size_bytes": 7618
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\routes\\users.ts",
+    "size_bytes": 6886
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\services\\aladhanService.ts",
+    "size_bytes": 1267
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\services\\iqamaEnrichment.ts",
+    "size_bytes": 14410
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\services\\notificationService.ts",
+    "size_bytes": 626
+  },
+  {
+    "hash": "",
+    "is_config": false,
+    "is_documentation": false,
+    "is_generated": false,
+    "is_test": false,
+    "language": "typescript",
+    "path": "server\\src\\services\\streamService.ts",
+    "size_bytes": 248
+  }
+]

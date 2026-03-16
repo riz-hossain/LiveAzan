@@ -1,0 +1,6 @@
+{
+  "count": 0,
+  "errors": [],
+  "note": "Files that failed AST/regex parsing during scanning.",
+  "schema": "zkme.ast_errors.v1"
+}

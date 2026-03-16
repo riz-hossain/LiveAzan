@@ -1,0 +1,52 @@
+{
+  "backend_calls": [
+    {
+      "base_source": "env:EXPO_PUBLIC_API_URL",
+      "caller": "if",
+      "confidence": "high",
+      "file": "apps\\mobile\\services\\api.ts",
+      "http_method": "GET",
+      "line": 39,
+      "resolved_path_guess": null,
+      "snippet": "  const controller = new AbortController();\n  const timeoutId = setTimeout(() => controller.abort(), 8_000);\n  let response: Response;\n  try {\n    response = await fetch(`${BASE_URL}${endpoint}`, {\n      ...options,\n      headers,\n      signal: controller.signal,\n    });",
+      "url_expr": "`${BASE_URL}${endpoint}`"
+    },
+    {
+      "base_source": null,
+      "caller": "fetchPrayerTimes",
+      "confidence": "high",
+      "file": "server\\src\\services\\aladhanService.ts",
+      "http_method": "GET",
+      "line": 20,
+      "resolved_path_guess": null,
+      "snippet": "): Promise<PrayerTimes> {\n  const dateStr = date ?? formatDate(new Date());\n  const url = `https://api.aladhan.com/v1/timings/${dateStr}?latitude=${lat}&longitude=${lon}&method=${method}`;\n\n  const response = await fetch(url);\n  if (!response.ok) {\n    throw new Error(`Aladhan API error: ${response.status} ${response.statusText}`);\n  }\n",
+      "url_expr": "url"
+    }
+  ],
+  "calls": [
+    {
+      "base_source": null,
+      "caller": "fetchStats",
+      "confidence": "high",
+      "file": "apps\\admin\\src\\pages\\Dashboard.tsx",
+      "http_method": "GET",
+      "line": 29,
+      "resolved_path_guess": "/api/admin/stats",
+      "snippet": "  useEffect(() => {\n    // TODO: Replace with real API call \u00e2\u20ac\u201d GET /api/admin/stats\n    const fetchStats = async () => {\n      try {\n        const res = await fetch(\"/api/admin/stats\");\n        if (res.ok) {\n          setStats(await res.json());\n        } else {\n          // Fallback mock data for development",
+      "url_expr": "\"/api/admin/stats\""
+    },
+    {
+      "base_source": null,
+      "caller": "fetchIqama",
+      "confidence": "high",
+      "file": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+      "http_method": "GET",
+      "line": 62,
+      "resolved_path_guess": "/api/iqama",
+      "snippet": "\n    // TODO: Fetch existing iqama times \u00e2\u20ac\u201d GET /api/iqama/:mosqueId\n    const fetchIqama = async () => {\n      try {\n        const res = await fetch(`/api/iqama/${selectedMosque}`);\n        if (res.ok) {\n          const data = await res.json();\n          setForm((prev) => ({ ...prev, ...data }));\n        }",
+      "url_expr": "`/api/iqama/${selectedMosque}`"
+    }
+  ],
+  "note": "Best-effort fetch/axios/SWR/XHR detection; url_expr is raw source expression.",
+  "schema": "zkme.frontend_calls.v1"
+}

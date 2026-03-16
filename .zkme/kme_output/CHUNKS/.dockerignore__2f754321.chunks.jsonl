@@ -1,0 +1,1 @@
+{"chunk_id": "CHK-2f754321-0000", "end_line": 16, "next_chunk_id": null, "prev_chunk_id": null, "source_path": ".dockerignore", "start_line": 1, "text": "node_modules\n**/node_modules\ndist\n**/dist\n.git\n.gitignore\n.env\n.env.local\n.env.prod\n*.log\n.expo\n**/android\n**/ios\n.turbo\ncoverage\n"}

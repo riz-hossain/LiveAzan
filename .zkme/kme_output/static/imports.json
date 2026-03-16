@@ -1,0 +1,2402 @@
+[
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 19,
+        "path": "setup.py"
+      }
+    ],
+    "imported_name": "os",
+    "is_external": true,
+    "source_file": "setup.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 20,
+        "path": "setup.py"
+      }
+    ],
+    "imported_name": "sys",
+    "is_external": true,
+    "source_file": "setup.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 21,
+        "path": "setup.py"
+      }
+    ],
+    "imported_name": "re",
+    "is_external": true,
+    "source_file": "setup.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 22,
+        "path": "setup.py"
+      }
+    ],
+    "imported_name": "json",
+    "is_external": true,
+    "source_file": "setup.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 23,
+        "path": "setup.py"
+      }
+    ],
+    "imported_name": "time",
+    "is_external": true,
+    "source_file": "setup.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 24,
+        "path": "setup.py"
+      }
+    ],
+    "imported_name": "shutil",
+    "is_external": true,
+    "source_file": "setup.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 25,
+        "path": "setup.py"
+      }
+    ],
+    "imported_name": "socket",
+    "is_external": true,
+    "source_file": "setup.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 26,
+        "path": "setup.py"
+      }
+    ],
+    "imported_name": "signal",
+    "is_external": true,
+    "source_file": "setup.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 27,
+        "path": "setup.py"
+      }
+    ],
+    "imported_name": "secrets",
+    "is_external": true,
+    "source_file": "setup.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 28,
+        "path": "setup.py"
+      }
+    ],
+    "imported_name": "platform",
+    "is_external": true,
+    "source_file": "setup.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 29,
+        "path": "setup.py"
+      }
+    ],
+    "imported_name": "textwrap",
+    "is_external": true,
+    "source_file": "setup.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 30,
+        "path": "setup.py"
+      }
+    ],
+    "imported_name": "subprocess",
+    "is_external": true,
+    "source_file": "setup.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 31,
+        "path": "setup.py"
+      }
+    ],
+    "imported_name": "pathlib.Path",
+    "is_external": true,
+    "source_file": "setup.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\admin\\vite.config.ts"
+      }
+    ],
+    "imported_name": "vite",
+    "is_external": true,
+    "source_file": "apps\\admin\\vite.config.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\admin\\vite.config.ts"
+      }
+    ],
+    "imported_name": "@vitejs/plugin-react",
+    "is_external": true,
+    "source_file": "apps\\admin\\vite.config.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\admin\\src\\App.tsx"
+      }
+    ],
+    "imported_name": "react",
+    "is_external": true,
+    "source_file": "apps\\admin\\src\\App.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\admin\\src\\App.tsx"
+      }
+    ],
+    "imported_name": "react-router-dom",
+    "is_external": true,
+    "source_file": "apps\\admin\\src\\App.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "apps\\admin\\src\\App.tsx"
+      }
+    ],
+    "imported_name": "./pages/Dashboard",
+    "is_external": false,
+    "source_file": "apps\\admin\\src\\App.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 4,
+        "path": "apps\\admin\\src\\App.tsx"
+      }
+    ],
+    "imported_name": "./pages/IqamaEditor",
+    "is_external": false,
+    "source_file": "apps\\admin\\src\\App.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 5,
+        "path": "apps\\admin\\src\\App.tsx"
+      }
+    ],
+    "imported_name": "./pages/StreamSetup",
+    "is_external": false,
+    "source_file": "apps\\admin\\src\\App.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\admin\\src\\main.tsx"
+      }
+    ],
+    "imported_name": "react",
+    "is_external": true,
+    "source_file": "apps\\admin\\src\\main.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\admin\\src\\main.tsx"
+      }
+    ],
+    "imported_name": "react-dom/client",
+    "is_external": true,
+    "source_file": "apps\\admin\\src\\main.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "apps\\admin\\src\\main.tsx"
+      }
+    ],
+    "imported_name": "./App",
+    "is_external": false,
+    "source_file": "apps\\admin\\src\\main.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\admin\\src\\pages\\IqamaEditor.tsx"
+      }
+    ],
+    "imported_name": "react-router-dom",
+    "is_external": true,
+    "source_file": "apps\\admin\\src\\pages\\IqamaEditor.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\admin\\src\\pages\\StreamSetup.tsx"
+      }
+    ],
+    "imported_name": "react",
+    "is_external": true,
+    "source_file": "apps\\admin\\src\\pages\\StreamSetup.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\metro.config.js"
+      }
+    ],
+    "imported_name": "expo/metro-config",
+    "is_external": true,
+    "source_file": "apps\\mobile\\metro.config.js"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\metro.config.js"
+      }
+    ],
+    "imported_name": "path",
+    "is_external": true,
+    "source_file": "apps\\mobile\\metro.config.js"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\app\\_layout.tsx"
+      }
+    ],
+    "imported_name": "react",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\_layout.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\app\\_layout.tsx"
+      }
+    ],
+    "imported_name": "react-native",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\_layout.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 3,
+        "path": "apps\\mobile\\app\\_layout.tsx"
+      }
+    ],
+    "imported_name": "expo-router",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\_layout.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 4,
+        "path": "apps\\mobile\\app\\_layout.tsx"
+      }
+    ],
+    "imported_name": "react-native-safe-area-context",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\_layout.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 5,
+        "path": "apps\\mobile\\app\\_layout.tsx"
+      }
+    ],
+    "imported_name": "expo-status-bar",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\_layout.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 6,
+        "path": "apps\\mobile\\app\\_layout.tsx"
+      }
+    ],
+    "imported_name": "../stores/authStore",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\_layout.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\app\\(auth)\\login.tsx"
+      }
+    ],
+    "imported_name": "react",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(auth)\\login.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\app\\(auth)\\login.tsx"
+      }
+    ],
+    "imported_name": "react-native",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(auth)\\login.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 13,
+        "path": "apps\\mobile\\app\\(auth)\\login.tsx"
+      }
+    ],
+    "imported_name": "expo-router",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(auth)\\login.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 14,
+        "path": "apps\\mobile\\app\\(auth)\\login.tsx"
+      }
+    ],
+    "imported_name": "@expo/vector-icons",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(auth)\\login.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 15,
+        "path": "apps\\mobile\\app\\(auth)\\login.tsx"
+      }
+    ],
+    "imported_name": "../../stores/authStore",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(auth)\\login.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\app\\(auth)\\register.tsx"
+      }
+    ],
+    "imported_name": "react",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(auth)\\register.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\app\\(auth)\\register.tsx"
+      }
+    ],
+    "imported_name": "react-native",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(auth)\\register.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 13,
+        "path": "apps\\mobile\\app\\(auth)\\register.tsx"
+      }
+    ],
+    "imported_name": "expo-router",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(auth)\\register.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 14,
+        "path": "apps\\mobile\\app\\(auth)\\register.tsx"
+      }
+    ],
+    "imported_name": "../../stores/authStore",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(auth)\\register.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\app\\(auth)\\_layout.tsx"
+      }
+    ],
+    "imported_name": "expo-router",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(auth)\\_layout.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\app\\(tabs)\\index.tsx"
+      }
+    ],
+    "imported_name": "react",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\index.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\app\\(tabs)\\index.tsx"
+      }
+    ],
+    "imported_name": "react-native",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\index.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 11,
+        "path": "apps\\mobile\\app\\(tabs)\\index.tsx"
+      }
+    ],
+    "imported_name": "expo-router",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\index.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 12,
+        "path": "apps\\mobile\\app\\(tabs)\\index.tsx"
+      }
+    ],
+    "imported_name": "react-native-safe-area-context",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\index.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 13,
+        "path": "apps\\mobile\\app\\(tabs)\\index.tsx"
+      }
+    ],
+    "imported_name": "@expo/vector-icons",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\index.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 14,
+        "path": "apps\\mobile\\app\\(tabs)\\index.tsx"
+      }
+    ],
+    "imported_name": "@live-azan/shared",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\index.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 15,
+        "path": "apps\\mobile\\app\\(tabs)\\index.tsx"
+      }
+    ],
+    "imported_name": "../../components/PrayerTimeCard",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\index.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 16,
+        "path": "apps\\mobile\\app\\(tabs)\\index.tsx"
+      }
+    ],
+    "imported_name": "../../components/IqamaCountdown",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\index.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 17,
+        "path": "apps\\mobile\\app\\(tabs)\\index.tsx"
+      }
+    ],
+    "imported_name": "../../components/MosqueCard",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\index.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 18,
+        "path": "apps\\mobile\\app\\(tabs)\\index.tsx"
+      }
+    ],
+    "imported_name": "../../stores/prayerStore",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\index.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 19,
+        "path": "apps\\mobile\\app\\(tabs)\\index.tsx"
+      }
+    ],
+    "imported_name": "../../stores/mosqueStore",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\index.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 20,
+        "path": "apps\\mobile\\app\\(tabs)\\index.tsx"
+      }
+    ],
+    "imported_name": "../../services/location",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\index.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+      }
+    ],
+    "imported_name": "react",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+      }
+    ],
+    "imported_name": "react-native",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 10,
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+      }
+    ],
+    "imported_name": "expo-router",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 11,
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+      }
+    ],
+    "imported_name": "@expo/vector-icons",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 12,
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+      }
+    ],
+    "imported_name": "../../components/MosqueCard",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 13,
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+      }
+    ],
+    "imported_name": "../../components/MosqueMap",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 14,
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+      }
+    ],
+    "imported_name": "../../components/DebugPanel",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 15,
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+      }
+    ],
+    "imported_name": "../../stores/mosqueStore",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 16,
+        "path": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+      }
+    ],
+    "imported_name": "../../services/location",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\mosques.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+      }
+    ],
+    "imported_name": "react",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+      }
+    ],
+    "imported_name": "react-native",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 10,
+        "path": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+      }
+    ],
+    "imported_name": "@expo/vector-icons",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 11,
+        "path": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+      }
+    ],
+    "imported_name": "expo-router",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 12,
+        "path": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+      }
+    ],
+    "imported_name": "expo-av",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 13,
+        "path": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+      }
+    ],
+    "imported_name": "../../stores/authStore",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 14,
+        "path": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+      }
+    ],
+    "imported_name": "../../stores/settingsStore",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 15,
+        "path": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+      }
+    ],
+    "imported_name": "../../stores/mosqueStore",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 16,
+        "path": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+      }
+    ],
+    "imported_name": "../../components/NotificationSettings",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 36,
+        "path": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+      }
+    ],
+    "imported_name": "../../assets/sounds/azan_default.wav",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\(tabs)\\settings.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\app\\(tabs)\\_layout.tsx"
+      }
+    ],
+    "imported_name": "expo-router",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\_layout.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\app\\(tabs)\\_layout.tsx"
+      }
+    ],
+    "imported_name": "@expo/vector-icons",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\(tabs)\\_layout.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\app\\mosque\\[id].tsx"
+      }
+    ],
+    "imported_name": "react",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\mosque\\[id].tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\app\\mosque\\[id].tsx"
+      }
+    ],
+    "imported_name": "react-native",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\mosque\\[id].tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 12,
+        "path": "apps\\mobile\\app\\mosque\\[id].tsx"
+      }
+    ],
+    "imported_name": "expo-router",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\mosque\\[id].tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 13,
+        "path": "apps\\mobile\\app\\mosque\\[id].tsx"
+      }
+    ],
+    "imported_name": "@expo/vector-icons",
+    "is_external": true,
+    "source_file": "apps\\mobile\\app\\mosque\\[id].tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 14,
+        "path": "apps\\mobile\\app\\mosque\\[id].tsx"
+      }
+    ],
+    "imported_name": "../../stores/mosqueStore",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\mosque\\[id].tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 15,
+        "path": "apps\\mobile\\app\\mosque\\[id].tsx"
+      }
+    ],
+    "imported_name": "../../stores/prayerStore",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\mosque\\[id].tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 16,
+        "path": "apps\\mobile\\app\\mosque\\[id].tsx"
+      }
+    ],
+    "imported_name": "../../services/location",
+    "is_external": false,
+    "source_file": "apps\\mobile\\app\\mosque\\[id].tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\components\\AzanPlayer.tsx"
+      }
+    ],
+    "imported_name": "react-native",
+    "is_external": true,
+    "source_file": "apps\\mobile\\components\\AzanPlayer.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 3,
+        "path": "apps\\mobile\\components\\AzanPlayer.tsx"
+      }
+    ],
+    "imported_name": "@expo/vector-icons",
+    "is_external": true,
+    "source_file": "apps\\mobile\\components\\AzanPlayer.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 4,
+        "path": "apps\\mobile\\components\\AzanPlayer.tsx"
+      }
+    ],
+    "imported_name": "../services/azanAudio",
+    "is_external": false,
+    "source_file": "apps\\mobile\\components\\AzanPlayer.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 9,
+        "path": "apps\\mobile\\components\\DebugPanel.tsx"
+      }
+    ],
+    "imported_name": "react",
+    "is_external": true,
+    "source_file": "apps\\mobile\\components\\DebugPanel.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 10,
+        "path": "apps\\mobile\\components\\DebugPanel.tsx"
+      }
+    ],
+    "imported_name": "react-native",
+    "is_external": true,
+    "source_file": "apps\\mobile\\components\\DebugPanel.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 18,
+        "path": "apps\\mobile\\components\\DebugPanel.tsx"
+      }
+    ],
+    "imported_name": "../services/api",
+    "is_external": false,
+    "source_file": "apps\\mobile\\components\\DebugPanel.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 19,
+        "path": "apps\\mobile\\components\\DebugPanel.tsx"
+      }
+    ],
+    "imported_name": "../services/localMosqueSearch",
+    "is_external": false,
+    "source_file": "apps\\mobile\\components\\DebugPanel.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 20,
+        "path": "apps\\mobile\\components\\DebugPanel.tsx"
+      }
+    ],
+    "imported_name": "../services/mawaqitService",
+    "is_external": false,
+    "source_file": "apps\\mobile\\components\\DebugPanel.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 21,
+        "path": "apps\\mobile\\components\\DebugPanel.tsx"
+      }
+    ],
+    "imported_name": "../services/overpassService",
+    "is_external": false,
+    "source_file": "apps\\mobile\\components\\DebugPanel.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\components\\IqamaCountdown.tsx"
+      }
+    ],
+    "imported_name": "react-native",
+    "is_external": true,
+    "source_file": "apps\\mobile\\components\\IqamaCountdown.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\components\\MosqueCard.tsx"
+      }
+    ],
+    "imported_name": "react",
+    "is_external": true,
+    "source_file": "apps\\mobile\\components\\MosqueCard.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\components\\MosqueCard.tsx"
+      }
+    ],
+    "imported_name": "react-native",
+    "is_external": true,
+    "source_file": "apps\\mobile\\components\\MosqueCard.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 3,
+        "path": "apps\\mobile\\components\\MosqueCard.tsx"
+      }
+    ],
+    "imported_name": "@expo/vector-icons",
+    "is_external": true,
+    "source_file": "apps\\mobile\\components\\MosqueCard.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\components\\MosqueMap.tsx"
+      }
+    ],
+    "imported_name": "react",
+    "is_external": true,
+    "source_file": "apps\\mobile\\components\\MosqueMap.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\components\\MosqueMap.tsx"
+      }
+    ],
+    "imported_name": "react-native",
+    "is_external": true,
+    "source_file": "apps\\mobile\\components\\MosqueMap.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\components\\NotificationSettings.tsx"
+      }
+    ],
+    "imported_name": "react-native",
+    "is_external": true,
+    "source_file": "apps\\mobile\\components\\NotificationSettings.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 9,
+        "path": "apps\\mobile\\components\\NotificationSettings.tsx"
+      }
+    ],
+    "imported_name": "@expo/vector-icons",
+    "is_external": true,
+    "source_file": "apps\\mobile\\components\\NotificationSettings.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\components\\PrayerTimeCard.tsx"
+      }
+    ],
+    "imported_name": "react",
+    "is_external": true,
+    "source_file": "apps\\mobile\\components\\PrayerTimeCard.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\components\\PrayerTimeCard.tsx"
+      }
+    ],
+    "imported_name": "react-native",
+    "is_external": true,
+    "source_file": "apps\\mobile\\components\\PrayerTimeCard.tsx"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\services\\api.ts"
+      }
+    ],
+    "imported_name": "expo-secure-store",
+    "is_external": true,
+    "source_file": "apps\\mobile\\services\\api.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\services\\azanAudio.ts"
+      }
+    ],
+    "imported_name": "expo-av",
+    "is_external": true,
+    "source_file": "apps\\mobile\\services\\azanAudio.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 24,
+        "path": "apps\\mobile\\services\\azanAudio.ts"
+      }
+    ],
+    "imported_name": "../assets/sounds/azan_default.wav",
+    "is_external": false,
+    "source_file": "apps\\mobile\\services\\azanAudio.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 6,
+        "path": "apps\\mobile\\services\\cache.ts"
+      }
+    ],
+    "imported_name": "@react-native-async-storage/async-storage",
+    "is_external": true,
+    "source_file": "apps\\mobile\\services\\cache.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 19,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts"
+      }
+    ],
+    "imported_name": "@live-azan/shared",
+    "is_external": true,
+    "source_file": "apps\\mobile\\services\\iqamaDiscovery.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 20,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts"
+      }
+    ],
+    "imported_name": "./api",
+    "is_external": false,
+    "source_file": "apps\\mobile\\services\\iqamaDiscovery.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 21,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts"
+      }
+    ],
+    "imported_name": "./mawaqitService",
+    "is_external": false,
+    "source_file": "apps\\mobile\\services\\iqamaDiscovery.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 29,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts"
+      }
+    ],
+    "imported_name": "./cache",
+    "is_external": false,
+    "source_file": "apps\\mobile\\services\\iqamaDiscovery.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 37,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts"
+      }
+    ],
+    "imported_name": "./localMosqueSearch",
+    "is_external": false,
+    "source_file": "apps\\mobile\\services\\iqamaDiscovery.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 38,
+        "path": "apps\\mobile\\services\\iqamaDiscovery.ts"
+      }
+    ],
+    "imported_name": "./overpassService",
+    "is_external": false,
+    "source_file": "apps\\mobile\\services\\iqamaDiscovery.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 10,
+        "path": "apps\\mobile\\services\\localMosqueSearch.ts"
+      }
+    ],
+    "imported_name": "../assets/data/mosques-index.json",
+    "is_external": false,
+    "source_file": "apps\\mobile\\services\\localMosqueSearch.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\services\\location.ts"
+      }
+    ],
+    "imported_name": "expo-location",
+    "is_external": true,
+    "source_file": "apps\\mobile\\services\\location.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\services\\location.ts"
+      }
+    ],
+    "imported_name": "@react-native-async-storage/async-storage",
+    "is_external": true,
+    "source_file": "apps\\mobile\\services\\location.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\services\\notifications.ts"
+      }
+    ],
+    "imported_name": "expo-notifications",
+    "is_external": true,
+    "source_file": "apps\\mobile\\services\\notifications.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 2,
+        "path": "apps\\mobile\\services\\prayerTimes.ts"
+      }
+    ],
+    "imported_name": "./api",
+    "is_external": false,
+    "source_file": "apps\\mobile\\services\\prayerTimes.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\stores\\authStore.ts"
+      }
+    ],
+    "imported_name": "zustand",
+    "is_external": true,
+    "source_file": "apps\\mobile\\stores\\authStore.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "apps\\mobile\\stores\\authStore.ts"
+      }
+    ],
+    "imported_name": "expo-secure-store",
+    "is_external": true,
+    "source_file": "apps\\mobile\\stores\\authStore.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 4,
+        "path": "apps\\mobile\\stores\\authStore.ts"
+      }
+    ],
+    "imported_name": "../services/api",
+    "is_external": false,
+    "source_file": "apps\\mobile\\stores\\authStore.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\stores\\mosqueStore.ts"
+      }
+    ],
+    "imported_name": "zustand",
+    "is_external": true,
+    "source_file": "apps\\mobile\\stores\\mosqueStore.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "apps\\mobile\\stores\\mosqueStore.ts"
+      }
+    ],
+    "imported_name": "../services/api",
+    "is_external": false,
+    "source_file": "apps\\mobile\\stores\\mosqueStore.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 10,
+        "path": "apps\\mobile\\stores\\mosqueStore.ts"
+      }
+    ],
+    "imported_name": "../services/iqamaDiscovery",
+    "is_external": false,
+    "source_file": "apps\\mobile\\stores\\mosqueStore.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 15,
+        "path": "apps\\mobile\\stores\\mosqueStore.ts"
+      }
+    ],
+    "imported_name": "../services/cache",
+    "is_external": false,
+    "source_file": "apps\\mobile\\stores\\mosqueStore.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 27,
+        "path": "apps\\mobile\\stores\\mosqueStore.ts"
+      }
+    ],
+    "imported_name": "../services/localMosqueSearch",
+    "is_external": false,
+    "source_file": "apps\\mobile\\stores\\mosqueStore.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\stores\\prayerStore.ts"
+      }
+    ],
+    "imported_name": "zustand",
+    "is_external": true,
+    "source_file": "apps\\mobile\\stores\\prayerStore.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "apps\\mobile\\stores\\prayerStore.ts"
+      }
+    ],
+    "imported_name": "../services/prayerTimes",
+    "is_external": false,
+    "source_file": "apps\\mobile\\stores\\prayerStore.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "apps\\mobile\\stores\\settingsStore.ts"
+      }
+    ],
+    "imported_name": "zustand",
+    "is_external": true,
+    "source_file": "apps\\mobile\\stores\\settingsStore.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "apps\\mobile\\stores\\settingsStore.ts"
+      }
+    ],
+    "imported_name": "../services/api",
+    "is_external": false,
+    "source_file": "apps\\mobile\\stores\\settingsStore.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 8,
+        "path": "apps\\mobile\\stores\\settingsStore.ts"
+      }
+    ],
+    "imported_name": "./authStore",
+    "is_external": false,
+    "source_file": "apps\\mobile\\stores\\settingsStore.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 1,
+        "path": "packages\\shared\\src\\constants.ts"
+      }
+    ],
+    "imported_name": "./types",
+    "is_external": false,
+    "source_file": "packages\\shared\\src\\constants.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 1,
+        "path": "packages\\shared\\src\\utils.ts"
+      }
+    ],
+    "imported_name": "./types",
+    "is_external": false,
+    "source_file": "packages\\shared\\src\\utils.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 2,
+        "path": "packages\\shared\\src\\utils.ts"
+      }
+    ],
+    "imported_name": "./constants",
+    "is_external": false,
+    "source_file": "packages\\shared\\src\\utils.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 15,
+        "path": "scripts\\enrich-iqama.ts"
+      }
+    ],
+    "imported_name": "fs",
+    "is_external": true,
+    "source_file": "scripts\\enrich-iqama.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 16,
+        "path": "scripts\\enrich-iqama.ts"
+      }
+    ],
+    "imported_name": "path",
+    "is_external": true,
+    "source_file": "scripts\\enrich-iqama.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 14,
+        "path": "scripts\\generate-mobile-assets.py"
+      }
+    ],
+    "imported_name": "os",
+    "is_external": true,
+    "source_file": "scripts\\generate-mobile-assets.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 15,
+        "path": "scripts\\generate-mobile-assets.py"
+      }
+    ],
+    "imported_name": "struct",
+    "is_external": true,
+    "source_file": "scripts\\generate-mobile-assets.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 16,
+        "path": "scripts\\generate-mobile-assets.py"
+      }
+    ],
+    "imported_name": "zlib",
+    "is_external": true,
+    "source_file": "scripts\\generate-mobile-assets.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 17,
+        "path": "scripts\\generate-mobile-assets.py"
+      }
+    ],
+    "imported_name": "wave",
+    "is_external": true,
+    "source_file": "scripts\\generate-mobile-assets.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 12,
+        "path": "scripts\\generate-mosque-bundle.py"
+      }
+    ],
+    "imported_name": "json",
+    "is_external": true,
+    "source_file": "scripts\\generate-mosque-bundle.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 13,
+        "path": "scripts\\generate-mosque-bundle.py"
+      }
+    ],
+    "imported_name": "re",
+    "is_external": true,
+    "source_file": "scripts\\generate-mosque-bundle.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 14,
+        "path": "scripts\\generate-mosque-bundle.py"
+      }
+    ],
+    "imported_name": "sys",
+    "is_external": true,
+    "source_file": "scripts\\generate-mosque-bundle.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 15,
+        "path": "scripts\\generate-mosque-bundle.py"
+      }
+    ],
+    "imported_name": "pathlib.Path",
+    "is_external": true,
+    "source_file": "scripts\\generate-mosque-bundle.py"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 17,
+        "path": "scripts\\research-mosques.ts"
+      }
+    ],
+    "imported_name": "fs",
+    "is_external": true,
+    "source_file": "scripts\\research-mosques.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 18,
+        "path": "scripts\\research-mosques.ts"
+      }
+    ],
+    "imported_name": "path",
+    "is_external": true,
+    "source_file": "scripts\\research-mosques.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 11,
+        "path": "server\\prisma\\seed.ts"
+      }
+    ],
+    "imported_name": "@prisma/client",
+    "is_external": true,
+    "source_file": "server\\prisma\\seed.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 12,
+        "path": "server\\prisma\\seed.ts"
+      }
+    ],
+    "imported_name": "fs",
+    "is_external": true,
+    "source_file": "server\\prisma\\seed.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 13,
+        "path": "server\\prisma\\seed.ts"
+      }
+    ],
+    "imported_name": "path",
+    "is_external": true,
+    "source_file": "server\\prisma\\seed.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 14,
+        "path": "server\\prisma\\seed.ts"
+      }
+    ],
+    "imported_name": "bcryptjs",
+    "is_external": true,
+    "source_file": "server\\prisma\\seed.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "server\\src\\index.ts"
+      }
+    ],
+    "imported_name": "cors",
+    "is_external": true,
+    "source_file": "server\\src\\index.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 4,
+        "path": "server\\src\\index.ts"
+      }
+    ],
+    "imported_name": "./routes/auth",
+    "is_external": false,
+    "source_file": "server\\src\\index.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 5,
+        "path": "server\\src\\index.ts"
+      }
+    ],
+    "imported_name": "./routes/mosques",
+    "is_external": false,
+    "source_file": "server\\src\\index.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 6,
+        "path": "server\\src\\index.ts"
+      }
+    ],
+    "imported_name": "./routes/iqama",
+    "is_external": false,
+    "source_file": "server\\src\\index.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 7,
+        "path": "server\\src\\index.ts"
+      }
+    ],
+    "imported_name": "./routes/prayerTimes",
+    "is_external": false,
+    "source_file": "server\\src\\index.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 8,
+        "path": "server\\src\\index.ts"
+      }
+    ],
+    "imported_name": "./routes/users",
+    "is_external": false,
+    "source_file": "server\\src\\index.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 9,
+        "path": "server\\src\\index.ts"
+      }
+    ],
+    "imported_name": "./routes/coverageRequests",
+    "is_external": false,
+    "source_file": "server\\src\\index.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 10,
+        "path": "server\\src\\index.ts"
+      }
+    ],
+    "imported_name": "./routes/submissions",
+    "is_external": false,
+    "source_file": "server\\src\\index.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 11,
+        "path": "server\\src\\index.ts"
+      }
+    ],
+    "imported_name": "./routes/admin",
+    "is_external": false,
+    "source_file": "server\\src\\index.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 12,
+        "path": "server\\src\\index.ts"
+      }
+    ],
+    "imported_name": "./jobs/iqamaRefreshJob",
+    "is_external": false,
+    "source_file": "server\\src\\index.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 11,
+        "path": "server\\src\\jobs\\iqamaRefreshJob.ts"
+      }
+    ],
+    "imported_name": "node-cron",
+    "is_external": true,
+    "source_file": "server\\src\\jobs\\iqamaRefreshJob.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 12,
+        "path": "server\\src\\jobs\\iqamaRefreshJob.ts"
+      }
+    ],
+    "imported_name": "../lib/prisma",
+    "is_external": false,
+    "source_file": "server\\src\\jobs\\iqamaRefreshJob.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 13,
+        "path": "server\\src\\jobs\\iqamaRefreshJob.ts"
+      }
+    ],
+    "imported_name": "../services/iqamaEnrichment",
+    "is_external": false,
+    "source_file": "server\\src\\jobs\\iqamaRefreshJob.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "server\\src\\lib\\prisma.ts"
+      }
+    ],
+    "imported_name": "@prisma/client",
+    "is_external": true,
+    "source_file": "server\\src\\lib\\prisma.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "server\\src\\middleware\\auth.ts"
+      }
+    ],
+    "imported_name": "express",
+    "is_external": true,
+    "source_file": "server\\src\\middleware\\auth.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "server\\src\\middleware\\auth.ts"
+      }
+    ],
+    "imported_name": "jsonwebtoken",
+    "is_external": true,
+    "source_file": "server\\src\\middleware\\auth.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 13,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "imported_name": "express",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\admin.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 14,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "imported_name": "zod",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\admin.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 15,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "imported_name": "../lib/prisma",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\admin.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 16,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "imported_name": "../middleware/auth",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\admin.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 17,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "imported_name": "../services/iqamaEnrichment",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\admin.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 18,
+        "path": "server\\src\\routes\\admin.ts"
+      }
+    ],
+    "imported_name": "../jobs/iqamaRefreshJob",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\admin.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "server\\src\\routes\\auth.ts"
+      }
+    ],
+    "imported_name": "express",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\auth.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "server\\src\\routes\\auth.ts"
+      }
+    ],
+    "imported_name": "bcryptjs",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\auth.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 3,
+        "path": "server\\src\\routes\\auth.ts"
+      }
+    ],
+    "imported_name": "jsonwebtoken",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\auth.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 4,
+        "path": "server\\src\\routes\\auth.ts"
+      }
+    ],
+    "imported_name": "zod",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\auth.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 5,
+        "path": "server\\src\\routes\\auth.ts"
+      }
+    ],
+    "imported_name": "../lib/prisma",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\auth.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "server\\src\\routes\\coverageRequests.ts"
+      }
+    ],
+    "imported_name": "express",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\coverageRequests.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "server\\src\\routes\\coverageRequests.ts"
+      }
+    ],
+    "imported_name": "zod",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\coverageRequests.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "server\\src\\routes\\coverageRequests.ts"
+      }
+    ],
+    "imported_name": "../lib/prisma",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\coverageRequests.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 4,
+        "path": "server\\src\\routes\\coverageRequests.ts"
+      }
+    ],
+    "imported_name": "../middleware/auth",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\coverageRequests.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "server\\src\\routes\\iqama.ts"
+      }
+    ],
+    "imported_name": "express",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\iqama.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "server\\src\\routes\\iqama.ts"
+      }
+    ],
+    "imported_name": "zod",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\iqama.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "server\\src\\routes\\iqama.ts"
+      }
+    ],
+    "imported_name": "../lib/prisma",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\iqama.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 4,
+        "path": "server\\src\\routes\\iqama.ts"
+      }
+    ],
+    "imported_name": "../middleware/auth",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\iqama.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "server\\src\\routes\\mosques.ts"
+      }
+    ],
+    "imported_name": "express",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\mosques.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "server\\src\\routes\\mosques.ts"
+      }
+    ],
+    "imported_name": "zod",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\mosques.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "server\\src\\routes\\mosques.ts"
+      }
+    ],
+    "imported_name": "../lib/prisma",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\mosques.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 4,
+        "path": "server\\src\\routes\\mosques.ts"
+      }
+    ],
+    "imported_name": "../middleware/auth",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\mosques.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "server\\src\\routes\\prayerTimes.ts"
+      }
+    ],
+    "imported_name": "express",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\prayerTimes.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 2,
+        "path": "server\\src\\routes\\prayerTimes.ts"
+      }
+    ],
+    "imported_name": "../services/aladhanService",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\prayerTimes.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "server\\src\\routes\\submissions.ts"
+      }
+    ],
+    "imported_name": "express",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\submissions.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "server\\src\\routes\\submissions.ts"
+      }
+    ],
+    "imported_name": "zod",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\submissions.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "server\\src\\routes\\submissions.ts"
+      }
+    ],
+    "imported_name": "../lib/prisma",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\submissions.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 4,
+        "path": "server\\src\\routes\\submissions.ts"
+      }
+    ],
+    "imported_name": "../middleware/auth",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\submissions.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 1,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "imported_name": "express",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\users.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 2,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "imported_name": "zod",
+    "is_external": true,
+    "source_file": "server\\src\\routes\\users.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 3,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "imported_name": "../lib/prisma",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\users.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 4,
+        "path": "server\\src\\routes\\users.ts"
+      }
+    ],
+    "imported_name": "../middleware/auth",
+    "is_external": false,
+    "source_file": "server\\src\\routes\\users.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "medium",
+        "line_start": 14,
+        "path": "server\\src\\services\\iqamaEnrichment.ts"
+      }
+    ],
+    "imported_name": "../lib/prisma",
+    "is_external": false,
+    "source_file": "server\\src\\services\\iqamaEnrichment.ts"
+  },
+  {
+    "evidence": [
+      {
+        "confidence": "high",
+        "line_start": 15,
+        "path": "server\\src\\services\\iqamaEnrichment.ts"
+      }
+    ],
+    "imported_name": "@prisma/client",
+    "is_external": true,
+    "source_file": "server\\src\\services\\iqamaEnrichment.ts"
+  }
+]

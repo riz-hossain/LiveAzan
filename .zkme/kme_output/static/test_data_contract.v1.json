@@ -1,0 +1,37 @@
+{
+  "fixture_directories": [],
+  "seed_files": [
+    {
+      "type": "seed_file",
+      "path": "server\\prisma\\seed.ts",
+      "confidence": "HIGH",
+      "evidence_refs": [
+        {
+          "file": "server\\prisma\\seed.ts",
+          "line": 0
+        }
+      ]
+    }
+  ],
+  "factory_patterns": [],
+  "cleanup_patterns": [
+    {
+      "type": "cleanup_pattern",
+      "path": "setup.py",
+      "pattern": "setup.py clean",
+      "line": 12,
+      "confidence": "MEDIUM",
+      "evidence_refs": [
+        {
+          "file": "setup.py",
+          "line": 12
+        }
+      ]
+    }
+  ],
+  "test_db_env_keys": [],
+  "admin_endpoints": [],
+  "total_detections": 2,
+  "has_test_data_management": true,
+  "has_cleanup_strategy": true
+}

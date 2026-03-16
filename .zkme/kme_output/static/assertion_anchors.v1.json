@@ -1,0 +1,655 @@
+{
+  "anchors": [
+    {
+      "text": "LiveAzan Admin",
+      "anchor_type": "heading",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 45,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0001",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 45
+        }
+      ]
+    },
+    {
+      "text": "Mosques",
+      "anchor_type": "heading",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 87,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0002",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 87
+        }
+      ]
+    },
+    {
+      "text": "Coverage Requests",
+      "anchor_type": "heading",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 121,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0003",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 121
+        }
+      ]
+    },
+    {
+      "text": "LiveAzan Admin",
+      "anchor_type": "heading",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 166,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0004",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 166
+        }
+      ]
+    },
+    {
+      "text": "Sign In",
+      "anchor_type": "button_label",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 66,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0005",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 66
+        }
+      ]
+    },
+    {
+      "text": "Approve",
+      "anchor_type": "button_label",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 144,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0006",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 144
+        }
+      ]
+    },
+    {
+      "text": "Reject",
+      "anchor_type": "button_label",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 147,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0007",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 147
+        }
+      ]
+    },
+    {
+      "text": "Name",
+      "anchor_type": "table_header",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 94,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0008",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 94
+        }
+      ]
+    },
+    {
+      "text": "City",
+      "anchor_type": "table_header",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 95,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0009",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 95
+        }
+      ]
+    },
+    {
+      "text": "Actions",
+      "anchor_type": "table_header",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 96,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0010",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 96
+        }
+      ]
+    },
+    {
+      "text": "City",
+      "anchor_type": "table_header",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 128,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0011",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 128
+        }
+      ]
+    },
+    {
+      "text": "Province",
+      "anchor_type": "table_header",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 129,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0012",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 129
+        }
+      ]
+    },
+    {
+      "text": "Status",
+      "anchor_type": "table_header",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 130,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0013",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 130
+        }
+      ]
+    },
+    {
+      "text": "Actions",
+      "anchor_type": "table_header",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 131,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0014",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 131
+        }
+      ]
+    },
+    {
+      "text": "admin@liveaszan.com",
+      "anchor_type": "placeholder",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 58,
+      "confidence": "MEDIUM",
+      "surface_id": "global",
+      "anchor_id": "ANC-0015",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 58
+        }
+      ]
+    },
+    {
+      "text": "Password",
+      "anchor_type": "placeholder",
+      "file": "apps\\admin\\src\\App.tsx",
+      "line": 63,
+      "confidence": "MEDIUM",
+      "surface_id": "global",
+      "anchor_id": "ANC-0016",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\App.tsx",
+          "line": 63
+        }
+      ]
+    },
+    {
+      "text": "Dashboard",
+      "anchor_type": "heading",
+      "file": "apps\\admin\\src\\pages\\Dashboard.tsx",
+      "line": 53,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0017",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\pages\\Dashboard.tsx",
+          "line": 53
+        }
+      ]
+    },
+    {
+      "text": "Recent Activity",
+      "anchor_type": "heading",
+      "file": "apps\\admin\\src\\pages\\Dashboard.tsx",
+      "line": 84,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0018",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\pages\\Dashboard.tsx",
+          "line": 84
+        }
+      ]
+    },
+    {
+      "text": "Edit Iqama Times",
+      "anchor_type": "heading",
+      "file": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+      "line": 105,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0019",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+          "line": 105
+        }
+      ]
+    },
+    {
+      "text": "Prayer Times",
+      "anchor_type": "heading",
+      "file": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+      "line": 134,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0020",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+          "line": 134
+        }
+      ]
+    },
+    {
+      "text": "Effective Dates",
+      "anchor_type": "heading",
+      "file": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+      "line": 153,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0021",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+          "line": 153
+        }
+      ]
+    },
+    {
+      "text": "HH:mm or sunset+N",
+      "anchor_type": "placeholder",
+      "file": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+      "line": 146,
+      "confidence": "MEDIUM",
+      "surface_id": "global",
+      "anchor_id": "ANC-0022",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\pages\\IqamaEditor.tsx",
+          "line": 146
+        }
+      ]
+    },
+    {
+      "text": "Live Azan Streaming Setup",
+      "anchor_type": "heading",
+      "file": "apps\\admin\\src\\pages\\StreamSetup.tsx",
+      "line": 23,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0023",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\pages\\StreamSetup.tsx",
+          "line": 23
+        }
+      ]
+    },
+    {
+      "text": "Azan Live Stream Manager",
+      "anchor_type": "heading",
+      "file": "apps\\admin\\src\\pages\\StreamSetup.tsx",
+      "line": 44,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0024",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\pages\\StreamSetup.tsx",
+          "line": 44
+        }
+      ]
+    },
+    {
+      "text": "Save Stream Config",
+      "anchor_type": "button_label",
+      "file": "apps\\admin\\src\\pages\\StreamSetup.tsx",
+      "line": 78,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0025",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\admin\\src\\pages\\StreamSetup.tsx",
+          "line": 78
+        }
+      ]
+    },
+    {
+      "text": "Email",
+      "anchor_type": "placeholder",
+      "file": "apps\\mobile\\app\\(auth)\\login.tsx",
+      "line": 86,
+      "confidence": "MEDIUM",
+      "surface_id": "global",
+      "anchor_id": "ANC-0026",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\mobile\\app\\(auth)\\login.tsx",
+          "line": 86
+        }
+      ]
+    },
+    {
+      "text": "Password",
+      "anchor_type": "placeholder",
+      "file": "apps\\mobile\\app\\(auth)\\login.tsx",
+      "line": 96,
+      "confidence": "MEDIUM",
+      "surface_id": "global",
+      "anchor_id": "ANC-0027",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\mobile\\app\\(auth)\\login.tsx",
+          "line": 96
+        }
+      ]
+    },
+    {
+      "text": "Display Name",
+      "anchor_type": "placeholder",
+      "file": "apps\\mobile\\app\\(auth)\\register.tsx",
+      "line": 45,
+      "confidence": "MEDIUM",
+      "surface_id": "global",
+      "anchor_id": "ANC-0028",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\mobile\\app\\(auth)\\register.tsx",
+          "line": 45
+        }
+      ]
+    },
+    {
+      "text": "Email",
+      "anchor_type": "placeholder",
+      "file": "apps\\mobile\\app\\(auth)\\register.tsx",
+      "line": 54,
+      "confidence": "MEDIUM",
+      "surface_id": "global",
+      "anchor_id": "ANC-0029",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\mobile\\app\\(auth)\\register.tsx",
+          "line": 54
+        }
+      ]
+    },
+    {
+      "text": "Password",
+      "anchor_type": "placeholder",
+      "file": "apps\\mobile\\app\\(auth)\\register.tsx",
+      "line": 64,
+      "confidence": "MEDIUM",
+      "surface_id": "global",
+      "anchor_id": "ANC-0030",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\mobile\\app\\(auth)\\register.tsx",
+          "line": 64
+        }
+      ]
+    },
+    {
+      "text": "Location permission not granted.",
+      "anchor_type": "error_throw",
+      "file": "apps\\mobile\\services\\location.ts",
+      "line": 58,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0031",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\mobile\\services\\location.ts",
+          "line": 58
+        }
+      ]
+    },
+    {
+      "text": "Background location permission not granted.",
+      "anchor_type": "error_throw",
+      "file": "apps\\mobile\\services\\location.ts",
+      "line": 105,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0032",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\mobile\\services\\location.ts",
+          "line": 105
+        }
+      ]
+    },
+    {
+      "text": "Prayer times unavailable. Please check your connection and try again.",
+      "anchor_type": "error_throw",
+      "file": "apps\\mobile\\services\\prayerTimes.ts",
+      "line": 60,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0033",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "apps\\mobile\\services\\prayerTimes.ts",
+          "line": 60
+        }
+      ]
+    },
+    {
+      "text": "Unknown prayer: ${name}",
+      "anchor_type": "error_throw",
+      "file": "server\\prisma\\seed.ts",
+      "line": 90,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0034",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "server\\prisma\\seed.ts",
+          "line": 90
+        }
+      ]
+    },
+    {
+      "text": "JWT_SECRET environment variable is not set",
+      "anchor_type": "error_throw",
+      "file": "server\\src\\middleware\\auth.ts",
+      "line": 19,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0035",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "server\\src\\middleware\\auth.ts",
+          "line": 19
+        }
+      ]
+    },
+    {
+      "text": "JWT_SECRET environment variable is not set",
+      "anchor_type": "error_throw",
+      "file": "server\\src\\routes\\auth.ts",
+      "line": 12,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0036",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "server\\src\\routes\\auth.ts",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "text": "Aladhan API error: ${response.status} ${response.statusText}",
+      "anchor_type": "error_throw",
+      "file": "server\\src\\services\\aladhanService.ts",
+      "line": 22,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0037",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "server\\src\\services\\aladhanService.ts",
+          "line": 22
+        }
+      ]
+    },
+    {
+      "text": "Android build failed after retry.",
+      "anchor_type": "error_throw",
+      "file": "setup.py",
+      "line": 1021,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0038",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "setup.py",
+          "line": 1021
+        }
+      ]
+    },
+    {
+      "text": "Command failed: {",
+      "anchor_type": "error_throw",
+      "file": "setup.py",
+      "line": 79,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0039",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "setup.py",
+          "line": 79
+        }
+      ]
+    },
+    {
+      "text": "Command failed: {",
+      "anchor_type": "error_throw",
+      "file": "setup.py",
+      "line": 89,
+      "confidence": "HIGH",
+      "surface_id": "global",
+      "anchor_id": "ANC-0040",
+      "i18n_keyed": false,
+      "evidence_refs": [
+        {
+          "file": "setup.py",
+          "line": 89
+        }
+      ]
+    }
+  ],
+  "total": 40,
+  "by_type": {
+    "heading": 11,
+    "button_label": 4,
+    "table_header": 7,
+    "placeholder": 8,
+    "error_throw": 10
+  },
+  "by_surface": {
+    "global": 40
+  }
+}
