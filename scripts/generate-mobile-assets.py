@@ -6,7 +6,7 @@ Creates the following files using Python stdlib only (no Pillow required):
   apps/mobile/assets/icon.png              1024×1024  brand green #1B5E20
   apps/mobile/assets/adaptive-icon.png    1024×1024  brand green #1B5E20
   apps/mobile/assets/splash.png           2048×2048  brand green #1B5E20
-  apps/mobile/assets/sounds/azan-default.wav  1 sec silent WAV 44100 Hz
+  apps/mobile/assets/sounds/azan_default.wav  1 sec silent WAV 44100 Hz
 
 Run once to unblock expo prebuild. Replace images with final artwork later.
 """
@@ -140,8 +140,8 @@ def main():
         kb = len(data) / 1024
         print(f"done ({kb:.0f} KB)")
 
-    wav_path = os.path.join(sounds_dir, "azan-default.wav")
-    print(f"  Generating azan-default.wav (1 s silent)... ", end="", flush=True)
+    wav_path = os.path.join(sounds_dir, "azan_default.wav")
+    print(f"  Generating azan_default.wav (1 s silent)... ", end="", flush=True)
     _make_silent_wav(wav_path)
     print("done")
 
