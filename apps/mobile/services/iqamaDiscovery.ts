@@ -224,9 +224,12 @@ export async function refreshSingleMosqueIqama(mosque: Mosque): Promise<{
  * No HTML parser needed — raw text matching is sufficient.
  */
 export async function scrapeWebsiteIqama(url: string): Promise<IqamaTimes> {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 8_000);
   try {
     const res = await fetch(url, {
       headers: { "User-Agent": "LiveAzan/1.0 (mosque schedule lookup)" },
+      signal: controller.signal,
     });
     if (!res.ok) return {};
 
@@ -237,6 +240,8 @@ export async function scrapeWebsiteIqama(url: string): Promise<IqamaTimes> {
     return parseIqamaFromText(text);
   } catch {
     return {};
+  } finally {
+    clearTimeout(timeoutId);
   }
 }
 

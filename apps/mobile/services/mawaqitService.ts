@@ -52,9 +52,12 @@ export async function searchNearby(
   const url =
     `${MAWAQIT_BASE}/mosque/search` +
     `?lat=${lat}&lon=${lon}&radius=${radiusMeters}`;
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 10_000);
   try {
     const res = await fetch(url, {
       headers: { Accept: "application/json" },
+      signal: controller.signal,
     });
     if (!res.ok) {
       console.warn(`[MAWAQIT] Search returned HTTP ${res.status}`);
@@ -66,6 +69,8 @@ export async function searchNearby(
   } catch (err) {
     console.warn("[MAWAQIT] Search failed:", err);
     return [];
+  } finally {
+    clearTimeout(timeoutId);
   }
 }
 
@@ -73,9 +78,12 @@ export async function searchNearby(
  * Fetch full mosque details (including iqamaCalendar) by MAWAQIT UUID.
  */
 export async function getByUuid(uuid: string): Promise<MawaqitMosque | null> {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 10_000);
   try {
     const res = await fetch(`${MAWAQIT_BASE}/mosque/${uuid}`, {
       headers: { Accept: "application/json" },
+      signal: controller.signal,
     });
     if (!res.ok) {
       console.warn(`[MAWAQIT] getByUuid ${uuid} returned HTTP ${res.status}`);
@@ -85,6 +93,8 @@ export async function getByUuid(uuid: string): Promise<MawaqitMosque | null> {
   } catch (err) {
     console.warn("[MAWAQIT] getByUuid failed:", err);
     return null;
+  } finally {
+    clearTimeout(timeoutId);
   }
 }
 
