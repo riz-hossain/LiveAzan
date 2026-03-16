@@ -783,6 +783,35 @@ def _patch_gradle_wrapper(android_dir):
         info(f"Patched gradle-wrapper.properties: {major}.{minor} → 8.7 (ASM 9.6 for Kotlin 1.9.24, stable with expo-modules-core)")
 
 
+def _patch_ndk_version(android_dir):
+    """On Windows, downgrade NDK 26.1.10909125 → 25.1.8937393.
+
+    NDK 26.1 ships with a broken ld.lld.exe on Windows that fails with
+    'Unknown error (0xC1)' when linking any C/C++ code (e.g. expo-av,
+    expo-modules-core).  NDK 25.1 is the stable LTS release that works
+    correctly on all platforms, including Windows.  NDK 26.3 also fixed
+    the Windows linker, but 25.1 is better-tested with RN 0.74 / Expo 51.
+
+    The ndkVersion field lives in the top-level android/build.gradle that
+    expo prebuild generates from react-native's template.  We patch it here
+    rather than requiring users to install a specific NDK themselves."""
+    if not is_windows():
+        return
+    build_gradle = android_dir / "build.gradle"
+    if not build_gradle.exists():
+        return
+    content = build_gradle.read_text(encoding="utf-8")
+    BROKEN_NDK = "26.1.10909125"
+    STABLE_NDK = "25.1.8937393"
+    if BROKEN_NDK not in content:
+        if STABLE_NDK in content:
+            info(f"NDK version: {STABLE_NDK} (already patched, no action needed)")
+        return
+    patched = content.replace(BROKEN_NDK, STABLE_NDK)
+    build_gradle.write_text(patched, encoding="utf-8")
+    info(f"Patched build.gradle: ndkVersion {BROKEN_NDK} → {STABLE_NDK} (fixes ld.lld.exe 0xC1 on Windows)")
+
+
 def _preflight_check_settings_gradle(android_dir):
     """Scan settings.gradle for includeBuild entries and verify each path exists.
     Emits clear diagnostics so the cause of 'Included build does not exist' errors
@@ -811,6 +840,7 @@ def _ensure_expo_prebuild(app_dir, clean=False):
     if (app_dir / "android" / gradlew).exists() and not clean:
         _ensure_cleartext_traffic(app_dir)
         _patch_gradle_wrapper(app_dir / "android")
+        _patch_ndk_version(app_dir / "android")
         _patch_expo_modules_core_gradle(app_dir)
         return
     cmd_args = ["npx", "expo", "prebuild", "--platform", "android"]
@@ -823,6 +853,7 @@ def _ensure_expo_prebuild(app_dir, clean=False):
         cmd_args = ["cmd", "/c"] + cmd_args
     run_visible(cmd_args, cwd=str(app_dir))
     _patch_gradle_wrapper(app_dir / "android")
+    _patch_ndk_version(app_dir / "android")
     _ensure_cleartext_traffic(app_dir)
     _patch_expo_modules_core_gradle(app_dir)
 
