@@ -32,10 +32,18 @@ async function apiClient<T>(
     headers["Authorization"] = `Bearer ${token}`;
   }
 
-  const response = await fetch(`${BASE_URL}${endpoint}`, {
-    ...options,
-    headers,
-  });
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 8_000);
+  let response: Response;
+  try {
+    response = await fetch(`${BASE_URL}${endpoint}`, {
+      ...options,
+      headers,
+      signal: controller.signal,
+    });
+  } finally {
+    clearTimeout(timeoutId);
+  }
 
   if (!response.ok) {
     const errorBody = await response.json().catch(() => null);
