@@ -44,6 +44,7 @@ export async function searchOverpassMosques(
 );
 out center body;`;
 
+  console.log(`[Overpass] querying (${lat.toFixed(4)}, ${lon.toFixed(4)}) r=${radiusKm}km`);
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 15_000);
   try {
@@ -58,9 +59,11 @@ out center body;`;
       return [];
     }
     const data = await res.json();
-    return (data.elements ?? [])
+    const results = (data.elements ?? [])
       .map(parseElement)
       .filter((m): m is OverpassMosque => m !== null);
+    console.log(`[Overpass] returned ${results.length} mosques`);
+    return results;
   } catch (err) {
     console.warn("[Overpass] Search failed:", err);
     return [];

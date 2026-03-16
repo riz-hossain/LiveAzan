@@ -11,6 +11,8 @@ import mosqueIndex from "../assets/data/mosques-index.json";
 import type { DiscoveredMosque } from "./iqamaDiscovery";
 import type { IqamaTimes } from "./mawaqitService";
 
+console.log(`[LocalSearch] mosque index loaded: ${(mosqueIndex as any[]).length} entries`);
+
 interface LocalMosqueRecord {
   id: string;
   name: string;
@@ -37,7 +39,7 @@ export function searchLocalMosques(
   lon: number,
   radiusKm: number
 ): DiscoveredMosque[] {
-  return (mosqueIndex as LocalMosqueRecord[])
+  const results = (mosqueIndex as LocalMosqueRecord[])
     .filter((m) => haversineKm(lat, lon, m.latitude, m.longitude) <= radiusKm)
     .map((m) => ({
       id: m.id,
@@ -64,6 +66,8 @@ export function searchLocalMosques(
         haversineKm(lat, lon, a.latitude, a.longitude) -
         haversineKm(lat, lon, b.latitude, b.longitude)
     );
+  console.log(`[LocalSearch] searched (${lat.toFixed(4)}, ${lon.toFixed(4)}) r=${radiusKm}km → ${results.length} results`);
+  return results;
 }
 
 function haversineKm(

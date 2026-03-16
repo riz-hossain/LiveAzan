@@ -11,6 +11,7 @@ import { useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { MosqueCard } from "../../components/MosqueCard";
 import { MosqueMap } from "../../components/MosqueMap";
+import { DebugPanel } from "../../components/DebugPanel";
 import { useMosqueStore } from "../../stores/mosqueStore";
 import { getCurrentLocation } from "../../services/location";
 import type { Mosque } from "@live-azan/shared";
@@ -52,6 +53,7 @@ export default function MosquesScreen() {
 
   return (
     <View style={styles.container}>
+      <DebugPanel lat={userLocation?.latitude ?? null} lon={userLocation?.longitude ?? null} />
       <View style={styles.toggleBar}>
         <TouchableOpacity
           style={[styles.toggleButton, viewMode === "list" && styles.toggleActive]}

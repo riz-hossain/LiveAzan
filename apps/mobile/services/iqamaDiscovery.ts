@@ -86,13 +86,22 @@ export async function discoverNearbyIqama(
   const overpass =
     overpassResponse.status === "fulfilled" ? overpassResponse.value : [];
 
+  console.log(
+    `[Discovery] sources — backend: ${backendMosques.length}, local: ${localMosques.length}, mawaqit: ${mawaqit.length}, overpass: ${overpass.length}`
+  );
+
   // Source priority: backend (authoritative) → local bundle → Overpass (OSM)
+  const sourceLabel =
+    backendMosques.length > 0 ? "backend" :
+    localMosques.length > 0 ? "local" : "overpass";
   const sourceMosques: DiscoveredMosque[] =
     backendMosques.length > 0
       ? backendMosques.map((m) => ({ ...m } as DiscoveredMosque))
       : localMosques.length > 0
       ? localMosques
       : overpass.map(mapOverpassToDiscovered);
+
+  console.log(`[Discovery] using source: ${sourceLabel} (${sourceMosques.length} mosques)`);
 
   // Start with source mosques — backend (authoritative) or local bundle (offline fallback)
   const discovered: DiscoveredMosque[] = [];
@@ -175,6 +184,9 @@ export async function discoverNearbyIqama(
     haversineKm(lat, lon, a.latitude, a.longitude) -
     haversineKm(lat, lon, b.latitude, b.longitude)
   );
+
+  const withIqama = discovered.filter(d => d.discoveredIqama && Object.keys(d.discoveredIqama).length > 0);
+  console.log(`[Discovery] final: ${discovered.length} mosques, ${withIqama.length} with iqama times`);
 
   // Cache the merged results
   await setCached(nearbyMosquesKey(lat, lon), discovered);
