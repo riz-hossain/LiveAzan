@@ -116,7 +116,7 @@ export default function MosqueDetailScreen() {
     }
   };
 
-  if (isLoading || !mosque) {
+  if (!mosque) {
     return (
       <View style={styles.loadingContainer}>
         <Stack.Screen options={{ title: "Mosque" }} />
@@ -183,9 +183,9 @@ export default function MosqueDetailScreen() {
           <TouchableOpacity
             style={styles.refreshButton}
             onPress={handleRefreshIqama}
-            disabled={isRefreshing}
+            disabled={isRefreshing || isLoading}
           >
-            {isRefreshing ? (
+            {isRefreshing || isLoading ? (
               <ActivityIndicator size="small" color="#1B5E20" />
             ) : (
               <Ionicons name="refresh-outline" size={18} color="#1B5E20" />

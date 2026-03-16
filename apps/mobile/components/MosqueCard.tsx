@@ -8,6 +8,15 @@ interface MosqueCardProps {
   onPress: () => void;
 }
 
+function getSourceInfo(mosque: Mosque): { label: string; color: string } | null {
+  if (mosque.id?.startsWith("osm_")) return { label: "OpenStreetMap", color: "#78716c" };
+  if (mosque.iqamaSource === "mawaqit") return { label: "MAWAQIT", color: "#1565C0" };
+  if (mosque.iqamaSource === "website") return { label: "Website", color: "#6A1B9A" };
+  if (mosque.verified) return { label: "LiveAzan", color: "#1B5E20" };
+  if (mosque.iqamaSource === "manual") return { label: "Local Bundle", color: "#E65100" };
+  return null;
+}
+
 export function MosqueCard({ mosque, onPress }: MosqueCardProps) {
   const distanceText =
     mosque.distanceKm !== undefined
@@ -15,6 +24,8 @@ export function MosqueCard({ mosque, onPress }: MosqueCardProps) {
         ? `${Math.round(mosque.distanceKm * 1000)}m`
         : `${mosque.distanceKm.toFixed(1)}km`
       : null;
+
+  const sourceInfo = getSourceInfo(mosque);
 
   return (
     <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={0.7}>
@@ -40,12 +51,19 @@ export function MosqueCard({ mosque, onPress }: MosqueCardProps) {
           {mosque.address}
         </Text>
 
-        {distanceText && (
-          <View style={styles.distanceRow}>
-            <Ionicons name="location-outline" size={14} color="#999" />
-            <Text style={styles.distance}>{distanceText} away</Text>
-          </View>
-        )}
+        <View style={styles.metaRow}>
+          {distanceText && (
+            <View style={styles.distanceRow}>
+              <Ionicons name="location-outline" size={14} color="#999" />
+              <Text style={styles.distance}>{distanceText} away</Text>
+            </View>
+          )}
+          {sourceInfo && (
+            <Text style={[styles.sourceLabel, { color: sourceInfo.color }]}>
+              {sourceInfo.label}
+            </Text>
+          )}
+        </View>
       </View>
 
       <Ionicons name="chevron-forward" size={20} color="#ccc" />
@@ -112,6 +130,11 @@ const styles = StyleSheet.create({
     color: "#666",
     marginBottom: 4,
   },
+  metaRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+  },
   distanceRow: {
     flexDirection: "row",
     alignItems: "center",
@@ -120,5 +143,9 @@ const styles = StyleSheet.create({
   distance: {
     fontSize: 13,
     color: "#999",
+  },
+  sourceLabel: {
+    fontSize: 11,
+    fontWeight: "600",
   },
 });

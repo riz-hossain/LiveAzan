@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import {
   View,
   Text,
@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
+import { Audio } from "expo-av";
 import { useAuthStore } from "../../stores/authStore";
 import { useSettingsStore } from "../../stores/settingsStore";
 import { useMosqueStore } from "../../stores/mosqueStore";
@@ -31,6 +32,9 @@ const AZAN_SOUNDS: { label: string; value: string }[] = [
   { label: "Silent", value: "silent" },
 ];
 
+// Only one sound file is bundled currently; all non-silent previews use it
+const AZAN_SOUND_FILE = require("../../assets/sounds/azan_default.wav");
+
 export default function SettingsScreen() {
   const { user, isGuest, logout } = useAuthStore();
   const router = useRouter();
@@ -40,12 +44,66 @@ export default function SettingsScreen() {
 
   const [showCalcPicker, setShowCalcPicker] = useState(false);
   const [showAzanPicker, setShowAzanPicker] = useState(false);
+  const [playingSound, setPlayingSound] = useState<string | null>(null);
+  const soundRef = useRef<Audio.Sound | null>(null);
 
   useEffect(() => {
     if (user) {
       fetchPreferences();
     }
   }, [user]);
+
+  // Cleanup sound on unmount
+  useEffect(() => {
+    return () => {
+      if (soundRef.current) {
+        soundRef.current.unloadAsync();
+        soundRef.current = null;
+      }
+    };
+  }, []);
+
+  const stopSound = async () => {
+    if (soundRef.current) {
+      await soundRef.current.stopAsync();
+      await soundRef.current.unloadAsync();
+      soundRef.current = null;
+    }
+    setPlayingSound(null);
+  };
+
+  const playAzan = async (soundValue: string) => {
+    // If this sound is already playing, stop it
+    if (playingSound === soundValue) {
+      await stopSound();
+      return;
+    }
+
+    // Stop any currently playing sound
+    await stopSound();
+
+    // Silent option — nothing to play
+    if (soundValue === "silent") return;
+
+    try {
+      await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
+      const { sound } = await Audio.Sound.createAsync(AZAN_SOUND_FILE, {
+        shouldPlay: true,
+      });
+      soundRef.current = sound;
+      setPlayingSound(soundValue);
+
+      sound.setOnPlaybackStatusUpdate((status) => {
+        if (status.isLoaded && status.didJustFinish) {
+          sound.unloadAsync();
+          soundRef.current = null;
+          setPlayingSound(null);
+        }
+      });
+    } catch {
+      setPlayingSound(null);
+    }
+  };
 
   const handleLogout = () => {
     Alert.alert("Sign Out", "Are you sure you want to sign out?", [
@@ -194,6 +252,7 @@ export default function SettingsScreen() {
                 onPress={() => {
                   updateAzanSound(sound.value);
                   setShowAzanPicker(false);
+                  stopSound();
                 }}
               >
                 <Text
@@ -204,9 +263,27 @@ export default function SettingsScreen() {
                 >
                   {sound.label}
                 </Text>
-                {azanSound === sound.value && (
-                  <Ionicons name="checkmark" size={20} color="#1B5E20" />
-                )}
+                <View style={styles.pickerItemRight}>
+                  {azanSound === sound.value && (
+                    <Ionicons name="checkmark" size={20} color="#1B5E20" />
+                  )}
+                  {sound.value !== "silent" && (
+                    <TouchableOpacity
+                      style={styles.playButton}
+                      onPress={(e) => {
+                        e.stopPropagation();
+                        playAzan(sound.value);
+                      }}
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+                    >
+                      <Ionicons
+                        name={playingSound === sound.value ? "stop" : "play"}
+                        size={18}
+                        color="#1B5E20"
+                      />
+                    </TouchableOpacity>
+                  )}
+                </View>
               </TouchableOpacity>
             ))}
           </View>
@@ -331,12 +408,21 @@ const styles = StyleSheet.create({
     backgroundColor: "#E8F5E9",
   },
   pickerItemText: {
+    flex: 1,
     fontSize: 15,
     color: "#333",
   },
   pickerItemTextActive: {
     color: "#1B5E20",
     fontWeight: "600",
+  },
+  pickerItemRight: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+  },
+  playButton: {
+    padding: 4,
   },
   signOutButton: {
     flexDirection: "row",

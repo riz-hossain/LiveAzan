@@ -70,7 +70,7 @@ export async function discoverNearbyIqama(
   const [backendResponse, mawaqitMosques, overpassResponse] =
     await Promise.allSettled([
       fetchMosquesNearby(lat, lon, 25),
-      searchNearby(lat, lon, 5000),
+      searchNearby(lat, lon, 15000),
       // Only query Overpass if local bundle is empty for this area
       localMosques.length === 0
         ? searchOverpassMosques(lat, lon, 25)
