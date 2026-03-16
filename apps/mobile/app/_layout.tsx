@@ -6,7 +6,7 @@ import { StatusBar } from "expo-status-bar";
 import { useAuthStore } from "../stores/authStore";
 
 export default function RootLayout() {
-  const { user, isLoading, loadStoredAuth } = useAuthStore();
+  const { user, isGuest, isLoading, loadStoredAuth } = useAuthStore();
   const segments = useSegments();
   const router = useRouter();
 
@@ -19,12 +19,12 @@ export default function RootLayout() {
 
     const inAuthGroup = segments[0] === "(auth)";
 
-    if (!user && !inAuthGroup) {
+    if (!user && !isGuest && !inAuthGroup) {
       router.replace("/(auth)/login");
-    } else if (user && inAuthGroup) {
+    } else if ((user || isGuest) && inAuthGroup) {
       router.replace("/(tabs)");
     }
-  }, [user, isLoading, segments]);
+  }, [user, isGuest, isLoading, segments]);
 
   if (isLoading) {
     return (
