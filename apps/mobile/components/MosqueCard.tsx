@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import type { Mosque } from "../packages/shared/src/types";
+import type { Mosque } from "@live-azan/shared";
 
 interface MosqueCardProps {
   mosque: Mosque;

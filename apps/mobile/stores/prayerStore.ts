@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { PrayerTimes, NextPrayer, Prayer } from "../packages/shared/src/types";
+import type { PrayerTimes, NextPrayer, Prayer } from "@live-azan/shared";
 import { getPrayerTimes, getNextPrayer } from "../services/prayerTimes";
 
 interface PrayerState {

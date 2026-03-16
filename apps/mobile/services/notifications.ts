@@ -4,7 +4,7 @@ import type {
   IqamaSchedule,
   UserPrayerPreference,
   NotificationType,
-} from "../packages/shared/src/types";
+} from "@live-azan/shared";
 
 // ─── Configuration ───────────────────────────────────────────────────────────
 

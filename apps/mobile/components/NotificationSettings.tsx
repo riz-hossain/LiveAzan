@@ -11,7 +11,7 @@ import type {
   Prayer,
   UserPrayerPreference,
   NotificationType,
-} from "../packages/shared/src/types";
+} from "@live-azan/shared";
 
 interface NotificationSettingsProps {
   prayerPrefs: UserPrayerPreference[];

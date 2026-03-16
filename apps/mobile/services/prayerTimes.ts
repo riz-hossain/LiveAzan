@@ -1,4 +1,4 @@
-import type { PrayerTimes, NextPrayer, Prayer } from "../packages/shared/src/types";
+import type { PrayerTimes, NextPrayer, Prayer } from "@live-azan/shared";
 import { fetchPrayerTimesApi } from "./api";
 
 // ─── In-Memory Cache ─────────────────────────────────────────────────────────

@@ -12,7 +12,7 @@ import { useAuthStore } from "../../stores/authStore";
 import { useSettingsStore } from "../../stores/settingsStore";
 import { useMosqueStore } from "../../stores/mosqueStore";
 import { NotificationSettings } from "../../components/NotificationSettings";
-import type { Prayer, UserPrayerPreference } from "../../packages/shared/src/types";
+import type { Prayer, UserPrayerPreference } from "@live-azan/shared";
 
 const CALC_METHODS: { label: string; value: number }[] = [
   { label: "ISNA (North America)", value: 2 },

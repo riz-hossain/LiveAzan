@@ -9,7 +9,7 @@ import type {
   CoverageRequest,
   Prayer,
   User,
-} from "../packages/shared/src/types";
+} from "@live-azan/shared";
 
 const BASE_URL =
   process.env.EXPO_PUBLIC_API_URL || "http://localhost:3001/api";

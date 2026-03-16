@@ -11,8 +11,8 @@
  * No backend proxy is needed — native apps can call any API directly.
  */
 
-import type { Mosque, IqamaSchedule } from "../packages/shared/src/types";
-import { Prayer } from "../packages/shared/src/types";
+import type { Mosque, IqamaSchedule } from "@live-azan/shared";
+import { Prayer } from "@live-azan/shared";
 import { fetchMosquesNearby } from "./api";
 import {
   searchNearby,
