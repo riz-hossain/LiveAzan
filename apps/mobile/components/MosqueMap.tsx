@@ -21,6 +21,16 @@ export function MosqueMap({
     longitudeDelta: 0.1,
   };
 
+  const validMosques = mosques.filter(
+    (m) =>
+      m.latitude != null &&
+      m.longitude != null &&
+      isFinite(m.latitude) &&
+      isFinite(m.longitude) &&
+      m.latitude !== 0 &&
+      m.longitude !== 0
+  );
+
   return (
     <View style={styles.container}>
       <MapView
@@ -30,7 +40,7 @@ export function MosqueMap({
         showsUserLocation
         showsMyLocationButton
       >
-        {mosques.map((mosque) => (
+        {validMosques.map((mosque) => (
           <Marker
             key={mosque.id}
             coordinate={{
@@ -39,6 +49,7 @@ export function MosqueMap({
             }}
             title={mosque.name}
             description={mosque.address}
+            onPress={() => onMosquePress(mosque)}
             onCalloutPress={() => onMosquePress(mosque)}
             pinColor="#1B5E20"
           />

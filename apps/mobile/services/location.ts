@@ -1,6 +1,35 @@
 import * as Location from "expo-location";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const TRAVEL_THRESHOLD_KM = 2;
+
+const SAVED_LOCATION_KEY = "saved_gps_location";
+
+// ─── Saved Location (instant on next app open) ────────────────────────────────
+
+export async function getSavedLocation(): Promise<{
+  latitude: number;
+  longitude: number;
+} | null> {
+  try {
+    const raw = await AsyncStorage.getItem(SAVED_LOCATION_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+export async function saveLocation(coords: {
+  latitude: number;
+  longitude: number;
+}): Promise<void> {
+  try {
+    await AsyncStorage.setItem(SAVED_LOCATION_KEY, JSON.stringify(coords));
+  } catch {
+    // ignore storage failures
+  }
+}
 
 // ─── Permissions ─────────────────────────────────────────────────────────────
 
@@ -29,14 +58,34 @@ export async function getCurrentLocation(): Promise<{
     throw new Error("Location permission not granted.");
   }
 
+  // Try OS-cached last known position first — near-instant
+  try {
+    const lastKnown = await Location.getLastKnownPositionAsync({
+      maxAge: 5 * 60 * 1000, // accept positions up to 5 minutes old
+    });
+    if (lastKnown) {
+      const coords = {
+        latitude: lastKnown.coords.latitude,
+        longitude: lastKnown.coords.longitude,
+      };
+      saveLocation(coords); // fire-and-forget
+      return coords;
+    }
+  } catch {
+    // fall through to fresh position
+  }
+
+  // No cached position — get a fresh fix (use Low accuracy for speed)
   const location = await Location.getCurrentPositionAsync({
-    accuracy: Location.Accuracy.Balanced,
+    accuracy: Location.Accuracy.Low,
   });
 
-  return {
+  const coords = {
     latitude: location.coords.latitude,
     longitude: location.coords.longitude,
   };
+  saveLocation(coords); // fire-and-forget
+  return coords;
 }
 
 // ─── Background Tracking ─────────────────────────────────────────────────────
@@ -77,10 +126,12 @@ export async function startBackgroundTracking(
         const distance = haversineDistance(lastKnownLocation, newCoords);
         if (distance >= TRAVEL_THRESHOLD_KM) {
           lastKnownLocation = newCoords;
+          saveLocation(newCoords);
           onLocationChange(newCoords);
         }
       } else {
         lastKnownLocation = newCoords;
+        saveLocation(newCoords);
         onLocationChange(newCoords);
       }
     }

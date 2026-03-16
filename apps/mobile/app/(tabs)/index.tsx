@@ -14,9 +14,10 @@ import { Ionicons } from "@expo/vector-icons";
 import { Prayer } from "@live-azan/shared";
 import { PrayerTimeCard } from "../../components/PrayerTimeCard";
 import { IqamaCountdown } from "../../components/IqamaCountdown";
+import { MosqueCard } from "../../components/MosqueCard";
 import { usePrayerStore } from "../../stores/prayerStore";
 import { useMosqueStore } from "../../stores/mosqueStore";
-import { getCurrentLocation } from "../../services/location";
+import { getCurrentLocation, getSavedLocation } from "../../services/location";
 
 const PRAYER_ORDER: Prayer[] = [
   Prayer.FAJR,
@@ -49,25 +50,41 @@ export default function HomeScreen() {
   const {
     primaryMosque,
     iqamaSchedule,
+    nearbyMosques,
     fetchIqamaSchedule,
-    discoverIqamaNearby,
+    fetchNearbyMosques,
     isDiscovering,
   } = useMosqueStore();
 
-  const [discoverDone, setDiscoverDone] = useState(false);
-  const [mosqueCount, setMosqueCount] = useState(0);
-  const [iqamaCount, setIqamaCount] = useState(0);
-
   const loadData = useCallback(async () => {
+    // Try saved location first for instant render
+    const saved = await getSavedLocation();
+    if (saved) {
+      fetchPrayerTimes(saved.latitude, saved.longitude);
+      fetchNearbyMosques(saved.latitude, saved.longitude);
+      if (primaryMosque) {
+        fetchIqamaSchedule(primaryMosque.id);
+      }
+      updateNextPrayer();
+    }
+
+    // Get live GPS (may be instant via getLastKnownPositionAsync)
     try {
       const location = await getCurrentLocation();
-      await fetchPrayerTimes(location.latitude, location.longitude);
+      const needsRefresh = !saved ||
+        Math.abs(location.latitude - saved.latitude) > 0.005 ||
+        Math.abs(location.longitude - saved.longitude) > 0.005;
+
+      if (needsRefresh) {
+        await fetchPrayerTimes(location.latitude, location.longitude);
+        fetchNearbyMosques(location.latitude, location.longitude);
+      }
       if (primaryMosque) {
         await fetchIqamaSchedule(primaryMosque.id);
       }
       updateNextPrayer();
     } catch {
-      // Location or API error
+      // Location or API error — saved location data already shown
     }
   }, [primaryMosque]);
 
@@ -82,26 +99,6 @@ export default function HomeScreen() {
     await loadData();
     setRefreshing(false);
   }, [loadData]);
-
-  const handleFindIqama = async () => {
-    try {
-      const location = await getCurrentLocation();
-      const discovered = await discoverIqamaNearby(
-        location.latitude,
-        location.longitude
-      );
-      const withIqama = discovered.filter(
-        (m) => m.discoveredIqama && Object.keys(m.discoveredIqama).length > 0
-      );
-      setMosqueCount(discovered.length);
-      setIqamaCount(withIqama.length);
-      setDiscoverDone(true);
-      // Navigate to mosques tab to show results
-      router.push("/(tabs)/mosques");
-    } catch {
-      // ignore
-    }
-  };
 
   const getPrayerTime = (prayer: Prayer): string | undefined => {
     if (!prayerTimes) return undefined;
@@ -121,6 +118,9 @@ export default function HomeScreen() {
     month: "long",
     day: "numeric",
   });
+
+  // Top 3 nearby mosques for quick access
+  const nearbyPreview = nearbyMosques.slice(0, 3);
 
   return (
     <ScrollView
@@ -149,40 +149,6 @@ export default function HomeScreen() {
         />
       )}
 
-      {/* Find Iqama Near Me — shown when no primary mosque or as a discovery CTA */}
-      {!primaryMosque && (
-        <View style={styles.discoverCard}>
-          <Ionicons name="location" size={28} color="#1B5E20" />
-          <Text style={styles.discoverTitle}>Find Iqama Times Near You</Text>
-          <Text style={styles.discoverBody}>
-            LiveAzan searches MAWAQIT and mosque websites to find iqama
-            schedules for mosques near you — automatically, no sign-up needed.
-          </Text>
-          <TouchableOpacity
-            style={styles.discoverButton}
-            onPress={handleFindIqama}
-            disabled={isDiscovering}
-          >
-            {isDiscovering ? (
-              <View style={styles.discoverButtonInner}>
-                <ActivityIndicator size="small" color="#fff" />
-                <Text style={styles.discoverButtonText}>Searching…</Text>
-              </View>
-            ) : (
-              <View style={styles.discoverButtonInner}>
-                <Ionicons name="search" size={18} color="#fff" />
-                <Text style={styles.discoverButtonText}>Find Nearby Mosques</Text>
-              </View>
-            )}
-          </TouchableOpacity>
-          {discoverDone && (
-            <Text style={styles.discoverResult}>
-              Found {mosqueCount} mosques · {iqamaCount} with iqama times
-            </Text>
-          )}
-        </View>
-      )}
-
       <View style={styles.prayerList}>
         {PRAYER_ORDER.map((prayer) => (
           <PrayerTimeCard
@@ -202,6 +168,41 @@ export default function HomeScreen() {
           </Text>
         </View>
       )}
+
+      {/* Nearby Mosques section */}
+      <View style={styles.nearbySection}>
+        <View style={styles.nearbySectionHeader}>
+          <Text style={styles.nearbySectionTitle}>Nearby Mosques</Text>
+          <TouchableOpacity onPress={() => router.push("/(tabs)/mosques")}>
+            <Text style={styles.seeAllText}>See all</Text>
+          </TouchableOpacity>
+        </View>
+
+        {nearbyPreview.length > 0 ? (
+          <View style={styles.nearbyList}>
+            {nearbyPreview.map((mosque) => (
+              <MosqueCard
+                key={mosque.id}
+                mosque={mosque}
+                onPress={() => router.push(`/mosque/${mosque.id}`)}
+              />
+            ))}
+          </View>
+        ) : isDiscovering ? (
+          <View style={styles.nearbyLoading}>
+            <ActivityIndicator size="small" color="#1B5E20" />
+            <Text style={styles.nearbyLoadingText}>Finding mosques near you…</Text>
+          </View>
+        ) : (
+          <TouchableOpacity
+            style={styles.findButton}
+            onPress={() => router.push("/(tabs)/mosques")}
+          >
+            <Ionicons name="search" size={18} color="#fff" />
+            <Text style={styles.findButtonText}>Find Nearby Mosques</Text>
+          </TouchableOpacity>
+        )}
+      </View>
     </ScrollView>
   );
 }
@@ -226,54 +227,6 @@ const styles = StyleSheet.create({
     marginTop: 2,
     fontWeight: "500",
   },
-  discoverCard: {
-    marginHorizontal: 16,
-    marginBottom: 16,
-    backgroundColor: "#fff",
-    borderRadius: 16,
-    padding: 20,
-    alignItems: "center",
-    gap: 10,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.06,
-    shadowRadius: 8,
-    elevation: 3,
-  },
-  discoverTitle: {
-    fontSize: 17,
-    fontWeight: "700",
-    color: "#222",
-    textAlign: "center",
-  },
-  discoverBody: {
-    fontSize: 14,
-    color: "#666",
-    textAlign: "center",
-    lineHeight: 20,
-  },
-  discoverButton: {
-    backgroundColor: "#1B5E20",
-    paddingHorizontal: 24,
-    paddingVertical: 12,
-    borderRadius: 12,
-    marginTop: 4,
-  },
-  discoverButtonInner: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-  },
-  discoverButtonText: {
-    color: "#fff",
-    fontSize: 15,
-    fontWeight: "600",
-  },
-  discoverResult: {
-    fontSize: 13,
-    color: "#1B5E20",
-    fontWeight: "500",
-  },
   prayerList: {
     paddingHorizontal: 16,
     gap: 8,
@@ -286,5 +239,55 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#999",
     textAlign: "center",
+  },
+  nearbySection: {
+    marginTop: 24,
+    paddingHorizontal: 16,
+  },
+  nearbySectionHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 10,
+  },
+  nearbySectionTitle: {
+    fontSize: 14,
+    fontWeight: "600",
+    color: "#666",
+    textTransform: "uppercase",
+    letterSpacing: 0.5,
+  },
+  seeAllText: {
+    fontSize: 14,
+    color: "#1B5E20",
+    fontWeight: "500",
+  },
+  nearbyList: {
+    gap: 8,
+  },
+  nearbyLoading: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+    paddingVertical: 16,
+  },
+  nearbyLoadingText: {
+    fontSize: 14,
+    color: "#999",
+  },
+  findButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#1B5E20",
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 12,
+    gap: 8,
+  },
+  findButtonText: {
+    color: "#fff",
+    fontSize: 15,
+    fontWeight: "600",
   },
 });

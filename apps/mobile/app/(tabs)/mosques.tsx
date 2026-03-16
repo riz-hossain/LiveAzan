@@ -13,10 +13,23 @@ import { MosqueCard } from "../../components/MosqueCard";
 import { MosqueMap } from "../../components/MosqueMap";
 import { DebugPanel } from "../../components/DebugPanel";
 import { useMosqueStore } from "../../stores/mosqueStore";
-import { getCurrentLocation } from "../../services/location";
+import { getCurrentLocation, getSavedLocation } from "../../services/location";
 import type { Mosque } from "@live-azan/shared";
 
 type ViewMode = "list" | "map";
+
+function deduplicateMosques(mosques: Mosque[]): Mosque[] {
+  const seenIds = new Set<string>();
+  const seenKeys = new Set<string>();
+  return mosques.filter((m) => {
+    if (seenIds.has(m.id)) return false;
+    seenIds.add(m.id);
+    const key = `${m.name.toLowerCase().trim()}_${(m.city || "").toLowerCase()}`;
+    if (seenKeys.has(key)) return false;
+    seenKeys.add(key);
+    return true;
+  });
+}
 
 export default function MosquesScreen() {
   const router = useRouter();
@@ -25,12 +38,23 @@ export default function MosquesScreen() {
   const { nearbyMosques, uncoveredArea, isLoading, fetchNearbyMosques, requestCoverage } = useMosqueStore();
 
   const loadMosques = useCallback(async () => {
+    // Use saved location immediately for instant render
+    const saved = await getSavedLocation();
+    if (saved) {
+      setUserLocation(saved);
+      fetchNearbyMosques(saved.latitude, saved.longitude);
+    }
+
+    // Get live GPS in parallel (may be instant via getLastKnownPositionAsync)
     try {
-      const location = await getCurrentLocation();
-      setUserLocation(location);
-      await fetchNearbyMosques(location.latitude, location.longitude);
+      const live = await getCurrentLocation();
+      setUserLocation(live);
+      // Only re-fetch if location changed meaningfully (>0.5km)
+      if (!saved || Math.abs(live.latitude - saved.latitude) > 0.005 || Math.abs(live.longitude - saved.longitude) > 0.005) {
+        fetchNearbyMosques(live.latitude, live.longitude);
+      }
     } catch {
-      // Location unavailable
+      // Location unavailable — saved location already shown
     }
   }, []);
 
@@ -50,6 +74,8 @@ export default function MosquesScreen() {
       // Error handled in store
     }
   };
+
+  const displayMosques = deduplicateMosques(nearbyMosques);
 
   return (
     <View style={styles.container}>
@@ -83,25 +109,29 @@ export default function MosquesScreen() {
         </TouchableOpacity>
       </View>
 
-      {isLoading && (
-        <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#1B5E20" />
-        </View>
-      )}
-
-      {!isLoading && viewMode === "list" && (
+      {viewMode === "list" && (
         <FlatList
-          data={nearbyMosques}
+          data={displayMosques}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <MosqueCard mosque={item} onPress={() => handleMosquePress(item)} />
           )}
           contentContainerStyle={styles.listContent}
+          ListHeaderComponent={
+            isLoading ? (
+              <View style={styles.loadingBar}>
+                <ActivityIndicator size="small" color="#1B5E20" />
+                <Text style={styles.loadingText}>Updating…</Text>
+              </View>
+            ) : null
+          }
           ListEmptyComponent={
-            <View style={styles.emptyState}>
-              <Ionicons name="business-outline" size={48} color="#ccc" />
-              <Text style={styles.emptyText}>No mosques found nearby</Text>
-            </View>
+            isLoading ? null : (
+              <View style={styles.emptyState}>
+                <Ionicons name="business-outline" size={48} color="#ccc" />
+                <Text style={styles.emptyText}>No mosques found nearby</Text>
+              </View>
+            )
           }
           ListFooterComponent={
             uncoveredArea ? (
@@ -114,12 +144,19 @@ export default function MosquesScreen() {
         />
       )}
 
-      {!isLoading && viewMode === "map" && userLocation && (
+      {viewMode === "map" && userLocation && (
         <MosqueMap
-          mosques={nearbyMosques}
+          mosques={displayMosques}
           userLocation={userLocation}
           onMosquePress={handleMosquePress}
         />
+      )}
+
+      {viewMode === "map" && !userLocation && (
+        <View style={styles.loadingContainer}>
+          <ActivityIndicator size="large" color="#1B5E20" />
+          <Text style={styles.loadingText}>Getting location…</Text>
+        </View>
       )}
     </View>
   );
@@ -160,10 +197,22 @@ const styles = StyleSheet.create({
   toggleTextActive: {
     color: "#fff",
   },
+  loadingBar: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 8,
+    gap: 8,
+  },
   loadingContainer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    gap: 12,
+  },
+  loadingText: {
+    fontSize: 13,
+    color: "#999",
   },
   listContent: {
     padding: 16,

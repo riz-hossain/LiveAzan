@@ -67,6 +67,14 @@ export const useMosqueStore = create<MosqueState>((set, get) => ({
   fetchNearbyMosques: async (lat: number, lon: number) => {
     const key = nearbyMosquesKey(lat, lon);
 
+    // Show local bundle immediately for instant render (no network needed)
+    if (get().nearbyMosques.length === 0) {
+      const local = searchLocalMosques(lat, lon, 25);
+      if (local.length > 0) {
+        set({ nearbyMosques: local });
+      }
+    }
+
     // Serve cache immediately for instant render
     const cached = await getCached<Mosque[]>(key, NEARBY_MOSQUE_TTL);
     if (cached) {
@@ -184,6 +192,12 @@ export const useMosqueStore = create<MosqueState>((set, get) => ({
     const cacheK = iqamaKey(mosqueId);
     const detailK = mosqueDetailKey(mosqueId);
 
+    // Immediately populate activeMosque from already-loaded list so detail screen renders instantly
+    const fromList = get().nearbyMosques.find((m) => m.id === mosqueId);
+    if (fromList && !get().activeMosque) {
+      set({ activeMosque: fromList });
+    }
+
     // Serve from cache immediately
     const [cachedIqama, cachedMosque] = await Promise.all([
       getCached<CachedIqama>(cacheK, IQAMA_TTL),
@@ -227,7 +241,11 @@ export const useMosqueStore = create<MosqueState>((set, get) => ({
         isLoading: false,
       });
     } catch {
-      // Keep cached data visible if API fails
+      // Keep cached data visible if API fails; fall back to list data if no activeMosque
+      const stillNoMosque = !get().activeMosque;
+      if (stillNoMosque && fromList) {
+        set({ activeMosque: fromList });
+      }
       set({ isLoading: false });
     }
   },
