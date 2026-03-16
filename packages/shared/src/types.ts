@@ -89,6 +89,13 @@ export interface Mosque {
   mawaqitId?: string;
   iqamaSource?: "mawaqit" | "website" | "manual";
   iqamaLastFetched?: string; // ISO date string
+  // Rich metadata (populated from local bundle or website scraping)
+  description?: string;
+  denomination?: string;
+  hours?: string;
+  accessInfo?: string;
+  services?: string[];   // e.g. ["funeral_services", "nikah", "quran_classes"]
+  facilities?: string[]; // e.g. ["wudu_area", "parking", "women_section"]
 }
 
 export interface IqamaSchedule {

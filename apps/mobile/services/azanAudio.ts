@@ -2,27 +2,26 @@ import { Audio } from "expo-av";
 
 // ─── Available Sounds ────────────────────────────────────────────────────────
 
+// Only sounds with actual bundled asset files are listed here.
+// When new WAV files are added to apps/mobile/assets/sounds/, add
+// entries below AND a corresponding require() in soundAssets.
 export const AZAN_SOUNDS = [
-  { id: "azan-default", label: "Default", file: "azan_default.wav" },
-  { id: "azan-makkah", label: "Makkah", file: "azan-makkah.wav" },
-  { id: "azan-madinah", label: "Madinah", file: "azan-madinah.wav" },
-  { id: "azan-alaqsa", label: "Al-Aqsa", file: "azan-alaqsa.wav" },
+  { id: "azan-default", label: "Default" },
+  // { id: "azan-makkah",  label: "Makkah"  },  // file not yet bundled
+  // { id: "azan-madinah", label: "Madinah" },  // file not yet bundled
+  // { id: "azan-alaqsa",  label: "Al-Aqsa" },  // file not yet bundled
 ] as const;
 
 export type AzanSoundId = (typeof AZAN_SOUNDS)[number]["id"];
 
 // ─── Sound Map ───────────────────────────────────────────────────────────────
 
-// In a production app, these would be require() calls to bundled assets.
-// For now, we use a placeholder approach that loads from a URI or bundled asset.
-const soundAssets: Record<string, number | { uri: string }> = {
-  // These would normally be:
-  // "azan-default": require("../assets/sounds/azan_default.wav"),
-  // For the scaffold, we use placeholder URIs
-  "azan-default": { uri: "asset:///sounds/azan_default.wav" },
-  "azan-makkah": { uri: "asset:///sounds/azan-makkah.wav" },
-  "azan-madinah": { uri: "asset:///sounds/azan-madinah.wav" },
-  "azan-alaqsa": { uri: "asset:///sounds/azan-alaqsa.wav" },
+// Use require() so Metro bundler validates the file exists at build time
+// and includes it in the app bundle. Missing files cause compile errors.
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const soundAssets: Record<string, any> = {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  "azan-default": require("../assets/sounds/azan_default.wav"),
 };
 
 // ─── Player State ────────────────────────────────────────────────────────────
@@ -53,7 +52,7 @@ export async function playAzan(soundId?: string): Promise<void> {
   const source = soundAssets[id] || soundAssets["azan-default"];
 
   try {
-    const { sound } = await Audio.Sound.createAsync(source as any, {
+    const { sound } = await Audio.Sound.createAsync(source, {
       shouldPlay: true,
       volume: 1.0,
     });

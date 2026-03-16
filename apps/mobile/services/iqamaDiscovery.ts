@@ -137,10 +137,17 @@ export async function discoverNearbyIqama(
 
     // Still nothing — try website scrape
     if (!discoveredIqama && bm.website) {
-      const iqama = await scrapeWebsiteIqama(bm.website);
-      if (Object.keys(iqama).length > 0) {
-        discoveredIqama = iqama;
+      const scraped = await scrapeWebsiteIqama(bm.website);
+      if (Object.keys(scraped.iqamaTimes).length > 0) {
+        discoveredIqama = scraped.iqamaTimes;
         source = "website";
+      }
+      // Merge scraped metadata onto the mosque record if not already set
+      if (scraped.services && !(bm as any).services?.length) {
+        (bm as any).services = scraped.services;
+      }
+      if (scraped.hours && !(bm as any).hours) {
+        (bm as any).hours = scraped.hours;
       }
     }
 
@@ -213,6 +220,7 @@ export async function discoverNearbyIqama(
 export async function refreshSingleMosqueIqama(mosque: Mosque): Promise<{
   iqamaTimes: IqamaTimes;
   source: "mawaqit" | "website" | "manual" | null;
+  scrapedMeta?: { services?: string[]; hours?: string };
 }> {
   // Try MAWAQIT first
   const mawaqitId = mosque.mawaqitId;
@@ -246,10 +254,22 @@ export async function refreshSingleMosqueIqama(mosque: Mosque): Promise<{
 
   // Fallback: mosque website
   if (mosque.website) {
-    const iqamaTimes = await scrapeWebsiteIqama(mosque.website);
-    if (Object.keys(iqamaTimes).length > 0) {
-      await cacheIqama(mosque.id, iqamaTimes, "website");
-      return { iqamaTimes, source: "website" };
+    const scraped = await scrapeWebsiteIqama(mosque.website);
+    if (Object.keys(scraped.iqamaTimes).length > 0) {
+      await cacheIqama(mosque.id, scraped.iqamaTimes, "website");
+      return {
+        iqamaTimes: scraped.iqamaTimes,
+        source: "website",
+        scrapedMeta: { services: scraped.services, hours: scraped.hours },
+      };
+    }
+    // Even if no iqama times found, return any scraped metadata
+    if (scraped.services || scraped.hours) {
+      return {
+        iqamaTimes: {},
+        source: null,
+        scrapedMeta: { services: scraped.services, hours: scraped.hours },
+      };
     }
   }
 
@@ -258,12 +278,18 @@ export async function refreshSingleMosqueIqama(mosque: Mosque): Promise<{
 
 // ─── Website scraping (fallback) ─────────────────────────────────────────────
 
+export interface ScrapedMosqueData {
+  iqamaTimes: IqamaTimes;
+  services?: string[];
+  hours?: string;
+}
+
 /**
- * Fetch a mosque website and extract iqama times using regex.
+ * Fetch a mosque website and extract iqama times, services, and hours using regex.
  * Works for ~60% of mosque websites that post schedules as text.
  * No HTML parser needed — raw text matching is sufficient.
  */
-export async function scrapeWebsiteIqama(url: string): Promise<IqamaTimes> {
+export async function scrapeWebsiteIqama(url: string): Promise<ScrapedMosqueData> {
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 8_000);
   try {
@@ -271,15 +297,22 @@ export async function scrapeWebsiteIqama(url: string): Promise<IqamaTimes> {
       headers: { "User-Agent": "LiveAzan/1.0 (mosque schedule lookup)" },
       signal: controller.signal,
     });
-    if (!res.ok) return {};
+    if (!res.ok) return { iqamaTimes: {} };
 
     const html = await res.text();
     // Strip tags to get readable text
     const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
 
-    return parseIqamaFromText(text);
+    const iqamaTimes = parseIqamaFromText(text);
+    const services = parseServicesFromText(text);
+    const hours = parseHoursFromText(text);
+    return {
+      iqamaTimes,
+      services: services.length > 0 ? services : undefined,
+      hours: hours ?? undefined,
+    };
   } catch {
-    return {};
+    return { iqamaTimes: {} };
   } finally {
     clearTimeout(timeoutId);
   }
@@ -319,6 +352,55 @@ export function parseIqamaFromText(text: string): IqamaTimes {
   }
 
   return result;
+}
+
+/**
+ * Detect service keywords from scraped mosque website text.
+ * Always includes "five_daily_prayers" (assumed for any mosque).
+ */
+export function parseServicesFromText(text: string): string[] {
+  const lower = text.toLowerCase();
+  const keywords: Array<[string, string]> = [
+    ["funeral", "funeral_services"],
+    ["janazah", "funeral_services"],
+    ["janaza", "funeral_services"],
+    ["nikah", "nikah"],
+    ["marriage", "nikah"],
+    ["counseling", "counseling"],
+    ["counselling", "counseling"],
+    ["quran class", "quran_classes"],
+    ["quran circle", "quran_classes"],
+    ["tahfeez", "tahfeez"],
+    ["hifz", "tahfeez"],
+    ["youth program", "youth_programs"],
+    ["sisters circle", "sisters_halaqah"],
+    ["ladies program", "sisters_halaqah"],
+    ["women program", "sisters_halaqah"],
+    ["new muslim", "new_muslim_support"],
+    ["revert", "new_muslim_support"],
+    ["taraweeh", "taraweeh"],
+    ["eid", "eid_prayers"],
+    ["islamic studies", "islamic_studies"],
+  ];
+
+  const found: string[] = ["five_daily_prayers"];
+  for (const [keyword, serviceId] of keywords) {
+    if (lower.indexOf(keyword) !== -1 && found.indexOf(serviceId) === -1) {
+      found.push(serviceId);
+    }
+  }
+  return found;
+}
+
+/**
+ * Extract opening hours from scraped mosque website text.
+ * Matches patterns like "Open 5am – 11pm daily", "Hours: 5:00am to 11pm", etc.
+ */
+export function parseHoursFromText(text: string): string | null {
+  const hoursRe =
+    /(?:open|hours?)[:\s]+(\d{1,2}(?::\d{2})?\s*[ap]m\s*[-–to]+\s*\d{1,2}(?::\d{2})?\s*[ap]m(?:\s+daily)?)/i;
+  const match = hoursRe.exec(text);
+  return match ? match[1].trim() : null;
 }
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
