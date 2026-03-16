@@ -10,6 +10,13 @@
 
 const MAWAQIT_BASE = "https://mawaqit.net/en/api/2.0";
 
+// Some public APIs block the default React Native UA; a browser-style UA unblocks them.
+const MAWAQIT_HEADERS = {
+  Accept: "application/json",
+  "User-Agent":
+    "Mozilla/5.0 (Linux; Android 10; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+};
+
 // ─── Types ───────────────────────────────────────────────────────────────────
 
 export interface MawaqitMosque {
@@ -56,16 +63,19 @@ export async function searchNearby(
   const timeoutId = setTimeout(() => controller.abort(), 10_000);
   try {
     const res = await fetch(url, {
-      headers: { Accept: "application/json" },
+      headers: MAWAQIT_HEADERS,
       signal: controller.signal,
     });
+    console.log(`[MAWAQIT] Search HTTP ${res.status} for (${lat},${lon}) r=${radiusMeters}m`);
     if (!res.ok) {
       console.warn(`[MAWAQIT] Search returned HTTP ${res.status}`);
       return [];
     }
     const data = await res.json();
     // API may return array directly or { mosques: [] }
-    return Array.isArray(data) ? data : (data.mosques ?? []);
+    const results = Array.isArray(data) ? data : (data.mosques ?? []);
+    console.log(`[MAWAQIT] Search returned ${results.length} mosques`);
+    return results;
   } catch (err) {
     console.warn("[MAWAQIT] Search failed:", err);
     return [];
@@ -82,7 +92,7 @@ export async function getByUuid(uuid: string): Promise<MawaqitMosque | null> {
   const timeoutId = setTimeout(() => controller.abort(), 10_000);
   try {
     const res = await fetch(`${MAWAQIT_BASE}/mosque/${uuid}`, {
-      headers: { Accept: "application/json" },
+      headers: MAWAQIT_HEADERS,
       signal: controller.signal,
     });
     if (!res.ok) {
@@ -115,13 +125,13 @@ export function findBestMatch(
 
   for (const c of candidates) {
     const dist = haversineKm(ourLat, ourLon, c.latitude, c.longitude);
-    if (dist > 0.3) continue; // >300m away — skip
+    if (dist > 0.5) continue; // >500m away — skip
 
     const sim = jaccardSimilarity(ourName.toLowerCase(), c.name.toLowerCase());
-    if (sim < 0.4) continue; // names too different
+    if (sim < 0.25) continue; // names too different
 
     // Score: name similarity weighted 60%, proximity 40%
-    const proxScore = Math.max(0, 1 - dist / 0.3);
+    const proxScore = Math.max(0, 1 - dist / 0.5);
     const score = 0.6 * sim + 0.4 * proxScore;
 
     if (score > bestScore) {

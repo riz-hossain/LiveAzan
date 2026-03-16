@@ -4,14 +4,16 @@ import { Slot, useRouter, useSegments } from "expo-router";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { useAuthStore } from "../stores/authStore";
+import { useMosqueStore } from "../stores/mosqueStore";
 
 export default function RootLayout() {
   const { user, isGuest, isLoading, loadStoredAuth } = useAuthStore();
+  const { loadPrimaryMosque } = useMosqueStore();
   const segments = useSegments();
   const router = useRouter();
 
   useEffect(() => {
-    loadStoredAuth();
+    loadStoredAuth().then(() => loadPrimaryMosque());
   }, []);
 
   useEffect(() => {

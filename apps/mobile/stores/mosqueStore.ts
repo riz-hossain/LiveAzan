@@ -12,6 +12,7 @@ import {
   refreshSingleMosqueIqama,
   type DiscoveredMosque,
 } from "../services/iqamaDiscovery";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   getCached,
   setCached,
@@ -23,6 +24,7 @@ import {
   NEARBY_MOSQUE_TTL,
   IQAMA_TTL,
   MOSQUE_DETAIL_TTL,
+  PRIMARY_MOSQUE_KEY,
 } from "../services/cache";
 import { searchLocalMosques } from "../services/localMosqueSearch";
 
@@ -46,6 +48,7 @@ interface MosqueState {
   fetchNearbyMosques: (lat: number, lon: number) => Promise<void>;
   discoverIqamaNearby: (lat: number, lon: number) => Promise<DiscoveredMosque[]>;
   refreshIqama: (mosque: Mosque) => Promise<void>;
+  loadPrimaryMosque: () => Promise<void>;
   setPrimaryMosque: (mosqueId: string) => Promise<void>;
   fetchIqamaSchedule: (mosqueId: string) => Promise<void>;
   requestCoverage: (lat: number, lon: number) => Promise<void>;
@@ -188,14 +191,39 @@ export const useMosqueStore = create<MosqueState>((set, get) => ({
     }
   },
 
+  // ─── Load persisted primary mosque on startup ────────────────────────────
+
+  loadPrimaryMosque: async () => {
+    try {
+      const raw = await AsyncStorage.getItem(PRIMARY_MOSQUE_KEY);
+      if (!raw) return;
+      const mosque: Mosque = JSON.parse(raw);
+      set({ primaryMosque: mosque });
+      // Refresh iqama schedule silently in the background
+      get().fetchIqamaSchedule(mosque.id).catch(() => {});
+    } catch {
+      // Ignore — app works without a primary mosque
+    }
+  },
+
   // ─── Set primary mosque ──────────────────────────────────────────────────
 
   setPrimaryMosque: async (mosqueId: string) => {
     try {
-      await followMosqueApi(mosqueId, true);
-      const mosque = await fetchMosqueById(mosqueId);
+      // Resolve mosque object — prefer in-memory list to avoid a network round-trip
+      let mosque: Mosque | null =
+        get().nearbyMosques.find((m) => m.id === mosqueId) ?? null;
+      if (!mosque) {
+        mosque = await fetchMosqueById(mosqueId);
+      }
+
+      // Persist locally so it survives restarts for guests and logged-in users
+      await AsyncStorage.setItem(PRIMARY_MOSQUE_KEY, JSON.stringify(mosque));
       await setCached(mosqueDetailKey(mosqueId), mosque);
       set({ primaryMosque: mosque });
+
+      // Sync with server when the user is authenticated; silently ignore for guests
+      followMosqueApi(mosqueId, true).catch(() => {});
     } catch (error) {
       throw error;
     }

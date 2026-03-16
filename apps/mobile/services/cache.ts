@@ -63,6 +63,9 @@ export const iqamaKey = (mosqueId: string): string => `iqama_${mosqueId}`;
 export const mosqueDetailKey = (mosqueId: string): string =>
   `mosque_detail_${mosqueId}`;
 
+/** Persisted primary mosque — no TTL, lives until user changes it */
+export const PRIMARY_MOSQUE_KEY = "primary_mosque";
+
 // ─── TTLs ────────────────────────────────────────────────────────────────────
 
 /** Nearby mosque list — refresh weekly */
