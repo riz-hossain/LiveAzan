@@ -12,6 +12,7 @@ import {
   refreshSingleMosqueIqama,
   type DiscoveredMosque,
 } from "../services/iqamaDiscovery";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   getCached,
   setCached,
@@ -23,6 +24,7 @@ import {
   NEARBY_MOSQUE_TTL,
   IQAMA_TTL,
   MOSQUE_DETAIL_TTL,
+  PRIMARY_MOSQUE_KEY,
 } from "../services/cache";
 import { searchLocalMosques } from "../services/localMosqueSearch";
 
@@ -46,6 +48,7 @@ interface MosqueState {
   fetchNearbyMosques: (lat: number, lon: number) => Promise<void>;
   discoverIqamaNearby: (lat: number, lon: number) => Promise<DiscoveredMosque[]>;
   refreshIqama: (mosque: Mosque) => Promise<void>;
+  loadPrimaryMosque: () => Promise<void>;
   setPrimaryMosque: (mosqueId: string) => Promise<void>;
   fetchIqamaSchedule: (mosqueId: string) => Promise<void>;
   requestCoverage: (lat: number, lon: number) => Promise<void>;
@@ -188,14 +191,39 @@ export const useMosqueStore = create<MosqueState>((set, get) => ({
     }
   },
 
+  // ─── Load persisted primary mosque on startup ────────────────────────────
+
+  loadPrimaryMosque: async () => {
+    try {
+      const raw = await AsyncStorage.getItem(PRIMARY_MOSQUE_KEY);
+      if (!raw) return;
+      const mosque: Mosque = JSON.parse(raw);
+      set({ primaryMosque: mosque });
+      // Refresh iqama schedule silently in the background
+      get().fetchIqamaSchedule(mosque.id).catch(() => {});
+    } catch {
+      // Ignore — app works without a primary mosque
+    }
+  },
+
   // ─── Set primary mosque ──────────────────────────────────────────────────
 
   setPrimaryMosque: async (mosqueId: string) => {
     try {
-      await followMosqueApi(mosqueId, true);
-      const mosque = await fetchMosqueById(mosqueId);
+      // Resolve mosque object — prefer in-memory list to avoid a network round-trip
+      let mosque: Mosque | null =
+        get().nearbyMosques.find((m) => m.id === mosqueId) ?? null;
+      if (!mosque) {
+        mosque = await fetchMosqueById(mosqueId);
+      }
+
+      // Persist locally so it survives restarts for guests and logged-in users
+      await AsyncStorage.setItem(PRIMARY_MOSQUE_KEY, JSON.stringify(mosque));
       await setCached(mosqueDetailKey(mosqueId), mosque);
       set({ primaryMosque: mosque });
+
+      // Sync with server when the user is authenticated; silently ignore for guests
+      followMosqueApi(mosqueId, true).catch(() => {});
     } catch (error) {
       throw error;
     }
@@ -207,11 +235,15 @@ export const useMosqueStore = create<MosqueState>((set, get) => ({
     const cacheK = iqamaKey(mosqueId);
     const detailK = mosqueDetailKey(mosqueId);
 
-    // Immediately populate activeMosque from already-loaded list so detail screen renders instantly
+    // Always reset to the newly selected mosque immediately so navigating
+    // between mosques never shows stale data from a previously visited mosque.
     const fromList = get().nearbyMosques.find((m) => m.id === mosqueId);
-    if (fromList && !get().activeMosque) {
-      set({ activeMosque: fromList });
-    }
+    set({
+      activeMosque: fromList ?? null,
+      iqamaSchedule: [],
+      iqamaSource: null,
+      iqamaLastFetched: null,
+    });
 
     // Serve from cache immediately
     const [cachedIqama, cachedMosque] = await Promise.all([
@@ -257,10 +289,35 @@ export const useMosqueStore = create<MosqueState>((set, get) => ({
       });
     } catch {
       // Keep cached data visible if API fails; fall back to list data if no activeMosque
-      const stillNoMosque = !get().activeMosque;
-      if (stillNoMosque && fromList) {
-        set({ activeMosque: fromList });
+      const mosque = get().activeMosque ?? fromList ?? null;
+      if (mosque && !get().activeMosque) {
+        set({ activeMosque: mosque });
       }
+
+      // If iqamaSchedule is still empty, populate it from the local bundle's discoveredIqama
+      if (get().iqamaSchedule.length === 0 && mosque) {
+        const discovered = (mosque as any).discoveredIqama as Record<string, string> | undefined;
+        if (discovered && Object.keys(discovered).length > 0) {
+          const prayerMap: Array<[string, string]> = [
+            ["fajr", "FAJR"], ["dhuhr", "DHUHR"], ["asr", "ASR"],
+            ["maghrib", "MAGHRIB"], ["isha", "ISHA"],
+          ];
+          const now = new Date().toISOString();
+          const schedules: IqamaSchedule[] = prayerMap
+            .filter(([k]) => discovered[k])
+            .map(([k, prayer]) => ({
+              id: `${mosque.id}_${prayer}_local`,
+              mosqueId: mosque.id,
+              prayer: prayer as any,
+              iqamaTime: discovered[k],
+              effectiveFrom: now,
+            }));
+          if (schedules.length > 0) {
+            set({ iqamaSchedule: schedules, iqamaSource: "manual" });
+          }
+        }
+      }
+
       set({ isLoading: false });
     }
   },

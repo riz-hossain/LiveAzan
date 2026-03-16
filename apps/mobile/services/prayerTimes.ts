@@ -1,5 +1,4 @@
 import type { PrayerTimes, NextPrayer, Prayer } from "@live-azan/shared";
-import { fetchPrayerTimesApi } from "./api";
 
 // ─── In-Memory Cache ─────────────────────────────────────────────────────────
 
@@ -37,6 +36,11 @@ function setCache(key: string, data: PrayerTimes): void {
 
 // ─── Public API ──────────────────────────────────────────────────────────────
 
+/**
+ * Fetch prayer times for a given location and date.
+ * Calls the Aladhan public API directly — no backend required.
+ * Results are cached in memory for 24 hours.
+ */
 export async function getPrayerTimes(
   lat: number,
   lon: number,
@@ -50,16 +54,38 @@ export async function getPrayerTimes(
   const cached = getFromCache(cacheKey);
   if (cached) return cached;
 
-  // Try API
+  // Call Aladhan API directly (free public API, no key needed)
+  const calcMethod = method ?? 2; // 2 = ISNA, good default for North America
+  const url = `https://api.aladhan.com/v1/timings/${today}?latitude=${lat}&longitude=${lon}&method=${calcMethod}`;
+
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 10_000);
   try {
-    const times = await fetchPrayerTimesApi(lat, lon, today, method);
+    const res = await fetch(url, { signal: controller.signal });
+    if (!res.ok) throw new Error(`Aladhan API error ${res.status}`);
+    const json = await res.json();
+    const t = json.data.timings;
+
+    const times: PrayerTimes = {
+      fajr: t.Fajr,
+      dhuhr: t.Dhuhr,
+      asr: t.Asr,
+      maghrib: t.Maghrib,
+      isha: t.Isha,
+      date: today,
+      method: calcMethod,
+      latitude: lat,
+      longitude: lon,
+    };
+
     setCache(cacheKey, times);
     return times;
   } catch {
-    // If API fails, return a placeholder to indicate unavailable
     throw new Error(
       "Prayer times unavailable. Please check your connection and try again."
     );
+  } finally {
+    clearTimeout(timeoutId);
   }
 }
 

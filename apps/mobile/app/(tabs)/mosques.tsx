@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import {
   View,
   Text,
@@ -15,6 +15,42 @@ import { DebugPanel } from "../../components/DebugPanel";
 import { useMosqueStore } from "../../stores/mosqueStore";
 import { getCurrentLocation, getSavedLocation } from "../../services/location";
 import type { Mosque } from "@live-azan/shared";
+
+// Prevent a react-native-maps crash (e.g. missing Google Maps API key on Android)
+// from taking down the whole screen.
+class MapErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { crashed: boolean }
+> {
+  state = { crashed: false };
+  componentDidCatch() {
+    this.setState({ crashed: true });
+  }
+  render() {
+    if (this.state.crashed) {
+      return (
+        <View style={mapErrorStyles.container}>
+          <Ionicons name="map-outline" size={48} color="#ccc" />
+          <Text style={mapErrorStyles.text}>Map unavailable on this device</Text>
+          <Text style={mapErrorStyles.sub}>Use the list view to browse mosques</Text>
+        </View>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+const mapErrorStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 12,
+    backgroundColor: "#f5f5f5",
+  },
+  text: { fontSize: 16, color: "#999" },
+  sub: { fontSize: 13, color: "#bbb" },
+});
 
 type ViewMode = "list" | "map";
 
@@ -145,11 +181,13 @@ export default function MosquesScreen() {
       )}
 
       {viewMode === "map" && userLocation && (
-        <MosqueMap
-          mosques={displayMosques}
-          userLocation={userLocation}
-          onMosquePress={handleMosquePress}
-        />
+        <MapErrorBoundary>
+          <MosqueMap
+            mosques={displayMosques}
+            userLocation={userLocation}
+            onMosquePress={handleMosquePress}
+          />
+        </MapErrorBoundary>
       )}
 
       {viewMode === "map" && !userLocation && (
