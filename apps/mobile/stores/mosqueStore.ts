@@ -257,10 +257,35 @@ export const useMosqueStore = create<MosqueState>((set, get) => ({
       });
     } catch {
       // Keep cached data visible if API fails; fall back to list data if no activeMosque
-      const stillNoMosque = !get().activeMosque;
-      if (stillNoMosque && fromList) {
-        set({ activeMosque: fromList });
+      const mosque = get().activeMosque ?? fromList ?? null;
+      if (mosque && !get().activeMosque) {
+        set({ activeMosque: mosque });
       }
+
+      // If iqamaSchedule is still empty, populate it from the local bundle's discoveredIqama
+      if (get().iqamaSchedule.length === 0 && mosque) {
+        const discovered = (mosque as any).discoveredIqama as Record<string, string> | undefined;
+        if (discovered && Object.keys(discovered).length > 0) {
+          const prayerMap: Array<[string, string]> = [
+            ["fajr", "FAJR"], ["dhuhr", "DHUHR"], ["asr", "ASR"],
+            ["maghrib", "MAGHRIB"], ["isha", "ISHA"],
+          ];
+          const now = new Date().toISOString();
+          const schedules: IqamaSchedule[] = prayerMap
+            .filter(([k]) => discovered[k])
+            .map(([k, prayer]) => ({
+              id: `${mosque.id}_${prayer}_local`,
+              mosqueId: mosque.id,
+              prayer: prayer as any,
+              iqamaTime: discovered[k],
+              effectiveFrom: now,
+            }));
+          if (schedules.length > 0) {
+            set({ iqamaSchedule: schedules, iqamaSource: "manual" });
+          }
+        }
+      }
+
       set({ isLoading: false });
     }
   },
