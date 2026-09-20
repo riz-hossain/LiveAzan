@@ -192,6 +192,11 @@ const NEAR = 16; // lines from one prayer's name to the next
 const SPAN = 6; // lines a prayer's own times can be spread over
 const HEADER = 6; // lines above the first name that can hold column headings
 const HEADING_CHARS = 40; // a line longer than this is prose, not a column heading
+// An instruction is not a heading either. "For Current Iqama Times Select [your branch]" points at iqama
+// times that are somewhere else, and the list under it is the city's prayer times: counting it as the
+// "iqama column" read start times as iqamas (one Vancouver association's home page, in a check of the
+// reader's own confident readings).
+const POINTER = /\b(?:select|choose|click|tap|press|download|subscribe|confirm|visit|contact)\b|\bfor\s+(?:the\s+)?(?:current|latest|updated)\s+iqam/i;
 
 /**
  * Runs of the five prayers' names, in order, with no other prayer between.
@@ -257,7 +262,8 @@ function groupText(lines: string[], tokens: Tok[], index: number, stop: number):
  *
  * A heading is short. A sentence that happens to contain "Iqamah" -- "Confirm
  * that the Iqamah appears in your calendars" -- is not one, and counting it made
- * the first time in every row look like the iqama.
+ * the first time in every row look like the iqama. An instruction ("For Current
+ * Iqama Times Select ...") is not one either.
  */
 function headers(tokens: Tok[], lines: string[], first: number): Array<"iqama" | "adhan"> {
   const name = tokens[first];
@@ -265,7 +271,7 @@ function headers(tokens: Tok[], lines: string[], first: number): Array<"iqama" |
   for (let i = first - 1; i >= 0; i--) {
     const t = tokens[i];
     if (name.line - t.line > HEADER || t.kind === "time" || t.kind === "name" || t.kind === "bound") break;
-    if (t.kind === "label" && lines[t.line].length <= HEADING_CHARS) run.push(t);
+    if (t.kind === "label" && lines[t.line].length <= HEADING_CHARS && !POINTER.test(lines[t.line])) run.push(t);
   }
   run.reverse();
   const out: Array<"iqama" | "adhan"> = [];

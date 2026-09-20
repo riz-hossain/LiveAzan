@@ -255,6 +255,41 @@ describe("which day the times are for", () => {
 });
 
 describe("pages that must not be read", () => {
+  it("a list of start times under 'For Current Iqama Times Select ...' is the city's prayer times, not an iqama column", () => {
+    // One Vancouver association's home page: the iqama times need a branch chosen, and what is printed is the
+    // city's start times (Fajr 5:09 is first light). Counting the instruction as a heading read them as iqamas.
+    const vancouver: Where = { lat: 49.28, lon: -123.12, utcOffsetHours: -7 };
+    const list = (line: string): string =>
+      page(
+        `<h3>Salah Times</h3><div>Show Prayer Times for:</div><div>${line}</div><div>Your Local Branch e.g. Richmond</div>` +
+          "<div>Fajr</div><div>5:09 AM</div><div>Sunrise</div><div>6:55 AM</div><div>Zuhr</div><div>1:15 PM</div><div>Asr</div><div>5:17 PM</div>" +
+          "<div>Maghrib</div><div>7:18 PM</div><div>Isha</div><div>8:41 PM</div>"
+      );
+    // each kind of instruction, on its own
+    for (const pointer of [
+      "For Current Iqama Times Select",
+      "Select your branch for iqama times",
+      "Choose a branch for iqama times",
+      "Click here for the iqama times",
+      "Tap for iqama times",
+      "Press for iqama times",
+      "Download the iqama times",
+      "Subscribe for iqama times",
+      "Confirm the iqama times",
+      "Visit us for iqama times",
+      "Contact the masjid for iqama",
+      "For current iqama times see below",
+      "For the latest iqamah times",
+      "For updated iqama times",
+    ]) {
+      assert.equal(read(list(pointer), TODAY, vancouver), null, pointer);
+    }
+    // the same list under an actual heading is what it says it is, and a heading that only mentions the week is one
+    for (const heading of ["Iqama", "Iqamah Times", "Iqama Times for Current Week", "Jamaat (Iqama) Timings"]) {
+      assert.equal(times(read(list(heading), TODAY, vancouver)), "05:09 13:15 17:17 19:18 20:41", heading);
+    }
+  });
+
   it("a template of adhan times on the hour and half hour", () => {
     // Times a mosque could keep on a September day: it is the round adhan times, and nothing about
     // the season, that says this is a template still waiting for its numbers.
