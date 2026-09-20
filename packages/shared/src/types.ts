@@ -87,7 +87,7 @@ export interface Mosque {
   distanceKm?: number; // computed at query time
   // Automated iqama discovery provenance
   mawaqitId?: string;
-  iqamaSource?: "mawaqit" | "website" | "manual";
+  iqamaSource?: "mawaqit" | "website" | "plugin" | "nearby" | "manual";
   iqamaLastFetched?: string; // ISO date string
   // Rich metadata (populated from local bundle or website scraping)
   description?: string;

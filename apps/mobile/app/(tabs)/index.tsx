@@ -18,6 +18,9 @@ import { IqamaCountdown } from "../../components/IqamaCountdown";
 import { MosqueCard } from "../../components/MosqueCard";
 import { usePrayerStore } from "../../stores/prayerStore";
 import { useMosqueStore } from "../../stores/mosqueStore";
+import { headline, toneOf } from "@live-azan/shared";
+import { mosqueDay } from "../../services/iqamaDiscovery";
+import { TONE_COLOR } from "../../components/toneColors";
 import { getCurrentLocation, getSavedLocation } from "../../services/location";
 
 const PRAYER_ORDER: Prayer[] = [
@@ -51,6 +54,8 @@ export default function HomeScreen() {
   const {
     primaryMosque,
     iqamaSchedule,
+    iqamaMeta,
+    iqamaFor,
     nearbyMosques,
     fetchIqamaSchedule,
     fetchNearbyMosques,
@@ -141,6 +146,16 @@ export default function HomeScreen() {
         {primaryMosque && (
           <Text style={styles.mosque}>{primaryMosque.name}</Text>
         )}
+        {primaryMosque && iqamaMeta && iqamaFor === primaryMosque.id && (
+          <Text
+            style={[
+              styles.iqamaNote,
+              { color: TONE_COLOR[toneOf(iqamaMeta, mosqueDay(primaryMosque).today)] },
+            ]}
+          >
+            Iqama: {headline(iqamaMeta, mosqueDay(primaryMosque).today)}
+          </Text>
+        )}
       </View>
 
       {nextPrayer && primaryMosque && (
@@ -228,6 +243,10 @@ const styles = StyleSheet.create({
     color: "#1B5E20",
     marginTop: 2,
     fontWeight: "500",
+  },
+  iqamaNote: {
+    fontSize: 12,
+    marginTop: 2,
   },
   prayerList: {
     paddingHorizontal: 16,

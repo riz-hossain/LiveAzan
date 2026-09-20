@@ -485,7 +485,7 @@ cd server && npm run test
 cd apps/mobile && npm run test
 ```
 
-The iqama reader in `packages/shared` has its own offline test suite (`cd packages/shared && npm test`); see [How Iqama Times Are Found](#how-iqama-times-are-found).
+The iqama reader in `packages/shared` and the app's use of it in `apps/mobile` have offline test suites (`cd packages/shared && npm test`, `cd apps/mobile && npm test`); see [How Iqama Times Are Found](#how-iqama-times-are-found).
 
 ### Code Quality
 
@@ -686,13 +686,24 @@ outcome.problems; // why the sources that failed failed, in words for a person
 
 The single-source pieces (`extractIqama`, `readPlugin`, `readMawaqit`, `readWebsite`) are exported for callers that want only one of them.
 
+### In the app
+
+- **The list is cheap and honest.** A mosque list shows what the mosque came with: the bundled research, as *saved times* with the day it was researched, and, for a mosque with none, what MAWAQIT's one search request says, only when the listing is strongly the same mosque (`samePlace`). Websites are not read for a list, which can be dozens of mosques long.
+- **Opening a mosque reads it properly.** The mosque screen, and the home screen for the primary mosque, read its timetable plugin, its web page and its MAWAQIT listing in the background (`refreshSingleMosqueIqama`, at most 45 seconds), while saved times, or yesterday's, stay on screen labelled with their date. A mosque that gave nothing is not tried again on its own for six hours; the refresh button ignores that.
+- **A mosque with nothing readable can borrow a neighbour's times**, only when the person asks (`borrowIqama`), and they are shown with the neighbour's name and distance, as approximate, never as the mosque's own.
+- **Colour says how far to trust the times.** Green is the mosque's own reading of today; amber is worth a second look (a source disagreed, or the sun objected); red is old, guessed, or a neighbour's. The notes under the badge say why, in words (`packages/shared/src/iqama/present.ts`).
+- **Saved research keeps its Maghrib.** Most mosques in the bundle give Maghrib as "sunset+5". `scripts/generate-mosque-bundle.py` keeps that as `maghribRule`, and the app works it out for the day, so it moves with the year instead of going stale as a clock time would. It also keeps `researchedOn`.
+
 ### Tests
 
 ```bash
-cd packages/shared && npm test
+cd packages/shared && npm test   # the reader and the wording, on made-up pages
+cd apps/mobile && npm test       # the store and services that use it, without a phone
 ```
 
-The suite runs offline against made-up pages and a made-up network, and runs on every push in the `Check` workflow. The reader was ported from the floating-clock desktop app's and checked against real mosque pages saved from across Canada: it returns the same times as the original on every page they were compared on. When the reader gets a page wrong, add that page's shape as a test first (`pageReader.test.ts` shows the pattern) and then fix it.
+The shared suite runs offline against made-up pages and a made-up network, and runs on every push in the `Check` workflow. The app's suite runs the real store and services under Node with the two phone-only modules (AsyncStorage, SecureStore) faked, a made-up network, and a pinned clock, so it says the same in any season; it covers what the screens rely on but cannot themselves be tested for: that a slow read never draws over the mosque on screen now, that a server's older times never replace a reading of today, and that a failed look is not repeated on every visit. The app's type-check is a ratchet: `Check` fails on any error beyond the seven that predate it.
+
+The reader was ported from the floating-clock desktop app's and checked against real mosque pages saved from across Canada: it returns the same times as the original on every page they were compared on. When the reader gets a page wrong, add that page's shape as a test first (`pageReader.test.ts` shows the pattern) and then fix it.
 
 ---
 

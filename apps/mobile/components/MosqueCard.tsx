@@ -12,6 +12,7 @@ function getSourceInfo(mosque: Mosque): { label: string; color: string } | null 
   // Priority: explicit data source > verified status > OSM fallback
   if (mosque.iqamaSource === "mawaqit") return { label: "MAWAQIT", color: "#1565C0" };
   if (mosque.iqamaSource === "website") return { label: "Website", color: "#6A1B9A" };
+  if (mosque.iqamaSource === "plugin") return { label: "Mosque timetable", color: "#6A1B9A" };
   // Verified mosques from LiveAzan backend (includes local bundle entries that
   // were confirmed and enriched — show consistently as "LiveAzan")
   if (mosque.verified) return { label: "LiveAzan", color: "#1B5E20" };

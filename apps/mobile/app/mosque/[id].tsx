@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import {
   View,
   Text,
@@ -15,6 +15,9 @@ import { useMosqueStore } from "../../stores/mosqueStore";
 import { usePrayerStore } from "../../stores/prayerStore";
 import { getCurrentLocation } from "../../services/location";
 import type { Prayer, IqamaSchedule } from "@live-azan/shared";
+import { notesFor, sourceLabel, toneOf, type Tone } from "@live-azan/shared";
+import { mosqueDay } from "../../services/iqamaDiscovery";
+import { TONE_COLOR } from "../../components/toneColors";
 
 const PRAYER_ORDER: Prayer[] = ["FAJR", "DHUHR", "ASR", "MAGHRIB", "ISHA"] as Prayer[];
 
@@ -25,18 +28,6 @@ const PRAYER_LABELS: Record<string, string> = {
   MAGHRIB: "Maghrib",
   ISHA: "Isha",
   JUMMAH: "Jummah",
-};
-
-const SOURCE_LABEL: Record<string, string> = {
-  mawaqit: "MAWAQIT",
-  website: "Website",
-  manual: "LiveAzan",
-};
-
-const SOURCE_COLOR: Record<string, string> = {
-  mawaqit: "#1565C0",
-  website: "#6A1B9A",
-  manual: "#1B5E20",
 };
 
 const SERVICE_LABELS: Record<string, string> = {
@@ -78,20 +69,23 @@ export default function MosqueDetailScreen() {
   const {
     activeMosque,
     iqamaSchedule,
-    iqamaSource,
+    iqamaMeta,
+    iqamaProblems,
     iqamaLastFetched,
     primaryMosque,
     fetchIqamaSchedule,
     setPrimaryMosque,
     refreshIqama,
+    borrowIqama,
     isLoading,
+    isReading,
+    isBorrowing,
   } = useMosqueStore();
 
   const { prayerTimes, fetchPrayerTimes } = usePrayerStore();
 
   const [isFollowing, setIsFollowing] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
-  const autoSearchedRef = useRef(false);
 
   useEffect(() => {
     if (id) {
@@ -124,7 +118,10 @@ export default function MosqueDetailScreen() {
   };
 
   const hasAnyIqama = PRAYER_ORDER.some((p) => getIqamaTime(p));
-  const stalenessLabel = staleness(iqamaLastFetched);
+  const jumuahTime = getIqamaTime("JUMMAH" as Prayer);
+  // Saved times and a neighbour's are not "updated" when they were last fetched, and say their own age.
+  const stalenessLabel =
+    iqamaMeta?.source === "saved" || iqamaMeta?.source === "nearby" ? null : staleness(iqamaLastFetched);
 
   const handleSetPrimary = async () => {
     if (!id) return;
@@ -176,19 +173,16 @@ export default function MosqueDetailScreen() {
     }
   };
 
-  // Auto-search for iqama times when none are found and mosque is loaded
-  useEffect(() => {
-    if (
-      !autoSearchedRef.current &&
-      !isLoading &&
-      mosque &&
-      !hasAnyIqama &&
-      !isRefreshing
-    ) {
-      autoSearchedRef.current = true;
-      handleRefreshIqama();
+  const handleBorrow = async () => {
+    if (!mosque) return;
+    const found = await borrowIqama(mosque);
+    if (!found) {
+      Alert.alert(
+        "Nothing to borrow",
+        "No mosque nearby publishes times that could be read either."
+      );
     }
-  }, [mosque, isLoading, hasAnyIqama]);
+  };
 
   if (!mosque) {
     return (
@@ -201,6 +195,15 @@ export default function MosqueDetailScreen() {
 
   const hasServices = mosque.services && mosque.services.length > 0;
   const hasFacilities = mosque.facilities && mosque.facilities.length > 0;
+
+  const { today } = mosqueDay(mosque);
+  const tone: Tone = iqamaMeta ? toneOf(iqamaMeta, today) : "fair";
+  const notes = iqamaMeta ? notesFor(iqamaMeta, today) : [];
+  // Why the mosque's own times could not be read, when it was tried and nothing came of it.
+  const couldNotRead =
+    iqamaProblems.length > 0 && !isReading && !isRefreshing
+      ? `Couldn't read today's times from the mosque: ${iqamaProblems.slice(0, 3).join("; ")}.`
+      : null;
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
@@ -323,9 +326,9 @@ export default function MosqueDetailScreen() {
           <TouchableOpacity
             style={styles.refreshButton}
             onPress={handleRefreshIqama}
-            disabled={isRefreshing || isLoading}
+            disabled={isRefreshing || isReading}
           >
-            {isRefreshing || isLoading ? (
+            {isRefreshing || isReading ? (
               <ActivityIndicator size="small" color="#1B5E20" />
             ) : (
               <Ionicons name="refresh-outline" size={18} color="#1B5E20" />
@@ -333,23 +336,18 @@ export default function MosqueDetailScreen() {
           </TouchableOpacity>
         </View>
 
-        {/* Data source + staleness */}
-        {(iqamaSource || stalenessLabel) && (
+        {/* Where the times came from, how far to trust them, and what to double-check */}
+        {(iqamaMeta || stalenessLabel) && (
           <View style={styles.metaRow}>
-            {iqamaSource && (
+            {iqamaMeta && (
               <View
                 style={[
                   styles.sourceBadge,
-                  { backgroundColor: `${SOURCE_COLOR[iqamaSource]}18` },
+                  { backgroundColor: `${TONE_COLOR[tone]}18` },
                 ]}
               >
-                <Text
-                  style={[
-                    styles.sourceText,
-                    { color: SOURCE_COLOR[iqamaSource] },
-                  ]}
-                >
-                  {SOURCE_LABEL[iqamaSource] ?? iqamaSource}
+                <Text style={[styles.sourceText, { color: TONE_COLOR[tone] }]}>
+                  {sourceLabel(iqamaMeta)}
                 </Text>
               </View>
             )}
@@ -358,22 +356,50 @@ export default function MosqueDetailScreen() {
             )}
           </View>
         )}
+        {notes.map((note) => (
+          <Text
+            key={note}
+            style={[styles.noteText, tone === "caution" && styles.noteCaution]}
+          >
+            {note}
+          </Text>
+        ))}
+        {hasAnyIqama && couldNotRead && (
+          <Text style={styles.noteText}>{couldNotRead}</Text>
+        )}
 
-        {/* Auto-search / hint */}
+        {/* Looking / nothing found */}
         {!hasAnyIqama && (
-          isRefreshing ? (
+          isRefreshing || isReading ? (
             <View style={styles.noIqamaHint}>
               <ActivityIndicator size="small" color="#795548" />
-              <Text style={styles.noIqamaText}>Searching for iqama times…</Text>
+              <Text style={styles.noIqamaText}>Looking for iqama times…</Text>
             </View>
           ) : (
             <View style={styles.noIqamaHint}>
               <Ionicons name="information-circle-outline" size={16} color="#999" />
               <Text style={styles.noIqamaText}>
-                Tap refresh to search for iqama times from MAWAQIT and this mosque's website.
+                {couldNotRead ??
+                  "Tap refresh to look for this mosque's iqama times on its own website and on MAWAQIT."}
               </Text>
             </View>
           )
+        )}
+        {!hasAnyIqama && !isRefreshing && !isReading && iqamaProblems.length > 0 && (
+          <TouchableOpacity
+            style={styles.nearbyButton}
+            onPress={handleBorrow}
+            disabled={isBorrowing}
+          >
+            {isBorrowing ? (
+              <ActivityIndicator size="small" color="#1B5E20" />
+            ) : (
+              <Ionicons name="navigate-circle-outline" size={18} color="#1B5E20" />
+            )}
+            <Text style={styles.nearbyButtonText}>
+              {isBorrowing ? "Looking at nearby mosques…" : "Use a nearby mosque's times"}
+            </Text>
+          </TouchableOpacity>
         )}
 
         {/* Two-column schedule: Prayer | Adhan | Iqama */}
@@ -414,6 +440,17 @@ export default function MosqueDetailScreen() {
               </View>
             );
           })}
+          {jumuahTime && (
+            <View style={styles.scheduleRow}>
+              <Text style={[styles.scheduleCell, styles.prayerCol, styles.prayerName]}>
+                {PRAYER_LABELS.JUMMAH}
+              </Text>
+              <Text style={[styles.scheduleCell, styles.timeCell, styles.timeMissing]}> </Text>
+              <Text style={[styles.scheduleCell, styles.timeCell, styles.iqamaTimeCell]}>
+                {jumuahTime}
+              </Text>
+            </View>
+          )}
         </View>
       </View>
 
@@ -597,6 +634,31 @@ const styles = StyleSheet.create({
   stalenessText: {
     fontSize: 12,
     color: "#999",
+  },
+  noteText: {
+    fontSize: 12,
+    color: "#666",
+    lineHeight: 17,
+    marginBottom: 6,
+  },
+  noteCaution: {
+    color: "#B23C00",
+  },
+  nearbyButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
+    borderWidth: 1,
+    borderColor: "#1B5E20",
+    borderRadius: 10,
+    paddingVertical: 10,
+    marginBottom: 8,
+  },
+  nearbyButtonText: {
+    fontSize: 14,
+    fontWeight: "600",
+    color: "#1B5E20",
   },
   noIqamaHint: {
     flexDirection: "row",

@@ -26,11 +26,13 @@ export function distanceKm(lat1: number, lon1: number, lat2: number, lon2: numbe
 
 /** Lowercased and stripped of accents, for comparing names. */
 export function fold(text: string): string {
-  return String(text ?? "")
-    .normalize("NFKD")
-    .replace(/[̀-ͯ]/g, "")
-    .toLowerCase()
-    .trim();
+  let plain = String(text ?? "");
+  try {
+    plain = plain.normalize("NFKD").replace(/[̀-ͯ]/g, "");
+  } catch {
+    // an engine without normalize: names are compared with their accents, which is stricter, not looser
+  }
+  return plain.toLowerCase().trim();
 }
 
 // Words that say "masjid" and nothing about which one.
