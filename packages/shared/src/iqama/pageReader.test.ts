@@ -168,6 +168,97 @@ describe("layouts that are read", () => {
   });
 });
 
+describe("a widget's strip of day tabs", () => {
+  // What Athan+/Masjidal serves, and the most common platform on Canadian mosque sites: today's
+  // times under a week of tabs, each tab a line with its Hijri date beneath. Today's own tab sits
+  // a dozen lines above the table, well past where a heading normally is.
+  const tabs = (days: Array<[string, string]>): string =>
+    days.map(([greg, hijri]) => `<div>${greg}</div><div>${hijri}</div>`).join("") + "<div>Previous Next</div>";
+  const WEEK: Array<[string, string]> = [
+    ["Sunday, Sep 20, 2026", "Rabi Al-Thani 9, 1448"],
+    ["Monday, Sep 21, 2026", "Rabi Al-Thani 10, 1448"],
+    ["Tuesday, Sep 22, 2026", "Rabi Al-Thani 11, 1448"],
+    ["Wednesday, Sep 23, 2026", "Rabi Al-Thani 12, 1448"],
+    ["Thursday, Sep 24, 2026", "Rabi Al-Thani 13, 1448"],
+    ["Friday, Sep 25, 2026", "Rabi Al-Thani 14, 1448"],
+    ["Saturday, Sep 26, 2026", "Rabi Al-Thani 15, 1448"],
+  ];
+  const widget = (days: Array<[string, string]>): string =>
+    page(
+      `<h3>PRAYER TIMINGS</h3>${tabs(days)}` +
+        "<table><tr><td>First Name</td><td>STARTS</td><td>IQAMAH</td></tr>" +
+        "<tr><td>Fajr</td><td>5:42 AM</td><td>6:15 AM</td></tr>" +
+        "<tr><td>Sunrise</td><td>7:02 AM</td></tr>" +
+        "<tr><td>Dhuhr</td><td>1:11 PM</td><td>1:45 PM</td></tr>" +
+        "<tr><td>Asr</td><td>5:29 PM</td><td>5:45 PM</td></tr>" +
+        "<tr><td>Maghrib</td><td>7:24 PM</td><td>7:28 PM</td></tr>" +
+        "<tr><td>Isha</td><td>8:37 PM</td><td>9:00 PM</td></tr></table>" +
+        "<div>Jumuah</div><div>1:30 PM</div><div>Jumuah 1</div><div>VIEW MONTHLY CALENDAR</div>"
+    );
+
+  it("is read as today's, however far up the strip today's own tab has been pushed", () => {
+    const found = read(widget(WEEK));
+    assert.equal(times(found), GOOD);
+    assert.equal(found?.how, "headed");
+  });
+
+  it("is still read when the strip is short", () => {
+    assert.equal(times(read(widget(WEEK.slice(0, 2)))), GOOD);
+  });
+
+  it("is refused when the whole strip is another month's: a widget left showing a stale week", () => {
+    const august: Array<[string, string]> = [
+      ["Sunday, Aug 16, 2026", "Safar 3, 1448"],
+      ["Monday, Aug 17, 2026", "Safar 4, 1448"],
+      ["Tuesday, Aug 18, 2026", "Safar 5, 1448"],
+      ["Wednesday, Aug 19, 2026", "Safar 6, 1448"],
+      ["Thursday, Aug 20, 2026", "Safar 7, 1448"],
+      ["Friday, Aug 21, 2026", "Safar 8, 1448"],
+      ["Saturday, Aug 22, 2026", "Safar 9, 1448"],
+    ];
+    assert.equal(read(widget(august)), null);
+  });
+
+  it("stops at anything that is not a day tab, rather than walking up the page for a date", () => {
+    // Today's date sits above a barrier; below it, a strip left showing August. Crossing the
+    // barrier to reach today would make a stale widget look current, so each barrier must stop it.
+    const stale: Array<[string, string]> = [
+      ["Wednesday, Aug 19, 2026", "Safar 6, 1448"],
+      ["Thursday, Aug 20, 2026", "Safar 7, 1448"],
+      ["Friday, Aug 21, 2026", "Safar 8, 1448"],
+    ];
+    const barriers: Array<[string, string]> = [
+      ["a line with a time in it", "<div>Office hours 9:00 AM</div>"],
+      ["a line naming a prayer", "<div>Fajr</div>"],
+      ["a run of lines with no date in them", "<div>Home</div><div>About</div><div>Donate</div><div>Contact</div>"],
+      ["a long line of prose", "<p>Our annual fundraising dinner is on the last Saturday of the month and all are welcome.</p>"],
+    ];
+    for (const [what, barrier] of barriers) {
+      const html = page(
+        "<div>Sunday, Sep 20, 2026</div>" + barrier + tabs(stale) +
+          "<table><tr><td></td><td>STARTS</td><td>IQAMAH</td></tr>" +
+          "<tr><td>Fajr</td><td>5:42 AM</td><td>6:15 AM</td></tr><tr><td>Dhuhr</td><td>1:11 PM</td><td>1:45 PM</td></tr>" +
+          "<tr><td>Asr</td><td>5:29 PM</td><td>5:45 PM</td></tr><tr><td>Maghrib</td><td>7:24 PM</td><td>7:28 PM</td></tr>" +
+          "<tr><td>Isha</td><td>8:37 PM</td><td>9:00 PM</td></tr></table>"
+      );
+      assert.equal(read(html), null, `it walked back over ${what}`);
+    }
+  });
+
+  it("does not walk back over prose, a time, or another prayer to reach a date", () => {
+    const far = page(
+      "<p>Sunday, Sep 20, 2026</p>" +
+        "<p>Our annual fundraising dinner is on the last Saturday of every month, and all are welcome to attend.</p>" +
+        tabs(WEEK.slice(3)) +
+        "<table><tr><td></td><td>STARTS</td><td>IQAMAH</td></tr>" +
+        "<tr><td>Fajr</td><td>5:42 AM</td><td>6:15 AM</td></tr><tr><td>Dhuhr</td><td>1:11 PM</td><td>1:45 PM</td></tr>" +
+        "<tr><td>Asr</td><td>5:29 PM</td><td>5:45 PM</td></tr><tr><td>Maghrib</td><td>7:24 PM</td><td>7:28 PM</td></tr>" +
+        "<tr><td>Isha</td><td>8:37 PM</td><td>9:00 PM</td></tr></table>"
+    );
+    assert.equal(read(far), null); // the paragraph stops the walk, so only Wednesday..Saturday are seen
+  });
+});
+
 describe("which day the times are for", () => {
   const listing = (data: Array<[string, string]>): string => data.map(([n, t]) => `<p>${n} Iqama ${t}</p>`).join("");
   const board = listing([["Fajr", "6:15"], ["Dhuhr", "1:45"], ["Asr", "5:45"], ["Maghrib", "7:28"], ["Isha", "9:00"]]);
