@@ -5,6 +5,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { useAuthStore } from "../stores/authStore";
 import { useMosqueStore } from "../stores/mosqueStore";
+import { PageRenderer } from "../components/PageRenderer";
 
 export default function RootLayout() {
   const { user, isGuest, isLoading, loadStoredAuth } = useAuthStore();
@@ -40,6 +41,8 @@ export default function RootLayout() {
     <SafeAreaProvider>
       <StatusBar style="auto" />
       <Slot />
+      {/* Offscreen, shows nothing: it reads the mosque sites whose times a script writes in. */}
+      <PageRenderer />
     </SafeAreaProvider>
   );
 }

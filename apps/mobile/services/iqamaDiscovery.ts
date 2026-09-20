@@ -11,7 +11,9 @@
  *    MAWAQIT's one search request says for the mosques it lists.
  *  - For the mosque a person opens (refreshSingleMosqueIqama), everything: its own
  *    timetable plugin, its web page and its MAWAQIT listing, cross-checked, by the
- *    shared reader in packages/shared/src/iqama. That reader refuses what it cannot
+ *    shared reader in packages/shared/src/iqama. Where those pages print nothing, the
+ *    page is drawn in a hidden browser and read again (services/pageRender.ts): a great
+ *    many mosque sites write their times in with a script. That reader refuses what it cannot
  *    stand behind (a page for another season, a table that does not say which time
  *    is the iqama) rather than guess, because a wrong time is worse than none.
  *  - When a mosque publishes nothing that can be read, the nearest one that does can
@@ -36,6 +38,7 @@ import {
 import { fetchMosquesNearby } from "./api";
 import { findMatch, searchNearby, type IqamaTimes } from "./mawaqitService";
 import { fetchText } from "./http";
+import { canRender, renderPage } from "./pageRender";
 import { setCached, nearbyMosquesKey } from "./cache";
 import { searchLocalMosques } from "./localMosqueSearch";
 import { searchOverpassMosques, type OverpassMosque } from "./overpassService";
@@ -208,6 +211,12 @@ export interface RefreshResult {
 
 /** Longest a person is asked to wait for one mosque. The reader gives up on what is left after this. */
 const READ_BUDGET_MS = 45_000;
+/**
+ * Longer when there is a browser to draw with: a page takes seconds to settle, and the reader only
+ * reaches for one after the plain pages have given nothing. It runs in the background, with the
+ * saved times already on screen, so the wait costs the person nothing.
+ */
+const RENDER_BUDGET_MS = 80_000;
 
 function toInput(mosque: Mosque): MosqueInput {
   return {
@@ -241,11 +250,14 @@ export async function refreshSingleMosqueIqama(
     return res;
   };
 
+  // The site's own pages are read as text first; a browser is only reached for when they hold nothing.
+  const drawing = canRender();
   const outcome = await readMosque(toInput(mosque), {
     fetchText: capture,
     today,
     where,
-    budgetMs: READ_BUDGET_MS,
+    ...(drawing ? { render: renderPage } : {}),
+    budgetMs: drawing ? RENDER_BUDGET_MS : READ_BUDGET_MS,
     log: (message) => console.log(`[Iqama] ${mosque.name}: ${message}`),
   });
 
