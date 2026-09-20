@@ -7,7 +7,7 @@
     "dev": "expo start",
     "build": "expo export",
     "lint": "tsc --noEmit",
-    "test": "jest",
+    "test": "node scripts/test.mjs",
     "android": "expo run:android",
     "ios": "expo run:ios"
   },
@@ -34,7 +34,9 @@
     "zustand": "^4.5.0"
   },
   "devDependencies": {
+    "@types/node": "^20.11.0",
     "@types/react": "~18.2.0",
+    "tsx": "^4.11.0",
     "typescript": "^5.4.0"
   }
 }

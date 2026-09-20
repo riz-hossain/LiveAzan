@@ -1,71 +1,101 @@
 /**
  * Iqama discovery — runs entirely on the device.
  *
- * Source priority for mosque list:
+ * Source priority for the mosque list:
  *  1. Backend DB (authoritative, pre-enriched) — used when running
  *  2. Bundled local research data (offline, ships with the app)
  *  3. OpenStreetMap Overpass API (public, no auth, last resort)
  *
- * Iqama time enrichment (applied to whichever source is used):
- *  1. Backend iqamaSchedules / local bundle iqamaTimes — used if present
- *  2. MAWAQIT direct API — matched by name + location
- *  3. Mosque website scrape — for mosques with a website but no MAWAQIT record
+ * Iqama times:
+ *  - In the list, only what is cheap and safe: the bundled research, and what
+ *    MAWAQIT's one search request says for the mosques it lists.
+ *  - For the mosque a person opens (refreshSingleMosqueIqama), everything: its own
+ *    timetable plugin, its web page and its MAWAQIT listing, cross-checked, by the
+ *    shared reader in packages/shared/src/iqama. That reader refuses what it cannot
+ *    stand behind (a page for another season, a table that does not say which time
+ *    is the iqama) rather than guess, because a wrong time is worse than none.
+ *  - When a mosque publishes nothing that can be read, the nearest one that does can
+ *    be offered (borrowNearbyIqama), labelled as the neighbour's and approximate.
  *
- * All results are cached to AsyncStorage for offline use.
  * No backend proxy is needed — native apps can call any API directly.
  */
 
 import type { Mosque, IqamaSchedule } from "@live-azan/shared";
-import { Prayer } from "@live-azan/shared";
+import {
+  Prayer,
+  borrowFromNeighbour,
+  distanceKm,
+  metaFromBorrowed,
+  metaFromOutcome,
+  offsetHoursForZone,
+  readMosque,
+  todayInZone,
+  zoneForPlace,
+  type FetchText,
+  type IqamaMeta,
+  type MosqueInput,
+  type Where,
+  type Ymd,
+} from "@live-azan/shared";
 import { fetchMosquesNearby } from "./api";
-import {
-  searchNearby,
-  getByUuid,
-  findBestMatch,
-  extractIqamaTimes,
-  normalizeTime,
-  type IqamaTimes,
-} from "./mawaqitService";
-import {
-  getCached,
-  setCached,
-  nearbyMosquesKey,
-  iqamaKey,
-  NEARBY_MOSQUE_TTL,
-  IQAMA_TTL,
-} from "./cache";
+import { findMatch, searchNearby, type IqamaTimes } from "./mawaqitService";
+import { fetchText } from "./http";
+import { setCached, nearbyMosquesKey } from "./cache";
 import { searchLocalMosques } from "./localMosqueSearch";
-import {
-  searchOverpassMosques,
-  type OverpassMosque,
-} from "./overpassService";
+import { searchOverpassMosques, type OverpassMosque } from "./overpassService";
 
 // ─── Public types ─────────────────────────────────────────────────────────────
 
 export interface DiscoveredMosque extends Mosque {
-  discoveredIqama?: IqamaTimes;   // iqama times found during this session
-  iqamaSource?: "mawaqit" | "website" | "manual";
-  iqamaLastFetched?: string;      // ISO string
+  discoveredIqama?: IqamaTimes;   // iqama times found for the list (bundled research, or MAWAQIT's search)
+  maghribRule?: string;           // how the research recorded Maghrib when it was not a clock time: "sunset+5"
+  iqamaSource?: "mawaqit" | "website" | "plugin" | "nearby" | "manual";
+  iqamaLastFetched?: string;      // ISO string; for bundled research, the day it was researched
+}
+
+// ─── The mosque's own day ─────────────────────────────────────────────────────
+
+/**
+ * The day it is at the mosque, and where the mosque is, for the reader. A timetable is
+ * for the mosque's day and its sunset is the mosque's sunset, so both are worked out
+ * from the mosque's own time zone where that is known (Canadian mosques, by province)
+ * and from the phone's where it is not.
+ */
+export function mosqueDay(
+  mosque: Pick<Mosque, "latitude" | "longitude" | "province" | "country">,
+  now: Date = new Date()
+): { today: Ymd; where: Where } {
+  const zone = zoneForPlace({ province: mosque.province, country: mosque.country, longitude: mosque.longitude });
+  const today = todayInZone(zone, now);
+  const offset = zone ? offsetHoursForZone(today, zone) : undefined;
+  return {
+    today,
+    where: { lat: mosque.latitude, lon: mosque.longitude, ...(offset !== undefined ? { utcOffsetHours: offset } : {}) },
+  };
 }
 
 // ─── Main entry point ─────────────────────────────────────────────────────────
 
 /**
- * Discover nearby mosques and their iqama times.
+ * Discover nearby mosques and what is cheaply known of their iqama times.
  *
- * Priority order:
  *  1. Our backend (pre-enriched, curated) — use iqamaSchedules if present
- *  2. MAWAQIT direct — for backend mosques missing iqama + new discoveries
- *  3. Website scrape — for mosques not on MAWAQIT
+ *  2. The bundled research — kept as saved times, labelled as such where shown
+ *  3. MAWAQIT's search, for a mosque with nothing yet — only a strong match by name
+ *     and place counts
  *
- * Results are cached to AsyncStorage.
+ * Websites are not read here: that is a few requests a mosque and the list can be
+ * dozens long. They are read for the one a person opens.
+ *
+ * The list is cached to AsyncStorage. Per-mosque iqama is not: what is cached for a
+ * mosque is what was last read for it, and a list of bundled research must not
+ * overwrite that.
  */
 export async function discoverNearbyIqama(
   lat: number,
   lon: number
 ): Promise<DiscoveredMosque[]> {
   // Fetch backend, MAWAQIT, and Overpass in parallel.
-  // Overpass is a last-resort source; MAWAQIT is always used for enrichment.
   const localMosques = searchLocalMosques(lat, lon, 25);
   const [backendResponse, mawaqitMosques, overpassResponse] =
     await Promise.allSettled([
@@ -102,11 +132,10 @@ export async function discoverNearbyIqama(
 
   console.log(`[Discovery] using source: ${sourceLabel} (${sourceMosques.length} mosques)`);
 
-  // Start with source mosques — backend (authoritative) or local bundle (offline fallback)
   const discovered: DiscoveredMosque[] = [];
 
   for (const bm of sourceMosques) {
-    // If the mosque already has iqama times (backend schedules or local bundle), use them directly
+    // Times the mosque already came with (backend schedules, or the bundled research) are kept.
     const hasBackendIqama =
       (bm as any).iqamaSchedules && (bm as any).iqamaSchedules.length > 0;
     const hasLocalIqama =
@@ -121,40 +150,18 @@ export async function discoverNearbyIqama(
       continue;
     }
 
-    // Backend mosque has no iqama yet — try MAWAQIT
-    const mawaqitMatch = findBestMatch(mawaqit, bm.name, bm.latitude, bm.longitude);
-    let discoveredIqama: IqamaTimes | undefined;
-    let source: "mawaqit" | "website" | "manual" | undefined;
-
-    if (mawaqitMatch) {
-      const iqama = extractIqamaTimes(mawaqitMatch);
-      if (Object.keys(iqama).length > 0) {
-        discoveredIqama = iqama;
-        source = "mawaqit";
-      }
-    }
-
-    // Still nothing — try website scrape
-    if (!discoveredIqama && bm.website) {
-      const scraped = await scrapeWebsiteIqama(bm.website);
-      if (Object.keys(scraped.iqamaTimes).length > 0) {
-        discoveredIqama = scraped.iqamaTimes;
-        source = "website";
-      }
-      // Merge scraped metadata onto the mosque record if not already set
-      if (scraped.services && !(bm as any).services?.length) {
-        (bm as any).services = scraped.services;
-      }
-      if (scraped.hours && !(bm as any).hours) {
-        (bm as any).hours = scraped.hours;
-      }
-    }
-
+    // No times yet — is it on MAWAQIT? Only if the listing is this mosque.
+    const match = findMatch(mawaqit, bm);
     discovered.push({
       ...bm,
-      discoveredIqama,
-      iqamaSource: source,
-      iqamaLastFetched: source ? new Date().toISOString() : bm.iqamaLastFetched,
+      ...(match?.day
+        ? {
+            discoveredIqama: match.day.iqama,
+            iqamaSource: "mawaqit" as const,
+            iqamaLastFetched: new Date().toISOString(),
+            mawaqitId: bm.mawaqitId ?? match.uuid,
+          }
+        : {}),
     });
   }
 
@@ -162,7 +169,7 @@ export async function discoverNearbyIqama(
   // (new discoveries — will eventually be submitted/added to backend)
   for (const m of mawaqit) {
     const alreadyCovered = discovered.some(
-      (d) => haversineKm(d.latitude, d.longitude, m.latitude, m.longitude) < 0.2
+      (d) => distanceKm(d.latitude, d.longitude, m.latitude, m.longitude) < 0.2
     );
     if (alreadyCovered) continue;
 
@@ -179,9 +186,13 @@ export async function discoverNearbyIqama(
       hasLiveStream: false,
       verified: false,
       mawaqitId: m.uuid,
-      iqamaSource: "mawaqit" as const,
-      iqamaLastFetched: new Date().toISOString(),
-      discoveredIqama: extractIqamaTimes(m),
+      ...(m.day
+        ? {
+            iqamaSource: "mawaqit" as const,
+            iqamaLastFetched: new Date().toISOString(),
+            discoveredIqama: m.day.iqama,
+          }
+        : {}),
     });
   }
 
@@ -189,7 +200,7 @@ export async function discoverNearbyIqama(
   // gaps for newly opened mosques not in backend/local bundle yet)
   for (const m of overpass) {
     const alreadyCovered = discovered.some(
-      (d) => haversineKm(d.latitude, d.longitude, m.latitude, m.longitude) < 0.15
+      (d) => distanceKm(d.latitude, d.longitude, m.latitude, m.longitude) < 0.15
     );
     if (alreadyCovered) continue;
     discovered.push(mapOverpassToDiscovered(m));
@@ -197,171 +208,120 @@ export async function discoverNearbyIqama(
 
   // Sort by distance to user
   discovered.sort((a, b) =>
-    haversineKm(lat, lon, a.latitude, a.longitude) -
-    haversineKm(lat, lon, b.latitude, b.longitude)
+    distanceKm(lat, lon, a.latitude, a.longitude) -
+    distanceKm(lat, lon, b.latitude, b.longitude)
   );
 
   const withIqama = discovered.filter(d => d.discoveredIqama && Object.keys(d.discoveredIqama).length > 0);
   console.log(`[Discovery] final: ${discovered.length} mosques, ${withIqama.length} with iqama times`);
 
-  // Cache the merged results
   await setCached(nearbyMosquesKey(lat, lon), discovered);
-
-  // Cache individual iqama schedules
-  for (const mosque of discovered) {
-    if (mosque.discoveredIqama && Object.keys(mosque.discoveredIqama).length > 0) {
-      const schedules = iqamaTimesToSchedules(mosque.id, mosque.discoveredIqama);
-      await setCached(iqamaKey(mosque.id), {
-        schedules,
-        source: mosque.iqamaSource,
-        lastFetched: mosque.iqamaLastFetched,
-      });
-    }
-  }
-
   return discovered;
 }
 
-/**
- * Fetch full iqama detail for a single mosque.
- * Tries: cached data → MAWAQIT direct → website scrape.
- */
-export async function refreshSingleMosqueIqama(mosque: Mosque): Promise<{
-  iqamaTimes: IqamaTimes;
-  source: "mawaqit" | "website" | "manual" | null;
+// ─── One mosque, read properly ───────────────────────────────────────────────
+
+export interface RefreshResult {
+  /** All five, or nothing: a reading that could not be stood behind is not shown. */
+  times: IqamaTimes;
+  jumuah?: string;
+  meta: IqamaMeta | null;
+  /** Why the sources that failed failed, in words for a person. */
+  problems: string[];
   scrapedMeta?: { services?: string[]; hours?: string };
-}> {
-  // Try MAWAQIT first
-  const mawaqitId = mosque.mawaqitId;
-  if (mawaqitId) {
-    const full = await getByUuid(mawaqitId);
-    if (full) {
-      const iqamaTimes = extractIqamaTimes(full);
-      if (Object.keys(iqamaTimes).length > 0) {
-        await cacheIqama(mosque.id, iqamaTimes, "mawaqit");
-        return { iqamaTimes, source: "mawaqit" };
-      }
-    }
-  } else {
-    // Search MAWAQIT by location — use 1 km radius so GPS drift doesn't miss the mosque
-    const candidates = await searchNearby(mosque.latitude, mosque.longitude, 1000);
-    const match = findBestMatch(
-      candidates,
-      mosque.name,
-      mosque.latitude,
-      mosque.longitude
-    );
-    if (match) {
-      const full = await getByUuid(match.uuid);
-      const iqamaTimes = full ? extractIqamaTimes(full) : extractIqamaTimes(match);
-      if (Object.keys(iqamaTimes).length > 0) {
-        await cacheIqama(mosque.id, iqamaTimes, "mawaqit");
-        return { iqamaTimes, source: "mawaqit" };
-      }
-    }
-  }
-
-  // Fallback: mosque website
-  if (mosque.website) {
-    const scraped = await scrapeWebsiteIqama(mosque.website);
-    if (Object.keys(scraped.iqamaTimes).length > 0) {
-      await cacheIqama(mosque.id, scraped.iqamaTimes, "website");
-      return {
-        iqamaTimes: scraped.iqamaTimes,
-        source: "website",
-        scrapedMeta: { services: scraped.services, hours: scraped.hours },
-      };
-    }
-    // Even if no iqama times found, return any scraped metadata
-    if (scraped.services || scraped.hours) {
-      return {
-        iqamaTimes: {},
-        source: null,
-        scrapedMeta: { services: scraped.services, hours: scraped.hours },
-      };
-    }
-  }
-
-  return { iqamaTimes: {}, source: null };
 }
 
-// ─── Website scraping (fallback) ─────────────────────────────────────────────
+/** Longest a person is asked to wait for one mosque. The reader gives up on what is left after this. */
+const READ_BUDGET_MS = 45_000;
 
-export interface ScrapedMosqueData {
-  iqamaTimes: IqamaTimes;
-  services?: string[];
-  hours?: string;
+function toInput(mosque: Mosque): MosqueInput {
+  return {
+    name: mosque.name,
+    latitude: mosque.latitude,
+    longitude: mosque.longitude,
+    website: mosque.website ?? null,
+    mawaqitId: mosque.mawaqitId ?? null,
+  };
 }
 
 /**
- * Fetch a mosque website and extract iqama times, services, and hours using regex.
- * Works for ~60% of mosque websites that post schedules as text.
- * No HTML parser needed — raw text matching is sufficient.
+ * Read one mosque's iqama times for today: the mosque's own timetable plugin, its web
+ * page and its MAWAQIT listing, checked against each other and the sun. Nothing comes
+ * back when nothing could be stood behind, with the reasons in `problems`.
  */
-export async function scrapeWebsiteIqama(url: string): Promise<ScrapedMosqueData> {
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 8_000);
-  try {
-    const res = await fetch(url, {
-      headers: { "User-Agent": "LiveAzan/1.0 (mosque schedule lookup)" },
-      signal: controller.signal,
-    });
-    if (!res.ok) return { iqamaTimes: {} };
+export async function refreshSingleMosqueIqama(
+  mosque: Mosque,
+  now: Date = new Date()
+): Promise<RefreshResult> {
+  const { today, where } = mosqueDay(mosque, now);
 
-    const html = await res.text();
-    // Strip tags to get readable text
-    const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+  // The home page, kept as it goes by, for the services and opening hours it mentions.
+  let homeHtml = "";
+  const home = (mosque.website ?? "").replace(/\/+$/, "");
+  const capture: FetchText = async (url, options) => {
+    const res = await fetchText(url, options);
+    if (!homeHtml && home && url.replace(/\/+$/, "") === home && res.status < 400 && /html/i.test(res.contentType)) {
+      homeHtml = res.body;
+    }
+    return res;
+  };
 
-    const iqamaTimes = parseIqamaFromText(text);
+  const outcome = await readMosque(toInput(mosque), {
+    fetchText: capture,
+    today,
+    where,
+    budgetMs: READ_BUDGET_MS,
+    log: (message) => console.log(`[Iqama] ${mosque.name}: ${message}`),
+  });
+
+  let scrapedMeta: RefreshResult["scrapedMeta"];
+  if (homeHtml) {
+    const text = homeHtml.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
     const services = parseServicesFromText(text);
     const hours = parseHoursFromText(text);
-    return {
-      iqamaTimes,
-      services: services.length > 0 ? services : undefined,
-      hours: hours ?? undefined,
-    };
-  } catch {
-    return { iqamaTimes: {} };
-  } finally {
-    clearTimeout(timeoutId);
-  }
-}
-
-/**
- * Parse iqama times from plain text.
- * Exported for testing and reuse in the research script.
- */
-export function parseIqamaFromText(text: string): IqamaTimes {
-  const result: IqamaTimes = {};
-  const lower = text.toLowerCase();
-
-  const prayerPatterns: Array<[keyof IqamaTimes, RegExp]> = [
-    ["fajr", /fajr/],
-    ["dhuhr", /dhuhr|zuhr|zohr/],
-    ["asr", /asr|'asr/],
-    ["maghrib", /maghrib|magrib/],
-    ["isha", /isha|'isha|esha/],
-  ];
-
-  // Time pattern: "6:30", "06:30", "6:30 AM", "6:30PM"
-  const timeRe = /(\d{1,2}:\d{2})\s*(am|pm)?/gi;
-
-  for (const [prayer, nameRe] of prayerPatterns) {
-    const idx = lower.search(nameRe);
-    if (idx === -1) continue;
-
-    // Look for a time within 100 characters after the prayer name
-    const slice = text.slice(idx, idx + 100);
-    timeRe.lastIndex = 0;
-    const match = timeRe.exec(slice);
-    if (match) {
-      const raw = match[1] + (match[2] ? ` ${match[2]}` : "");
-      result[prayer] = normalizeTime(raw);
+    if (services.length > 0 || hours) {
+      scrapedMeta = { services: services.length > 0 ? services : undefined, hours: hours ?? undefined };
     }
   }
 
-  return result;
+  return {
+    times: outcome.reading?.times ?? {},
+    ...(outcome.reading?.jumuah ? { jumuah: outcome.reading.jumuah } : {}),
+    meta: metaFromOutcome(outcome),
+    problems: outcome.problems,
+    scrapedMeta,
+  };
 }
+
+/**
+ * When a mosque publishes nothing that can be read: the nearest one that does, from
+ * the mosques already known nearby. The result is that neighbour's, said so in its
+ * meta, and it is the caller's to show as approximate — never as this mosque's own.
+ */
+export async function borrowNearbyIqama(
+  mosque: Mosque,
+  nearby: Mosque[],
+  now: Date = new Date()
+): Promise<{ times: IqamaTimes; jumuah?: string; meta: IqamaMeta } | null> {
+  const { today, where } = mosqueDay(mosque, now);
+  const candidates = nearby
+    .filter((m) => m.id !== mosque.id && (m.website || m.mawaqitId))
+    .map(toInput);
+  const borrowed = await borrowFromNeighbour(
+    toInput(mosque),
+    candidates,
+    { fetchText, today, where, log: (message) => console.log(`[Iqama] nearby: ${message}`) },
+    { radiusKm: 25, tries: 4, budgetMs: 60_000 }
+  );
+  if (!borrowed) return null;
+  return {
+    times: borrowed.reading.times,
+    ...(borrowed.reading.jumuah ? { jumuah: borrowed.reading.jumuah } : {}),
+    meta: metaFromBorrowed(borrowed),
+  };
+}
+
+// ─── Services and hours (scraped from the home page) ──────────────────────────
 
 /**
  * Detect service keywords from scraped mosque website text.
@@ -434,39 +394,15 @@ function mapOverpassToDiscovered(m: OverpassMosque): DiscoveredMosque {
   };
 }
 
-function haversineKm(
-  lat1: number,
-  lon1: number,
-  lat2: number,
-  lon2: number
-): number {
-  const R = 6371;
-  const dLat = ((lat2 - lat1) * Math.PI) / 180;
-  const dLon = ((lon2 - lon1) * Math.PI) / 180;
-  const a =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos((lat1 * Math.PI) / 180) *
-      Math.cos((lat2 * Math.PI) / 180) *
-      Math.sin(dLon / 2) ** 2;
-  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-}
-
-async function cacheIqama(
+/**
+ * The rows the screens and the store keep for a mosque's times: one per prayer, and
+ * Jumu'ah when it is known.
+ */
+export function schedulesFor(
   mosqueId: string,
-  iqamaTimes: IqamaTimes,
-  source: "mawaqit" | "website"
-): Promise<void> {
-  const schedules = iqamaTimesToSchedules(mosqueId, iqamaTimes);
-  await setCached(iqamaKey(mosqueId), {
-    schedules,
-    source,
-    lastFetched: new Date().toISOString(),
-  });
-}
-
-function iqamaTimesToSchedules(
-  mosqueId: string,
-  times: IqamaTimes
+  times: IqamaTimes,
+  jumuah: string | undefined,
+  kind: string
 ): IqamaSchedule[] {
   const now = new Date().toISOString();
   const prayerMap: Array<[keyof IqamaTimes, Prayer]> = [
@@ -477,13 +413,23 @@ function iqamaTimesToSchedules(
     ["isha", Prayer.ISHA],
   ];
 
-  return prayerMap
+  const rows: IqamaSchedule[] = prayerMap
     .filter(([key]) => times[key])
     .map(([key, prayer]) => ({
-      id: `${mosqueId}_${prayer}_discovered`,
+      id: `${mosqueId}_${prayer}_${kind}`,
       mosqueId,
       prayer,
       iqamaTime: times[key]!,
       effectiveFrom: now,
     }));
+  if (jumuah) {
+    rows.push({
+      id: `${mosqueId}_${Prayer.JUMMAH}_${kind}`,
+      mosqueId,
+      prayer: Prayer.JUMMAH,
+      iqamaTime: jumuah,
+      effectiveFrom: now,
+    });
+  }
+  return rows;
 }

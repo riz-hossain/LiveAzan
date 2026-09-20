@@ -41,6 +41,20 @@ def build_iqama_times(raw: dict) -> dict:
     return result
 
 
+def build_maghrib_rule(raw: dict):
+    """Maghrib as the mosque states it when it is not a clock time: "sunset+5".
+
+    A clock time would be right on the day it was written down and wrong a month
+    later, as sunset moves; the app works this one out for the day it is shown.
+    """
+    v = raw.get("maghrib")
+    if isinstance(v, str):
+        rule = re.sub(r"\s+", "", v.strip().lower())
+        if re.match(r"^sunset\+\d{1,2}$", rule):
+            return rule
+    return None
+
+
 def process_file(json_file: Path) -> list:
     """Read one city JSON file and return a list of flattened mosque records."""
     try:
@@ -91,6 +105,10 @@ def process_file(json_file: Path) -> list:
             "hasLiveStream": bool(m.get("hasLiveStream", False)),
             "verified": bool(m.get("verified", True)),
             "iqamaTimes": iqama_times,
+            # What the research could not keep as a clock time, and when it was done: the
+            # app shows these times as saved, and works Maghrib out for the day.
+            "maghribRule": build_maghrib_rule(m.get("iqamaTimes") or {}),
+            "researchedOn": data.get("lastResearched") or None,
             "description": m.get("description") or None,
             "denomination": m.get("denomination") or None,
             "hours": m.get("hours") or None,

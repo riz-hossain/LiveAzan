@@ -239,6 +239,11 @@ describe("which mosque is which", () => {
     assert.equal(samePlace(a, { name: "Al Noor Islamic Centre", latitude: 51.0508, longitude: -114.0709 }), true);
   });
 
+  it("does not mind accents: a Quebec mosque is the same one with or without them", () => {
+    const quebec = { name: "Mosquée de Québec", latitude: 46.8, longitude: -71.2 };
+    assert.equal(samePlace(quebec, { name: "mosquee de quebec", latitude: 46.804, longitude: -71.2 }), true);
+  });
+
   it("does not take two mosques down one street for one", () => {
     assert.equal(samePlace(a, { name: "Dar ul Hikmah", latitude: 51.0536, longitude: -114.07 }), false);
   });

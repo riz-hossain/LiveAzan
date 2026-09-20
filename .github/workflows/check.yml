@@ -4,9 +4,10 @@ name: Check
 # type-checked on a plain runner and runs the tests that need no network, so a
 # broken change is seen in a minute rather than on somebody's phone.
 #
-# The mobile app is not type-checked here yet: it has errors of its own today
-# (expo-notifications' trigger types), and a check that starts red is one nobody
-# reads. Fixing those is what turns it on.
+# The mobile app is type-checked as a ratchet: it has seven errors of its own today
+# (expo-notifications' trigger types, and one in the OpenStreetMap service), and a
+# check that starts red is one nobody reads. So it fails on an eighth, and fixing
+# the seven turns it into a plain type-check.
 on:
   push:
     branches: ["**"]
@@ -33,8 +34,21 @@ jobs:
       - name: Type-check the server
         working-directory: server
         run: npx tsc --noEmit
+      - name: Type-check the mobile app (no new errors)
+        working-directory: apps/mobile
+        run: |
+          # Known: 6 in services/notifications.ts, 1 in services/overpassService.ts.
+          npx tsc --noEmit | tee /tmp/mobile-tsc.txt || true
+          errors=$(grep -c "error TS" /tmp/mobile-tsc.txt || true)
+          echo "$errors type errors in the mobile app (7 known)"
+          test "$errors" -le 7
       - name: Reading a mosque's iqama times, offline
         # The reader, the feeds it understands, and the pipeline that puts them
         # together, on made-up pages and a made-up network. Nothing to flake.
         working-directory: packages/shared
+        run: npm test
+      - name: The app's iqama logic, without a phone
+        # The store and services that use the reader, with the phone-only modules
+        # (storage, secure store) faked, a made-up network and a pinned clock.
+        working-directory: apps/mobile
         run: npm test

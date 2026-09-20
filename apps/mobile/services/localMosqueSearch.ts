@@ -5,6 +5,9 @@
  * /data/mosques/ research files and committed to the repo. It is a
  * fallback for when the backend is unavailable; the backend always takes
  * priority when it is running.
+ *
+ * Its iqama times are what a person found when the mosque was researched
+ * (`researchedOn`), so they are shown as saved times and looked at again.
  */
 
 import mosqueIndex from "../assets/data/mosques-index.json";
@@ -28,6 +31,10 @@ interface LocalMosqueRecord {
   hasLiveStream: boolean;
   verified: boolean;
   iqamaTimes: IqamaTimes;
+  /** Maghrib as the research recorded it when it was not a clock time: "sunset+5". */
+  maghribRule?: string | null;
+  /** The day the research was done, "YYYY-MM-DD". */
+  researchedOn?: string | null;
   description?: string | null;
   denomination?: string | null;
   hours?: string | null;
@@ -62,10 +69,12 @@ export function searchLocalMosques(
       hasLiveStream: m.hasLiveStream,
       verified: m.verified,
       iqamaSource: "manual" as const,
-      iqamaLastFetched: undefined,
+      // For bundled research, the day it was researched: these times are saved, not read today.
+      iqamaLastFetched: m.researchedOn ?? undefined,
       discoveredIqama: Object.keys(m.iqamaTimes).length > 0
         ? m.iqamaTimes
         : undefined,
+      maghribRule: m.maghribRule ?? undefined,
       description: m.description ?? undefined,
       denomination: m.denomination ?? undefined,
       hours: m.hours ?? undefined,
