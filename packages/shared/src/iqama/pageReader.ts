@@ -746,6 +746,35 @@ function lineDates(text: string, where: Where_, today: Ymd): DateEvidence[] {
   return out;
 }
 
+/** Lines above a block that a heading may sit in, before a day-picker is walked back over. */
+const ABOVE = 5;
+/** A day tab is short; a paragraph that happens to hold a date is not one. */
+const PICKER_CHARS = 44;
+/** Two lines with no date in them end a strip of tabs; a widget puts a Hijri date under each. */
+const PICKER_GAP = 2;
+
+/**
+ * Where a block's heading may start.
+ *
+ * A few lines above it, normally. But a widget that prints today's times under a strip of day
+ * tabs -- Sunday, Monday ... Saturday, each on its own line with its Hijri date beneath -- puts
+ * today's own date a dozen lines up, and reading only the near end of that strip makes a widget
+ * showing today look like next Saturday's and refuses it. So the window is walked back over a
+ * run of short lines that hold no times and no prayer names, which is what such a strip is.
+ */
+function headingFrom(lines: string[], first: number, today: Ymd): number {
+  let start = Math.max(0, first - ABOVE);
+  let sinceDate = 0;
+  while (start > 0 && sinceDate <= PICKER_GAP) {
+    const text = lines[start - 1];
+    if (text.length > PICKER_CHARS || hasTime(text)) break;
+    if (PRAYER_KEYS.some((p) => { NAME_RE[p].lastIndex = 0; return NAME_RE[p].test(text); })) break;
+    sinceDate = lineDates(text, "above", today).length > 0 ? 0 : sinceDate + 1;
+    start -= 1;
+  }
+  return start;
+}
+
 /**
  * What the page says about which days the block at lines first..last is for.
  *
@@ -755,7 +784,7 @@ function lineDates(text: string, where: Where_, today: Ymd): DateEvidence[] {
 function datesNear(lines: string[], first: number, last: number, today: Ymd): DateEvidence[] {
   const found: DateEvidence[] = [];
   const spans: Array<[number, number, Where_]> = [
-    [Math.max(0, first - 5), first, "above"],
+    [headingFrom(lines, first, today), first, "above"],
     [first, last + 1, "inside"],
     [last + 1, last + 4, "below"],
   ];
