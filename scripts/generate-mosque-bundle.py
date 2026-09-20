@@ -108,7 +108,8 @@ def process_file(json_file: Path) -> list:
             # What the research could not keep as a clock time, and when it was done: the
             # app shows these times as saved, and works Maghrib out for the day.
             "maghribRule": build_maghrib_rule(m.get("iqamaTimes") or {}),
-            "researchedOn": data.get("lastResearched") or None,
+            # the day this mosque's times were read (the enrichment script records one), else the file's
+            "researchedOn": m.get("iqamaAsOf") or data.get("lastResearched") or None,
             "description": m.get("description") or None,
             "denomination": m.get("denomination") or None,
             "hours": m.get("hours") or None,

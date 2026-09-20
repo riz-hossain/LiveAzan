@@ -115,6 +115,7 @@ describe("layouts that are read", () => {
     assert.equal(found.times.isha, "21:00");
     assert.equal(found.times.maghrib, hhmm(Math.round(sun.sunset)));
     assert.deepEqual(found.computed, ["maghrib"]);
+    assert.equal(found.maghribRule, "sunset");
   });
 
   it("one time each, Maghrib in words, Jumma after Isha ignored", () => {
@@ -129,6 +130,17 @@ describe("layouts that are read", () => {
     assert.equal(found.times.isha, "21:10");
     assert.equal(found.times.maghrib, hhmm(Math.round(sun.sunset) + 3));
     assert.equal(found.how, "guessed"); // only a guess, and said so
+    assert.equal(found.maghribRule, "sunset+3");
+  });
+
+  it("says Maghrib as the rule the page gave it by, so that it can be kept: 'sunset + 5' and 'after adhan'", () => {
+    const rows = (maghrib: string) =>
+      page(["Fajr Iqama 6:15", "Dhuhr Iqama 1:45", "Asr Iqama 5:45", `Maghrib Iqama ${maghrib}`, "Isha Iqama 9:00"].map((l) => `<p>${l}</p>`).join(""));
+    assert.equal(read(rows("Sunset + 5"))?.maghribRule, "sunset+5");
+    assert.equal(read(rows("5 min after Adhan"))?.maghribRule, "sunset+6"); // the adhan follows the sun by a minute
+    // a Maghrib that is a clock time has no rule
+    assert.equal(read(rows("7:28"))?.maghribRule, undefined);
+    assert.equal(read(rows("7:28"))?.times.maghrib, "19:28");
   });
 
   it("the Jumah spelling, and its Bayaan, end Isha's group", () => {

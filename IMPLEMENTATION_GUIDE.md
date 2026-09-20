@@ -266,6 +266,7 @@ npx prisma db seed
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
+| `GET` | `/api/mosques/:id/iqama` | Current iqama times (what the app asks for) |
 | `GET` | `/api/iqama/:mosqueId` | Get current iqama schedule |
 | `GET` | `/api/iqama/:mosqueId?date=YYYY-MM-DD` | Get iqama for specific date |
 | `PUT` | `/api/iqama/:mosqueId` | Update iqama times (mosque admin) |
@@ -694,14 +695,27 @@ The single-source pieces (`extractIqama`, `readPlugin`, `readMawaqit`, `readWebs
 - **Colour says how far to trust the times.** Green is the mosque's own reading of today; amber is worth a second look (a source disagreed, or the sun objected); red is old, guessed, or a neighbour's. The notes under the badge say why, in words (`packages/shared/src/iqama/present.ts`).
 - **Saved research keeps its Maghrib.** Most mosques in the bundle give Maghrib as "sunset+5". `scripts/generate-mosque-bundle.py` keeps that as `maghribRule`, and the app works it out for the day, so it moves with the year instead of going stale as a clock time would. It also keeps `researchedOn`.
 
+### On the server
+
+- **The refresh job** (`server/src/jobs/iqamaRefreshJob.ts`) runs every Sunday at 2:00 AM for the cities where someone has a primary mosque, and reads each stale mosque with the same reader (`server/src/services/iqamaEnrichment.ts`). `POST /api/admin/enrich-mosque/:id` and `enrich-city` do the same by hand.
+- **It stores only what could be shown to everyone without a word of caution** (`usable` in `iqamaPlan.ts`). A page that names no column, a reading that raised a warning, and two sources that disagree are left alone and the previous times stay: the phone can label such a reading, a database row cannot. The reason is in the result's `why`.
+- **It writes rows only when a time has changed**, closing the old row as of the mosque's own today and keeping it as history. (The job it replaced added five rows per mosque per run whether or not anything had changed.)
+- **The API always sends clock times.** The research the database is seeded from writes Maghrib as "sunset+5" for most mosques; the seed stores that text, and `resolveTimes` works it out for today at the mosque before any route sends it. A row that is neither a time nor such a rule is left out.
+- **`GET /api/mosques/:id/iqama`** is what the app calls for a mosque's times, and `GET /api/mosques/nearby` takes `radiusKm` as the app sends it, as well as `radius`.
+- **The server runs from source with tsx**, in Docker as in development, because it imports the shared package (also source). `npm run build` is a type-check. The images install OpenSSL, which Prisma needs and `node:20-alpine` no longer ships. Shell scripts are kept LF by `.gitattributes`, so a Windows checkout does not put carriage returns in them.
+- **A Maghrib the page gives as "sunset + 5" is stored as that rule**, as the seed stores it, and served as the time it comes to today. It does not go stale, and the weekly run does not rewrite it.
+- **The research script** (`npx tsx scripts/enrich-iqama.ts --city Waterloo --province Ontario`) uses the same reader to fill `data/mosques/**`, with the same rule about what may be written: what it leaves alone is listed with the reason, for a person to look at. It records the day each mosque was read as `iqamaAsOf`, which the bundle generator and the seed prefer to the file's `lastResearched`. Try it without touching the real data with `LIVEAZAN_DATA_ROOT=<a copy> npx tsx scripts/enrich-iqama.ts ...`.
+- **Known gap: production has no database migrations.** There is no `server/prisma/migrations`, so the production entrypoint's `prisma migrate deploy` does nothing on an empty database (no tables are created) and fails with P3005 on one made with `db push`, as the local setup does. The local setup (`Dockerfile.local`, `db push`) is unaffected. Deciding between an initial migration and `db push` in production is left to whoever runs production.
+
 ### Tests
 
 ```bash
 cd packages/shared && npm test   # the reader and the wording, on made-up pages
 cd apps/mobile && npm test       # the store and services that use it, without a phone
+cd server && npm test            # what is stored and served; set TEST_DATABASE_URL for the database tests
 ```
 
-The shared suite runs offline against made-up pages and a made-up network, and runs on every push in the `Check` workflow. The app's suite runs the real store and services under Node with the two phone-only modules (AsyncStorage, SecureStore) faked, a made-up network, and a pinned clock, so it says the same in any season; it covers what the screens rely on but cannot themselves be tested for: that a slow read never draws over the mosque on screen now, that a server's older times never replace a reading of today, and that a failed look is not repeated on every visit. The app's type-check is a ratchet: `Check` fails on any error beyond the seven that predate it.
+The shared suite runs offline against made-up pages and a made-up network, and runs on every push in the `Check` workflow. The app's suite runs the real store and services under Node with the two phone-only modules (AsyncStorage, SecureStore) faked, a made-up network, and a pinned clock, so it says the same in any season; it covers what the screens rely on but cannot themselves be tested for: that a slow read never draws over the mosque on screen now, that a server's older times never replace a reading of today, and that a failed look is not repeated on every visit. The server's suite has a part that runs against a real Postgres (`TEST_DATABASE_URL`, with the schema pushed; `Check` provides one). The app's type-check is a ratchet: `Check` fails on any error beyond the seven that predate it.
 
 The reader was ported from the floating-clock desktop app's and checked against real mosque pages saved from across Canada: it returns the same times as the original on every page they were compared on. When the reader gets a page wrong, add that page's shape as a test first (`pageReader.test.ts` shows the pattern) and then fix it.
 

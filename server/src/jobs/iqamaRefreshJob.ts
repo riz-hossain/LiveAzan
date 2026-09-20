@@ -1,9 +1,13 @@
 /**
- * Monthly iqama refresh cron job.
+ * Weekly iqama refresh cron job.
  *
- * Runs on the 1st of every month at 2:00 AM server time.
+ * Runs every Sunday at 2:00 AM server time.
  * Finds all cities where at least one user has a primary mosque,
- * then re-fetches iqama times for stale mosques in those cities.
+ * then re-reads iqama times for stale mosques in those cities.
+ *
+ * Weekly, not monthly: a mosque's times change with the seasons and at daylight-saving
+ * changes, and a reading is only ever for the day it was read. A mosque that has not
+ * changed its times costs no rows (see planSchedules in services/iqamaPlan.ts).
  *
  * Result is logged to the IqamaRefreshLog table.
  */
@@ -71,14 +75,14 @@ export async function runIqamaRefreshJob(triggeredBy: "cron" | "admin" = "cron")
 // ─── Cron schedule ────────────────────────────────────────────────────────────
 
 /**
- * Start the monthly cron job.
- * Schedule: 2:00 AM on the 1st of every month.
+ * Start the weekly cron job.
+ * Schedule: 2:00 AM every Sunday.
  */
 export function startIqamaRefreshJob(): void {
-  cron.schedule("0 2 1 * *", () => {
+  cron.schedule("0 2 * * 0", () => {
     runIqamaRefreshJob("cron").catch((err) => {
       console.error("[IqamaRefreshJob] Unhandled error:", err);
     });
   });
-  console.log("[IqamaRefreshJob] Scheduled: 2:00 AM on the 1st of every month");
+  console.log("[IqamaRefreshJob] Scheduled: 2:00 AM every Sunday");
 }

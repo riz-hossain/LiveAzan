@@ -15,8 +15,7 @@ import { useMosqueStore } from "../../stores/mosqueStore";
 import { usePrayerStore } from "../../stores/prayerStore";
 import { getCurrentLocation } from "../../services/location";
 import type { Prayer, IqamaSchedule } from "@live-azan/shared";
-import { notesFor, sourceLabel, toneOf, type Tone } from "@live-azan/shared";
-import { mosqueDay } from "../../services/iqamaDiscovery";
+import { mosqueDay, notesFor, sourceLabel, toneOf, type Tone } from "@live-azan/shared";
 import { TONE_COLOR } from "../../components/toneColors";
 
 const PRAYER_ORDER: Prayer[] = ["FAJR", "DHUHR", "ASR", "MAGHRIB", "ISHA"] as Prayer[];

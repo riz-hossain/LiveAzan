@@ -27,15 +27,11 @@ import {
   distanceKm,
   metaFromBorrowed,
   metaFromOutcome,
-  offsetHoursForZone,
+  mosqueDay,
   readMosque,
-  todayInZone,
-  zoneForPlace,
   type FetchText,
   type IqamaMeta,
   type MosqueInput,
-  type Where,
-  type Ymd,
 } from "@live-azan/shared";
 import { fetchMosquesNearby } from "./api";
 import { findMatch, searchNearby, type IqamaTimes } from "./mawaqitService";
@@ -51,27 +47,6 @@ export interface DiscoveredMosque extends Mosque {
   maghribRule?: string;           // how the research recorded Maghrib when it was not a clock time: "sunset+5"
   iqamaSource?: "mawaqit" | "website" | "plugin" | "nearby" | "manual";
   iqamaLastFetched?: string;      // ISO string; for bundled research, the day it was researched
-}
-
-// ─── The mosque's own day ─────────────────────────────────────────────────────
-
-/**
- * The day it is at the mosque, and where the mosque is, for the reader. A timetable is
- * for the mosque's day and its sunset is the mosque's sunset, so both are worked out
- * from the mosque's own time zone where that is known (Canadian mosques, by province)
- * and from the phone's where it is not.
- */
-export function mosqueDay(
-  mosque: Pick<Mosque, "latitude" | "longitude" | "province" | "country">,
-  now: Date = new Date()
-): { today: Ymd; where: Where } {
-  const zone = zoneForPlace({ province: mosque.province, country: mosque.country, longitude: mosque.longitude });
-  const today = todayInZone(zone, now);
-  const offset = zone ? offsetHoursForZone(today, zone) : undefined;
-  return {
-    today,
-    where: { lat: mosque.latitude, lon: mosque.longitude, ...(offset !== undefined ? { utcOffsetHours: offset } : {}) },
-  };
 }
 
 // ─── Main entry point ─────────────────────────────────────────────────────────

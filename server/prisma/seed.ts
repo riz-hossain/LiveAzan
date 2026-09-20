@@ -38,6 +38,8 @@ interface MosqueSeedEntry {
     jummah: string;
   };
   sources: string[];
+  /** The day the times were read, where that is not the file's lastResearched. */
+  iqamaAsOf?: string;
 }
 
 interface MosqueSeedFile {
@@ -146,6 +148,8 @@ async function main() {
 
     // Upsert each mosque
     for (const m of data.mosques) {
+      // The day this mosque's times were read: its own, where the enrichment script recorded one.
+      const researchedOn = new Date(m.iqamaAsOf ?? data.lastResearched);
       // Use name + city as a composite unique key for upsert.
       // Prisma requires a @@unique for upsert, so we use a raw findFirst + create/update.
       const existing = await prisma.mosque.findFirst({
@@ -168,7 +172,7 @@ async function main() {
             hasLiveStream: m.hasLiveStream,
             verified: m.verified,
             ...(m.mawaqitId ? { mawaqitId: m.mawaqitId } : {}),
-            ...(m.iqamaTimes ? { iqamaSource: "manual", iqamaLastFetched: new Date(data.lastResearched) } : {}),
+            ...(m.iqamaTimes ? { iqamaSource: "manual", iqamaLastFetched: researchedOn } : {}),
           },
         });
         mosqueId = existing.id;
@@ -188,7 +192,7 @@ async function main() {
             verified: m.verified,
             mawaqitId: m.mawaqitId,
             iqamaSource: m.iqamaTimes ? "manual" : undefined,
-            iqamaLastFetched: m.iqamaTimes ? new Date(data.lastResearched) : undefined,
+            iqamaLastFetched: m.iqamaTimes ? researchedOn : undefined,
           },
         });
         mosqueId = created.id;
@@ -196,7 +200,7 @@ async function main() {
 
       // Upsert iqama schedules (one per prayer, effective from seed date)
       if (!m.iqamaTimes) continue;
-      const effectiveFrom = new Date(data.lastResearched);
+      const effectiveFrom = researchedOn;
       const prayers = Object.entries(m.iqamaTimes) as [string, string][];
 
       for (const [prayerName, timeValue] of prayers) {

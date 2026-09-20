@@ -1,6 +1,6 @@
 /**
- * Iqama enrichment CLI — finds iqama times for mosques in a seed JSON file
- * and writes them back. Run this before committing new city data.
+ * Iqama enrichment CLI — reads iqama times for the mosques in a seed JSON file and
+ * writes them back. Run this before committing new city data.
  *
  * Usage:
  *   npx tsx scripts/enrich-iqama.ts --city "Waterloo" --province "Ontario"
@@ -10,23 +10,33 @@
  * After running, review the diff and commit:
  *   git diff data/mosques/
  *   git add data/mosques/ && git commit -m "feat(data): enrich iqama for Waterloo"
+ *
+ * The reading is done by the shared reader (packages/shared/src/iqama), the same one the
+ * app and the server use: the mosque's own timetable plugin, its web page and its MAWAQIT
+ * listing, cross-checked and checked against the sun. What it cannot stand behind it does
+ * not write, and neither does it write a page that names no column, a reading that raised
+ * a warning, or two sources that disagree: those are listed at the end, with the reason,
+ * for a person to look at. A mosque's "sunset+5" Maghrib is kept as the rule it is.
+ *
+ * Each mosque it writes gets `iqamaAsOf`, the day the times were read, which the bundle
+ * and the seed prefer to the file's `lastResearched`.
  */
 
 import * as fs from "fs";
 import * as path from "path";
+import { mosqueDay, readMosque, updateResearch, type ResearchRecord } from "@live-azan/shared";
+import { fetchText } from "../server/src/lib/http";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-interface SeedMosque {
+interface SeedMosque extends ResearchRecord {
   name: string;
   type: string;
   latitude: number;
   longitude: number;
   website?: string | null;
   mawaqitId?: string | null;
-  iqamaTimes?: IqamaTimes | null;
-  sources?: string[];
-  [key: string]: unknown;
+  country?: string;
 }
 
 interface SeedFile {
@@ -34,18 +44,6 @@ interface SeedFile {
   province: string;
   mosques: SeedMosque[];
   [key: string]: unknown;
-}
-
-type IqamaTimes = Partial<Record<"fajr" | "dhuhr" | "asr" | "maghrib" | "isha", string>>;
-
-interface MawaqitMosque {
-  uuid: string;
-  name: string;
-  latitude: number;
-  longitude: number;
-  iqamaCalendar?: Record<string, (string | null)[]>;
-  times?: string[];
-  iqama?: (number | null)[];
 }
 
 // ─── Args ─────────────────────────────────────────────────────────────────────
@@ -76,7 +74,8 @@ function parseArgs(): Args {
 
 // ─── Seed file discovery ──────────────────────────────────────────────────────
 
-const DATA_ROOT = path.join(__dirname, "..", "data", "mosques");
+// LIVEAZAN_DATA_ROOT points it at another copy of the data, to try it out without touching the real one.
+const DATA_ROOT = process.env.LIVEAZAN_DATA_ROOT ?? path.join(__dirname, "..", "data", "mosques");
 
 function findSeedFile(city: string, province: string): string | null {
   const provinceSlug = province.toLowerCase().replace(/\s+/g, "-");
@@ -99,118 +98,6 @@ function findAllSeedFiles(): string[] {
   return files;
 }
 
-// ─── MAWAQIT API ──────────────────────────────────────────────────────────────
-
-const MAWAQIT_BASE = "https://mawaqit.net/en/api/2.0";
-
-async function mawaqitSearch(lat: number, lon: number, radiusM: number): Promise<MawaqitMosque[]> {
-  try {
-    const res = await fetch(`${MAWAQIT_BASE}/mosque/search?lat=${lat}&lon=${lon}&radius=${radiusM}`, {
-      headers: { Accept: "application/json" },
-    });
-    if (!res.ok) return [];
-    const data = await res.json();
-    return Array.isArray(data) ? data : (data.mosques ?? []);
-  } catch {
-    return [];
-  }
-}
-
-async function mawaqitFetch(uuid: string): Promise<MawaqitMosque | null> {
-  try {
-    const res = await fetch(`${MAWAQIT_BASE}/mosque/${uuid}`, { headers: { Accept: "application/json" } });
-    if (!res.ok) return null;
-    return res.json();
-  } catch {
-    return null;
-  }
-}
-
-function bestMatch(candidates: MawaqitMosque[], name: string, lat: number, lon: number): MawaqitMosque | null {
-  let best: MawaqitMosque | null = null;
-  let bestScore = -1;
-  for (const c of candidates) {
-    const dist = haversineKm(lat, lon, c.latitude, c.longitude);
-    if (dist > 0.3) continue;
-    const sim = jaccard(name.toLowerCase(), c.name.toLowerCase());
-    if (sim < 0.4) continue;
-    const score = 0.6 * sim + 0.4 * Math.max(0, 1 - dist / 0.3);
-    if (score > bestScore) { bestScore = score; best = c; }
-  }
-  return best;
-}
-
-function extractIqama(mosque: MawaqitMosque): IqamaTimes {
-  const month = String(new Date().getMonth() + 1);
-  const keys = ["fajr", "dhuhr", "asr", "maghrib", "isha"] as const;
-
-  if (mosque.iqamaCalendar) {
-    const entry = mosque.iqamaCalendar[month] ?? mosque.iqamaCalendar["1"];
-    if (entry && entry.length >= 5) {
-      const result: IqamaTimes = {};
-      for (let i = 0; i < keys.length; i++) {
-        const t = entry[i];
-        if (t && /^\d{1,2}:\d{2}/.test(t)) result[keys[i]] = normTime(t);
-      }
-      if (Object.keys(result).length > 0) return result;
-    }
-  }
-
-  if (mosque.iqama && mosque.times) {
-    const adhanIdx = [0, 2, 3, 4, 5];
-    const result: IqamaTimes = {};
-    for (let i = 0; i < keys.length; i++) {
-      const offset = mosque.iqama[i];
-      const adhan = mosque.times[adhanIdx[i]];
-      if (offset != null && adhan && /^\d{1,2}:\d{2}/.test(adhan)) {
-        result[keys[i]] = addMins(adhan, offset);
-      }
-    }
-    if (Object.keys(result).length > 0) return result;
-  }
-
-  return {};
-}
-
-// ─── Website scraping ─────────────────────────────────────────────────────────
-
-async function scrapeWebsite(url: string): Promise<IqamaTimes> {
-  try {
-    const res = await fetch(url, {
-      headers: { "User-Agent": "LiveAzan/1.0 (mosque schedule lookup)" },
-      signal: AbortSignal.timeout(10_000),
-    });
-    if (!res.ok) return {};
-    const html = await res.text();
-    const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
-    return parseIqama(text);
-  } catch {
-    return {};
-  }
-}
-
-function parseIqama(text: string): IqamaTimes {
-  const result: IqamaTimes = {};
-  const lower = text.toLowerCase();
-  const patterns: Array<[keyof IqamaTimes, RegExp]> = [
-    ["fajr",    /fajr/],
-    ["dhuhr",   /dhuhr|zuhr|zohr/],
-    ["asr",     /asr|'asr/],
-    ["maghrib", /maghrib|magrib/],
-    ["isha",    /isha|'isha|esha/],
-  ];
-  const timeRe = /(\d{1,2}:\d{2})\s*(am|pm)?/gi;
-  for (const [prayer, nameRe] of patterns) {
-    const idx = lower.search(nameRe);
-    if (idx === -1) continue;
-    const slice = text.slice(idx, idx + 100);
-    timeRe.lastIndex = 0;
-    const m = timeRe.exec(slice);
-    if (m) result[prayer] = normTime(m[1] + (m[2] ? ` ${m[2]}` : ""));
-  }
-  return result;
-}
-
 // ─── Enrichment ───────────────────────────────────────────────────────────────
 
 async function enrichSeedFile(filePath: string, force: boolean): Promise<void> {
@@ -228,87 +115,42 @@ async function enrichSeedFile(filePath: string, force: boolean): Promise<void> {
 
   console.log(`\n  [${seed.region}] ${needsEnrichment.length}/${seed.mosques.length} mosques need enrichment`);
 
-  // Bulk MAWAQIT search for the whole city area using first mosque's coords
-  const centerMosque = seed.mosques[0];
-  let cityMawaqitCache: MawaqitMosque[] = [];
-  if (centerMosque) {
-    process.stdout.write("  [MAWAQIT] Fetching city area... ");
-    cityMawaqitCache = await mawaqitSearch(centerMosque.latitude, centerMosque.longitude, 30_000);
-    console.log(`${cityMawaqitCache.length} found`);
-  }
-
-  let mawaqitCount = 0;
-  let websiteCount = 0;
-  let missingNames: string[] = [];
+  const bySource: Record<string, number> = {};
+  const left: Array<{ name: string; why: string }> = [];
 
   for (const mosque of needsEnrichment) {
-    let found = false;
+    // The mosque's own day and clock: a timetable is for its day, and its sunset is its sunset.
+    const { today, where } = mosqueDay({ latitude: mosque.latitude, longitude: mosque.longitude, province: seed.province, country: mosque.country });
+    const outcome = await readMosque(
+      { name: mosque.name, latitude: mosque.latitude, longitude: mosque.longitude, website: mosque.website ?? null, mawaqitId: mosque.mawaqitId ?? null },
+      { fetchText, today, where, budgetMs: 60_000 }
+    );
 
-    // Try MAWAQIT
-    if (mosque.mawaqitId) {
-      const full = await mawaqitFetch(mosque.mawaqitId);
-      if (full) {
-        const times = extractIqama(full);
-        if (Object.keys(times).length > 0) {
-          mosque.iqamaTimes = times;
-          addSource(mosque, "mawaqit.net");
-          mawaqitCount++;
-          found = true;
-        }
-      }
-    }
-
-    if (!found) {
-      const match = bestMatch(cityMawaqitCache, mosque.name, mosque.latitude, mosque.longitude);
-      if (match) {
-        const full = await mawaqitFetch(match.uuid);
-        const times = extractIqama(full ?? match);
-        if (Object.keys(times).length > 0) {
-          mosque.iqamaTimes = times;
-          mosque.mawaqitId = match.uuid;
-          addSource(mosque, "mawaqit.net");
-          mawaqitCount++;
-          found = true;
-        }
-      }
-    }
-
-    // Try website scrape
-    if (!found && mosque.website) {
-      const times = await scrapeWebsite(mosque.website);
-      if (Object.keys(times).length > 0) {
-        mosque.iqamaTimes = times;
-        addSource(mosque, "website");
-        websiteCount++;
-        found = true;
-      }
-    }
-
-    if (!found) {
-      missingNames.push(mosque.name);
+    const update = updateResearch(mosque, outcome, today);
+    if (update.wrote.length > 0) {
+      Object.assign(mosque, update.record);
+      const source = outcome.reading!.source;
+      bySource[source] = (bySource[source] ?? 0) + 1;
+    } else {
+      left.push({ name: mosque.name, why: update.why ?? "nothing could be read" });
     }
 
     await sleep(200);
   }
 
-  // Write updated seed back to file
-  fs.writeFileSync(filePath, JSON.stringify(seed, null, 2));
+  // Write updated seed back to file, only if something changed
+  const updated = JSON.stringify(seed, null, 2);
+  if (updated !== JSON.stringify(JSON.parse(raw), null, 2)) fs.writeFileSync(filePath, updated);
 
   // Report
   console.log(`  Results for ${seed.region}:`);
-  console.log(`    Via MAWAQIT:   ${mawaqitCount}`);
-  console.log(`    Via website:   ${websiteCount}`);
-  if (missingNames.length > 0) {
-    console.log(`    Still missing: ${missingNames.length}`);
-    for (const n of missingNames) console.log(`      - ${n}`);
+  for (const [source, count] of Object.entries(bySource)) console.log(`    Via ${source}:`.padEnd(18) + count);
+  if (left.length > 0) {
+    console.log(`    Left alone: ${left.length}`);
+    for (const { name, why } of left) console.log(`      - ${name}: ${why}`);
   } else {
-    console.log(`    Still missing: 0 — full coverage!`);
+    console.log(`    Left alone: 0 — full coverage!`);
   }
-}
-
-function addSource(mosque: SeedMosque, source: string): void {
-  if (!mosque.sources) mosque.sources = [];
-  if (!mosque.sources.includes(source)) mosque.sources.push(source);
 }
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
@@ -346,48 +188,11 @@ async function main() {
   console.log("\nDone. Review changes with: git diff data/mosques/");
 }
 
-// ─── Utilities ────────────────────────────────────────────────────────────────
-
-function haversineKm(lat1: number, lon1: number, lat2: number, lon2: number): number {
-  const R = 6371;
-  const dLat = ((lat2 - lat1) * Math.PI) / 180;
-  const dLon = ((lon2 - lon1) * Math.PI) / 180;
-  const a = Math.sin(dLat / 2) ** 2 + Math.cos((lat1 * Math.PI) / 180) * Math.cos((lat2 * Math.PI) / 180) * Math.sin(dLon / 2) ** 2;
-  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-}
-
-function jaccard(a: string, b: string): number {
-  const wa = new Set(a.split(/\s+/).filter((w) => w.length > 2));
-  const wb = new Set(b.split(/\s+/).filter((w) => w.length > 2));
-  if (wa.size === 0 && wb.size === 0) return 1;
-  let inter = 0;
-  for (const w of wa) if (wb.has(w)) inter++;
-  return inter / Math.max(wa.size, wb.size);
-}
-
-function normTime(t: string): string {
-  t = t.trim();
-  const m12 = t.match(/^(\d{1,2}):(\d{2})\s*(am|pm)$/i);
-  if (m12) {
-    let h = parseInt(m12[1], 10);
-    const period = m12[3].toLowerCase();
-    if (period === "pm" && h < 12) h += 12;
-    if (period === "am" && h === 12) h = 0;
-    return `${String(h).padStart(2, "0")}:${m12[2]}`;
-  }
-  const m24 = t.match(/^(\d{1,2}):(\d{2})$/);
-  if (m24) return `${String(parseInt(m24[1], 10)).padStart(2, "0")}:${m24[2]}`;
-  return t;
-}
-
-function addMins(time: string, mins: number): string {
-  const [h, m] = time.split(":").map(Number);
-  const total = h * 60 + m + mins;
-  return `${String(Math.floor(total / 60) % 24).padStart(2, "0")}:${String(total % 60).padStart(2, "0")}`;
-}
-
 function sleep(ms: number): Promise<void> {
   return new Promise((r) => setTimeout(r, ms));
 }
 
-main().catch(console.error);
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

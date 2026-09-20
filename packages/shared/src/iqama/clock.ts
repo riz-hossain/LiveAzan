@@ -6,7 +6,7 @@
  * objects that a phone's time zone could shift.
  */
 
-import type { Ymd } from "./types";
+import type { Where, Ymd } from "./types";
 
 const DAY_MS = 86_400_000;
 
@@ -190,4 +190,23 @@ export function zoneForPlace(place: { province?: string; country?: string; longi
     if (zone === "America/Toronto" && lon > -62) return "America/Halifax"; // the Magdalen Islands
   }
   return zone;
+}
+
+/**
+ * The day it is at a mosque, and where the mosque is, as the reader wants them. A
+ * timetable is for the mosque's day and its sunset is the mosque's sunset, so both are
+ * worked out from the mosque's own time zone where that is known (Canadian mosques, by
+ * province) and from the runtime's where it is not.
+ */
+export function mosqueDay(
+  mosque: { latitude: number; longitude: number; province?: string | null; country?: string | null },
+  now: Date = new Date()
+): { today: Ymd; where: Where } {
+  const zone = zoneForPlace({ province: mosque.province ?? undefined, country: mosque.country ?? undefined, longitude: mosque.longitude });
+  const today = todayInZone(zone, now);
+  const offset = zone ? offsetHoursForZone(today, zone) : undefined;
+  return {
+    today,
+    where: { lat: mosque.latitude, lon: mosque.longitude, ...(offset !== undefined ? { utcOffsetHours: offset } : {}) },
+  };
 }

@@ -56,6 +56,8 @@ export interface IqamaReading {
   page?: string;
   /** Prayers worked out from the sun rather than read (Maghrib written as "sunset"). */
   computed: PrayerKey[];
+  /** When Maghrib is worked out from the sun, the rule the page gave it by: "sunset+5". */
+  maghribRule?: string;
   /** Whether the sun was consulted: it was, if the mosque's position was known. */
   sunChecked: boolean;
   /** The first Jumu'ah time, "HH:mm", when the source has it. */

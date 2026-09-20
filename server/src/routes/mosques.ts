@@ -2,6 +2,8 @@ import { Router, Request, Response } from "express";
 import { z } from "zod";
 import { prisma } from "../lib/prisma";
 import { authenticate, requireRole } from "../middleware/auth";
+import { currentIqama } from "./iqama";
+import { resolveTimes } from "../services/iqamaPlan";
 
 const router = Router();
 
@@ -10,7 +12,8 @@ router.get("/nearby", async (req: Request, res: Response) => {
   try {
     const lat = parseFloat(req.query.lat as string);
     const lon = parseFloat(req.query.lon as string);
-    const radius = parseFloat((req.query.radius as string) || "20");
+    // The app sends radiusKm; radius is what this always took.
+    const radius = parseFloat(((req.query.radiusKm ?? req.query.radius) as string) || "20");
 
     if (isNaN(lat) || isNaN(lon)) {
       res.status(400).json({ error: "lat and lon query parameters are required" });
@@ -114,9 +117,19 @@ router.get("/:id", async (req: Request, res: Response) => {
       return;
     }
 
-    res.json(mosque);
+    res.json({ ...mosque, iqamaSchedules: resolveTimes(mosque.iqamaSchedules, mosque) });
   } catch (error) {
     console.error("Get mosque error:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+// GET /:id/iqama - the mosque's current iqama times (what the app asks for)
+router.get("/:id/iqama", async (req: Request, res: Response) => {
+  try {
+    res.json(await currentIqama(req.params.id));
+  } catch (error) {
+    console.error("Get mosque iqama error:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 });
