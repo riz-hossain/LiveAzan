@@ -687,6 +687,8 @@ outcome.problems; // why the sources that failed failed, in words for a person
 
 The single-source pieces (`extractIqama`, `readPlugin`, `readMawaqit`, `readWebsite`) are exported for callers that want only one of them.
 
+**MAWAQIT limits how fast it is asked.** It sits behind Cloudflare, which answers `429` (`error code: 1015`, with a `Retry-After`) once an address has made about sixty requests in a short while, and refuses everything from that address for several minutes. One person opening a mosque never meets it; a loop over hundreds of mosques does within seconds. Anything that asks in bulk (the server's weekly job, `scripts/enrich-iqama.ts`, a measurement) must wrap its fetch in `politeTo` (`adapters.ts`), which spaces requests to a named host, and after a 429 sends nothing more to it until it said it would be ready, so the rest of a batch carries on with the mosques' own sites. The server keeps three seconds between requests to MAWAQIT and the app one; the reader reports a refusal as "mawaqit.net is limiting requests just now" rather than as a mosque that could not be found.
+
 ### In the app
 
 - **The list is cheap and honest.** A mosque list shows what the mosque came with: the bundled research, as *saved times* with the day it was researched, and, for a mosque with none, what MAWAQIT's one search request says, only when the listing is strongly the same mosque (`samePlace`). Websites are not read for a list, which can be dozens of mosques long.
