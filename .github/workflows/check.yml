@@ -17,6 +17,23 @@ jobs:
   check:
     name: Check
     runs-on: ubuntu-latest
+    # A real Postgres for the server's tests: what a fake store cannot show is a mistake in a
+    # query or a route, and the server had no tests at all.
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      TEST_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -47,6 +64,13 @@ jobs:
         # together, on made-up pages and a made-up network. Nothing to flake.
         working-directory: packages/shared
         run: npm test
+      - name: The server's iqama logic, with a real database
+        # What is written and when, what is served and how, against Postgres. The tests
+        # skip themselves when TEST_DATABASE_URL is not set, and make their own rows.
+        working-directory: server
+        run: |
+          DATABASE_URL="$TEST_DATABASE_URL" npx prisma db push --skip-generate
+          npm test
       - name: The app's iqama logic, without a phone
         # The store and services that use the reader, with the phone-only modules
         # (storage, secure store) faked, a made-up network and a pinned clock.

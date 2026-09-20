@@ -8,6 +8,7 @@ import {
   isFriday,
   isoDate,
   isValidYmd,
+  mosqueDay,
   offsetHoursForZone,
   parseClock,
   parseIsoDate,
@@ -86,6 +87,29 @@ describe("time zones", () => {
     assert.equal(zoneForPlace({ province: "British Columbia" }), "America/Vancouver");
     assert.equal(zoneForPlace({ province: "Nova Scotia" }), "America/Halifax");
     assert.equal(zoneForPlace({ province: "QC", country: "Canada" }), "America/Toronto");
+  });
+
+  it("gives a mosque's day and place as the reader wants them, on the mosque's wall and not the phone's", () => {
+    const earlier = process.env.TZ;
+    process.env.TZ = "Asia/Tokyo"; // where it is already the morning of the 21st
+    try {
+      const vancouver = { latitude: 49.28, longitude: -123.12, province: "British Columbia", country: "Canada" };
+      const got = mosqueDay(vancouver, new Date(Date.UTC(2026, 8, 21, 2, 0, 0)));
+      assert.deepEqual(got.today, ymd(2026, 9, 20));
+      assert.deepEqual(got.where, { lat: 49.28, lon: -123.12, utcOffsetHours: -7 });
+    } finally {
+      if (earlier === undefined) delete process.env.TZ;
+      else process.env.TZ = earlier;
+    }
+  });
+
+  it("knows Ontario's offset with daylight time in it, and asks nothing of a mosque elsewhere", () => {
+    const waterloo = { latitude: 43.4643, longitude: -80.5204, province: "Ontario", country: "Canada" };
+    assert.equal(mosqueDay(waterloo, new Date(Date.UTC(2026, 8, 20, 15))).where.utcOffsetHours, -4);
+    assert.equal(mosqueDay(waterloo, new Date(Date.UTC(2026, 0, 20, 15))).where.utcOffsetHours, -5);
+    const elsewhere = mosqueDay({ latitude: 48.1, longitude: -1.7, province: "Bretagne", country: "France" }, new Date(Date.UTC(2026, 8, 20, 15)));
+    assert.equal("utcOffsetHours" in elsewhere.where, false);
+    assert.equal(mosqueDay({ latitude: 1, longitude: 2, province: null, country: null }).where.lat, 1);
   });
 
   it("does not guess for anywhere else", () => {

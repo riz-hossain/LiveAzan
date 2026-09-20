@@ -64,6 +64,16 @@ describe("reading a mosque's website", () => {
     assert.equal(got.title, "A Masjid");
   });
 
+  it("carries a Maghrib the page gave as a rule through with the reading", async () => {
+    const rows = ["Fajr Iqama 6:15", "Dhuhr Iqama 1:45", "Asr Iqama 5:45", "Maghrib Iqama Sunset + 5", "Isha Iqama 9:00"].map((l) => `<p>${l}</p>`).join("");
+    const net = network({ "https://masjid.example/": page(rows) });
+    const got = await readWebsite("https://masjid.example/", context(net));
+    assert.ok(got.ok);
+    assert.equal(got.reading.maghribRule, "sunset+5");
+    assert.deepEqual(got.reading.computed, ["maghrib"]);
+    assert.match(got.reading.times.maghrib, /^19:2\d$/);
+  });
+
   it("asks a browser only when the plain pages had nothing", async () => {
     const script = page('<div id="t"></div><script>document.getElementById("t").innerHTML="..."</script>');
     const drawn: string[] = [];

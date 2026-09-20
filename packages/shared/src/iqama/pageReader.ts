@@ -807,6 +807,8 @@ export interface PageReading {
   quality: number;
   /** Prayers worked out from the sun rather than read. */
   computed: PrayerKey[];
+  /** Maghrib as the page states it, "sunset+5", when it is worked out from the sun. */
+  maghribRule?: string;
   /** Whether the sun was there to check against. */
   sunChecked: boolean;
   /** When the page says the times change, if it does, "YYYY-MM-DD". */
@@ -877,12 +879,16 @@ export function extractIqama(html: string, options: ExtractOptions): PageReading
   const validUntil = until ? isoDate(until) : undefined;
 
   const times = Object.fromEntries(PRAYER_KEYS.map((p) => [p, hhmm(block.minutes[p])])) as Record<PrayerKey, string>;
+  // A Maghrib that came from words such as "Sunset + 5" is only right on the day it is worked out; the rule is right all year.
+  const offset = sun !== null && block.kinds.maghrib === "computed" ? Math.round(block.minutes.maghrib - sun.sunset) : -1;
+  const maghribRule = offset === 0 ? "sunset" : offset > 0 ? `sunset+${offset}` : undefined;
   return {
     times,
     minutes: block.minutes,
     how: HOW[block.quality],
     quality: block.quality,
     computed: PRAYER_KEYS.filter((p) => block.kinds[p] === "computed"),
+    ...(maghribRule ? { maghribRule } : {}),
     sunChecked: sun !== null,
     ...(validUntil ? { validUntil } : {}),
   };

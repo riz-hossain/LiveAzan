@@ -1,6 +1,15 @@
-# Stage 1: Build TypeScript
-FROM node:20-alpine AS builder
+# The server runs from source with tsx, in production as in development.
+#
+# It imports the shared package (packages/shared/src), which is TypeScript source too,
+# and compiling the two into one tree that plain node can run is more machinery than it is
+# worth. The compiled output this used to build could not start at all: node loaded it as
+# ES modules and the extensionless imports in it do not resolve. `tsc --noEmit` (npm run
+# lint) is what checks the types.
+FROM node:20-alpine
 WORKDIR /app
+
+# Prisma's engines need OpenSSL, which the alpine base no longer includes.
+RUN apk add --no-cache openssl
 
 COPY package.json package-lock.json turbo.json tsconfig.base.json ./
 COPY packages/shared/package.json ./packages/shared/
@@ -9,26 +18,11 @@ RUN npm ci
 
 COPY packages/shared/src ./packages/shared/src
 COPY server/ ./server/
-
-WORKDIR /app/server
-RUN npx prisma generate && npx tsc
-
-# Stage 2: Runtime image
-FROM node:20-alpine
-WORKDIR /app
-
-COPY package.json package-lock.json turbo.json tsconfig.base.json ./
-COPY packages/shared/package.json ./packages/shared/
-COPY server/package.json ./server/
-RUN npm ci
-
 COPY data/ ./data/
-COPY --from=builder /app/packages/shared/src ./packages/shared/src
-COPY --from=builder /app/server/dist ./server/dist
-COPY --from=builder /app/server/prisma ./server/prisma
-COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
 
 WORKDIR /app/server
+RUN npx prisma generate
+
 EXPOSE 3001
 
 COPY docker/server/entrypoint.prod.sh /entrypoint.sh

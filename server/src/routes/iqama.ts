@@ -2,27 +2,40 @@ import { Router, Request, Response } from "express";
 import { z } from "zod";
 import { prisma } from "../lib/prisma";
 import { authenticate, requireRole } from "../middleware/auth";
+import { resolveTimes } from "../services/iqamaPlan";
 
 const router = Router();
+
+/**
+ * A mosque's iqama times in force now, every one as "HH:mm" (a stored "sunset+5" is
+ * worked out for today at the mosque: see resolveTimes). Empty for a mosque that is not there.
+ */
+export async function currentIqama(mosqueId: string) {
+  const now = new Date();
+  const mosque = await prisma.mosque.findUnique({
+    where: { id: mosqueId },
+    select: { latitude: true, longitude: true, province: true, country: true },
+  });
+  if (!mosque) return [];
+
+  const schedules = await prisma.iqamaSchedule.findMany({
+    where: {
+      mosqueId,
+      effectiveFrom: { lte: now },
+      OR: [
+        { effectiveTo: null },
+        { effectiveTo: { gt: now } },
+      ],
+    },
+    orderBy: { prayer: "asc" },
+  });
+  return resolveTimes(schedules, mosque, now);
+}
 
 // GET /mosque/:mosqueId - get current iqama times for a mosque
 router.get("/mosque/:mosqueId", async (req: Request, res: Response) => {
   try {
-    const now = new Date();
-
-    const schedules = await prisma.iqamaSchedule.findMany({
-      where: {
-        mosqueId: req.params.mosqueId,
-        effectiveFrom: { lte: now },
-        OR: [
-          { effectiveTo: null },
-          { effectiveTo: { gt: now } },
-        ],
-      },
-      orderBy: { prayer: "asc" },
-    });
-
-    res.json(schedules);
+    res.json(await currentIqama(req.params.mosqueId));
   } catch (error) {
     console.error("Get iqama times error:", error);
     res.status(500).json({ error: "Internal server error" });

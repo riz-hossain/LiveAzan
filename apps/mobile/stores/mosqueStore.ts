@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import type { Mosque, IqamaSchedule } from "@live-azan/shared";
-import { isCurrent, timesFromListing, type IqamaMeta } from "@live-azan/shared";
+import { isCurrent, mosqueDay, timesFromListing, type IqamaMeta } from "@live-azan/shared";
 import {
   fetchMosquesNearby,
   fetchMosqueById,
@@ -12,7 +12,6 @@ import {
   discoverNearbyIqama,
   refreshSingleMosqueIqama,
   borrowNearbyIqama,
-  mosqueDay,
   schedulesFor,
   type DiscoveredMosque,
 } from "../services/iqamaDiscovery";
@@ -378,11 +377,13 @@ export const useMosqueStore = create<MosqueState>((set, get) => ({
     set({ isLoading: true });
     let fetched: Mosque | null = null;
     try {
-      const [schedule, mosque] = await Promise.all([
+      const [served, mosque] = await Promise.all([
         fetchIqama(mosqueId),
         fetchMosqueById(mosqueId),
       ]);
       fetched = mosque;
+      // A server has been known to send a rule ("sunset+5") where a time belongs. What is not a time is not shown.
+      const schedule = served.filter((row) => /^\d{1,2}:\d{2}$/.test(String(row.iqamaTime).trim()));
       await setCached(detailK, mosque);
 
       // The server's times do not replace a reading of today that has come in meanwhile.

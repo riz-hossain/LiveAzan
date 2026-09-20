@@ -18,8 +18,7 @@ import { IqamaCountdown } from "../../components/IqamaCountdown";
 import { MosqueCard } from "../../components/MosqueCard";
 import { usePrayerStore } from "../../stores/prayerStore";
 import { useMosqueStore } from "../../stores/mosqueStore";
-import { headline, toneOf } from "@live-azan/shared";
-import { mosqueDay } from "../../services/iqamaDiscovery";
+import { headline, mosqueDay, toneOf } from "@live-azan/shared";
 import { TONE_COLOR } from "../../components/toneColors";
 import { getCurrentLocation, getSavedLocation } from "../../services/location";
 

@@ -6,8 +6,8 @@
  * POST /api/admin/enrich-city         — bulk enrich a city
  * POST /api/admin/enrich-mosque/:id   — enrich a single mosque
  * GET  /api/admin/iqama-coverage      — coverage stats by city
- * POST /api/admin/run-refresh-job     — manually trigger the monthly cron job
- * GET  /api/admin/refresh-logs        — recent monthly job run history
+ * POST /api/admin/run-refresh-job     — manually trigger the weekly cron job
+ * GET  /api/admin/refresh-logs        — recent refresh job run history
  */
 
 import { Router, Request, Response } from "express";

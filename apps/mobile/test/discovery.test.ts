@@ -1,10 +1,10 @@
 import assert from "node:assert/strict";
 import { afterEach, beforeEach, describe, it } from "node:test";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { discoverNearbyIqama, mosqueDay } from "../services/iqamaDiscovery";
+import { discoverNearbyIqama } from "../services/iqamaDiscovery";
 import { fetchText } from "../services/http";
 import { searchLocalMosques } from "../services/localMosqueSearch";
-import { fakeNetwork, listing, mosque, searchUrl, settle, WATERLOO, type FakeNetwork } from "./helpers";
+import { fakeNetwork, listing, searchUrl, settle, WATERLOO, type FakeNetwork } from "./helpers";
 
 const { latitude: LAT, longitude: LON } = WATERLOO;
 
@@ -107,29 +107,5 @@ describe("calling out to the web", () => {
     await fetchText("https://masjid.example/");
     assert.match(net.headersFor("https://mawaqit.net/en/a-masjid")!["User-Agent"], /Mozilla/);
     assert.match(net.headersFor("https://masjid.example/")!["User-Agent"], /^LiveAzan/);
-  });
-});
-
-describe("the mosque's own day", () => {
-  it("is the day on the mosque's wall, not the phone's", () => {
-    const earlier = process.env.TZ;
-    process.env.TZ = "Asia/Tokyo"; // where it is already the morning of the 21st
-    try {
-      const vancouver = mosque({ province: "British Columbia", latitude: 49.28, longitude: -123.12 });
-      const { today, where } = mosqueDay(vancouver, new Date(Date.UTC(2026, 8, 21, 2, 0, 0)));
-      assert.deepEqual(today, { year: 2026, month: 9, day: 20 });
-      assert.equal(where.utcOffsetHours, -7);
-      assert.equal(where.lat, 49.28);
-    } finally {
-      if (earlier === undefined) delete process.env.TZ;
-      else process.env.TZ = earlier;
-    }
-  });
-
-  it("knows Ontario's offset with daylight time in it, and asks nothing of a mosque elsewhere", () => {
-    const now = new Date(Date.UTC(2026, 8, 20, 15));
-    assert.equal(mosqueDay(mosque(), now).where.utcOffsetHours, -4);
-    assert.equal(mosqueDay(mosque(), new Date(Date.UTC(2026, 0, 20, 15))).where.utcOffsetHours, -5);
-    assert.equal("utcOffsetHours" in mosqueDay(mosque({ country: "France", province: "Bretagne" }), now).where, false);
   });
 });

@@ -258,6 +258,24 @@ describe("a server that may or may not be there", () => {
     assert.equal(timesOf(state().iqamaSchedule).fajr, "06:15");
   });
 
+  it("is not believed when it sends a rule where a time belongs", async () => {
+    const m = mosque({ website: undefined });
+    const day = "2026-09-10T00:00:00.000Z";
+    net = fakeNetwork({
+      [`http://localhost:3001/api/mosques/${m.id}/iqama`]: {
+        body: JSON.stringify([
+          { id: "s1", mosqueId: m.id, prayer: "FAJR", iqamaTime: "05:45", effectiveFrom: day },
+          { id: "s2", mosqueId: m.id, prayer: "MAGHRIB", iqamaTime: "sunset+5", effectiveFrom: day },
+        ]),
+        contentType: "application/json",
+      },
+      [`http://localhost:3001/api/mosques/${m.id}`]: { body: JSON.stringify({ ...m, iqamaSource: "manual", iqamaLastFetched: day }), contentType: "application/json" },
+    });
+    useMosqueStore.setState({ nearbyMosques: [m] });
+    await state().fetchIqamaSchedule(m.id);
+    assert.deepEqual(timesOf(state().iqamaSchedule), { fajr: "05:45" });
+  });
+
   it("is shown while the mosque's own page is read, and replaced by it", async () => {
     const m = mosque();
     net = fakeNetwork({ [HOME]: page(board()), ...server(m, "2026-09-10T00:00:00.000Z") });

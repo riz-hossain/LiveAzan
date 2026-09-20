@@ -8,4 +8,4 @@ echo "==> Seeding database (idempotent)..."
 npx tsx prisma/seed.ts || true
 
 echo "==> Starting server..."
-exec node dist/index.js
+exec npx tsx src/index.ts

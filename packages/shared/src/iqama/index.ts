@@ -18,4 +18,5 @@ export * from "./validate";
 export * from "./place";
 export * from "./pipeline";
 export * from "./present";
+export * from "./research";
 export * from "./adapters";
