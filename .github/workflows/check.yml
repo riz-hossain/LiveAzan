@@ -1,0 +1,40 @@
+name: Check
+
+# One cheap job on every push and pull request. It type-checks what can be
+# type-checked on a plain runner and runs the tests that need no network, so a
+# broken change is seen in a minute rather than on somebody's phone.
+#
+# The mobile app is not type-checked here yet: it has errors of its own today
+# (expo-notifications' trigger types), and a check that starts red is one nobody
+# reads. Fixing those is what turns it on.
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install
+        run: npm ci
+      - name: Generate the database client
+        working-directory: server
+        run: npx prisma generate
+      - name: Type-check the shared package
+        working-directory: packages/shared
+        run: npx tsc --noEmit
+      - name: Type-check the server
+        working-directory: server
+        run: npx tsc --noEmit
+      - name: Reading a mosque's iqama times, offline
+        # The reader, the feeds it understands, and the pipeline that puts them
+        # together, on made-up pages and a made-up network. Nothing to flake.
+        working-directory: packages/shared
+        run: npm test

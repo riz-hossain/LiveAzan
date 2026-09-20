@@ -20,6 +20,7 @@
 12. [Deployment](#deployment)
 13. [Architecture Decisions](#architecture-decisions)
 14. [Troubleshooting](#troubleshooting)
+15. [How Iqama Times Are Found](#how-iqama-times-are-found)
 
 ---
 
@@ -484,6 +485,8 @@ cd server && npm run test
 cd apps/mobile && npm run test
 ```
 
+The iqama reader in `packages/shared` has its own offline test suite (`cd packages/shared && npm test`); see [How Iqama Times Are Found](#how-iqama-times-are-found).
+
 ### Code Quality
 
 ```bash
@@ -627,6 +630,69 @@ npm install
 - Check internet connection (Aladhan API requires internet)
 - The `adhan` npm package provides offline fallback
 - Verify coordinates are correct (lat/lon not swapped)
+
+---
+
+## How Iqama Times Are Found
+
+A mosque's iqama times are read by one shared toolkit, `packages/shared/src/iqama/`, so that the server and the phone follow the same rules. It is plain TypeScript with no network, DOM or Node dependency of its own: the caller hands in `fetchText` (and `render`, if it has a browser for pages that draw their times with JavaScript). That is also what lets its tests run on made-up pages with no connection.
+
+### Where the times come from
+
+`readMosque` (`pipeline.ts`) asks every source at once and keeps the strongest reading that passes every check below.
+
+| Source | Confidence | What it is |
+|--------|------------|------------|
+| `plugin` | exact | The mosque's own WordPress "Daily Prayer Time for Mosques" API: a year of congregation times, nothing scraped |
+| `website` | labelled / headed | The mosque's own web page, read where the times sit under an "Iqama" label or column heading |
+| `mawaqit` | exact | The mosque's page on mawaqit.net, found by its slug or by where it is. Offsets such as "+10" are added to that same prayer's adhan |
+| `website` | guessed | A page with five times and nothing saying which are the iqama. Used only when nothing better exists |
+| `nearby` | approximate | `borrowFromNeighbour`, called only when a mosque has nothing of its own: a neighbouring mosque's times, labelled with its name and distance |
+
+When two sources disagree by more than ten minutes, the preferred one is returned and the other is reported as the `disagreement`, with the dissenting source named. A listing on mawaqit.net can be years out of date (mosques leave their times unset), so it is never taken over the mosque's own page.
+
+### The rule everything else follows
+
+**A wrong time is worse than no time.** People plan their day around these, so the reader refuses rather than guesses. A reading is discarded when:
+
+- the five prayers are not in order, or an iqama falls before its adhan or more than 90 minutes after it;
+- the times look like a template (every adhan on the half hour, or a row of placeholders);
+- the page is for another day, month or year. Dates, "from" and "until" cues and date ranges are read, and a table that names today beats one that merely might be current;
+- the sun disagrees: Fajr before first light, Maghrib far from sunset, and so on, worked out from the mosque's own coordinates;
+- the page shows several different sets of times and nothing says which is in force today.
+
+Days and clocks are the **mosque's**, never the server's or the phone's (`zoneForPlace`, `todayInZone`, `offsetHoursForZone`): a server in UTC asked about Vancouver at eight in the evening is asking about a day that has not yet ended there.
+
+### Using it
+
+```ts
+import { readMosque, offsetHoursForZone, todayInZone, zoneForPlace } from "@live-azan/shared";
+
+const zone = zoneForPlace({ province: mosque.province, longitude: mosque.longitude });
+const today = todayInZone(zone);
+
+const outcome = await readMosque(
+  { name: mosque.name, latitude: mosque.latitude, longitude: mosque.longitude, website: mosque.website },
+  {
+    fetchText, // (url, { timeoutMs }) => { url, status, contentType, body }
+    today,
+    where: { lat: mosque.latitude, lon: mosque.longitude, utcOffsetHours: zone ? offsetHoursForZone(today, zone) : undefined },
+  }
+);
+
+outcome.reading; // { times, source, how, asOf, page, warnings, jumuah?, validUntil?, corroboratedBy? }, or null
+outcome.problems; // why the sources that failed failed, in words for a person
+```
+
+The single-source pieces (`extractIqama`, `readPlugin`, `readMawaqit`, `readWebsite`) are exported for callers that want only one of them.
+
+### Tests
+
+```bash
+cd packages/shared && npm test
+```
+
+The suite runs offline against made-up pages and a made-up network, and runs on every push in the `Check` workflow. The reader was ported from the floating-clock desktop app's and checked against real mosque pages saved from across Canada: it returns the same times as the original on every page they were compared on. When the reader gets a page wrong, add that page's shape as a test first (`pageReader.test.ts` shows the pattern) and then fix it.
 
 ---
 
