@@ -73,6 +73,8 @@ export interface HttpResponse {
   status: number;
   contentType: string;
   body: string;
+  /** For a 429 or 503 that said how long to wait ("Retry-After"), in milliseconds. */
+  retryAfterMs?: number;
 }
 
 /**
@@ -319,10 +321,14 @@ async function readRendered(
 
 export type MawaqitResult = { ok: true; reading: IqamaReading } | { ok: false; detail: string };
 
+/** MAWAQIT sits behind a per-address rate limit; when it says stop, that is what is reported. */
+const MAWAQIT_LIMITING = "mawaqit.net is limiting requests just now, so its listing was not checked";
+
 /** A mosque's MAWAQIT page, read for today. */
 export async function readMawaqitPage(slug: string, ctx: ReadContext): Promise<MawaqitResult> {
   const url = mawaqitPageUrl(slug);
   const got = await tryFetch(ctx, url);
+  if (got?.status === 429) return { ok: false, detail: MAWAQIT_LIMITING };
   if (!got || got.status >= 400) return { ok: false, detail: "could not reach that mawaqit page" };
   let conf;
   try {
@@ -347,6 +353,7 @@ export async function readMawaqit(mosque: MosqueInput, ctx: ReadContext): Promis
   let item: MawaqitSearchItem | undefined;
   if (!slug) {
     const found = await tryFetch(ctx, mawaqitSearchUrl(mosque.latitude, mosque.longitude, 2));
+    if (found?.status === 429) return { ok: false, detail: MAWAQIT_LIMITING };
     if (!found || found.status >= 400) return { ok: false, detail: "could not search mawaqit.net" };
     let candidates: MawaqitSearchItem[] = [];
     try {

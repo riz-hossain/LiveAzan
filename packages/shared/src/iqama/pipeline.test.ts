@@ -250,6 +250,20 @@ describe("MAWAQIT", () => {
     assert.ok(!net.asked.some((u) => u.includes("other-masjid")));
   });
 
+  it("says so when mawaqit.net is limiting requests, rather than that the mosque could not be found", async () => {
+    const limited: Reply = { body: "error code: 1015", status: 429, contentType: "text/plain" };
+    const search = network({ "https://mawaqit.net/api/2.0/mosque/search?lat=43.464300&lon=-80.520400&radius=2": limited });
+    const a = await readMawaqit(MASJID, context(search));
+    assert.ok(!a.ok && /limiting requests/.test(a.detail), JSON.stringify(a));
+    const page_ = network({ "https://mawaqit.net/en/a-masjid": limited });
+    const b = await readMawaqit({ ...MASJID, mawaqitSlug: "a-masjid" }, context(page_));
+    assert.ok(!b.ok && /limiting requests/.test(b.detail), JSON.stringify(b));
+    // and the mosque's own page is still read
+    const both = network({ "https://mawaqit.net/api/2.0/mosque/search?lat=43.464300&lon=-80.520400&radius=2": limited, "https://masjid.example/": page(board()) });
+    const got = await readMosque({ ...MASJID, website: "https://masjid.example/" }, context(both));
+    assert.deepEqual(got.reading?.times, GOOD);
+  });
+
   it("says when a mosque is not there, and when it switched its congregation times off", async () => {
     const empty = network({ "https://mawaqit.net/api/2.0/mosque/search?lat=43.464300&lon=-80.520400&radius=2": "[]" });
     const a = await readMawaqit(MASJID, context(empty));

@@ -1,6 +1,9 @@
 // Loaded before the tests (node --require). The store and the services it uses import two modules that only
 // exist on a phone -- AsyncStorage and SecureStore -- so those are pointed at plain in-memory fakes. Everything
 // else runs as it does in the app.
+// The app keeps a second between its requests to MAWAQIT, which a test has no need to wait for.
+process.env.EXPO_PUBLIC_MAWAQIT_GAP_MS = "0";
+
 const Module = require("node:module");
 const path = require("node:path");
 
