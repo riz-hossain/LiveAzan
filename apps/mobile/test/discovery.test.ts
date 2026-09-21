@@ -46,8 +46,10 @@ describe("making the list of mosques near someone", () => {
 
   it("does not, when the listing is another mosque down the road", async () => {
     const { bare } = bundled();
-    const target = bare.find((m) => m.website && m.name.startsWith("Al Falah"))!;
-    assert.ok(target, "the bundle no longer has Al Falah Islamic Centre near Waterloo");
+    // Any mosque with a website and no times will do: which one is not the point, and choosing it by
+    // name broke this test when the audit rightly took a dead website away from the one it named.
+    const target = bare.find((m) => m.website && !m.name.startsWith("Al-Salaam"))!;
+    assert.ok(target, "the bundle has no second mosque with a website and no times near Waterloo");
     net = fakeNetwork({
       [searchUrl(LAT, LON, 15)]: JSON.stringify([
         listing({ uuid: "u-decoy", slug: "zzz-other-centre", name: "Zzz Other Centre", latitude: target.latitude + 0.0036, longitude: target.longitude }),
