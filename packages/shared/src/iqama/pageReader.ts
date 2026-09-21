@@ -264,6 +264,11 @@ function groupText(lines: string[], tokens: Tok[], index: number, stop: number):
  * that the Iqamah appears in your calendars" -- is not one, and counting it made
  * the first time in every row look like the iqama. An instruction ("For Current
  * Iqama Times Select ...") is not one either.
+ *
+ * Without bars to show the cells, "Start Azan Iqamah" on one line looks like "Athan
+ * Adhan": one heading said twice. It is the row underneath that says which. A row
+ * of three times is three columns, so it is read as three; a row of two is two, and
+ * the two are still read as one.
  */
 function headers(tokens: Tok[], lines: string[], first: number): Array<"iqama" | "adhan"> {
   const name = tokens[first];
@@ -285,7 +290,21 @@ function headers(tokens: Tok[], lines: string[], first: number): Array<"iqama" |
     if (!sameCell) out.push(t.label!);
     previous = t;
   }
+  const columns = run.map((t) => t.label!);
+  // some were taken for one heading said twice, but the row has a time for each: they were columns
+  if (columns.length !== out.length && timesInRow(tokens, first) === columns.length) return columns;
   return out;
+}
+
+/** How many times stand on the same line as the prayer name at tokens[first], after it. */
+function timesInRow(tokens: Tok[], first: number): number {
+  const line = tokens[first].line;
+  let count = 0;
+  for (let i = first + 1; i < tokens.length; i++) {
+    if (tokens[i].line !== line) break;
+    if (tokens[i].kind === "time") count++;
+  }
+  return count;
 }
 
 const roundTimes = (times: number[]): number => times.filter((m) => m % 5 === 0).length;

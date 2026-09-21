@@ -168,6 +168,64 @@ describe("layouts that are read", () => {
   });
 });
 
+describe("a heading of three columns written on one line", () => {
+  // The way a script-drawn table comes out -- Ajax's does: "Salah Start Azan Iqamah" over
+  // "Fajr 5:44 am 06:00 AM 06:15 AM". "Start Azan" looks like one heading said twice, and it
+  // is the row that says it is two. These are Ajax's numbers for Monday the 21st, so they are
+  // read at Ajax on the 21st: put anywhere else the sun check refuses them, which is right.
+  const AJAX: Where = { lat: 43.85, lon: -79.03, utcOffsetHours: -4 };
+  const readAjax = (html: string): PageReading | null => read(html, ymd(2026, 9, 21), AJAX);
+  const FIVE = "06:15 14:00 18:00 19:18 21:15";
+  const ROWS3 = [
+    ["Fajr", "5:44 am", "06:00 AM", "06:15 AM"], ["Sunrise", "7:02 am"], ["Zuhr", "1:11 pm", "01:45 PM", "02:00 PM"],
+    ["Asr", "5:27 pm", "05:45 PM", "06:00 PM"], ["Maghrib", "7:15 PM", "07:16 PM", "07:18 PM"], ["Isha", "8:37 pm", "09:14 PM", "09:15 PM"],
+  ];
+  const ROWS2 = ROWS3.map((r) => (r.length > 2 ? [r[0], r[1], r[r.length - 1]] : r));
+  const byLine = (head: string, data: string[][]): string => page(`<p>${head}</p>` + data.map((r) => `<p>${r.join(" ")}</p>`).join(""));
+
+  it("a one-line heading of three columns over rows of three times is read as three", () => {
+    const found = readAjax(byLine("Salah Start Azan Iqamah", ROWS3));
+    assert.equal(times(found), FIVE);
+    assert.equal(found?.how, "headed"); // the third the iqama, the second the call to prayer
+  });
+
+  it("whichever way 'azan' is spelt, and the iqama", () => {
+    for (const word of ["Azan", "Adhan", "Athan", "Azaan"]) {
+      assert.equal(times(readAjax(byLine(`Salah Start ${word} Iqamah`, ROWS3))), FIVE, word);
+    }
+    assert.equal(times(readAjax(byLine("Salah Begins Adhan Iqama", ROWS3))), FIVE);
+  });
+
+  it("in twenty-four-hour time too", () => {
+    const rows24 = [["Fajr", "05:44", "06:00", "06:15"], ["Sunrise", "07:02"], ["Zuhr", "13:11", "13:45", "14:00"],
+      ["Asr", "17:27", "17:45", "18:00"], ["Maghrib", "19:15", "19:16", "19:18"], ["Isha", "20:37", "21:14", "21:15"]];
+    assert.equal(times(readAjax(byLine("Salah Start Azan Iqamah", rows24))), FIVE);
+  });
+
+  it("and when the block is on the page twice, as a desktop and a phone copy", () => {
+    const twice = page(([["Salah Start Azan Iqamah"], ...ROWS3, ["Salah Start Azan Iqamah"], ...ROWS3]).map((r) => `<p>${r.join(" ")}</p>`).join(""));
+    assert.equal(times(readAjax(twice)), FIVE);
+  });
+
+  it("rows of two times under the same heading are still two columns, the pair taken as one heading", () => {
+    assert.equal(times(readAjax(byLine("Salah Start Azan Iqamah", ROWS2))), FIVE);
+  });
+
+  it("as they were when the heading is 'Athan / Adhan' and the row has two", () => {
+    assert.equal(times(readAjax(byLine("Salah Athan / Adhan Iqamah", ROWS2))), FIVE);
+  });
+
+  it("three times under a heading that names none of them are still not guessed at, nor three with no heading", () => {
+    assert.equal(readAjax(byLine("Prayer Times", ROWS3)), null);
+    assert.equal(readAjax(page(ROWS3.map((r) => `<p>${r.join(" ")}</p>`).join(""))), null);
+  });
+
+  it("a row whose count fits neither reading is refused, not bent to fit", () => {
+    const five = [["Fajr", "5:44 am", "06:00 AM", "06:10 AM", "06:15 AM"], ...ROWS3.slice(1)];
+    assert.equal(readAjax(byLine("Salah Start Azan Iqamah", five)), null);
+  });
+});
+
 describe("a widget's strip of day tabs", () => {
   // What Athan+/Masjidal serves, and the most common platform on Canadian mosque sites: today's
   // times under a week of tabs, each tab a line with its Hijri date beneath. Today's own tab sits
